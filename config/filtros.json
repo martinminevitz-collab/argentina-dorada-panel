@@ -1,0 +1,34 @@
+{
+  "_nota": "Reglas que usa el bot para decidir qué sirve. Todo en minúsculas. Se puede editar sin tocar código.",
+
+  "señales_argentina": ["argentina", "argentino", "argentinos", "argentinas", "(arg)", " arg ", "🇦🇷", "la selección", "las leonas", "los leones", "los pumas", "los gladiadores", "la garra", "la albiceleste"],
+
+  "excluir_si_aparece": [
+    "liga profesional", "copa de la liga", "copa libertadores", "copa sudamericana", "boca juniors", "river plate",
+    "racing club", "independiente", "san lorenzo", "estudiantes de la plata", "vélez", "talleres", "nba", "liga nacional de básquet",
+    "superclásico", "mercado de pases", "transferencia", "elecciones", "dólar", "horóscopo", "scaloni", "messi"
+  ],
+
+  "palabras_resultado": [
+    "ganó", "ganaron", "medalla", "oro", "plata", "bronce", "campeón", "campeona", "campeones", "subcampeón", "podio",
+    "clasificó", "clasificaron", "venció", "vencieron", "derrotó", "cayó", "perdió", "terminó", "finalizó", "quedó",
+    "se consagró", "récord", "marca", "puesto", "final", "semifinal", "cuartos", "tercero", "tercera", "cuarto", "cuarta",
+    "quinto", "quinta", "diploma", "resultados", "empató", "goleó", "superó"
+  ],
+
+  "palabras_agenda": [
+    "comienza", "arranca", "se viene", "competirá", "competirán", "debutará", "debuta", "viajará", "viaja", "convocados",
+    "convocatoria", "lista de", "fixture", "cronograma", "agenda", "se disputará", "será sede", "inscripciones"
+  ],
+
+  "lugares_buenos_aires": [
+    "buenos aires", "caba", "ciudad autónoma", "cenard", "parque olímpico", "villa soldati", "mar del plata", "la plata",
+    "tigre", "san isidro", "vicente lópez", "olivos", "malvinas argentinas", "bahía blanca", "tandil", "pilar", "ezeiza",
+    "hurlingham", "san fernando", "costanera", "palermo", "núñez", "tecnópolis"
+  ],
+
+  "palabras_evento": [
+    "campeonato argentino", "sudamericano", "panamericano", "mundial", "copa del mundo", "world cup", "grand prix",
+    "open", "abierto", "torneo internacional", "nacional", "juegos", "será sede", "se disputará"
+  ]
+}

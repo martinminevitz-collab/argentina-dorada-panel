@@ -1,0 +1,42 @@
+# Publica el panel (carpeta panel/ + datos de data/) en GitHub Pages.
+# Corre solo cuando se cambia el panel y después de cada vuelta de un bot.
+name: Publicar panel
+
+on:
+  push:
+    branches: [main]
+    paths: ["panel/**", "data/**", ".github/workflows/publicar-panel.yml"]
+  workflow_dispatch:
+  workflow_call:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main   # trae los datos recién guardados por el bot
+      - name: Armar el sitio
+        run: |
+          mkdir _sitio
+          cp -r panel/* _sitio/
+          cp -r data _sitio/data
+          rm -f _sitio/data/vistos.json
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _sitio
+      - id: deploy
+        uses: actions/deploy-pages@v4

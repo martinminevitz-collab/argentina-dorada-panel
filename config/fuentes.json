@@ -1,0 +1,11 @@
+{
+  "_nota": "Webs fijas que revisa el bot además de Google Noticias. tipo 'rss' = feed de noticias (lo más estable). tipo 'web' = página común: el bot lee los títulos/links y se queda con los que hablan de Argentina. 'filtrar_argentina': false para fuentes que ya son 100% argentinas.",
+  "fuentes": [
+    {"nombre": "ENARD", "tipo": "rss", "url": "https://www.enard.org.ar/feed/", "filtrar_argentina": false, "activo": true},
+    {"nombre": "Comité Olímpico Argentino", "tipo": "rss", "url": "https://www.coarg.org.ar/feed/", "filtrar_argentina": false, "activo": true},
+    {"nombre": "Totallympics (Argentina)", "tipo": "web", "url": "https://www.totallympics.com/search/?q=argentina&quick=1&type=forums_topic&updated_after=day", "filtrar_argentina": true, "activo": true},
+    {"nombre": "AllSportDB (calendario)", "tipo": "web", "url": "https://allsportdb.com/Calendar", "filtrar_argentina": true, "activo": true},
+    {"nombre": "Olé – Polideportivo", "tipo": "rss", "url": "https://www.ole.com.ar/rss/polideportivo/", "filtrar_argentina": false, "activo": true},
+    {"nombre": "TyC Sports – Polideportivo", "tipo": "web", "url": "https://www.tycsports.com/polideportivo.html", "filtrar_argentina": false, "activo": true}
+  ]
+}

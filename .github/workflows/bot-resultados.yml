@@ -1,0 +1,43 @@
+# BOT DE RESULTADOS: corre solo cada 3 horas, guarda lo que encuentra en data/ y actualiza el panel.
+# También se puede correr a mano: pestaña "Actions" → "Bot de resultados" → "Run workflow".
+name: Bot de resultados
+
+on:
+  schedule:
+    - cron: "17 */3 * * *"   # cada 3 horas (hora de Argentina: 0:17, 3:17, 6:17, 9:17…)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: datos
+  cancel-in-progress: false
+
+jobs:
+  buscar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: bots/requirements.txt
+      - run: pip install -r bots/requirements.txt
+      - name: Correr el bot
+        run: python -m bots.resultados.main
+      - name: Guardar lo encontrado
+        run: |
+          git config user.name "bot-argentina-dorada"
+          git config user.email "bot@users.noreply.github.com"
+          git add data/
+          git diff --cached --quiet || git commit -m "Bot resultados: $(date -u +'%Y-%m-%d %H:%M') UTC"
+          git pull --rebase --autostash && git push
+
+  publicar:
+    needs: buscar
+    uses: ./.github/workflows/publicar-panel.yml

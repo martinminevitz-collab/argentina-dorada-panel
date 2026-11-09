@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Panel Argentina Dorada</title>
+  <meta name="theme-color" content="#0B1E33">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="iconos/icono.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="iconos/icono-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header class="top">
+    <div class="marca">
+      <img src="iconos/icono.svg" alt="" width="40" height="40">
+      <div>
+        <h1>ARGENTINA DORADA</h1>
+        <p class="sub">Panel de bots</p>
+      </div>
+    </div>
+    <button id="recargar" class="icono-btn" title="Actualizar" aria-label="Actualizar">↻</button>
+  </header>
+
+  <section id="estado-bots" class="estado" aria-live="polite">Cargando…</section>
+
+  <nav class="pestanas" role="tablist">
+    <button role="tab" data-tab="resultado" class="activa">Resultados <span class="n"></span></button>
+    <button role="tab" data-tab="agenda">Agenda <span class="n"></span></button>
+    <button role="tab" data-tab="ba">Eventos BA <span class="n"></span></button>
+    <button role="tab" data-tab="todo">Todo <span class="n"></span></button>
+  </nav>
+
+  <section class="filtros">
+    <input id="buscar" type="search" placeholder="Buscar (nombre, torneo…)" aria-label="Buscar">
+    <div class="fila">
+      <select id="deporte" aria-label="Deporte"><option value="">Todos los deportes</option></select>
+      <select id="rango" aria-label="Días">
+        <option value="1">Hoy</option>
+        <option value="3" selected>Últimos 3 días</option>
+        <option value="7">Última semana</option>
+        <option value="30">Último mes</option>
+      </select>
+    </div>
+    <label class="check"><input id="ver-vistas" type="checkbox"> Mostrar las que ya marqué como vistas</label>
+  </section>
+
+  <main id="lista" class="lista"></main>
+
+  <template id="tpl-tarjeta">
+    <article class="tarjeta">
+      <div class="chips"><span class="chip deporte"></span><span class="chip tipo"></span><span class="chip ba" hidden>📍 Bs. As.</span></div>
+      <h2><a target="_blank" rel="noopener"></a></h2>
+      <p class="resumen"></p>
+      <div class="pie">
+        <span class="meta"></span>
+        <div class="acciones">
+          <button class="copiar">Copiar</button>
+          <button class="vista">✓ Vista</button>
+        </div>
+      </div>
+    </article>
+  </template>
+
+  <div id="aviso" class="aviso" hidden></div>
+  <script src="app.js"></script>
+</body>
+</html>
