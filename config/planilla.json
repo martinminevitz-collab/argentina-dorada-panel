@@ -1,0 +1,7 @@
+{
+  "_nota": "La 'Lista de deportes para Claude' publicada como CSV. El bot la lee en cada vuelta: deportes (columna DEPORTES) y links (LINK 1, LINK 2…). Los links de Instagram se saltean (no se pueden leer). Si se cambia el link, pegarlo acá.",
+  "csv": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQdmJtxw1Q-2Ef1bCk4Lsv8CBURwLPuhCo8f5iuTkoHjUVdc6BBGcZXr1zcPG41QWEKiZIf51jHpI0L/pub?gid=0&single=true&output=csv",
+  "fila_generales": "generales",
+  "_nota_webs_argentinas": "Las webs que terminan en .ar o tienen 'arg' en el nombre se toman como argentinas (no hace falta que digan 'Argentina'). Si una federación argentina tiene otra dirección, sumala acá.",
+  "webs_argentinas": ["cada-atletismo.com"]
+}

@@ -11,9 +11,10 @@ Para probarlo en tu compu:  python -m bots.resultados.main
 """
 import json
 import time
+from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timedelta, timezone
 
-from bots.comun import guardar, texto
+from bots.comun import guardar, planilla, texto
 from bots.resultados import lectores
 
 HORAS_MAXIMAS = 48  # descarta noticias más viejas que esto
@@ -45,12 +46,21 @@ def adivinar_deporte(todo, deportes):
     return "Sin clasificar"
 
 
-def procesar(crudos, deporte, filtrar_argentina, vistos, ya_hoy, contadores, deportes=None):
+def procesar(crudos, deporte, filtrar_argentina, vistos, ya_hoy, contadores, deportes=None,
+             exigir_dato=False, solo_memorizar=False):
+    """exigir_dato: en webs comunes, solo pasa lo que suena a resultado o agenda (no menús ni 'Contacto').
+    solo_memorizar: primera vez que se lee una web -> se anota todo como visto pero no se muestra
+    (si no, el primer día aparecerían todas las notas viejas de esa web)."""
     nuevos = []
     for c in crudos:
         titulo = texto.limpiar_titulo(c["titulo"])
         todo = f'{titulo} {c.get("resumen", "")}'
         if not titulo or not c.get("link"):
+            continue
+        if solo_memorizar:
+            vistos[texto.huella(titulo)] = guardar.ahora().strftime("%Y-%m-%d")
+            continue
+        if exigir_dato and texto.clasificar(todo) == "otro":
             continue
         if not es_reciente(c.get("publicado")):
             contadores["viejas"] += 1
@@ -92,7 +102,13 @@ def main():
     contadores = {"revisadas": 0, "viejas": 0, "no_argentinas": 0, "excluidas": 0, "repetidas": 0, "fuentes_caidas": []}
     nuevos = []
 
-    deportes = cargar_config("deportes.json")["deportes"]
+    deportes, fuentes_planilla = planilla.leer_planilla()
+    if deportes is None:
+        print("⚠️  La planilla no respondió: uso solo config/deportes.json")
+        contadores["fuentes_caidas"].append("Planilla de deportes")
+        deportes, fuentes_planilla = cargar_config("deportes.json")["deportes"], []
+    print(f"📋 {len(deportes)} deportes y {len(fuentes_planilla)} webs de la planilla")
+
     print("🔎 Google Noticias, deporte por deporte")
     for d in deportes:
         if not d.get("activo", True):
@@ -102,16 +118,32 @@ def main():
         nuevos += procesar(crudos, d["nombre"], True, vistos, ya_hoy, contadores)
         time.sleep(1.5)  # para que Google no nos bloquee
 
-    print("🌐 Webs fijas")
-    for f in cargar_config("fuentes.json")["fuentes"]:
-        if not f.get("activo", True):
-            continue
+    # webs fijas (fuentes.json) + webs de la planilla, sin repetir links
+    fuentes, urls = [], set()
+    for f in cargar_config("fuentes.json")["fuentes"] + fuentes_planilla:
+        clave = f["url"].rstrip("/").replace("://www.", "://")
+        if f.get("activo", True) and clave not in urls:
+            urls.add(clave)
+            fuentes.append(f)
+
+    print(f"🌐 {len(fuentes)} webs (de a varias a la vez)")
+    conocidas = guardar.leer(guardar.DATA / "fuentes-conocidas.json", {})
+
+    def leer_fuente(f):
         leer = lectores.leer_rss if f["tipo"] == "rss" else lectores.leer_web
-        crudos = leer(f["url"], f["nombre"])
-        if not crudos:
-            contadores["fuentes_caidas"].append(f["nombre"])
-        contadores["revisadas"] += len(crudos)
-        nuevos += procesar(crudos, None, f.get("filtrar_argentina", True), vistos, ya_hoy, contadores, deportes)
+        return f, leer(f["url"], f["nombre"])
+
+    with ThreadPoolExecutor(max_workers=8) as pool:
+        for f, crudos in pool.map(leer_fuente, fuentes):
+            if not crudos:
+                contadores["fuentes_caidas"].append(f["nombre"])
+                continue
+            contadores["revisadas"] += len(crudos)
+            nueva = f["url"] not in conocidas
+            conocidas.setdefault(f["url"], guardar.ahora().strftime("%Y-%m-%d"))
+            nuevos += procesar(crudos, f.get("deporte"), f.get("filtrar_argentina", True), vistos, ya_hoy,
+                               contadores, deportes, exigir_dato=(f["tipo"] == "web"), solo_memorizar=nueva)
+    guardar.escribir(guardar.DATA / "fuentes-conocidas.json", conocidas)
 
     if nuevos:
         guardar.sumar_hallazgos(nuevos)

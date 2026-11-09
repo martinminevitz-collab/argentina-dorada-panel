@@ -11,7 +11,8 @@ Panel propio de Argentina Dorada con bots que trabajan solos, gratis y sin usar 
 ```
 argentina-dorada-panel/
 ├── config/              ← LO QUE SE PUEDE EDITAR SIN SABER PROGRAMAR
-│   ├── deportes.json      deportes que busca el bot y con qué palabras
+│   ├── planilla.json      link a la "Lista de deportes para Claude" (el bot la lee en cada vuelta)
+│   ├── deportes.json      palabras de búsqueda especiales por deporte (ej: Hockey → Leonas)
 │   ├── fuentes.json       webs fijas que revisa (ENARD, COA, Totallympics…)
 │   └── filtros.json       palabras para detectar argentinos, resultados, agenda, Bs. As.
 │
@@ -19,7 +20,8 @@ argentina-dorada-panel/
 │   ├── hallazgos/AAAA/MM/AAAA-MM-DD.json   todo lo encontrado ese día
 │   ├── indice.json                          lista de días (la usa el panel)
 │   ├── ultima-corrida.json                  resumen de la última vuelta de cada bot
-│   └── vistos.json                          memoria para no repetir noticias (60 días)
+│   ├── vistos.json                          memoria para no repetir noticias (60 días)
+│   └── fuentes-conocidas.json               webs ya leídas (la 1ra vez solo memoriza, no muestra)
 │
 ├── bots/                ← EL CÓDIGO DE LOS BOTS
 │   ├── comun/             piezas que comparten todos los bots
