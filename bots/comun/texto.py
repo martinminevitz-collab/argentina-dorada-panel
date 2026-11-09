@@ -42,6 +42,12 @@ def es_argentino(texto):
     return _alguna(t, ARG) or "🇦🇷" in (texto or "")
 
 
+def contiene_alguna(texto, palabras):
+    """Para las exclusiones propias de cada deporte (columna EXCLUIR de la planilla)."""
+    t = normalizar(texto)
+    return any(f" {normalizar(p).strip()} " in t for p in palabras if normalizar(p).strip())
+
+
 def hay_que_excluir(texto):
     return _alguna(normalizar(texto), EXCLUIR)
 

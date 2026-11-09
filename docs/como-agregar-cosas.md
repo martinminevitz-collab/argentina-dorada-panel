@@ -27,3 +27,9 @@ Copiá una línea y cambiá los datos:
 1. Carpeta nueva en `bots/` (ej: `bots/eventos/`) con su `main.py`.
 2. Usa las piezas de `bots/comun/` para guardar en `data/`.
 3. Un archivo nuevo en `.github/workflows/` con su horario (copiar `bot-resultados.yml`).
+
+## Afinar un deporte desde la planilla (lo más fácil)
+En la "Lista de deportes para Claude" se pueden agregar dos columnas (con ese título exacto en la fila de DEPORTES):
+- **BUSCAR**: qué buscar en Google Noticias para ese deporte. Ej. Tenis → `Copa Davis OR Billie Jean King OR tenis juvenil`. Si está vacía, usa `config/deportes.json` o el nombre del deporte.
+- **EXCLUIR**: palabras que descartan la noticia en ese deporte, separadas por coma. Ej. Tenis → `ATP, WTA`. Ej. un deporte donde no importan los torneos nacionales → `campeonato argentino, nacional`.
+El bot lo toma en la vuelta siguiente.

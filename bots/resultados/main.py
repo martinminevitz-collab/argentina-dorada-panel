@@ -47,7 +47,7 @@ def adivinar_deporte(todo, deportes):
 
 
 def procesar(crudos, deporte, filtrar_argentina, vistos, ya_hoy, contadores, deportes=None,
-             exigir_dato=False, solo_memorizar=False):
+             exigir_dato=False, solo_memorizar=False, excluir_extra=()):
     """exigir_dato: en webs comunes, solo pasa lo que suena a resultado o agenda (no menús ni 'Contacto').
     solo_memorizar: primera vez que se lee una web -> se anota todo como visto pero no se muestra
     (si no, el primer día aparecerían todas las notas viejas de esa web)."""
@@ -68,7 +68,7 @@ def procesar(crudos, deporte, filtrar_argentina, vistos, ya_hoy, contadores, dep
         if filtrar_argentina and not texto.es_argentino(todo):
             contadores["no_argentinas"] += 1
             continue
-        if texto.hay_que_excluir(todo):
+        if texto.hay_que_excluir(todo) or texto.contiene_alguna(todo, excluir_extra):
             contadores["excluidas"] += 1
             continue
         h = texto.huella(titulo)
@@ -115,7 +115,7 @@ def main():
             continue
         crudos = lectores.leer_google_noticias(d)
         contadores["revisadas"] += len(crudos)
-        nuevos += procesar(crudos, d["nombre"], True, vistos, ya_hoy, contadores)
+        nuevos += procesar(crudos, d["nombre"], True, vistos, ya_hoy, contadores, excluir_extra=d.get("excluir", ()))
         time.sleep(1.5)  # para que Google no nos bloquee
 
     # webs fijas (fuentes.json) + webs de la planilla, sin repetir links
@@ -126,6 +126,7 @@ def main():
             urls.add(clave)
             fuentes.append(f)
 
+    excluir_por_deporte = {d["nombre"]: d.get("excluir", ()) for d in deportes}
     print(f"🌐 {len(fuentes)} webs (de a varias a la vez)")
     conocidas = guardar.leer(guardar.DATA / "fuentes-conocidas.json", {})
 
@@ -142,7 +143,8 @@ def main():
             nueva = f["url"] not in conocidas
             conocidas.setdefault(f["url"], guardar.ahora().strftime("%Y-%m-%d"))
             nuevos += procesar(crudos, f.get("deporte"), f.get("filtrar_argentina", True), vistos, ya_hoy,
-                               contadores, deportes, exigir_dato=(f["tipo"] == "web"), solo_memorizar=nueva)
+                               contadores, deportes, exigir_dato=(f["tipo"] == "web"), solo_memorizar=nueva,
+                               excluir_extra=excluir_por_deporte.get(f.get("deporte"), ()))
     guardar.escribir(guardar.DATA / "fuentes-conocidas.json", conocidas)
 
     if nuevos:
