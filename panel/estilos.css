@@ -75,3 +75,22 @@ input[type=search], select { width: 100%; background: var(--navy-2); color: var(
 .vacio { text-align: center; color: var(--gris); padding: 40px 10px; }
 .aviso { position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%); background: var(--oro); color: var(--navy);
   padding: 10px 16px; border-radius: 999px; font-weight: 600; box-shadow: 0 6px 20px rgba(0,0,0,.35); }
+
+/* ---------- Compu: menú a la izquierda y tarjetas en dos columnas ---------- */
+.lateral { display: contents; }
+@media (min-width: 1000px) {
+  body { max-width: 1320px; padding-inline: 24px; }
+  .top { padding-inline: 0; border-bottom: 1px solid var(--navy-3); padding-bottom: 16px; margin-bottom: 20px; }
+  .cuerpo { display: grid; grid-template-columns: 300px 1fr; gap: 28px; align-items: start; }
+  .lateral { display: flex; flex-direction: column; gap: 14px; position: sticky; top: 16px; }
+  .estado { margin: 0; }
+  .pestanas { flex-direction: column; padding: 0; position: static; background: none; }
+  .pestanas button { text-align: left; border-radius: 10px; padding: 10px 14px; font-size: 19px; display: flex; justify-content: space-between; }
+  .filtros { padding: 0; }
+  .filtros .fila { grid-template-columns: 1fr; }
+  .lista { padding: 0; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: 12px; }
+  .lista .dia, .lista .vacio { grid-column: 1 / -1; }
+  .lista .dia:first-child { margin-top: 0; }
+  .tarjeta { display: flex; flex-direction: column; height: 100%; }
+  .tarjeta .pie { margin-top: auto; }
+}
