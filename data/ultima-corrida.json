@@ -1,0 +1,39 @@
+{
+ "resultados": {
+  "cuando": "2026-11-09T20:38-03:00",
+  "nuevos": 264,
+  "resultado": 64,
+  "agenda": 15,
+  "otro": 185,
+  "en_buenos_aires": 2,
+  "revisadas": 3035,
+  "viejas": 0,
+  "no_argentinas": 829,
+  "excluidas": 55,
+  "repetidas": 217,
+  "fuentes_caidas": [
+   "Comité Olímpico Argentino",
+   "Totallympics (Argentina)",
+   "AllSportDB (calendario)",
+   "Olé – Polideportivo",
+   "bwfbadminton.com",
+   "wbsc.org",
+   "cheerunion.org",
+   "uci.org",
+   "cricketargentina.com",
+   "fei.org",
+   "fencingtimelive.com",
+   "americanfootball.sport",
+   "faarg.com.ar",
+   "fifa.com",
+   "olympics.com",
+   "totallympics.com",
+   "infinity.worldskate.org",
+   "uww.org",
+   "iwf.sport",
+   "ittf.com",
+   "sailing.org"
+  ],
+  "segundos": 327
+ }
+}
