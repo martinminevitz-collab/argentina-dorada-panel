@@ -1,0 +1,24 @@
+# Herramienta interna: baja una página tal cual la ve GitHub y la guarda en la rama "diagnostico".
+# Sirve para revisar cómo está armada una web antes de escribir su lector.
+name: Diagnóstico (interno)
+
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: "Dirección de la página"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  bajar:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          mkdir out && cd out
+          curl -sSL -A "Mozilla/5.0" -o pagina.html "${{ inputs.url }}"
+          git init -q -b diagnostico && git add . 
+          git -c user.name=bot -c user.email=bot@users.noreply.github.com commit -qm "diagnostico"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" diagnostico
