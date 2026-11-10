@@ -1,5 +1,5 @@
 {
- "leido": "2026-11-10T13:09-03:00",
+ "leido": "2026-11-10T18:54-03:00",
  "actualizado_doc": "10/11/2026 10:55",
  "eventos": [
   {
@@ -119,7 +119,8 @@
    ],
    "id": "907e68f79b63",
    "version": "50188760bd",
-   "publicado_en_doc": false
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-10"
   },
   {
    "titulo": "GIMNASIA EN TRAMPOLÍN - CAMPEONATO MUNDIAL EN NANJING, CHINA",
@@ -290,7 +291,8 @@
    ],
    "id": "2135313ace19",
    "version": "24345ea1a4",
-   "publicado_en_doc": false
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-10"
   },
   {
    "titulo": "PÁDEL - MUNDIAL FIP EN DOHA, QATAR",
@@ -437,7 +439,8 @@
    ],
    "id": "e4d21e003f06",
    "version": "7f3b098048",
-   "publicado_en_doc": false
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-10"
   },
   {
    "titulo": "JUDO - MONTREAL PANAMERICAN OPEN EN MONTREAL, CANADÁ",
@@ -589,7 +592,8 @@
    ],
    "id": "a94c5428bc04",
    "version": "c3096934f4",
-   "publicado_en_doc": false
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-10"
   },
   {
    "titulo": "FAUSTBALL - CAMPEONATO PANAMERICANO PAFA EN SANTIAGO, CHILE",
@@ -683,7 +687,8 @@
    ],
    "id": "10e265e39647",
    "version": "ba5ac1d7a7",
-   "publicado_en_doc": false
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-10"
   },
   {
    "titulo": "AGUAS ABIERTAS - COPA DEL MUNDO EN CANCÚN, MÉXICO",
@@ -717,7 +722,8 @@
    ],
    "id": "eb6b14370131",
    "version": "82c64fe6b4",
-   "publicado_en_doc": false
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-10"
   },
   {
    "titulo": "BREAKING - DUBAI OPEN BREAKING: CLASIFICATORIO ARGENTINA",
@@ -790,7 +796,8 @@
    ],
    "id": "4d9bbf56f53c",
    "version": "12f19c1845",
-   "publicado_en_doc": false
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-10"
   },
   {
    "titulo": "PARA REMO - DEVELOPMENT AMÉRICAS (AMERICAS INTERNATIONAL PARA ROWING REGATTA) EN CIUDAD DE MÉXICO, MÉXICO",
@@ -875,7 +882,8 @@
    ],
    "id": "b75558a42166",
    "version": "2bcc024e64",
-   "publicado_en_doc": false
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-10"
   },
   {
    "titulo": "LUCHA DE BRAZOS - CAMPEONATO MUNDIAL",
@@ -929,7 +937,8 @@
    ],
    "id": "c397f3c8f523",
    "version": "bbe37a1265",
-   "publicado_en_doc": false
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-10"
   },
   {
    "titulo": "PARKOUR - COPA DEL MUNDO EN CHINA",
@@ -971,7 +980,8 @@
    ],
    "id": "73b580f88431",
    "version": "a05ba77e89",
-   "publicado_en_doc": false
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-10"
   },
   {
    "titulo": "ESGRIMA - COPA DEL MUNDO JUVENIL EN COSTA RICA",
@@ -1034,7 +1044,8 @@
    ],
    "id": "2a61a8857cd6",
    "version": "a7e146417c",
-   "publicado_en_doc": false
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-10"
   },
   {
    "titulo": "SQUASH - PSA CZECH OPEN EN REPÚBLICA CHECA",
@@ -1101,7 +1112,8 @@
    ],
    "id": "9c2641b1daed",
    "version": "1c68b1f27d",
-   "publicado_en_doc": false
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-10"
   },
   {
    "titulo": "PARATRIATLÓN - WORLD TRIATHLON PARA CUP EN SAN PEDRO DE LA PAZ, CHILE",
@@ -1159,7 +1171,8 @@
    ],
    "id": "9a144f04a210",
    "version": "f5be742de1",
-   "publicado_en_doc": false
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-10"
   },
   {
    "titulo": "JUEGOS PANAMERICANOS PARA PERSONAS TRASPLANTADAS EN MALDONADO, URUGUAY",
@@ -1243,7 +1256,8 @@
    ],
    "id": "d4a54d7e99fc",
    "version": "3855ddc9f9",
-   "publicado_en_doc": false
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-10"
   },
   {
    "titulo": "ESGRIMA ADAPTADA - CAMPEONATO PANAMERICANO (AMERICAS CHAMPIONSHIPS) EN SAN PABLO, BRASIL",
@@ -1440,7 +1454,8 @@
    ],
    "id": "209b07e6d830",
    "version": "d34e8d0732",
-   "publicado_en_doc": false
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-10"
   },
   {
    "titulo": "POLE Y DEPORTES AÉREOS - CAMPEONATO MUNDIAL IPSF EN PRAGA, REPÚBLICA CHECA",
@@ -1606,7 +1621,8 @@
    ],
    "id": "090e0ef4a21e",
    "version": "32ddcbc8b1",
-   "publicado_en_doc": false
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-10"
   },
   {
    "titulo": "SURF - ALAS GLOBAL TOUR EL SALVADOR 2026 EN COSTA DEL SOL, EL SALVADOR",
@@ -1770,7 +1786,8 @@
    ],
    "id": "125723831f31",
    "version": "1f61922b5d",
-   "publicado_en_doc": false
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-10"
   },
   {
    "titulo": "CICLISMO ADAPTADO - CAMPEONATO MUNDIAL DE PISTA EN APELDOORN, PAÍSES BAJOS",
@@ -1810,7 +1827,8 @@
    ],
    "id": "9e25d4feeb24",
    "version": "76c0fd29db",
-   "publicado_en_doc": false
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-10"
   },
   {
    "titulo": "BMX RACING - COPA DEL MUNDO (RONDAS 9 Y 10) EN SARASOTA, ESTADOS UNIDOS",
@@ -1876,7 +1894,8 @@
    ],
    "id": "5401fa89bfab",
    "version": "37ced1755c",
-   "publicado_en_doc": false
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-10"
   },
   {
    "titulo": "BATALLA DE ESTRELLAS DE CALISTENIA EN PANAMÁ",
@@ -1973,7 +1992,8 @@
    ],
    "id": "57e43cf2bfed",
    "version": "7602d994a7",
-   "publicado_en_doc": false
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-10"
   },
   {
    "titulo": "JUEGOS OLÍMPICOS DE LA JUVENTUD DAKAR 2026, SENEGAL (31 de octubre al 13 de noviembre)",
