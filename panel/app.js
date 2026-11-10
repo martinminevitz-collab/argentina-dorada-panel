@@ -250,15 +250,16 @@ function dibujar() {
   for (const b of document.querySelectorAll(".pestanas button")) {
     const t = b.dataset.tab;
     b.classList.toggle("activa", t === estado.tab);
-    const n = t === "radar" ? estado.noticias.length : t.startsWith("m:") ? "" : eventosDe(t, false).length;
+    const n = t === "radar" ? estado.noticias.length : t.startsWith("m:") || t === "graficas" ? "" : eventosDe(t, false).length;
     b.querySelector(".n").textContent = n || "";
   }
   document.querySelectorAll("[data-para]").forEach((el) => (el.hidden = !el.dataset.para.split(" ").includes(estado.tab)));
-  document.querySelector(".filtros").hidden = esMulti;
+  document.querySelector(".filtros").hidden = esMulti || estado.tab === "graficas";
 
   const lista = $("#lista");
   lista.innerHTML = "";
-  lista.classList.remove("modo-multi");
+  lista.classList.remove("modo-multi", "modo-graficas");
+  if (estado.tab === "graficas") return window.Graficas?.dibujar(lista);
   if (estado.tab === "radar") return dibujarRadar(lista);
   if (esMulti) return dibujarMulti(lista);
 
@@ -293,6 +294,10 @@ function tarjetaEvento(e, tpl) {
   if (e.seccion === "agenda") { t.querySelector(".publicado").remove(); t.querySelector(".novedad").hidden = true; }
   else configurarPublicado(t.querySelector(".publicado"), t, e);
   t.querySelector(".copiar").onclick = () => copiarEvento(e);
+  if (e.seccion === "resultados" && window.Graficas) {
+    const g = boton("🎨 Gráfica", () => { Graficas.desdeEvento(e); estado.tab = "graficas"; dibujar(); window.scrollTo({ top: 0 }); });
+    t.querySelector(".pie").insertBefore(g, t.querySelector(".pie .publicado"));
+  }
   if (e.manual) {
     const chip = document.createElement("span"); chip.className = "chip manual"; chip.textContent = "✍️ A mano";
     chip.title = "Lo cargó alguien desde el panel. Cuando el agente lo pase al Doc, queda el del Doc.";
