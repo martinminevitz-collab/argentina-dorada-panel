@@ -1,0 +1,31 @@
+{
+  "_nota": "Eventos que van en su propia pestaña del panel (día por día), y no en Resultados. Se reconocen por estas palabras en el título del Doc (sin importar tildes ni mayúsculas). Bolivarianos y Universiadas quedan afuera a propósito.",
+  "palabras": [
+    "juegos olimpicos",
+    "olimpicos de la juventud",
+    "juegos paralimpicos",
+    "juegos panamericanos",
+    "parapanamericanos",
+    "panamericanos junior",
+    "juegos suramericanos",
+    "juegos sudamericanos",
+    "odesur",
+    "parasuramericanos",
+    "suramericanos de la juventud",
+    "world games",
+    "juegos mundiales",
+    "world beach games",
+    "juegos de playa"
+  ],
+  "excluir": [
+    "bolivarianos",
+    "universiada",
+    "universitarios",
+    "clasificatorio",
+    "clasificatorios",
+    "trasplantad",
+    "veteranos",
+    "master",
+    "masters"
+  ]
+}

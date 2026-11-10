@@ -108,6 +108,116 @@ def separar_titulo(texto):
     return deporte.strip(), re.sub(r"\s+", " ", evento).strip(), fechas
 
 
+def _norm(t):
+    import unicodedata
+    return "".join(c for c in unicodedata.normalize("NFD", (t or "").lower()) if unicodedata.category(c) != "Mn")
+
+
+def es_multideportivo(titulo):
+    cfg = json.loads((guardar.RAIZ / "config" / "multideportivos.json").read_text(encoding="utf-8"))
+    t = _norm(titulo)
+    return any(p in t for p in cfg["palabras"]) and not any(x in t for x in cfg["excluir"])
+
+
+def nombre_corto(titulo):
+    """'JUEGOS OLÍMPICOS DE LA JUVENTUD DAKAR 2026, SENEGAL' -> 'Dakar 2026'"""
+    m = re.search(r"([A-ZÁÉÍÓÚÑ][A-ZÁÉÍÓÚÑa-záéíóúñ]+(?: [A-ZÁÉÍÓÚÑ][A-ZÁÉÍÓÚÑa-záéíóúñ]+)?) (\d{4})", titulo)
+    if m:
+        palabras = m.group(1).split()
+        # nos quedamos con la ciudad (la última palabra con mayúscula antes del año)
+        ciudad = palabras[-1] if palabras[0].upper() in ("DE", "LA", "JUVENTUD") or len(palabras) == 1 else " ".join(palabras)
+        for basura in ("JUVENTUD", "OLIMPICOS", "OLÍMPICOS", "PANAMERICANOS", "SURAMERICANOS", "GAMES", "JUEGOS"):
+            if ciudad.upper().startswith(basura + " "):
+                ciudad = ciudad[len(basura) + 1:]
+        return f"{ciudad.title()} {m.group(2)}"
+    return " ".join(titulo.split()[:3]).title()
+
+
+def es_titulo_deporte(texto, estricto=False):
+    t = texto.strip()
+    if re.search(r"\bvs\.?\b|\d+\s*hs\b|\d+-\d+|\d{1,2}/\d{1,2}", t, re.I):
+        return False
+    if estricto:
+        letras = [c for c in t if c.isalpha()]
+        return bool(letras) and all(c.isupper() for c in letras)
+    return True
+
+
+def armar_multideportivo(e):
+    """Agrupa los bloques del evento en: general, medallero, días (con deportes y resumen) y deportes."""
+    general, dias, medallero = [], [], None
+    dia = deporte = None
+    en_resumen = False
+    for b in e["bloques"]:
+        texto = texto_de(b.get("partes", [])) if b.get("partes") else ""
+        if b["tipo"] == "sub" and (re.match(r"^d[ií]a\s*\d+", texto, re.I) or _norm(texto).startswith("dias anteriores")):
+            dia = {"titulo": texto, "deportes": [], "resumen": {"destacados": [], "posteo": ""}}
+            dias.append(dia); deporte = None; en_resumen = False
+            continue
+        if dia is None:
+            if b["tipo"] == "texto" and _norm(texto).startswith("medallero"):
+                medallero = b["partes"]
+            general.append(b)
+            continue
+        if b["tipo"] == "sub" and _norm(texto).startswith("resumen"):
+            en_resumen, deporte = True, None
+            continue
+        if en_resumen:
+            if b["tipo"] == "espacio":
+                continue
+            if _norm(texto).startswith("para el posteo"):
+                dia["resumen"]["posteo"] = re.sub(r"^para el posteo:?\s*", "", texto, flags=re.I)
+            else:
+                dia["resumen"]["destacados"].append(b)
+            continue
+        # adentro de un día, el deporte va en MAYÚSCULAS ("## NATACIÓN"); una línea en negrita
+        # con minúsculas ("**Final vs Portugal el jueves**") es un dato, no un deporte nuevo
+        if b["tipo"] == "sub" and es_titulo_deporte(texto, estricto=True):
+            deporte = {"nombre": texto.title() if texto.isupper() else texto, "bloques": []}
+            dia["deportes"].append(deporte)
+            continue
+        if deporte is None:
+            deporte = {"nombre": "General", "bloques": []}
+            dia["deportes"].append(deporte)
+        if b["tipo"] == "espacio" and not deporte["bloques"]:
+            continue
+        deporte["bloques"].append(b)
+
+    for d in dias:
+        for dep in d["deportes"]:
+            while dep["bloques"] and dep["bloques"][-1]["tipo"] == "espacio":
+                dep["bloques"].pop()
+
+    # sin días todavía (formato viejo, por deporte): los deportes salen de las subcategorías generales
+    por_deporte = {}
+    if dias:
+        for d in dias:
+            for dep in d["deportes"]:
+                por_deporte.setdefault(dep["nombre"], []).append({"dia": d["titulo"], "bloques": dep["bloques"]})
+        general_limpio = general
+    else:
+        general_limpio, actual = [], None
+        for b in general:
+            if b["tipo"] == "sub" and es_titulo_deporte(texto_de(b["partes"])):
+                nombre = texto_de(b["partes"])
+                actual = por_deporte.setdefault(nombre.title() if nombre.isupper() else nombre, [])
+                actual.append({"dia": None, "bloques": []})
+                continue
+            if actual is None:
+                general_limpio.append(b)
+            elif not (b["tipo"] == "espacio" and not actual[-1]["bloques"]):
+                actual[-1]["bloques"].append(b)
+    while general_limpio and general_limpio[-1]["tipo"] == "espacio":
+        general_limpio.pop()
+    e["multi"] = {
+        "nombre": nombre_corto(e["titulo"]),
+        "general": general_limpio,
+        "medallero": medallero,
+        "dias": dias,
+        "deportes": [{"nombre": k, "dias": v} for k, v in por_deporte.items()],
+    }
+
+
 def leer_doc(html):
     sopa = BeautifulSoup(html, "html.parser")
     clases = estilos_por_clase(sopa)
@@ -170,6 +280,9 @@ def leer_doc(html):
         e["id"] = hashlib.sha1(re.sub(r"[^a-z0-9]", "", base).encode()).hexdigest()[:12]
         # huella del contenido: si cambia después de marcarlo "Publicado", el panel avisa que hay novedades
         e["version"] = hashlib.sha1(json.dumps(e["bloques"], ensure_ascii=False).encode()).hexdigest()[:10]
+        if es_multideportivo(e["titulo"]):
+            e["multideportivo"] = True
+            armar_multideportivo(e)
         e["publicado_en_doc"] = e["ya_publicado"] or (
             bool(e["bloques"]) and all(p.get("c") == "gris" for b in e["bloques"] if b.get("partes") for p in b["partes"]))
     return actualizado_doc, eventos
