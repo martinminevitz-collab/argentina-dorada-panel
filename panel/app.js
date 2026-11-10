@@ -364,7 +364,7 @@ function dibujarMulti(lista) {
   sw.innerHTML = `<button data-v="dia">Por día</button><button data-v="deporte">Por deporte</button>`;
   sw.querySelectorAll("button").forEach((b) => {
     b.classList.toggle("activo", b.dataset.v === vista);
-    b.onclick = () => { estado.multiVista = b.dataset.v; estado.multiSel = null; dibujar(); };
+    b.onclick = () => { estado.multiVista = b.dataset.v; estado.multiSel = null; estado.multiBusca = ""; dibujar(); };
   });
   cab.append(sw);
   lista.append(cab);
@@ -380,29 +380,84 @@ function dibujarMulti(lista) {
     }
     const sel = m.dias.find((d) => d.titulo === estado.multiSel) || m.dias[0];
     lista.append(selector(m.dias.map((d) => d.titulo), sel.titulo, (t) => t.replace(/^D[IÍ]A\s*/i, "Día ")));
+    lista.append(buscadorDeporte("Buscar deporte en este día…"));
     const r = sel.resumen;
-    if (r.destacados.length || r.posteo) lista.append(cajaResumen(e, sel));
-    else lista.append(Object.assign(document.createElement("p"), { className: "ayuda pendiente", textContent: "El resumen del día aparece cuando termina la jornada." }));
-    for (const dep of sel.deportes) lista.append(cajaMulti(e, sel.titulo + "|" + dep.nombre, dep.nombre, dep.bloques, { sub: sel.titulo }));
+    const q = normBusca(estado.multiBusca);
+    if (!q) {
+      if (r.destacados.length || r.posteo) lista.append(cajaResumen(e, sel));
+      else lista.append(Object.assign(document.createElement("p"), { className: "ayuda pendiente", textContent: "El resumen del día aparece cuando termina la jornada." }));
+    }
+    const deps = sel.deportes.filter((dep) => !q || normBusca(dep.nombre).includes(q));
+    if (!deps.length) lista.append(Object.assign(document.createElement("p"), { className: "vacio", textContent: "Ese deporte no compitió este día." }));
+    for (const dep of deps) lista.append(cajaMulti(e, sel.titulo + "|" + dep.nombre, dep.nombre, dep.bloques, { sub: sel.titulo }));
   } else {
     if (!m.deportes.length) { lista.append(Object.assign(document.createElement("p"), { className: "vacio", textContent: "Todavía no hay deportes cargados." })); return; }
-    const sel = m.deportes.find((d) => d.nombre === estado.multiSel) || m.deportes[0];
-    lista.append(selector(m.deportes.map((d) => d.nombre), sel.nombre));
+    const q = normBusca(estado.multiBusca);
+    const opciones = m.deportes.filter((d) => !q || normBusca(d.nombre).includes(q));
+    lista.append(buscadorDeporte("Buscar deporte…"));
+    if (!opciones.length) { lista.append(Object.assign(document.createElement("p"), { className: "vacio", textContent: "No hay ningún deporte con ese nombre." })); return; }
+    const sel = opciones.find((d) => d.nombre === estado.multiSel) || opciones[0];
+    lista.append(selector(opciones.map((d) => d.nombre), sel.nombre));
     for (const d of sel.dias) lista.append(cajaMulti(e, (d.dia || "") + "|" + sel.nombre, d.dia ? d.dia.replace(/^D[IÍ]A\s*/i, "Día ") : sel.nombre, d.bloques, { sub: sel.nombre }));
   }
 }
 
+function normBusca(t) { return sinAcentos(String(t || "").toLowerCase()).trim(); }
+
+// Buscador de deporte de la pestaña del multideportivo. Se redibuja la lista y se vuelve a poner el cursor donde estaba.
+function buscadorDeporte(placeholder) {
+  const caja = document.createElement("div");
+  caja.className = "buscador-multi";
+  caja.innerHTML = `<input type="search" placeholder="${placeholder}" aria-label="Buscar deporte">`;
+  const inp = caja.querySelector("input");
+  inp.value = estado.multiBusca || "";
+  inp.oninput = () => {
+    estado.multiBusca = inp.value; estado.multiSel = estado.multiVista === "deporte" ? null : estado.multiSel;
+    const pos = inp.selectionStart;
+    dibujar();
+    const nuevo = document.querySelector(".buscador-multi input");
+    if (nuevo) { nuevo.focus(); nuevo.setSelectionRange(pos, pos); }
+  };
+  return caja;
+}
+
+// Fila de días o deportes: se desliza de costado (con el dedo, la ruedita o las flechas ◀ ▶).
 function selector(opciones, actual, etiqueta = (x) => x) {
+  const caja = document.createElement("div");
+  caja.className = "selector-caja";
   const d = document.createElement("div");
   d.className = "selector";
   for (const o of opciones) {
     const b = document.createElement("button");
     b.textContent = etiqueta(o);
     b.classList.toggle("activo", o === actual);
-    b.onclick = () => { estado.multiSel = o; dibujar(); };
+    b.onclick = () => { estado.multiSel = o; estado.selScroll = d.scrollLeft; dibujar(); };
     d.append(b);
   }
-  return d;
+  const flecha = (txt, dir) => {
+    const f = document.createElement("button");
+    f.className = "flecha-sel " + (dir < 0 ? "izq" : "der");
+    f.textContent = txt; f.setAttribute("aria-label", dir < 0 ? "Anteriores" : "Siguientes");
+    f.onclick = () => d.scrollBy({ left: dir * d.clientWidth * 0.8, behavior: "smooth" });
+    return f;
+  };
+  const izq = flecha("◀", -1), der = flecha("▶", 1);
+  const actualizar = () => {
+    izq.hidden = d.scrollLeft <= 4;
+    der.hidden = d.scrollLeft + d.clientWidth >= d.scrollWidth - 4;
+  };
+  d.addEventListener("scroll", actualizar, { passive: true });
+  // la ruedita del mouse también lo mueve de costado
+  d.addEventListener("wheel", (ev) => {
+    if (Math.abs(ev.deltaY) > Math.abs(ev.deltaX) && d.scrollWidth > d.clientWidth) { d.scrollLeft += ev.deltaY; ev.preventDefault(); }
+  }, { passive: false });
+  caja.append(izq, d, der);
+  requestAnimationFrame(() => {
+    if (estado.selScroll != null) { d.scrollLeft = estado.selScroll; estado.selScroll = null; }
+    else d.querySelector(".activo")?.scrollIntoView({ inline: "nearest", block: "nearest" });
+    actualizar();
+  });
+  return caja;
 }
 
 // cada recuadro (un deporte en un día) es como un mini evento: se copia y se marca Publicado por separado

@@ -183,7 +183,7 @@ input[type=search], select { width: 100%; background: var(--tarjeta); color: var
 .detalle.suelto { background: var(--tarjeta); border: 1px solid var(--borde); border-radius: var(--radio); }
 @media (min-width: 1000px) {
   .lista.modo-multi { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .lista.modo-multi > .multi-cab, .lista.modo-multi > .selector, .lista.modo-multi > .resumen-dia,
+  .lista.modo-multi > .multi-cab, .lista.modo-multi > .selector-caja, .lista.modo-multi > .buscador-multi, .lista.modo-multi > .resumen-dia,
   .lista.modo-multi > .pendiente, .lista.modo-multi > .vacio, .lista.modo-multi > .detalle.suelto { grid-column: 1 / -1; }
 }
 #tabs-multi { display: contents; }
@@ -196,5 +196,12 @@ input[type=search], select { width: 100%; background: var(--tarjeta); color: var
 .resumen-final { border-color: var(--oro); background: linear-gradient(180deg, var(--oro-fondo), var(--tarjeta) 60px); }
 @media (min-width: 1000px) { .lista.modo-multi > .resumen-final { grid-column: 1 / -1; } }
 
-@media (min-width: 1000px) { .selector { flex-wrap: wrap; overflow: visible; } }
 @media (min-width: 1000px) { .pestanas button.multi { justify-content: flex-start; gap: 6px; align-items: center; } }
+
+/* fila de días/deportes con scroll de costado y flechas */
+.selector-caja { position: relative; display: flex; align-items: center; min-width: 0; }
+.selector-caja .selector { flex: 1; min-width: 0; scroll-behavior: smooth; }
+.flecha-sel { position: absolute; top: 50%; transform: translateY(-50%); z-index: 2; width: 34px; height: 34px; border-radius: 50%;
+  border: 1px solid var(--borde); background: var(--tarjeta); color: var(--texto); box-shadow: 0 2px 8px rgba(11,30,51,.15); cursor: pointer; font-size: 13px; }
+.flecha-sel.izq { left: -6px; } .flecha-sel.der { right: -6px; }
+.buscador-multi input { width: 100%; }
