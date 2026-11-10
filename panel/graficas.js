@@ -17,19 +17,20 @@
     titulo: { label: "Título", ej: "Argentina entre los ocho mejores del continente", area: true },
     texto: { label: "Texto", ej: "En ambas ramas…", area: true },
     credito: { label: "Crédito de la foto", ej: "CAB" },
+    tam: { label: "Tamaño del texto", rango: [60, 150, 5] },
   };
   const TIPOS = {
-    portada: { formato: "feed", nombre: "Portada", campos: ["deporte", "torneo", "titulo", "credito", { k: "tam", label: "Tamaño de letra (si el texto es largo se achica solo)", rango: [60, 130, 5] }] },
-    placa: { formato: "feed", nombre: "Placa de texto", campos: ["titulo", "texto", "credito",
+    portada: { formato: "feed", nombre: "Portada", campos: ["deporte", "torneo", "titulo", "credito"] },
+    placa: { formato: "feed", nombre: "Placa de texto", campos: ["titulo", "texto", "tam", "credito",
       { k: "fondo", label: "Fondo", opciones: [["oscuro", "Oscuro"], ["claro", "Claro"]] },
-      { k: "acento", label: "Color del número", opciones: [["celeste", "Celeste"], ["naranja", "Naranja"], ["dorado", "Dorado"]] }, { k: "tam", label: "Tamaño de letra (si el texto es largo se achica solo)", rango: [60, 130, 5] }] },
+      { k: "acento", label: "Color del número", opciones: [["celeste", "Celeste"], ["naranja", "Naranja"], ["dorado", "Dorado"]] } ] },
     medalla: { formato: "feed", nombre: "Portada medalla", campos: [
       { k: "prueba", label: "Deporte · prueba", ej: "Natación · 200 m espalda" }, { k: "nombre", label: "Deportista", ej: "Cecilia Dieleke" },
       { k: "medalla", label: "Medalla", opciones: [["oro", "Dorada"], ["plata", "Plateada"], ["bronce", "Bronce"]] },
       { k: "evento", label: "Evento", ej: "Dakar 2026 - Juegos Olímpicos de la Juventud" }, "credito"] },
     "s-portada": { formato: "story", nombre: "Historia portada", campos: ["deporte", "torneo", "instancia",
       { k: "linea1", label: "Título (línea blanca)", ej: "Argentina" }, { k: "linea2", label: "Título (línea celeste)", ej: "a la final" }, "credito"] },
-    "s-texto": { formato: "story", nombre: "Historia con texto", campos: ["deporte", "torneo", "instancia", "titulo", "texto", "credito", { k: "tam", label: "Tamaño de letra (si el texto es largo se achica solo)", rango: [60, 130, 5] }] },
+    "s-texto": { formato: "story", nombre: "Historia con texto", campos: ["deporte", "torneo", "instancia", "titulo", "texto", "tam", "credito"] },
     "s-sets": { formato: "story", nombre: "Historia marcador por sets", campos: ["deporte", "torneo",
       { k: "arg", label: "Argentinos", ej: "García/Frascaroli" }, { k: "rival", label: "Rival", ej: "Paniagua/Reyes" },
       { k: "rival_pais", label: "País rival (3 letras)", ej: "DOM" }, { k: "sets", label: "Sets (ARG-rival, separados por coma)", ej: "21-16, 21-12" },
@@ -93,11 +94,11 @@
     portada: (p) => { const d = p.datos; return `${foto(p, "g-full")}<div class="g-degrade"></div>
       <div class="g-pt-arriba">${d.deporte ? `<span class="g-pill oro">${esc(d.deporte)}</span>` : ""}<div class="g-pt-torneo">${esc(d.torneo)}</div></div>
       <div class="g-logo-caja"><span>ARGENTINA</span><b>DORADA</b></div>
-      <div class="g-pt-titulo" data-fit><div class="g-linea"></div><h1 data-fs>${br(d.titulo)}</h1></div>
+      <div class="g-pt-titulo" data-fit><div class="g-linea"></div><h1 data-fs="titulo">${br(d.titulo)}</h1></div>
       ${credito(d, "caja")}<div class="g-desliza">Deslizá <span>⟶</span></div>`; },
     placa: (p, i) => { const d = p.datos; return `<div class="g-placa ${d.fondo === "claro" ? "claro" : ""}">
       ${foto(p, "g-pl-foto")}${credito(d, "g-pl-cred")}
-      <div class="g-pl-cuerpo" data-fit><div class="g-linea"></div><h2 data-fs>${br(d.titulo)}</h2><p data-fs>${br(d.texto)}</p></div>
+      <div class="g-pl-cuerpo" data-fit><div class="g-linea"></div><h2 data-fs="titulo">${br(d.titulo)}</h2><p data-fs="texto">${br(d.texto)}</p></div>
       ${marcaAD("g-pl-ad")}<div class="g-pl-num ${d.acento || "celeste"}">${num(i)}</div></div>`; },
     medalla: (p) => { const d = p.datos; const [txt, cls] = MEDALLAS[d.medalla] || MEDALLAS.oro; return `${foto(p, "g-full")}<div class="g-degrade suave"></div>
       <div class="g-md-prueba">${esc(d.prueba)}</div><div class="g-md-nombre">${esc(d.nombre)}</div>
@@ -110,7 +111,7 @@
     "s-texto": (p) => { const d = p.datos; return `${marcaAD("g-s-head")}<div class="g-s-linea-top"></div>
       ${d.deporte ? `<span class="g-pill celeste g-st-pill">${esc(d.deporte)}</span>` : ""}${foto(p, "g-st-foto")}${credito(d, "g-st-cred")}
       <div class="g-st-caja"><b>${esc(d.torneo)}</b><span>${esc(d.instancia)}</span></div>
-      <div class="g-st-abajo" data-fit><h1 class="g-st-titulo" data-fs>${br(d.titulo)}</h1><div class="g-st-texto"><div class="g-linea"></div><p data-fs>${br(d.texto)}</p></div></div>`; },
+      <div class="g-st-abajo" data-fit><h1 class="g-st-titulo" data-fs="titulo">${br(d.titulo)}</h1><div class="g-st-texto"><div class="g-linea"></div><p data-fs="texto">${br(d.texto)}</p></div></div>`; },
     "s-sets": (p) => { const d = p.datos;
       const sets = String(d.sets || "").split(",").map((s) => s.split("-").map((n) => n.trim())).filter((s) => s.length === 2 && s[0] !== "");
       const cols = sets.map((_, i) => `<th>Set ${i + 1}</th>`).join("");
@@ -139,10 +140,17 @@
     if (!pagina) return;
     const tam = (Number(p.datos.tam) || 100) / 100;
     for (const caja of pagina.querySelectorAll("[data-fit]")) {
-      const items = [...caja.querySelectorAll("[data-fs]")].map((el) => [el, parseFloat(getComputedStyle(el).fontSize)]);
-      const poner = (f) => items.forEach(([el, base]) => (el.style.fontSize = base * f + "px"));
-      let f = tam; poner(f);
-      while (caja.scrollHeight > caja.clientHeight + 2 && f > 0.35) { f *= 0.94; poner(f); }
+      const grupo = (rol) => [...caja.querySelectorAll(`[data-fs="${rol}"]`), ...(rol === "titulo" ? caja.querySelectorAll('[data-fs=""]') : [])]
+        .map((el) => [el, parseFloat(getComputedStyle(el).fontSize)]);
+      const texto = grupo("texto"), titulo = grupo("titulo");
+      const poner = (items, f) => items.forEach(([el, base]) => (el.style.fontSize = base * f + "px"));
+      const sobra = () => caja.scrollHeight > caja.clientHeight + 2;
+      // el "Tamaño del texto" solo cambia el desarrollo; si no entra, primero se achica el texto y después el título
+      let ft = tam; poner(texto, ft);
+      while (sobra() && texto.length && ft > 0.55) { ft *= 0.94; poner(texto, ft); }
+      let fh = 1;
+      while (sobra() && fh > 0.7) { fh *= 0.94; poner(titulo, fh); }
+      while (sobra() && texto.length && ft > 0.3) { ft *= 0.94; poner(texto, ft); }
     }
   }
 
