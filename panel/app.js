@@ -295,7 +295,7 @@ function tarjetaEvento(e, tpl) {
   else configurarPublicado(t.querySelector(".publicado"), t, e);
   t.querySelector(".copiar").onclick = () => copiarEvento(e);
   if (e.seccion === "resultados" && window.Graficas) {
-    const g = boton("🎨 Gráfica", () => { Graficas.desdeEvento(e); estado.tab = "graficas"; dibujar(); window.scrollTo({ top: 0 }); });
+    const g = boton("🎨 Gráfica", () => { Graficas.desdeEvento(e, { medalla: tipoMedalla }); estado.tab = "graficas"; dibujar(); window.scrollTo({ top: 0 }); });
     t.querySelector(".pie").insertBefore(g, t.querySelector(".pie .publicado"));
   }
   if (e.manual) {
@@ -735,6 +735,13 @@ function cajaMulti(e, clave, titulo, bloques, { sub = "", cerrada = false, sinPu
     incluirGris: false,
     hashtags: hashtagsEvento({ titulo: e.titulo, deporte: sub && !/^d[ií]a/i.test(sub) ? sub : titulo }, [hashtag(e.multi.nombre)]) });
   const bPub = t.querySelector(".publicado");
+  if (!sinPublicar && window.Graficas) {
+    const deporte = sub && !/^d[ií]a/i.test(sub) ? sub : titulo;
+    bPub.before(boton("🎨 Gráfica", () => {
+      Graficas.desdeEvento({ deporte, evento: e.multi.nombre, bloques }, { medalla: tipoMedalla });
+      estado.tab = "graficas"; dibujar(); window.scrollTo({ top: 0 });
+    }));
+  }
   if (sinPublicar) bPub.remove(); else configurarPublicado(bPub, t, mini);
   return t;
 }
