@@ -104,8 +104,9 @@ function eventosDe(tab, conFiltros = true) {
     if (e.seccion !== seccion) return false;
     if (seccion === "resultados" && e.multideportivo) return false;
     if (e.vencido) return false; // terminó hace más de 7 días
-    if (!conFiltros) return !estaPublicado(e) || tieneNovedades(e);
-    if (!$("#ver-publicados").checked && estaPublicado(e) && !tieneNovedades(e)) return false;
+    const esAgenda = seccion === "agenda"; // la agenda no se "publica": siempre se ve todo
+    if (!conFiltros) return esAgenda || !estaPublicado(e) || tieneNovedades(e);
+    if (!esAgenda && !$("#ver-publicados").checked && estaPublicado(e) && !tieneNovedades(e)) return false;
     if (tab === "resultados" && estado.filtroEstado && e.etiqueta !== estado.filtroEstado) return false;
     const dep = $("#deporte").value;
     if (dep && e.deporte !== dep) return false;
@@ -190,7 +191,8 @@ function tarjetaEvento(e, tpl) {
     t.replaceWith(tarjetaEvento(e, tpl));
   };
 
-  configurarPublicado(t.querySelector(".publicado"), t, e);
+  if (e.seccion === "agenda") { t.querySelector(".publicado").remove(); t.querySelector(".novedad").hidden = true; }
+  else configurarPublicado(t.querySelector(".publicado"), t, e);
   t.querySelector(".copiar").onclick = () => copiarEvento(e);
   return t;
 }
