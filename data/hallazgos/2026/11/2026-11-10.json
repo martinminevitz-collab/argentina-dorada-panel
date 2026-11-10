@@ -1,5 +1,18 @@
 [
  {
+  "id": "6de89f90e2b5",
+  "titulo": "La atleta argentina Zoe Gorski tuvo una interesante labor en los Dakar 2026",
+  "resumen": "La atleta argentina Zoe Gorski tuvo una interesante labor en los Dakar 2026 Marca Personal Web",
+  "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPVTI0dUZtSWxxS05yUjh0Qk5Zc2FhMU5Tbmp5Q1FmLThMVEtFSzFhNzFPSXhnWDhhUnZvTkFXWThTcTB2eWJFaVhnTF92UkNxd3NMZzRwUzNhZjVKTzVkb09IWUQ2bVM0NTUtQ1c5WHllZ09oNV9TTmp4anVzMkdxSHNKVmZ6WlJzNFN1QzFEbm5iZDJpT1Q3RlpSRXpoT2Q3YmIyZURQTzBLUjBhRndpTm9jRTJkaTNpLWFj?oc=5",
+  "fuente": "Marca Personal Web",
+  "deporte": "Atletismo",
+  "tipo": "resultado",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-10T03:57+00:00",
+  "encontrado": "2026-11-10T04:29-03:00",
+  "bot": "resultados"
+ },
+ {
   "id": "f74e2aa60534",
   "titulo": "Guada Díaz se destacó en el Argentino de Pista",
   "resumen": "Guada Díaz se destacó en el Argentino de Pista El Esquiu",
@@ -52,6 +65,19 @@
   "bot": "resultados"
  },
  {
+  "id": "f9208ced7568",
+  "titulo": "Guadalupe Díaz logró cuatro podios en el Argentino",
+  "resumen": "Guadalupe Díaz logró cuatro podios en el Argentino El Ancasti",
+  "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPSkVuM3RDXzJuRjViUXo5czJQRFVEWGpoM0psbHRuY05kbzRmMEVGUmx2YVBaenRsXzhJcTljWkRoalZhNTZ0Mmx1aENnaVRsMDJLajJpeW9pcVdMX3owa3dkQUpMeHRMb1NESWFqMTNrb0hibTFpc0J5VEFNZDhkRWNGZ1R0VDlEWHRWNkJaUzdmZDFkR0RNctIBngFBVV95cUxPNnFDamgtYzczOVRib3JxeEJoVE94Q1h5UURGZlloLXZOZlZYNUhFc2lCMlh1Q3JoN3VQQ2otNTZ1RkhtcC1XMWpXRTRNb3AxTjNTcklLUjB3ZWVuQlp1QXozRm12UGpmblRZUW11cndlbFhVdzg5YnhKZkNjcHRkdGx1bF9YZ1h4cFdkeThIaWlEREdaTHlubjFxbmZzZw?oc=5",
+  "fuente": "El Ancasti",
+  "deporte": "Ciclismo de pista",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-10T02:19+00:00",
+  "encontrado": "2026-11-10T04:29-03:00",
+  "bot": "resultados"
+ },
+ {
   "id": "7cdcc32a5b01",
   "titulo": "Chery lanzó el Tiggo 4 Pro 1.5T CVT Luxury en Argentina",
   "resumen": "Chery lanzó el Tiggo 4 Pro 1.5T CVT Luxury en Argentina www.megautos.com",
@@ -78,6 +104,19 @@
   "bot": "resultados"
  },
  {
+  "id": "3fd235d27197",
+  "titulo": "Thiago Gómez y Emilia Villegas dieron batalla en el Argentino de Menores",
+  "resumen": "Thiago Gómez y Emilia Villegas dieron batalla en el Argentino de Menores El Diario de la República",
+  "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNMTVVTkNjdlhUcDRHWVo2ZjVKMURlRmdqeGczdU5XUE5rZjk2YllGNWFNa0M2bjc3NE5aNkFSR1EzME1nclZTR2R5WjZFa3NMSjBEdGhObEZvUHVDMzNJemVIMTE0YUhsa2RLenA5bmRkQlVCcHJpelZlZ0htTHd6ZjJFWWgyeVdaWVpjRjBUWm9kWjdpMXpCcXlsTXV1MXF3d1pPUEJLMVVFdWtPVGJZcUdqWnJOYzBSMTVoMjczOU1iOE1pYklsamh6QUFIQQ?oc=5",
+  "fuente": "El Diario de la República",
+  "deporte": "Pelota",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-10T01:05+00:00",
+  "encontrado": "2026-11-10T04:31-03:00",
+  "bot": "resultados"
+ },
+ {
   "id": "0ff374a286a6",
   "titulo": "Kiki Ramos sorprende al eligir jugar con Haití y no con Argentina",
   "resumen": "Kiki Ramos sorprende al eligir jugar con Haití y no con Argentina Deportes TVC",
@@ -88,6 +127,19 @@
   "en_buenos_aires": false,
   "publicado": "2026-11-10T00:48+00:00",
   "encontrado": "2026-11-10T01:08-03:00",
+  "bot": "resultados"
+ },
+ {
+  "id": "c80bb0fe75ad",
+  "titulo": "Taekwondoínes de El Marqués obtienen 11 medallas en Argentina",
+  "resumen": "Taekwondoínes de El Marqués obtienen 11 medallas en Argentina El Queretano",
+  "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPM1laaXhPZzdQZzJOOUk3YW5OUzR6dFFhdnFGOGVPYnB4MGxSb3N6Z241MEV6LUI1UUtjTVhDQzJabVFpblVxc3RyaGJJLVJRN0YzMkVhQjRoSFg3eFNkTVdwajFONjhUQmtuTE42UEJmaFFfbXJ0bHVUODNxb2NnYWl3YTBUcEVXWktFalJCSzJBMl9pUHhka2hOZzA5VDU5Q2ZnYdIBpAFBVV95cUxPM1laaXhPZzdQZzJOOUk3YW5OUzR6dFFhdnFGOGVPYnB4MGxSb3N6Z241MEV6LUI1UUtjTVhDQzJabVFpblVxc3RyaGJJLVJRN0YzMkVhQjRoSFg3eFNkTVdwajFONjhUQmtuTE42UEJmaFFfbXJ0bHVUODNxb2NnYWl3YTBUcEVXWktFalJCSzJBMl9pUHhka2hOZzA5VDU5Q2ZnYQ?oc=5",
+  "fuente": "El Queretano",
+  "deporte": "Taekwondo",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-10T00:37+00:00",
+  "encontrado": "2026-11-10T04:31-03:00",
   "bot": "resultados"
  },
  {
@@ -309,6 +361,19 @@
   "en_buenos_aires": false,
   "publicado": "2026-11-09T12:00+00:00",
   "encontrado": "2026-11-10T01:08-03:00",
+  "bot": "resultados"
+ },
+ {
+  "id": "67c76c97f332",
+  "titulo": "Mundial Sub 20 femenino: Argentina revirtió un partido difícil México y clasificó octavos",
+  "resumen": "Mundial Sub 20 femenino: Argentina revirtió un partido difícil México y clasificó octavos AgenciaFe",
+  "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQbG9VNmxKUkFTa09rSDhRQVVZVTJ0SWdONFhzSmRtU0dyZnE4QzVGR20xejNNREpDQ25aS3JMejFTalBsS09aWTBEZ0ZfaEpWNDM3akRrei11MXVkM0JsdlBvUWVBcTdJeTFkQUtMS3N6XzlIRHg1b1RRY25jekVwdWNhVW9OcWowZkh0anlUanJ0Rm5BbjJxbHAyWktrNFgzXzlRbXpnanVTUjZlWUVTQXhnLUhGNVdpS1l2SS1DYw?oc=5",
+  "fuente": "AgenciaFe",
+  "deporte": "Futbol",
+  "tipo": "resultado",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-09T11:27+00:00",
+  "encontrado": "2026-11-10T04:30-03:00",
   "bot": "resultados"
  },
  {
