@@ -193,3 +193,5 @@ input[type=search], select { width: 100%; background: var(--tarjeta); color: var
   .lista.modo-multi > .info-general { grid-column: 1 / -1; }
 }
 .multi-cab > .chip { justify-self: start; margin: 0; }
+.resumen-final { border-color: var(--oro); background: linear-gradient(180deg, var(--oro-fondo), var(--tarjeta) 60px); }
+@media (min-width: 1000px) { .lista.modo-multi > .resumen-final { grid-column: 1 / -1; } }

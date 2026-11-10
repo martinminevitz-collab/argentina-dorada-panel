@@ -315,6 +315,7 @@ function dibujarMulti(lista) {
   cab.append(sw);
   lista.append(cab);
 
+  if (m.resumen_final) lista.append(cajaFinal(e));
   if (m.general.length) { const g = cajaMulti(e, "general", "Info general", m.general, { cerrada: true, sinPublicar: true }); g.classList.add("info-general"); lista.append(g); }
 
   if (vista === "dia") {
@@ -429,6 +430,22 @@ function configurarPublicado(bPub, t, e) {
       dibujar(); avisar("No se pudo guardar. Probá de nuevo");
     }
   };
+}
+
+function cajaFinal(e) {
+  const t = document.createElement("article");
+  t.className = "evento resumen-dia resumen-final abierto";
+  t.innerHTML = `<div class="cabeza-fija"><span class="chip publicable">Resumen final de los Juegos</span><span class="titulo">${escapar(e.multi.nombre)}</span></div>
+    <div class="detalle"><p class="posteo"></p></div>`;
+  t.querySelector(".posteo").textContent = e.multi.resumen_final;
+  const pie = document.createElement("div"); pie.className = "pie";
+  pie.append(boton("Copiar posteo", async () => {
+    try { await navigator.clipboard.writeText(e.multi.resumen_final); avisar("Posteo copiado"); } catch { avisar("No se pudo copiar"); }
+  }));
+  const mini = { id: e.id + ":final", titulo: e.titulo + " - RESUMEN FINAL", bloques: [], version: huella(e.multi.resumen_final) };
+  const bPub = boton("Publicado", null); bPub.className = "publicado"; pie.append(bPub); configurarPublicado(bPub, t, mini);
+  t.append(pie);
+  return t;
 }
 
 function boton(txt, fn) { const b = document.createElement("button"); b.textContent = txt; if (fn) b.onclick = fn; return b; }

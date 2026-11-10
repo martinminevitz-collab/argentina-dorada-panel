@@ -147,9 +147,21 @@ def armar_multideportivo(e):
     """Agrupa los bloques del evento en: general, medallero, días (con deportes y resumen) y deportes."""
     general, dias, medallero = [], [], None
     dia = deporte = None
-    en_resumen = False
+    en_resumen = en_final = False
+    resumen_final = ""
     for b in e["bloques"]:
         texto = texto_de(b.get("partes", [])) if b.get("partes") else ""
+        # "## RESUMEN FINAL ..." (al terminar los Juegos): va arriba, antes de los días
+        if dia is None and b["tipo"] == "sub" and _norm(texto).startswith("resumen final"):
+            en_final = True
+            continue
+        if en_final and dia is None:
+            if b["tipo"] == "sub" and not _norm(texto).startswith("d"):
+                en_final = False
+            elif b["tipo"] != "sub":
+                if b["tipo"] != "espacio":
+                    resumen_final += (" " if resumen_final else "") + re.sub(r"^para el posteo:?\s*", "", texto, flags=re.I)
+                continue
         if b["tipo"] == "sub" and (re.match(r"^d[ií]a\s*\d+", texto, re.I) or _norm(texto).startswith("dias anteriores")):
             dia = {"titulo": texto, "deportes": [], "resumen": {"destacados": [], "posteo": ""}}
             dias.append(dia); deporte = None; en_resumen = False
@@ -213,6 +225,7 @@ def armar_multideportivo(e):
         "nombre": nombre_corto(e["titulo"]),
         "general": general_limpio,
         "medallero": medallero,
+        "resumen_final": resumen_final.strip(),
         "dias": dias,
         "deportes": [{"nombre": k, "dias": v} for k, v in por_deporte.items()],
     }
