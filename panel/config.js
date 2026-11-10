@@ -2,6 +2,6 @@
 // por usuario (solo entran los mails cargados en la tabla "miembros").
 // Si están vacíos, el panel funciona igual pero "Publicado" queda guardado solo en cada dispositivo.
 window.AD_CONFIG = {
-  supabaseUrl: "",
-  supabaseKey: "",
+  supabaseUrl: "https://mohjthvyenidpqszjogx.supabase.co",
+  supabaseKey: "sb_publishable_-C-G1ysApdDFkIwfP9QkZA_LVy80uyR",
 };

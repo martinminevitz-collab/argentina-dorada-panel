@@ -18,4 +18,4 @@ jobs:
           URL=$(grep -oP 'supabaseUrl:\s*"\K[^"]*' panel/config.js)
           KEY=$(grep -oP 'supabaseKey:\s*"\K[^"]*' panel/config.js)
           if [ -z "$URL" ]; then echo "Base todavía no configurada"; exit 0; fi
-          curl -sf -X POST "$URL/rest/v1/rpc/ping" -H "apikey: $KEY" -H "Authorization: Bearer $KEY" -H "Content-Type: application/json" -d '{}'
+          curl -sf -X POST "$URL/rest/v1/rpc/ping" -H "apikey: $KEY" -H "Content-Type: application/json" -d '{}'
