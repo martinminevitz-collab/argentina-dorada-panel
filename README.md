@@ -3,7 +3,7 @@
 Panel propio de Argentina Dorada con bots que trabajan solos, gratis y sin usar IA.
 
 - **Panel:** se abre desde el navegador (compu o celular) y se puede instalar como app.
-- **Bots:** corren solos en GitHub cada 3 horas, aunque nadie tenga nada abierto.
+- **Bots:** corren solos en GitHub (noticias cada 3 horas, el Doc cada hora), aunque nadie tenga nada abierto.
 - **Costo:** $0. Tokens de IA: 0.
 
 ## Cómo está ordenado
@@ -14,18 +14,21 @@ argentina-dorada-panel/
 │   ├── planilla.json      link a la "Lista de deportes para Claude" (el bot la lee en cada vuelta)
 │   ├── deportes.json      palabras de búsqueda especiales por deporte (ej: Hockey → Leonas)
 │   ├── fuentes.json       webs fijas que revisa (ENARD, COA, Totallympics…)
-│   └── filtros.json       palabras para detectar argentinos, resultados, agenda, Bs. As.
+│   ├── filtros.json       palabras para detectar argentinos, resultados, agenda, Bs. As.
+│   └── doc.json           link del Doc "Resultados desde Claude" publicado en la web
 │
 ├── data/                ← LO QUE GUARDAN LOS BOTS (no tocar a mano)
 │   ├── hallazgos/AAAA/MM/AAAA-MM-DD.json   todo lo encontrado ese día
 │   ├── indice.json                          lista de días (la usa el panel)
+│   ├── doc-resultados.json                  el Doc pasado a datos (lo que muestran Resultados y Agenda)
 │   ├── ultima-corrida.json                  resumen de la última vuelta de cada bot
 │   ├── vistos.json                          memoria para no repetir noticias (60 días)
 │   └── fuentes-conocidas.json               webs ya leídas (la 1ra vez solo memoriza, no muestra)
 │
 ├── bots/                ← EL CÓDIGO DE LOS BOTS
 │   ├── comun/             piezas que comparten todos los bots
-│   └── resultados/        bot de resultados (un bot nuevo = una carpeta nueva acá)
+│   ├── resultados/        bot de resultados: noticias sueltas → "Radar del bot"
+│   └── doc_resultados/    lector del Doc → pestañas Resultados y Agenda
 │
 ├── panel/               ← LA PÁGINA/APP
 │
