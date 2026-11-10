@@ -1,6 +1,6 @@
 {
- "leido": "2026-11-10T09:51-03:00",
- "actualizado_doc": "09/11/2026 23:00",
+ "leido": "2026-11-10T11:14-03:00",
+ "actualizado_doc": "10/11/2026 10:55",
  "eventos": [
   {
    "titulo": "FUTSAL - FINALISSIMA EN NITERÓI (RÍO DE JANEIRO), BRASIL",
@@ -2847,6 +2847,26 @@
      ]
     },
     {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.gymart.org/en/youth-olympics/gymnasts/benjamin-nicolas-fernandez-de-landa",
+       "href": "https://www.gymart.org/en/youth-olympics/gymnasts/benjamin-nicolas-fernandez-de-landa"
+      },
+      {
+       "t": " (Resultados)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Por aparato en la clasificación fue 6° en suelo, 6° en salto y 8° en barra fija"
+      }
+     ]
+    },
+    {
      "tipo": "texto",
      "partes": [
       {
@@ -3062,6 +3082,47 @@
      "tipo": "sub",
      "partes": [
       {
+       "t": "Atletismo",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://deportelauquen.com.ar/atletismo-lucida-actuacion-y-cuarto-puesto-en-los-3-mil-metros-para-zoe-gorski-en-juegos-olimpicos-de-la-juventud/",
+       "href": "https://deportelauquen.com.ar/atletismo-lucida-actuacion-y-cuarto-puesto-en-los-3-mil-metros-para-zoe-gorski-en-juegos-olimpicos-de-la-juventud/"
+      },
+      {
+       "t": " (Nota)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Zoe Gorski fue 4° en la final de los 3000m con 9:47.83. Oro para Faith Rono (KEN) con 9:15.47, plata para Yordanos Tsigab (ETH) con 9:15.71 y bronce para Keren Chelimo (UGA) con 9:32.41"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Irene Pernía corre la final de los 1500m hoy martes 10/11 a las 14:15hs",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
        "t": "Vela (Windsurf)",
        "b": true
       }
@@ -3077,7 +3138,7 @@
     }
    ],
    "id": "a9a35774136e",
-   "version": "fcea467a1c",
+   "version": "64a9249841",
    "publicado_en_doc": false
   },
   {
@@ -3110,10 +3171,22 @@
      ]
     },
     {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.instagram.com/p/Dfh8Ei8lkPI/",
+       "href": "https://www.instagram.com/p/Dfh8Ei8lkPI/"
+      },
+      {
+       "t": " (Resultados individuales - Paradeportes)"
+      }
+     ]
+    },
+    {
      "tipo": "sub",
      "partes": [
       {
-       "t": "BC1",
+       "t": "BC3 Individual",
        "b": true
       }
      ]
@@ -3122,7 +3195,33 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Ailén Flores y Mateo Kesting"
+       "t": "Stefanía Ferrando ("
+      },
+      {
+       "t": "https://www.instagram.com/stefaniaferrando/",
+       "href": "https://www.instagram.com/stefaniaferrando/"
+      },
+      {
+       "t": ") le ganó en la final a Laura Rico (ESP) por 6-0 y se consagró "
+      },
+      {
+       "t": "CAMPEONA",
+       "b": true
+      },
+      {
+       "t": ": medalla "
+      },
+      {
+       "t": "DORADA",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Rodrigo Romero quedó eliminado en la fase inicial"
       }
      ]
     },
@@ -3133,7 +3232,7 @@
      "tipo": "sub",
      "partes": [
       {
-       "t": "BC2",
+       "t": "BC1 Individual",
        "b": true
       }
      ]
@@ -3142,7 +3241,26 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Jonathan Aquino y Luis Cristaldo"
+       "t": "Ailén Flores ("
+      },
+      {
+       "t": "https://www.instagram.com/elizabeth.flores31/",
+       "href": "https://www.instagram.com/elizabeth.flores31/"
+      },
+      {
+       "t": ") le ganó a Dayana Quiroz (ECU) por 6-1 en el partido por el 3er puesto y logró la medalla de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Mateo Kesting quedó eliminado en la fase inicial"
       }
      ]
     },
@@ -3153,7 +3271,7 @@
      "tipo": "sub",
      "partes": [
       {
-       "t": "BC3",
+       "t": "BC2 Individual",
        "b": true
       }
      ]
@@ -3162,7 +3280,23 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Stefanía Ferrando y Rodrigo Romero (los dos medallistas en París 2024)"
+       "t": "Jonathan Aquino llegó a semis y perdió vs Danik Allard (CAN) por 3-1"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Luis Cristaldo llegó a semis y perdió vs Maciel Santos (BRA) por 4-0"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Falta confirmar si hubo partido por el bronce en BC2"
       }
      ]
     },
@@ -3255,13 +3389,13 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Todavía no hay resultados"
+       "t": "Faltan: resultados por parejas y equipos (termina el 12/11)"
       }
      ]
     }
    ],
    "id": "93a941b2307c",
-   "version": "535c784eba",
+   "version": "ba98d430a6",
    "publicado_en_doc": false
   },
   {
@@ -3620,10 +3754,88 @@
      ]
     },
     {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.lacapitalmdp.com/los-seis-argentinos-continuan-en-carrera-en-punta-rocas/",
+       "href": "https://www.lacapitalmdp.com/los-seis-argentinos-continuan-en-carrera-en-punta-rocas/"
+      },
+      {
+       "t": " (Nota)"
+      }
+     ]
+    },
+    {
      "tipo": "sub",
      "partes": [
       {
-       "t": "Franco Radziunas y Joaquín Muñoz Larreta compiten en la 2da ronda el lunes 9/11",
+       "t": "Ronda 2 Masculino",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Franco Radziunas ganó la serie 4 con 13.86 por delante de Tom Butland (NZL) 12.70, Luke Dillon (ENG) 8.36 y Micael Lerner (MEX) 5.24 y pasó a la 3ra ronda"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "3ra ronda el miércoles 11/11: serie 5 vs Ethan Ewing (AUS) y Luke van Wyk (RSA)",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Joaquín Muñoz Larreta fue 3° en la serie 14 por centésimas con 10.20 (detrás de Eeli Timperi (FIN) 12.50 y Wu Shidong (CHN) 10.33) y pasó al Repechaje"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Repechaje Masculino",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Thiago Passeri fue 2° en la batería 16 de la 1ra ronda con 10.40 (detrás de Roberto Araki (CHI) 11.20) y sigue en carrera"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Martes 10/11: Joaquín Muñoz Larreta en la serie 14 vs Oliver Heintz (NED), Patrick Langdon-Dark (GBR) y Teshawn Christian Jones (IVB)",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Martes 10/11: Thiago Passeri en el heat 15 vs Martín Ottado (URU), Eduardo Alciso (PHI) y Lewis Murphy (NZL)",
        "b": true
       }
      ]
@@ -3657,11 +3869,46 @@
      ]
     },
     {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Lucía Indurain ganó la serie 32 con 5.17 por delante de Noya Slater Cohen (ISR) 3.00 y Victoria Backhaus (ITA) y pasó a la 2da ronda"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
      "tipo": "sub",
      "partes": [
       {
-       "t": "Lucía Indurain cierra la 1ra ronda el lunes 9/11 (serie 32 vs Noya Slater Cohen (ISR) y Victoria Backhaus (ITA))",
+       "t": "Ronda 2 Femenino",
        "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Vera Jarisz: serie 2 vs Estela López (CHI), Silvana Martínez (VEN) y Ranya Squalli (MAR)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Victoria Muñoz Larreta: serie 7 vs Nilbie Bancada (PHI), Kana Nakashio (JPN) y Rosanny Álvarez (VEN)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Lucía Indurain: serie 16 vs Maya Mateja (MEX), Louise Lepront (RSA) y Raya Campbell (GBR)"
       }
      ]
     },
@@ -3675,7 +3922,7 @@
     }
    ],
    "id": "31518371aee9",
-   "version": "c643e7451e",
+   "version": "4296b91c29",
    "publicado_en_doc": false
   },
   {
