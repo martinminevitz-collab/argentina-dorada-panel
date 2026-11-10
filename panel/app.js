@@ -101,6 +101,7 @@ function eventosDe(tab, conFiltros = true) {
   return lista.map((x) => x.e).filter((e) => {
     if (e.seccion !== seccion) return false;
     if (seccion === "resultados" && e.multideportivo) return false;
+    if (e.vencido) return false; // terminó hace más de 7 días
     if (!conFiltros) return !estaPublicado(e) || tieneNovedades(e);
     if (!$("#ver-publicados").checked && estaPublicado(e) && !tieneNovedades(e)) return false;
     if (tab === "resultados" && estado.filtroEstado && e.etiqueta !== estado.filtroEstado) return false;
@@ -126,7 +127,7 @@ function noticiasFiltradas(conFiltros = true) {
 }
 
 // ---------- dibujo ----------
-function multiActivos() { return estado.eventos.filter((e) => e.multideportivo && e.seccion === "resultados"); }
+function multiActivos() { return estado.eventos.filter((e) => e.multideportivo && e.seccion === "resultados" && !e.vencido); }
 function multiProximo() { return estado.eventos.find((e) => e.multideportivo && e.seccion === "agenda"); }
 
 function pestanasMulti() {
@@ -248,42 +249,66 @@ function nombreLink(href) {
   } catch { return "link"; }
 }
 
-// ---------- copiar ----------
-function textoPlano(e) {
-  const lineas = [e.titulo + (e.etiqueta === "publicable" ? " PUBLICABLE" : "")];
-  for (const b of e.bloques) {
-    if (b.tipo === "espacio") lineas.push("");
-    else lineas.push(b.partes.map((p) => p.t).join("").trim());
+// ---------- copiar para Instagram ----------
+// Arma el texto listo para pegar en el posteo: sin links de fuentes, con emojis y hashtags.
+// Lo que está en gris (ya publicado) no se copia, así en un evento en curso solo sale lo nuevo.
+// El emoji sale de lo que está en negrita (la medalla del argentino), no de los rivales ("oro para X").
+function sinAcentos(t) { return t.normalize("NFD").replace(/[̀-ͯ]/g, ""); }
+function hashtag(t) {
+  const limpio = sinAcentos(String(t || "")).replace(/\(.*?\)/g, " ").replace(/[^A-Za-z0-9 ]/g, " ").trim();
+  if (!limpio) return "";
+  return "#" + limpio.split(/\s+/).map((w) => w[0].toUpperCase() + w.slice(1).toLowerCase()).join("");
+}
+function emojiDe(linea) {
+  const t = sinAcentos(linea.toUpperCase());
+  if (/CAMPEO?N|CAMPEONA|CAMPEONES/.test(t) && !/SUBCAMPE/.test(t)) return "🏆 ";
+  if (/DORADA|\bORO\b/.test(t)) return "🥇 ";
+  if (/PLATEADA|\bPLATA\b|SUBCAMPE/.test(t)) return "🥈 ";
+  if (/BRONCE/.test(t)) return "🥉 ";
+  if (/CLASIFICO|CLASIFICARON/.test(t)) return "✅ ";
+  return "";
+}
+function lineaIG(partes) {
+  let txt = "";
+  for (const p of partes) {
+    if (p.c === "gris") continue;
+    if (p.href) {
+      try {
+        const u = new URL(p.href);
+        if (u.hostname.replace(/^www\./, "") === "instagram.com") { txt += "@" + u.pathname.split("/").filter(Boolean)[0]; continue; }
+      } catch {}
+      continue; // los demás links (fuentes) no van
+    }
+    txt += p.t;
   }
+  return txt
+    .replace(/\(\s*\)/g, "")                       // paréntesis que quedaron vacíos al sacar el link
+    .replace(/https?:\/\/\S+/g, "")
+    .replace(/\s{2,}/g, " ")
+    .trim();
+}
+function textoIG(e, { cabecera, hashtags = [] } = {}) {
+  const lineas = [];
+  lineas.push(cabecera || `🇦🇷 ${e.deporte ? e.deporte.toUpperCase() + " | " : ""}${(e.evento || e.titulo).toUpperCase()}`);
+  if (e.fechas) lineas.push(`🗓️ ${e.fechas}`);
+  lineas.push("");
+  for (const b of e.bloques || []) {
+    if (b.tipo === "link") continue;
+    if (b.tipo === "espacio") { if (lineas.at(-1) !== "") lineas.push(""); continue; }
+    const t = lineaIG(b.partes);
+    if (!t) continue;
+    if (b.tipo === "sub") { if (lineas.at(-1) !== "") lineas.push(""); lineas.push(`▪️ ${t.toUpperCase()}`); }
+    else lineas.push(emojiDe(b.partes.filter((p) => p.b && p.c !== "gris").map((p) => p.t).join(" ")) + t);
+  }
+  while (lineas.at(-1) === "") lineas.pop();
+  const tags = ["#ArgentinaDorada", ...hashtags, hashtag(e.deporte)].filter(Boolean);
+  lineas.push("", [...new Set(tags)].join(" "));
   return lineas.join("\n");
 }
-function textoHTML(e) {
-  const esc = (s) => escapar(s);
-  const partes = (ps) => ps.map((p) => {
-    let s = esc(p.t);
-    if (p.href) s = `<a href="${esc(p.href)}">${s}</a>`;
-    if (p.b) s = `<b>${s}</b>`;
-    if (p.c === "rojo") s = `<span style="color:#ff0000">${s}</span>`;
-    if (p.c === "gris") s = `<span style="color:#999999">${s}</span>`;
-    return s;
-  }).join("");
-  let h = `<p><b style="color:#ff0000">${esc(e.titulo)}</b>${e.etiqueta === "publicable" ? ' <b style="color:#0000ff">PUBLICABLE</b>' : ""}</p>`;
-  for (const b of e.bloques) h += b.tipo === "espacio" ? "<p><br></p>" : `<p>${partes(b.partes)}</p>`;
-  return `<div style="font-family:Arial;font-size:11pt">${h}</div>`;
+async function copiarTexto(texto, aviso = "Copiado para Instagram") {
+  try { await navigator.clipboard.writeText(texto); avisar(aviso); } catch { avisar("No se pudo copiar"); }
 }
-async function copiarEvento(e) {
-  try {
-    if (window.ClipboardItem) {
-      await navigator.clipboard.write([new ClipboardItem({
-        "text/plain": new Blob([textoPlano(e)], { type: "text/plain" }),
-        "text/html": new Blob([textoHTML(e)], { type: "text/html" }),
-      })]);
-    } else {
-      await navigator.clipboard.writeText(textoPlano(e));
-    }
-    avisar("Copiado");
-  } catch { avisar("No se pudo copiar"); }
-}
+function copiarEvento(e, opciones) { return copiarTexto(textoIG(e, opciones)); }
 
 // ---------- multideportivos (Dakar 2026, Lima 2027…) ----------
 function dibujarMulti(lista) {
@@ -373,7 +398,9 @@ function cajaMulti(e, clave, titulo, bloques, { sub = "", cerrada = false, sinPu
     else { estado.cerrados ??= new Set(); estado.cerrados.has(id) ? estado.cerrados.delete(id) : estado.cerrados.add(id); }
     dibujar();
   };
-  t.querySelector(".copiar").onclick = () => copiarEvento(mini);
+  t.querySelector(".copiar").onclick = () => copiarEvento(mini, {
+    cabecera: `🇦🇷 ${e.multi.nombre.toUpperCase()} | ${(sub && !/^d[ií]a/i.test(sub) ? sub : titulo).toUpperCase()}`,
+    hashtags: [hashtag(e.multi.nombre), hashtag(sub && !/^d[ií]a/i.test(sub) ? sub : titulo)] });
   const bPub = t.querySelector(".publicado");
   if (sinPublicar) bPub.remove(); else configurarPublicado(bPub, t, mini);
   return t;
@@ -396,10 +423,10 @@ function cajaResumen(e, dia) {
   pie.className = "pie";
   const mini = { id: e.id + ":resumen:" + dia.titulo, titulo: `${e.multi.nombre.toUpperCase()} - RESUMEN ${dia.titulo}`, etiqueta: "multi",
     bloques: dia.resumen.destacados, version: huella(JSON.stringify(dia.resumen)) };
-  if (dia.resumen.posteo) pie.append(boton("Copiar posteo", async () => {
-    try { await navigator.clipboard.writeText(dia.resumen.posteo); avisar("Posteo copiado"); } catch { avisar("No se pudo copiar"); }
-  }));
-  pie.append(boton("Copiar destacados", () => copiarEvento(mini)));
+  if (dia.resumen.posteo) pie.append(boton("Copiar posteo para IG", () =>
+    copiarTexto(`${dia.resumen.posteo}\n\n#ArgentinaDorada ${hashtag(e.multi.nombre)}`)));
+  pie.append(boton("Copiar destacados", () => copiarEvento(mini, {
+    cabecera: `🇦🇷 ${e.multi.nombre.toUpperCase()} | RESUMEN ${dia.titulo.toUpperCase()}`, hashtags: [hashtag(e.multi.nombre)] })));
   const bPub = boton("Publicado", null); bPub.className = "publicado";
   pie.append(bPub);
   configurarPublicado(bPub, t, mini);
@@ -439,9 +466,8 @@ function cajaFinal(e) {
     <div class="detalle"><p class="posteo"></p></div>`;
   t.querySelector(".posteo").textContent = e.multi.resumen_final;
   const pie = document.createElement("div"); pie.className = "pie";
-  pie.append(boton("Copiar posteo", async () => {
-    try { await navigator.clipboard.writeText(e.multi.resumen_final); avisar("Posteo copiado"); } catch { avisar("No se pudo copiar"); }
-  }));
+  pie.append(boton("Copiar posteo para IG", () =>
+    copiarTexto(`${e.multi.resumen_final}\n\n#ArgentinaDorada ${hashtag(e.multi.nombre)}`)));
   const mini = { id: e.id + ":final", titulo: e.titulo + " - RESUMEN FINAL", bloques: [], version: huella(e.multi.resumen_final) };
   const bPub = boton("Publicado", null); bPub.className = "publicado"; pie.append(bPub); configurarPublicado(bPub, t, mini);
   t.append(pie);

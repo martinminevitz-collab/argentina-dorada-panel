@@ -301,6 +301,34 @@ def leer_doc(html):
     return actualizado_doc, eventos
 
 
+DIAS_VISIBLE = 7  # un evento terminado se saca del panel (y el agente del Doc) después de esto
+
+
+def marcar_terminados(eventos):
+    """Anota el día en que cada evento apareció por primera vez como terminado (Publicable o Falta info).
+    data/doc-terminados.json = memoria. data/vencidos.json = los que pasaron 7 días (lo lee el agente)."""
+    from datetime import timedelta
+    ruta = guardar.DATA / "doc-terminados.json"
+    memoria = guardar.leer(ruta, {})
+    hoy = guardar.ahora().strftime("%Y-%m-%d")
+    limite = (guardar.ahora() - timedelta(days=DIAS_VISIBLE)).strftime("%Y-%m-%d")
+    vencidos = []
+    for e in eventos:
+        if e["seccion"] != "resultados" or e["etiqueta"] not in ("publicable", "mas_info"):
+            continue
+        desde = memoria.setdefault(e["id"], {"titulo": e["titulo"], "desde": hoy})["desde"]
+        e["terminado_desde"] = desde
+        if desde <= limite:
+            e["vencido"] = True
+            vencidos.append(e["titulo"])
+    # la memoria se limpia a los 60 días
+    viejo = (guardar.ahora() - timedelta(days=60)).strftime("%Y-%m-%d")
+    guardar.escribir(ruta, {k: v for k, v in sorted(memoria.items()) if v["desde"] >= viejo})
+    guardar.escribir(guardar.DATA / "vencidos.json", {
+        "_nota": f"Eventos terminados hace más de {DIAS_VISIBLE} días. El agente los saca del Doc y deja de seguirlos.",
+        "vencidos": sorted(vencidos)})
+
+
 def main():
     url = json.loads((guardar.RAIZ / "config" / "doc.json").read_text(encoding="utf-8"))["pub"]
     html = bajar(url)
@@ -309,6 +337,7 @@ def main():
         print("⚠️  No se pudo leer el Doc")
         return
     actualizado_doc, eventos = leer_doc(html)
+    marcar_terminados(eventos)
     ruta = guardar.DATA / "doc-resultados.json"
     anterior = guardar.leer(ruta, {})
     nuevo = {"actualizado_doc": actualizado_doc, "eventos": eventos}

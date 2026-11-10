@@ -36,8 +36,8 @@ jobs:
         run: |
           git config user.name "bot-argentina-dorada"
           git config user.email "bot@users.noreply.github.com"
-          git add data/doc-resultados.json data/ultima-corrida.json
-          if git diff --cached --quiet -- data/doc-resultados.json; then
+          git add data/doc-resultados.json data/ultima-corrida.json data/doc-terminados.json data/vencidos.json
+          if git diff --cached --quiet -- data/doc-resultados.json data/vencidos.json data/doc-terminados.json; then
             echo "cambio=no" >> "$GITHUB_OUTPUT"
           else
             git commit -m "Doc: $(date -u +'%Y-%m-%d %H:%M') UTC"
