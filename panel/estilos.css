@@ -197,3 +197,4 @@ input[type=search], select { width: 100%; background: var(--tarjeta); color: var
 @media (min-width: 1000px) { .lista.modo-multi > .resumen-final { grid-column: 1 / -1; } }
 
 @media (min-width: 1000px) { .selector { flex-wrap: wrap; overflow: visible; } }
+@media (min-width: 1000px) { .pestanas button.multi { justify-content: flex-start; gap: 6px; align-items: center; } }
