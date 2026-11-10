@@ -259,6 +259,33 @@ function hashtag(t) {
   if (!limpio) return "";
   return "#" + limpio.split(/\s+/).map((w) => w[0].toUpperCase() + w.slice(1).toLowerCase()).join("");
 }
+// Hashtags que tienen que ver con el evento: deporte, nombre del torneo y tipo de torneo + deporte.
+const TIPOS = [
+  [/JUEGOS OLIMPICOS DE LA JUVENTUD/, "JuegosOlimpicosDeLaJuventud"], [/JUEGOS PARALIMPICOS/, "JuegosParalimpicos"],
+  [/JUEGOS OLIMPICOS/, "JuegosOlimpicos"], [/PARAPANAMERICANO/, "Parapanamericanos"],
+  [/JUEGOS PANAMERICANOS/, "JuegosPanamericanos"], [/JUEGOS (SURAMERICANOS|SUDAMERICANOS|ODESUR)/, "JuegosSuramericanos"],
+  [/WORLD GAMES/, "TheWorldGames"],
+  [/MUNDIAL|CAMPEONATO DEL MUNDO|WORLD CHAMPIONSHIP/, "Mundial"], [/COPA DEL MUNDO|WORLD CUP/, "CopaDelMundo"],
+  [/PANAMERICANO|AMERICAS CHAMPIONSHIP/, "Panamericano"], [/SUDAMERICANO|SURAMERICANO/, "Sudamericano"],
+  [/GRAND PRIX/, "GrandPrix"], [/GRAND SLAM/, "GrandSlam"],
+];
+function hashtagsEvento(e, extra = []) {
+  const titulo = sinAcentos((e.titulo || "").toUpperCase());
+  const dep = hashtag(e.deporte).slice(1);
+  const tags = [...extra];
+  if (dep) tags.push("#" + dep);
+  for (const [re, nombre] of TIPOS) {
+    if (!re.test(titulo)) continue;
+    tags.push("#" + nombre + (nombre.startsWith("Juegos") || nombre === "TheWorldGames" || !dep ? "" : dep));
+    break;
+  }
+  // nombre propio del torneo (lo que va antes de " EN "), si es corto: #Finalissima, #MundialFip
+  const nombre = (e.evento || "").split(/ EN | DE LA | - /i)[0].replace(/\(.*?\)/g, "").trim();
+  const generico = /^(CAMPEONATO|COPA|WORLD CUP|MUNDIAL$|TORNEO|CIERRE)/i.test(sinAcentos(nombre));
+  if (nombre && !generico && nombre.split(/\s+/).length <= 4) tags.push(hashtag(nombre));
+  const lista = [...new Set(tags.filter((t) => t && t.length > 2))].slice(0, 4);
+  return lista.length ? lista : ["#DeporteArgentino"];
+}
 function emojiDe(linea) {
   const t = sinAcentos(linea.toUpperCase());
   if (/CAMPEO?N|CAMPEONA|CAMPEONES/.test(t) && !/SUBCAMPE/.test(t)) return "🏆 ";
@@ -268,10 +295,10 @@ function emojiDe(linea) {
   if (/CLASIFICO|CLASIFICARON/.test(t)) return "✅ ";
   return "";
 }
-function lineaIG(partes) {
+function lineaIG(partes, incluirGris) {
   let txt = "";
   for (const p of partes) {
-    if (p.c === "gris") continue;
+    if (p.c === "gris" && !incluirGris) continue;
     if (p.href) {
       try {
         const u = new URL(p.href);
@@ -287,7 +314,9 @@ function lineaIG(partes) {
     .replace(/\s{2,}/g, " ")
     .trim();
 }
-function textoIG(e, { cabecera, hashtags = [] } = {}) {
+// incluirGris: en los eventos comunes se postea el torneo completo al final, así que va todo.
+// En los multideportivos (posteo diario) lo gris ya se publicó y no se repite.
+function textoIG(e, { cabecera, hashtags, incluirGris = true } = {}) {
   const lineas = [];
   lineas.push(cabecera || `🇦🇷 ${e.deporte ? e.deporte.toUpperCase() + " | " : ""}${(e.evento || e.titulo).toUpperCase()}`);
   if (e.fechas) lineas.push(`🗓️ ${e.fechas}`);
@@ -295,14 +324,14 @@ function textoIG(e, { cabecera, hashtags = [] } = {}) {
   for (const b of e.bloques || []) {
     if (b.tipo === "link") continue;
     if (b.tipo === "espacio") { if (lineas.at(-1) !== "") lineas.push(""); continue; }
-    const t = lineaIG(b.partes);
+    const t = lineaIG(b.partes, incluirGris);
     if (!t) continue;
     if (b.tipo === "sub") { if (lineas.at(-1) !== "") lineas.push(""); lineas.push(`▪️ ${t.toUpperCase()}`); }
-    else lineas.push(emojiDe(b.partes.filter((p) => p.b && p.c !== "gris").map((p) => p.t).join(" ")) + t);
+    else lineas.push(emojiDe(b.partes.filter((p) => p.b && (incluirGris || p.c !== "gris")).map((p) => p.t).join(" ")) + t);
   }
   while (lineas.at(-1) === "") lineas.pop();
-  const tags = ["#ArgentinaDorada", ...hashtags, hashtag(e.deporte)].filter(Boolean);
-  lineas.push("", [...new Set(tags)].join(" "));
+  const tags = hashtags || hashtagsEvento(e);
+  if (tags.length) lineas.push("", tags.join(" "));
   return lineas.join("\n");
 }
 async function copiarTexto(texto, aviso = "Copiado para Instagram") {
@@ -400,7 +429,8 @@ function cajaMulti(e, clave, titulo, bloques, { sub = "", cerrada = false, sinPu
   };
   t.querySelector(".copiar").onclick = () => copiarEvento(mini, {
     cabecera: `🇦🇷 ${e.multi.nombre.toUpperCase()} | ${(sub && !/^d[ií]a/i.test(sub) ? sub : titulo).toUpperCase()}`,
-    hashtags: [hashtag(e.multi.nombre), hashtag(sub && !/^d[ií]a/i.test(sub) ? sub : titulo)] });
+    incluirGris: false,
+    hashtags: hashtagsEvento({ titulo: e.titulo, deporte: sub && !/^d[ií]a/i.test(sub) ? sub : titulo }, [hashtag(e.multi.nombre)]) });
   const bPub = t.querySelector(".publicado");
   if (sinPublicar) bPub.remove(); else configurarPublicado(bPub, t, mini);
   return t;
@@ -424,9 +454,10 @@ function cajaResumen(e, dia) {
   const mini = { id: e.id + ":resumen:" + dia.titulo, titulo: `${e.multi.nombre.toUpperCase()} - RESUMEN ${dia.titulo}`, etiqueta: "multi",
     bloques: dia.resumen.destacados, version: huella(JSON.stringify(dia.resumen)) };
   if (dia.resumen.posteo) pie.append(boton("Copiar posteo para IG", () =>
-    copiarTexto(`${dia.resumen.posteo}\n\n#ArgentinaDorada ${hashtag(e.multi.nombre)}`)));
+    copiarTexto(`${dia.resumen.posteo}\n\n${hashtagsEvento({ titulo: e.titulo }, [hashtag(e.multi.nombre)]).join(" ")}`)));
   pie.append(boton("Copiar destacados", () => copiarEvento(mini, {
-    cabecera: `🇦🇷 ${e.multi.nombre.toUpperCase()} | RESUMEN ${dia.titulo.toUpperCase()}`, hashtags: [hashtag(e.multi.nombre)] })));
+    cabecera: `🇦🇷 ${e.multi.nombre.toUpperCase()} | RESUMEN ${dia.titulo.toUpperCase()}`, incluirGris: false,
+    hashtags: hashtagsEvento({ titulo: e.titulo }, [hashtag(e.multi.nombre)]) })));
   const bPub = boton("Publicado", null); bPub.className = "publicado";
   pie.append(bPub);
   configurarPublicado(bPub, t, mini);
@@ -467,7 +498,7 @@ function cajaFinal(e) {
   t.querySelector(".posteo").textContent = e.multi.resumen_final;
   const pie = document.createElement("div"); pie.className = "pie";
   pie.append(boton("Copiar posteo para IG", () =>
-    copiarTexto(`${e.multi.resumen_final}\n\n#ArgentinaDorada ${hashtag(e.multi.nombre)}`)));
+    copiarTexto(`${e.multi.resumen_final}\n\n${hashtagsEvento({ titulo: e.titulo }, [hashtag(e.multi.nombre)]).join(" ")}`)));
   const mini = { id: e.id + ":final", titulo: e.titulo + " - RESUMEN FINAL", bloques: [], version: huella(e.multi.resumen_final) };
   const bPub = boton("Publicado", null); bPub.className = "publicado"; pie.append(bPub); configurarPublicado(bPub, t, mini);
   t.append(pie);
