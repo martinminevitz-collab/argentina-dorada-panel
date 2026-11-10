@@ -1,5 +1,5 @@
 {
- "leido": "2026-11-10T12:53-03:00",
+ "leido": "2026-11-10T13:09-03:00",
  "actualizado_doc": "10/11/2026 10:55",
  "eventos": [
   {
@@ -3323,6 +3323,7 @@
      }
     ],
     "medallero": null,
+    "resumen_final": "",
     "dias": [],
     "deportes": [
      {

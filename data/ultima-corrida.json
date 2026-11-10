@@ -1,16 +1,16 @@
 {
  "resultados": {
-  "cuando": "2026-11-10T10:28-03:00",
-  "nuevos": 7,
-  "resultado": 1,
+  "cuando": "2026-11-10T13:09-03:00",
+  "nuevos": 13,
+  "resultado": 2,
   "agenda": 0,
-  "otro": 6,
+  "otro": 11,
   "en_buenos_aires": 0,
-  "revisadas": 2551,
+  "revisadas": 2564,
   "viejas": 100,
-  "no_argentinas": 650,
-  "excluidas": 52,
-  "repetidas": 286,
+  "no_argentinas": 648,
+  "excluidas": 50,
+  "repetidas": 287,
   "fuentes_caidas": [
    "Comité Olímpico Argentino",
    "Totallympics (Argentina)",
@@ -34,10 +34,10 @@
    "ittf.com",
    "sailing.org"
   ],
-  "segundos": 280
+  "segundos": 282
  },
  "doc": {
-  "cuando": "2026-11-10T12:53-03:00",
+  "cuando": "2026-11-10T13:09-03:00",
   "ok": true,
   "eventos": 44,
   "publicable": 8,
