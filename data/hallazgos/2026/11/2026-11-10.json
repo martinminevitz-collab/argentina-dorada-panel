@@ -1,5 +1,83 @@
 [
  {
+  "id": "4b6536d40e3e",
+  "titulo": "Bowling de El Nacional: Diana Delgiorgio se consagró campeona argentina senior",
+  "resumen": "Bowling de El Nacional: Diana Delgiorgio se consagró campeona argentina senior La Voz del Pueblo",
+  "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNam5JYWNLZEpQQjA2U1ZBQWEzMVZxOGlPbXUydWlrS0lhcFI2NEw0QmxINzF6MEx5MXJrNFRZLVBsUGhSYzZ4QWVPeEFRMmIwR0pvcWhiVVZqY0tEZjlTY3U1bzdqWmFrWjY1bmdoalV6RHZGTHlMbGttX05kRTZCRzlkQ0tGV3VrUGw0S3NnUUNZelBNcWZkSEdPOW90ek02T1RmTGQ1VTNGOURSZy15bQ?oc=5",
+  "fuente": "La Voz del Pueblo",
+  "deporte": "Bowling",
+  "tipo": "resultado",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-10T21:27+00:00",
+  "encontrado": "2026-11-10T18:56-03:00",
+  "bot": "resultados"
+ },
+ {
+  "id": "11594308b59b",
+  "titulo": "Colombia pierde a Franco Pérez tras su desconvocatoria de Selección Sub-20: Argentina lo convocó",
+  "resumen": "Colombia pierde a Franco Pérez tras su desconvocatoria de Selección Sub-20: Argentina lo convocó El Tiempo",
+  "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxOSmlNNU1WTzJCX2dRZnpweWhGRmpBc05yQktEV041ZDY2MjI4VlZSRjJRZW1Fd19SakpYenFoNllsaFU0TW0wdTVEWklQNTktTWl4ZDNaN3dLNl8zZ001b1c0eEo5bUpEZmFkQU1nWDF5OGktMVlfVjJKcFZta0hyS0ZqWlJTR0s1WGo3bGlBSVpZR2tudGp2eUdlU2pyMl93eER0NkFfX0R0N1FMYldoVmIxNzlIaWUyR1VHS28wa0puOXFaZ2xjNEE3UTVLajhPUDhnbUtSd3VVV2NiWmJ6TE5LTUtPOVJPQWtySS1fc9IB9AFBVV95cUxPekZPampiQkpzbGpyQmszSUdOb2FPaG9lQTJNcXN3NFZtNHQwOFRsc3VVeUU5Tk1QeVVINHVoVWZBeUpIajd3N2R4S0YzdE5BY09Fd2N6RGlXbi1HelRQZ2gtaWt2bjBubXBKQlZFTV81RFdGdEw1T1lETDFZX2NNRFplS1VSWTI3d3VoN2ZYSVNab2pIXzhLYUZwS2tabUxRVTVGWjhCeUJvLVhJeDF4dXJDanlvU1E2RU9MWkJCa3dWV3RCRWhRaG80YWg3bGpSbHRHZTd2ZDJKZU9BVU1qdjNOR2ZrX25Ud0NPenBOUDVBejQy?oc=5",
+  "fuente": "El Tiempo",
+  "deporte": "Futbol",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-10T21:11+00:00",
+  "encontrado": "2026-11-10T18:57-03:00",
+  "bot": "resultados"
+ },
+ {
+  "id": "2ee5e345711d",
+  "titulo": "Guadalupe Serantes representa a la Argentina en el Mundial de Bochas",
+  "resumen": "Guadalupe Serantes representa a la Argentina en el Mundial de Bochas Verte",
+  "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNS29VVVVBUDdZWjF1MllHRzdWd2phX2EtdmF5Zkl6YXdzZG9BTnowaG5EUEQ2LWltNlVuaHhYRlF4cVhxY0tDb2NtQkIxX203eTViSTJkTXJvVVUxNG1zc1h4Slpmcl8zemIyMzl2YW5LX2xqZ3J0RGF2UlFLeEl0bndyal9zMF9QTWo4RVZNRjhqTVMtVkZYeGFCWEtxOVkwTmtqMVU3THR6OWJvdUJvRUpRMzdiUXp4QWc?oc=5",
+  "fuente": "Verte",
+  "deporte": "Bochas",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-10T21:02+00:00",
+  "encontrado": "2026-11-10T18:56-03:00",
+  "bot": "resultados"
+ },
+ {
+  "id": "20ad82cef27d",
+  "titulo": "Lando Norris, ilusionado con el regreso de la Fórmula 1 a Argentina: “Estoy emocionado”",
+  "resumen": "Lando Norris, ilusionado con el regreso de la Fórmula 1 a Argentina: “Estoy emocionado” Bolavip Argentina",
+  "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNaWdLN0tua0Rqa3Rza3UzSU5fOFItMVJTZVdWTFhFVXdUQ1Vield4c2xqTUJBREw4U2pIRlZUdHZqMzF5bTBxZXllVTZ6MHlfLUFBbnZ3eUFabWszVlFnNlozbVl0WjBDdV9fMnBISjZ2OW1DOTlGYndQU09VVVdILXllOWRZZktlRlNKd1drelgwcjUzMjY1eTFnTUl1RnI5TUNJY1Y3QXE3SmhOY0lITmJCRjdwSGfSAbwBQVVfeXFMUHdKRnZNblB4Vjl4UkxjWmxpRnZ4MDUzNURPRlVFcHB1a0h5b244cjRGSlcwUmgtZW1DQXgxMzJyaEEtRUIyZXdCZHdkVm8wd0FBbllzWkpyUTc0WmpwRUZ2aWp6ZUdPU1E5Q1MtU0RWaVA0RHZJOE01M2l0eXlPWUM1cnBkQUdvdF9mdm5QUU5lZlRYVTZtaEQwRGFoeHRPaV9pell5ZmFTV2VlWF9YWDRrbG55MktBbjQ0NWI?oc=5",
+  "fuente": "Bolavip Argentina",
+  "deporte": "Formula 1",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-10T19:34+00:00",
+  "encontrado": "2026-11-10T18:57-03:00",
+  "bot": "resultados"
+ },
+ {
+  "id": "3ecd6b992131",
+  "titulo": "No hubo duelo argentino: Etcheverry se retiró por lesión y Tirante avanzó en el ATP de Estocolmo",
+  "resumen": "No hubo duelo argentino: Etcheverry se retiró por lesión y Tirante avanzó en el ATP de Estocolmo Diario Río Negro",
+  "link": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQd290RnNEQ2g2WkRiYTFOYzk1TERuT1dPVmNQQ2ttejktSkJyLWZJYzBQbzB6bEVlM0tnem5kTWJ6TkxBc1pqRVo1ZjB2TTdQMFRESk1BbklfT2lNUnFFbktOdm11MTZDeTc2eW5UV2F0bGUzc1VMNk03dnhtNmZCelV6Sm5Mamt0SzhFR21zczRqUHZNc0UxWGJ3S3h0RXZvcTZKTF83cnh4b002aWQwNEZXWllhX2dySGx5YVBnLUZBLWRFMzFsOVZUTlg4MV91VnJ4emdodWxRcURRelpHXzFFNHk2eVRuUWxLMmlqaUVDUEFK0gH8AUFVX3lxTE03Z09PLWU1eGw3MmFPRF9uTTdna3lQcXpOMjF3NjRvZVg3WjRiZF9RZWh5VHJxUUU5dENsZHZDMndJNVZ3S0RNckJpR2FKUkpXU0ZCZ3JFS2w5Vk53bXh0NWRiOUJtRUJfX3pTZFc1ZkdiZW8yeTZ6ekVTanpST3JXRkdfdmpzR2hyR3cwNExMcGpNVWFjZHRIaVQ4MHNjWFlSMmx1azBBSnI4U1J5MUhYN0xGR1VvSUlxT19pOHFjNjVwX3RYTEFYSHpXb283a1Q4UlF6Q2xnVU9GQ3dCU0hMUldOWVUzMVEwdG9ZRFdPNXB3Nmt5dVU2OUs3VQ?oc=5",
+  "fuente": "Diario Río Negro",
+  "deporte": "Karate",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-10T19:20+00:00",
+  "encontrado": "2026-11-10T18:57-03:00",
+  "bot": "resultados"
+ },
+ {
+  "id": "272594bdef37",
+  "titulo": "Yaguaretés en Argentina: la muerte de Angujá expone los desafíos para conservar la especie",
+  "resumen": "Yaguaretés en Argentina: la muerte de Angujá expone los desafíos para conservar la especie Uno Entre Rios",
+  "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQckd5RFhweWJ0Q0Q0VkpmMi1kT1ZOZFFfMHRHd19JSWN1MmgzVVQ2U1dleXRTU2VtU2JMZjVYcjZfWU96RHhtcTFYQjlTT211ZUtaOU9WVDdCcFM5QjNDeGQ1aVdJRHJYM2g5aFhUTV9ZZmZUS0tJblB2RkZRbVBPdHRNbmxUak82N3ZuUENnNGpFYVV5bGNObEhiU3pmcUlrWk1uUTBBUzZvYWV5UGMwSGZwYmVGbktGdG9DZi1qME5ZazlVNUcyeFZsWTh4ZlEwLVV5ZmZsQ3VNZmpfVWQzNFl3b0RUUdIB5gFBVV95cUxQckd5RFhweWJ0Q0Q0VkpmMi1kT1ZOZFFfMHRHd19JSWN1MmgzVVQ2U1dleXRTU2VtU2JMZjVYcjZfWU96RHhtcTFYQjlTT211ZUtaOU9WVDdCcFM5QjNDeGQ1aVdJRHJYM2g5aFhUTV9ZZmZUS0tJblB2RkZRbVBPdHRNbmxUak82N3ZuUENnNGpFYVV5bGNObEhiU3pmcUlrWk1uUTBBUzZvYWV5UGMwSGZwYmVGbktGdG9DZi1qME5ZazlVNUcyeFZsWTh4ZlEwLVV5ZmZsQ3VNZmpfVWQzNFl3b0RUUQ?oc=5",
+  "fuente": "Uno Entre Rios",
+  "deporte": "Rugby y Rugby 7s",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-10T19:00+00:00",
+  "encontrado": "2026-11-10T18:58-03:00",
+  "bot": "resultados"
+ },
+ {
   "id": "13f1c1483d38",
   "titulo": "Luto en el deporte nacional: fallece joven atleta que representó a Chile en Argentina",
   "resumen": "Luto en el deporte nacional: fallece joven atleta que representó a Chile en Argentina La Tribuna",
@@ -10,6 +88,32 @@
   "en_buenos_aires": false,
   "publicado": "2026-11-10T18:34+00:00",
   "encontrado": "2026-11-10T16:14-03:00",
+  "bot": "resultados"
+ },
+ {
+  "id": "3564772257f0",
+  "titulo": "Thiago Tirante se benefició de la lesión de Tomás Etcheverry y cerrará la temporada ATP del tenis argentino",
+  "resumen": "Thiago Tirante se benefició de la lesión de Tomás Etcheverry y cerrará la temporada ATP del tenis argentino Perfil",
+  "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNNFVpUVNhSFlxdm1POHJYUldQSXk3WkFtSUkzLU1CTV93RlZSYUhMWlBRR3h6UzRrNFlsZHlsN0wwaTRvM0tnVlVvOUhiaklQOG1YQ1VqWm1CRTlnaU9Ja3BBeGVCSVprWUlHS2pVVV9tUjBWVHpCbUZaV1BNSzVvOFpKVGI2ZTM1a0RsOHJIdXhkU21OSkRNUU5faThROTYwcS1JQW52U1M0cDMzeVN5Mmo2U2ZGdnhKUWc0dENzUUZvME9MdWF3VloydzN5NkpZSmRJVUZUa3F2cElJR3hMQU5lOEx4d9IB6wFBVV95cUxNT0ZySTdFSVdYYlZBV1pBeTU4WW1Kd09JOW1JYXdZU1BQb2o0cnVMaGxCdFFaM0JLMHNtZnJnMjE3SW9ZUkFRUDRaZlMyNnZheEdjSUpSc1hfdFdjdnhiWTNwOE9kdm9NUVVURGhnNy1CUTdtWkZTN3R3UEJFMWNNUnRZeUxyQXVRUVc3MGd4MzJOVW5aeE5pVzlQZHJjWjRXQUdqZnFtRVpfLVRPU0ZvVTdlWHRmRUlkUTk3enFvd2lad3luZ1dpNGhNU18wY1dZVjRiZ2haUnl6NW1zMHdLQkZhQ25ZN3poSnVj?oc=5",
+  "fuente": "Perfil",
+  "deporte": "Tenis",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-10T18:22+00:00",
+  "encontrado": "2026-11-10T18:58-03:00",
+  "bot": "resultados"
+ },
+ {
+  "id": "3286734eca13",
+  "titulo": "La Selección Argentina arranca los entrenamientos para enfrentar a Uruguay",
+  "resumen": "La Selección Argentina arranca los entrenamientos para enfrentar a Uruguay NoticiasNet",
+  "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNbkxfblJSZGlXcFlVSWo3WFRBUFhPWFZxRnJ3RWVBOFlHajdQY3U4bm1aWHg4TDM1TXZndUdfaDN6bDRkU1JVYzB2VjEzVGR1SjM0amFqSmd5eFFFalF0cUE3WGJmRjhodkFUcG9COUZybFd0eEY3SUFRSkZJT0xLTVNsRFNSS1hQX3hBbTE4QXh6RndrOFR0TlllSVlaWWtoR1ZLTHB0c2lCcG1hOGVCazBXWFgwaXMtVnFweDJkdWgtOW5lMXBvZEtBUHVINHNWTmfSAdIBQVVfeXFMTW5MX25SUmRpV3BZVUlqN1hUQVBYT1hWcUZyd0VlQThZR2o3UGN1OG5tWlh4OEwzNU12Z3VHX2gzemw0ZFNSVWMwdlYxM1RkdUozNGphakpneXhRRWpRdHFBN1hiZkY4aHZBVHBvQjlGcmxXdHhGN0lBUUpGSU9MS01TbERTUktYUF94QW0xOEF4ekZ3azhUdE5ZZUlZWllraEdWS0xwdHNpQnBtYThlQmswV1hYMGlzLVZxcHgyZHVoLTluZTFwb2RLQVB1SDRzVk5n?oc=5",
+  "fuente": "NoticiasNet",
+  "deporte": "Canotaje",
+  "tipo": "agenda",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-10T18:20+00:00",
+  "encontrado": "2026-11-10T18:56-03:00",
   "bot": "resultados"
  },
  {
@@ -78,6 +182,19 @@
   "bot": "resultados"
  },
  {
+  "id": "18c248cdf73a",
+  "titulo": "Con una baja mendocina, Los Pumas renovaron su lista para el próximo compromiso",
+  "resumen": "Con una baja mendocina, Los Pumas renovaron su lista para el próximo compromiso El Editor Mendoza",
+  "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPU29tLTJPcW9BN2R3cGVVSV91b2MtdFF4WEpLWVFEaHZyZXhGZzYwTmlINzFYZmhSQkNkS05KSWFSdndnc2ZLU2JwS0dEUGQ3YzQta3JOaUNPdVhUVGpFZlRNSjUtbllKcGV3RzFpS1R5YkI5Z0x5akpuOWFBdC1qMld4YjVTekdYVjRwNlZqdmcxSWx4Y1FuZm8xOTNpZE90T1gwcm92VVpSRE53cDNGcVFrVlY2VDZ4WUsxeEo0WVhMWGR5eGNxY0haSVNJSy1PWWZDMWI5eC1QaUJXZUpfR2lSYUhfUGUzV0pMaNIB8gFBVV95cUxQc1ZZR1V1QXBYblkyVUQ1TjFkRGh1OGxIWEVXdXNBV051Y0Zid3VNQ2l5R0dhV3JyQjhPRTdfaHRDLWpaZG0za1NzM0dTQ3M1WE1nTTl5Y1VNTnlGaUtYX21vMk5ZZ2JaOWtVNUc3QWMyV0g0YUJTcWYzVWRyaXdnZkpYTFhEYjI5azFIVzlpWVRlV1NYb3l4MmRIcjBMN25ldVhpS1V0RzJFTHVQcHg2NTZBWUJJQ1RZR3AzLXJkSmZpdXM0NGpqZzFCeVktSExmd2tfUHp5dUhXSDVqSElIQmZwYVJvZ2JndThBTk02VTlmUQ?oc=5",
+  "fuente": "El Editor Mendoza",
+  "deporte": "Rugby",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-10T17:00+00:00",
+  "encontrado": "2026-11-10T18:59-03:00",
+  "bot": "resultados"
+ },
+ {
   "id": "16a66644ad19",
   "titulo": "TENIS DE MESA ADAPTADO: ARGENTINA, AL MUNDIAL DE TAILANDIA CON 4 JUGADORES",
   "resumen": "TENIS DE MESA ADAPTADO: ARGENTINA, AL MUNDIAL DE TAILANDIA CON 4 JUGADORES Paradeportes",
@@ -101,6 +218,19 @@
   "en_buenos_aires": false,
   "publicado": "2026-11-10T15:48+00:00",
   "encontrado": "2026-11-10T13:05-03:00",
+  "bot": "resultados"
+ },
+ {
+  "id": "7d5dab251e87",
+  "titulo": "Atajó en Defensa y Justicia y se perfila para ser titular en Uruguay contra Argentina",
+  "resumen": "Atajó en Defensa y Justicia y se perfila para ser titular en Uruguay contra Argentina FM Del Sol Pehuajo",
+  "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQU1VwYmVFR0V3VXdHVkp2RWxxVGlLYmItVFR1QnVFMkY3dVYwaEs0UUZRU3UxWV8xd1dOMmc0Y3pEa2JTT0poUlhLSkdqaUk0VzkwOFpEVEhVOU02QjZrS1pCTENqQVY3dHMyRHVuVkxDbmd3N0tuenVOSGx0d2h4OFBsbnk1bUxabU9VUHlub3JHNVdlNG1ReGc3cS0yRVh5MFp2RVJnVE9DWkEtVURMcVlsZV9nbUxMRnFqN2k3R3RSTWVjeGxzWEV2MDlJVTdRRzlzWGtiOA?oc=5",
+  "fuente": "FM Del Sol Pehuajo",
+  "deporte": "Handball",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-10T15:02+00:00",
+  "encontrado": "2026-11-10T18:57-03:00",
   "bot": "resultados"
  },
  {
@@ -400,6 +530,19 @@
   "en_buenos_aires": false,
   "publicado": "2026-11-10T03:57+00:00",
   "encontrado": "2026-11-10T04:29-03:00",
+  "bot": "resultados"
+ },
+ {
+  "id": "7446f9fba755",
+  "titulo": "Con grandes sensaciones se completó el Argentino de pista en Rafaela",
+  "resumen": "Con grandes sensaciones se completó el Argentino de pista en Rafaela Marca Personal Web",
+  "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQNUgwakZicjhjSUtTdm52eGozZFdCRzkxUFlYano0RHVoTUJjVFREMGxJclBzZG9EQldFWml3QnFNQ0JYeGh3Ry1RZnE3SnFDOUk1cm9Cd3VWbVhPc0VKRUs3VkI1aHBDVHE5RXB1a1RYZ3UyWi1pTnhYWE9QN21BaXVPT0traDdJMFpCZHoyemJBS2dtMDFSekhzUXZieHpsRHRkd0pXNnBWRkNZYmxVWFNB?oc=5",
+  "fuente": "Marca Personal Web",
+  "deporte": "Ciclismo de pista",
+  "tipo": "resultado",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-10T03:53+00:00",
+  "encontrado": "2026-11-10T18:56-03:00",
   "bot": "resultados"
  },
  {
@@ -871,6 +1014,32 @@
   "bot": "resultados"
  },
  {
+  "id": "0aee99982872",
+  "titulo": "Franco Colapinto concluyó decimoquinto en el Gran Premio de San Pablo",
+  "resumen": "Franco Colapinto concluyó decimoquinto en el Gran Premio de San Pablo El Observador Argentina",
+  "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNQkZCaVpESzJFSmlnWFZINXdoamdIdjdmWXVKUUpVc3BnRVEteF9CbkpZTkU5bU1VQy00QndEM2k1SVRYbDYtUU1peG9NZllrUElHV1UzOEFJeHA1LTNwNmdDUmN6TmQzS3hRaTVzQ3VhQmdFTmxQcHJ6cjBFZENVMlRuS2pDQUtjUG9vQXZ3OWMyWFZPY3EtcEFub1QxbDNzLWxtd2MyTlRlelY2dGxLemJtc2xQRVJyWmxjY9IBwgFBVV95cUxQUFNIemRmVjhIU19QeXZWajdZWXZfZUtxcUpKYWtIVzhNcmMtTl8zcVlOanFrUy1naVluWVRuT0VkekJKanpmV2NNNzV1V2gtTHVoZHZpN0hod01BQS1YYV82Y1VEQUttVzI0QUh3TUY2QVkydzdhcmJaY3R6a2U3VEh4dFBjN1I5bVFqdGFkMVB0UEl6TDgxc1lRbDJhWEZabEg5bXkzeERGdzJDQjVoVDhHZVlvdl9CX284WkwyZlVGQQ?oc=5",
+  "fuente": "El Observador Argentina",
+  "deporte": "Formula 1",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-09T00:46+00:00",
+  "encontrado": "2026-11-10T18:57-03:00",
+  "bot": "resultados"
+ },
+ {
+  "id": "ae6715a84f15",
+  "titulo": "Briatore criticó a Colapinto y Gasly tras el GP de Brasil: \"Rendimos por debajo de lo esperado\"",
+  "resumen": "Briatore criticó a Colapinto y Gasly tras el GP de Brasil: \"Rendimos por debajo de lo esperado\" Cadena 3 Argentina",
+  "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPcXpPbkxxYWtGTWZLNWlpX3dORTY0Ui1Vc0lLT3ZxTE9hVFgtSF9zQnFDLU85Z3FlamNFQnVkQU05aHFMZFdtT1VKdk9YaTJoR3ZIS1VHazB4NHBsVGFDMU9kVTlmNXZjNm5GY3N6cV9nX1ZxajY5S1pISjlnaWg1TkQ2V2lHSjFqV1lieFZKZTk2ekFTSFJIQ1RVeVZnNVZPemZrWnF2Q2otWTJzX1NJYk1OeDhMVGs0ZFVOMUktR2MxeWpkbXFaVEp3WXFNN25mRmgzOXR6ZFhFeElo0gHcAUFVX3lxTE9xek9uTHFha0ZNZks1aWlfd05FNjRSLVVzSUtPdnFMT2FUWC1IX3NCcUMtTzlncWVqY0VCdWRBTTlocUxkV21PVUp2T1hpMmhHdkhLVUdrMHg0cGxUYUMxT2RVOWY1dmM2bkZjc3pxX2dfVnFqNjlLWkhKOWdpaDVORDZXaUdKMWpXWWJ4VkplOTZ6QVNIUkhDVFV5Vmc1Vk96ZmtacXZDai1ZMnNfU0liTU54OExUazRkVU4xSS1HYzF5amRtcVpUSndZcU03bmZGaDM5dHpkWEV4SWg?oc=5",
+  "fuente": "Cadena 3 Argentina",
+  "deporte": "Formula 1",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-09T00:37+00:00",
+  "encontrado": "2026-11-10T18:57-03:00",
+  "bot": "resultados"
+ },
+ {
   "id": "f7ea08121f52",
   "titulo": "Brazil in Argentina T20I Series, 2025/26 Cricket Team Records & Stats",
   "resumen": "Brazil in Argentina T20I Series, 2025/26 Cricket Team Records & Stats Cricinfo",
@@ -881,6 +1050,19 @@
   "en_buenos_aires": false,
   "publicado": "2026-11-09T00:02+00:00",
   "encontrado": "2026-11-10T01:08-03:00",
+  "bot": "resultados"
+ },
+ {
+  "id": "491e48a4ad87",
+  "titulo": "Franco Colapinto reflexiona tras el Gran Premio de Brasil: \"Fui al límite toda la carrera\"",
+  "resumen": "Franco Colapinto reflexiona tras el Gran Premio de Brasil: \"Fui al límite toda la carrera\" Cadena 3 Argentina",
+  "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQZGQ3ZVRxN0xkYjVoUGNFYk1ZX2lPUHdtVm5zd0dWNWlySTJIOWZWZVVlekgwa2NtTzVEWnVLQ1I5YjVEUTJBRVMzcU5HYzZtYnFDOUlsQ1RnVVk0X2NtMjgwOHRTc3BHc0ozc1BHQUQzN18xcklXMEJPckYtdGNudFMxcFc0enAzY2k4cXlfc1hKTHVYTWlWT0dkXzkzT3VGNVFwMWpFUzVSMTY2a1YyOUFqcGZVZmI4cEpiZ3d6X2ZwT0FobVdXOW5pWnJIWFhX0gHWAUFVX3lxTE52T25VU0J4QlhTbTVrazE4QXBuamRpSmg0X3UwUGFXTWhUY2FKSnBMRjY3YkhkWlFOYUIwR0kyd1hDU0YtMFQ1cGN6SXBNSjlYTkNhcDdFVXNNX3p0cWc0S0VxSVhzWG5GQWpNejZzS2dtSGpBcllUZkpjdEVCYXFDbjZ1Q205VUdyLVB3YU5TWF9veXFteTl0Vzg2MmlKOENBQllSOUFLeDR2aFVhSU5qQWgxbkFhTDFPY25Ra2FPRmJlQTNDeDdySDY4dWoxRWs1a1hzNkE?oc=5",
+  "fuente": "Cadena 3 Argentina",
+  "deporte": "Formula 1",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-08T22:27+00:00",
+  "encontrado": "2026-11-10T18:57-03:00",
   "bot": "resultados"
  },
  {
