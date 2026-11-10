@@ -90,9 +90,15 @@ function textoEvento(e) {
   return [e.titulo, ...e.bloques.flatMap((b) => (b.partes || []).map((p) => p.t))].join(" ").toLowerCase();
 }
 
+// En Resultados: primero lo Publicable, después En curso y al final Falta info.
+// Dentro de cada grupo se respeta el orden del Doc. La Agenda queda por fecha (como en el Doc).
+const ORDEN = { publicable: 0, en_curso: 1, mas_info: 2 };
+
 function eventosDe(tab, conFiltros = true) {
   const seccion = tab === "agenda" ? "agenda" : "resultados";
-  return estado.eventos.filter((e) => {
+  const lista = estado.eventos.map((e, i) => ({ e, i }));
+  if (seccion === "resultados") lista.sort((a, b) => (ORDEN[a.e.etiqueta] ?? 9) - (ORDEN[b.e.etiqueta] ?? 9) || a.i - b.i);
+  return lista.map((x) => x.e).filter((e) => {
     if (e.seccion !== seccion) return false;
     if (!conFiltros) return !estaPublicado(e) || tieneNovedades(e);
     if (!$("#ver-publicados").checked && estaPublicado(e) && !tieneNovedades(e)) return false;
