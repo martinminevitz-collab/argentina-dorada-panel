@@ -1,6 +1,6 @@
 // Permite instalar el panel como app y abrirlo aunque no haya señal (muestra lo último que bajó).
-const CACHE = "ad-panel-v3";
-const BASE = ["./", "index.html", "estilos.css", "app.js", "manifest.webmanifest", "iconos/icono.svg"];
+const CACHE = "ad-panel-v4";
+const BASE = ["./", "index.html", "estilos.css", "app.js", "base.js", "config.js", "manifest.webmanifest", "iconos/icono.svg"];
 
 self.addEventListener("install", (e) => e.waitUntil(caches.open(CACHE).then((c) => c.addAll(BASE)).then(() => self.skipWaiting())));
 self.addEventListener("activate", (e) => e.waitUntil(

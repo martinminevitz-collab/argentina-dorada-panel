@@ -14,15 +14,22 @@ const estado = {
 };
 
 // ---------- guardado local ----------
+// Sin base compartida: en este dispositivo. Con base: en Supabase (lo ven todos). Ver base.js
 function leerPublicados() {
-  try { return JSON.parse(localStorage.getItem("ad-publicados") || "{}"); } catch { return {}; }
+  try {
+    const d = JSON.parse(localStorage.getItem("ad-publicados") || "{}");
+    // formato viejo {id: version} -> {id: {v}}
+    for (const k in d) if (typeof d[k] === "string") d[k] = { v: d[k] };
+    return d;
+  } catch { return {}; }
 }
 function guardarPublicados() {
+  if (window.Base?.activa()) return;
   try { localStorage.setItem("ad-publicados", JSON.stringify(estado.publicados)); } catch {}
 }
-// publicado = lo marcaste vos, o está en gris en el Doc
+// publicado = lo marcó alguien, o está en gris en el Doc
 function estaPublicado(e) { return e.publicado_en_doc || e.id in estado.publicados; }
-function tieneNovedades(e) { return e.id in estado.publicados && estado.publicados[e.id] !== e.version; }
+function tieneNovedades(e) { return e.id in estado.publicados && estado.publicados[e.id].v !== e.version; }
 
 // ---------- carga ----------
 async function bajarJSON(ruta) {
@@ -155,15 +162,25 @@ function tarjetaEvento(e, tpl) {
   const pub = estaPublicado(e) && !tieneNovedades(e);
   t.classList.toggle("ya-publicado", pub);
   const bPub = t.querySelector(".publicado");
+  const marca = estado.publicados[e.id];
   bPub.textContent = pub ? "✓ Publicado" : "Publicado";
+  if (marca?.por) bPub.title = `Lo marcó ${marca.por}`;
   bPub.classList.toggle("marcado", pub);
   bPub.disabled = e.publicado_en_doc && !(e.id in estado.publicados);
   if (bPub.disabled) bPub.title = "Ya figura como publicado (en gris) en el Doc";
-  bPub.onclick = () => {
-    if (e.id in estado.publicados && estado.publicados[e.id] === e.version) delete estado.publicados[e.id];
-    else estado.publicados[e.id] = e.version;
+  bPub.onclick = async () => {
+    const desmarcar = e.id in estado.publicados && estado.publicados[e.id].v === e.version;
+    const antes = estado.publicados[e.id];
+    if (desmarcar) delete estado.publicados[e.id];
+    else estado.publicados[e.id] = { v: e.version, por: window.Base?.mail() };
     guardarPublicados(); dibujar();
-    avisar(e.id in estado.publicados ? "Marcado como publicado" : "Desmarcado");
+    try {
+      if (window.Base?.activa()) await (desmarcar ? Base.desmarcar(e) : Base.marcar(e));
+      avisar(desmarcar ? "Desmarcado" : "Marcado como publicado");
+    } catch (err) {
+      if (antes) estado.publicados[e.id] = antes; else delete estado.publicados[e.id];
+      dibujar(); avisar("No se pudo guardar. Probá de nuevo");
+    }
   };
   t.querySelector(".copiar").onclick = () => copiarEvento(e);
   return t;
@@ -305,4 +322,7 @@ $("#recargar").onclick = cargar;
 document.addEventListener("visibilitychange", () => { if (!document.hidden) cargar(); });
 
 if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(() => {});
+// la base compartida avisa cuando cambian los publicados (de este u otro dispositivo)
+window.alCambiarPublicados = (mapa) => { estado.publicados = mapa ?? leerPublicados(); dibujar(); };
+window.Base?.iniciar();
 cargar();

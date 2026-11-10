@@ -1,0 +1,21 @@
+# El plan gratis de Supabase "duerme" la base si pasa una semana sin uso.
+# Esto la toca una vez por día para que nunca se duerma. Usa los datos de panel/config.js.
+name: Mantener base despierta
+
+on:
+  schedule:
+    - cron: "41 13 * * *"   # todos los días 10:41 (Argentina)
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - uses: actions/checkout@v4
+      - name: Tocar la base
+        run: |
+          URL=$(grep -oP 'supabaseUrl:\s*"\K[^"]*' panel/config.js)
+          KEY=$(grep -oP 'supabaseKey:\s*"\K[^"]*' panel/config.js)
+          if [ -z "$URL" ]; then echo "Base todavía no configurada"; exit 0; fi
+          curl -sf -X POST "$URL/rest/v1/rpc/ping" -H "apikey: $KEY" -H "Authorization: Bearer $KEY" -H "Content-Type: application/json" -d '{}'
