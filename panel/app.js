@@ -41,11 +41,13 @@ async function bajarJSON(ruta) {
 async function cargar() {
   $("#recargar").classList.add("girando");
   try {
-    const [doc, corrida, indice] = await Promise.all([
+    const [doc, corrida, indice, medalleros] = await Promise.all([
       bajarJSON("doc-resultados.json").catch(() => null),
       bajarJSON("ultima-corrida.json").catch(() => ({})),
       bajarJSON("indice.json").catch(() => ({ dias: [] })),
+      bajarJSON("medalleros.json").catch(() => ({})),
     ]);
+    estado.medalleros = medalleros;
     estado.doc = doc; estado.corrida = corrida;
     estado.eventos = doc?.eventos || [];
     const dias = Number($("#rango").value);
@@ -364,7 +366,7 @@ function dibujarMulti(lista) {
   sw.innerHTML = `<button data-v="dia">Por día</button><button data-v="deporte">Por deporte</button><button data-v="medallas">🏅 Solo medallas</button>`;
   sw.querySelectorAll("button").forEach((b) => {
     b.classList.toggle("activo", b.dataset.v === vista);
-    b.onclick = () => { estado.multiVista = b.dataset.v; estado.multiSel = null; estado.multiBusca = ""; dibujar(); };
+    b.onclick = () => { estado.multiVista = b.dataset.v; estado.multiSel = null; estado.multiBusca = ""; estado.filtroMedalla = ""; dibujar(); };
   });
   cab.append(sw);
   lista.append(cab);
@@ -442,17 +444,54 @@ function juntarMedallas(m) {
 function dibujarMedallas(lista, e) {
   const todas = juntarMedallas(e.multi);
   const cuenta = Object.fromEntries(MEDALLAS.map((x) => [x.clave, todas.filter((t) => t.med.clave === x.clave).length]));
-  const resumen = document.createElement("section");
-  resumen.className = "medallas-total";
-  resumen.innerHTML = MEDALLAS.map((x) => `<div><span class="emoji">${x.emoji}</span><b>${cuenta[x.clave]}</b><span>${x.titulo}</span></div>`).join("")
-    + `<div class="total"><b>${todas.length}</b><span>Total</span></div>`;
-  lista.append(resumen);
-  lista.append(Object.assign(document.createElement("p"), { className: "ayuda pendiente",
-    textContent: "Contadas desde lo que escribió el agente (una línea con la medalla en negrita = una medalla). Si no coincide con el medallero oficial, manda el oficial." }));
-  if (!todas.length) { lista.append(Object.assign(document.createElement("p"), { className: "vacio", textContent: "Todavía no hay medallas." })); return; }
+  const oficial = estado.medalleros?.[e.multi.nombre];
+  const filtro = estado.filtroMedalla || "";
+
+  // fichas de arriba: se tocan para ver solo esa medalla (Total = todas)
+  const fichas = document.createElement("section");
+  fichas.className = "medallas-total";
+  const ficha = (clave, emoji, num, titulo, extra = "") => {
+    const b = document.createElement("button");
+    b.className = (clave ? "" : "total ") + (filtro === clave ? "activa" : "");
+    b.innerHTML = `${emoji ? `<span class="emoji">${emoji}</span>` : ""}<b>${num}</b><span>${titulo}</span>${extra}`;
+    b.onclick = () => { estado.filtroMedalla = filtro === clave ? "" : clave; dibujar(); };
+    return b;
+  };
   for (const x of MEDALLAS) {
-    const items = todas.filter((t) => t.med.clave === x.clave);
+    const of = oficial ? oficial[x.clave] : null;
+    fichas.append(ficha(x.clave, x.emoji, cuenta[x.clave], x.titulo,
+      of != null && of !== cuenta[x.clave] ? `<small class="dif">Oficial: ${of}</small>` : ""));
+  }
+  fichas.append(ficha("", "", todas.length, "Total",
+    oficial && oficial.total !== todas.length ? `<small class="dif">Oficial: ${oficial.total}</small>` : ""));
+  lista.append(fichas);
+
+  // aviso: comparación con el medallero oficial
+  const aviso = document.createElement("p");
+  aviso.className = "ayuda pendiente";
+  if (oficial) {
+    const falta = oficial.total - todas.length;
+    aviso.innerHTML = falta === 0
+      ? `✅ Coincide con el <a href="${escapar(oficial.fuente)}" target="_blank" rel="noopener">medallero oficial</a>.`
+      : falta > 0
+        ? `⚠️ El <a href="${escapar(oficial.fuente)}" target="_blank" rel="noopener">medallero oficial</a> tiene ${falta} medalla${falta > 1 ? "s" : ""} más de las que cargó el agente: falta${falta > 1 ? "n" : ""} cargar en el Doc.`
+        : `⚠️ El agente cargó ${-falta} medalla${-falta > 1 ? "s" : ""} más que el <a href="${escapar(oficial.fuente)}" target="_blank" rel="noopener">medallero oficial</a> (puede ser una repetida o una "(Creo)").`;
+    aviso.classList.toggle("alerta", falta !== 0);
+  } else {
+    aviso.textContent = "Contadas desde lo que escribió el agente (una línea con la medalla en negrita = una medalla). Todavía no se pudo leer el medallero oficial.";
+  }
+  lista.append(aviso);
+  lista.append(buscadorDeporte("Buscar deporte o deportista…"));
+
+  if (!todas.length) { lista.append(Object.assign(document.createElement("p"), { className: "vacio", textContent: "Todavía no hay medallas." })); return; }
+  const q = normBusca(estado.multiBusca);
+  let hubo = false;
+  for (const x of MEDALLAS) {
+    if (filtro && filtro !== x.clave) continue;
+    const items = todas.filter((t) => t.med.clave === x.clave &&
+      (!q || normBusca(t.deporte + " " + t.partes.map((p) => p.t).join("")).includes(q)));
     if (!items.length) continue;
+    hubo = true;
     const caja = document.createElement("article");
     caja.className = "evento caja-medallas abierto " + x.clave;
     caja.innerHTML = `<div class="cabeza-fija"><span class="titulo">${x.emoji} ${x.titulo} · ${items.length}</span></div>`;
@@ -463,21 +502,24 @@ function dibujarMedallas(lista, e) {
       fila.className = "fila-medalla";
       fila.innerHTML = `<span class="chip deporte">${escapar(it.deporte)}</span>${it.dia ? `<span class="dia-medalla">${escapar(it.dia.replace(/^D[IÍ]A\s*/i, "Día ").split(" - ")[0])}</span>` : ""}`;
       const p = document.createElement("p");
-      renderPartes(it.partes.filter((q) => !q.href), p);
+      renderPartes(it.partes.filter((r) => !r.href), p);
       fila.append(p);
       det.append(fila);
     }
     caja.append(det);
     lista.append(caja);
   }
+  if (!hubo) lista.append(Object.assign(document.createElement("p"), { className: "vacio", textContent: "No hay medallas con ese filtro." }));
   const pie = document.createElement("div");
   pie.className = "pie suelto";
-  pie.append(boton("Copiar medallero para IG", () => copiarTexto(textoMedallasIG(e, todas, cuenta))));
+  pie.append(boton("Copiar medallero para IG", () => copiarTexto(textoMedallasIG(e, todas, cuenta, oficial))));
   lista.append(pie);
 }
-function textoMedallasIG(e, todas, cuenta) {
+function textoMedallasIG(e, todas, cuenta, oficial) {
+  // si hay medallero oficial, el total sale de ahí
+  const c = oficial || { ...cuenta, total: todas.length };
   const l = [`🇦🇷 ${e.multi.nombre.toUpperCase()} | MEDALLERO ARGENTINO`, "",
-    `🥇 ${cuenta.oro}  🥈 ${cuenta.plata}  🥉 ${cuenta.bronce}  ·  Total: ${todas.length}`];
+    `🥇 ${c.oro}  🥈 ${c.plata}  🥉 ${c.bronce}  ·  Total: ${c.total}`];
   for (const x of MEDALLAS) {
     const items = todas.filter((t) => t.med.clave === x.clave);
     if (!items.length) continue;

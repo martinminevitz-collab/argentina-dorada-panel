@@ -208,8 +208,8 @@ input[type=search], select { width: 100%; background: var(--tarjeta); color: var
 
 /* ---------- solo medallas ---------- */
 .medallas-total { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
-.medallas-total > div { background: var(--tarjeta); border: 1px solid var(--borde); border-radius: var(--radio); padding: 10px 6px;
-  display: grid; justify-items: center; gap: 2px; }
+.medallas-total > button { background: var(--tarjeta); border: 1px solid var(--borde); border-radius: var(--radio); padding: 10px 6px;
+  display: grid; justify-items: center; gap: 2px; cursor: pointer; font: inherit; color: inherit; transition: transform .1s; }
 .medallas-total .emoji { font-size: 22px; }
 .medallas-total b { font: 800 26px/1 "Barlow Condensed", sans-serif; }
 .medallas-total span:last-child { font-size: 12px; color: var(--texto-2); text-transform: uppercase; letter-spacing: 1px; }
@@ -226,3 +226,11 @@ input[type=search], select { width: 100%; background: var(--tarjeta); color: var
 @media (min-width: 1000px) {
   .lista.modo-multi > .medallas-total, .lista.modo-multi > .caja-medallas, .lista.modo-multi > .pie.suelto { grid-column: 1 / -1; }
 }
+
+.medallas-total > button:active { transform: scale(.97); }
+.medallas-total > button.activa { outline: 3px solid var(--oro); outline-offset: -3px; background: var(--oro-fondo); }
+.medallas-total > button.total.activa { background: var(--texto); }
+.medallas-total .dif { font-size: 11px; color: var(--rojo); font-weight: 600; }
+.medallas-total .total .dif { color: #ffb4a8; }
+.ayuda.alerta { color: var(--rojo); }
+.ayuda a { color: var(--celeste); }

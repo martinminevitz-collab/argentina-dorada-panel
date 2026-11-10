@@ -27,5 +27,22 @@
     "veteranos",
     "master",
     "masters"
+  ],
+  "_nota_medalleros": "Medallero oficial de cada Juegos: el bot lee la tabla y busca la fila de Argentina (oro, plata, bronce, total). 'evento' = nombre corto como aparece en la pestaña del panel. Se prueban los links en orden: conviene poner primero la página de Wikipedia del medallero (formato fijo, se actualiza rápido) y después la oficial. Para unos Juegos nuevos: copiar una línea y cambiar los datos.",
+  "medalleros": [
+    {
+      "evento": "Dakar 2026",
+      "urls": [
+        "https://en.wikipedia.org/wiki/2026_Summer_Youth_Olympics_medal_table",
+        "https://en.wikipedia.org/wiki/2026_Summer_Youth_Olympics"
+      ]
+    },
+    {
+      "evento": "Lima 2027",
+      "urls": [
+        "https://en.wikipedia.org/wiki/2027_Pan_American_Games_medal_table",
+        "https://es.wikipedia.org/wiki/Anexo:Medallero_de_los_Juegos_Panamericanos_de_2027"
+      ]
+    }
   ]
 }
