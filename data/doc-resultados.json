@@ -1,5 +1,5 @@
 {
- "leido": "2026-11-10T11:14-03:00",
+ "leido": "2026-11-10T12:53-03:00",
  "actualizado_doc": "10/11/2026 10:55",
  "eventos": [
   {
@@ -3139,6 +3139,1180 @@
    ],
    "id": "a9a35774136e",
    "version": "64a9249841",
+   "multideportivo": true,
+   "multi": {
+    "nombre": "Dakar 2026",
+    "general": [
+     {
+      "tipo": "texto",
+      "partes": [
+       {
+        "t": "42 argentinos"
+       }
+      ]
+     },
+     {
+      "tipo": "texto",
+      "partes": [
+       {
+        "t": "Abanderados en la ceremonia inaugural: Benjamín Fernández de Landa (gimnasia artística) y Cecilia Dieleke (natación)"
+       }
+      ]
+     },
+     {
+      "tipo": "link",
+      "partes": [
+       {
+        "t": "https://www.lacapitalmdp.com/el-gimnasta-fernandez-de-landa-y-la-nadadora-dieleke-seran-los-abanderados/",
+        "href": "https://www.lacapitalmdp.com/el-gimnasta-fernandez-de-landa-y-la-nadadora-dieleke-seran-los-abanderados/"
+       },
+       {
+        "t": " (Nota)"
+       }
+      ]
+     },
+     {
+      "tipo": "texto",
+      "partes": [
+       {
+        "t": "31/10 al 3/11 - Remo costero: Joaquín Pare"
+       }
+      ]
+     },
+     {
+      "tipo": "texto",
+      "partes": [
+       {
+        "t": "31/10 al 4/11 - Beach vóley: Ángeles Frascaroli e Isabella García Curado"
+       }
+      ]
+     },
+     {
+      "tipo": "texto",
+      "partes": [
+       {
+        "t": "31/10 al 5/11 - Tenis de mesa: Agustín Asmu"
+       }
+      ]
+     },
+     {
+      "tipo": "texto",
+      "partes": [
+       {
+        "t": "1/11 al 3/11 - Judo: Thiago Carvallo"
+       }
+      ]
+     },
+     {
+      "tipo": "texto",
+      "partes": [
+       {
+        "t": "1/11 al 3/11 - Wushu: Ludmila Rosales"
+       }
+      ]
+     },
+     {
+      "tipo": "texto",
+      "partes": [
+       {
+        "t": "1/11 al 3/11 - Rugby 7 masculino (Abbondati, Anderson, Benedit, Cairo, Cocomarola, Fossati, Galetti Arechaga, Kantz, Ledesma, Maris, Martos Rodríguez, Zapiola)"
+       }
+      ]
+     },
+     {
+      "tipo": "texto",
+      "partes": [
+       {
+        "t": "Desde 1/11 - Futsal masculino (Sánchez Izquierdo, Mandaradoni Coto, Barrios, Cabrera González, Sampedro, Velásquez, Martínez Florio, López, Pesl, Henriques)"
+       }
+      ]
+     },
+     {
+      "tipo": "texto",
+      "partes": [
+       {
+        "t": "1/11 al 6/11 - Natación: Cecilia Dieleke y Thiago Pizzini Paz"
+       }
+      ]
+     },
+     {
+      "tipo": "texto",
+      "partes": [
+       {
+        "t": "3/11 al 6/11 - Equitación: Maria Eiras Terranova"
+       }
+      ]
+     },
+     {
+      "tipo": "texto",
+      "partes": [
+       {
+        "t": "4/11 y 5/11 - Skate street: Joaquín Rodríguez Pusterla"
+       }
+      ]
+     },
+     {
+      "tipo": "texto",
+      "partes": [
+       {
+        "t": "5/11 al 11/11 - Gimnasia artística: Benjamín Fernández de Landa"
+       }
+      ]
+     },
+     {
+      "tipo": "texto",
+      "partes": [
+       {
+        "t": "6/11 al 9/11 - Básquet 3x3: Thiago Montes Soria, Ezequiel Román Bargot, Igor Joloidovsky y Enzo Roth"
+       }
+      ]
+     },
+     {
+      "tipo": "texto",
+      "partes": [
+       {
+        "t": "8/11 y 10/11 - Ciclismo: Julia Lambert"
+       }
+      ]
+     },
+     {
+      "tipo": "texto",
+      "partes": [
+       {
+        "t": "8/11 al 10/11 - Atletismo: Irene Pernía y Zoe Gorski"
+       }
+      ]
+     },
+     {
+      "tipo": "texto",
+      "partes": [
+       {
+        "t": "8/11 al 12/11 - Vela (windsurf): Agustín Hoffmann Breustedt"
+       }
+      ]
+     },
+     {
+      "tipo": "texto",
+      "partes": [
+       {
+        "t": "8/11 al 13/11 - Esgrima: Catalina Borrelli"
+       }
+      ]
+     },
+     {
+      "tipo": "texto",
+      "partes": [
+       {
+        "t": "Argentina lleva 5 medallas: 1 "
+       },
+       {
+        "t": "DORADA",
+        "b": true
+       },
+       {
+        "t": " (Cecilia Dieleke) y 4 de "
+       },
+       {
+        "t": "BRONCE",
+        "b": true
+       },
+       {
+        "t": " (Cecilia Dieleke x2, Thiago Carvallo y Rugby 7)"
+       }
+      ]
+     }
+    ],
+    "medallero": null,
+    "dias": [],
+    "deportes": [
+     {
+      "nombre": "Natación",
+      "dias": [
+       {
+        "dia": null,
+        "bloques": [
+         {
+          "tipo": "link",
+          "partes": [
+           {
+            "t": "https://www.lanacion.com.ar/deportes/natacion/cecilia-dieleke-hizo-historia-en-dakar-gano-el-oro-y-batio-el-record-argentino-de-los-200-metros-nid01112026/",
+            "href": "https://www.lanacion.com.ar/deportes/natacion/cecilia-dieleke-hizo-historia-en-dakar-gano-el-oro-y-batio-el-record-argentino-de-los-200-metros-nid01112026/"
+           },
+           {
+            "t": " (Nota)"
+           }
+          ]
+         },
+         {
+          "tipo": "texto",
+          "partes": [
+           {
+            "t": "Cecilia Dieleke ganó la medalla "
+           },
+           {
+            "t": "DORADA",
+            "b": true
+           },
+           {
+            "t": " en los 200m espalda con 2:10.05, nuevo "
+           },
+           {
+            "t": "RÉCORD ARGENTINO Y SUDAMERICANO",
+            "b": true
+           },
+           {
+            "t": ". Segunda fue Eirini Zervou (GRE) con 2:15.52. Es la primera medalla de Argentina en Dakar y el primer oro olímpico de una nadadora argentina"
+           }
+          ]
+         },
+         {
+          "tipo": "texto",
+          "partes": [
+           {
+            "t": "Thiago Pizzini Paz fue 25° en los 100m libre"
+           }
+          ]
+         },
+         {
+          "tipo": "link",
+          "partes": [
+           {
+            "t": "https://www.losandes.com.ar/deportes/natacion-nacional-dakar-cecilia-dieleke-gano-el-bronce-y-sumo-su-segunda-medalla-olimpica-n6012903",
+            "href": "https://www.losandes.com.ar/deportes/natacion-nacional-dakar-cecilia-dieleke-gano-el-bronce-y-sumo-su-segunda-medalla-olimpica-n6012903"
+           },
+           {
+            "t": " (Nota)"
+           }
+          ]
+         },
+         {
+          "tipo": "texto",
+          "partes": [
+           {
+            "t": "Cecilia Dieleke ganó la medalla de "
+           },
+           {
+            "t": "BRONCE",
+            "b": true
+           },
+           {
+            "t": " en los 100m espalda con 1:00.83 (había clasificado 3° con 1:02.87). Oro para Daria-Mariuca Silisteanu (ROU) y plata para Seungwon Kim (KOR). Es su segunda medalla en Dakar"
+           }
+          ]
+         },
+         {
+          "tipo": "texto",
+          "partes": [
+           {
+            "t": "Thiago Pizzini Paz fue 7° en la final de los 400m libre con 3:59.10 y se llevó el "
+           },
+           {
+            "t": "DIPLOMA OLÍMPICO",
+            "b": true
+           }
+          ]
+         },
+         {
+          "tipo": "link",
+          "partes": [
+           {
+            "t": "https://radiorafaela.com.ar/deportes/dakar-2026-argentina-sumo-otra-victoria-en-futsal-y-dieleke-buscara-una-nueva-medalla-este-jueves",
+            "href": "https://radiorafaela.com.ar/deportes/dakar-2026-argentina-sumo-otra-victoria-en-futsal-y-dieleke-buscara-una-nueva-medalla-este-jueves"
+           },
+           {
+            "t": " (Nota)"
+           }
+          ]
+         },
+         {
+          "tipo": "texto",
+          "partes": [
+           {
+            "t": "Cecilia Dieleke fue 9° en la general de los 50m libre con 26.77 (4° en su serie). Quedó a 12 centésimas del 8° puesto y no pasó a la final"
+           }
+          ]
+         },
+         {
+          "tipo": "link",
+          "partes": [
+           {
+            "t": "https://www.prensa-latina.cu/2026/11/05/nadadora-argentina-dieleke-con-tercera-presea-en-olimpicos-de-dakar/",
+            "href": "https://www.prensa-latina.cu/2026/11/05/nadadora-argentina-dieleke-con-tercera-presea-en-olimpicos-de-dakar/"
+           },
+           {
+            "t": " (Nota)"
+           }
+          ]
+         },
+         {
+          "tipo": "texto",
+          "partes": [
+           {
+            "t": "Cecilia Dieleke ganó la medalla de "
+           },
+           {
+            "t": "BRONCE",
+            "b": true
+           },
+           {
+            "t": " en los 50m espalda con 28.83. Oro para Daria-Mariuca Silisteanu (ROU) con 27.93 y plata para Seungwon Kim (KOR) con 28.21 (Creo). Con 3 medallas es la argentina más ganadora en la historia de los Juegos Olímpicos de la Juventud"
+           }
+          ]
+         },
+         {
+          "tipo": "link",
+          "partes": [
+           {
+            "t": "https://www.dobleamarilla.com.ar/mas-alla-del-futbol/el-basquet-3x3-comenzo-con-una-doble-victoria-su-participacion-en-dakar_a5fd8a239dd1c182a47a8771d",
+            "href": "https://www.dobleamarilla.com.ar/mas-alla-del-futbol/el-basquet-3x3-comenzo-con-una-doble-victoria-su-participacion-en-dakar_a5fd8a239dd1c182a47a8771d"
+           },
+           {
+            "t": " (Nota)"
+           }
+          ]
+         },
+         {
+          "tipo": "texto",
+          "partes": [
+           {
+            "t": "Thiago Pizzini Paz fue 14° en los 200m libre con 1:54.81 (6° en su serie). Fue su última prueba en Dakar"
+           }
+          ]
+         },
+         {
+          "tipo": "espacio"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "nombre": "Beach Vóley Femenino",
+      "dias": [
+       {
+        "dia": null,
+        "bloques": [
+         {
+          "tipo": "link",
+          "partes": [
+           {
+            "t": "https://en.volleyballworld.com/beachvolleyball/competitions/youth-olympics-dakar-2026/news/senegal-s-lionesses-segnane-amina-roar-in-dakar-2026-youth-olympic-games-opener",
+            "href": "https://en.volleyballworld.com/beachvolleyball/competitions/youth-olympics-dakar-2026/news/senegal-s-lionesses-segnane-amina-roar-in-dakar-2026-youth-olympic-games-opener"
+           },
+           {
+            "t": " (Resultado)"
+           }
+          ]
+         },
+         {
+          "tipo": "texto",
+          "partes": [
+           {
+            "t": "Ángeles Frascaroli e Isabella García Curado le ganaron en el debut del Grupo E a Berthaudeau/Mir (FRA) por 2-1 (21-14, 20-22, 15-13)"
+           }
+          ]
+         },
+         {
+          "tipo": "link",
+          "partes": [
+           {
+            "t": "https://radiorafaela.com.ar/deportes/argentina-abrio-su-medallero-en-dakar-2026-con-oro-y-bronce",
+            "href": "https://radiorafaela.com.ar/deportes/argentina-abrio-su-medallero-en-dakar-2026-con-oro-y-bronce"
+           },
+           {
+            "t": " (Resultados)"
+           }
+          ]
+         },
+         {
+          "tipo": "texto",
+          "partes": [
+           {
+            "t": "Le ganaron a Guam 2-0 (21-15, 21-12) y a Mozambique 2-0 (21-9, 21-13). Ganaron los 3 partidos del grupo"
+           }
+          ]
+         },
+         {
+          "tipo": "link",
+          "partes": [
+           {
+            "t": "https://en.volleyballworld.com/beachvolleyball/competitions/youth-olympics-dakar-2026/news/lucky-losers-charissaki-margaritopoulou-of-greece-storm-dakar-2026-quarterfinals",
+            "href": "https://en.volleyballworld.com/beachvolleyball/competitions/youth-olympics-dakar-2026/news/lucky-losers-charissaki-margaritopoulou-of-greece-storm-dakar-2026-quarterfinals"
+           },
+           {
+            "t": " (Resultado 8vos)"
+           }
+          ]
+         },
+         {
+          "tipo": "texto",
+          "partes": [
+           {
+            "t": "En 8vos le ganaron a Paniagua/Reyes (DOM) por 2-0 (21-16, 21-12). Siguen invictas (4-0)"
+           }
+          ]
+         },
+         {
+          "tipo": "link",
+          "partes": [
+           {
+            "t": "https://feva.org.ar/frascaroli-garcia-se-quedaron-con-el-quinto-puesto-en-dakar-2026.htm",
+            "href": "https://feva.org.ar/frascaroli-garcia-se-quedaron-con-el-quinto-puesto-en-dakar-2026.htm"
+           },
+           {
+            "t": " (Nota)"
+           }
+          ]
+         },
+         {
+          "tipo": "texto",
+          "partes": [
+           {
+            "t": "En 4tos perdieron vs Coretti/Lafuenti (ITA) por 2-0 (19-21, 15-21) y terminaron en el "
+           },
+           {
+            "t": "5° PUESTO",
+            "b": true
+           }
+          ]
+         },
+         {
+          "tipo": "espacio"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "nombre": "Rugby 7 Masculino",
+      "dias": [
+       {
+        "dia": null,
+        "bloques": [
+         {
+          "tipo": "link",
+          "partes": [
+           {
+            "t": "https://www.lacapitalmdp.com/zapiola-los-pumas-seven-junior-y-su-agenda-para-dakar-2026/",
+            "href": "https://www.lacapitalmdp.com/zapiola-los-pumas-seven-junior-y-su-agenda-para-dakar-2026/"
+           },
+           {
+            "t": " (Horarios)"
+           }
+          ]
+         },
+         {
+          "tipo": "link",
+          "partes": [
+           {
+            "t": "https://www.losandes.com.ar/deportes/argentina-arranco-dos-goleadas-dakar-2026-perdio-francia-y-jugara-las-semifinales-el-oro-n6012589",
+            "href": "https://www.losandes.com.ar/deportes/argentina-arranco-dos-goleadas-dakar-2026-perdio-francia-y-jugara-las-semifinales-el-oro-n6012589"
+           },
+           {
+            "t": " (Resultados)"
+           }
+          ]
+         },
+         {
+          "tipo": "texto",
+          "partes": [
+           {
+            "t": "Fase de grupos: 49-0 vs Uganda, 31-5 vs Japón (Gonzalo Cairo x3) y 7-24 vs Francia. Pasaron a semis"
+           }
+          ]
+         },
+         {
+          "tipo": "sub",
+          "partes": [
+           {
+            "t": "Semis vs Sudáfrica 12-24",
+            "b": true
+           }
+          ]
+         },
+         {
+          "tipo": "sub",
+          "partes": [
+           {
+            "t": "Bronce vs Canada 36-5 ",
+            "b": true
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "nombre": "Futsal Masculino",
+      "dias": [
+       {
+        "dia": null,
+        "bloques": [
+         {
+          "tipo": "link",
+          "partes": [
+           {
+            "t": "https://deportesanluis.com.ar/dakar-2026-esta-en-marcha/",
+            "href": "https://deportesanluis.com.ar/dakar-2026-esta-en-marcha/"
+           },
+           {
+            "t": " (Fixture)"
+           }
+          ]
+         },
+         {
+          "tipo": "link",
+          "partes": [
+           {
+            "t": "https://ar.headtopics.com/news/argentina-gole-a-senegal-9-2-en-futsal-en-los-juegos-89473811",
+            "href": "https://ar.headtopics.com/news/argentina-gole-a-senegal-9-2-en-futsal-en-los-juegos-89473811"
+           },
+           {
+            "t": " (Resultado)"
+           }
+          ]
+         },
+         {
+          "tipo": "texto",
+          "partes": [
+           {
+            "t": "Debut: 9-2 vs Senegal (Lorenzo Sampedro x2, Valentino Martínez x2, Enzo López x2, Axel Barrios, Joaquín Pesl y Ezequiel Henriques)"
+           }
+          ]
+         },
+         {
+          "tipo": "link",
+          "partes": [
+           {
+            "t": "https://www.infobae.com/deportes/2026/11/04/el-gol-a-40-segundos-del-final-que-le-dio-a-la-seleccion-argentina-de-futsal-el-pase-a-las-semis-de-los-juegos-olimpicos-de-la-juventud/",
+            "href": "https://www.infobae.com/deportes/2026/11/04/el-gol-a-40-segundos-del-final-que-le-dio-a-la-seleccion-argentina-de-futsal-el-pase-a-las-semis-de-los-juegos-olimpicos-de-la-juventud/"
+           },
+           {
+            "t": " (Nota)"
+           }
+          ]
+         },
+         {
+          "tipo": "texto",
+          "partes": [
+           {
+            "t": "Segunda fecha: 2-1 vs Afganistán (Valentino Martínez x2, el segundo a 40 segundos del final). "
+           },
+           {
+            "t": "CLASIFICÓ A SEMIS",
+            "b": true
+           }
+          ]
+         },
+         {
+          "tipo": "link",
+          "partes": [
+           {
+            "t": "https://www.losandes.com.ar/deportes/argentina-aplasto-panama-termino-puntaje-ideal-y-va-la-final-del-futsal-dakar-2026-n6013413",
+            "href": "https://www.losandes.com.ar/deportes/argentina-aplasto-panama-termino-puntaje-ideal-y-va-la-final-del-futsal-dakar-2026-n6013413"
+           },
+           {
+            "t": " (Resultado)"
+           }
+          ]
+         },
+         {
+          "tipo": "texto",
+          "partes": [
+           {
+            "t": "Tercera fecha: 9-1 vs Panamá (Valentino Martínez Florio x3, Ezequiel Henriques x2, Lorenzo Sampedro x2, Joaquín Pesl y Lisandro Velásquez). Cerró el grupo invicto (3 de 3, 20 goles a favor y 4 en contra)"
+           }
+          ]
+         },
+         {
+          "tipo": "link",
+          "partes": [
+           {
+            "t": "https://www.infobae.com/deportes/2026/11/09/la-seleccion-argentina-de-futsal-vencio-4-2-a-marruecos-y-llego-a-la-final-de-los-jjoo-de-la-juventud-2026/",
+            "href": "https://www.infobae.com/deportes/2026/11/09/la-seleccion-argentina-de-futsal-vencio-4-2-a-marruecos-y-llego-a-la-final-de-los-jjoo-de-la-juventud-2026/"
+           },
+           {
+            "t": " (Resultado semis)"
+           }
+          ]
+         },
+         {
+          "tipo": "texto",
+          "partes": [
+           {
+            "t": "Semis: le ganó 4-2 a Marruecos (Axel Barrios de penal, Enzo López, Ezequiel Henriques y Lisandro Velásquez) y "
+           },
+           {
+            "t": "CLASIFICÓ A LA FINAL",
+            "b": true
+           },
+           {
+            "t": ". Tiene asegurada una medalla"
+           }
+          ]
+         },
+         {
+          "tipo": "sub",
+          "partes": [
+           {
+            "t": "Final vs Portugal el jueves 12/11 a las 12:30hs",
+            "b": true
+           }
+          ]
+         },
+         {
+          "tipo": "espacio"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "nombre": "Judo -66kg Masculino",
+      "dias": [
+       {
+        "dia": null,
+        "bloques": [
+         {
+          "tipo": "link",
+          "partes": [
+           {
+            "t": "https://www.lanacion.com.ar/deportes/thiago-carvallo-gano-la-medalla-de-bronce-en-judo-en-los-juegos-olimpicos-de-la-juventud-dakar-2026-nid02112026/",
+            "href": "https://www.lanacion.com.ar/deportes/thiago-carvallo-gano-la-medalla-de-bronce-en-judo-en-los-juegos-olimpicos-de-la-juventud-dakar-2026-nid02112026/"
+           },
+           {
+            "t": " (Nota)"
+           }
+          ]
+         },
+         {
+          "tipo": "texto",
+          "partes": [
+           {
+            "t": "Thiago Carvallo logró la medalla de "
+           },
+           {
+            "t": "BRONCE",
+            "b": true
+           },
+           {
+            "t": ". Le ganó en 8vos a Bruno Pinto (MOZ) por ippon en 11 segundos, perdió en 4tos vs Anes Mati (CAN) por ippon, y en el repechaje le ganó a Aldo Madre Deus (STP) por ippon y a Itamar Cohen (ISR) por golden score. En la pelea por el bronce Nimrod Mildner (HUN) fue descalificado"
+           }
+          ]
+         },
+         {
+          "tipo": "espacio"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "nombre": "Remo Costero",
+      "dias": [
+       {
+        "dia": null,
+        "bloques": [
+         {
+          "tipo": "texto",
+          "partes": [
+           {
+            "t": "Joaquín Paré fue 25° en la clasificación general (17° en su serie con 2:41.46) y no pasó a la siguiente ronda"
+           }
+          ]
+         },
+         {
+          "tipo": "texto",
+          "partes": [
+           {
+            "t": "Según ENARD: 23° de 32 en C1X y 17° de 24 en T2 ("
+           },
+           {
+            "t": "https://enard.org.ar/",
+            "href": "https://enard.org.ar/"
+           },
+           {
+            "t": ")"
+           }
+          ]
+         },
+         {
+          "tipo": "espacio"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "nombre": "Tenis de Mesa",
+      "dias": [
+       {
+        "dia": null,
+        "bloques": [
+         {
+          "tipo": "link",
+          "partes": [
+           {
+            "t": "https://www.analisisdigital.com.ar/deportes/2026/11/02/el-paranaense-agustin-asmu-avanzo-octavos-en-los-juegos-olimpicos-de-la-juventud",
+            "href": "https://www.analisisdigital.com.ar/deportes/2026/11/02/el-paranaense-agustin-asmu-avanzo-octavos-en-los-juegos-olimpicos-de-la-juventud"
+           },
+           {
+            "t": " (Nota)"
+           }
+          ]
+         },
+         {
+          "tipo": "texto",
+          "partes": [
+           {
+            "t": "Agustín Asmu pasó a 8vos como 2° de su grupo: perdió 3-0 vs Ryuusei Kawakami (JPN), le ganó 3-0 a Ganiou Abdourahaman (BEN) y 3-2 a Felipe Okano (BRA)"
+           }
+          ]
+         },
+         {
+          "tipo": "link",
+          "partes": [
+           {
+            "t": "https://www.analisisdigital.com.ar/deportes/2026/11/03/dakar-2026-el-paranaense-agustin-asmu-le-dijo-adios-los-juegos-olimpicos-de-la-juventud",
+            "href": "https://www.analisisdigital.com.ar/deportes/2026/11/03/dakar-2026-el-paranaense-agustin-asmu-le-dijo-adios-los-juegos-olimpicos-de-la-juventud"
+           },
+           {
+            "t": " (Nota)"
+           }
+          ]
+         },
+         {
+          "tipo": "texto",
+          "partes": [
+           {
+            "t": "En 8vos perdió vs Li Hechen (CHN) por 4-0 (3-11, 5-11, 12-14, 4-11) y quedó eliminado"
+           }
+          ]
+         },
+         {
+          "tipo": "espacio"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "nombre": "Equitación (Salto)",
+      "dias": [
+       {
+        "dia": null,
+        "bloques": [
+         {
+          "tipo": "link",
+          "partes": [
+           {
+            "t": "https://www.diariomendoza.com.ar/deportes/la-mendocina-maria-eiras-terranova-debuto-quinto-puesto-salto-ecuestre-n184263",
+            "href": "https://www.diariomendoza.com.ar/deportes/la-mendocina-maria-eiras-terranova-debuto-quinto-puesto-salto-ecuestre-n184263"
+           },
+           {
+            "t": " (Nota)"
+           }
+          ]
+         },
+         {
+          "tipo": "texto",
+          "partes": [
+           {
+            "t": "María Eiras Terranova fue 5° de 24 en la primera ronda clasificatoria con 4 puntos de penalización (un derribo) y 80.34 segundos, el mejor tiempo de todas. Montó a Haloha Kandooma"
+           }
+          ]
+         },
+         {
+          "tipo": "link",
+          "partes": [
+           {
+            "t": "https://www.dobleamarilla.com.ar/mas-alla-del-futbol/ceciclia-dieleke-conquisto-su-tercera-medalla-y-marco-un-hito-olimpico_a6aeca7d5c0be1d1e9e1ade1e",
+            "href": "https://www.dobleamarilla.com.ar/mas-alla-del-futbol/ceciclia-dieleke-conquisto-su-tercera-medalla-y-marco-un-hito-olimpico_a6aeca7d5c0be1d1e9e1ade1e"
+           },
+           {
+            "t": " (Nota)"
+           }
+          ]
+         },
+         {
+          "tipo": "texto",
+          "partes": [
+           {
+            "t": "En la segunda ronda clasificatoria hizo 67.59 con 4 puntos de penalización (12° en esa ronda). Con 8 puntos en total quedó 6° en la general"
+           }
+          ]
+         },
+         {
+          "tipo": "texto",
+          "partes": [
+           {
+            "t": "Con el equipo Sudamérica terminó 6° en la competencia por equipos continentales"
+           }
+          ]
+         },
+         {
+          "tipo": "link",
+          "partes": [
+           {
+            "t": "https://www.diariouno.com.ar/ovacion/polideportivo/maria-eiras-terranova-fue-finalista-salto-ecuestre-los-juegos-olimpicos-la-juventud-dakar-2026-n1613985",
+            "href": "https://www.diariouno.com.ar/ovacion/polideportivo/maria-eiras-terranova-fue-finalista-salto-ecuestre-los-juegos-olimpicos-la-juventud-dakar-2026-n1613985"
+           },
+           {
+            "t": " (Nota)"
+           }
+          ]
+         },
+         {
+          "tipo": "texto",
+          "partes": [
+           {
+            "t": "En la final individual (viernes 6/11) fue 14° con 4 puntos de penalización y 72.20. Medallas para Mike Smits (SUI), Liza Tittle (USA) y Alejandro Gutiérrez Alcócer (COL)"
+           }
+          ]
+         },
+         {
+          "tipo": "espacio"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "nombre": "Gimnasia Artística Masculina",
+      "dias": [
+       {
+        "dia": null,
+        "bloques": [
+         {
+          "tipo": "link",
+          "partes": [
+           {
+            "t": "https://www.dobleamarilla.com.ar/mas-alla-del-futbol/benjamin-fernandez-de-landa-hizo-historia-en-gimnasia-artistica-y-avanzo-la-final-del-all-arround_a6aef670c89823d14101d6ecc",
+            "href": "https://www.dobleamarilla.com.ar/mas-alla-del-futbol/benjamin-fernandez-de-landa-hizo-historia-en-gimnasia-artistica-y-avanzo-la-final-del-all-arround_a6aef670c89823d14101d6ecc"
+           },
+           {
+            "t": " (Nota)"
+           }
+          ]
+         },
+         {
+          "tipo": "texto",
+          "partes": [
+           {
+            "t": "Benjamín Fernández de Landa fue 13° en la clasificación con 74.097 (salto 13.833, suelo 12.966, barra fija 12.766, caballo con arcos 11.633, anillas 11.466 y paralelas 11.433) y "
+           },
+           {
+            "t": "CLASIFICÓ A LA FINAL DEL ALL-AROUND",
+            "b": true
+           },
+           {
+            "t": " (pasan los 18 mejores)"
+           }
+          ]
+         },
+         {
+          "tipo": "link",
+          "partes": [
+           {
+            "t": "https://www.gymart.org/en/youth-olympics/gymnasts/benjamin-nicolas-fernandez-de-landa",
+            "href": "https://www.gymart.org/en/youth-olympics/gymnasts/benjamin-nicolas-fernandez-de-landa"
+           },
+           {
+            "t": " (Resultados)"
+           }
+          ]
+         },
+         {
+          "tipo": "texto",
+          "partes": [
+           {
+            "t": "Por aparato en la clasificación fue 6° en suelo, 6° en salto y 8° en barra fija"
+           }
+          ]
+         },
+         {
+          "tipo": "texto",
+          "partes": [
+           {
+            "t": "Final del all-around el martes 10/11",
+            "b": true
+           },
+           {
+            "t": " (Creo)"
+           }
+          ]
+         },
+         {
+          "tipo": "espacio"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "nombre": "Wushu",
+      "dias": [
+       {
+        "dia": null,
+        "bloques": [
+         {
+          "tipo": "texto",
+          "partes": [
+           {
+            "t": "Ludmila Rosales fue 9° en Changquan Combinado Gunshu"
+           }
+          ]
+         },
+         {
+          "tipo": "texto",
+          "partes": [
+           {
+            "t": "En Gunshu sumó 7.690 (9° de 12). Completó el Changquan el lunes 2/11 y no pasó a la definición (Creo)"
+           }
+          ]
+         },
+         {
+          "tipo": "espacio"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "nombre": "Skate Street Masculino",
+      "dias": [
+       {
+        "dia": null,
+        "bloques": [
+         {
+          "tipo": "link",
+          "partes": [
+           {
+            "t": "https://radiorafaela.com.ar/deportes/argentina-llego-a-cuatro-medallas-en-dakar-2026-nuevo-podio-de-dieleke-y-toda-la-actividad-nacional",
+            "href": "https://radiorafaela.com.ar/deportes/argentina-llego-a-cuatro-medallas-en-dakar-2026-nuevo-podio-de-dieleke-y-toda-la-actividad-nacional"
+           },
+           {
+            "t": " (Agenda)"
+           }
+          ]
+         },
+         {
+          "tipo": "texto",
+          "partes": [
+           {
+            "t": "Joaquín Rodríguez Pusterla (14 años) fue 9° en la clasificación con 110.63 puntos y no pasó a la final. Oro para Julian Jeangagliardi con 149.37"
+           }
+          ]
+         },
+         {
+          "tipo": "espacio"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "nombre": "Básquet 3x3 Masculino",
+      "dias": [
+       {
+        "dia": null,
+        "bloques": [
+         {
+          "tipo": "link",
+          "partes": [
+           {
+            "t": "https://deportesanluis.com.ar/igor-debuta-en-los-juegos-olimpicos-de-la-juventud/",
+            "href": "https://deportesanluis.com.ar/igor-debuta-en-los-juegos-olimpicos-de-la-juventud/"
+           },
+           {
+            "t": " (Nota)"
+           }
+          ]
+         },
+         {
+          "tipo": "texto",
+          "partes": [
+           {
+            "t": "Thiago Montes Soria, Ezequiel Román Bargot, Igor Joloidovsky y Enzo Roth"
+           }
+          ]
+         },
+         {
+          "tipo": "link",
+          "partes": [
+           {
+            "t": "https://www.dobleamarilla.com.ar/mas-alla-del-futbol/el-basquet-3x3-comenzo-con-una-doble-victoria-su-participacion-en-dakar_a5fd8a239dd1c182a47a8771d",
+            "href": "https://www.dobleamarilla.com.ar/mas-alla-del-futbol/el-basquet-3x3-comenzo-con-una-doble-victoria-su-participacion-en-dakar_a5fd8a239dd1c182a47a8771d"
+           },
+           {
+            "t": " (Nota)"
+           }
+          ]
+         },
+         {
+          "tipo": "texto",
+          "partes": [
+           {
+            "t": "Debut con dos victorias: 17-14 vs Venezuela y 21-10 vs Mongolia (Enzo Roth fue la principal referencia ofensiva). "
+           },
+           {
+            "t": "CLASIFICÓ A 4TOS",
+            "b": true
+           }
+          ]
+         },
+         {
+          "tipo": "link",
+          "partes": [
+           {
+            "t": "https://marcapersonalweb.com.ar/2026/11/06/argentina-avanzo-invicta-a-cuartos-de-final-en-el-3x3-de-los-jj-oo-de-la-juventud-en-dakar/",
+            "href": "https://marcapersonalweb.com.ar/2026/11/06/argentina-avanzo-invicta-a-cuartos-de-final-en-el-3x3-de-los-jj-oo-de-la-juventud-en-dakar/"
+           },
+           {
+            "t": " (Nota)"
+           }
+          ]
+         },
+         {
+          "tipo": "texto",
+          "partes": [
+           {
+            "t": "Enzo Roth fue el goleador en los dos partidos (7 puntos vs Venezuela y 10 vs Mongolia). Los partidos por medallas son el lunes 9/11"
+           }
+          ]
+         },
+         {
+          "tipo": "link",
+          "partes": [
+           {
+            "t": "https://www.dobleamarilla.com.ar/mas-alla-del-futbol/la-seleccion-de-basquet-3x3-cayo-ante-lituania-y-se-quedo-sin-medallas_a6af0d637f6954438b9364c33",
+            "href": "https://www.dobleamarilla.com.ar/mas-alla-del-futbol/la-seleccion-de-basquet-3x3-cayo-ante-lituania-y-se-quedo-sin-medallas_a6af0d637f6954438b9364c33"
+           },
+           {
+            "t": " (Nota)"
+           }
+          ]
+         },
+         {
+          "tipo": "texto",
+          "partes": [
+           {
+            "t": "En 4tos perdió vs Lituania 21-19 en tiempo suplementario (Enzo Roth 11, Thiago Montes 4, Ezequiel Román 3 e Igor Joloidovsky 1) y quedó entre los 8 mejores"
+           }
+          ]
+         },
+         {
+          "tipo": "espacio"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "nombre": "Ciclismo de Ruta",
+      "dias": [
+       {
+        "dia": null,
+        "bloques": [
+         {
+          "tipo": "link",
+          "partes": [
+           {
+            "t": "https://www.dobleamarilla.com.ar/mas-alla-del-futbol/la-seleccion-de-basquet-3x3-cayo-ante-lituania-y-se-quedo-sin-medallas_a6af0d637f6954438b9364c33",
+            "href": "https://www.dobleamarilla.com.ar/mas-alla-del-futbol/la-seleccion-de-basquet-3x3-cayo-ante-lituania-y-se-quedo-sin-medallas_a6af0d637f6954438b9364c33"
+           },
+           {
+            "t": " (Nota)"
+           }
+          ]
+         },
+         {
+          "tipo": "texto",
+          "partes": [
+           {
+            "t": "Julia Lambert fue 32° en la prueba en ruta femenina con 1:42:06"
+           }
+          ]
+         },
+         {
+          "tipo": "sub",
+          "partes": [
+           {
+            "t": "Contrarreloj individual el martes 10/11",
+            "b": true
+           }
+          ]
+         },
+         {
+          "tipo": "espacio"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "nombre": "Atletismo",
+      "dias": [
+       {
+        "dia": null,
+        "bloques": [
+         {
+          "tipo": "link",
+          "partes": [
+           {
+            "t": "https://deportelauquen.com.ar/atletismo-lucida-actuacion-y-cuarto-puesto-en-los-3-mil-metros-para-zoe-gorski-en-juegos-olimpicos-de-la-juventud/",
+            "href": "https://deportelauquen.com.ar/atletismo-lucida-actuacion-y-cuarto-puesto-en-los-3-mil-metros-para-zoe-gorski-en-juegos-olimpicos-de-la-juventud/"
+           },
+           {
+            "t": " (Nota)"
+           }
+          ]
+         },
+         {
+          "tipo": "texto",
+          "partes": [
+           {
+            "t": "Zoe Gorski fue 4° en la final de los 3000m con 9:47.83. Oro para Faith Rono (KEN) con 9:15.47, plata para Yordanos Tsigab (ETH) con 9:15.71 y bronce para Keren Chelimo (UGA) con 9:32.41"
+           }
+          ]
+         },
+         {
+          "tipo": "sub",
+          "partes": [
+           {
+            "t": "Irene Pernía corre la final de los 1500m hoy martes 10/11 a las 14:15hs",
+            "b": true
+           }
+          ]
+         },
+         {
+          "tipo": "espacio"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "nombre": "Vela (Windsurf)",
+      "dias": [
+       {
+        "dia": null,
+        "bloques": [
+         {
+          "tipo": "texto",
+          "partes": [
+           {
+            "t": "Agustín Hoffmann fue 12°, 16° y 18° en las primeras 3 regatas y marcha 15° en la general. Sigue el lunes 9/11"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
    "publicado_en_doc": false
   },
   {
