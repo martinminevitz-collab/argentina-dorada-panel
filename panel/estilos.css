@@ -234,3 +234,21 @@ input[type=search], select { width: 100%; background: var(--tarjeta); color: var
 .medallas-total .total .dif { color: #ffb4a8; }
 .ayuda.alerta { color: var(--rojo); }
 .ayuda a { color: var(--celeste); }
+
+/* ---------- crear evento a mano ---------- */
+.barra-crear { display: flex; justify-content: flex-end; grid-column: 1 / -1; }
+.btn-crear { background: var(--texto); color: var(--fondo); border: 0; border-radius: 10px; padding: 8px 14px;
+  font-weight: 600; cursor: pointer; }
+.crear { grid-column: 1 / -1; background: var(--tarjeta); border: 1px solid var(--oro); border-radius: var(--radio);
+  padding: 14px 16px; display: grid; gap: 10px; }
+.crear h3 { margin: 0; font-family: "Barlow Condensed", system-ui, sans-serif; font-size: 20px; }
+.crear label { display: grid; gap: 4px; font-size: 13px; font-weight: 600; color: var(--texto-2); }
+.crear input, .crear textarea, .crear select { width: 100%; font: inherit; font-weight: 400; color: var(--texto);
+  background: var(--fondo); border: 1px solid var(--borde); border-radius: 8px; padding: 8px 10px; }
+.crear textarea { resize: vertical; }
+.crear .fila2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+@media (max-width: 420px) { .crear .fila2 { grid-template-columns: 1fr; } }
+.crear .pie { padding: 0; border: 0; }
+.crear .principal { background: var(--oro); border-color: var(--oro); color: #fff; }
+.chip.manual { background: var(--oro-fondo); color: var(--oro); }
+.pie .borrar { margin-left: auto; color: var(--rojo); border-color: var(--rojo-fondo); }

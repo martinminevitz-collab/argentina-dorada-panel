@@ -278,6 +278,11 @@ def leer_doc(html):
             if actual["bloques"] and actual["bloques"][-1]["tipo"] != "espacio":
                 actual["bloques"].append({"tipo": "espacio"})
             continue
+        # "Ref panel: 1a2b3c4d" = el agente pasó al Doc un evento cargado a mano en el panel (no se muestra)
+        m = re.match(r"^ref\.?\s*panel\s*:\s*([a-f0-9]{6,})", texto, re.I)
+        if m:
+            actual.setdefault("refs_panel", []).append(m.group(1).lower())
+            continue
         if any(p.get("href") for p in partes) and texto.startswith("http"):
             tipo = "link"
         elif all(p.get("b") for p in partes if p["t"].strip()):

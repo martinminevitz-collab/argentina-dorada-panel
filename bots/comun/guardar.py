@@ -16,7 +16,7 @@ HALLAZGOS = DATA / "hallazgos"
 AR = timezone(timedelta(hours=-3))
 
 DIAS_QUE_SE_RECUERDAN = 60   # después de esto, una noticia vieja puede volver a aparecer
-DIAS_EN_INDICE = 30          # cuántos días muestra el panel
+DIAS_RADAR = 15              # las noticias del Radar se borran solas después de esto (decisión de Martín)
 
 
 def ahora():
@@ -61,8 +61,20 @@ def sumar_hallazgos(nuevos):
     return ruta
 
 
+def borrar_viejos():
+    """Borra los días del Radar con más de DIAS_RADAR días (y las carpetas que queden vacías)."""
+    limite = (ahora() - timedelta(days=DIAS_RADAR)).strftime("%Y-%m-%d")
+    for a in HALLAZGOS.glob("*/*/*.json"):
+        if a.stem < limite:
+            a.unlink()
+    for carpeta in sorted(HALLAZGOS.glob("*/*"), reverse=True) + sorted(HALLAZGOS.glob("*")):
+        if carpeta.is_dir() and not any(carpeta.iterdir()):
+            carpeta.rmdir()
+
+
 def actualizar_indice():
-    archivos = sorted(HALLAZGOS.glob("*/*/*.json"), reverse=True)[:DIAS_EN_INDICE]
+    borrar_viejos()
+    archivos = sorted(HALLAZGOS.glob("*/*/*.json"), reverse=True)
     dias = []
     for a in archivos:
         items = leer(a, [])

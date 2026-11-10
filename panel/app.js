@@ -41,15 +41,18 @@ async function bajarJSON(ruta) {
 async function cargar() {
   $("#recargar").classList.add("girando");
   try {
-    const [doc, corrida, indice, medalleros] = await Promise.all([
+    const [doc, corrida, indice, medalleros, manuales] = await Promise.all([
       bajarJSON("doc-resultados.json").catch(() => null),
       bajarJSON("ultima-corrida.json").catch(() => ({})),
       bajarJSON("indice.json").catch(() => ({ dias: [] })),
       bajarJSON("medalleros.json").catch(() => ({})),
+      bajarJSON("eventos-manuales.json").catch(() => ({ pendientes: [] })),
     ]);
+    estado.manualesBot = manuales.pendientes || [];
     estado.medalleros = medalleros;
     estado.doc = doc; estado.corrida = corrida;
-    estado.eventos = doc?.eventos || [];
+    estado.docEventos = doc?.eventos || [];
+    combinar();
     const dias = Number($("#rango").value);
     const listas = await Promise.all(indice.dias.slice(0, dias).map((d) => bajarJSON(d.archivo).catch(() => [])));
     estado.noticias = listas.flat();
@@ -85,6 +88,101 @@ function llenarDeportes() {
   const deportes = [...new Set(fuente.filter(Boolean))].sort((a, b) => a.localeCompare(b, "es"));
   sel.innerHTML = `<option value="">Todos los deportes</option>` + deportes.map((d) => `<option>${escapar(d)}</option>`).join("");
   sel.value = deportes.includes(actual) ? actual : "";
+}
+
+// ---------- eventos cargados a mano ("+ Crear evento") ----------
+// Viven en la base compartida. Si no estás logueado, se ven igual con la copia que guarda el bot.
+// Cuando el agente los pasa al Doc (línea "Ref panel: xxxxxxxx"), el del panel desaparece y queda el del Doc.
+function refDe(fila) { return fila.ref || String(fila.id).replace(/-/g, "").slice(0, 8); }
+
+function partesConNegrita(linea) {
+  return linea.split(/\*\*/).map((t, i) => (i % 2 ? { t, b: true } : { t })).filter((p) => p.t);
+}
+
+function aEvento(f) {
+  const bloques = [];
+  if (f.link) bloques.push({ tipo: "link", partes: [{ t: f.link, href: f.link }, { t: " (Fuente)" }] });
+  for (const linea of String(f.detalle || "").split("\n")) {
+    const l = linea.trim();
+    if (!l) { if (bloques.length && bloques.at(-1).tipo !== "espacio") bloques.push({ tipo: "espacio" }); continue; }
+    bloques.push({ tipo: /^\*\*[^*]+\*\*:?$/.test(l) ? "sub" : "texto", partes: partesConNegrita(l) });
+  }
+  const ref = refDe(f);
+  return { id: "manual:" + ref, ref, idBase: f.id && f.id.includes("-") ? f.id : null, manual: true,
+    titulo: f.titulo, evento: f.titulo, deporte: f.deporte || "", seccion: f.seccion,
+    etiqueta: f.seccion === "agenda" ? "agenda" : (f.estado || "en_curso"),
+    fechas: [f.fechas, f.lugar].filter(Boolean).join(" · "), bloques, version: huella(JSON.stringify(f)) };
+}
+
+function combinar() {
+  const doc = estado.docEventos || [];
+  const refs = new Set(doc.flatMap((e) => e.refs_panel || []));
+  const filas = estado.manualesBase ?? estado.manualesBot ?? [];
+  const manuales = filas.map(aEvento).filter((m) => !refs.has(m.ref));
+  estado.eventos = [...manuales, ...doc];
+}
+
+function formCrear() {
+  if (estado.formEl) return estado.formEl;
+  const f = document.createElement("form");
+  f.className = "crear";
+  f.innerHTML = `
+    <h3>Crear evento</h3>
+    <label>¿Qué es?<select name="estado">
+      <option value="publicable">Resultado terminado (listo para publicar)</option>
+      <option value="en_curso">Resultado en curso</option>
+      <option value="mas_info">Resultado, falta info</option>
+      <option value="agenda">Agenda (evento que viene)</option></select></label>
+    <label>Deporte<input name="deporte" list="lista-deportes" placeholder="Ej: Judo" maxlength="60"></label>
+    <label>Evento *<input name="titulo" required minlength="3" maxlength="200" placeholder="Ej: Panamericano de Judo en Lima, Perú"></label>
+    <div class="fila2">
+      <label>Fechas<input name="fechas" placeholder="Ej: 12 al 15/11" maxlength="60"></label>
+      <label>Lugar<input name="lugar" placeholder="Ej: CeNARD, CABA" maxlength="120"></label>
+    </div>
+    <label>Qué pasó / detalle<textarea name="detalle" rows="5" maxlength="5000" placeholder="Una línea por resultado. Para negrita: **BRONCE**"></textarea></label>
+    <label>Link de la fuente<input name="link" type="url" placeholder="https://…"></label>
+    <p class="ayuda">Queda en el panel al toque. En la próxima vuelta el agente lo pasa al Doc y le sigue el rastro.</p>
+    <div class="pie"><button type="submit" class="principal">Guardar</button><button type="button" class="cancelar">Cancelar</button></div>
+    <datalist id="lista-deportes"></datalist>`;
+  f.querySelector(".cancelar").onclick = () => { estado.creando = false; f.reset(); dibujar(); };
+  f.onsubmit = async (ev) => {
+    ev.preventDefault();
+    const d = Object.fromEntries(new FormData(f));
+    for (const k in d) d[k] = d[k].trim() || null;
+    const fila = { ...d, seccion: d.estado === "agenda" ? "agenda" : "resultados" };
+    const b = f.querySelector("[type=submit]"); b.disabled = true;
+    try {
+      await Base.crearManual(fila);
+      estado.creando = false; f.reset();
+      estado.tab = fila.seccion; llenarDeportes(); dibujar();
+      avisar("Evento creado");
+    } catch (err) {
+      avisar(/does not exist|schema cache/.test(err.message || "") ? "Falta activar esto en la base (avisale a Martín)" : "No se pudo guardar. Probá de nuevo");
+    } finally { b.disabled = false; }
+  };
+  return (estado.formEl = f);
+}
+
+function barraCrear(lista) {
+  const barra = document.createElement("div");
+  barra.className = "barra-crear";
+  if (!estado.creando) {
+    const b = boton("+ Crear evento", () => {
+      if (!window.Base?.activa()) return avisar("Entrá con tu mail (arriba a la izquierda) para crear eventos");
+      estado.creando = true; dibujar();
+      const f = estado.formEl;
+      f.querySelector("[name=estado]").value = estado.tab === "agenda" ? "agenda" : "publicable";
+      f.querySelector("[name=titulo]").focus();
+    });
+    b.className = "btn-crear";
+    barra.append(b);
+    lista.append(barra);
+    return;
+  }
+  const f = formCrear();
+  const deps = [...new Set(estado.eventos.map((e) => e.deporte).filter(Boolean))].sort((a, b) => a.localeCompare(b, "es"));
+  f.querySelector("#lista-deportes").innerHTML = deps.map((d) => `<option value="${escapar(d)}">`).join("");
+  lista.append(f);
 }
 
 // ---------- filtros ----------
@@ -165,8 +263,9 @@ function dibujar() {
   if (esMulti) return dibujarMulti(lista);
 
   const eventos = eventosDe(estado.tab);
-  if (!estado.doc) { lista.innerHTML = `<p class="vacio">Todavía no se leyó el Doc. Se carga solo en la próxima vuelta del bot.</p>`; return; }
-  if (!eventos.length) { lista.innerHTML = `<p class="vacio">Nada por acá. Probá con "Todos" o tildá "Mostrar los que ya publiqué".</p>`; return; }
+  barraCrear(lista);
+  if (!estado.doc && !eventos.length) { lista.insertAdjacentHTML("beforeend", `<p class="vacio">Todavía no se leyó el Doc. Se carga solo en la próxima vuelta del bot.</p>`); return; }
+  if (!eventos.length) { lista.insertAdjacentHTML("beforeend", `<p class="vacio">Nada por acá. Probá con "Todos" o tildá "Mostrar los que ya publiqué".</p>`); return; }
   const tpl = $("#tpl-evento");
   for (const e of eventos) lista.append(tarjetaEvento(e, tpl));
 }
@@ -194,6 +293,19 @@ function tarjetaEvento(e, tpl) {
   if (e.seccion === "agenda") { t.querySelector(".publicado").remove(); t.querySelector(".novedad").hidden = true; }
   else configurarPublicado(t.querySelector(".publicado"), t, e);
   t.querySelector(".copiar").onclick = () => copiarEvento(e);
+  if (e.manual) {
+    const chip = document.createElement("span"); chip.className = "chip manual"; chip.textContent = "✍️ A mano";
+    chip.title = "Lo cargó alguien desde el panel. Cuando el agente lo pase al Doc, queda el del Doc.";
+    t.querySelector(".chips").append(chip);
+    if (window.Base?.activa() && e.idBase) {
+      const borrar = boton("Borrar", async () => {
+        if (borrar.dataset.ok !== "1") { borrar.dataset.ok = "1"; borrar.textContent = "¿Seguro? Tocá de nuevo"; return; }
+        try { await Base.borrarManual(e.idBase); avisar("Borrado"); } catch { avisar("No se pudo borrar"); }
+      });
+      borrar.className = "borrar";
+      t.querySelector(".pie").append(borrar);
+    }
+  }
   return t;
 }
 
@@ -745,5 +857,6 @@ if ("serviceWorker" in navigator) {
 }
 // la base compartida avisa cuando cambian los publicados (de este u otro dispositivo)
 window.alCambiarPublicados = (mapa) => { estado.publicados = mapa ?? leerPublicados(); dibujar(); };
+window.alCambiarManuales = (filas) => { estado.manualesBase = filas; combinar(); llenarDeportes(); dibujar(); };
 window.Base?.iniciar();
 cargar();
