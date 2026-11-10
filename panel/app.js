@@ -693,7 +693,12 @@ $("#rango").addEventListener("change", cargar);
 $("#recargar").onclick = cargar;
 document.addEventListener("visibilitychange", () => { if (!document.hidden) cargar(); });
 
-if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(() => {});
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("sw.js", { updateViaCache: "none" }).then((r) => r.update()).catch(() => {});
+  // cuando se instala una versión nueva del panel, se recarga sola una vez
+  let recargado = false;
+  navigator.serviceWorker.addEventListener("controllerchange", () => { if (!recargado) { recargado = true; location.reload(); } });
+}
 // la base compartida avisa cuando cambian los publicados (de este u otro dispositivo)
 window.alCambiarPublicados = (mapa) => { estado.publicados = mapa ?? leerPublicados(); dibujar(); };
 window.Base?.iniciar();
