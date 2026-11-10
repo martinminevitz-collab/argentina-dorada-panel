@@ -1,5 +1,57 @@
 [
  {
+  "id": "3fdacebb7ced",
+  "titulo": "Anyelo Cisneros pisa fuerte en Argentina",
+  "resumen": "Anyelo Cisneros pisa fuerte en Argentina Líder en deportes",
+  "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxON050c0NqZmtaVTBvTHRBQ1FfcGh1ajJpQ3IxczJRSkNQS0VmWVhseW9ja3JXSHg0QWNuMS11X2llQlJDemN4TVE0dGpLcVRza0VMVUxXQ1BldER6SWJyN2FXM3JzWU0wNFdYZWFxZWFaQl85dnFjMHdST29kRXEwUnJpQWREZlVYbzJJTV8xZWEtTEoyTV9wOFdpa0RsMWdPcnQ4RUwzd2dLSURLRk5IRw?oc=5",
+  "fuente": "Líder en deportes",
+  "deporte": "Esgrima",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-10T01:06+00:00",
+  "encontrado": "2026-11-09T22:23-03:00",
+  "bot": "resultados"
+ },
+ {
+  "id": "3b166b6fa2b3",
+  "titulo": "Un joven de Malargüe hizo historia: Miguel Fernández se consagró campeón argentino profesional de kickboxing",
+  "resumen": "Un joven de Malargüe hizo historia: Miguel Fernández se consagró campeón argentino profesional de kickboxing La Ventana San Rafael",
+  "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQVFBlUEZjNmc0cXBKSlR4anlyYjgzYWt0bTVqRENPbVRMS2hKNVdTZ0F2VVJGd0lBcVl2eHhnaXhXc2xPUWhnY2tnYlhtTDNiZHZmaHg1T1NfS3VzTjE2SWxfZTA2V1U4TmdSRkpfUXlDNG1OY3k2WmdfVldkWllQNURfU3hRNVFOUmFtMFUxc20wSW10cl8xay1qcjBoTTlNUVBpS2QxVHY1UjJCQmtZVTFZeVBNUjVOOGlSVlJvejV5TGRnM2tCN0U3TlNhbnZHNHlfc1Rrbjk5UQ?oc=5",
+  "fuente": "La Ventana San Rafael",
+  "deporte": "Muaythai",
+  "tipo": "resultado",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-10T00:36+00:00",
+  "encontrado": "2026-11-09T22:24-03:00",
+  "bot": "resultados"
+ },
+ {
+  "id": "5654d187d219",
+  "titulo": "Los Pumas, el Nations Championship y Argentina XV: el análisis de CORDOBAXV Streaming",
+  "resumen": "Los Pumas, el Nations Championship y Argentina XV: el análisis de CORDOBAXV Streaming Cordoba XV",
+  "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQMTYwdXpHeERIbzhnQWpCY1BOYkV0SlJ0T2hxYXlTekJiQjgwb3lCRnhCdUF0alJnZGFkeGhxdXk1U3VzNUFHQUtIREJtSnR4R18wTUdfSEdYb1R6SVRoa1RjeWxkRUttc3J0WW1SdkZ5emVMbzBvUlJ3ZzlhZS0xV0xwY2szM1BpQ3c3aDFuWGplOEFpUVRldXZaUWd0bFkyUlB1amRQd2wzV3djQXc?oc=5",
+  "fuente": "Cordoba XV",
+  "deporte": "Rugby",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-09T23:42+00:00",
+  "encontrado": "2026-11-09T22:25-03:00",
+  "bot": "resultados"
+ },
+ {
+  "id": "e2c5db03598d",
+  "titulo": "Tiene 15 años, fue convocada a la Selección Argentina y llevará a Madryn a un Mundial",
+  "resumen": "Tiene 15 años, fue convocada a la Selección Argentina y llevará a Madryn a un Mundial LA17",
+  "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNQW55VXRZZDRENnFrdlVtamdEOGxXczg1RmFaTEphZzF2bDBpT2JTLTZPLXQ1TmZyNE0zM1Y3d0dPYjhpVUJqNkJlTmFHS0R4cEdtV1RIRFhnUkRNWFhRVWRkZjZ6S2ktMW8wXzJWZFlmRUZ2Y0pzX0lYTC1MVWpiT3BWZHRsQmNudHdvYjE2YXZ2V1dJWlRDcUJ1YjJ6VmM1ZHJtaTRvVktFdHZjdDVSZ2RYSEM?oc=5",
+  "fuente": "LA17",
+  "deporte": "Aguas abiertas",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-09T23:36+00:00",
+  "encontrado": "2026-11-09T22:22-03:00",
+  "bot": "resultados"
+ },
+ {
   "id": "c7a2fc232006",
   "titulo": "La Selección Argentina inicia las prácticas en Ezeiza para medirse ante Uruguay en La Bombonera",
   "resumen": "La Selección Argentina inicia las prácticas en Ezeiza para medirse ante Uruguay en La Bombonera El Litoral",
@@ -10,6 +62,19 @@
   "en_buenos_aires": false,
   "publicado": "2026-11-09T23:27+00:00",
   "encontrado": "2026-11-09T20:34-03:00",
+  "bot": "resultados"
+ },
+ {
+  "id": "4794fe3f4507",
+  "titulo": "Dia, con alas en Bolsa tras la venta del negocio en Argentina",
+  "resumen": "Dia, con alas en Bolsa tras la venta del negocio en Argentina Expansión",
+  "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNcE9BUW5CVHZmTjlyZXZtcWlGQXp1dVItT2hxYllVakdjOVVsTzN1R1UyY1dUVkU1REtObXZ3RWpleE5RUTFJb3ZfUUd3TnpLVTBfNHlIcDh0V1R2VXZfVHdZOENDSl9VSENneENRQ2pRMzU4RTNsdVhnd1JNZVFuWFRocTM3YlRVWHlBSF9WNFVuUHfSAZMBQVVfeXFMTXBPQVFuQlR2Zk45cmV2bXFpRkF6dXVSLU9ocWJZVWpHYzlVbE8zdUdVMmNXVFZFNURLTm12d0VqZXhOUVExSW92X1FHd056S1UwXzR5SHA4dFdUdlV2X1R3WThDQ0pfVUhDZ3hDUUNqUTM1OEUzbHVYZ3dSTWVRblhUaHEzN2JUVVh5QUhfVjRVblB3?oc=5",
+  "fuente": "Expansión",
+  "deporte": "Escalada",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-09T23:21+00:00",
+  "encontrado": "2026-11-09T22:23-03:00",
   "bot": "resultados"
  },
  {
@@ -286,6 +351,19 @@
   "bot": "resultados"
  },
  {
+  "id": "3a5eb2ddd6a2",
+  "titulo": "Furor por Franco Colapinto: Alpine publicó el video de su encuentro con los fanáticos argentinos tras el GP de Brasil",
+  "resumen": "Furor por Franco Colapinto: Alpine publicó el video de su encuentro con los fanáticos argentinos tras el GP de Brasil TN",
+  "link": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxOeUZPenNqTFFuYjdtOFhkR2dULU5yMHdqc3FvNjVPTWJhdXdJZ2JQLXU1RG81bHJRWmZUT1MxYXJLOUdiWU1jeEhSRF9FVTRzLTlrSGNwWVNBbGVYeWxFTVpUb0lnTFBDckhMWDBCX1loV3gwMHJ3WU1sTWpZbUkzMnVyaEp3UFpZMVEzek90TlBzbTdqc3E5bGlTbmRkM3lKTWg1ODNrM3dhZjc3YTdnWi0xdDZPTEtDeHhjOHUtX1pVNkRCVkFqOWkzaXJpMkJKdGEyZTNPTzBBSWt3d0psUlJPRTBPUlhKRHR2T0tvdXJFeVNmVUJyZ9IBjAJBVV95cUxNb05taXY1OFJ0VEF4Zy1COUdPcmZKaU5GNXFOVHN5OGx0OTdfcG1HemFzTnFCdXkxY2xhQXRkRVN0VndRRHBCNi1MNFBaOGh1bWNFWVI5TFl1Z3ZBNGtoQzlfVC1oTVotMi1KZi00aTVJWTVCTnpsY2R3cnppMVI2U2s0bjNWb0VIWFJuQTkwX2wxOUJPZ0VqMEc4VE5iS0xPbjVnMU5weXlzOXA1djZlLWtXWUhxSXNzMkZLcFZ1YllldUtLM1RiSWVKWEZ5VnBJLTNDV2hqRDA5bENwX1p4NjRHUVJuc3Z6My10Y1NkZ1VPVVJMc3BfTmF1YUt5M1JPcUdCMXp5NXJtenhz?oc=5",
+  "fuente": "TN",
+  "deporte": "Formula 1",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-09T21:10+00:00",
+  "encontrado": "2026-11-09T22:23-03:00",
+  "bot": "resultados"
+ },
+ {
   "id": "6ea894ad6c68",
   "titulo": "Uruguay en la previa del amistoso con Argentina: \"Perdieron al mejor del mundo\" :: Olé - ole.com.ar",
   "resumen": "Uruguay en la previa del amistoso con Argentina: \"Perdieron al mejor del mundo\" :: Olé - ole.com.ar Olé",
@@ -351,6 +429,19 @@
   "bot": "resultados"
  },
  {
+  "id": "67aed1bdb7f1",
+  "titulo": "Volkswagen lanzó el nuevo Golf GTI en Argentina",
+  "resumen": "Volkswagen lanzó el nuevo Golf GTI en Argentina www.megautos.com",
+  "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9IeVR6YkJ6ZnViYVlqcHBCZ3lPcTdEeDZpS1lhM2F5Z3d0dHZ4OVJsNjg1anAwUkZSUEotY3c0cE8tS1RvOU9LbXhCQVd4SmdOb0pDRWlmNlJHVVh5S3g1V0JkdzF3RGI2SUhMby12N010WVB1bTRz?oc=5",
+  "fuente": "www.megautos.com",
+  "deporte": "Golf",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-09T20:15+00:00",
+  "encontrado": "2026-11-09T22:23-03:00",
+  "bot": "resultados"
+ },
+ {
   "id": "e50ebba89049",
   "titulo": "Etcheverry evitó una dura derrota y aseguró un tenista argentino en los cuartos de final de Estocolmo",
   "resumen": "Etcheverry evitó una dura derrota y aseguró un tenista argentino en los cuartos de final de Estocolmo ESPN Argentina",
@@ -374,6 +465,19 @@
   "en_buenos_aires": false,
   "publicado": "2026-11-09T19:38+00:00",
   "encontrado": "2026-11-09T20:33-03:00",
+  "bot": "resultados"
+ },
+ {
+  "id": "8c78de4f9c86",
+  "titulo": "Colapinto tuvo la peor largada de la temporada, pero Alpine tomó todas malas decisiones y lo terminó condic...",
+  "resumen": "Colapinto tuvo la peor largada de la temporada, pero Alpine tomó todas malas decisiones y lo terminó condic... Bolavip Argentina",
+  "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQQnlSdlcyOHBpeXhweGpFOWF4d29rUTM5Y0xvMGF4TlpCVWwyVERvb2pRYUR3TE9TWW5STGJhMlkwQ0NkakVSNVBycjBrSXREY1pYc3NMMkNfQmhWWXdWd01lVHpfVWlBNEVBM3FHVnU2czBNS0NoQkVMZkNQSG82ZDlUWEtGeEFHQkc0eF9LMnVaZ2dTb2xCUGZHb0NoSGxZb25qVzI1X05yQUN6dFU1bjJQeXl1S2drS2htNEJzYlhWZ1lucTlJWE9hcXlGcG0wZzhYTDQtenhMYWo0MG1R0gHkAUFVX3lxTE1tcmVsbVZFMkY5NktsQ2c0T282R0NyM0xoMmFyQk1veVhZQ0k2VmhWQ05jRk1lb0EwY2ctZEE0ZEFFbUhDRTdpX3ZvS3lXb3lreDN1WVhland2OU02QlBESUZEQUdQeDlTVHpJaFdKblQxU1RJRGthLWhtY1lyTVdtWGhEakREeUVEZm83WnliVnBQN0tieHZxaTJpVGp4ZUVKckh3dU9sQllQdzFnTTJFbWVMTjNkWWlQbVBkMWgwVncwMGQwQ1NZMS1xVXRlS001OHFfQnBiN2NNMWVkeDRrRVlzdA?oc=5",
+  "fuente": "Bolavip Argentina",
+  "deporte": "Formula 1",
+  "tipo": "resultado",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-09T19:16+00:00",
+  "encontrado": "2026-11-09T22:23-03:00",
   "bot": "resultados"
  },
  {
@@ -413,6 +517,19 @@
   "en_buenos_aires": false,
   "publicado": "2026-11-09T18:48+00:00",
   "encontrado": "2026-11-09T20:34-03:00",
+  "bot": "resultados"
+ },
+ {
+  "id": "65d5f17114de",
+  "titulo": "La Fundación Rewilding Argentina emitió un comunicado tras la muerte de un yaguareté en Corrientes",
+  "resumen": "La Fundación Rewilding Argentina emitió un comunicado tras la muerte de un yaguareté en Corrientes Corrientes Hoy",
+  "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNT2JLNmtuOXRTcjJFTXZIQW5wWDlJSmgxc3ZLWU5yZG1WeDlWTk53QURxSG14R19VSWEycTlIZVM0VmZlWlpaWXFQR190a2FaT0FucHlPNEtaWjduOG5SSEZvMWZDeTlhbDN5dUlzVlZIOXNiejhvSnRtQUlLQk9kYk5SaXU1MUV2RkY1YnFpT0dTQmdLcUYyQjVucVoxUVBHNnhYV1A0S0ViS0VfTVJqTkF2YkkzY3hCR3E3cUxIOWJQQ0h6UDItSHRfU2pkcnowdUVLTHRKMDQydEM0OGc?oc=5",
+  "fuente": "Corrientes Hoy",
+  "deporte": "Rugby y Rugby 7s",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-09T18:31+00:00",
+  "encontrado": "2026-11-09T22:25-03:00",
   "bot": "resultados"
  },
  {
@@ -520,6 +637,19 @@
   "bot": "resultados"
  },
  {
+  "id": "4ca172855afd",
+  "titulo": "Central Argentino y Unión Lugones, de la llave de los catamarqueños, empataron en la ida",
+  "resumen": "Central Argentino y Unión Lugones, de la llave de los catamarqueños, empataron en la ida Revista Botineros",
+  "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOTl9kaDYwZEdvR0FwTjYtY0F2RW5yUE4tRXVKa3hMVjliM0FjR1ZqRmY5a1NpaTJhX2ZzLWlQd09jZ1g0NU9UdW1INkt1Ri1qSWRCWU5CWFZsTVQ2ajZPc1VZM2FRdTFmR1pIZG90RkFIbjJnLWlWM1BSdmYyNWFJN1phMmtYaXJDanlQWWpSNmU0eTV6WnpIUE5LNWZNU3VNaFhnYTlrVXRuVExHZXVvRTZ1Nzc3UFZLNUh4SS03VERCMmlrQkNOQnVIbTA?oc=5",
+  "fuente": "Revista Botineros",
+  "deporte": "Handball",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-09T17:22+00:00",
+  "encontrado": "2026-11-09T22:24-03:00",
+  "bot": "resultados"
+ },
+ {
   "id": "e2d9d7141e32",
   "titulo": "Kiki Ramos le cierra la puerta a Argentina y elige Haití",
   "resumen": "Kiki Ramos le cierra la puerta a Argentina y elige Haití Diario AS",
@@ -595,6 +725,32 @@
   "en_buenos_aires": false,
   "publicado": "2026-11-09T16:26+00:00",
   "encontrado": "2026-11-09T20:33-03:00",
+  "bot": "resultados"
+ },
+ {
+  "id": "3a7bab757576",
+  "titulo": "Así es el Volkswagen Tempest que llegará en 2027 a la Argentina",
+  "resumen": "Así es el Volkswagen Tempest que llegará en 2027 a la Argentina AUTOWEB Argentina",
+  "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNTUdMSXJZcVRGSGxMTXN6X0tSZV91V1hpRENLS04wZVJkYWgxakY0T05JNE5pc1NjS0ZFdDhWU0pCT1dCQmJURV9wbGZvaU0taW5zRnEtcXQ1b2ZRb2RhQXFZbWJlUFR5QVJLVjFzYXVCRFpGcWFqWDNwbkktdDMwbS1vMmp1c01TcHRqaDFNSk9oUEZmRlZmaFM4dV9TZmxseFdtXw?oc=5",
+  "fuente": "AUTOWEB Argentina",
+  "deporte": "Golf",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-09T16:15+00:00",
+  "encontrado": "2026-11-09T22:23-03:00",
+  "bot": "resultados"
+ },
+ {
+  "id": "5fe961d2af6b",
+  "titulo": "¿Le dijo 'No' a Argentina?: Stephen 'Kiki' Ramos decidió representar a Haití",
+  "resumen": "¿Le dijo 'No' a Argentina?: Stephen 'Kiki' Ramos decidió representar a Haití América TV",
+  "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPaFhqWnlUX2RYbUt5UVBNcHRKT1hBZzRqeGgxVFp0eDc0TjdpRFNVbDk5cVhxd05LY2ctRUVwVEFTTXEtWkxWaE4wN0xZRTE2aXAtdERBYVRlX2hkamlVQUtsZU5kOGpaVzZ1em5zUFNNcXdtWFI2TF9ac2tLRktHYWZkRDkzR2VLXzM3YzFZSjBsY05mcERkYW00c19XSm9KSVpEalZ5QlhMYWF5ZjBobzg1Z2lkM3NrVjlnQlJJR3BVZzlT?oc=5",
+  "fuente": "América TV",
+  "deporte": "Futbol",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-09T16:02+00:00",
+  "encontrado": "2026-11-09T22:23-03:00",
   "bot": "resultados"
  },
  {
@@ -728,6 +884,19 @@
   "bot": "resultados"
  },
  {
+  "id": "fb490337467e",
+  "titulo": "Boxing News: Resultados desde Puerto Madero, Argentina » November 9, 2026",
+  "resumen": "Boxing News: Resultados desde Puerto Madero, Argentina » November 9, 2026 FightNews",
+  "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9pUi1aODdaODhHM2hZUUhqek5iYTJjci1XcS1vUktSLWl3M1VrU0lHUUJYODdqMm5NOEFldHBMdTN1Z2R1c0pVd2xwRWJ2UmhlUWpqOG91d0ZzRjFqd295VVFfUzFZaEFzem5FTE5jZEF6Mllralp6ZQ?oc=5",
+  "fuente": "FightNews",
+  "deporte": "Boxeo",
+  "tipo": "resultado",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-09T14:32+00:00",
+  "encontrado": "2026-11-09T22:22-03:00",
+  "bot": "resultados"
+ },
+ {
   "id": "c2d5f6e5f7bb",
   "titulo": "Carlos Della Penna obtuvo la medalla de oro en la Final Regional de Tiro con Arco",
   "resumen": "Carlos Della Penna obtuvo la medalla de oro en la Final Regional de Tiro con Arco Diario El Argentino",
@@ -738,6 +907,19 @@
   "en_buenos_aires": false,
   "publicado": "2026-11-09T14:02+00:00",
   "encontrado": "2026-11-09T20:33-03:00",
+  "bot": "resultados"
+ },
+ {
+  "id": "2ad60ea25663",
+  "titulo": "Agustín Tosco: el marxista que no fue etiqueta",
+  "resumen": "Agustín Tosco: el marxista que no fue etiqueta Indymedia Argentina",
+  "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPSnk5MmxzSUxPWWRmLWNpd0NmMjZucFFoeDVsREhhUU5hb1EzMUxpd1hEY1pBT2dJdnpFQ1ZGRGphRmloNko5aEJ4U00tQU1USGp1MC02NTNlY2dpVmQzSndfQlhFS1kyY2NWalVlOTVNNktJQm1OYjNpUHRiN3FicW1GaVBOSWM5LWxMNjFxWkFTUnhOa0ItejVlMUlsN1ZCTU5oVS0zenNtR3RDaUZwNTdWRlFnd2ltTms4?oc=5",
+  "fuente": "Indymedia Argentina",
+  "deporte": "Lucha",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-09T13:48+00:00",
+  "encontrado": "2026-11-09T22:24-03:00",
   "bot": "resultados"
  },
  {
@@ -790,6 +972,19 @@
   "en_buenos_aires": false,
   "publicado": "2026-11-09T13:20+00:00",
   "encontrado": "2026-11-09T20:35-03:00",
+  "bot": "resultados"
+ },
+ {
+  "id": "1150ed367483",
+  "titulo": "Casi queda cuadripléjica tras un accidente y ahora lucha por recuperar a su hijo",
+  "resumen": "Casi queda cuadripléjica tras un accidente y ahora lucha por recuperar a su hijo Diario El Argentino",
+  "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNUExLNC1qZlBqSUxmYTBkWTBkb1QzRTAxSVVpUno5bHlpOHBadHI4WDRBVkZfU19PMkE2ZnF3Unc5NXpUcElOdkRmYjlucDlxWEQ5Vk1zXzIxd21sampfVHY1aDF4TG9rTGpHOWxpWU9BNVdzSG5hUzFrY0Y0ZHNabVVFbGM2YVgzYV9LMlFBOXEzVUM4ZTJyNXdmanpDY1JnZDh3cEhsWVdwc3NqRmNYQTVCdEdDZmVjMVNDNXhzYnfSAboBQVVfeXFMTzdpU0pCX0w3aFBoYmYtRVI3ZGJEN1E3azgzNUx0d1ZuUDhEN1VRWnRSN3N5T2N3OG9BZUhWOXFoQ2MyWGg2TXlsang3VlpMSmhwM05qcFNNdjhpU2J3dllIRkVHNEFNRmQzZHpiWE9nM0dvc2FjaENCQjdxUlJYUXk5YzlwenR3Z2NtZ1k2WUlTMXA4VVBkRktGbThKTUcxYXBvU3pqVlJ1cW5xOWcwY0h0U2VvaVItTFpR?oc=5",
+  "fuente": "Diario El Argentino",
+  "deporte": "Lucha",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-09T13:14+00:00",
+  "encontrado": "2026-11-09T22:24-03:00",
   "bot": "resultados"
  },
  {
@@ -884,6 +1079,19 @@
   "bot": "resultados"
  },
  {
+  "id": "0704ebaef7ce",
+  "titulo": "El Primer Carrusel Argentino cumple 83 años, este miércoles 11-11 / Recordamos los festejos de 75 años",
+  "resumen": "El Primer Carrusel Argentino cumple 83 años, este miércoles 11-11 / Recordamos los festejos de 75 años Ayacucho al Día",
+  "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOMDRPZkMxLU50ZVVsQWl2a3pGUVRpMlZ6aVVaZUszNTd2T1g5S0FYWkNPRi1RNGZibE1ZcFZxajRYaUtwbkw3OFJMeVpKOWRsS2VVUzRGWEhRME8zSWVERGMtY0tYR19sT2FPQmtCTFh2Vzk4eXlrX1ZkOVozS3VYRzhsZ0w2NzZaYkhnT3NqX2VVSEdRT21VWkxlWUstRWdQTzl3ZVJSc2g0SU9LY3FDSU9DSXlHX0xxUWJnSnhjYVk2UXR1YkVUeA?oc=5",
+  "fuente": "Ayacucho al Día",
+  "deporte": "Hockey",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-09T12:01+00:00",
+  "encontrado": "2026-11-09T22:24-03:00",
+  "bot": "resultados"
+ },
+ {
   "id": "920e508919e9",
   "titulo": "David Bisbal en Argentina",
   "resumen": "David Bisbal en Argentina Indie Hoy",
@@ -894,6 +1102,32 @@
   "en_buenos_aires": false,
   "publicado": "2026-11-09T12:00+00:00",
   "encontrado": "2026-11-09T20:33-03:00",
+  "bot": "resultados"
+ },
+ {
+  "id": "0a7a5f3e7f52",
+  "titulo": "Volkswagen se sumará a los electrificados y no descarta importar modelos desde China",
+  "resumen": "Volkswagen se sumará a los electrificados y no descarta importar modelos desde China AUTOWEB Argentina",
+  "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOai12ZHZLRkEtb3pCUHFPZGlNSVY2cWsyOGpxRlc5OWNjcmxobnNGeEVyTjFfQ1dCVTVMbE5LUDZuSmxIUGtLOEtCUjYzbGZtZzhFLWozT3BjTlYwQktwSlYwMWhkYU56aS1Pa0p3bnVlTUloVzcxQ1JTdTdQRkRoNVBJTzc3M1BVQ2hDS2tDU0xIMHRscGZtOHBJeS1UY2NGU2JPWFJCcG9TX3gzbTEydjlMSnMwVFNwcEhKVDBrVmk?oc=5",
+  "fuente": "AUTOWEB Argentina",
+  "deporte": "Golf",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-09T11:59+00:00",
+  "encontrado": "2026-11-09T22:23-03:00",
+  "bot": "resultados"
+ },
+ {
+  "id": "b40915d6b3d9",
+  "titulo": "Briatore calificó de “decepcionante” el GP de Brasil de Alpine: Colapinto 13° y Gasly 14°",
+  "resumen": "Briatore calificó de “decepcionante” el GP de Brasil de Alpine: Colapinto 13° y Gasly 14° El Argentino Diario",
+  "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNRC1EM1VlVmFwMENiMnFIZTJBRWJZa0tTYVo3SkpJaExkVE01ZjN6UFp3MVpqcEx4OFNtOG5EYWpENEJLS2VoMmE2TjQ5MkRIOGtva28yWlVEbDBYVXM2aldJUnF6dVdYdTdMN1NOWW5JU0Q2Z3JPVGd0TTF2NDFzSC1EbmlsSnJ6NXpjcnljLVlnSkRjWlVicTE4azhpeHYtWHc?oc=5",
+  "fuente": "El Argentino Diario",
+  "deporte": "Formula 1",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-09T11:58+00:00",
+  "encontrado": "2026-11-09T22:23-03:00",
   "bot": "resultados"
  },
  {
@@ -975,6 +1209,19 @@
   "bot": "resultados"
  },
  {
+  "id": "ca8dc9b43a3a",
+  "titulo": "ATP de Estocolmo: dos triunfos argentinos y un duelo nacional en el horizonte noviembre 2026",
+  "resumen": "ATP de Estocolmo: dos triunfos argentinos y un duelo nacional en el horizonte noviembre 2026 Canal Showsport",
+  "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQNUluTGNyNVVxd1IxTDh6bjJ1WXBWRGlPSU5jTDJLZ3BTWU9EWE5UbEtfWm1WTC14MFpkR0ZFUDg2WWttVkx4UTBoUElvbDdaSlNudndWS0wwQ3ZwdWpVbHRMLVYxdTdjbUNKMkdmM2g3cTI2R2tsbXQ4MTliUFRhMHZ5UDlEVlI2MmtCWG5QZ0xtUXZMdEdjaUpQVHNaTWw4alIxTmdzV1Z6blU?oc=5",
+  "fuente": "Canal Showsport",
+  "deporte": "Tenis",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-09T11:20+00:00",
+  "encontrado": "2026-11-09T22:25-03:00",
+  "bot": "resultados"
+ },
+ {
   "id": "0cd44bcf7599",
   "titulo": "España conquista el Mundial de pádel ante Argentina en una final de máxima tensión",
   "resumen": "España conquista el Mundial de pádel ante Argentina en una final de máxima tensión La Vanguardia",
@@ -1027,6 +1274,19 @@
   "bot": "resultados"
  },
  {
+  "id": "d9d00189b621",
+  "titulo": "Argentina e Israel lanzan los “Acuerdos de Isaac”",
+  "resumen": "Argentina e Israel lanzan los “Acuerdos de Isaac” Notitdf",
+  "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9TR3oxbDBIZEFlb09NOHpYYkdXUUtsME5qZzU1RUFUeXprZ0JrcFVtSjNpWTA5XzJ2bElROFFLNTJ3N1BLQmpsUE1aaF9zMVY0dU1PMnVYa3VTaE53NjdWMlFHX3IxXzNUMDRiVDNsVW8zczBUZk5seWJ1b2Q?oc=5",
+  "fuente": "Notitdf",
+  "deporte": "Lucha",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-09T08:57+00:00",
+  "encontrado": "2026-11-09T22:24-03:00",
+  "bot": "resultados"
+ },
+ {
   "id": "43d2e2bc9495",
   "titulo": "Los días más brasileños de Franco Colapinto: la intimidad del paso del argentino por San Pablo",
   "resumen": "Los días más brasileños de Franco Colapinto: la intimidad del paso del argentino por San Pablo Clarin.com",
@@ -1037,6 +1297,32 @@
   "en_buenos_aires": false,
   "publicado": "2026-11-09T08:55+00:00",
   "encontrado": "2026-11-09T20:34-03:00",
+  "bot": "resultados"
+ },
+ {
+  "id": "a34385d1cd33",
+  "titulo": "Del rechazo al ajuste a la hegemonía de la iglesia bergogliana en Argentina",
+  "resumen": "Del rechazo al ajuste a la hegemonía de la iglesia bergogliana en Argentina Perfil",
+  "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQakFvdUp6c181OWVwazR5MjN4Z1Z5bklwQ0JoelJTT1BhcWxWSjdidHVvell0RVZwSkNlX1A2TFNZc0NlaU5CcU1Sd3JlSy1lbTRPaDRCQUJIQ0lnTXR3WXpBVTU1Tjg5ODFmUFdjaktGSjBHYjMyTFR3MFpZUW5NLWVjaExpSWg1NmtUZUpKR3o2ZVl0YWhya1BuM051Q0pXZjl2eFhtSFVMaVJFTDlFWFdkRzVJRWVrQ2c0RUZ6SQ?oc=5",
+  "fuente": "Perfil",
+  "deporte": "Escalada",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-09T08:03+00:00",
+  "encontrado": "2026-11-09T22:23-03:00",
+  "bot": "resultados"
+ },
+ {
+  "id": "72ceadc28828",
+  "titulo": "Argentina. Marcha del Orgullo LGBT: Orgullo y resistencia en las calles para construir futuro",
+  "resumen": "Argentina. Marcha del Orgullo LGBT: Orgullo y resistencia en las calles para construir futuro Kaos en la red",
+  "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxONkkwdGhkN1BzMnJaR0xKS0lvNS1QenhsVXNsODh0bjdRelBJMkhoXzEyY2pIaExLSDZ2RUJIckZqbWpDbFd2WU9QbzhNRnR6OFVpakFrMkFPOE54M2dSLW1XMjM2al8tMXhLQjZUUTJlTzRjR24zQkxxYUFmN0hkd0dTQzZiRFZrRXpHd2s3NGZFT2JGZW04WkhWMnVFNGdFX0FDd2pFQ2EwS1JDdzFTNHk2N1UzZk0?oc=5",
+  "fuente": "Kaos en la red",
+  "deporte": "Lucha",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-09T06:47+00:00",
+  "encontrado": "2026-11-09T22:24-03:00",
   "bot": "resultados"
  },
  {
@@ -1118,6 +1404,19 @@
   "bot": "resultados"
  },
  {
+  "id": "e2c8de57c458",
+  "titulo": "El Movimiento Trans Argentina se planta contra la transfobia y sentencia: “Merecemos vivir”",
+  "resumen": "El Movimiento Trans Argentina se planta contra la transfobia y sentencia: “Merecemos vivir” Nuevo Diario de Salta",
+  "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQeFpkUGNLeTZ0U0RieVBNQ01RcDlnQkoxOHd5NUwtNE1kSTRER3JhVlFqNFRLU2hDVW8yaDZZNXlnbWJvUGhYQmQtRzVlU3E5VlVDRmtqVzh0LV80WXctLWxNWXZFNzc0LUJ5SFZDQmIzTktuUWh5OGZfQ1FxTHFWNndPTlYzM1E5V3lvUkFGRW5oLXhDZk93Slc4SDNrTzcwVktqRU9xcW5RZTJpcUN2eldaWG1TMEZmRDZZS1g4d28?oc=5",
+  "fuente": "Nuevo Diario de Salta",
+  "deporte": "Escalada",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-09T03:51+00:00",
+  "encontrado": "2026-11-09T22:23-03:00",
+  "bot": "resultados"
+ },
+ {
   "id": "7bed8f119883",
   "titulo": "La última semana del circuito ATP arrancó con triunfos argentinos",
   "resumen": "La última semana del circuito ATP arrancó con triunfos argentinos Tendencia de Noticias",
@@ -1183,6 +1482,19 @@
   "bot": "resultados"
  },
  {
+  "id": "9467e39a0f61",
+  "titulo": "El radar de Los Pumas 7s en Yerba Buena: la mirada de Gravano sobre Bautista Estofán",
+  "resumen": "El radar de Los Pumas 7s en Yerba Buena: la mirada de Gravano sobre Bautista Estofán La Gaceta",
+  "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOS2Z6cDhHa20wVDFBOEFTbjdVbWtPWjZIZW9FVjJwQUI4N3d3cmlTTVAyR1oySy1VeVNOR1hRcGJ2Zk52TmNQMDM5OEtGYXdHVFhiUXpMS1lrY0VxQ1UzTW1mR2ZCajlINEsyVDNXeGlVWHdOeURDT3lrUVVMUTV3OEo0WGFwSHZKWXN2ZWFBb2tBVDRaQ3dGa2NDQkxHd2RwbkthRXZzUld2YWpudEhOZkVZLTVSaVhmY0pz0gHAAUFVX3lxTE9pbElKWW1mODQ5Z1B2enFqSl9FVnBFaTZieXUzSFRpQldrY3Z6dHpueG5LbjFXcnhUbTJXZ0VmVlVwSHdXUDVBaHZET21pMlVTREg0ZlJBQ2ZnR0pmU0JkZXd5QU5Ec3ZmMk1HeDVyY0tKTHdhdDJEYXZjZ1puRkxqY05jbDh5U2lqdFZaZ1B4ZHR0THJ0M0tVVFBjZjFHbzJZVlI3MVJnT0Z6RUphWjcxTjJsT2ZYQUlrMkFTeURXMQ?oc=5",
+  "fuente": "La Gaceta",
+  "deporte": "Rugby y Rugby 7s",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-09T01:41+00:00",
+  "encontrado": "2026-11-09T22:25-03:00",
+  "bot": "resultados"
+ },
+ {
   "id": "7e9549d7f19f",
   "titulo": "Hutíes lanzan ataque en Riad y causan daños en edificio de Aramco sin víctimas fatales",
   "resumen": "Hutíes lanzan ataque en Riad y causan daños en edificio de Aramco sin víctimas fatales Cadena 3 Argentina",
@@ -1206,6 +1518,19 @@
   "en_buenos_aires": false,
   "publicado": "2026-11-08T23:23+00:00",
   "encontrado": "2026-11-09T20:34-03:00",
+  "bot": "resultados"
+ },
+ {
+  "id": "f86b5102d01e",
+  "titulo": "Argentina. Recordar a Tosco: un pasado lleno de futuro - Resumen Latinoamericano -",
+  "resumen": "Argentina. Recordar a Tosco: un pasado lleno de futuro Resumen Latinoamericano -",
+  "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQaWZXQVJVMnNrMHk0R2pRTjBPMXpJT3M1NTRvUW01cjZBLXg5dXpJZjNoRFNoTG5UTVIwLXNqOWoxTV9vd1JkSTlqcnRscDRTYkRscFNXRkpMTThLWVJ6NkVRNXJPbzRGMFdhbG5jNGVFS1N2dl9fNC13Tk42bjk4U0U3SHFzbEZCcm9fYlc1cUJkWU1MWl9VWEVSTm1JUnJROUI5ekhn?oc=5",
+  "fuente": "Resumen Latinoamericano -",
+  "deporte": "Lucha",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-08T23:21+00:00",
+  "encontrado": "2026-11-09T22:24-03:00",
   "bot": "resultados"
  },
  {
@@ -1287,6 +1612,19 @@
   "bot": "resultados"
  },
  {
+  "id": "9d3e70a6d467",
+  "titulo": "Franco Colapinto, tras el Gran Premio de Brasil: “Fui al límite toda la carrera”",
+  "resumen": "Franco Colapinto, tras el Gran Premio de Brasil: “Fui al límite toda la carrera” Agencia Noticias Argentinas",
+  "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxONVFwY1o3bFBOVW1IX0JwYjZibVFBMl9ORFFGa3o2eTA1REdmQUJwZnQ0TERWS3BEc0dWb3dSSU9OMVE4dDVyQnh5aDBYZm45THdPR2pvNGktbkNaZUprdno1SklBQTlHOXo4XzZYR2VHbF95X1FzUXR1SmhjV1I3OUFSX3AxY1B0a2tTT2VjLUlRQ0lkRmNrdEZVcjk1djJ1UXpUZnZGNkJFTTExSE4xamhITkZPZlJDREpuclE1eS11Z1VVRElXTmt2M1FIZ1hlMXNOcjZ6R3lYdUpPenBr0gHuAUFVX3lxTE9ERGVfdk5HX0wxdDNaaDJNck4yV0JDZDYxMndlMGM5elNiRkJhVGRocWNWTnJKbTlpSDdtSm9VOGRQUW1WWmUxTWYzbVJLWmdtNzkwZnl3QnNXUnlDc2h0a2lIZFJIMnAyZDFqSzJnS0FBOW1GLUhsWGk5RUhXaUthNGUtX05OY1dBQi1yNEdEbF8tMFNpUlFzTm5MTDduZjRsaXIwalhIUXU4clRPc1FYd2pyVGVZV19kQU5vZS1sdzRRd0t1emhBT05FTDV3Vzl1MmNQMW9GWmduOTA3SVBIOE5BWFZNX3d3VFpManc?oc=5",
+  "fuente": "Agencia Noticias Argentinas",
+  "deporte": "Formula 1",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-08T22:08+00:00",
+  "encontrado": "2026-11-09T22:23-03:00",
+  "bot": "resultados"
+ },
+ {
   "id": "52708d658526",
   "titulo": "Colapinto terminó 13° en el GP de Brasil y no pudo sumar puntos: Lando Norris fue el ganador",
   "resumen": "Colapinto terminó 13° en el GP de Brasil y no pudo sumar puntos: Lando Norris fue el ganador Cadena 3 Argentina",
@@ -1313,6 +1651,19 @@
   "bot": "resultados"
  },
  {
+  "id": "cd7f8becfea2",
+  "titulo": "¡La Davis en el Ruca Che ya está en marcha! Argentina tiene todo listo para viajar a Neuquén",
+  "resumen": "¡La Davis en el Ruca Che ya está en marcha! Argentina tiene todo listo para viajar a Neuquén Diario Río Negro",
+  "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOU2dJYjhaek40Y1lrSjRNb24wcnk2MHktTlMyVHBCLXpVNHc5U2hHcUUwVG0taXA2WnlJR25ETjFQZ2xqazEtdFRaeFlqS3VidHNiT2F4Tmp3WU1aY3I5ZDlFSENHWGVOTVZwSWlsSlV2bk9BQXdvOHJPVUdPeENLZVpKbXVTRENwc3pKd2puLXB6LWV3QTJHQkZKeUVoRmtMSlYtbzQ2MU1GNGh6RXFWbFlTMEppcUFBU0QySmFvc1Zvdk93VnFUampkS1BheXhvZlHSAdoBQVVfeXFMUE1jTGU0VlZMc082aXoyUW50MDhwdl9DYVNuTmNDaXpaMHBJZlhyU2pBNjMxc1ZsUWY2TzZ6RGs5amQxZDJ5YVVJZUdrenk1S2d1STNmZ19yNzFQSGt0Ql9vQWdCQndZRnZIeTk0U25KWGhUbVFGMl9kZGRqOEZncDFTdm44N1FQTVI3bVVrNUhldGNLdVRLWnljc2lqZnBfbGJ2M0xVWUV4c0EtMENMajZ2MXVfQXREU2hEd3FrbXhyV1FZQWliRGNuR2RLOWEzUWRCc05oS28yTnc?oc=5",
+  "fuente": "Diario Río Negro",
+  "deporte": "Tenis",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-08T21:19+00:00",
+  "encontrado": "2026-11-09T22:25-03:00",
+  "bot": "resultados"
+ },
+ {
   "id": "74880b5758d9",
   "titulo": "El golpe de Bolo Alemany de arco a arco con el que Argentina doblegó a Portugal",
   "resumen": "El golpe de Bolo Alemany de arco a arco con el que Argentina doblegó a Portugal VAVEL.com",
@@ -1323,6 +1674,19 @@
   "en_buenos_aires": false,
   "publicado": "2026-11-08T21:13+00:00",
   "encontrado": "2026-11-09T20:34-03:00",
+  "bot": "resultados"
+ },
+ {
+  "id": "00e4886251c8",
+  "titulo": "La colonia británica en Malvinas bloquea el acceso a información por la “guerra económica” con Argentina",
+  "resumen": "La colonia británica en Malvinas bloquea el acceso a información por la “guerra económica” con Argentina Agenda Malvinas",
+  "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPbDVObVh5UEV5dkRKN3VRcjkxekptQjZPYzVlRHd2WkRDTEt4LVdoRjNmdGlFTzk1Y2FDNXczWUZmTFFIc2FSeDRMU1Y2clhNWkNfT1hhRFJ4cmJ4MFA1T3c5UktFNUtydE4xNWU5VFBQSllVX1ZEaW1CVTI1Rkk4X29lYWIxdEV2aXhCUnpuc3FmTHdMNGVSZXZreWV4U3RKLUo1RU5aVlN2MXMxUkdMY1JobkoxX1Y5dFB6czVzeTdmQXRHZkJTNXNIX0NvMl8yWUJjNnVTWQ?oc=5",
+  "fuente": "Agenda Malvinas",
+  "deporte": "Escalada",
+  "tipo": "agenda",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-08T20:59+00:00",
+  "encontrado": "2026-11-09T22:23-03:00",
   "bot": "resultados"
  },
  {
@@ -1414,6 +1778,19 @@
   "en_buenos_aires": false,
   "publicado": "2026-11-08T20:17+00:00",
   "encontrado": "2026-11-09T20:34-03:00",
+  "bot": "resultados"
+ },
+ {
+  "id": "c12119b5d97a",
+  "titulo": "SANDRA: UNA HISTORIA DE LUCHA, JUSTICIA Y LIBERTAD",
+  "resumen": "SANDRA: UNA HISTORIA DE LUCHA, JUSTICIA Y LIBERTAD Cine y Teatro Argentino",
+  "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxONHNraUNESEhGMXZUZjA3M2tiTldRWnBvVkk5WHNMemQ1bThUbFVKU3lyRklUWmtjTGgwc1VLRjBzMFUtX21ESUtCR2FCMUZBVlpyRENXOHI1Vk5HbjV6NWYtdFprOUF2Mm9OaGNkQ2RMTm5UeU1GLWJPUWlCR0c5cW1abU9GbUtx?oc=5",
+  "fuente": "Cine y Teatro Argentino",
+  "deporte": "Lucha",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-08T20:16+00:00",
+  "encontrado": "2026-11-09T22:24-03:00",
   "bot": "resultados"
  },
  {
@@ -1625,6 +2002,19 @@
   "bot": "resultados"
  },
  {
+  "id": "8cd64b9d3d52",
+  "titulo": "Milan se impone 2-1 al Genoa y acorta la brecha en la lucha por la Serie A",
+  "resumen": "Milan se impone 2-1 al Genoa y acorta la brecha en la lucha por la Serie A Cadena 3 Argentina",
+  "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQMThKaVVSYWdVMkwxQlVORHZFd2JHYWZCNmtwRGNWaGgzNmVQbnVyX3JXcTJKck1scjdNalBab3JGSlhuRlNyMTRmaHo5dEUyakdwczAyVHFST2RhVVh4WElMb0piRDBWY0tDN2FKZE9NUmc3aUtEbVlIVlhBWG5ycDdRMWdZYmJ0WkJrYmlLUUpMTjRpaUgtVWsyRVQ2OGJ4LWh0WHZhYjFtbklGOFRoa3Itbi1BUE50Ni1yZmUxc9IBxAFBVV95cUxPb05nN1BLUWgwaG1ITU00VkxueDdTUDdZcklRUnJBUXUwR2dSOElseUxNeV9pSXQxNkk4T0lZV1JCUjU5ZUxhNTc2cnFKd2JsOVhGOG45U2ZWZTFfZHBrOEctTWR5V3RLaWhkYlU3NzdSd1VZQzVzaHNZNzRDUHFFSVhHYmY1eDBfYy1CVHBQNjlBcVpSWnRUa3ZaenFOdmQ3YnlWZDhkMVhPOURwLVhqY1RPT29vRUNtb09WVEc5RFc3MGhn?oc=5",
+  "fuente": "Cadena 3 Argentina",
+  "deporte": "Lucha",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-08T17:08+00:00",
+  "encontrado": "2026-11-09T22:24-03:00",
+  "bot": "resultados"
+ },
+ {
   "id": "cfae3a7a0031",
   "titulo": "Villa María quiere ser sede de la Copa Davis por primera vez",
   "resumen": "Villa María quiere ser sede de la Copa Davis por primera vez Cadena 3 Argentina",
@@ -1674,6 +2064,32 @@
   "en_buenos_aires": false,
   "publicado": "2026-11-08T16:05+00:00",
   "encontrado": "2026-11-09T20:36-03:00",
+  "bot": "resultados"
+ },
+ {
+  "id": "2ba5b1168e12",
+  "titulo": "Toni Nadal, entrenador y tío de Rafa: \"Yo soy catalanoparlante, y creo que en Mallorca hablamos catalán, no mallorquín. Hablo catalán, pero no por ello soy catalán, lo mismo que un argentino no es español y que un estadounidense no es inglés\"",
+  "resumen": "Toni Nadal, entrenador y tío de Rafa: \"Yo soy catalanoparlante, y creo que en Mallorca hablamos catalán, no mallorquín. Hablo catalán, pero no por ello soy catalán, lo mismo que un argentino no es español y que un estadounidense no es inglés\" SPORT",
+  "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQbGVIbHBkS00xSnQ2SXk3cGoxRWhCc2RwMzdrTEN2Tm1YQlZ4a2pPX3A1NnNPUk5GZG80ckZXNFY3MGpDS1hLQTRMVHM3U3hNNzNxa0NnOHNVRDZER3R4Tlk0ZnAzLUR1TmJBVXdxeUNxNklaZHV5eXJzbUF6Z1o0SzVXeGpDd9IBhgFBVV95cUxNdlNTWE9NNVl5RDRPNG9rTVpYMXhPdTBxQ0RhcXdSbndMX1g3Tml1U1JoS0hoc05KTG1WYV9mcjE0cHlFV0diUTZuNThHcHhYTDYtYUlPVE85b0VabmNXcGprNjJma0ljWFczSFJsLXlyTHZFazdQTDN2M1Uzeml4U1FGT0w5QQ?oc=5",
+  "fuente": "SPORT",
+  "deporte": "Tenis",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-08T15:58+00:00",
+  "encontrado": "2026-11-09T22:25-03:00",
+  "bot": "resultados"
+ },
+ {
+  "id": "cceb75ccb92d",
+  "titulo": "El dúo misionero se hizo presente en la octava fecha del Campeonato Argentino en Córdoba",
+  "resumen": "El dúo misionero se hizo presente en la octava fecha del Campeonato Argentino en Córdoba Diario Noticias De La Calle de Misiones",
+  "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPODh5Q19La3pMSWd5OVE0UkdxeDgwS0c5eXZVanFzME1WdGZzSk5VZ01KVG83ODQ4ZkNhVENYZVlEdXZYZnlDRlJ3dDYzd25HblhPZzAwWklxYl9rcHV2WlBZLTZvSVctaHhBZ2JYS3NZM2FxZ1NyeTBGUjQ3bm5ScXVacmJYZWlkazRSZVZTb1Z4ckJUdlN1dEtTVzZ5SWdKSnYzb183MFU2UGVVWW1MTlpHVEhZbVRDNTBOY1c2ZG5UUG5QU3VsSEZjODhWRW5sYi1YY3dXR3A4YVg2UWJjMjd0WlJ0NTVFWEVjdNIB7AFBVV95cUxPODh5Q19La3pMSWd5OVE0UkdxeDgwS0c5eXZVanFzME1WdGZzSk5VZ01KVG83ODQ4ZkNhVENYZVlEdXZYZnlDRlJ3dDYzd25HblhPZzAwWklxYl9rcHV2WlBZLTZvSVctaHhBZ2JYS3NZM2FxZ1NyeTBGUjQ3bm5ScXVacmJYZWlkazRSZVZTb1Z4ckJUdlN1dEtTVzZ5SWdKSnYzb183MFU2UGVVWW1MTlpHVEhZbVRDNTBOY1c2ZG5UUG5QU3VsSEZjODhWRW5sYi1YY3dXR3A4YVg2UWJjMjd0WlJ0NTVFWEVjdA?oc=5",
+  "fuente": "Diario Noticias De La Calle de Misiones",
+  "deporte": "Handball",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-08T15:40+00:00",
+  "encontrado": "2026-11-09T22:24-03:00",
   "bot": "resultados"
  },
  {
@@ -1791,6 +2207,19 @@
   "en_buenos_aires": false,
   "publicado": "2026-11-08T13:54+00:00",
   "encontrado": "2026-11-09T20:34-03:00",
+  "bot": "resultados"
+ },
+ {
+  "id": "9b6bc454edb6",
+  "titulo": "Argentina XV tiene formación confirmada para jugar con Inglaterra A",
+  "resumen": "Argentina XV tiene formación confirmada para jugar con Inglaterra A Diario Uno Santa Fe",
+  "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNQjU1amRySDdfSjJqVnRsYXFLaThVaG1zYk5nc0V3cnJVZlNJUkZTc1dYRENiUVNFS1RfNGxhT1REeHFYYnBoWU5idVpJb0NyajJfc0Z6ekZVU1NoRmJzMDhjRW9aOGI3eDZKWTdvZHhET3BfTDBYaFZGbWh0SXUxWXQ3UmdBMUNrWXN4b1NVU0ZtaHRXWEdIY1F1Tk5jYUFNaHRPZTM2MTZyRF9RUXZDM9IBtgFBVV95cUxNdTFmTVhBUU84X0xwWTB0cmRMa2hOYVJ5WmxQeS1ETy04bmJOcjctZ1ZsTlkwOXNNLWsyVWZHYmpMOTBLbUJnRzZ4UjFjcW83QXhLQ3BkVG1HX3ZrR0JrWEF6NHBQdmJkUW1wbE4xRjM1c0pVbndCaDNVSEtualRxMjhpUWRVWkZVVXlPdmN4bEZwajJHZUJMd09zSU54QlYwRDlfeWlRWk9pak1STTU4UUtSa2dSUQ?oc=5",
+  "fuente": "Diario Uno Santa Fe",
+  "deporte": "Rugby",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-08T13:41+00:00",
+  "encontrado": "2026-11-09T22:25-03:00",
   "bot": "resultados"
  },
  {
@@ -2025,6 +2454,32 @@
   "en_buenos_aires": false,
   "publicado": "2026-11-08T08:00+00:00",
   "encontrado": "2026-11-09T20:35-03:00",
+  "bot": "resultados"
+ },
+ {
+  "id": "9e3ae701eaa6",
+  "titulo": "Cuándo corre y cómo ver a Colapinto en la F1: fecha, hora y TV en vivo por Disney+",
+  "resumen": "Cuándo corre y cómo ver a Colapinto en la F1: fecha, hora y TV en vivo por Disney+ ESPN Argentina",
+  "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNU3FwZEo5eGMtMTNNeWlWVU1xalZUbjZsb1BlNmIwVFozODFDamd6alpQZTd6Qkt1TTd3aWppV1lOS2dKNDBjTjRWcXlyQnBrZXdHM05GRFA3MXMza05VbTNJQVh2YUppRmplaFdkam41bHVhcHk3eEtGYkxSdzI0OGdUa1A0RVpzcVR6Y0RsWlBnOVhWQ0F6ZVR6d3diRmJ1VXJJNGRKQVBGR0hvOFptTDRsa3pseVhzZS1qT1NMUGktc1FITDR1OTU2Szk?oc=5",
+  "fuente": "ESPN Argentina",
+  "deporte": "Formula 1",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-08T08:00+00:00",
+  "encontrado": "2026-11-09T22:23-03:00",
+  "bot": "resultados"
+ },
+ {
+  "id": "521c33512fb9",
+  "titulo": "Argentina y una Justicia bajo custionamiento",
+  "resumen": "Argentina y una Justicia bajo custionamiento Prisionero en Argentina",
+  "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPdjNJV1o4ZXkwY2Q2OVBLanNad3dScF9YUDdoV0xYWkRiaWduRG8wdEdKYkhUWTNxUHpleWRYSEZhU1ZTdTdWQzJ3SXJDWEFRQkdfMTF3VEF6YU16VTZ3cTJiLUx6SzB6UHdIekJLV3JxYkh0ajBzYWZMTE9nSnYzbmJ5bGExdw?oc=5",
+  "fuente": "Prisionero en Argentina",
+  "deporte": "OCR",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-08T06:57+00:00",
+  "encontrado": "2026-11-09T22:24-03:00",
   "bot": "resultados"
  },
  {
