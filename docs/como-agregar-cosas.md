@@ -31,5 +31,9 @@ Copiá una línea y cambiá los datos:
 ## Afinar un deporte desde la planilla (lo más fácil)
 En la "Lista de deportes para Claude" se pueden agregar dos columnas (con ese título exacto en la fila de DEPORTES):
 - **BUSCAR**: qué buscar en Google Noticias para ese deporte. Ej. Tenis → `Copa Davis OR Billie Jean King OR tenis juvenil`. Si está vacía, usa `config/deportes.json` o el nombre del deporte.
-- **EXCLUIR**: palabras que descartan la noticia en ese deporte, separadas por coma. Ej. Tenis → `ATP, WTA`. Ej. un deporte donde no importan los torneos nacionales → `campeonato argentino, nacional`.
+- **EXCLUIR**: palabras que descartan la noticia en ese deporte, separadas por coma.
+  Con **SALVO** se ponen excepciones (separadas por `/`): la noticia se descarta, menos si también dice alguna de esas palabras.
+  - Tenis → `ATP SALVO campeón / título / final, WTA SALVO campeón / título / final`
+  - Deporte donde no importan los nacionales → `campeonato argentino SALVO récord, nacional SALVO récord`
+  - Alcanza con escribir el comienzo: `campeón` también encuentra campeona y campeones.
 El bot lo toma en la vuelta siguiente.

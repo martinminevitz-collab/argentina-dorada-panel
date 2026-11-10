@@ -42,10 +42,22 @@ def es_argentino(texto):
     return _alguna(t, ARG) or "🇦🇷" in (texto or "")
 
 
-def contiene_alguna(texto, palabras):
-    """Para las exclusiones propias de cada deporte (columna EXCLUIR de la planilla)."""
+def contiene_alguna(texto, reglas):
+    """Exclusiones propias de cada deporte (columna EXCLUIR de la planilla).
+    Cada regla es 'palabra' o 'palabra SALVO excepción / otra excepción'.
+    Ej: 'ATP SALVO campeón / título' -> descarta lo que diga ATP, menos si también dice campeón o título.
+    Se busca por comienzo de palabra: 'campeón' también encuentra 'campeona' y 'campeones'."""
     t = normalizar(texto)
-    return any(f" {normalizar(p).strip()} " in t for p in palabras if normalizar(p).strip())
+
+    def aparece(p):
+        p = normalizar(p).strip()
+        return bool(p) and f" {p}" in t
+
+    for regla in reglas:
+        palabra, _, salvo = sin_acentos(regla.lower()).partition(" salvo ")
+        if aparece(palabra) and not any(aparece(e) for e in salvo.split("/")):
+            return True
+    return False
 
 
 def hay_que_excluir(texto):
