@@ -361,7 +361,7 @@ function dibujarMulti(lista) {
   if (m.medallero) { const p = document.createElement("p"); p.className = "medallero"; renderPartes(m.medallero, p); cab.append(p); }
   const sw = document.createElement("div");
   sw.className = "chips-filtro";
-  sw.innerHTML = `<button data-v="dia">Por día</button><button data-v="deporte">Por deporte</button>`;
+  sw.innerHTML = `<button data-v="dia">Por día</button><button data-v="deporte">Por deporte</button><button data-v="medallas">🏅 Solo medallas</button>`;
   sw.querySelectorAll("button").forEach((b) => {
     b.classList.toggle("activo", b.dataset.v === vista);
     b.onclick = () => { estado.multiVista = b.dataset.v; estado.multiSel = null; estado.multiBusca = ""; dibujar(); };
@@ -371,6 +371,8 @@ function dibujarMulti(lista) {
 
   if (m.resumen_final) lista.append(cajaFinal(e));
   if (m.general.length) { const g = cajaMulti(e, "general", "Info general", m.general, { cerrada: true, sinPublicar: true }); g.classList.add("info-general"); lista.append(g); }
+
+  if (vista === "medallas") return dibujarMedallas(lista, e);
 
   if (vista === "dia") {
     if (!m.dias.length) {
@@ -400,6 +402,91 @@ function dibujarMulti(lista) {
     lista.append(selector(opciones.map((d) => d.nombre), sel.nombre));
     for (const d of sel.dias) lista.append(cajaMulti(e, (d.dia || "") + "|" + sel.nombre, d.dia ? d.dia.replace(/^D[IÍ]A\s*/i, "Día ") : sel.nombre, d.bloques, { sub: sel.nombre }));
   }
+}
+
+// ---------- "Solo medallas": junta las medallas argentinas de todos los deportes ----------
+// Sale de lo que ya escribe el agente: una línea con la medalla en negrita = una medalla.
+const MEDALLAS = [
+  { clave: "oro", titulo: "Oro", emoji: "🥇", re: /DORAD|\bORO\b|CAMPEO?N(A|ES|AS)?\b/ },
+  { clave: "plata", titulo: "Plata", emoji: "🥈", re: /PLATEAD|\bPLATA\b|SUBCAMPE/ },
+  { clave: "bronce", titulo: "Bronce", emoji: "🥉", re: /BRONCE/ },
+];
+function tipoMedalla(partes) {
+  const negrita = sinAcentos(partes.filter((p) => p.b).map((p) => p.t).join(" ").toUpperCase());
+  if (!negrita) return null;
+  // primero plata (para que "SUBCAMPEÓN" no cuente como oro)
+  for (const k of ["plata", "bronce", "oro"]) {
+    const m = MEDALLAS.find((x) => x.clave === k);
+    if (m.re.test(negrita) && !(k === "oro" && /SUBCAMPE/.test(negrita))) return m;
+  }
+  return null;
+}
+function juntarMedallas(m) {
+  const vistas = new Set(), lista = [];
+  for (const dep of m.deportes) {
+    for (const d of dep.dias) {
+      for (const b of d.bloques) {
+        // "sub" adentro de un deporte = línea de dato en negrita (ej. "Bronce vs Canadá 36-5")
+        if (b.tipo !== "texto" && b.tipo !== "sub") continue;
+        const med = tipoMedalla(b.partes);
+        if (!med) continue;
+        const clave = b.partes.map((p) => p.t).join("").trim();
+        if (vistas.has(clave)) continue;
+        vistas.add(clave);
+        lista.push({ med, deporte: dep.nombre, dia: d.dia, partes: b.partes });
+      }
+    }
+  }
+  return lista;
+}
+function dibujarMedallas(lista, e) {
+  const todas = juntarMedallas(e.multi);
+  const cuenta = Object.fromEntries(MEDALLAS.map((x) => [x.clave, todas.filter((t) => t.med.clave === x.clave).length]));
+  const resumen = document.createElement("section");
+  resumen.className = "medallas-total";
+  resumen.innerHTML = MEDALLAS.map((x) => `<div><span class="emoji">${x.emoji}</span><b>${cuenta[x.clave]}</b><span>${x.titulo}</span></div>`).join("")
+    + `<div class="total"><b>${todas.length}</b><span>Total</span></div>`;
+  lista.append(resumen);
+  lista.append(Object.assign(document.createElement("p"), { className: "ayuda pendiente",
+    textContent: "Contadas desde lo que escribió el agente (una línea con la medalla en negrita = una medalla). Si no coincide con el medallero oficial, manda el oficial." }));
+  if (!todas.length) { lista.append(Object.assign(document.createElement("p"), { className: "vacio", textContent: "Todavía no hay medallas." })); return; }
+  for (const x of MEDALLAS) {
+    const items = todas.filter((t) => t.med.clave === x.clave);
+    if (!items.length) continue;
+    const caja = document.createElement("article");
+    caja.className = "evento caja-medallas abierto " + x.clave;
+    caja.innerHTML = `<div class="cabeza-fija"><span class="titulo">${x.emoji} ${x.titulo} · ${items.length}</span></div>`;
+    const det = document.createElement("div");
+    det.className = "detalle";
+    for (const it of items) {
+      const fila = document.createElement("div");
+      fila.className = "fila-medalla";
+      fila.innerHTML = `<span class="chip deporte">${escapar(it.deporte)}</span>${it.dia ? `<span class="dia-medalla">${escapar(it.dia.replace(/^D[IÍ]A\s*/i, "Día ").split(" - ")[0])}</span>` : ""}`;
+      const p = document.createElement("p");
+      renderPartes(it.partes.filter((q) => !q.href), p);
+      fila.append(p);
+      det.append(fila);
+    }
+    caja.append(det);
+    lista.append(caja);
+  }
+  const pie = document.createElement("div");
+  pie.className = "pie suelto";
+  pie.append(boton("Copiar medallero para IG", () => copiarTexto(textoMedallasIG(e, todas, cuenta))));
+  lista.append(pie);
+}
+function textoMedallasIG(e, todas, cuenta) {
+  const l = [`🇦🇷 ${e.multi.nombre.toUpperCase()} | MEDALLERO ARGENTINO`, "",
+    `🥇 ${cuenta.oro}  🥈 ${cuenta.plata}  🥉 ${cuenta.bronce}  ·  Total: ${todas.length}`];
+  for (const x of MEDALLAS) {
+    const items = todas.filter((t) => t.med.clave === x.clave);
+    if (!items.length) continue;
+    l.push("", `${x.emoji} ${x.titulo.toUpperCase()}`);
+    // para el posteo alcanza con la primera oración de cada medalla
+    for (const it of items) l.push(`▪️ ${it.deporte}: ${lineaIG(it.partes, true).split(/\.\s+(?=[A-ZÁÉÍÓÚÑ])/)[0].replace(/\.$/, "")}`);
+  }
+  l.push("", hashtagsEvento({ titulo: e.titulo }, [hashtag(e.multi.nombre)]).join(" "));
+  return l.join("\n");
 }
 
 function normBusca(t) { return sinAcentos(String(t || "").toLowerCase()).trim(); }

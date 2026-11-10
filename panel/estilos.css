@@ -205,3 +205,24 @@ input[type=search], select { width: 100%; background: var(--tarjeta); color: var
   border: 1px solid var(--borde); background: var(--tarjeta); color: var(--texto); box-shadow: 0 2px 8px rgba(11,30,51,.15); cursor: pointer; font-size: 13px; }
 .flecha-sel.izq { left: -6px; } .flecha-sel.der { right: -6px; }
 .buscador-multi input { width: 100%; }
+
+/* ---------- solo medallas ---------- */
+.medallas-total { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.medallas-total > div { background: var(--tarjeta); border: 1px solid var(--borde); border-radius: var(--radio); padding: 10px 6px;
+  display: grid; justify-items: center; gap: 2px; }
+.medallas-total .emoji { font-size: 22px; }
+.medallas-total b { font: 800 26px/1 "Barlow Condensed", sans-serif; }
+.medallas-total span:last-child { font-size: 12px; color: var(--texto-2); text-transform: uppercase; letter-spacing: 1px; }
+.medallas-total .total { background: var(--texto); border-color: var(--texto); color: var(--fondo); }
+.medallas-total .total span:last-child { color: var(--fondo); opacity: .8; }
+.caja-medallas.oro { border-left: 4px solid #C9A24D; }
+.caja-medallas.plata { border-left: 4px solid #A7ADB4; }
+.caja-medallas.bronce { border-left: 4px solid #B0743E; }
+.fila-medalla { padding: 8px 0; border-bottom: 1px dashed var(--borde); }
+.fila-medalla:last-child { border-bottom: 0; }
+.fila-medalla p { margin: 4px 0 0; }
+.dia-medalla { font-size: 12px; color: var(--texto-2); margin-left: 6px; }
+.pie.suelto { padding: 0; }
+@media (min-width: 1000px) {
+  .lista.modo-multi > .medallas-total, .lista.modo-multi > .caja-medallas, .lista.modo-multi > .pie.suelto { grid-column: 1 / -1; }
+}
