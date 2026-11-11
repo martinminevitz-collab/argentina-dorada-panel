@@ -34,6 +34,9 @@ jobs:
       - name: Medallero oficial
         run: python -m bots.medallero.main
         continue-on-error: true
+      - name: Eventos en Buenos Aires (planilla)
+        run: python -m bots.eventos_ba.main
+        continue-on-error: true
       - name: Eventos cargados a mano en el panel
         run: python -m bots.eventos_manuales.main
         continue-on-error: true
@@ -42,8 +45,8 @@ jobs:
         run: |
           git config user.name "bot-argentina-dorada"
           git config user.email "bot@users.noreply.github.com"
-          git add data/doc-resultados.json data/ultima-corrida.json data/doc-terminados.json data/vencidos.json data/medalleros.json data/eventos-manuales.json
-          if git diff --cached --quiet -- data/doc-resultados.json data/vencidos.json data/doc-terminados.json data/medalleros.json data/eventos-manuales.json; then
+          git add data/doc-resultados.json data/ultima-corrida.json data/doc-terminados.json data/vencidos.json data/medalleros.json data/eventos-manuales.json data/eventos-ba.json data/agregados.json
+          if git diff --cached --quiet -- data/doc-resultados.json data/vencidos.json data/doc-terminados.json data/medalleros.json data/eventos-manuales.json data/eventos-ba.json data/agregados.json; then
             echo "cambio=no" >> "$GITHUB_OUTPUT"
           else
             git commit -m "Doc: $(date -u +'%Y-%m-%d %H:%M') UTC"

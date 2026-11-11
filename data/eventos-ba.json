@@ -1,0 +1,29 @@
+{
+ "_nota": "Eventos para cubrir en Buenos Aires y CABA (de la planilla). 'lugares' = palabras para reconocer eventos de Bs. As. en la Agenda.",
+ "lugares": [
+  "buenos aires",
+  "caba",
+  "ciudad autónoma",
+  "cenard",
+  "parque olímpico",
+  "villa soldati",
+  "mar del plata",
+  "la plata",
+  "tigre",
+  "san isidro",
+  "vicente lópez",
+  "olivos",
+  "malvinas argentinas",
+  "bahía blanca",
+  "tandil",
+  "pilar",
+  "ezeiza",
+  "hurlingham",
+  "san fernando",
+  "costanera",
+  "palermo",
+  "núñez",
+  "tecnópolis"
+ ],
+ "eventos": []
+}

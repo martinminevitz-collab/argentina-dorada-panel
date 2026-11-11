@@ -19,6 +19,52 @@
   --ambar-fondo: #FBF0D6;
   --radio: 14px;
 }
+/* Modo noche: sigue al celu/compu, salvo que se elija a mano con el botón 🌙 */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+  --fondo: #0E1622;
+  --tarjeta: #16212F;
+  --suave: #1C2938;
+  --borde: #2A3A4D;
+  --texto: #E8EDF3;
+  --texto-2: #9AA6B5;
+  --oro: #D4AE5C;
+  --oro-fondo: #3A2F18;
+  --celeste: #8EC3EE;
+  --celeste-fondo: #1B3048;
+  --rojo: #F08A7C;
+  --rojo-fondo: #3D2222;
+  --rojo-doc: #FF7B6E;
+  --verde: #6FCF9B;
+  --verde-fondo: #173326;
+  --ambar: #E9B949;
+  --ambar-fondo: #3A2E12;
+  --c-azul: #8AB4F8;
+  color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --fondo: #0E1622;
+  --tarjeta: #16212F;
+  --suave: #1C2938;
+  --borde: #2A3A4D;
+  --texto: #E8EDF3;
+  --texto-2: #9AA6B5;
+  --oro: #D4AE5C;
+  --oro-fondo: #3A2F18;
+  --celeste: #8EC3EE;
+  --celeste-fondo: #1B3048;
+  --rojo: #F08A7C;
+  --rojo-fondo: #3D2222;
+  --rojo-doc: #FF7B6E;
+  --verde: #6FCF9B;
+  --verde-fondo: #173326;
+  --ambar: #E9B949;
+  --ambar-fondo: #3A2E12;
+  --c-azul: #8AB4F8;
+  color-scheme: dark;
+}
+.botones-top { display: flex; gap: 6px; }
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
 body {
@@ -108,7 +154,7 @@ input[type=search], select { width: 100%; background: var(--tarjeta); color: var
 .detalle .espacio { height: 6px; }
 .detalle .c-gris { color: #9aa0a6; }
 .detalle .c-rojo { color: var(--rojo-doc); }
-.detalle .c-azul { color: #1a56c4; font-weight: 700; }
+.detalle .c-azul { color: var(--c-azul, #1a56c4); font-weight: 700; }
 .detalle .creo { font-style: italic; color: var(--ambar); background: var(--ambar-fondo); border-radius: 4px; padding: 0 3px; }
 .links { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 4px; }
 .link-fuente { display: inline-flex; gap: 6px; align-items: baseline; text-decoration: none; font-family: "IBM Plex Sans", sans-serif;
@@ -422,3 +468,16 @@ input[type=search], select { width: 100%; background: var(--tarjeta); color: var
 .g-spo-cajas .mar { border: 3px solid #6fa8dc; } .g-spo-cajas .mar span { color: var(--cel); } .g-spo-cajas .mar b { font-size: 150px; }
 
 .g-taller .g-sinfoto { display: none; }
+
+/* ---------- agregar dato a un evento ---------- */
+.agregar-dato { margin-top: 10px; display: grid; gap: 6px; }
+.agregar-dato > button { justify-self: start; background: none; border: 1px dashed var(--oro); color: var(--oro); border-radius: 8px; padding: 6px 12px; cursor: pointer; font-weight: 600; }
+.agregar-dato select, .agregar-dato textarea { font: inherit; color: var(--texto); background: var(--fondo); border: 1px solid var(--borde); border-radius: 8px; padding: 7px 9px; width: 100%; }
+.agregar-dato select { width: auto; }
+.agregar-dato .fila-btns { display: flex; gap: 6px; }
+.agregar-dato .fila-btns button { border: 1px solid var(--borde); background: var(--tarjeta); color: var(--texto); border-radius: 8px; padding: 6px 14px; cursor: pointer; }
+.agregar-dato .principal { background: var(--oro) !important; border-color: var(--oro) !important; color: #fff !important; font-weight: 600; }
+.detalle p.agregado { background: var(--oro-fondo); border-radius: 8px; padding: 6px 8px; }
+.marca-dato { font-size: 12px; }
+.quitar-dato { margin-left: 6px; border: 0; background: none; color: var(--rojo); font-size: 16px; cursor: pointer; line-height: 1; }
+#form-codigo .link-btn { margin-top: 6px; }

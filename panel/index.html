@@ -11,7 +11,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Bebas+Neue&family=Montserrat:wght@400;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="estilos.css?v=19">
+  <script>
+    // modo noche: se aplica antes de dibujar para que no "parpadee" en blanco
+    try { const t = localStorage.getItem("ad-tema"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+  <link rel="stylesheet" href="estilos.css?v=20">
 </head>
 <body>
   <header class="top">
@@ -22,7 +26,10 @@
         <p class="sub">Panel de bots</p>
       </div>
     </div>
-    <button id="recargar" class="icono-btn" title="Actualizar" aria-label="Actualizar">↻</button>
+    <div class="botones-top">
+      <button id="tema" class="icono-btn" title="Modo noche" aria-label="Cambiar modo claro/noche">🌙</button>
+      <button id="recargar" class="icono-btn" title="Actualizar" aria-label="Actualizar">↻</button>
+    </div>
   </header>
 
   <div class="cuerpo">
@@ -34,6 +41,11 @@
           <label for="mail">Entrá con tu mail para que "Publicado" lo vean todos</label>
           <div class="fila-entrar"><input id="mail" type="email" placeholder="tu@mail.com" autocomplete="email" required><button>Entrar</button></div>
         </form>
+        <form id="form-codigo" hidden>
+          <label for="codigo">Escribí el código que te llegó por mail (o tocá el link del mail)</label>
+          <div class="fila-entrar"><input id="codigo" inputmode="numeric" autocomplete="one-time-code" placeholder="123456" maxlength="10" required><button>Confirmar</button></div>
+          <button type="button" id="otro-mail" class="link-btn">Usar otro mail</button>
+        </form>
         <div id="sesion" hidden><span id="sesion-txt"></span> <button id="salir" class="link-btn">Salir</button></div>
         <p id="cuenta-msj" class="ayuda" aria-live="polite"></p>
       </section>
@@ -42,6 +54,7 @@
         <span id="tabs-multi"></span>
         <button role="tab" data-tab="resultados" class="activa">Resultados <span class="n"></span></button>
         <button role="tab" data-tab="agenda">Agenda <span class="n"></span></button>
+        <button role="tab" data-tab="ba">📍 Bs. As. <span class="n"></span></button>
         <button role="tab" data-tab="radar">Radar del bot <span class="n"></span></button>
         <button role="tab" data-tab="graficas">🎨 Gráficas <span class="n"></span></button>
       </nav>
@@ -59,8 +72,8 @@
           <button data-v="agenda">Agenda</button>
           <button data-v="ba">📍 Bs. As.</button>
         </div>
-        <input id="buscar" type="search" placeholder="Buscar (nombre, torneo…)" aria-label="Buscar">
-        <div class="fila">
+        <input id="buscar" data-para="resultados agenda radar ba" type="search" placeholder="Buscar (nombre, torneo…)" aria-label="Buscar">
+        <div class="fila" data-para="resultados agenda radar ba">
           <select id="deporte" aria-label="Deporte"><option value="">Todos los deportes</option></select>
           <select id="rango" aria-label="Días" data-para="radar" hidden>
             <option value="1">Hoy</option>
@@ -102,9 +115,9 @@
 
   <div id="aviso" class="aviso" hidden></div>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.3/dist/umd/supabase.min.js"></script>
-  <script src="config.js?v=19"></script>
-  <script src="base.js?v=19"></script>
-  <script src="graficas.js?v=19"></script>
-  <script src="app.js?v=19"></script>
+  <script src="config.js?v=20"></script>
+  <script src="base.js?v=20"></script>
+  <script src="graficas.js?v=20"></script>
+  <script src="app.js?v=20"></script>
 </body>
 </html>

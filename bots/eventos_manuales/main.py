@@ -25,10 +25,10 @@ def config_base():
     return url, clave
 
 
-def bajar_eventos():
+def bajar_eventos(funcion="eventos_manuales_para_bot"):
     url, clave = config_base()
     pedido = urllib.request.Request(
-        f"{url}/rest/v1/rpc/eventos_manuales_para_bot", data=b"{}", method="POST",
+        f"{url}/rest/v1/rpc/{funcion}", data=b"{}", method="POST",
         headers={"apikey": clave, "Authorization": f"Bearer {clave}", "Content-Type": "application/json"})
     with urllib.request.urlopen(pedido, timeout=30) as r:
         return json.loads(r.read().decode("utf-8"))
@@ -56,6 +56,29 @@ def main():
     if guardar.leer(ruta, {}).get("pendientes") != pendientes:
         guardar.escribir(ruta, nuevo)
     print(f"✅ Cargados a mano: {len(eventos)} en la base, {len(pendientes)} pendientes de pasar al Doc")
+    agregados(refs)
+
+
+def agregados(refs):
+    """Datos agregados a un evento desde el panel ("+ Agregar dato") -> data/agregados.json."""
+    try:
+        filas = bajar_eventos("agregados_para_bot")
+    except Exception as e:
+        print(f"⚠️  No se pudieron leer los datos agregados: {e}")
+        return
+    pendientes = []
+    for f in filas:
+        ref = f["id"].replace("-", "")[:REF]
+        if ref in refs:
+            continue
+        pendientes.append({"ref": ref, **{k: f.get(k) for k in ("evento_id", "evento_titulo", "tipo", "texto", "creado_en")}})
+    ruta = guardar.DATA / "agregados.json"
+    nuevo = {"_nota": "Datos que los compañeros agregaron a un evento desde el panel y que todavía no están en el Doc. "
+                      "El agente los suma al bloque de ese evento y al final escribe 'Ref panel: <ref>'.",
+             "pendientes": pendientes}
+    if guardar.leer(ruta, {}).get("pendientes") != pendientes:
+        guardar.escribir(ruta, nuevo)
+    print(f"✅ Datos agregados: {len(filas)} en la base, {len(pendientes)} pendientes de pasar al Doc")
 
 
 if __name__ == "__main__":

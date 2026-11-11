@@ -41,13 +41,17 @@ async function bajarJSON(ruta) {
 async function cargar() {
   $("#recargar").classList.add("girando");
   try {
-    const [doc, corrida, indice, medalleros, manuales] = await Promise.all([
+    const [doc, corrida, indice, medalleros, manuales, agregados, ba] = await Promise.all([
       bajarJSON("doc-resultados.json").catch(() => null),
       bajarJSON("ultima-corrida.json").catch(() => ({})),
       bajarJSON("indice.json").catch(() => ({ dias: [] })),
       bajarJSON("medalleros.json").catch(() => ({})),
       bajarJSON("eventos-manuales.json").catch(() => ({ pendientes: [] })),
+      bajarJSON("agregados.json").catch(() => ({ pendientes: [] })),
+      bajarJSON("eventos-ba.json").catch(() => ({ eventos: [], lugares: [] })),
     ]);
+    estado.agregadosBot = agregados.pendientes || [];
+    estado.ba = ba;
     estado.manualesBot = manuales.pendientes || [];
     estado.medalleros = medalleros;
     estado.doc = doc; estado.corrida = corrida;
@@ -119,7 +123,91 @@ function combinar() {
   const refs = new Set(doc.flatMap((e) => e.refs_panel || []));
   const filas = estado.manualesBase ?? estado.manualesBot ?? [];
   const manuales = filas.map(aEvento).filter((m) => !refs.has(m.ref));
-  estado.eventos = [...manuales, ...doc];
+  // datos agregados desde el panel ("+ Agregar dato"): se suman al final del evento hasta que el agente los pasa al Doc
+  const ags = (estado.agregadosBase ?? estado.agregadosBot ?? []).filter((a) => !refs.has(refDe(a)));
+  estado.eventos = [...manuales, ...doc].map((e) => {
+    const mios = ags.filter((a) => a.evento_id === e.id || sinTildes(a.evento_titulo) === sinTildes(e.titulo));
+    if (!mios.length) return e;
+    return { ...e, version: e.version + ":" + huella(mios.map((a) => a.texto).join("|")),
+      bloques: [...e.bloques, ...mios.map((a) => ({ tipo: "texto", agregado: true, idBase: String(a.id || "").includes("-") ? a.id : null,
+        partes: partesConNegrita((a.tipo === "correccion" ? "Corrección: " : "") + a.texto) }))] };
+  });
+}
+
+function sinTildes(t) { return String(t || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/\s+/g, " ").trim(); }
+
+// ---------- agregar un dato a un evento ----------
+estado.borradorDato = {};
+function cajaAgregarDato(e, t) {
+  const caja = document.createElement("div");
+  caja.className = "agregar-dato";
+  const abierto = estado.agregandoEn === e.id;
+  if (!abierto) {
+    caja.append(boton("+ Agregar dato", () => {
+      if (!window.Base?.activa()) return avisar("Entrá con tu mail (arriba a la izquierda) para agregar datos");
+      estado.agregandoEn = e.id; t.replaceWith(tarjetaEvento(e, $("#tpl-evento")));
+    }));
+    return caja;
+  }
+  caja.innerHTML = `<select aria-label="Tipo"><option value="dato">Dato nuevo</option><option value="correccion">Corrección</option></select>
+    <textarea rows="3" maxlength="2000" placeholder="Ej: Juana Pérez ganó la medalla de **BRONCE** en -57kg"></textarea>
+    <div class="fila-btns"><button class="principal">Guardar</button><button class="cancelar">Cancelar</button></div>
+    <p class="ayuda">Se ve al toque para todos y el agente lo pasa al Doc en la próxima vuelta. Para negrita: **así**.</p>`;
+  const ta = caja.querySelector("textarea"), sel = caja.querySelector("select");
+  const b = estado.borradorDato[e.id] || {};
+  ta.value = b.texto || ""; sel.value = b.tipo || "dato";
+  const guardarBorrador = () => (estado.borradorDato[e.id] = { texto: ta.value, tipo: sel.value });
+  ta.oninput = guardarBorrador; sel.onchange = guardarBorrador;
+  caja.querySelector(".cancelar").onclick = () => { estado.agregandoEn = null; delete estado.borradorDato[e.id]; t.replaceWith(tarjetaEvento(e, $("#tpl-evento"))); };
+  caja.querySelector(".principal").onclick = async (ev) => {
+    const texto = ta.value.trim();
+    if (texto.length < 2) return ta.focus();
+    ev.target.disabled = true;
+    try {
+      estado.agregandoEn = null;
+      await Base.agregarDato({ evento_id: e.id, evento_titulo: e.titulo, tipo: sel.value, texto });
+      delete estado.borradorDato[e.id];
+      dibujar(); avisar("Dato agregado");
+    } catch (err) {
+      estado.agregandoEn = e.id; ev.target.disabled = false;
+      avisar(/does not exist|schema cache/.test(err.message || "") ? "Falta activar esto en la base (avisale a Martín)" : "No se pudo guardar. Probá de nuevo");
+    }
+  };
+  setTimeout(() => ta.focus(), 0);
+  return caja;
+}
+
+// ---------- pestaña Bs. As.: planilla de eventos para cubrir + lo de la Agenda que es en Buenos Aires ----------
+function esDeBA(e) {
+  const lugares = (estado.ba?.lugares || []).map(sinTildes);
+  const txt = sinTildes([e.titulo, e.evento, e.fechas, ...(e.bloques || []).flatMap((b) => (b.partes || []).map((p) => p.t))].join(" "));
+  return lugares.some((l) => new RegExp(`\\b${l.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`).test(txt));
+}
+function eventosBA() {
+  const deLaPlanilla = (estado.ba?.eventos || []).map((f) => {
+    const bloques = [];
+    if (f.fuente && /^https?:/.test(f.fuente)) bloques.push({ tipo: "link", partes: [{ t: f.fuente, href: f.fuente }, { t: " (Fuente)" }] });
+    if (f.nota) bloques.push({ tipo: "texto", partes: [{ t: f.nota }] });
+    if (f.lugar) bloques.push({ tipo: "texto", partes: [{ t: "📍 " + f.lugar }] });
+    const fechas = [f.inicio, f.fin && f.fin !== f.inicio ? f.fin : ""].filter(Boolean).join(" al ");
+    return { id: "ba:" + huella(f.evento + f.inicio), titulo: f.evento, evento: f.evento, deporte: f.deporte, seccion: "agenda", etiqueta: "agenda",
+      fechas: [fechas, f.lugar].filter(Boolean).join(" · "), bloques, version: "1" };
+  });
+  const vistos = new Set(deLaPlanilla.map((e) => sinTildes(e.titulo)));
+  const deLaAgenda = estado.eventos.filter((e) => e.seccion === "agenda" && !e.multideportivo && esDeBA(e) && !vistos.has(sinTildes(e.titulo)));
+  const q = sinTildes($("#buscar").value), dep = $("#deporte").value;
+  return [...deLaPlanilla, ...deLaAgenda].filter((e) => (!dep || e.deporte === dep) && (!q || sinTildes(e.titulo + " " + e.deporte + " " + e.fechas).includes(q)));
+}
+function dibujarBA(lista) {
+  barraCrear(lista);
+  const eventos = eventosBA();
+  if (!eventos.length) {
+    lista.insertAdjacentHTML("beforeend", `<p class="vacio">${estado.ba?.eventos ? "No hay eventos en Buenos Aires por ahora." : ""}
+      ${(estado.ba?.eventos || []).length ? "" : "Para que aparezca la planilla de eventos, hay que publicarla como CSV (avisale a Claude el link)."}</p>`);
+    return;
+  }
+  const tpl = $("#tpl-evento");
+  for (const e of eventos) lista.append(tarjetaEvento(e, tpl));
 }
 
 function formCrear() {
@@ -171,7 +259,7 @@ function barraCrear(lista) {
       if (!window.Base?.activa()) return avisar("Entrá con tu mail (arriba a la izquierda) para crear eventos");
       estado.creando = true; dibujar();
       const f = estado.formEl;
-      f.querySelector("[name=estado]").value = estado.tab === "agenda" ? "agenda" : "publicable";
+      f.querySelector("[name=estado]").value = estado.tab === "agenda" || estado.tab === "ba" ? "agenda" : "publicable";
       f.querySelector("[name=titulo]").focus();
     });
     b.className = "btn-crear";
@@ -250,7 +338,7 @@ function dibujar() {
   for (const b of document.querySelectorAll(".pestanas button")) {
     const t = b.dataset.tab;
     b.classList.toggle("activa", t === estado.tab);
-    const n = t === "radar" ? estado.noticias.length : t.startsWith("m:") || t === "graficas" ? "" : eventosDe(t, false).length;
+    const n = t === "radar" ? estado.noticias.length : t === "ba" ? eventosBA().length : t.startsWith("m:") || t === "graficas" ? "" : eventosDe(t, false).length;
     b.querySelector(".n").textContent = n || "";
   }
   document.querySelectorAll("[data-para]").forEach((el) => (el.hidden = !el.dataset.para.split(" ").includes(estado.tab)));
@@ -261,6 +349,7 @@ function dibujar() {
   lista.classList.remove("modo-multi", "modo-graficas");
   if (estado.tab === "graficas") return window.Graficas?.dibujar(lista);
   if (estado.tab === "radar") return dibujarRadar(lista);
+  if (estado.tab === "ba") return dibujarBA(lista);
   if (esMulti) return dibujarMulti(lista);
 
   const eventos = eventosDe(estado.tab);
@@ -285,7 +374,7 @@ function tarjetaEvento(e, tpl) {
   const cabeza = t.querySelector(".cabeza"), detalle = t.querySelector(".detalle");
   cabeza.setAttribute("aria-expanded", abierto);
   t.classList.toggle("abierto", abierto);
-  if (abierto) { detalle.hidden = false; detalle.append(...renderBloques(e.bloques)); }
+  if (abierto) { detalle.hidden = false; detalle.append(...renderBloques(e.bloques)); if (!e.id.startsWith("ba:")) detalle.append(cajaAgregarDato(e, t)); }
   cabeza.onclick = () => {
     estado.abiertos.has(e.id) ? estado.abiertos.delete(e.id) : estado.abiertos.add(e.id);
     t.replaceWith(tarjetaEvento(e, tpl));
@@ -356,6 +445,16 @@ function renderBloques(bloques) {
     if (b.tipo === "espacio") { const d = document.createElement("div"); d.className = "espacio"; out.push(d); continue; }
     const el = document.createElement(b.tipo === "sub" ? "h4" : "p");
     renderPartes(b.partes, el);
+    if (b.agregado) {
+      el.classList.add("agregado");
+      el.title = "Agregado desde el panel: en la próxima vuelta el agente lo pasa al Doc";
+      el.insertAdjacentHTML("afterbegin", `<span class="marca-dato">✍️</span> `);
+      if (window.Base?.activa() && b.idBase) {
+        const x = document.createElement("button"); x.className = "quitar-dato"; x.textContent = "×"; x.title = "Borrar este dato";
+        x.onclick = async () => { try { await Base.borrarDato(b.idBase); avisar("Dato borrado"); } catch { avisar("No se pudo borrar"); } };
+        el.append(x);
+      }
+    }
     out.push(el);
   }
   return out;
@@ -502,7 +601,7 @@ function dibujarMulti(lista) {
       return;
     }
     const sel = m.dias.find((d) => d.titulo === estado.multiSel) || m.dias[0];
-    lista.append(selector(m.dias.map((d) => d.titulo), sel.titulo, (t) => t.replace(/^D[IÍ]A\s*/i, "Día ")));
+    lista.append(selector(m.dias.map((d) => d.titulo), sel.titulo, (t) => t.replace(/^D[IÍ]A\b\s*/i, "Día ").replace(/^D[IÍ]AS ANTERIORES/i, "Días anteriores")));
     lista.append(buscadorDeporte("Buscar deporte en este día…"));
     const r = sel.resumen;
     const q = normBusca(estado.multiBusca);
@@ -521,7 +620,7 @@ function dibujarMulti(lista) {
     if (!opciones.length) { lista.append(Object.assign(document.createElement("p"), { className: "vacio", textContent: "No hay ningún deporte con ese nombre." })); return; }
     const sel = opciones.find((d) => d.nombre === estado.multiSel) || opciones[0];
     lista.append(selector(opciones.map((d) => d.nombre), sel.nombre));
-    for (const d of sel.dias) lista.append(cajaMulti(e, (d.dia || "") + "|" + sel.nombre, d.dia ? d.dia.replace(/^D[IÍ]A\s*/i, "Día ") : sel.nombre, d.bloques, { sub: sel.nombre }));
+    for (const d of sel.dias) lista.append(cajaMulti(e, (d.dia || "") + "|" + sel.nombre, d.dia ? d.dia.replace(/^D[IÍ]A\b\s*/i, "Día ").replace(/^D[IÍ]AS ANTERIORES/i, "Días anteriores") : sel.nombre, d.bloques, { sub: sel.nombre }));
   }
 }
 
@@ -619,7 +718,7 @@ function dibujarMedallas(lista, e) {
     for (const it of items) {
       const fila = document.createElement("div");
       fila.className = "fila-medalla";
-      fila.innerHTML = `<span class="chip deporte">${escapar(it.deporte)}</span>${it.dia ? `<span class="dia-medalla">${escapar(it.dia.replace(/^D[IÍ]A\s*/i, "Día ").split(" - ")[0])}</span>` : ""}`;
+      fila.innerHTML = `<span class="chip deporte">${escapar(it.deporte)}</span>${it.dia ? `<span class="dia-medalla">${escapar(it.dia.replace(/^D[IÍ]A\b\s*/i, "Día ").replace(/^D[IÍ]AS ANTERIORES/i, "Días anteriores").split(" - ")[0])}</span>` : ""}`;
       const p = document.createElement("p");
       renderPartes(it.partes.filter((r) => !r.href), p);
       fila.append(p);
@@ -859,6 +958,23 @@ document.querySelectorAll(".pestanas button").forEach((b) => (b.onclick = () => 
 ["#buscar", "#deporte", "#ver-publicados"].forEach((s) => $(s).addEventListener("input", dibujar));
 $("#rango").addEventListener("change", cargar);
 $("#recargar").onclick = cargar;
+// modo noche: el botón alterna claro/noche; si nunca se tocó, sigue lo que tenga el celu/compu
+function temaActual() {
+  return document.documentElement.dataset.theme || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+}
+function pintarBotonTema() {
+  const noche = temaActual() === "dark";
+  $("#tema").textContent = noche ? "☀️" : "🌙";
+  $("#tema").title = noche ? "Modo día" : "Modo noche";
+  document.querySelector('meta[name="theme-color"]').content = noche ? "#0E1622" : "#F6F3EC";
+}
+$("#tema").onclick = () => {
+  const nuevo = temaActual() === "dark" ? "light" : "dark";
+  document.documentElement.dataset.theme = nuevo;
+  try { localStorage.setItem("ad-tema", nuevo); } catch {}
+  pintarBotonTema();
+};
+pintarBotonTema();
 document.addEventListener("visibilitychange", () => { if (!document.hidden) cargar(); });
 
 if ("serviceWorker" in navigator) {
@@ -869,6 +985,7 @@ if ("serviceWorker" in navigator) {
 }
 // la base compartida avisa cuando cambian los publicados (de este u otro dispositivo)
 window.alCambiarPublicados = (mapa) => { estado.publicados = mapa ?? leerPublicados(); dibujar(); };
+window.alCambiarAgregados = (filas) => { estado.agregadosBase = filas; combinar(); dibujar(); };
 window.alCambiarManuales = (filas) => { estado.manualesBase = filas; combinar(); llenarDeportes(); dibujar(); };
 window.Base?.iniciar();
 cargar();

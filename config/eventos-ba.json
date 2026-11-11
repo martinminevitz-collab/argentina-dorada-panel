@@ -1,0 +1,4 @@
+{
+  "_nota": "Planillas con la agenda de eventos para cubrir en Buenos Aires y CABA. Cada una tiene que estar publicada como CSV (Archivo → Compartir → Publicar en la web → la hoja → CSV) y el link va acá. Columnas que se leen: DEPORTE, EVENTO, FECHA INICIO, FECHA FINAL, LUGAR, FUENTE, NOTA (las que falten se dejan vacías).",
+  "csv": []
+}
