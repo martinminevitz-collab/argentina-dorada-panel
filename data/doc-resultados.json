@@ -1,6 +1,6 @@
 {
- "leido": "2026-11-10T23:05-03:00",
- "actualizado_doc": "10/11/2026 23:00",
+ "leido": "2026-11-11T11:58-03:00",
+ "actualizado_doc": "11/11/2026 11:00",
  "eventos": [
   {
    "titulo": "FUTSAL - FINALISSIMA EN NITERÓI (RÍO DE JANEIRO), BRASIL",
@@ -2205,6 +2205,47 @@
      "tipo": "sub",
      "partes": [
       {
+       "t": "DÍA 12 - MIÉRCOLES 11/11",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://dakar2026.sailing.org/",
+       "href": "https://dakar2026.sailing.org/"
+      },
+      {
+       "t": " (Vela - web oficial)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "VELA (WINDSURF)",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Agustín Hoffmann corre hoy las regatas 10 a 12 del Techno 293 (primera largada 10:03hs de Argentina)"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
        "t": "DÍA 11 - MARTES 10/11",
        "b": true
       }
@@ -3322,7 +3363,7 @@
     }
    ],
    "id": "a9a35774136e",
-   "version": "ac274e781e",
+   "version": "abdbb8a5cf",
    "multideportivo": true,
    "multi": {
     "nombre": "Dakar 2026",
@@ -3547,6 +3588,45 @@
     ],
     "resumen_final": "",
     "dias": [
+     {
+      "titulo": "DÍA 12 - MIÉRCOLES 11/11",
+      "deportes": [
+       {
+        "nombre": "General",
+        "bloques": [
+         {
+          "tipo": "link",
+          "partes": [
+           {
+            "t": "https://dakar2026.sailing.org/",
+            "href": "https://dakar2026.sailing.org/"
+           },
+           {
+            "t": " (Vela - web oficial)"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "nombre": "Vela (Windsurf)",
+        "bloques": [
+         {
+          "tipo": "texto",
+          "partes": [
+           {
+            "t": "Agustín Hoffmann corre hoy las regatas 10 a 12 del Techno 293 (primera largada 10:03hs de Argentina)"
+           }
+          ]
+         }
+        ]
+       }
+      ],
+      "resumen": {
+       "destacados": [],
+       "posteo": ""
+      }
+     },
      {
       "titulo": "DÍA 11 - MARTES 10/11",
       "deportes": [
@@ -4528,6 +4608,23 @@
       "nombre": "General",
       "dias": [
        {
+        "dia": "DÍA 12 - MIÉRCOLES 11/11",
+        "bloques": [
+         {
+          "tipo": "link",
+          "partes": [
+           {
+            "t": "https://dakar2026.sailing.org/",
+            "href": "https://dakar2026.sailing.org/"
+           },
+           {
+            "t": " (Vela - web oficial)"
+           }
+          ]
+         }
+        ]
+       },
+       {
         "dia": "DÍA 11 - MARTES 10/11",
         "bloques": [
          {
@@ -4539,6 +4636,50 @@
            },
            {
             "t": " (Nota)"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "nombre": "Vela (Windsurf)",
+      "dias": [
+       {
+        "dia": "DÍA 12 - MIÉRCOLES 11/11",
+        "bloques": [
+         {
+          "tipo": "texto",
+          "partes": [
+           {
+            "t": "Agustín Hoffmann corre hoy las regatas 10 a 12 del Techno 293 (primera largada 10:03hs de Argentina)"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "dia": "DÍA 11 - MARTES 10/11",
+        "bloques": [
+         {
+          "tipo": "texto",
+          "partes": [
+           {
+            "t": "Agustín Hoffmann fue 14°, 18° y 18° en las regatas 7, 8 y 9 y marcha 19° en la general"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "dia": "DÍAS ANTERIORES",
+        "bloques": [
+         {
+          "tipo": "texto",
+          "partes": [
+           {
+            "t": "Agustín Hoffmann fue 12°, 16° y 18° en las primeras 3 regatas (domingo 8/11) y marchaba 15° en la general"
            }
           ]
          }
@@ -4670,37 +4811,6 @@
           "partes": [
            {
             "t": "Julia Lambert fue 31° con 13:35.96. Oro para Anel Tashbay (KAZ) con 11:32.57, plata para Karolina Hajdukova (SVK) y bronce para Angelina Novolodskaya"
-           }
-          ]
-         }
-        ]
-       }
-      ]
-     },
-     {
-      "nombre": "Vela (Windsurf)",
-      "dias": [
-       {
-        "dia": "DÍA 11 - MARTES 10/11",
-        "bloques": [
-         {
-          "tipo": "texto",
-          "partes": [
-           {
-            "t": "Agustín Hoffmann fue 14°, 18° y 18° en las regatas 7, 8 y 9 y marcha 19° en la general"
-           }
-          ]
-         }
-        ]
-       },
-       {
-        "dia": "DÍAS ANTERIORES",
-        "bloques": [
-         {
-          "tipo": "texto",
-          "partes": [
-           {
-            "t": "Agustín Hoffmann fue 12°, 16° y 18° en las primeras 3 regatas (domingo 8/11) y marchaba 15° en la general"
            }
           ]
          }
@@ -6191,6 +6301,14 @@
      ]
     },
     {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Victoria Muñoz Larreta no pasó la 2da ronda del cuadro principal y fue al Repechaje"
+      }
+     ]
+    },
+    {
      "tipo": "espacio"
     },
     {
@@ -6211,10 +6329,46 @@
      ]
     },
     {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.lacapitalmdp.com/jarisz-e-indurain-avanzaron-a-la-tercera-ronda-y-buenas-noticias-en-los-repechajes/",
+       "href": "https://www.lacapitalmdp.com/jarisz-e-indurain-avanzaron-a-la-tercera-ronda-y-buenas-noticias-en-los-repechajes/"
+      },
+      {
+       "t": " (Nota martes 10/11)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Thiago Passeri ganó el heat 15 con 12.50 por delante de Martín Ottado (URU) 9.26, Eduardo Alciso (PHI) 8.96 y Lewis Murphy (NZL) 8.94 y pasó a la 3ra ronda del Repechaje"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Joaquín Muñoz Larreta fue 2° en la serie 14 con 10.06 (detrás de Patrick Langdon-Dark (GBR) 10.40; después Oliver Heintz (NED) 8.37 y Teshawn Jones (IVB) 3.50) y pasó a la 3ra ronda del Repechaje"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Victoria Muñoz Larreta ganó el heat 7 con 9.20 por delante de Myriam Benzarli (MAR) 5.23, Katrina Kruze (LAT) 3.07 y Nina Smicklas (GER) y pasó a la 3ra ronda del Repechaje"
+      }
+     ]
+    },
+    {
      "tipo": "sub",
      "partes": [
       {
-       "t": "Martes 10/11: Joaquín Muñoz Larreta en la serie 14 vs Oliver Heintz (NED), Patrick Langdon-Dark (GBR) y Teshawn Christian Jones (IVB)",
+       "t": "Miércoles 11/11: Joaquín Muñoz Larreta y Thiago Passeri en la serie 7 de la 3ra ronda del Repechaje vs Taimana Marupo (NZL) y Roberto Araki (CHI)",
        "b": true
       }
      ]
@@ -6223,8 +6377,16 @@
      "tipo": "sub",
      "partes": [
       {
-       "t": "Martes 10/11: Thiago Passeri en el heat 15 vs Martín Ottado (URU), Eduardo Alciso (PHI) y Lewis Murphy (NZL)",
+       "t": "Miércoles 11/11: Victoria Muñoz Larreta en la serie 3 de la 3ra ronda del Repechaje vs Faviola Alcalá (PUR), Lune van Dijk (NED) y Grace Gundry (NZL)",
        "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "En el Repechaje el que sale 3° o peor queda eliminado"
       }
      ]
     },
@@ -6280,7 +6442,7 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Vera Jarisz: serie 2 vs Estela López (CHI), Silvana Martínez (VEN) y Ranya Squalli (MAR)"
+       "t": "Vera Jarisz fue 2° en la serie 2 con 5.93 (detrás de Estela López (CHI) 8.40; después Ranya Squalli (MAR) 5.10 y Silvana Martínez (VEN) 4.57) y pasó a la 3ra ronda"
       }
      ]
     },
@@ -6288,29 +6450,31 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Victoria Muñoz Larreta: serie 7 vs Nilbie Bancada (PHI), Kana Nakashio (JPN) y Rosanny Álvarez (VEN)"
+       "t": "Lucía Indurain fue 2° en el heat 16 con 8.03 (detrás de Louise Lepront (RSA) 8.83; después Maya Mateja (MEX) 7.60 y Raya Campbell (GBR) 6.34) y pasó a la 3ra ronda"
       }
      ]
     },
     {
-     "tipo": "texto",
+     "tipo": "sub",
      "partes": [
       {
-       "t": "Lucía Indurain: serie 16 vs Maya Mateja (MEX), Louise Lepront (RSA) y Raya Campbell (GBR)"
+       "t": "3ra ronda el miércoles 11/11: Lucía Indurain en la serie 9 vs Nadia Erostarbe (ESP) y Kana Nakashio (JPN)",
+       "b": true
       }
      ]
     },
     {
-     "tipo": "texto",
+     "tipo": "sub",
      "partes": [
       {
-       "t": "La 2da ronda femenina sería el martes 10/11 (Creo)"
+       "t": "3ra ronda el miércoles 11/11: Vera Jarisz en la serie 10 vs Luana Silva (BRA) y Louise Lepront (RSA)",
+       "b": true
       }
      ]
     }
    ],
    "id": "31518371aee9",
-   "version": "4296b91c29",
+   "version": "99444bd69d",
    "publicado_en_doc": false
   },
   {
@@ -6385,6 +6549,60 @@
    ],
    "id": "b904de21ef8b",
    "version": "2f763bf564",
+   "publicado_en_doc": false
+  },
+  {
+   "titulo": "GIMNASIA EN TRAMPOLÍN - MUNDIAL JUVENIL (WORLD AGE GROUP COMPETITIONS) EN NANJING, CHINA (12 al 15 de noviembre)",
+   "deporte": "GIMNASIA EN TRAMPOLÍN",
+   "evento": "MUNDIAL JUVENIL (WORLD AGE GROUP COMPETITIONS) EN NANJING, CHINA",
+   "fechas": "12 al 15 de noviembre",
+   "etiqueta": "agenda",
+   "seccion": "agenda",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://diariojornada.com.ar/426511/deportes/tres_chubutenses_representaran_a_argentina_en_el_mundial_de_china",
+       "href": "https://diariojornada.com.ar/426511/deportes/tres_chubutenses_representaran_a_argentina_en_el_mundial_de_china"
+      },
+      {
+       "t": " (Nota)"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.gymnastics.sport/site/events/detail.php?id=18190",
+       "href": "https://www.gymnastics.sport/site/events/detail.php?id=18190"
+      },
+      {
+       "t": " (Web oficial)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Argentinas: Martina Arguiano Salinas (17 años), Amaia Navarro (13) y Milagros Albarracin Hammond (11), del club Fly de Trelew, y una gimnasta de la Federación Bonaerense"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan pruebas y horarios"
+      }
+     ]
+    }
+   ],
+   "id": "31f587ef5664",
+   "version": "f9d331ea1a",
    "publicado_en_doc": false
   },
   {
