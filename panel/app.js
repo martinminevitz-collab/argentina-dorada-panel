@@ -180,7 +180,9 @@ function cajaAgregarDato(e, t) {
 // ---------- pestaña Bs. As.: planilla de eventos para cubrir + lo de la Agenda que es en Buenos Aires ----------
 function esDeBA(e) {
   const lugares = (estado.ba?.lugares || []).map(sinTildes);
-  const txt = sinTildes([e.titulo, e.evento, e.fechas, ...(e.bloques || []).flatMap((b) => (b.partes || []).map((p) => p.t))].join(" "));
+  // solo título, fechas/lugar y líneas de sede: en el detalle hay nombres de deportistas (ej. "Lautaro Núñez", "Pilar")
+  const sede = (e.bloques || []).map((b) => (b.partes || []).map((p) => p.t).join("")).filter((t) => /^\s*(📍|lugar|sede)/i.test(t));
+  const txt = sinTildes([e.titulo, e.evento, e.fechas, ...sede].join(" "));
   return lugares.some((l) => new RegExp(`\\b${l.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`).test(txt));
 }
 function eventosBA() {
