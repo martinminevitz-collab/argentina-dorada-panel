@@ -1,6 +1,11 @@
 {
- "actualizado": "2026-11-10T22:28-03:00",
+ "actualizado": "2026-11-11T01:18-03:00",
  "dias": [
+  {
+   "fecha": "2026-11-11",
+   "archivo": "hallazgos/2026/11/2026-11-11.json",
+   "cantidad": 22
+  },
   {
    "fecha": "2026-11-10",
    "archivo": "hallazgos/2026/11/2026-11-10.json",
