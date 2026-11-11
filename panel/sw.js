@@ -1,5 +1,5 @@
 // Permite instalar el panel como app y abrirlo aunque no haya señal (muestra lo último que bajó).
-const CACHE = "ad-panel-v20";
+const CACHE = "ad-panel-v21";
 const BASE = ["./", "index.html", "estilos.css", "app.js", "graficas.js", "base.js", "config.js", "manifest.webmanifest", "iconos/icono.svg"];
 
 self.addEventListener("install", (e) => e.waitUntil(caches.open(CACHE).then((c) => c.addAll(BASE)).then(() => self.skipWaiting())));

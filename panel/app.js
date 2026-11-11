@@ -193,8 +193,11 @@ function eventosBA() {
     return { id: "ba:" + huella(f.evento + f.inicio), titulo: f.evento, evento: f.evento, deporte: f.deporte, seccion: "agenda", etiqueta: "agenda",
       fechas: [fechas, f.lugar].filter(Boolean).join(" · "), bloques, version: "1" };
   });
-  const vistos = new Set(deLaPlanilla.map((e) => sinTildes(e.titulo)));
-  const deLaAgenda = estado.eventos.filter((e) => e.seccion === "agenda" && !e.multideportivo && esDeBA(e) && !vistos.has(sinTildes(e.titulo)));
+  // si un evento de la Agenda ya está en la planilla (títulos parecidos), queda solo el de la planilla
+  const palabras = (t) => new Set(sinTildes(t).split(/[^a-z0-9]+/).filter((w) => w.length > 3));
+  const planilla = deLaPlanilla.map((e) => palabras(e.titulo));
+  const repetido = (e) => { const p = palabras(e.titulo); return planilla.some((q) => [...p].filter((w) => q.has(w)).length >= Math.max(2, Math.min(p.size, q.size) * 0.5)); };
+  const deLaAgenda = estado.eventos.filter((e) => e.seccion === "agenda" && !e.multideportivo && esDeBA(e) && !repetido(e));
   const q = sinTildes($("#buscar").value), dep = $("#deporte").value;
   return [...deLaPlanilla, ...deLaAgenda].filter((e) => (!dep || e.deporte === dep) && (!q || sinTildes(e.titulo + " " + e.deporte + " " + e.fechas).includes(q)));
 }

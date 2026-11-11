@@ -15,6 +15,13 @@ from bots.comun import guardar
 from bots.comun.red import bajar
 from bots.comun.texto import normalizar
 
+
+def cabecera(t):
+    """'Fecha  inicio ' -> 'FECHA INICIO' (sin tildes ni espacios de más)."""
+    import unicodedata
+    t = unicodedata.normalize("NFKD", t or "").encode("ascii", "ignore").decode()
+    return " ".join(t.upper().split())
+
 COLUMNAS = {"deporte": "DEPORTE", "evento": "EVENTO", "inicio": "FECHA INICIO", "fin": "FECHA FINAL",
             "lugar": "LUGAR", "fuente": "FUENTE", "nota": "NOTA"}
 
@@ -42,9 +49,9 @@ def leer_csv(url):
     filas = list(csv.reader(io.StringIO(texto)))
     # la fila de títulos es la primera que tiene "EVENTO"
     for i, fila in enumerate(filas):
-        cab = [normalizar(c).upper() for c in fila]
+        cab = [cabecera(c) for c in fila]
         if "EVENTO" in cab:
-            idx = {k: cab.index(normalizar(v).upper()) for k, v in COLUMNAS.items() if normalizar(v).upper() in cab}
+            idx = {k: cab.index(v) for k, v in COLUMNAS.items() if v in cab}
             for f in filas[i + 1:]:
                 ev = {k: (f[j].strip() if j < len(f) else "") for k, j in idx.items()}
                 if ev.get("evento"):
