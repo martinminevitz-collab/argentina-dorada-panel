@@ -1,6 +1,6 @@
 {
- "leido": "2026-11-11T11:58-03:00",
- "actualizado_doc": "11/11/2026 11:00",
+ "leido": "2026-11-11T23:54-03:00",
+ "actualizado_doc": "11/11/2026 23:00",
  "eventos": [
   {
    "titulo": "FUTSAL - FINALISSIMA EN NITERÓI (RÍO DE JANEIRO), BRASIL",
@@ -293,6 +293,64 @@
    "version": "24345ea1a4",
    "publicado_en_doc": false,
    "terminado_desde": "2026-11-10"
+  },
+  {
+   "titulo": "GIMNASIA RÍTMICA - SUDAMERICANO JUNIOR Y GRUPO DE EDADES EN MEDELLÍN, COLOMBIA",
+   "deporte": "GIMNASIA RÍTMICA",
+   "evento": "SUDAMERICANO JUNIOR Y GRUPO DE EDADES EN MEDELLÍN, COLOMBIA",
+   "fechas": null,
+   "etiqueta": "mas_info",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se compitió del 3 al 8/11"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "All Around",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Catalina Neri obtuvo la medalla de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      },
+      {
+       "t": " en el All Around"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan: link de resultados, puntaje y resto de las argentinas"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "14dac091"
+   ],
+   "id": "410c978a4ed6",
+   "version": "beb64b246b",
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-11"
   },
   {
    "titulo": "PÁDEL - MUNDIAL FIP EN DOHA, QATAR",
@@ -2190,7 +2248,7 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Próximo: miércoles 11/11 Agustín Hoffmann sigue en windsurf (regatas 10 a 12). Jueves 12/11 Catalina Borrelli en sable femenino, Hoffmann cierra las regatas (13 a 15) y "
+       "t": "Próximo: jueves 12/11 Catalina Borrelli en sable femenino, Agustín Hoffmann cierra su participación en windsurf (regatas 13 a 15) y "
       },
       {
        "t": "Final de futsal vs Portugal el jueves 12/11 a las 12:30hs",
@@ -2235,7 +2293,72 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Agustín Hoffmann corre hoy las regatas 10 a 12 del Techno 293 (primera largada 10:03hs de Argentina)"
+       "t": "Agustín Hoffmann corrió las regatas 10 a 12 del Techno 293. Faltan sus puestos (no salieron en la web oficial)"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.mdzol.com/deportes/2026/11/11/juegos-olimpicos-de-la-juventud-el-mendocino-agustin-hoffmann-cierra-este-jueves-su-participacion-en-windsurf-1994824.html",
+       "href": "https://www.mdzol.com/deportes/2026/11/11/juegos-olimpicos-de-la-juventud-el-mendocino-agustin-hoffmann-cierra-este-jueves-su-participacion-en-windsurf-1994824.html"
+      },
+      {
+       "t": " (Nota)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "El jueves 12/11 cierra su participación con las últimas regatas"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "RESUMEN DÍA 12",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Agustín Hoffmann fue el único argentino en competencia: corrió las regatas 10 a 12 en windsurf"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Jueves 12/11: el futsal juega la final vs Portugal a las 12:30hs y va por la medalla DORADA",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Jueves 12/11 también compiten Catalina Borrelli (sable) y Hoffmann (últimas regatas)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Para el posteo: Miércoles tranquilo para el Equipo Argentino en Dakar 2026, con Agustín Hoffmann sumando regatas en windsurf. Pero el jueves es un día enorme: la Selección de futsal juega la final ante Portugal a las 12:30 y va por la medalla dorada. Además debuta Catalina Borrelli en sable y Hoffmann cierra su participación. ¡Vamos Argentina!"
       }
      ]
     },
@@ -3363,7 +3486,7 @@
     }
    ],
    "id": "a9a35774136e",
-   "version": "abdbb8a5cf",
+   "version": "306b9f78dc",
    "multideportivo": true,
    "multi": {
     "nombre": "Dakar 2026",
@@ -3554,7 +3677,7 @@
       "tipo": "texto",
       "partes": [
        {
-        "t": "Próximo: miércoles 11/11 Agustín Hoffmann sigue en windsurf (regatas 10 a 12). Jueves 12/11 Catalina Borrelli en sable femenino, Hoffmann cierra las regatas (13 a 15) y "
+        "t": "Próximo: jueves 12/11 Catalina Borrelli en sable femenino, Agustín Hoffmann cierra su participación en windsurf (regatas 13 a 15) y "
        },
        {
         "t": "Final de futsal vs Portugal el jueves 12/11 a las 12:30hs",
@@ -3615,7 +3738,27 @@
           "tipo": "texto",
           "partes": [
            {
-            "t": "Agustín Hoffmann corre hoy las regatas 10 a 12 del Techno 293 (primera largada 10:03hs de Argentina)"
+            "t": "Agustín Hoffmann corrió las regatas 10 a 12 del Techno 293. Faltan sus puestos (no salieron en la web oficial)"
+           }
+          ]
+         },
+         {
+          "tipo": "link",
+          "partes": [
+           {
+            "t": "https://www.mdzol.com/deportes/2026/11/11/juegos-olimpicos-de-la-juventud-el-mendocino-agustin-hoffmann-cierra-este-jueves-su-participacion-en-windsurf-1994824.html",
+            "href": "https://www.mdzol.com/deportes/2026/11/11/juegos-olimpicos-de-la-juventud-el-mendocino-agustin-hoffmann-cierra-este-jueves-su-participacion-en-windsurf-1994824.html"
+           },
+           {
+            "t": " (Nota)"
+           }
+          ]
+         },
+         {
+          "tipo": "texto",
+          "partes": [
+           {
+            "t": "El jueves 12/11 cierra su participación con las últimas regatas"
            }
           ]
          }
@@ -3623,8 +3766,34 @@
        }
       ],
       "resumen": {
-       "destacados": [],
-       "posteo": ""
+       "destacados": [
+        {
+         "tipo": "texto",
+         "partes": [
+          {
+           "t": "Agustín Hoffmann fue el único argentino en competencia: corrió las regatas 10 a 12 en windsurf"
+          }
+         ]
+        },
+        {
+         "tipo": "sub",
+         "partes": [
+          {
+           "t": "Jueves 12/11: el futsal juega la final vs Portugal a las 12:30hs y va por la medalla DORADA",
+           "b": true
+          }
+         ]
+        },
+        {
+         "tipo": "texto",
+         "partes": [
+          {
+           "t": "Jueves 12/11 también compiten Catalina Borrelli (sable) y Hoffmann (últimas regatas)"
+          }
+         ]
+        }
+       ],
+       "posteo": "Miércoles tranquilo para el Equipo Argentino en Dakar 2026, con Agustín Hoffmann sumando regatas en windsurf. Pero el jueves es un día enorme: la Selección de futsal juega la final ante Portugal a las 12:30 y va por la medalla dorada. Además debuta Catalina Borrelli en sable y Hoffmann cierra su participación. ¡Vamos Argentina!"
       }
      },
      {
@@ -4653,7 +4822,27 @@
           "tipo": "texto",
           "partes": [
            {
-            "t": "Agustín Hoffmann corre hoy las regatas 10 a 12 del Techno 293 (primera largada 10:03hs de Argentina)"
+            "t": "Agustín Hoffmann corrió las regatas 10 a 12 del Techno 293. Faltan sus puestos (no salieron en la web oficial)"
+           }
+          ]
+         },
+         {
+          "tipo": "link",
+          "partes": [
+           {
+            "t": "https://www.mdzol.com/deportes/2026/11/11/juegos-olimpicos-de-la-juventud-el-mendocino-agustin-hoffmann-cierra-este-jueves-su-participacion-en-windsurf-1994824.html",
+            "href": "https://www.mdzol.com/deportes/2026/11/11/juegos-olimpicos-de-la-juventud-el-mendocino-agustin-hoffmann-cierra-este-jueves-su-participacion-en-windsurf-1994824.html"
+           },
+           {
+            "t": " (Nota)"
+           }
+          ]
+         },
+         {
+          "tipo": "texto",
+          "partes": [
+           {
+            "t": "El jueves 12/11 cierra su participación con las últimas regatas"
            }
           ]
          }
@@ -5640,6 +5829,101 @@
    "publicado_en_doc": false
   },
   {
+   "titulo": "HANDBALL - SUR-CENTRO JUNIOR (U20) Y JUVENIL (U18) MASCULINO EN ASUNCIÓN, PARAGUAY (10 al 14 de noviembre)",
+   "deporte": "HANDBALL",
+   "evento": "SUR-CENTRO JUNIOR (U20) Y JUVENIL (U18) MASCULINO EN ASUNCIÓN, PARAGUAY",
+   "fechas": "10 al 14 de noviembre",
+   "etiqueta": "en_curso",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://handballargentina.org/cah/2026/11/debut-con-victoria-para-argentina-en-los-sur-centro-u-18-y-u-20/",
+       "href": "https://handballargentina.org/cah/2026/11/debut-con-victoria-para-argentina-en-los-sur-centro-u-18-y-u-20/"
+      },
+      {
+       "t": " (Nota)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se juega en el Arena COP. Cada torneo da 3 plazas para el Mundial 2027"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Junior (U20)",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Debut: 53-8 vs Nicaragua (Juan Martín Lete 8, Iker Lazcano 6, Juan Cruz Gawlinski 5 y Jeremías Bus 5)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "vs Guayana Francesa el miércoles 11/11 a las 13:30hs",
+       "b": true
+      },
+      {
+       "t": " (falta el resultado)"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Juvenil (U18)",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Debut: 38-9 vs Paraguay (Matías Svarzchtein 7, Juan Pallero 7 y Camilo Sciglitano 5)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "vs El Salvador el miércoles 11/11 a las 15:30hs",
+       "b": true
+      },
+      {
+       "t": " (falta el resultado)"
+      }
+     ]
+    }
+   ],
+   "id": "e443096a7e7f",
+   "version": "ae5e2c0472",
+   "publicado_en_doc": false
+  },
+  {
    "titulo": "BOCCIA - WORLD CUP EN SAN PABLO, BRASIL (6 al 12 de noviembre)",
    "deporte": "BOCCIA",
    "evento": "WORLD CUP EN SAN PABLO, BRASIL",
@@ -6284,15 +6568,6 @@
      ]
     },
     {
-     "tipo": "sub",
-     "partes": [
-      {
-       "t": "3ra ronda el miércoles 11/11: serie 5 vs Ethan Ewing (AUS) y Luke van Wyk (RSA)",
-       "b": true
-      }
-     ]
-    },
-    {
      "tipo": "texto",
      "partes": [
       {
@@ -6361,24 +6636,6 @@
      "partes": [
       {
        "t": "Victoria Muñoz Larreta ganó el heat 7 con 9.20 por delante de Myriam Benzarli (MAR) 5.23, Katrina Kruze (LAT) 3.07 y Nina Smicklas (GER) y pasó a la 3ra ronda del Repechaje"
-      }
-     ]
-    },
-    {
-     "tipo": "sub",
-     "partes": [
-      {
-       "t": "Miércoles 11/11: Joaquín Muñoz Larreta y Thiago Passeri en la serie 7 de la 3ra ronda del Repechaje vs Taimana Marupo (NZL) y Roberto Araki (CHI)",
-       "b": true
-      }
-     ]
-    },
-    {
-     "tipo": "sub",
-     "partes": [
-      {
-       "t": "Miércoles 11/11: Victoria Muñoz Larreta en la serie 3 de la 3ra ronda del Repechaje vs Faviola Alcalá (PUR), Lune van Dijk (NED) y Grace Gundry (NZL)",
-       "b": true
       }
      ]
     },
@@ -6455,10 +6712,93 @@
      ]
     },
     {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.lacapitalmdp.com/la-presencia-argentina-continua-con-equipo-completo-en-punta-rocas/",
+       "href": "https://www.lacapitalmdp.com/la-presencia-argentina-continua-con-equipo-completo-en-punta-rocas/"
+      },
+      {
+       "t": " (Nota miércoles 11/11)"
+      }
+     ]
+    },
+    {
      "tipo": "sub",
      "partes": [
       {
-       "t": "3ra ronda el miércoles 11/11: Lucía Indurain en la serie 9 vs Nadia Erostarbe (ESP) y Kana Nakashio (JPN)",
+       "t": "Ronda 3 (miércoles 11/11)",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Franco Radziunas fue 2° en la serie 5 con 11.93 (detrás de Ethan Ewing (AUS) 12.00; Luke van Wyk (RSA) 6.66 fue al Repechaje) y pasó a la 4ta ronda del cuadro principal"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Vera Jarisz fue 2° en la serie 10 con 11.97 (detrás de Luana Silva (BRA) 12.96, por delante de Louise Lepront (RSA)) y pasó a la 4ta ronda del cuadro principal"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Lucía Indurain fue 3° en la serie 9 con 4.80 (detrás de Kana Nakashio (JPN) 11.20 y Nadia Erostarbe (ESP) 10.23) y pasó al Repechaje"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Joaquín Muñoz Larreta ganó la serie 7 de la 3ra ronda del Repechaje con 9.24 y pasó a la 4ta ronda del Repechaje"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Thiago Passeri fue 2° en esa serie con 9.06 (quedaron afuera Taimana Marupo (NZL) 8.83 y Roberto Araki (CHI) 8.60) y pasó a la 4ta ronda del Repechaje"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Victoria Muñoz Larreta ganó la serie 3 de la 3ra ronda del Repechaje con 10.07 (por delante de Faviola Alcalá (PUR) 8.63) y pasó a la 4ta ronda del Repechaje"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Los 6 argentinos siguen en carrera"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "4ta ronda del Repechaje el jueves 12/11 desde las 9hs: Passeri y Joaquín Muñoz Larreta; Victoria Muñoz Larreta (serie 7 vs Dominic Barona (ECU) y Enilda Alonso (PAN)); Lucía Indurain (serie 9 vs Charlotte Mulley (GBR) y Faviola Alcalá (PUR))",
        "b": true
       }
      ]
@@ -6467,14 +6807,14 @@
      "tipo": "sub",
      "partes": [
       {
-       "t": "3ra ronda el miércoles 11/11: Vera Jarisz en la serie 10 vs Luana Silva (BRA) y Louise Lepront (RSA)",
+       "t": "4ta ronda del cuadro principal el viernes 13/11: Franco Radziunas (heat 4 vs Italo Ferreira (BRA), Yago Dora (BRA) y Kanoa Igarashi (JPN)) y Vera Jarisz",
        "b": true
       }
      ]
     }
    ],
    "id": "31518371aee9",
-   "version": "99444bd69d",
+   "version": "d1f5124844",
    "publicado_en_doc": false
   },
   {
@@ -6606,6 +6946,43 @@
    "publicado_en_doc": false
   },
   {
+   "titulo": "NATACIÓN ADAPTADA - PARA SWIMMING WORLD SERIES EN LIMA, PERÚ (12 al 14 de noviembre)",
+   "deporte": "NATACIÓN ADAPTADA",
+   "evento": "PARA SWIMMING WORLD SERIES EN LIMA, PERÚ",
+   "fechas": "12 al 14 de noviembre",
+   "etiqueta": "agenda",
+   "seccion": "agenda",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.paralympic.org/swimming/world-series-2026",
+       "href": "https://www.paralympic.org/swimming/world-series-2026"
+      },
+      {
+       "t": " (Web oficial)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Delegación argentina de 15 deportistas: Nadia Báez, Matías de Andrade, Elizabeth Noriega, Analuz Pellitero, Mateo Vives, Lucas Leguiza, Nicolás Ricci, Nicolás Rivero, Paula Ibarra, Tomás Fangio, Tiziana Forlano, Santino Insaurralde, Alma Roisman, Paul Ferreira y Lautaro Núñez"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "51c960f0"
+   ],
+   "id": "d76e45b4bd6a",
+   "version": "a8ce7c89ce",
+   "publicado_en_doc": false
+  },
+  {
    "titulo": "FÚTBOL - FECHA FIFA: AMISTOSOS DE LA SELECCIÓN MAYOR EN ARGENTINA (13 y 17 de noviembre)",
    "deporte": "FÚTBOL",
    "evento": "FECHA FIFA: AMISTOSOS DE LA SELECCIÓN MAYOR EN ARGENTINA",
@@ -6692,6 +7069,128 @@
    "publicado_en_doc": false
   },
   {
+   "titulo": "TENIS DE MESA ADAPTADO - CAMPEONATO MUNDIAL EN TAILANDIA (13 al 19 de noviembre)",
+   "deporte": "TENIS DE MESA ADAPTADO",
+   "evento": "CAMPEONATO MUNDIAL EN TAILANDIA",
+   "fechas": "13 al 19 de noviembre",
+   "etiqueta": "agenda",
+   "seccion": "agenda",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://enard.org.ar/agenda_noviembre_2026/",
+       "href": "https://enard.org.ar/agenda_noviembre_2026/"
+      },
+      {
+       "t": " (Agenda ENARD)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan ciudad y argentinos convocados"
+      }
+     ]
+    }
+   ],
+   "id": "071365d469c2",
+   "version": "6417adf422",
+   "publicado_en_doc": false
+  },
+  {
+   "titulo": "BOXEO - PAPP CUP EN BUDAPEST, HUNGRÍA (14 de noviembre)",
+   "deporte": "BOXEO",
+   "evento": "PAPP CUP EN BUDAPEST, HUNGRÍA",
+   "fechas": "14 de noviembre",
+   "etiqueta": "agenda",
+   "seccion": "agenda",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://pappcup.org/en/home/",
+       "href": "https://pappcup.org/en/home/"
+      },
+      {
+       "t": " (Web oficial)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Formato nuevo de 10 combates en el que cada victoria suma para definir qué continente gana la copa, parecido a la Laver Cup de tenis"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "65kg Femenino",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Lucía Muello (@luu_muello) vs Anna Luca Hamori (HUN), diploma olímpico en París 2024"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "eefc9fb9"
+   ],
+   "id": "85250ce34db4",
+   "version": "8cc757c981",
+   "publicado_en_doc": false
+  },
+  {
+   "titulo": "VELA - CAMPEONATO SUDAMERICANO EN RÍO DE JANEIRO, BRASIL (14 al 18 de noviembre)",
+   "deporte": "VELA",
+   "evento": "CAMPEONATO SUDAMERICANO EN RÍO DE JANEIRO, BRASIL",
+   "fechas": "14 al 18 de noviembre",
+   "etiqueta": "agenda",
+   "seccion": "agenda",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://enard.org.ar/agenda_noviembre_2026/",
+       "href": "https://enard.org.ar/agenda_noviembre_2026/"
+      },
+      {
+       "t": " (Agenda ENARD)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan clases y regatistas argentinos"
+      }
+     ]
+    }
+   ],
+   "id": "7a44a2ecec03",
+   "version": "0bc5875cea",
+   "publicado_en_doc": false
+  },
+  {
    "titulo": "ATLETISMO - CAMPEONATO SUDAMERICANO DE MARATÓN Y RUTA EN SANTIAGO (15 de noviembre)",
    "deporte": "ATLETISMO",
    "evento": "CAMPEONATO SUDAMERICANO DE MARATÓN Y RUTA EN SANTIAGO",
@@ -6707,10 +7206,25 @@
        "t": "Compiten 24 argentinos. Falta la lista y confirmar si es Santiago de Chile"
       }
      ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Según la agenda de ENARD el 15/11 es el Campeonato Sudamericano de Milla en Santiago de Chile (Creo que es el mismo evento) ("
+      },
+      {
+       "t": "https://enard.org.ar/agenda_noviembre_2026/",
+       "href": "https://enard.org.ar/agenda_noviembre_2026/"
+      },
+      {
+       "t": ")"
+      }
+     ]
     }
    ],
    "id": "2cd9eccdc019",
-   "version": "9a052aa722",
+   "version": "6c9ed2328f",
    "publicado_en_doc": false
   },
   {
@@ -6821,6 +7335,40 @@
    ],
    "id": "cde49e99022c",
    "version": "48b8342156",
+   "publicado_en_doc": false
+  },
+  {
+   "titulo": "TIRO - CAMPEONATO PANAMERICANO EN LIMA, PERÚ (20 al 29 de noviembre)",
+   "deporte": "TIRO",
+   "evento": "CAMPEONATO PANAMERICANO EN LIMA, PERÚ",
+   "fechas": "20 al 29 de noviembre",
+   "etiqueta": "agenda",
+   "seccion": "agenda",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://enard.org.ar/agenda_noviembre_2026/",
+       "href": "https://enard.org.ar/agenda_noviembre_2026/"
+      },
+      {
+       "t": " (Agenda ENARD)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan los tiradores argentinos y las pruebas"
+      }
+     ]
+    }
+   ],
+   "id": "4daf7f1aef2a",
+   "version": "28d1a852f3",
    "publicado_en_doc": false
   },
   {
@@ -7067,6 +7615,43 @@
    ],
    "id": "b7d50d18f33c",
    "version": "b678ca096b",
+   "publicado_en_doc": false
+  },
+  {
+   "titulo": "DODGEBALL - CAMPEONATO MUNDIAL EN BANGKOK, TAILANDIA (5 al 13 de diciembre)",
+   "deporte": "DODGEBALL",
+   "evento": "CAMPEONATO MUNDIAL EN BANGKOK, TAILANDIA",
+   "fechas": "5 al 13 de diciembre",
+   "etiqueta": "agenda",
+   "seccion": "agenda",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://dodgeballhub.com/",
+       "href": "https://dodgeballhub.com/"
+      },
+      {
+       "t": " (Info)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan equipos argentinos y cronograma"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "d7e8d0e5"
+   ],
+   "id": "066c3036061d",
+   "version": "4b0ca36307",
    "publicado_en_doc": false
   },
   {
