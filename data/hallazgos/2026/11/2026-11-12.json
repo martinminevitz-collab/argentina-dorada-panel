@@ -1,5 +1,174 @@
 [
  {
+  "id": "b2f3ad3b33be",
+  "titulo": "El CePARD será sede de una velada internacional de boxeo con representantes de Argentina, México y Chile",
+  "resumen": "El CePARD será sede de una velada internacional de boxeo con representantes de Argentina, México y Chile La Opinión Austral",
+  "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNcDFLOHlkRGZfM1FEM3pBXzk4UUhzcTZ6SXVFd2MzQkdsTGZEOGdhdDlBV2dxYkJraXlXUDlfcWs3QWpHd2lSWkV5WlJMTy1HalFoNXEwdzFwb1ZjbEVtcXVRT3huOHJXVmJQX0psZTV4Mkp1QV81dG5VTUtYRXBrcTh4ajFqcmVpc1ZOVEFWeWFLQy1DVjI0d1RVa1o3Y0lsX01TUmk0YmVIOU5FODVDWVJiZjZhR3FwYlhJOHhGbVE4N1RGZS0zcHZiR0JEZTRiMEc4eGNtVy1mRWQ0YlV2OFBqNm50NmhJM0VZSG9n?oc=5",
+  "fuente": "La Opinión Austral",
+  "deporte": "Boxeo",
+  "tipo": "agenda",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-12T21:42+00:00",
+  "encontrado": "2026-11-12T19:01-03:00",
+  "bot": "resultados"
+ },
+ {
+  "id": "e721ee01df1c",
+  "titulo": "Un rival de Las Leonas en la Pro League se quedó sin entrenadora",
+  "resumen": "Un rival de Las Leonas en la Pro League se quedó sin entrenadora ESPN Argentina",
+  "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxOczlpWVNZN0ZmaDRVZ0czc0tEUlctLVRZOThFcjJyUTlWVFVFb1AzRWU5eDhueFhnLTV6WjhwTjJRSkttZzRmYVNvWHJVV0lRWUlMUW9VUy1JY3llTkFYUksxbV9vd0s5N19rNUE0OFpMTnhXTjV3UWRwR3lTZUVvZDR5NkMzYi15bmppM01WbUJ6c25wNDJyaFlMbnRab002VnNJaXpnamNDYUlyTUc5OFhEdkhSTC1MaFRRbjNvWFBOTVZldDVTdU9yODhfRTNPWEhDTVRISlprYjhLQ0NBbFczbFFRU1U?oc=5",
+  "fuente": "ESPN Argentina",
+  "deporte": "Hockey",
+  "tipo": "resultado",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-12T20:42+00:00",
+  "encontrado": "2026-11-12T19:02-03:00",
+  "bot": "resultados"
+ },
+ {
+  "id": "86cd45052a68",
+  "titulo": "Domingo Miotti fue convocado por Italia: por qué el tucumano no jugará contra Los Pumas y qué dijo Gonzalo Quesada",
+  "resumen": "Domingo Miotti fue convocado por Italia: por qué el tucumano no jugará contra Los Pumas y qué dijo Gonzalo Quesada La Gaceta",
+  "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOeUlZQzFJRWRWU0h0dWZrdXdmZklFV0Z3bVBpbXlnWENQTXB6LUJxMW8tT2o3LTBxazZLeHZVMGd2VzJRNENDWFNLcUdiWEtFWk5DM2I1OU96Rm4zRXJiSTZSZUNpdHFhYWNfYmJGdFR5dTdtX2RUcEQ1NkNYVi1LeXRjejRuM1ZZWl9wVUZNdC1PcXJpRy1zM1ZZWndTNklPYU1HQ1JTcFlxYjFOeEItS3Raa3dVS2xKRW42RDFJdWE2QmQ4YjJIdVFvS0dOVzR2Q0toc1ZyZ01iaW_SAeABQVVfeXFMTW9IOGJOY0RlMUljQTdDTmJDZUN3ZjlrRThaZ1VFMURUNHlqcWptQlhBaUhfd3RIXzdNSlI0QmxTZFhVWDBNc1RCOW03aDZSV1dwSHNIdXBialBjQnZoNHpINVYtejNvbHFueFAyMDVCUWVUWGthN1hrMGFDdWxwQV9VTHhDMGlKYnFZMVJVRjY5dUZOMjJUcWszVzZWS2lsa1h4TnRTSm9PRGsxVWRTOWg5anlUYk82QUZsNnB6V050RFYzQldTaXJ1TVNLczZ4YTQxOU5YRUVlZXhoUDVGRmE?oc=5",
+  "fuente": "La Gaceta",
+  "deporte": "Rugby",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-12T20:42+00:00",
+  "encontrado": "2026-11-12T19:03-03:00",
+  "bot": "resultados"
+ },
+ {
+  "id": "6fa09cc92556",
+  "titulo": "Inglaterra usó los discursos de Milei para boicotear el reclamo argentino en el Tribunal del Mar",
+  "resumen": "Inglaterra usó los discursos de Milei para boicotear el reclamo argentino en el Tribunal del Mar Agenda Malvinas",
+  "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOWmJBS21vVnlWWHF2UjFsMzRRYUI3TGhtZTBFVjIzalZvZW1YVl9QQXFESzNPTXRKb2ZDSGhYVnZBTDNSOGFBaU9IUVV5QjhTamdMNHdtcFBLMUlxTGlqVUx2am1pdW5NelNQakl2akhSMlJQS2hCd3VtNEdPN3VxVFlzSkhHRERVaW96V1I3TFo3alR5OVdZN2FydXM0S2dEWmFSV1pNamdVU3NFOXdTcUZVNzVFSGpqaUJNVHNNZ2Ewbm1SeXFlXzlua0pnWEE?oc=5",
+  "fuente": "Agenda Malvinas",
+  "deporte": "Escalada",
+  "tipo": "agenda",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-12T20:19+00:00",
+  "encontrado": "2026-11-12T19:01-03:00",
+  "bot": "resultados"
+ },
+ {
+  "id": "8f9f236a8a0f",
+  "titulo": "¿Quién es Jordan Alejandro? Familia del argentino detenido durante captura de ´R2´ denuncia violación de sus derechos",
+  "resumen": "¿Quién es Jordan Alejandro? Familia del argentino detenido durante captura de ´R2´ denuncia violación de sus derechos Ovaciones",
+  "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxORjJiVVc0VlZXOXNVREx4NnF0b2EwV3BRLXRJeGcxMkhCS19jN0J5aGx2dzZmYUR4MFdDSEJCa2s2SkF1RG5qdGhLRnZzcW5rM29rSVJObHdoZXVsNjZPQmY2RFluVktCV0lPd2Qxdk9LZ2lGd3FaeVBJV2FGbnNHY1FuNjI4ajAtRGVGbjQ5aDE5Y1BidnFwUzdoT2REUzVlbDN3NmJWSkNqLVNvRW15azFDUWs2ZERDbEMxT2ZFdDMxbGd3WHY4cVFpb1pqM2EwZmd4eXg4elc0NlNuYkpfd0JzRlZYM18xWHFRejdlX0RPTU0?oc=5",
+  "fuente": "Ovaciones",
+  "deporte": "Futbol americano",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-12T20:07+00:00",
+  "encontrado": "2026-11-12T19:01-03:00",
+  "bot": "resultados"
+ },
+ {
+  "id": "30c2a68056e6",
+  "titulo": "Delfina Merino cruzó a Fernando Ferrara, DT de Las Leonas, por su salida del equipo: “Me sacaste del entrenamiento con las canilleras puestas”",
+  "resumen": "Delfina Merino cruzó a Fernando Ferrara, DT de Las Leonas, por su salida del equipo: “Me sacaste del entrenamiento con las canilleras puestas” La Nación",
+  "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPNFpXNVNoQTAwX3oxUVFNaUlqTk9CM0xmdkN5bktIOV9zX1RkTFpuOFFNVWdkbjNDejREYVpYZ2g2c1pjU21rTlRJSFhScGFRR2NzalVMY2NNVjF3aW42dTNQUDIwM0tOU0thSUJGdmlteWxaTGx1djJDSmJGLXUtNzhVT0FrUGNNR3hqM0FWUU1QZUlLZGRQTjdIXzF0WWVZcHNWeG9KYnV0QjR0ckY1ZGhCY2IwNXQ4NDNfdDBncjBnek83UGlGWS1VOFJudEw5NkZhUmF0cTBPOEw5YS1j?oc=5",
+  "fuente": "La Nación",
+  "deporte": "Hockey",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-12T19:57+00:00",
+  "encontrado": "2026-11-12T19:02-03:00",
+  "bot": "resultados"
+ },
+ {
+  "id": "2593a961c56c",
+  "titulo": "Anuncian jornada de lucha en defensa del sistema nuclear argentino",
+  "resumen": "Anuncian jornada de lucha en defensa del sistema nuclear argentino Canal Abierto",
+  "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQY1ZHcDBDSTljb0FDUnluc0xGSVJUc0pEdkVXdUw5LTFwSFlvWGpuT2JlY25xUU1sU2RuVGtrb3Y3QnJUbVY4ZkVJejZzSWM0M2VuTzRjWjlfYWI3ZHFLZXdnaEJON3JmM1NZYzJtdmNONmVlWW5xV2JzUGhIdVlHNGdQTFlCSmxtVE13NGFlT2twOHVzOGN2d0FyeFpka0o1MTJKUUNCUWNXb2gwUWY40gGvAUFVX3lxTFBjVkdwMENJOWNvQUNSeW5zTEZJUlRzSkR2RVd1TDktMXBIWW9Yam5PYmVjbnFRTWxTZG5Ua2tvdjdCclRtVjhmRUl6NnNJYzQzZW5PNGNaOV9hYjdkcUtld2doQk43cmYzU1ljMm12Y042ZWVZbnFXYnNQaEh1WUc0Z1BMWUJKbG1UTXc0YWVPa3A4dXM4Y3Z3QXJ4WmRrSjUxMkpRQ0JRY1dvaDBRZjg?oc=5",
+  "fuente": "Canal Abierto",
+  "deporte": "Lucha",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-12T19:54+00:00",
+  "encontrado": "2026-11-12T19:02-03:00",
+  "bot": "resultados"
+ },
+ {
+  "id": "112d38f56983",
+  "titulo": "Gabriela Gómez Patiño destaca en Panamericano Máster de Natación en Argentina - El Sol de Irapuato",
+  "resumen": "Gabriela Gómez Patiño destaca en Panamericano Máster de Natación en Argentina - El Sol de Irapuato El Sol de México",
+  "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPNGhBSVJqT3ZJSXI4VTBHZTVzYzRjSTVCNjhPbThGbThqOUxVYlFhMENoeDUzQjNBOEg5M0wwWlQ1M2JEejMyOG4yTWNqLWQ4bTdweWk4WWM5NW5zNlZfcEtjYVJmNzZzaHJ6YnNfMEtIUlRlWkY2NkNvNE96NWpjMDZVdHdVbnFfTU9MZl9zaWZ6dGdGMHFmcVE0UlB6ZVJ1X3VkNFgyVTh3QW9PTFpmdHVVRFVhWllQVk10NFVLQXp1bGctUVRra05R?oc=5",
+  "fuente": "El Sol de México",
+  "deporte": "Atletismo",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-12T19:52+00:00",
+  "encontrado": "2026-11-12T19:00-03:00",
+  "bot": "resultados"
+ },
+ {
+  "id": "2efca2f351f3",
+  "titulo": "Argentina venció 2-1 a Portugal y se consagró en los Juegos Olímpicos de la Juventud",
+  "resumen": "Argentina venció 2-1 a Portugal y se consagró en los Juegos Olímpicos de la Juventud ADNSUR",
+  "link": "https://news.google.com/rss/articles/CBMijAJBVV95cUxQdHNTa1Jrdi15TXhpeXJQOHc2cl9oN0RvTloxS2tvRmk1Vm9qVVhFWUU1OHlmLUtLTjdpa21jaE5JSE96VFotZUFiWURxT1gwZkp1OTB3QzVES0lYRmVZeEdqVkc5X21KeUJYZHpvU1g2ZjBpa29JbXJCcnBvQkJaWFJxSVJacnptak84YWNOUzBTSVJGTEJFNk5yanQ5YS05dzcxVHlGWFBHbzFkYmNiUF9jYjNqVUhWU21Vd1VCR3p4QW0wWEpvNzczLUJzM0loX0xLYWZlM2ZpVC1Bd0M2RUR6QUpraW5YaWZCa0dfbHk4b09GYjI5YjFBUFNIT2FwZXRHZ2psbFdkMl8w?oc=5",
+  "fuente": "ADNSUR",
+  "deporte": "Futsal",
+  "tipo": "resultado",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-12T19:42+00:00",
+  "encontrado": "2026-11-12T19:01-03:00",
+  "bot": "resultados"
+ },
+ {
+  "id": "bdc2afddbda6",
+  "titulo": "Conociendo a Sungapur: El desafío de \"Los Leones\" ante la Albirroja",
+  "resumen": "Conociendo a Sungapur: El desafío de \"Los Leones\" ante la Albirroja D10",
+  "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNb3VDU19tRThWNTZXVDZUVnJES0VwTC1ELThGdERRVXduWHZXckI2c1VXbldXZWpta1p3ZldaQ2p1bkpEa2lyX3pVbERqSVRhUEdJZ3Y2ZEtwTGRhcGwyekNrc2dCLW5YYkNHa0FRbnZseU9qNnZfTDl2R3BwQkc5dHkza0hWSFVfVURIOU5KNWcwaGphUExWZUhLN00zZ0FyRFVJ0gGjAUFVX3lxTE1vdUNTX21FOFY1NldUNlRWckRLRXBMLUQtOEZ0RFFVd25YdldyQjZzVVduV1dlam1rWndmV1pDanVuSkRraXJfelVsRGpJVGFQR0lndjZkS3BMZGFwbDJ6Q2tzZ0ItblhiQ0drQVFudmx5T2o2dl9MOXZHcHBCRzl0eTNrSFZIVV9VREg5Tko1ZzBoamFQTFZlSEs3TTNnQXJEVUk?oc=5",
+  "fuente": "D10",
+  "deporte": "Hockey",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-12T19:37+00:00",
+  "encontrado": "2026-11-12T19:02-03:00",
+  "bot": "resultados"
+ },
+ {
+  "id": "08676cab7193",
+  "titulo": "Argentina hizo historia en Dakar: le ganó a Portugal y conquistó la medalla de oro en futsal",
+  "resumen": "Argentina hizo historia en Dakar: le ganó a Portugal y conquistó la medalla de oro en futsal Imperio Television Canal 13",
+  "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPY2NrTURqRDB5bWtOSGtoLVRkcndSS041VW1fZ29WWXNkWTBSbHMxQ05DSkttYnJYZjdyMFRNS19Wek9qMm1GOW8yY0JCV2VrWjRHb3poRkFSTjU4T1JyOXZkRVRCcTJjcjBzZUlhOHFHQ1ZNWmZ0eTNxTU5tbGNwSVMzbHFwVGVya2dhalZ5eTl6bHRKYU44clBOalRQcF80STlIUG5qVEtidzBXWVY0Y2FNaFI5YzF6bXFubUx6VzFkNUx3TWFlbWJLZE8xRnBqcHl3dWhJUUNDeGc?oc=5",
+  "fuente": "Imperio Television Canal 13",
+  "deporte": "Futsal",
+  "tipo": "resultado",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-12T19:21+00:00",
+  "encontrado": "2026-11-12T19:01-03:00",
+  "bot": "resultados"
+ },
+ {
+  "id": "7aa2dec808cf",
+  "titulo": "Javier Cieri consiguió dos doradas en el Argentino de Pista Master",
+  "resumen": "Javier Cieri consiguió dos doradas en el Argentino de Pista Master Chacabuco en Red",
+  "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQSDQzYzVNMFhFVVY5VzdlX2E0NVczQnhmcHQ1ZEZyaXRIVmpoTmQ4U3hNQ0xVdFRsTXZFZ3hmamltbG5Vakk3Z1F5VTdCeGpBSnZHNFdPV3ZPaTdFSkhkNjdpb196T0RDQVhpODlCb1dHWEFWc2RZSml3a05hVEV4MkFKcFY2YVdraVZzXzJsWUMyZUNWZUtXQXNB?oc=5",
+  "fuente": "Chacabuco en Red",
+  "deporte": "Ciclismo de pista",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-12T19:20+00:00",
+  "encontrado": "2026-11-12T19:01-03:00",
+  "bot": "resultados"
+ },
+ {
+  "id": "ae0e137093b9",
+  "titulo": "¡Luto en el atletismo! Muere a los 20 años una joven promesa que acababa de participar en un torneo en Argentina",
+  "resumen": "¡Luto en el atletismo! Muere a los 20 años una joven promesa que acababa de participar en un torneo en Argentina TV Azteca Jalisco",
+  "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNamlhSzlIMjRSY1hEWnI3QUlraG00RDBUVm5OTzc5QmZoOHhmT1JvUFZiWXFzczhodVZUUndKTmtlaVpoWWd1TTZ0eXA1THE3YlkzZnlnd3N1S1QyUDF1SnF0RWxlT25ZUF9UUUxrczQwUXlCTlJJVnlxb1BPZGFINGViejgzUFluMGNnX0plSlpvMGhMRUhLTG16MVZCZXpFdFVfRE56NG9kWjJvbkRnRERadUlRaWdF?oc=5",
+  "fuente": "TV Azteca Jalisco",
+  "deporte": "Atletismo",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-12T19:15+00:00",
+  "encontrado": "2026-11-12T19:00-03:00",
+  "bot": "resultados"
+ },
+ {
   "id": "b3ea264513be",
   "titulo": "El boxeador de Guernica que tiene una pollería se consagró campeón argentino de peso ligero",
   "resumen": "El boxeador de Guernica que tiene una pollería se consagró campeón argentino de peso ligero El Diario Sur",
@@ -36,6 +205,19 @@
   "en_buenos_aires": false,
   "publicado": "2026-11-12T18:38+00:00",
   "encontrado": "2026-11-12T16:15-03:00",
+  "bot": "resultados"
+ },
+ {
+  "id": "c297b4df692b",
+  "titulo": "¡El mejor rugby en Disney+ Plan Premium! Agenda completa del fin de semana",
+  "resumen": "¡El mejor rugby en Disney+ Plan Premium! Agenda completa del fin de semana ESPN Argentina",
+  "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOeUR3T0pOUTkwZnVjcGZkazdYc2dDakRKVG00MEJ1NzBCMXFTU2QxS1JlYU53SDhsd2gzLURTZUtHNUVDRHo4aFhlMFBHNUZrU1h1NzJUT2FGajV6ZWk1ZEIyVmoxb1ZlQWp5S21BWFpEYlVPUkxiZldUekNaTTdtaW9KcW1WVS1IV0oyMXVrcHlQNm1kekxmSDFpXzEwaTMyYnVDSFhEVXBMUQ?oc=5",
+  "fuente": "ESPN Argentina",
+  "deporte": "Rugby",
+  "tipo": "agenda",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-12T18:34+00:00",
+  "encontrado": "2026-11-12T19:03-03:00",
   "bot": "resultados"
  },
  {
@@ -78,6 +260,19 @@
   "bot": "resultados"
  },
  {
+  "id": "295b4f70b5ff",
+  "titulo": "La heladería de Bell Ville que trascendió generaciones y cumplió cincuenta años",
+  "resumen": "La heladería de Bell Ville que trascendió generaciones y cumplió cincuenta años Cadena 3 Argentina",
+  "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPZ25teF9ZTFhnZFU2UDc4eW9yZ0VNNURMVkNuMlFpY2NvT2VwcFpfeU1TNFBPUzdxMkJCWWx4ZjEyMFRfamJOV3FQamJjVFk4dVZZS1U4b3R6ZEgwN1Blc2xqRkNJVE82Xy1tWFhvTHhzWmZWMFIxakY0NjNLQk9wdHRLRktCR01Pa0pwU19yUFgxdXN2by1mOGV0SzJlVjBVd1JPNVozTUhWTDU5VXBpNHpPaWhsUE1YOU1hX1FnYjJLd29sMDlHYWVfMUFTcHlxM2UtRnVKRldsbVHSAdsBQVVfeXFMT2dubXhfWUxYZ2RVNlA3OHlvcmdFTTVETFZDbjJRaWNjb09lcHBaX3lNUzRQT1M3cTJCQllseGYxMjBUX2piTldxUGpiY1RZOHVWWUtVOG90emRIMDdQZXNsakZDSVRPNl8tbVhYb0x4c1pmVjBSMWpGNDYzS0JPcHR0S0ZLQkdNT2tKcFNfclBYMXVzdm8tZjhldEsyZVYwVXdSTzVaM01IVkw1OVVwaTR6T2lobFBNWDlNYV9RZ2IyS3dvbDA5R2FlXzFBU3B5cTNlLUZ1SkZXbG1R?oc=5",
+  "fuente": "Cadena 3 Argentina",
+  "deporte": "Hockey",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-12T18:03+00:00",
+  "encontrado": "2026-11-12T19:02-03:00",
+  "bot": "resultados"
+ },
+ {
   "id": "ea7bf00daf07",
   "titulo": "¡Argentina es de Oro! La selección de futsal salió campeona en Dakar: las mejores fotos",
   "resumen": "¡Argentina es de Oro! La selección de futsal salió campeona en Dakar: las mejores fotos Lmneuquen.com",
@@ -88,6 +283,32 @@
   "en_buenos_aires": false,
   "publicado": "2026-11-12T17:51+00:00",
   "encontrado": "2026-11-12T16:15-03:00",
+  "bot": "resultados"
+ },
+ {
+  "id": "faba049d81c5",
+  "titulo": "San Isidro revocó el permiso del Club de Golf de Boulogne por incumplimientos y una deuda millonaria",
+  "resumen": "San Isidro revocó el permiso del Club de Golf de Boulogne por incumplimientos y una deuda millonaria Agencia Noticias Argentinas",
+  "link": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxQOTIxOEhyaE41S0N2azBMY0sxMFFSQ19vV0Z2cXgwLWU5RnFCYU5GdmpzMWZCbDlUSVg2MDJQNklWQTBOUzZGOGdWcVV2elZPUWFBbGxXRWFPN1czczNhTEhZVi1YS3prWThfbGk4a1QyYzQtMXBpODFfdTNTeVpxM0FQX0VCbnlnRlJYeFItd05kUHhNa0tBQnVzcWt5YUN3SzZxRjlEemcyVWp6SWZkUWIwQVNPVkQ0TmJNTHpOWndVYXJsbDh6dFk2SmF4WnkxNUlJRHlZUjZBemtPR2VjZVN2Z2pYTG5Ic1FJc0xHeHh4U2p3ckRkUlpYRDFqcGtLRXdNWTVuNjBiMkXSAYsCQVVfeXFMUDkyMThIcmhONUtDdmswTGNLMTBRUkNfb1dGdnF4MC1lOUZxQmFORnZqczFmQmw5VElYNjAyUDZJVkEwTlM2RjhnVnFVdnpWT1FhQWxsV0VhTzdXM3MzYUxIWVYtWEt6a1k4X2xpOGtUMmM0LTFwaTgxX3UzU3lacTNBUF9FQm55Z0ZSWHhSLXdOZFB4TWtLQUJ1c3FreWFDd0s2cUY5RHpnMlVqeklmZFFiMEFTT1ZENE5iTUx6Tlp3VWFybGw4enRZNkpheFp5MTVJSUR5WVI2QXprT0dlY2VTdmdqWExuSHNRSXNMR3h4eFNqd3JEZFJaWEQxanBrS0V3TVk1bjYwYjJF?oc=5",
+  "fuente": "Agencia Noticias Argentinas",
+  "deporte": "Golf",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-12T17:47+00:00",
+  "encontrado": "2026-11-12T19:02-03:00",
+  "bot": "resultados"
+ },
+ {
+  "id": "ef5df8a7c49a",
+  "titulo": "Abiertas las inscripciones para la 2° Jornada Argentina Produce",
+  "resumen": "Abiertas las inscripciones para la 2° Jornada Argentina Produce el1.com.ar",
+  "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNc1NsbnBlbng0bVVyRjlXWkd6ZHhxSktVVV9PUzY1ODllSkN1NU1xNkhFaFJNcVQzS0NCdlFNSWNETWlEaTMyY1RlX0pmWmwxaTVpRGRTOGFPNHNFTHhmbG93WTVJUUlyZjRHbGdPUHByekNuR09sZS1qZU1XMEtHNlNueUxXcWpfNFNQSXZac2pQM2xxRVdHN3FuODR6d1lYdmhGa0wwRXN0QmpDZDN3Wi1uR3RoRW9o?oc=5",
+  "fuente": "el1.com.ar",
+  "deporte": "Aguas abiertas",
+  "tipo": "agenda",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-12T17:40+00:00",
+  "encontrado": "2026-11-12T19:00-03:00",
   "bot": "resultados"
  },
  {
@@ -104,6 +325,19 @@
   "bot": "resultados"
  },
  {
+  "id": "eda69d05a070",
+  "titulo": "Circular \"CONFORMACION CAMPEONATOS SLH DE CLUBES DAMAS Y CABALLEROS 2027\"",
+  "resumen": "Circular \"CONFORMACION CAMPEONATOS SLH DE CLUBES DAMAS Y CABALLEROS 2027\" Confederación Argentina de HOCKEY",
+  "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE8weWVZUURDeW9aRmFfdjRLQ3RFejMzQklyS0cydUxpbmFTSG5wS1JtTHVJYjJnZmMwSmRUZlVQQlZWYlFCR2VEMU5GWExNYklBSUVBcHNCZWhicjVR?oc=5",
+  "fuente": "Confederación Argentina de HOCKEY",
+  "deporte": "Hockey en linea",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-12T17:36+00:00",
+  "encontrado": "2026-11-12T19:02-03:00",
+  "bot": "resultados"
+ },
+ {
   "id": "dacec6dc0fe1",
   "titulo": "¡Oro para Argentina! La Sub 18 hizo historia con un triunfazo ante Portugal",
   "resumen": "¡Oro para Argentina! La Sub 18 hizo historia con un triunfazo ante Portugal MDZ Online",
@@ -114,6 +348,19 @@
   "en_buenos_aires": false,
   "publicado": "2026-11-12T17:17+00:00",
   "encontrado": "2026-11-12T16:15-03:00",
+  "bot": "resultados"
+ },
+ {
+  "id": "37b85d175327",
+  "titulo": "El boxeo argentino sobrevive contra las cuerdas en plena crisis: por qué no hay campeones mundiales",
+  "resumen": "El boxeo argentino sobrevive contra las cuerdas en plena crisis: por qué no hay campeones mundiales El Destape",
+  "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQLUdSQnNEbHVHU19qTlNPN012MkN2aXg3R29KSjkxdHlGMUZhVjA4RF9ISFQyYXZtS2hfREVSY2hkdTNpUlBDc2VMQ29mMkdNZkRQTDBFTm1JVXR4SjZLLWpacmdKZGltdzh0anZEcUdHMGVTMFVuYVRiZXZSdC1RRTFteGtYZ0JDNzhzcmJyNXZ1NHJNZ2RVNGlZWE45UnZhM2Z0dlJweWFmdFVfNEtrU3Q1YXRPdkMtb3JWV2F0b3hCUdIB1gFBVV95cUxPNUhBYlhYWmhyRkNKSW5zWGFDRnUzVUJVSWw4ZS0wdl9fQmtrdlBPb2h1RUhSZ1VaNS1RendyR1pPS0o4ck40ZG90ZHhYbXBLY0xHVkJQbS1Ccmp0b01fN0JtRHdjS2Ztc2xoQllEek5mMnQ4eldhOU9TZF9COEtWTnV5eWNKV0pJREk1clpTaDZtd3otV2JOYndvNEtYdzNhR1FlQ0RsdkxPOUw3eXpiTjl4RWJ4VnJpRXppWXlmZXN6UVFQbm9SeG1vc0gtV25aS3hqdUVR?oc=5",
+  "fuente": "El Destape",
+  "deporte": "Boxeo",
+  "tipo": "resultado",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-12T17:09+00:00",
+  "encontrado": "2026-11-12T19:01-03:00",
   "bot": "resultados"
  },
  {
@@ -218,6 +465,19 @@
   "en_buenos_aires": false,
   "publicado": "2026-11-12T15:04+00:00",
   "encontrado": "2026-11-12T13:20-03:00",
+  "bot": "resultados"
+ },
+ {
+  "id": "0faab27e922b",
+  "titulo": "Con Alcaraz, Zverev y un argentino confirmado, así quedaron definidos los grupos de las ATP Finals de Turín",
+  "resumen": "Con Alcaraz, Zverev y un argentino confirmado, así quedaron definidos los grupos de las ATP Finals de Turín FM Del Sol Pehuajo",
+  "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxNTF84MG1MMDY4Nm13aUZZemFaWHRBSXR0emdEb013ek9PM1U0RXk4R2Q5V2RielgzV2ZqQXhiczNyS0JxSVc3TmVYcmc0Q2pnTm5tSW04aHFyeWE0NHg3ZlQxNXk1VDVjTTdHUTBRMTJMdmZDQlFwNkh3TUxmanBwUVNta0tfX2dtSWpZZk1jS3RBQmw5UTRSZ3gzNnB5dmJiWHRicl94b21aU2FsMTRwcmdCMHBoUXJtS1ByYk8zSFFiNXpmQWI2ZXdsWFM5eTZRamdqeWdXamI5d21tMjhmZ3FQQWdFVGxtLUs3Z2dOaFpyQQ?oc=5",
+  "fuente": "FM Del Sol Pehuajo",
+  "deporte": "Handball",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-12T15:04+00:00",
+  "encontrado": "2026-11-12T19:02-03:00",
   "bot": "resultados"
  },
  {
@@ -348,6 +608,19 @@
   "en_buenos_aires": false,
   "publicado": "2026-11-12T12:35+00:00",
   "encontrado": "2026-11-12T10:32-03:00",
+  "bot": "resultados"
+ },
+ {
+  "id": "b1aed7fa4ffe",
+  "titulo": "Vuelve Moro: Los Pumas e Italia confirmaron sus formaciones para el sábado",
+  "resumen": "Vuelve Moro: Los Pumas e Italia confirmaron sus formaciones para el sábado La Nueva Provincia",
+  "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxObmEwT09uRmxnTllubG5EeWtFazRMNFlRRjV4LWxsQ3BxTEZZczZ4Y1EyN1FVUVRGbWZMMjdSS05fZl9OZTFaQTNKQThqdnFTUnVYcFd3RGhZdTF2c1pQT0M4NzBHWWJwbGZXVi1TQzJvVko4anE4aEwwLXlZS1dyS3ZQOVJrcF9semFlbUhDcjY4QW9qS0t1VkFwUG0wcndHSU42ejA5NzZYRndX?oc=5",
+  "fuente": "La Nueva Provincia",
+  "deporte": "Tenis de mesa",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-12T12:27+00:00",
+  "encontrado": "2026-11-12T19:03-03:00",
   "bot": "resultados"
  },
  {
@@ -686,6 +959,19 @@
   "en_buenos_aires": false,
   "publicado": "2026-11-11T22:25+00:00",
   "encontrado": "2026-11-12T01:12-03:00",
+  "bot": "resultados"
+ },
+ {
+  "id": "879b454f3c7f",
+  "titulo": "El clásico Argentina vs Uruguay contará con una regla especial: se permitirán 11 cambios por equipo",
+  "resumen": "El clásico Argentina vs Uruguay contará con una regla especial: se permitirán 11 cambios por equipo El Observador",
+  "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxONTFxTDVkN0xQZy1wWmctVTF1NllKXzVHRGp3eUMyaHowUjZ3WlJvdldiNzZPQlFOSjRUSWdwQkVjOGtzS0JXdE5XVy1rMlowZk1jWk1VMTc3NmFTeG00V2xuM3VOUU1fNDBCczhoeFdjOG9ZeDdwZjFhVzhXQU1MWkw3VVhVa29pQmF0UFg5enBMN3Rra3JrOGVMalVrRk8zd2Y2RGJYOGR1bzIzZFdWU2JmV1hOMHlLVl9OYzh1TC1OY0JTWUVfb1cyS2RkUXlTaV9IUUJreXfSAd4BQVVfeXFMTlpHVnJFU2dmTXFDUEVibkF1ZFdNc3piSGdlRmx1aWFjSW1LMV90WkZsRlhtQnlnRzMxWFZjdUo3bmR6M3hIZE9VZDEyal8xMXNMX3c0Y2d0aEZQVDQ2R2dVdTZXeWNNTWgtemRFZjFhYWY1S0o2Y1ZfTHBOVkFSbFZNb1pRaTMxU3dQWXFIVklZOEFoOExVUlB4OWVXZ3VwNUhma1RVazlwUXJfOERyMGhDem1ZVkNtS1Nac0lzb2RoOTdiV3l2Qy1TdGJtOGxXUHBZZ25CbEJNMzhfUXBR?oc=5",
+  "fuente": "El Observador",
+  "deporte": "Beach handball",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-11T22:13+00:00",
+  "encontrado": "2026-11-12T19:00-03:00",
   "bot": "resultados"
  },
  {
