@@ -1,6 +1,6 @@
 {
- "leido": "2026-11-11T23:54-03:00",
- "actualizado_doc": "11/11/2026 23:00",
+ "leido": "2026-11-12T11:57-03:00",
+ "actualizado_doc": "12/11/2026 11:00",
  "eventos": [
   {
    "titulo": "FUTSAL - FINALISSIMA EN NITERÓI (RÍO DE JANEIRO), BRASIL",
@@ -712,6 +712,41 @@
      ]
     },
     {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.faustballarg.org.ar/2026/11/campeon-panamericano/",
+       "href": "https://www.faustballarg.org.ar/2026/11/campeon-panamericano/"
+      },
+      {
+       "t": " (Nota)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "En la fase clasificatoria le ganó 2-0 a Bolivia, 2-1 a Brasil, 2-0 a Chile, 2-0 a Colombia y 2-0 a Estados Unidos"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "En la final le ganó 2-0 a Brasil y se consagró "
+      },
+      {
+       "t": "CAMPEÓN PANAMERICANO",
+       "b": true
+      },
+      {
+       "t": " por primera vez en su historia"
+      }
+     ]
+    },
+    {
      "tipo": "espacio"
     },
     {
@@ -738,13 +773,13 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Falta: resultado de las finales y posición final (terminó el 8/11)"
+       "t": "Falta: resultado final y posición de la selección femenina (terminó el 8/11)"
       }
      ]
     }
    ],
    "id": "10e265e39647",
-   "version": "ba5ac1d7a7",
+   "version": "99370884a1",
    "publicado_en_doc": false,
    "terminado_desde": "2026-11-10"
   },
@@ -2263,6 +2298,88 @@
      "tipo": "sub",
      "partes": [
       {
+       "t": "DÍA 13 - JUEVES 12/11",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "ESGRIMA - SABLE FEMENINO",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.vision360.bo/noticias/2026/11/12/76904-briana-iriarte-destaca-en-esgrima-con-su-septimo-puesto-y-recibe-un-diploma-olimpico",
+       "href": "https://www.vision360.bo/noticias/2026/11/12/76904-briana-iriarte-destaca-en-esgrima-con-su-septimo-puesto-y-recibe-un-diploma-olimpico"
+      },
+      {
+       "t": " (Nota)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Catalina Borrelli le ganó 5-3 a Briana Iriarte (BOL) en la fase de grupos. Falta el resto de sus resultados (la competencia está en curso)"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "FUTSAL MASCULINO",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Final vs Portugal hoy jueves 12/11 a las 12:30hs",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "VELA (WINDSURF)",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Agustín Hoffmann corre hoy las últimas 3 regatas del Techno 293 (primera largada 9:13hs)"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
        "t": "DÍA 12 - MIÉRCOLES 11/11",
        "b": true
       }
@@ -3486,7 +3603,7 @@
     }
    ],
    "id": "a9a35774136e",
-   "version": "306b9f78dc",
+   "version": "6fc20800bc",
    "multideportivo": true,
    "multi": {
     "nombre": "Dakar 2026",
@@ -3711,6 +3828,67 @@
     ],
     "resumen_final": "",
     "dias": [
+     {
+      "titulo": "DÍA 13 - JUEVES 12/11",
+      "deportes": [
+       {
+        "nombre": "Esgrima - Sable Femenino",
+        "bloques": [
+         {
+          "tipo": "link",
+          "partes": [
+           {
+            "t": "https://www.vision360.bo/noticias/2026/11/12/76904-briana-iriarte-destaca-en-esgrima-con-su-septimo-puesto-y-recibe-un-diploma-olimpico",
+            "href": "https://www.vision360.bo/noticias/2026/11/12/76904-briana-iriarte-destaca-en-esgrima-con-su-septimo-puesto-y-recibe-un-diploma-olimpico"
+           },
+           {
+            "t": " (Nota)"
+           }
+          ]
+         },
+         {
+          "tipo": "texto",
+          "partes": [
+           {
+            "t": "Catalina Borrelli le ganó 5-3 a Briana Iriarte (BOL) en la fase de grupos. Falta el resto de sus resultados (la competencia está en curso)"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "nombre": "Futsal Masculino",
+        "bloques": [
+         {
+          "tipo": "sub",
+          "partes": [
+           {
+            "t": "Final vs Portugal hoy jueves 12/11 a las 12:30hs",
+            "b": true
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "nombre": "Vela (Windsurf)",
+        "bloques": [
+         {
+          "tipo": "texto",
+          "partes": [
+           {
+            "t": "Agustín Hoffmann corre hoy las últimas 3 regatas del Techno 293 (primera largada 9:13hs)"
+           }
+          ]
+         }
+        ]
+       }
+      ],
+      "resumen": {
+       "destacados": [],
+       "posteo": ""
+      }
+     },
      {
       "titulo": "DÍA 12 - MIÉRCOLES 11/11",
       "deportes": [
@@ -4774,37 +4952,164 @@
     ],
     "deportes": [
      {
-      "nombre": "General",
+      "nombre": "Esgrima - Sable Femenino",
       "dias": [
        {
-        "dia": "DÍA 12 - MIÉRCOLES 11/11",
+        "dia": "DÍA 13 - JUEVES 12/11",
         "bloques": [
          {
           "tipo": "link",
           "partes": [
            {
-            "t": "https://dakar2026.sailing.org/",
-            "href": "https://dakar2026.sailing.org/"
+            "t": "https://www.vision360.bo/noticias/2026/11/12/76904-briana-iriarte-destaca-en-esgrima-con-su-septimo-puesto-y-recibe-un-diploma-olimpico",
+            "href": "https://www.vision360.bo/noticias/2026/11/12/76904-briana-iriarte-destaca-en-esgrima-con-su-septimo-puesto-y-recibe-un-diploma-olimpico"
            },
            {
-            "t": " (Vela - web oficial)"
+            "t": " (Nota)"
+           }
+          ]
+         },
+         {
+          "tipo": "texto",
+          "partes": [
+           {
+            "t": "Catalina Borrelli le ganó 5-3 a Briana Iriarte (BOL) en la fase de grupos. Falta el resto de sus resultados (la competencia está en curso)"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "nombre": "Futsal Masculino",
+      "dias": [
+       {
+        "dia": "DÍA 13 - JUEVES 12/11",
+        "bloques": [
+         {
+          "tipo": "sub",
+          "partes": [
+           {
+            "t": "Final vs Portugal hoy jueves 12/11 a las 12:30hs",
+            "b": true
            }
           ]
          }
         ]
        },
        {
-        "dia": "DÍA 11 - MARTES 10/11",
+        "dia": "DÍAS ANTERIORES",
         "bloques": [
          {
           "tipo": "link",
           "partes": [
            {
-            "t": "https://www.dobleamarilla.com.ar/mas-alla-del-futbol/irene-pernia-logro-un-historico-septimo-puesto-en-atletismo_a662ce85e8c6d415289663347",
-            "href": "https://www.dobleamarilla.com.ar/mas-alla-del-futbol/irene-pernia-logro-un-historico-septimo-puesto-en-atletismo_a662ce85e8c6d415289663347"
+            "t": "https://deportesanluis.com.ar/dakar-2026-esta-en-marcha/",
+            "href": "https://deportesanluis.com.ar/dakar-2026-esta-en-marcha/"
+           },
+           {
+            "t": " (Fixture)"
+           }
+          ]
+         },
+         {
+          "tipo": "link",
+          "partes": [
+           {
+            "t": "https://ar.headtopics.com/news/argentina-gole-a-senegal-9-2-en-futsal-en-los-juegos-89473811",
+            "href": "https://ar.headtopics.com/news/argentina-gole-a-senegal-9-2-en-futsal-en-los-juegos-89473811"
+           },
+           {
+            "t": " (Resultado)"
+           }
+          ]
+         },
+         {
+          "tipo": "texto",
+          "partes": [
+           {
+            "t": "Debut: 9-2 vs Senegal (Lorenzo Sampedro x2, Valentino Martínez x2, Enzo López x2, Axel Barrios, Joaquín Pesl y Ezequiel Henriques)"
+           }
+          ]
+         },
+         {
+          "tipo": "link",
+          "partes": [
+           {
+            "t": "https://www.infobae.com/deportes/2026/11/04/el-gol-a-40-segundos-del-final-que-le-dio-a-la-seleccion-argentina-de-futsal-el-pase-a-las-semis-de-los-juegos-olimpicos-de-la-juventud/",
+            "href": "https://www.infobae.com/deportes/2026/11/04/el-gol-a-40-segundos-del-final-que-le-dio-a-la-seleccion-argentina-de-futsal-el-pase-a-las-semis-de-los-juegos-olimpicos-de-la-juventud/"
            },
            {
             "t": " (Nota)"
+           }
+          ]
+         },
+         {
+          "tipo": "texto",
+          "partes": [
+           {
+            "t": "Segunda fecha: 2-1 vs Afganistán (Valentino Martínez x2, el segundo a 40 segundos del final). "
+           },
+           {
+            "t": "CLASIFICÓ A SEMIS",
+            "b": true
+           }
+          ]
+         },
+         {
+          "tipo": "link",
+          "partes": [
+           {
+            "t": "https://www.losandes.com.ar/deportes/argentina-aplasto-panama-termino-puntaje-ideal-y-va-la-final-del-futsal-dakar-2026-n6013413",
+            "href": "https://www.losandes.com.ar/deportes/argentina-aplasto-panama-termino-puntaje-ideal-y-va-la-final-del-futsal-dakar-2026-n6013413"
+           },
+           {
+            "t": " (Resultado)"
+           }
+          ]
+         },
+         {
+          "tipo": "texto",
+          "partes": [
+           {
+            "t": "Tercera fecha: 9-1 vs Panamá (Valentino Martínez Florio x3, Ezequiel Henriques x2, Lorenzo Sampedro x2, Joaquín Pesl y Lisandro Velásquez). Cerró el grupo invicto (3 de 3, 20 goles a favor y 4 en contra)"
+           }
+          ]
+         },
+         {
+          "tipo": "link",
+          "partes": [
+           {
+            "t": "https://www.infobae.com/deportes/2026/11/09/la-seleccion-argentina-de-futsal-vencio-4-2-a-marruecos-y-llego-a-la-final-de-los-jjoo-de-la-juventud-2026/",
+            "href": "https://www.infobae.com/deportes/2026/11/09/la-seleccion-argentina-de-futsal-vencio-4-2-a-marruecos-y-llego-a-la-final-de-los-jjoo-de-la-juventud-2026/"
+           },
+           {
+            "t": " (Resultado semis)"
+           }
+          ]
+         },
+         {
+          "tipo": "texto",
+          "partes": [
+           {
+            "t": "Semis: le ganó 4-2 a Marruecos (Axel Barrios de penal, Enzo López, Ezequiel Henriques y Lisandro Velásquez) y "
+           },
+           {
+            "t": "CLASIFICÓ A LA FINAL",
+            "b": true
+           },
+           {
+            "t": ". Tiene asegurada una medalla"
+           }
+          ]
+         },
+         {
+          "tipo": "sub",
+          "partes": [
+           {
+            "t": "Final vs Portugal el jueves 12/11 a las 12:30hs",
+            "b": true
            }
           ]
          }
@@ -4815,6 +5120,19 @@
      {
       "nombre": "Vela (Windsurf)",
       "dias": [
+       {
+        "dia": "DÍA 13 - JUEVES 12/11",
+        "bloques": [
+         {
+          "tipo": "texto",
+          "partes": [
+           {
+            "t": "Agustín Hoffmann corre hoy las últimas 3 regatas del Techno 293 (primera largada 9:13hs)"
+           }
+          ]
+         }
+        ]
+       },
        {
         "dia": "DÍA 12 - MIÉRCOLES 11/11",
         "bloques": [
@@ -4869,6 +5187,45 @@
           "partes": [
            {
             "t": "Agustín Hoffmann fue 12°, 16° y 18° en las primeras 3 regatas (domingo 8/11) y marchaba 15° en la general"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "nombre": "General",
+      "dias": [
+       {
+        "dia": "DÍA 12 - MIÉRCOLES 11/11",
+        "bloques": [
+         {
+          "tipo": "link",
+          "partes": [
+           {
+            "t": "https://dakar2026.sailing.org/",
+            "href": "https://dakar2026.sailing.org/"
+           },
+           {
+            "t": " (Vela - web oficial)"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "dia": "DÍA 11 - MARTES 10/11",
+        "bloques": [
+         {
+          "tipo": "link",
+          "partes": [
+           {
+            "t": "https://www.dobleamarilla.com.ar/mas-alla-del-futbol/irene-pernia-logro-un-historico-septimo-puesto-en-atletismo_a662ce85e8c6d415289663347",
+            "href": "https://www.dobleamarilla.com.ar/mas-alla-del-futbol/irene-pernia-logro-un-historico-septimo-puesto-en-atletismo_a662ce85e8c6d415289663347"
+           },
+           {
+            "t": " (Nota)"
            }
           ]
          }
@@ -5317,128 +5674,6 @@
            },
            {
             "t": " tras vencerle 36-5 a Canadá"
-           }
-          ]
-         }
-        ]
-       }
-      ]
-     },
-     {
-      "nombre": "Futsal Masculino",
-      "dias": [
-       {
-        "dia": "DÍAS ANTERIORES",
-        "bloques": [
-         {
-          "tipo": "link",
-          "partes": [
-           {
-            "t": "https://deportesanluis.com.ar/dakar-2026-esta-en-marcha/",
-            "href": "https://deportesanluis.com.ar/dakar-2026-esta-en-marcha/"
-           },
-           {
-            "t": " (Fixture)"
-           }
-          ]
-         },
-         {
-          "tipo": "link",
-          "partes": [
-           {
-            "t": "https://ar.headtopics.com/news/argentina-gole-a-senegal-9-2-en-futsal-en-los-juegos-89473811",
-            "href": "https://ar.headtopics.com/news/argentina-gole-a-senegal-9-2-en-futsal-en-los-juegos-89473811"
-           },
-           {
-            "t": " (Resultado)"
-           }
-          ]
-         },
-         {
-          "tipo": "texto",
-          "partes": [
-           {
-            "t": "Debut: 9-2 vs Senegal (Lorenzo Sampedro x2, Valentino Martínez x2, Enzo López x2, Axel Barrios, Joaquín Pesl y Ezequiel Henriques)"
-           }
-          ]
-         },
-         {
-          "tipo": "link",
-          "partes": [
-           {
-            "t": "https://www.infobae.com/deportes/2026/11/04/el-gol-a-40-segundos-del-final-que-le-dio-a-la-seleccion-argentina-de-futsal-el-pase-a-las-semis-de-los-juegos-olimpicos-de-la-juventud/",
-            "href": "https://www.infobae.com/deportes/2026/11/04/el-gol-a-40-segundos-del-final-que-le-dio-a-la-seleccion-argentina-de-futsal-el-pase-a-las-semis-de-los-juegos-olimpicos-de-la-juventud/"
-           },
-           {
-            "t": " (Nota)"
-           }
-          ]
-         },
-         {
-          "tipo": "texto",
-          "partes": [
-           {
-            "t": "Segunda fecha: 2-1 vs Afganistán (Valentino Martínez x2, el segundo a 40 segundos del final). "
-           },
-           {
-            "t": "CLASIFICÓ A SEMIS",
-            "b": true
-           }
-          ]
-         },
-         {
-          "tipo": "link",
-          "partes": [
-           {
-            "t": "https://www.losandes.com.ar/deportes/argentina-aplasto-panama-termino-puntaje-ideal-y-va-la-final-del-futsal-dakar-2026-n6013413",
-            "href": "https://www.losandes.com.ar/deportes/argentina-aplasto-panama-termino-puntaje-ideal-y-va-la-final-del-futsal-dakar-2026-n6013413"
-           },
-           {
-            "t": " (Resultado)"
-           }
-          ]
-         },
-         {
-          "tipo": "texto",
-          "partes": [
-           {
-            "t": "Tercera fecha: 9-1 vs Panamá (Valentino Martínez Florio x3, Ezequiel Henriques x2, Lorenzo Sampedro x2, Joaquín Pesl y Lisandro Velásquez). Cerró el grupo invicto (3 de 3, 20 goles a favor y 4 en contra)"
-           }
-          ]
-         },
-         {
-          "tipo": "link",
-          "partes": [
-           {
-            "t": "https://www.infobae.com/deportes/2026/11/09/la-seleccion-argentina-de-futsal-vencio-4-2-a-marruecos-y-llego-a-la-final-de-los-jjoo-de-la-juventud-2026/",
-            "href": "https://www.infobae.com/deportes/2026/11/09/la-seleccion-argentina-de-futsal-vencio-4-2-a-marruecos-y-llego-a-la-final-de-los-jjoo-de-la-juventud-2026/"
-           },
-           {
-            "t": " (Resultado semis)"
-           }
-          ]
-         },
-         {
-          "tipo": "texto",
-          "partes": [
-           {
-            "t": "Semis: le ganó 4-2 a Marruecos (Axel Barrios de penal, Enzo López, Ezequiel Henriques y Lisandro Velásquez) y "
-           },
-           {
-            "t": "CLASIFICÓ A LA FINAL",
-            "b": true
-           },
-           {
-            "t": ". Tiene asegurada una medalla"
-           }
-          ]
-         },
-         {
-          "tipo": "sub",
-          "partes": [
-           {
-            "t": "Final vs Portugal el jueves 12/11 a las 12:30hs",
-            "b": true
            }
           ]
          }
@@ -5965,6 +6200,18 @@
      ]
     },
     {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.argentina.gob.ar/noticias/boccia-ferrando-campeona-en-brasil",
+       "href": "https://www.argentina.gob.ar/noticias/boccia-ferrando-campeona-en-brasil"
+      },
+      {
+       "t": " (Nota)"
+      }
+     ]
+    },
+    {
      "tipo": "sub",
      "partes": [
       {
@@ -5996,6 +6243,14 @@
       {
        "t": "DORADA",
        "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Ganó sus 5 partidos: 6-0 vs Ana Costa (POR) y 4-1 vs Niurka Callupe (PER) en el grupo, 5-2 vs Nancy Poser (GER) en 4tos y 5-2 vs Evelyn de Oliveira (BRA) en semis"
       }
      ]
     },
@@ -6042,6 +6297,14 @@
      "tipo": "texto",
      "partes": [
       {
+       "t": "En el grupo perdió 5-2 vs Dora Basic (CRO) y le ganó 6-3 a Yushae Andrade (BER) y 5-1 a Leila Alves (BRA) (2° del Grupo A). En semis perdió 5-1 vs Nicola Taylor (ENG)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
        "t": "Mateo Kesting quedó eliminado en la fase inicial"
       }
      ]
@@ -6079,6 +6342,14 @@
      "partes": [
       {
        "t": "Falta confirmar si hubo partido por el bronce en BC2"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Según argentina.gob.ar Aquino (3 victorias y 1 derrota) y Cristaldo (2 y 2) llegaron a 4tos (falta confirmar en qué ronda quedaron)"
       }
      ]
     },
@@ -6177,7 +6448,7 @@
     }
    ],
    "id": "93a941b2307c",
-   "version": "ba98d430a6",
+   "version": "6c49b098c1",
    "publicado_en_doc": false
   },
   {
@@ -6795,6 +7066,18 @@
      "tipo": "espacio"
     },
     {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://dukesurf.com/en-vivo-aqui-el-dia-6-de-los-isa-world-surfing-games-2/",
+       "href": "https://dukesurf.com/en-vivo-aqui-el-dia-6-de-los-isa-world-surfing-games-2/"
+      },
+      {
+       "t": " (En vivo día 6)"
+      }
+     ]
+    },
+    {
      "tipo": "sub",
      "partes": [
       {
@@ -6814,7 +7097,7 @@
     }
    ],
    "id": "31518371aee9",
-   "version": "d1f5124844",
+   "version": "964ef79bbd",
    "publicado_en_doc": false
   },
   {
