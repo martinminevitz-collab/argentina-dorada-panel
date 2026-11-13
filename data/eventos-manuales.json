@@ -1,4 +1,17 @@
 {
  "_nota": "Eventos cargados a mano en el panel que todavía no están en el Doc. El agente los pasa al Doc y al final del bloque escribe la línea 'Ref panel: <ref>'.",
- "pendientes": []
+ "pendientes": [
+  {
+   "ref": "2a72a972",
+   "seccion": "resultados",
+   "estado": "en_curso",
+   "deporte": "Orientatlón",
+   "titulo": "Campeonato Sudamericano de Orientación",
+   "fechas": "12 al 15/11",
+   "lugar": "Pucón, Chile",
+   "detalle": "Argentina estará representada por:\nBeto Sanchez - Elite\nDaniela Cravino - Cat W35\nLuis Scaglia - Cat M40\nCeleste Marra - Cat W40\nJuan Pablo y Laura - Cat M55 / W55\nClaudio Valva - Cat M60\nMaxi e Isa Dorf - Cat M40 y Familia\nFernando Giannini - Cat M60\nMarcela Kurina Sanz - Cat M60\nBruno Pierini - Cat M20-Elite\nHernan Murmis - Cat Elite\nEzequiel Nadalez - Cat Elite\nEkaterina Sheynikova - Cat N-Menor\nIrina Tretiakova - Cat W40\nMikhail Sheynokov - Cat M45\nGabriela Laura Ponce - Cat W50\nRamon Eduardo Beron - Cat M55",
+   "link": "https://www.instagram.com/orientatlonargentina/",
+   "creado_en": "2026-11-13T02:36:03.002114+00:00"
+  }
+ ]
 }
