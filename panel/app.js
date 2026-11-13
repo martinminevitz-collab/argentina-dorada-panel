@@ -41,7 +41,7 @@ async function bajarJSON(ruta) {
 async function cargar() {
   $("#recargar").classList.add("girando");
   try {
-    const [doc, corrida, indice, medalleros, manuales, agregados, ba] = await Promise.all([
+    const [doc, corrida, indice, medalleros, manuales, agregados, ba, archivo, insta] = await Promise.all([
       bajarJSON("doc-resultados.json").catch(() => null),
       bajarJSON("ultima-corrida.json").catch(() => ({})),
       bajarJSON("indice.json").catch(() => ({ dias: [] })),
@@ -49,7 +49,11 @@ async function cargar() {
       bajarJSON("eventos-manuales.json").catch(() => ({ pendientes: [] })),
       bajarJSON("agregados.json").catch(() => ({ pendientes: [] })),
       bajarJSON("eventos-ba.json").catch(() => ({ eventos: [], lugares: [] })),
+      bajarJSON("doc-archivo.json").catch(() => ({ eventos: {} })),
+      bajarJSON("instagram.json").catch(() => ({ cuentas: {} })),
     ]);
+    estado.archivo = Object.values(archivo.eventos || {});
+    estado.instagram = Object.entries(insta.cuentas || {}).sort((a, b) => b[0].length - a[0].length);
     estado.agregadosBot = agregados.pendientes || [];
     estado.ba = ba;
     estado.manualesBot = manuales.pendientes || [];
@@ -125,7 +129,10 @@ function combinar() {
   const manuales = filas.map(aEvento).filter((m) => !refs.has(m.ref));
   // datos agregados desde el panel ("+ Agregar dato"): se suman al final del evento hasta que el agente los pasa al Doc
   const ags = (estado.agregadosBase ?? estado.agregadosBot ?? []).filter((a) => !refs.has(refDe(a)));
-  estado.eventos = [...manuales, ...doc].map((e) => {
+  // lo que el agente ya sacó del Doc por publicado: queda 7 días para "Mostrar los que ya publiqué"
+  const enDoc = new Set(doc.map((e) => e.id));
+  const archivados = (estado.archivo || []).filter((e) => !enDoc.has(e.id)).map((e) => ({ ...e, publicado_en_doc: true, archivado: true }));
+  estado.eventos = [...manuales, ...doc, ...archivados].map((e) => {
     const mios = ags.filter((a) => a.evento_id === e.id || sinTildes(a.evento_titulo) === sinTildes(e.titulo));
     if (!mios.length) return e;
     return { ...e, version: e.version + ":" + huella(mios.map((a) => a.texto).join("|")),
@@ -141,6 +148,7 @@ estado.borradorDato = {};
 function cajaAgregarDato(e, t) {
   const caja = document.createElement("div");
   caja.className = "agregar-dato";
+  if (e.archivado) return caja; // ya se publicó y salió del Doc: no tiene dónde ir el dato
   const abierto = estado.agregandoEn === e.id;
   if (!abierto) {
     caja.append(boton("+ Agregar dato", () => {
@@ -520,6 +528,18 @@ function emojiDe(linea) {
   if (/CLASIFICO|CLASIFICARON/.test(t)) return "✅ ";
   return "";
 }
+// nombres que ya tuvieron su Instagram en el Doc (data/instagram.json): se etiquetan solos
+function etiquetar(txt) {
+  for (const [nombre, usuario] of estado.instagram || []) {
+    if (txt.includes("@" + usuario)) continue;
+    const i = txt.indexOf(nombre);
+    if (i < 0) continue;
+    const fin = i + nombre.length;
+    if (/[\p{L}]/u.test(txt[fin] || "") || (i > 0 && /[\p{L}]/u.test(txt[i - 1]))) continue;
+    txt = txt.slice(0, fin) + ` (@${usuario})` + txt.slice(fin);
+  }
+  return txt;
+}
 function lineaIG(partes, incluirGris) {
   let txt = "";
   for (const p of partes) {
@@ -533,8 +553,8 @@ function lineaIG(partes, incluirGris) {
     }
     txt += p.t;
   }
-  return txt
-    .replace(/\(\s*\)/g, "")                       // paréntesis que quedaron vacíos al sacar el link
+  return etiquetar(txt
+    .replace(/\(\s*\)/g, ""))                      // paréntesis que quedaron vacíos al sacar el link
     .replace(/https?:\/\/\S+/g, "")
     .replace(/\s{2,}/g, " ")
     .trim();
@@ -872,6 +892,14 @@ function cajaResumen(e, dia) {
   pie.append(boton("Copiar destacados", () => copiarEvento(mini, {
     cabecera: `🇦🇷 ${e.multi.nombre.toUpperCase()} | RESUMEN ${dia.titulo.toUpperCase()}`, incluirGris: false,
     hashtags: hashtagsEvento({ titulo: e.titulo }, [hashtag(e.multi.nombre)]) })));
+  if (window.Graficas && dia.resumen.destacados.length) pie.append(boton("🎨 Gráfica", () => {
+    // portada "Resumen día X" + placas de a 4 destacados
+    const lineas = dia.resumen.destacados.filter((b) => b.partes && b.tipo !== "link");
+    const bloques = [];
+    lineas.forEach((b, i) => { if (i % 4 === 0) bloques.push({ tipo: "sub", partes: [{ t: i ? "Destacados (sigue)" : "Destacados del día" }] }); bloques.push({ ...b, tipo: "texto" }); });
+    Graficas.desdeEvento({ deporte: "Resumen " + dia.titulo.replace(/^D[IÍ]A\b/i, "día").split(" - ")[0], evento: e.multi.nombre, bloques });
+    estado.tab = "graficas"; dibujar(); window.scrollTo({ top: 0 });
+  }));
   const bPub = boton("Publicado", null); bPub.className = "publicado";
   pie.append(bPub);
   configurarPublicado(bPub, t, mini);
@@ -887,7 +915,7 @@ function configurarPublicado(bPub, t, e) {
   if (marca?.por) bPub.title = `Lo marcó ${marca.por}`;
   bPub.classList.toggle("marcado", pub);
   bPub.disabled = e.publicado_en_doc && !(e.id in estado.publicados);
-  if (bPub.disabled) bPub.title = "Ya figura como publicado (en gris) en el Doc";
+  if (bPub.disabled) bPub.title = e.archivado ? "Ya se publicó (el agente lo sacó del Doc)" : "Ya figura como publicado (en gris) en el Doc";
   bPub.onclick = async () => {
     const desmarcar = e.id in estado.publicados && estado.publicados[e.id].v === e.version;
     const antes = estado.publicados[e.id];
@@ -960,7 +988,8 @@ chips("#filtro-tipo", "filtroTipo");
 document.querySelectorAll(".pestanas button").forEach((b) => (b.onclick = () => {
   estado.tab = b.dataset.tab; llenarDeportes(); dibujar(); window.scrollTo({ top: 0 });
 }));
-["#buscar", "#deporte", "#ver-publicados"].forEach((s) => $(s).addEventListener("input", dibujar));
+["#buscar", "#deporte"].forEach((s) => $(s).addEventListener("input", dibujar));
+$("#ver-publicados").addEventListener("change", dibujar);
 $("#rango").addEventListener("change", cargar);
 $("#recargar").onclick = cargar;
 // modo noche: el botón alterna claro/noche; si nunca se tocó, sigue lo que tenga el celu/compu

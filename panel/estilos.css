@@ -433,6 +433,11 @@ input[type=search], select { width: 100%; background: var(--tarjeta); color: var
 .g-sets td { border: 3px solid #2c4a6e; text-align: center; padding: 6px 10px; }
 .g-sets td:first-child { text-align: left; font-size: 66px; line-height: 1; padding: 24px 26px; width: 48%; }
 .g-sets td small { display: block; font-size: 34px; opacity: .8; }
+.g-sets { table-layout: fixed; }
+.g-sets.n4 { font-size: 104px; } .g-sets.n4 td:first-child { width: 40%; font-size: 58px; padding: 20px; } .g-sets.n4 th { font-size: 48px; }
+.g-sets.n5 { font-size: 88px; } .g-sets.n5 td:first-child { width: 34%; font-size: 50px; padding: 18px 16px; } .g-sets.n5 th { font-size: 42px; padding: 8px 4px; }
+.g-sets.n5 td, .g-sets.n4 td { padding-left: 4px; padding-right: 4px; }
+.g-sets td:first-child { overflow-wrap: break-word; }
 .g-sets tr.arg td { color: var(--oro); } .g-sets tr.arg td:first-child { background: var(--oro); color: var(--navy); }
 .g-frase { position: absolute; left: 40px; right: 40px; top: 1630px; text-align: center; display: grid; gap: 26px; }
 .g-frase h1 { font-size: 150px; line-height: .95; text-transform: uppercase; }

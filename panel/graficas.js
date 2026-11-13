@@ -117,9 +117,9 @@
       const cols = sets.map((_, i) => `<th>Set ${i + 1}</th>`).join("");
       return `${marcaAD("g-s-head")}<div class="g-ss-torneo">${esc(d.torneo)}</div>
       ${d.deporte ? `<span class="g-pill celeste g-ss-pill">${esc(d.deporte)}</span>` : ""}${credito(d, "g-ss-cred")}${foto(p, "g-ss-foto")}
-      <table class="g-sets"><tr><th></th>${cols}</tr>
-        <tr class="arg"><td>${esc(d.arg)}<small>(ARG)</small></td>${sets.map((s) => `<td>${esc(s[0])}</td>`).join("")}</tr>
-        <tr><td>${esc(d.rival)}<small>(${esc(d.rival_pais)})</small></td>${sets.map((s) => `<td>${esc(s[1])}</td>`).join("")}</tr></table>
+      <table class="g-sets n${Math.min(sets.length, 5)}"><tr><th></th>${cols}</tr>
+        <tr class="arg"><td>${esc(d.arg).replace(/\//g, "/<wbr>")}<small>(ARG)</small></td>${sets.map((s) => `<td>${esc(s[0])}</td>`).join("")}</tr>
+        <tr><td>${esc(d.rival).replace(/\//g, "/<wbr>")}<small>(${esc(d.rival_pais)})</small></td>${sets.map((s) => `<td>${esc(s[1])}</td>`).join("")}</tr></table>
       <div class="g-frase"><div class="g-adorno"></div><h1>${esc(d.frase)}</h1><div class="g-adorno abajo"></div></div>`; },
     "s-partido": (p) => { const d = p.datos; return `${marcaAD("g-s-head")}${d.deporte ? `<span class="g-pill celeste g-centro g-sm-pill">${esc(d.deporte)}</span>` : ""}
       ${foto(p, "g-sm-foto")}${credito(d, "g-sm-cred")}<div class="g-sm-abajo" data-fit><div class="g-sm-caja"><b data-fs>${esc(d.torneo)}</b><span>${esc(d.instancia)}</span></div>

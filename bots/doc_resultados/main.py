@@ -334,6 +334,48 @@ def marcar_terminados(eventos):
         "vencidos": sorted(vencidos)})
 
 
+def archivar(eventos):
+    """data/doc-archivo.json = copia de los resultados de los últimos 7 días, aunque el agente ya los haya
+    sacado del Doc por publicados. Lo usa el botón "Mostrar los que ya publiqué" del panel."""
+    from datetime import timedelta
+    ruta = guardar.DATA / "doc-archivo.json"
+    viejo = guardar.leer(ruta, {}).get("eventos", {})
+    hoy = guardar.ahora().strftime("%Y-%m-%d")
+    limite = (guardar.ahora() - timedelta(days=DIAS_VISIBLE)).strftime("%Y-%m-%d")
+    for e in eventos:
+        if e["seccion"] == "resultados" and not e.get("multideportivo") and not e.get("vencido"):
+            viejo[e["id"]] = {**e, "visto": hoy}
+    archivo = {k: v for k, v in viejo.items() if v.get("visto", "") >= limite}
+    guardar.escribir(ruta, {"_nota": f"Resultados vistos en el Doc en los últimos {DIAS_VISIBLE} días (incluye los ya publicados que el agente sacó).",
+                            "eventos": dict(sorted(archivo.items()))})
+
+
+# "Delfina Arancibia (https://www.instagram.com/arancibiadelfi_/)" -> nombre antes del link
+NOMBRE_ANTES = re.compile(r"((?:[A-ZÁÉÍÓÚÑÜ][\wáéíóúñü'.-]+\s+){1,3}[A-ZÁÉÍÓÚÑÜ][\wáéíóúñü'.-]+)\s*[(\[]?\s*$")
+
+
+def directorio_instagram(eventos):
+    """data/instagram.json = nombre -> @usuario, juntado de todo lo que el agente escribió en el Doc.
+    Se acumula para siempre: si un deportista tuvo su Instagram una vez, el panel lo etiqueta en los próximos posteos."""
+    ruta = guardar.DATA / "instagram.json"
+    cuentas = guardar.leer(ruta, {}).get("cuentas", {})
+    for e in eventos:
+        for b in e["bloques"]:
+            partes = b.get("partes") or []
+            for i, p in enumerate(partes):
+                href = p.get("href") or ""
+                if "instagram.com/" not in href or i == 0:
+                    continue
+                usuario = urlparse(href).path.strip("/").split("/")[0]
+                m = NOMBRE_ANTES.search(partes[i - 1]["t"])
+                if usuario and m and usuario not in ("p", "reel", "explore", "stories"):
+                    cuentas[m.group(1).strip()] = usuario
+    # "Compiten Bianca Chimento" sobra si ya está "Bianca Chimento"
+    cuentas = {k: v for k, v in cuentas.items() if not any(k != o and k.endswith(" " + o) for o in cuentas)}
+    guardar.escribir(ruta, {"_nota": "Nombre del deportista -> usuario de Instagram (sin @). Se arma solo con lo que hay en el Doc. Se puede agregar o corregir a mano.",
+                            "cuentas": dict(sorted(cuentas.items()))})
+
+
 def main():
     url = json.loads((guardar.RAIZ / "config" / "doc.json").read_text(encoding="utf-8"))["pub"]
     html = bajar(url)
@@ -343,6 +385,11 @@ def main():
         return
     actualizado_doc, eventos = leer_doc(html)
     marcar_terminados(eventos)
+    archivar(eventos)
+    try:
+        directorio_instagram(eventos)
+    except Exception as err:  # el directorio es un extra: si falla, el resto sigue
+        print(f"⚠️  Directorio de Instagram: {err}")
     ruta = guardar.DATA / "doc-resultados.json"
     anterior = guardar.leer(ruta, {})
     nuevo = {"actualizado_doc": actualizado_doc, "eventos": eventos}
