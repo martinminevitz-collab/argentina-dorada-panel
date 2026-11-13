@@ -374,7 +374,7 @@ input[type=search], select { width: 100%; background: var(--tarjeta); color: var
 .g-logo-caja.blanca b { color: var(--oro); }
 
 /* portada feed */
-.g-pt-arriba { position: absolute; left: 60px; top: 60px; display: grid; gap: 10px; justify-items: start; max-width: 570px; }
+.g-pt-arriba { position: absolute; left: 60px; top: 60px; display: grid; gap: 10px; justify-items: center; text-align: center; max-width: 570px; }
 .g-pt-torneo { font-size: 40px; text-transform: uppercase; }
 .g-pt-titulo { position: absolute; left: 60px; right: 60px; top: 330px; bottom: 150px; display: flex; flex-direction: column; justify-content: flex-end; overflow: hidden; }
 .g-pt-titulo .g-linea { margin-bottom: 26px; }
@@ -412,7 +412,7 @@ input[type=search], select { width: 100%; background: var(--tarjeta); color: var
 /* historias */
 .g-s-head { position: absolute; top: 70px; left: 0; right: 0; text-align: center; font-size: 84px; }
 .g-s-linea-top { position: absolute; top: 190px; left: 0; width: 330px; height: 3px; background: var(--oro); }
-.g-sp-caja { position: absolute; left: 60px; top: 230px; display: grid; gap: 18px; justify-items: start; }
+.g-sp-caja { position: absolute; left: 60px; top: 230px; display: grid; gap: 18px; justify-items: center; text-align: center; }
 .g-caja-torneo { border: 3px solid var(--oro); background: rgba(12, 26, 44, .7); display: grid; min-width: 560px; }
 .g-caja-torneo b { font-size: 76px; font-weight: 400; padding: 12px 30px 4px; }
 .g-caja-torneo span { background: var(--cel); color: var(--navy); font-size: 48px; padding: 8px 30px; }
