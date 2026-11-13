@@ -128,8 +128,11 @@ function combinar() {
   const manuales = filas.map(aEvento).filter((m) => !refs.has(m.ref));
   // datos agregados desde el panel ("+ Agregar dato"): se suman al final del evento hasta que el agente los pasa al Doc
   const todos = (estado.agregadosBase ?? estado.agregadosBot ?? []).filter((a) => !refs.has(refDe(a)));
-  const ags = todos.filter((a) => a.tipo !== "eliminar");
-  const bajas = todos.filter((a) => a.tipo === "eliminar"); // "🗑 Eliminar": se oculta para todos y el agente lo saca del Doc
+  // marcas especiales (se guardan como "correccion" con [ELIMINAR] / [PUBLICABLE] adelante: no hace falta tocar la base)
+  const esMarca = (a, m) => a.tipo === m.toLowerCase() || String(a.texto || "").startsWith(`[${m}]`);
+  const ags = todos.filter((a) => !esMarca(a, "ELIMINAR") && !esMarca(a, "PUBLICABLE"));
+  const bajas = todos.filter((a) => esMarca(a, "ELIMINAR")); // "🗑 Eliminar": se oculta para todos y el agente lo saca del Doc
+  const listos = todos.filter((a) => esMarca(a, "PUBLICABLE")); // "Falta info" que ya completaron: pasa a Publicable
   // lo que el agente ya sacó del Doc por publicado: queda 7 días para "Mostrar los que ya publiqué"
   const enDoc = new Set(doc.map((e) => e.id));
   const archivados = (estado.archivo || []).filter((e) => !enDoc.has(e.id)).map((e) => ({ ...e, publicado_en_doc: true, archivado: true }));
@@ -137,6 +140,8 @@ function combinar() {
   estado.eventos = [...manuales, ...doc, ...archivados].map((e) => {
     const baja = bajas.find((a) => esDe(a, e));
     if (baja) e = { ...e, eliminado: { idBase: String(baja.id || "").includes("-") ? baja.id : null } };
+    const listo = e.etiqueta === "mas_info" && listos.find((a) => esDe(a, e));
+    if (listo) e = { ...e, etiqueta: "publicable", pasadoAPublicable: { idBase: String(listo.id || "").includes("-") ? listo.id : null } };
     const mios = ags.filter((a) => esDe(a, e));
     if (!mios.length) return e;
     return { ...e, version: e.version + ":" + huella(mios.map((a) => a.texto).join("|")),
@@ -412,6 +417,7 @@ function tarjetaEvento(e, tpl) {
     t.querySelector(".pie").insertBefore(g, t.querySelector(".pie .publicado"));
   }
   if (!e.manual && !e.archivado && !e.id.startsWith("ba:")) botonEliminar(e, t);
+  if (!e.archivado && (e.etiqueta === "mas_info" || e.pasadoAPublicable)) botonPublicable(e, t);
   if (e.manual) {
     const chip = document.createElement("span"); chip.className = "chip manual"; chip.textContent = "✍️ A mano";
     chip.title = "Lo cargó alguien desde el panel. Cuando el agente lo pase al Doc, queda el del Doc.";
@@ -426,6 +432,28 @@ function tarjetaEvento(e, tpl) {
     }
   }
   return t;
+}
+
+// "Falta info" que ya completaron con "+ Agregar dato": se pasa a Publicable para todos (el agente cambia el título en el Doc)
+function botonPublicable(e, t) {
+  if (!window.Base?.activa()) return;
+  const volver = !!e.pasadoAPublicable;
+  const b = boton(volver ? "↩ Volver a Falta info" : "✓ Pasar a Publicable", async () => {
+    b.disabled = true;
+    try {
+      if (volver) {
+        if (!e.pasadoAPublicable.idBase) { b.disabled = false; return avisar("El agente ya lo pasó en el Doc"); }
+        await Base.borrarDato(e.pasadoAPublicable.idBase); avisar("Volvió a Falta info");
+      } else {
+        await Base.agregarDato({ evento_id: e.id, evento_titulo: e.titulo, tipo: "correccion",
+          texto: "[PUBLICABLE] Ya está completo: en el título cambiar (Necesito más info) por PUBLICABLE" });
+        avisar("Pasó a Publicable");
+      }
+    } catch { b.disabled = false; avisar("No se pudo guardar. Probá de nuevo"); }
+  });
+  b.className = volver ? "borrar" : "pasar-publicable";
+  const pie = t.querySelector(".pie");
+  pie.insertBefore(b, pie.firstChild);
 }
 
 // "🗑 Eliminar" (eventos del Doc): se oculta para todos y el agente lo saca del Doc en la próxima vuelta
@@ -443,7 +471,7 @@ function botonEliminar(e, t) {
     }
     if (b.dataset.ok !== "1") { b.dataset.ok = "1"; b.textContent = "¿Seguro? Tocá de nuevo"; setTimeout(() => { b.dataset.ok = ""; b.textContent = "🗑 Eliminar"; }, 4000); return; }
     b.disabled = true;
-    try { await Base.agregarDato({ evento_id: e.id, evento_titulo: e.titulo, tipo: "eliminar", texto: "Eliminar este evento" }); avisar("Eliminado (se puede recuperar con \"Mostrar publicados y eliminados\")"); }
+    try { await Base.agregarDato({ evento_id: e.id, evento_titulo: e.titulo, tipo: "correccion", texto: "[ELIMINAR] Sacar este evento del Doc" }); avisar("Eliminado (se puede recuperar con \"Mostrar publicados y eliminados\")"); }
     catch (err) { b.disabled = false; avisar(/check constraint|violates|does not exist/.test(err.message || "") ? "Falta activar esto en la base (avisale a Martín)" : "No se pudo eliminar. Probá de nuevo"); }
   });
   b.className = "borrar";

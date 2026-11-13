@@ -115,12 +115,12 @@
     "s-sets": (p) => { const d = p.datos;
       const sets = String(d.sets || "").split(",").map((s) => s.split("-").map((n) => n.trim())).filter((s) => s.length === 2 && s[0] !== "");
       const cols = sets.map((_, i) => `<th>Set ${i + 1}</th>`).join("");
-      return `${marcaAD("g-s-head")}<div class="g-ss-torneo">${esc(d.torneo)}</div>
-      ${d.deporte ? `<span class="g-pill celeste g-ss-pill">${esc(d.deporte)}</span>` : ""}${credito(d, "g-ss-cred")}${foto(p, "g-ss-foto")}
-      <table class="g-sets n${Math.min(sets.length, 5)}"><tr><th></th>${cols}</tr>
-        <tr class="arg"><td>${esc(d.arg).replace(/\//g, "/<wbr>")}<small>(ARG)</small></td>${sets.map((s) => `<td>${esc(s[0])}</td>`).join("")}</tr>
-        <tr><td>${esc(d.rival).replace(/\//g, "/<wbr>")}<small>(${esc(d.rival_pais)})</small></td>${sets.map((s) => `<td>${esc(s[1])}</td>`).join("")}</tr></table>
-      <div class="g-frase"><div class="g-adorno"></div><h1>${esc(d.frase)}</h1><div class="g-adorno abajo"></div></div>`; },
+      return `${marcaAD("g-s-head")}<div class="g-ss-cab"><div class="g-ss-torneo">${esc(d.torneo)}</div>
+      ${d.deporte ? `<span class="g-pill celeste g-ss-pill">${esc(d.deporte)}</span>` : ""}</div>${credito(d, "g-ss-cred")}${foto(p, "g-ss-foto")}
+      <div class="g-ss-abajo" data-fit><table class="g-sets n${Math.min(sets.length, 5)}"><tr><th></th>${cols}</tr>
+        <tr class="arg"><td><span data-ancho>${esc(d.arg).replace(/([\/-])/g, "$1<wbr>")}</span><small>(ARG)</small></td>${sets.map((s) => `<td>${esc(s[0])}</td>`).join("")}</tr>
+        <tr><td><span data-ancho>${esc(d.rival).replace(/([\/-])/g, "$1<wbr>")}</span><small>(${esc(d.rival_pais)})</small></td>${sets.map((s) => `<td>${esc(s[1])}</td>`).join("")}</tr></table>
+      ${d.frase ? `<div class="g-frase"><div class="g-adorno"></div><h1 data-fs="titulo">${esc(d.frase)}</h1><div class="g-adorno abajo"></div></div>` : ""}</div>`; },
     "s-partido": (p) => { const d = p.datos; return `${marcaAD("g-s-head")}${d.deporte ? `<span class="g-pill celeste g-centro g-sm-pill">${esc(d.deporte)}</span>` : ""}
       ${foto(p, "g-sm-foto")}${credito(d, "g-sm-cred")}<div class="g-sm-abajo" data-fit><div class="g-sm-caja"><b data-fs>${esc(d.torneo)}</b><span>${esc(d.instancia)}</span></div>
       <div class="g-marcador"><div class="eq arg">ARG</div><div class="res">${esc(d.gl)}<i>-</i>${esc(d.gv)}</div><div class="eq riv">${esc(d.rival_pais)}</div></div>
@@ -138,6 +138,11 @@
   // si el texto no entra en su lugar, se achica la letra de a poco hasta que entre (y se aplica el "Tamaño de letra")
   function ajustar(pagina, p) {
     if (!pagina) return;
+    for (const el of pagina.querySelectorAll("[data-ancho]")) {
+      const celda = el.closest("td") || el.parentElement;
+      let fs = parseFloat(getComputedStyle(el).fontSize);
+      while (celda.scrollWidth > celda.clientWidth + 1 && fs > 20) { fs *= 0.94; el.style.fontSize = fs + "px"; }
+    }
     const tam = (Number(p.datos.tam) || 100) / 100;
     for (const caja of pagina.querySelectorAll("[data-fit]")) {
       const grupo = (rol) => [...caja.querySelectorAll(`[data-fs="${rol}"]`), ...(rol === "titulo" ? caja.querySelectorAll('[data-fs=""]') : [])]
@@ -177,6 +182,7 @@
     if (G.sel >= G.paginas.length) G.sel = 0;
     const otros = Object.entries(TIPOS).filter(([, t]) => t.formato === formato());
     raiz.innerHTML = `
+      ${G.origen ? `<p class="g-origen">Con los datos de <b>${esc(G.origen.evento || G.origen.deporte)}</b>. Tocá otra plantilla para pasarlos (feed o historia). <button class="g-soltar">Empezar de cero</button></p>` : ""}
       <div class="g-plantillas" role="tablist">${Object.entries(PLANTILLAS).map(([id, t]) =>
         `<button data-p="${id}" class="${id === G.plantilla ? "activo" : ""}">${esc(t.nombre)}</button>`).join("")}</div>
       <div class="g-tira">${G.paginas.map((p, i) => `<button class="g-mini ${i === G.sel ? "activo" : ""}" data-i="${i}">${escalada(p, i, 92)}<span>${num(i)}</span></button>`).join("")}
@@ -186,8 +192,13 @@
         <button class="g-reset">Volver a la plantilla</button></div>
       <p class="ayuda">Las fotos quedan solo en este dispositivo. Los textos se guardan como borrador acá mismo.</p>`;
     raiz.querySelectorAll(".g-plantillas button").forEach((b) => (b.onclick = () => {
-      G = nuevo(b.dataset.p); guardar(); armar();
+      // fotos ya subidas: se conservan en el mismo orden
+      const fotos = G.paginas.map((p) => p.foto);
+      G = G.origen ? armarDesde(G.origen, b.dataset.p) : nuevo(b.dataset.p);
+      G.paginas.forEach((p, i) => { if (fotos[i]?.src) p.foto = fotos[i]; });
+      guardar(); armar();
     }));
+    raiz.querySelector(".g-soltar")?.addEventListener("click", () => { G = nuevo(G.plantilla); guardar(); armar(); });
     raiz.querySelectorAll(".g-mini").forEach((b) => (b.onclick = () => { G.sel = Number(b.dataset.i); armar(); }));
     raiz.querySelector(".g-mas").onclick = () => {
       const tipo = raiz.querySelector(".g-agregar select").value;
@@ -197,7 +208,7 @@
       G.paginas.push(nueva); G.sel = G.paginas.length - 1; guardar(); armar();
     };
     raiz.querySelector(".g-bajar").onclick = descargar;
-    raiz.querySelector(".g-reset").onclick = () => { G = nuevo(G.plantilla); guardar(); armar(); };
+    raiz.querySelector(".g-reset").onclick = () => { G = G.origen ? armarDesde(G.origen, G.plantilla) : nuevo(G.plantilla); guardar(); armar(); };
     raiz.querySelectorAll(".g-mini").forEach((m) => ajustar(m.querySelector(".g-pagina"), G.paginas[Number(m.dataset.i)]));
     vista(); campos();
   }
@@ -318,31 +329,61 @@
   }
   // opciones.medalla(partes) -> {clave: "oro"|"plata"|"bronce"} si la línea tiene una medalla en negrita
   function desdeEvento(e, opciones = {}) {
-    const placas = [];
+    // se guarda de dónde salió, así se puede pasar a otra plantilla (carrusel, medalla, historias) con los mismos datos
+    const origen = { deporte: e.deporte || "", evento: e.evento || e.titulo || "", bloques: (e.bloques || []).filter((b) => b.partes),
+      titulo: opciones.titulo || "", medallaAuto: !!opciones.medalla };
+    G = armarDesde(origen, opciones.plantilla);
+    guardar();
+  }
+
+  function armarDesde(o, plantilla) {
+    const placas = [], lineas = [];
     let actual = null, medalla = null;
-    for (const b of e.bloques || []) {
-      if (!b.partes) continue;
+    const fnMedalla = o.medallaAuto || plantilla === "medalla" ? window.tipoMedalla : null;
+    for (const b of o.bloques) {
       const txt = limpio(b.partes);
       if (!txt) continue;
-      if (!medalla && opciones.medalla && (b.tipo === "texto" || b.tipo === "sub")) {
-        const m = opciones.medalla(b.partes);
+      if (b.tipo === "texto" || b.tipo === "sub") lineas.push(txt);
+      if (!medalla && fnMedalla && (b.tipo === "texto" || b.tipo === "sub")) {
+        const m = fnMedalla(b.partes);
         if (m) medalla = { clave: m.clave, texto: txt };
       }
       if (b.tipo === "sub") { actual = { titulo: txt, texto: [] }; placas.push(actual); }
       else if (b.tipo === "texto") { if (!actual) { actual = { titulo: "", texto: [] }; placas.push(actual); } actual.texto.push(txt); }
     }
-    const acento = medalla ? "naranja" : undefined;
+    if (!plantilla) plantilla = medalla && o.medallaAuto ? "medalla" : "carrusel";
+    const acento = plantilla === "medalla" ? "naranja" : undefined;
     const lasPlacas = placas.slice(0, 6).map((pl) => pag("placa", { titulo: pl.titulo || "Resultado", texto: pl.texto.join("\n").slice(0, 700), credito: "", acento }));
-    if (medalla) {
+    const base = { deporte: o.deporte, torneo: o.evento, instancia: "", credito: "" };
+    // marcador: "2-0 vs Nueva Zelanda (NZL)", "21-16, 21-12 vs X (DOM)"
+    const lineaVs = lineas.find((l) => /\bvs\.?\b/i.test(l) && /\d+\s*-\s*\d+/.test(l)) || "";
+    const pais = (lineaVs.match(/\(([A-Z]{3})\)/) || [])[1] || "";
+    const marcadores = [...lineaVs.matchAll(/(\d{1,3})\s*-\s*(\d{1,3})/g)].map((m) => [m[1], m[2]]);
+    const rival = (lineaVs.match(/\bvs\.?\s+([^(,0-9]+?)(?:\s*\(|\s+por\b|,|$)/i) || [])[1] || "";
+    let pags;
+    if (plantilla === "medalla") {
+      const txt = medalla?.texto || lineas[0] || "";
       // "Cecilia Dieleke ganó la medalla..." -> nombre = lo que está antes del verbo
-      const m = medalla.texto.match(/^(.+?)\s+(gan[oó]|logr[oó]|se (colg[oó]|qued[oó]|consagr[oó]|llev[oó])|conquist[oó]|obtuvo|consigui[oó]|fue|termin[oó]|sum[oó])(?=\s|$)/i);
-      G = { plantilla: "medalla", sel: 0, paginas: [pag("medalla", { prueba: e.deporte || "", nombre: m ? m[1].replace(/\(.*?\)/g, "").trim() : "",
-        medalla: medalla.clave, evento: e.evento || e.titulo || "", credito: "" }), ...lasPlacas] };
+      const m = txt.match(/^(.+?)\s+(?:les?\s+)?(gan[oó]|logr[oó]|se (colg[oó]|qued[oó]|consagr[oó]|llev[oó])|conquist[oó]|obtuvo|consigui[oó]|fue|termin[oó]|sum[oó])(?=\s|$)/i);
+      pags = [pag("medalla", { prueba: o.deporte, nombre: m ? m[1].replace(/\(.*?\)/g, "").trim() : "", medalla: medalla?.clave || "oro", evento: o.evento, credito: "" }), ...lasPlacas];
+    } else if (plantilla === "historia") {
+      const pls = placas.slice(0, 4).map((pl) => pag("s-texto", { ...base, titulo: pl.titulo || "Resultado", texto: pl.texto.join("\n").slice(0, 500) }));
+      pags = [pag("s-portada", { ...base, linea1: "Argentina", linea2: "", credito: "" }), ...pls];
+    } else if (plantilla === "sets") {
+      pags = [pag("s-sets", { ...base, arg: "Argentina", rival, rival_pais: pais, sets: marcadores.map((s) => s.join("-")).join(", "), frase: "" })];
+    } else if (plantilla === "partido") {
+      const [gl, gv] = marcadores[0] || ["", ""];
+      pags = [pag("s-partido", { ...base, gl, gv, rival_pais: pais, frase: "", goleadores: "" })];
+    } else if (plantilla === "posicion") {
+      const l = lineas.find((x) => /\d+\s*[°º]/.test(x)) || "";
+      const nombre = (l.match(/^(.+?)\s+(fue|termin[oó]|qued[oó]|finaliz[oó]|lleg[oó])\b/i) || [])[1] || "";
+      pags = [pag("s-posicion", { ...base, prueba: placas[0]?.titulo || "", nombre: nombre.replace(/\(.*?\)/g, "").trim(),
+        posicion: (l.match(/(\d+)\s*[°º]/) || [])[1] ? (l.match(/(\d+)\s*[°º]/))[1] + "°" : "", marca: "" })];
     } else {
-      G = { plantilla: "carrusel", sel: 0, paginas: [pag("portada", { deporte: e.deporte || "", torneo: e.evento || e.titulo || "", titulo: opciones.titulo || "", credito: "" }), ...lasPlacas] };
+      pags = [pag("portada", { ...base, titulo: o.titulo }), ...lasPlacas];
     }
-    if (G.paginas.length === 1) G.paginas.push(pag("placa", { titulo: "Título", texto: "", credito: "", acento }));
-    guardar();
+    if (pags.length === 1 && TIPOS[pags[0].tipo].formato === "feed") pags.push(pag("placa", { titulo: "Título", texto: "", credito: "", acento }));
+    return { plantilla, sel: 0, paginas: pags, origen: o };
   }
 
   window.Graficas = { dibujar, desdeEvento };

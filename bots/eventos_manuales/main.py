@@ -69,7 +69,7 @@ def agregados(refs):
     pendientes, eliminados = [], []
     for f in filas:
         ref = f["id"].replace("-", "")[:REF]
-        if f.get("tipo") == "eliminar":  # "🗑 Eliminar" del panel: va a la lista de vencidos y el agente saca el bloque del Doc
+        if f.get("tipo") == "eliminar" or str(f.get("texto") or "").startswith("[ELIMINAR]"):  # "🗑 Eliminar" del panel: va a la lista de vencidos y el agente saca el bloque del Doc
             eliminados.append(f.get("evento_titulo") or "")
             continue
         if ref in refs:
