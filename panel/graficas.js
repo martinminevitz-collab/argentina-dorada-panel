@@ -92,56 +92,65 @@
 
   const DIBUJO = {
     portada: (p) => { const d = p.datos; return `${foto(p, "g-full")}<div class="g-degrade"></div>
-      <div class="g-pt-arriba">${d.deporte ? `<span class="g-pill oro">${esc(d.deporte)}</span>` : ""}<div class="g-pt-torneo">${esc(d.torneo)}</div></div>
+      <div class="g-pt-arriba">${d.deporte ? `<span class="g-pill oro">${esc(d.deporte)}</span>` : ""}<div class="g-pt-torneo" data-lineas="2">${esc(d.torneo)}</div></div>
       <div class="g-logo-caja"><span>ARGENTINA</span><b>DORADA</b></div>
-      <div class="g-pt-titulo" data-fit><div class="g-linea"></div><h1 data-fs="titulo">${br(d.titulo)}</h1></div>
+      <div class="g-pt-titulo" data-fit><div class="g-linea"></div><h1 data-fs="titulo" data-ancho>${br(d.titulo)}</h1></div>
       ${credito(d, "caja")}<div class="g-desliza">Deslizá <span>⟶</span></div>`; },
     placa: (p, i) => { const d = p.datos; return `<div class="g-placa ${d.fondo === "claro" ? "claro" : ""}">
       ${foto(p, "g-pl-foto")}${credito(d, "g-pl-cred")}
-      <div class="g-pl-cuerpo" data-fit><div class="g-linea"></div><h2 data-fs="titulo">${br(d.titulo)}</h2><p data-fs="texto">${br(d.texto)}</p></div>
+      <div class="g-pl-cuerpo" data-fit><div class="g-linea"></div><h2 data-fs="titulo" data-ancho>${br(d.titulo)}</h2><p data-fs="texto">${br(d.texto)}</p></div>
       ${marcaAD("g-pl-ad")}<div class="g-pl-num ${d.acento || "celeste"}">${num(i)}</div></div>`; },
     medalla: (p) => { const d = p.datos; const [txt, cls] = MEDALLAS[d.medalla] || MEDALLAS.oro; return `${foto(p, "g-full")}<div class="g-degrade suave"></div>
       <div class="g-md-prueba">${esc(d.prueba)}</div><div class="g-md-nombre">${esc(d.nombre)}</div>
       <div class="g-logo-caja blanca"><i>AD</i><span>ARGENTINA</span><b>DORADA</b></div>
-      <h1 class="g-md-titulo ${cls}">${esc(txt)}</h1><div class="g-md-evento">${esc(d.evento)}</div>
+      <h1 class="g-md-titulo ${cls}" data-ancho>${esc(txt)}</h1><div class="g-md-evento">${esc(d.evento)}</div>
       <div class="g-guarda"></div><div class="g-desliza naranja">Deslizá <span>⟶</span></div>${credito(d, "g-md-cred")}`; },
     "s-portada": (p) => { const d = p.datos; return `${foto(p, "g-full")}<div class="g-degrade story"></div>${marcaAD("g-s-head")}
-      ${caja(d, "g-sp-caja")}<h1 class="g-sp-titulo"><span>${esc(d.linea1)}</span><span class="celeste">${esc(d.linea2)}</span></h1>
+      ${caja(d, "g-sp-caja")}<div class="g-sp-zona" data-fit><h1 class="g-sp-titulo" data-ancho><span data-fs="titulo">${esc(d.linea1)}</span><span class="celeste" data-fs="titulo">${esc(d.linea2)}</span></h1></div>
       <div class="g-marco"></div>${credito(d, "g-s-cred-abajo")}`; },
     "s-texto": (p) => { const d = p.datos; return `${marcaAD("g-s-head")}<div class="g-s-linea-top"></div>
       ${d.deporte ? `<span class="g-pill celeste g-st-pill">${esc(d.deporte)}</span>` : ""}${foto(p, "g-st-foto")}${credito(d, "g-st-cred")}
-      <div class="g-st-caja"><b>${esc(d.torneo)}</b><span>${esc(d.instancia)}</span></div>
-      <div class="g-st-abajo" data-fit><h1 class="g-st-titulo" data-fs="titulo">${br(d.titulo)}</h1><div class="g-st-texto"><div class="g-linea"></div><p data-fs="texto">${br(d.texto)}</p></div></div>`; },
+      <div class="g-st-caja"><b data-lineas="2">${esc(d.torneo)}</b><span>${esc(d.instancia)}</span></div>
+      <div class="g-st-abajo" data-fit><h1 class="g-st-titulo" data-fs="titulo" data-ancho>${br(d.titulo)}</h1><div class="g-st-texto"><div class="g-linea"></div><p data-fs="texto">${br(d.texto)}</p></div></div>`; },
     "s-sets": (p) => { const d = p.datos;
       const sets = String(d.sets || "").split(",").map((s) => s.split("-").map((n) => n.trim())).filter((s) => s.length === 2 && s[0] !== "");
       const cols = sets.map((_, i) => `<th>Set ${i + 1}</th>`).join("");
-      return `${marcaAD("g-s-head")}<div class="g-ss-cab"><div class="g-ss-torneo">${esc(d.torneo)}</div>
+      return `${marcaAD("g-s-head")}<div class="g-ss-cab"><div class="g-ss-torneo" data-lineas="2">${esc(d.torneo)}</div>
       ${d.deporte ? `<span class="g-pill celeste g-ss-pill">${esc(d.deporte)}</span>` : ""}</div>${credito(d, "g-ss-cred")}${foto(p, "g-ss-foto")}
       <div class="g-ss-abajo" data-fit><table class="g-sets n${Math.min(sets.length, 5)}"><tr><th></th>${cols}</tr>
         <tr class="arg"><td><span data-ancho>${esc(d.arg).replace(/([\/-])/g, "$1<wbr>")}</span><small>(ARG)</small></td>${sets.map((s) => `<td>${esc(s[0])}</td>`).join("")}</tr>
         <tr><td><span data-ancho>${esc(d.rival).replace(/([\/-])/g, "$1<wbr>")}</span><small>(${esc(d.rival_pais)})</small></td>${sets.map((s) => `<td>${esc(s[1])}</td>`).join("")}</tr></table>
-      ${d.frase ? `<div class="g-frase"><div class="g-adorno"></div><h1 data-fs="titulo">${esc(d.frase)}</h1><div class="g-adorno abajo"></div></div>` : ""}</div>`; },
+      ${d.frase ? `<div class="g-frase"><div class="g-adorno"></div><h1 data-fs="titulo" data-ancho>${esc(d.frase)}</h1><div class="g-adorno abajo"></div></div>` : ""}</div>`; },
     "s-partido": (p) => { const d = p.datos; return `${marcaAD("g-s-head")}${d.deporte ? `<span class="g-pill celeste g-centro g-sm-pill">${esc(d.deporte)}</span>` : ""}
-      ${foto(p, "g-sm-foto")}${credito(d, "g-sm-cred")}<div class="g-sm-abajo" data-fit><div class="g-sm-caja"><b data-fs>${esc(d.torneo)}</b><span>${esc(d.instancia)}</span></div>
+      ${foto(p, "g-sm-foto")}${credito(d, "g-sm-cred")}<div class="g-sm-abajo" data-fit><div class="g-sm-caja"><b data-lineas="2">${esc(d.torneo)}</b><span>${esc(d.instancia)}</span></div>
       <div class="g-marcador"><div class="eq arg">ARG</div><div class="res">${esc(d.gl)}<i>-</i>${esc(d.gv)}</div><div class="eq riv">${esc(d.rival_pais)}</div></div>
-      <h1 class="g-sm-frase" data-fs>${esc(d.frase)}</h1>${d.goleadores ? `<div class="g-sm-gol"><span class="g-pill celeste">Goleadores</span><p data-fs>${esc(d.goleadores)}</p></div>` : ""}</div>`; },
+      <h1 class="g-sm-frase" data-fs data-ancho>${esc(d.frase)}</h1>${d.goleadores ? `<div class="g-sm-gol"><span class="g-pill celeste">Goleadores</span><p data-fs>${esc(d.goleadores)}</p></div>` : ""}</div>`; },
     "s-posicion": (p) => { const d = p.datos; return `${marcaAD("g-s-head")}<div class="g-spo-cab">${d.deporte ? `<span class="g-pill celeste">${esc(d.deporte)}</span>` : ""}
-      <div><b>${esc(d.torneo)}</b><span>${esc(d.instancia)}</span></div></div>${foto(p, "g-spo-foto")}${credito(d, "g-spo-cred")}
-      <h2 class="g-spo-prueba">${esc(d.prueba)}</h2><div class="g-spo-nombre">${esc(d.nombre)}</div>
+      <div><b data-lineas="2">${esc(d.torneo)}</b><span>${esc(d.instancia)}</span></div></div>${foto(p, "g-spo-foto")}${credito(d, "g-spo-cred")}
+      <h2 class="g-spo-prueba" data-ancho>${esc(d.prueba)}</h2><div class="g-spo-nombre">${esc(d.nombre)}</div>
       <div class="g-spo-cajas"><div class="pos"><span>Posición</span><b>${esc(d.posicion)}</b></div><div class="mar"><span>Marca</span><b>${esc(d.marca)}</b></div></div>`; },
   };
   function caja(d, clase) {
     return `<div class="${clase}">${d.deporte ? `<span class="g-pill celeste">${esc(d.deporte)}</span>` : ""}
-      ${d.torneo || d.instancia ? `<div class="g-caja-torneo"><b>${esc(d.torneo)}</b><span>${esc(d.instancia)}</span></div>` : ""}</div>`;
+      ${d.torneo || d.instancia ? `<div class="g-caja-torneo"><b data-lineas="2">${esc(d.torneo)}</b><span>${esc(d.instancia)}</span></div>` : ""}</div>`;
   }
 
   // si el texto no entra en su lugar, se achica la letra de a poco hasta que entre (y se aplica el "Tamaño de letra")
   function ajustar(pagina, p) {
     if (!pagina) return;
     for (const el of pagina.querySelectorAll("[data-ancho]")) {
-      const celda = el.closest("td") || el.parentElement;
+      el.style.fontSize = "";
+      const celda = el.tagName === "SPAN" ? el.closest("td") || el.parentElement : el;
       let fs = parseFloat(getComputedStyle(el).fontSize);
       while (celda.scrollWidth > celda.clientWidth + 1 && fs > 20) { fs *= 0.94; el.style.fontSize = fs + "px"; }
+    }
+    for (const el of pagina.querySelectorAll("[data-lineas]")) {
+      el.style.fontSize = "";
+      const max = Number(el.dataset.lineas), cs = getComputedStyle(el);
+      let fs = parseFloat(cs.fontSize);
+      const alto = () => el.scrollHeight - parseFloat(cs.paddingTop) - parseFloat(cs.paddingBottom);
+      const linea = () => (parseFloat(getComputedStyle(el).lineHeight) || fs * 1.2);
+      while (alto() > linea() * max + 4 && fs > 18) { fs *= 0.94; el.style.fontSize = fs + "px"; }
     }
     const tam = (Number(p.datos.tam) || 100) / 100;
     for (const caja of pagina.querySelectorAll("[data-fit]")) {

@@ -355,7 +355,7 @@ input[type=search], select { width: 100%; background: var(--tarjeta); color: var
 .g-degrade.suave { background: linear-gradient(to top, rgba(8, 20, 38, .7) 0%, rgba(8, 20, 38, 0) 45%); }
 .g-degrade.story { background: linear-gradient(to top, rgba(8, 20, 38, .98) 0%, rgba(8, 20, 38, .85) 30%, rgba(8, 20, 38, 0) 55%),
   linear-gradient(to bottom, rgba(8, 20, 38, .95) 0%, rgba(8, 20, 38, 0) 30%); }
-.g-pill { display: inline-block; padding: 6px 42px; border-radius: 16px; font-size: 46px; line-height: 1.1; }
+.g-pill { display: inline-block; padding: 6px 42px; border-radius: 16px; font-size: 46px; line-height: 1.1; white-space: nowrap; }
 .g-pill.oro { background: var(--oro); color: var(--navy); }
 .g-pill.celeste { background: var(--cel); color: var(--navy); }
 .g-linea { height: 4px; background: var(--oro); }
@@ -374,7 +374,7 @@ input[type=search], select { width: 100%; background: var(--tarjeta); color: var
 .g-logo-caja.blanca b { color: var(--oro); }
 
 /* portada feed */
-.g-pt-arriba { position: absolute; left: 60px; top: 60px; display: grid; gap: 10px; justify-items: start; max-width: 620px; }
+.g-pt-arriba { position: absolute; left: 60px; top: 60px; display: grid; gap: 10px; justify-items: start; max-width: 570px; }
 .g-pt-torneo { font-size: 40px; text-transform: uppercase; }
 .g-pt-titulo { position: absolute; left: 60px; right: 60px; top: 330px; bottom: 150px; display: flex; flex-direction: column; justify-content: flex-end; overflow: hidden; }
 .g-pt-titulo .g-linea { margin-bottom: 26px; }
@@ -416,7 +416,8 @@ input[type=search], select { width: 100%; background: var(--tarjeta); color: var
 .g-caja-torneo { border: 3px solid var(--oro); background: rgba(12, 26, 44, .7); display: grid; min-width: 560px; }
 .g-caja-torneo b { font-size: 76px; font-weight: 400; padding: 12px 30px 4px; }
 .g-caja-torneo span { background: var(--cel); color: var(--navy); font-size: 48px; padding: 8px 30px; }
-.g-sp-titulo { position: absolute; left: 40px; right: 40px; bottom: 300px; display: grid; text-align: center; font-size: 270px; line-height: .9; text-transform: uppercase; }
+.g-sp-zona { position: absolute; left: 40px; right: 40px; top: 560px; bottom: 300px; display: flex; flex-direction: column; justify-content: flex-end; overflow: hidden; }
+.g-sp-titulo { display: grid; text-align: center; font-size: 270px; line-height: .9; text-transform: uppercase; }
 .g-sp-titulo .celeste { color: var(--cel); }
 .g-marco { position: absolute; left: 30px; right: 30px; bottom: 140px; height: 720px; border: 3px solid var(--oro); border-top: 0; opacity: .7;
   -webkit-mask: linear-gradient(to top, #000 70%, transparent); mask: linear-gradient(to top, #000 70%, transparent); }
@@ -469,8 +470,8 @@ input[type=search], select { width: 100%; background: var(--tarjeta); color: var
 .g-sm-gol .g-pill { font-size: 36px; padding: 4px 40px; }
 .g-sm-gol p { font-size: 40px; border: 2px solid #6fa8dc; padding: 14px 30px; border-radius: 14px; width: 100%; }
 .g-spo-cab { position: absolute; left: 50px; right: 50px; top: 200px; display: flex; gap: 30px; align-items: center; border: 3px solid #2c4a6e; padding: 20px 30px; }
-.g-spo-cab div { display: grid; border-left: 3px solid #2c4a6e; padding-left: 30px; }
-.g-spo-cab b { font-size: 64px; font-weight: 400; } .g-spo-cab span { font-size: 40px; color: var(--cel); }
+.g-spo-cab div { display: grid; border-left: 3px solid #2c4a6e; padding-left: 30px; min-width: 0; flex: 1 1 auto; }
+.g-spo-cab b { font-size: 64px; font-weight: 400; line-height: 1.05; } .g-spo-cab span { font-size: 40px; color: var(--cel); }
 .g-spo-foto { left: 50px; right: 50px; top: 400px; height: 680px; border: 3px solid #2c4a6e; }
 .g-spo-cred { right: 70px; top: 1030px; font-size: 24px; }
 .g-spo-prueba { position: absolute; left: 40px; right: 40px; top: 1140px; text-align: center; font-size: 110px; color: var(--oro); text-transform: uppercase; }
