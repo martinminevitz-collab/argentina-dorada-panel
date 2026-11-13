@@ -297,6 +297,10 @@ input[type=search], select { width: 100%; background: var(--tarjeta); color: var
 .crear .pie { padding: 0; border: 0; }
 .crear .principal { background: var(--oro); border-color: var(--oro); color: #fff; }
 .chip.manual { background: var(--oro-fondo); color: var(--oro); }
+.chip.eliminado { background: var(--rojo-fondo); color: var(--rojo); }
+.noticia .resumen-noticia { margin: 2px 0 0; font-size: 14px; opacity: .8; line-height: 1.35; }
+.noticia .pie { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 6px; }
+.noticia.ya-publicado { opacity: .55; }
 .pie .borrar { margin-left: auto; color: var(--rojo); border-color: var(--rojo-fondo); }
 
 /* =====================================================================

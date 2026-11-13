@@ -61,8 +61,7 @@ async function cargar() {
     estado.doc = doc; estado.corrida = corrida;
     estado.docEventos = doc?.eventos || [];
     combinar();
-    const dias = Number($("#rango").value);
-    const listas = await Promise.all(indice.dias.slice(0, dias).map((d) => bajarJSON(d.archivo).catch(() => [])));
+    const listas = await Promise.all(indice.dias.slice(0, 7).map((d) => bajarJSON(d.archivo).catch(() => [])));
     estado.noticias = listas.flat();
   } finally {
     $("#recargar").classList.remove("girando");
@@ -92,7 +91,7 @@ function mostrarEstado() {
 
 function llenarDeportes() {
   const sel = $("#deporte"), actual = sel.value;
-  const fuente = estado.tab === "radar" ? estado.noticias.map((n) => n.deporte) : estado.eventos.map((e) => e.deporte);
+  const fuente = estado.tab === "radar" || estado.tab === "noticias" ? estado.noticias.map((n) => n.deporte) : estado.eventos.map((e) => e.deporte);
   const deportes = [...new Set(fuente.filter(Boolean))].sort((a, b) => a.localeCompare(b, "es"));
   sel.innerHTML = `<option value="">Todos los deportes</option>` + deportes.map((d) => `<option>${escapar(d)}</option>`).join("");
   sel.value = deportes.includes(actual) ? actual : "";
@@ -128,12 +127,17 @@ function combinar() {
   const filas = estado.manualesBase ?? estado.manualesBot ?? [];
   const manuales = filas.map(aEvento).filter((m) => !refs.has(m.ref));
   // datos agregados desde el panel ("+ Agregar dato"): se suman al final del evento hasta que el agente los pasa al Doc
-  const ags = (estado.agregadosBase ?? estado.agregadosBot ?? []).filter((a) => !refs.has(refDe(a)));
+  const todos = (estado.agregadosBase ?? estado.agregadosBot ?? []).filter((a) => !refs.has(refDe(a)));
+  const ags = todos.filter((a) => a.tipo !== "eliminar");
+  const bajas = todos.filter((a) => a.tipo === "eliminar"); // "🗑 Eliminar": se oculta para todos y el agente lo saca del Doc
   // lo que el agente ya sacó del Doc por publicado: queda 7 días para "Mostrar los que ya publiqué"
   const enDoc = new Set(doc.map((e) => e.id));
   const archivados = (estado.archivo || []).filter((e) => !enDoc.has(e.id)).map((e) => ({ ...e, publicado_en_doc: true, archivado: true }));
+  const esDe = (a, e) => a.evento_id === e.id || sinTildes(a.evento_titulo) === sinTildes(e.titulo);
   estado.eventos = [...manuales, ...doc, ...archivados].map((e) => {
-    const mios = ags.filter((a) => a.evento_id === e.id || sinTildes(a.evento_titulo) === sinTildes(e.titulo));
+    const baja = bajas.find((a) => esDe(a, e));
+    if (baja) e = { ...e, eliminado: { idBase: String(baja.id || "").includes("-") ? baja.id : null } };
+    const mios = ags.filter((a) => esDe(a, e));
     if (!mios.length) return e;
     return { ...e, version: e.version + ":" + huella(mios.map((a) => a.texto).join("|")),
       bloques: [...e.bloques, ...mios.map((a) => ({ tipo: "texto", agregado: true, idBase: String(a.id || "").includes("-") ? a.id : null,
@@ -207,7 +211,7 @@ function eventosBA() {
   const palabras = (t) => new Set(sinTildes(t).split(/[^a-z0-9]+/).filter((w) => w.length > 3));
   const planilla = deLaPlanilla.map((e) => palabras(e.titulo));
   const repetido = (e) => { const p = palabras(e.titulo); return planilla.some((q) => [...p].filter((w) => q.has(w)).length >= Math.max(2, Math.min(p.size, q.size) * 0.5)); };
-  const deLaAgenda = estado.eventos.filter((e) => e.seccion === "agenda" && !e.multideportivo && esDeBA(e) && !repetido(e));
+  const deLaAgenda = estado.eventos.filter((e) => e.seccion === "agenda" && !e.multideportivo && !e.eliminado && esDeBA(e) && !repetido(e));
   const q = sinTildes($("#buscar").value), dep = $("#deporte").value;
   return [...deLaPlanilla, ...deLaAgenda].filter((e) => (!dep || e.deporte === dep) && (!q || sinTildes(e.titulo + " " + e.deporte + " " + e.fechas).includes(q)));
 }
@@ -303,6 +307,7 @@ function eventosDe(tab, conFiltros = true) {
     if (e.seccion !== seccion) return false;
     if (seccion === "resultados" && e.multideportivo) return false;
     if (e.vencido) return false; // terminó hace más de 7 días
+    if (e.eliminado && (!conFiltros || !$("#ver-publicados").checked)) return false;
     const esAgenda = seccion === "agenda"; // la agenda no se "publica": siempre se ve todo
     if (!conFiltros) return esAgenda || !estaPublicado(e) || tieneNovedades(e);
     if (!esAgenda && !$("#ver-publicados").checked && estaPublicado(e) && !tieneNovedades(e)) return false;
@@ -315,8 +320,13 @@ function eventosDe(tab, conFiltros = true) {
   });
 }
 
+function dentroDelRango(n) {
+  const desde = Date.now() - Number($("#rango").value) * 864e5;
+  return new Date(n.encontrado || n.publicado || 0).getTime() >= desde - 3 * 36e5;
+}
 function noticiasFiltradas(conFiltros = true) {
   return estado.noticias.filter((n) => {
+    if (!dentroDelRango(n)) return false;
     if (!conFiltros) return true;
     const t = estado.filtroTipo;
     if (t === "ba" ? !n.en_buenos_aires : t && n.tipo !== t) return false;
@@ -351,7 +361,7 @@ function dibujar() {
   for (const b of document.querySelectorAll(".pestanas button")) {
     const t = b.dataset.tab;
     b.classList.toggle("activa", t === estado.tab);
-    const n = t === "radar" ? estado.noticias.length : t === "ba" ? eventosBA().length : t.startsWith("m:") || t === "graficas" ? "" : eventosDe(t, false).length;
+    const n = t === "radar" ? noticiasFiltradas(false).length : t === "noticias" ? noticiasParaPublicar(false).length : t === "ba" ? eventosBA().length : t.startsWith("m:") || t === "graficas" ? "" : eventosDe(t, false).length;
     b.querySelector(".n").textContent = n || "";
   }
   document.querySelectorAll("[data-para]").forEach((el) => (el.hidden = !el.dataset.para.split(" ").includes(estado.tab)));
@@ -362,13 +372,14 @@ function dibujar() {
   lista.classList.remove("modo-multi", "modo-graficas");
   if (estado.tab === "graficas") return window.Graficas?.dibujar(lista);
   if (estado.tab === "radar") return dibujarRadar(lista);
+  if (estado.tab === "noticias") return dibujarNoticias(lista);
   if (estado.tab === "ba") return dibujarBA(lista);
   if (esMulti) return dibujarMulti(lista);
 
   const eventos = eventosDe(estado.tab);
   barraCrear(lista);
   if (!estado.doc && !eventos.length) { lista.insertAdjacentHTML("beforeend", `<p class="vacio">Todavía no se leyó el Doc. Se carga solo en la próxima vuelta del bot.</p>`); return; }
-  if (!eventos.length) { lista.insertAdjacentHTML("beforeend", `<p class="vacio">Nada por acá. Probá con "Todos" o tildá "Mostrar los que ya publiqué".</p>`); return; }
+  if (!eventos.length) { lista.insertAdjacentHTML("beforeend", `<p class="vacio">Nada por acá. Probá con "Todos" o tildá "Mostrar publicados y eliminados".</p>`); return; }
   const tpl = $("#tpl-evento");
   for (const e of eventos) lista.append(tarjetaEvento(e, tpl));
 }
@@ -400,6 +411,7 @@ function tarjetaEvento(e, tpl) {
     const g = boton("🎨 Gráfica", () => { Graficas.desdeEvento(e, { medalla: tipoMedalla }); estado.tab = "graficas"; dibujar(); window.scrollTo({ top: 0 }); });
     t.querySelector(".pie").insertBefore(g, t.querySelector(".pie .publicado"));
   }
+  if (!e.manual && !e.archivado && !e.id.startsWith("ba:")) botonEliminar(e, t);
   if (e.manual) {
     const chip = document.createElement("span"); chip.className = "chip manual"; chip.textContent = "✍️ A mano";
     chip.title = "Lo cargó alguien desde el panel. Cuando el agente lo pase al Doc, queda el del Doc.";
@@ -414,6 +426,28 @@ function tarjetaEvento(e, tpl) {
     }
   }
   return t;
+}
+
+// "🗑 Eliminar" (eventos del Doc): se oculta para todos y el agente lo saca del Doc en la próxima vuelta
+function botonEliminar(e, t) {
+  if (e.eliminado) {
+    const chip = document.createElement("span"); chip.className = "chip eliminado"; chip.textContent = "🗑 Eliminado";
+    t.querySelector(".chips").append(chip); t.classList.add("ya-publicado");
+  }
+  if (!window.Base?.activa()) return;
+  const b = boton(e.eliminado ? "↩ Recuperar" : "🗑 Eliminar", async () => {
+    if (e.eliminado) {
+      if (!e.eliminado.idBase) return avisar("El agente ya lo está sacando del Doc");
+      try { await Base.borrarDato(e.eliminado.idBase); avisar("Recuperado"); } catch { avisar("No se pudo recuperar"); }
+      return;
+    }
+    if (b.dataset.ok !== "1") { b.dataset.ok = "1"; b.textContent = "¿Seguro? Tocá de nuevo"; setTimeout(() => { b.dataset.ok = ""; b.textContent = "🗑 Eliminar"; }, 4000); return; }
+    b.disabled = true;
+    try { await Base.agregarDato({ evento_id: e.id, evento_titulo: e.titulo, tipo: "eliminar", texto: "Eliminar este evento" }); avisar("Eliminado (se puede recuperar con \"Mostrar publicados y eliminados\")"); }
+    catch (err) { b.disabled = false; avisar(/check constraint|violates|does not exist/.test(err.message || "") ? "Falta activar esto en la base (avisale a Martín)" : "No se pudo eliminar. Probá de nuevo"); }
+  });
+  b.className = "borrar";
+  t.querySelector(".pie").append(b);
 }
 
 const MESES = /\(Creo\)/g;
@@ -941,6 +975,16 @@ function cajaFinal(e) {
   const pie = document.createElement("div"); pie.className = "pie";
   pie.append(boton("Copiar posteo para IG", () =>
     copiarTexto(`${e.multi.resumen_final}\n\n${hashtagsEvento({ titulo: e.titulo }, [hashtag(e.multi.nombre)]).join(" ")}`)));
+  if (window.Graficas) pie.append(boton("🎨 Gráfica", () => {
+    // portada "Resumen final" + placas de a 2 oraciones (+ medallero si está)
+    const oraciones = e.multi.resumen_final.match(/[^.!?]+[.!?]+(\s|$)|[^.!?]+$/g)?.map((s) => s.trim()).filter(Boolean) || [];
+    const bloques = [];
+    const med = (e.multi.medallero || []).map((p) => p.t).join("").trim();
+    if (med) bloques.push({ tipo: "sub", partes: [{ t: "Medallero" }] }, { tipo: "texto", partes: partesConNegrita(med.replace(/^medallero:\s*/i, "")) });
+    oraciones.forEach((o, i) => { if (i % 2 === 0) bloques.push({ tipo: "sub", partes: [{ t: i ? "Resumen (sigue)" : "Lo mejor de los Juegos" }] }); bloques.push({ tipo: "texto", partes: [{ t: o }] }); });
+    Graficas.desdeEvento({ deporte: "Resumen final", evento: e.multi.nombre, bloques });
+    estado.tab = "graficas"; dibujar(); window.scrollTo({ top: 0 });
+  }));
   const mini = { id: e.id + ":final", titulo: e.titulo + " - RESUMEN FINAL", bloques: [], version: huella(e.multi.resumen_final) };
   const bPub = boton("Publicado", null); bPub.className = "publicado"; pie.append(bPub); configurarPublicado(bPub, t, mini);
   t.append(pie);
@@ -969,6 +1013,33 @@ function dibujarRadar(lista) {
   }
 }
 
+// ---------- noticias para publicar (no resultados) ----------
+function miniNoticia(n) { return { id: "n:" + n.id, titulo: n.titulo, bloques: [], version: "1" }; }
+function noticiasParaPublicar(conFiltros = true) {
+  return noticiasFiltradas(conFiltros).filter((n) => n.noticia && (($("#ver-publicados").checked && conFiltros) || !estaPublicado(miniNoticia(n))));
+}
+function dibujarNoticias(lista) {
+  const items = noticiasParaPublicar();
+  if (!items.length) { lista.innerHTML = `<p class="vacio">No hay noticias nuevas. El bot las suma cada 3 horas.</p>`; return; }
+  const tpl = $("#tpl-noticia");
+  for (const n of items) {
+    const t = tpl.content.firstElementChild.cloneNode(true);
+    t.querySelector(".deporte").textContent = n.deporte;
+    const tipo = t.querySelector(".tipo"); tipo.textContent = "📰 Noticia"; tipo.classList.add("otro");
+    t.querySelector(".ba").hidden = !n.en_buenos_aires;
+    const a = t.querySelector("h2 a"); a.href = n.link; a.textContent = n.titulo;
+    t.querySelector(".meta").textContent = `${n.fuente || ""} · ${haceCuanto(n.publicado || n.encontrado)}`;
+    if (n.resumen && !n.resumen.startsWith(n.titulo.slice(0, 30))) { const r = document.createElement("p"); r.className = "resumen-noticia"; r.textContent = n.resumen.slice(0, 220); t.append(r); }
+    const pie = document.createElement("div"); pie.className = "pie";
+    pie.append(boton("Copiar título y link", () => copiarTexto(`${n.titulo}\n${n.link}`, "Copiado")));
+    const bPub = boton("Ya está", null); bPub.className = "publicado"; pie.append(bPub);
+    configurarPublicado(bPub, t, miniNoticia(n));
+    bPub.textContent = bPub.classList.contains("marcado") ? "✓ Ya está" : "Ya está";
+    t.append(pie);
+    lista.append(t);
+  }
+}
+
 // ---------- varios ----------
 function avisar(txt) {
   const a = $("#aviso"); a.textContent = txt; a.hidden = false;
@@ -990,7 +1061,7 @@ document.querySelectorAll(".pestanas button").forEach((b) => (b.onclick = () => 
 }));
 ["#buscar", "#deporte"].forEach((s) => $(s).addEventListener("input", dibujar));
 $("#ver-publicados").addEventListener("change", dibujar);
-$("#rango").addEventListener("change", cargar);
+$("#rango").addEventListener("change", dibujar);
 $("#recargar").onclick = cargar;
 // modo noche: el botón alterna claro/noche; si nunca se tocó, sigue lo que tenga el celu/compu
 function temaActual() {

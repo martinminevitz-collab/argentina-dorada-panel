@@ -94,6 +94,33 @@ def procesar(crudos, deporte, filtrar_argentina, vistos, ya_hoy, contadores, dep
     return nuevos
 
 
+def es_noticia(n, cfg):
+    """Pestaña 📰 Noticias: nominaciones, premios, convocatorias, récords... (config/noticias.json).
+    Palabra entera, salvo las que terminan en * (se buscan por comienzo de palabra)."""
+    t = texto.normalizar(f'{n.get("titulo", "")} {n.get("resumen", "")}')
+    if any(texto.normalizar(x) in t for x in cfg.get("excluir", [])):
+        return False
+    for p in cfg.get("palabras", []):
+        base = texto.normalizar(p.rstrip("*")).rstrip()
+        if (base if p.endswith("*") else base + " ") in t:
+            return True
+    return False
+
+
+def marcar_noticias(cfg):
+    """Vuelve a marcar los hallazgos guardados (15 días): si se cambian las palabras, se aplica a lo viejo también."""
+    for archivo in guardar.HALLAZGOS.glob("*/*/*.json"):
+        lista = guardar.leer(archivo, [])
+        cambio = False
+        for n in lista:
+            v = es_noticia(n, cfg)
+            if n.get("noticia", False) != v:
+                n["noticia"] = v
+                cambio = True
+        if cambio:
+            guardar.escribir(archivo, lista)
+
+
 def main():
     inicio = time.time()
     vistos = guardar.cargar_vistos()
@@ -117,6 +144,15 @@ def main():
         contadores["revisadas"] += len(crudos)
         nuevos += procesar(crudos, d["nombre"], True, vistos, ya_hoy, contadores, excluir_extra=d.get("excluir", ()))
         time.sleep(1.5)  # para que Google no nos bloquee
+
+    # búsquedas extra para la pestaña Noticias (nominaciones, premios, convocatorias...)
+    cfg_noticias = cargar_config("noticias.json")
+    print(f"📰 {len(cfg_noticias.get('busquedas', []))} búsquedas de noticias")
+    for q in cfg_noticias.get("busquedas", []):
+        crudos = lectores.leer_google_noticias({"buscar": q}, dias=3)
+        contadores["revisadas"] += len(crudos)
+        nuevos += procesar(crudos, None, True, vistos, ya_hoy, contadores, deportes)
+        time.sleep(1.5)
 
     # webs fijas (fuentes.json) + webs de la planilla, sin repetir links
     fuentes, urls = [], set()
@@ -147,14 +183,17 @@ def main():
                                excluir_extra=excluir_por_deporte.get(f.get("deporte"), ()))
     guardar.escribir(guardar.DATA / "fuentes-conocidas.json", conocidas)
 
+    for n in nuevos:
+        n["noticia"] = es_noticia(n, cfg_noticias)
     if nuevos:
         guardar.sumar_hallazgos(nuevos)
     else:
         guardar.actualizar_indice()
+    marcar_noticias(cfg_noticias)
     guardar.guardar_vistos(vistos)
 
     por_tipo = {t: sum(n["tipo"] == t for n in nuevos) for t in ("resultado", "agenda", "otro")}
-    resumen = {"nuevos": len(nuevos), **por_tipo,
+    resumen = {"nuevos": len(nuevos), **por_tipo, "noticias": sum(n["noticia"] for n in nuevos),
                "en_buenos_aires": sum(n["en_buenos_aires"] for n in nuevos),
                **contadores, "segundos": round(time.time() - inicio)}
     guardar.anotar_corrida("resultados", resumen)

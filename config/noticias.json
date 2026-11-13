@@ -1,0 +1,53 @@
+{
+  "_nota": "Pestaña 📰 Noticias del panel: cosas para publicar que no son resultados (nominaciones, premios, convocatorias, récords, abanderados...). 'palabras': si una noticia del bot tiene alguna, va a Noticias. Palabra entera, salvo las que terminan en * (ej. 'nominad*' encuentra nominada, nominado, nominadas). 'excluir': si aparece, no va a Noticias. 'busquedas': búsquedas extra en Google Noticias (el bot ya agrega 'argentina'). Sin tildes. Se puede editar sin tocar código.",
+  "palabras": [
+    "nominad*",
+    "nominacion*",
+    "terna",
+    "premio",
+    "premios",
+    "premiad*",
+    "galardon*",
+    "distincion",
+    "distinguid*",
+    "mejor jugador",
+    "mejor jugadora",
+    "jugador del ano",
+    "jugadora del ano",
+    "deportista del ano",
+    "revelacion del ano",
+    "olimpia",
+    "salon de la fama",
+    "hall of fame",
+    "convocad*",
+    "convocatoria",
+    "lista de buena fe",
+    "preseleccion*",
+    "record",
+    "records mundial",
+    "abanderad*",
+    "ranking mundial",
+    "numero uno del mundo",
+    "mejor del mundo",
+    "se retira",
+    "anuncio su retiro",
+    "becas",
+    "beca",
+    "becad*"
+  ],
+  "busquedas": [
+    "(\"Las Leonas\" OR \"Los Leones\" OR \"Los Pumas\" OR \"Las Pumas\" OR \"Los Gladiadores\" OR \"La Garra\" OR \"Las Panteras\" OR \"Los Murciélagos\" OR \"Las Murciélagas\" OR \"Las Guerreras\" OR \"Los Pumas 7s\") (nominada OR nominado OR nominadas OR premio OR terna OR convocatoria OR convocados OR convocadas OR récord OR \"del año\" OR capitana OR entrenador)",
+    "(deportista OR atleta OR nadadora OR nadador OR tenista OR judoca OR remero OR ciclista) argentina (nominada OR nominado OR premio OR terna OR récord OR abanderado OR abanderada OR \"mejor del mundo\" OR \"ranking mundial\")",
+    "(\"Premios Olimpia\" OR \"Olimpia de Plata\" OR \"Olimpia de Oro\" OR \"Premios Jorge Newbery\" OR \"Premio Konex\")",
+    "(ENARD OR \"Comité Olímpico Argentino\" OR \"Equipo Argentino\") (becas OR abanderado OR abanderada OR delegación OR anuncio)"
+  ],
+  "excluir": [
+    "gran premio",
+    "grandes premios",
+    "martin fierro",
+    "premio konex de",
+    "recordar",
+    "manchester",
+    "real madrid"
+  ]
+}

@@ -15,7 +15,7 @@
     // modo noche: se aplica antes de dibujar para que no "parpadee" en blanco
     try { const t = localStorage.getItem("ad-tema"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
   </script>
-  <link rel="stylesheet" href="estilos.css?v=23">
+  <link rel="stylesheet" href="estilos.css?v=24">
 </head>
 <body>
   <header class="top">
@@ -55,6 +55,7 @@
         <button role="tab" data-tab="resultados" class="activa">Resultados <span class="n"></span></button>
         <button role="tab" data-tab="agenda">Agenda <span class="n"></span></button>
         <button role="tab" data-tab="ba">📍 Bs. As. <span class="n"></span></button>
+        <button role="tab" data-tab="noticias">📰 Noticias <span class="n"></span></button>
         <button role="tab" data-tab="radar">Radar del bot <span class="n"></span></button>
         <button role="tab" data-tab="graficas">🎨 Gráficas <span class="n"></span></button>
       </nav>
@@ -72,17 +73,18 @@
           <button data-v="agenda">Agenda</button>
           <button data-v="ba">📍 Bs. As.</button>
         </div>
-        <input id="buscar" data-para="resultados agenda radar ba" type="search" placeholder="Buscar (nombre, torneo…)" aria-label="Buscar">
-        <div class="fila" data-para="resultados agenda radar ba">
+        <input id="buscar" data-para="resultados agenda radar ba noticias" type="search" placeholder="Buscar (nombre, torneo…)" aria-label="Buscar">
+        <div class="fila" data-para="resultados agenda radar ba noticias">
           <select id="deporte" aria-label="Deporte"><option value="">Todos los deportes</option></select>
-          <select id="rango" aria-label="Días" data-para="radar" hidden>
+          <select id="rango" aria-label="Días" data-para="radar noticias" hidden>
             <option value="1">Hoy</option>
             <option value="3" selected>Últimos 3 días</option>
             <option value="7">Última semana</option>
           </select>
         </div>
-        <label class="check" data-para="resultados"><input id="ver-publicados" type="checkbox"> Mostrar los que ya publiqué</label>
+        <label class="check" data-para="resultados agenda noticias"><input id="ver-publicados" type="checkbox"> Mostrar publicados y eliminados</label>
         <p class="ayuda" data-para="radar" hidden>Noticias sueltas que junta el bot. Son la materia prima del agente: lo que sirve aparece después en Resultados.</p>
+        <p class="ayuda" data-para="noticias" hidden>Cosas para publicar que no son resultados: nominaciones, premios, convocatorias, récords, abanderados. Las junta el bot solo (palabras en config/noticias.json). Tocá "Ya está" cuando la publiquen o no sirva.</p>
       </section>
     </aside>
 
@@ -115,9 +117,9 @@
 
   <div id="aviso" class="aviso" hidden></div>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.3/dist/umd/supabase.min.js"></script>
-  <script src="config.js?v=23"></script>
-  <script src="base.js?v=23"></script>
-  <script src="graficas.js?v=23"></script>
-  <script src="app.js?v=23"></script>
+  <script src="config.js?v=24"></script>
+  <script src="base.js?v=24"></script>
+  <script src="graficas.js?v=24"></script>
+  <script src="app.js?v=24"></script>
 </body>
 </html>
