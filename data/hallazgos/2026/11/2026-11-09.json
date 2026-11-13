@@ -49,7 +49,8 @@
   "en_buenos_aires": false,
   "publicado": "2026-11-09T23:36+00:00",
   "encontrado": "2026-11-09T22:22-03:00",
-  "bot": "resultados"
+  "bot": "resultados",
+  "noticia": true
  },
  {
   "id": "c7a2fc232006",
@@ -231,7 +232,8 @@
   "en_buenos_aires": false,
   "publicado": "2026-11-09T22:23+00:00",
   "encontrado": "2026-11-09T20:34-03:00",
-  "bot": "resultados"
+  "bot": "resultados",
+  "noticia": true
  },
  {
   "id": "9afb9eb97eb7",
@@ -374,7 +376,8 @@
   "en_buenos_aires": false,
   "publicado": "2026-11-09T21:04+00:00",
   "encontrado": "2026-11-09T20:34-03:00",
-  "bot": "resultados"
+  "bot": "resultados",
+  "noticia": true
  },
  {
   "id": "84f391bd7ca2",
@@ -2116,7 +2119,8 @@
   "en_buenos_aires": false,
   "publicado": "2026-11-08T15:15+00:00",
   "encontrado": "2026-11-09T20:34-03:00",
-  "bot": "resultados"
+  "bot": "resultados",
+  "noticia": true
  },
  {
   "id": "a46ff9290cb0",
