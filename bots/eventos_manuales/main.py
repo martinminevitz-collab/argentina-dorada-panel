@@ -66,9 +66,12 @@ def agregados(refs):
     except Exception as e:
         print(f"⚠️  No se pudieron leer los datos agregados: {e}")
         return
-    pendientes = []
+    pendientes, eliminados = [], []
     for f in filas:
         ref = f["id"].replace("-", "")[:REF]
+        if f.get("tipo") == "eliminar":  # "🗑 Eliminar" del panel: va a la lista de vencidos y el agente saca el bloque del Doc
+            eliminados.append(f.get("evento_titulo") or "")
+            continue
         if ref in refs:
             continue
         pendientes.append({"ref": ref, **{k: f.get(k) for k in ("evento_id", "evento_titulo", "tipo", "texto", "creado_en")}})
@@ -79,6 +82,15 @@ def agregados(refs):
     if guardar.leer(ruta, {}).get("pendientes") != pendientes:
         guardar.escribir(ruta, nuevo)
     print(f"✅ Datos agregados: {len(filas)} en la base, {len(pendientes)} pendientes de pasar al Doc")
+    # vencidos.json lo arma el lector del Doc (corre antes); acá se le suman los eliminados desde el panel
+    rv = guardar.DATA / "vencidos.json"
+    v = guardar.leer(rv, {"vencidos": []})
+    juntos = sorted(set(v.get("vencidos", [])) | {t for t in eliminados if t})
+    if juntos != v.get("vencidos"):
+        v["vencidos"] = juntos
+        v["_nota"] = "Eventos terminados hace más de 7 días o eliminados desde el panel. El agente los saca del Doc y deja de seguirlos."
+        guardar.escribir(rv, v)
+    print(f"🗑  Eliminados desde el panel: {len(eliminados)}")
 
 
 if __name__ == "__main__":
