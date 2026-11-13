@@ -301,6 +301,8 @@ input[type=search], select { width: 100%; background: var(--tarjeta); color: var
 .acred { margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--borde); display: grid; gap: 8px; }
 .acred-tit { display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; font-size: 14px; }
 .acred-tit span { color: var(--texto-2); font-size: 13px; overflow-wrap: anywhere; }
+.acred-editar { margin-left: auto; font-size: 12.5px; padding: 3px 10px; }
+.agregar-dato .link-dato { font: inherit; font-size: 14px; padding: 8px; border: 1px solid var(--borde); border-radius: 8px; background: var(--fondo); color: var(--texto); width: 100%; box-sizing: border-box; }
 .acred-aviso { margin: 0; font-size: 13px; color: var(--texto-2); }
 .acred-fila { border: 1px solid var(--borde); border-radius: 10px; padding: 8px 10px; display: grid; gap: 6px; font-size: 14px; }
 .acred-fila.armando { border-color: var(--oro); background: var(--oro-fondo); }
@@ -500,6 +502,62 @@ input[type=search], select { width: 100%; background: var(--tarjeta); color: var
 .g-spo-cajas .mar { border: 3px solid #6fa8dc; } .g-spo-cajas .mar span { color: var(--cel); } .g-spo-cajas .mar b { font-size: 150px; }
 
 .g-taller .g-sinfoto { display: none; }
+/* --- Convocados / Clasificados (feed) --- */
+.g-cv-foto { left: 0; right: 0; top: 0; height: 560px; }
+.g-cv-degrade { position: absolute; left: 0; right: 0; top: 0; height: 600px; background: linear-gradient(to top, var(--navy) 2%, rgba(12, 26, 44, .55) 45%, rgba(12, 26, 44, .2) 100%); }
+.g-cv-cuerpo { position: absolute; left: 60px; right: 60px; top: 430px; bottom: 110px; display: flex; flex-direction: column; gap: 22px; overflow: hidden; }
+.g-cv-cuerpo h1 { font-size: 150px; line-height: .9; text-transform: uppercase; }
+.g-cv-lista { list-style: none; padding: 0; font-size: 44px; display: grid; gap: 4px 40px; counter-reset: n; }
+.g-cv-lista.dos, .g-cl-lista.dos { grid-template-columns: 1fr 1fr; }
+.g-cv-lista li { counter-increment: n; display: flex; gap: 16px; align-items: baseline; border-bottom: 1px solid #2c4a6e; padding: 6px 0; min-width: 0; }
+.g-cv-lista li::before { content: counter(n, decimal-leading-zero); font: 400 1em "Bebas Neue", sans-serif; color: var(--oro); min-width: 1.4em; }
+.g-cv-lista b { font-weight: 600; } .g-cv-lista span { color: var(--cel); font-size: .78em; margin-left: auto; text-align: right; }
+.g-cv-dt { font-size: 40px; color: #d5dde7; } .g-cv-dt span { background: var(--cel); color: var(--navy); font: 400 1em "Bebas Neue", sans-serif; padding: 2px 16px; border-radius: 8px; margin-right: 10px; }
+.g-cv-cred { right: 60px; bottom: 40px; font-size: 24px; }
+.g-convocados .g-ad, .g-clasificados .g-ad { display: none; }
+.g-cl-top { display: flex; align-items: center; gap: 36px; }
+.g-cl-numero { flex: 0 0 auto; display: grid; justify-items: center; line-height: .85; border-right: 4px solid var(--oro); padding-right: 36px; max-width: 330px; text-align: center; }
+.g-cl-numero b { font: 400 250px "Bebas Neue", sans-serif; color: var(--oro); }
+.g-cl-numero span { font: 400 44px "Bebas Neue", sans-serif; color: #fff; text-transform: uppercase; }
+.g-cl-cuerpo { top: 400px; }
+.g-cl-cuerpo h1 { font-size: 108px; min-width: 0; flex: 1 1 auto; }
+.g-cl-nuevo { font-size: 40px; } .g-cl-nuevo span { background: var(--oro); color: var(--navy); font: 400 1em "Bebas Neue", sans-serif; padding: 2px 16px; border-radius: 8px; margin-right: 10px; }
+.g-cl-lista { list-style: none; padding: 0; font-size: 42px; display: grid; gap: 4px 40px; }
+.g-cl-lista li { display: grid; border-left: 5px solid var(--oro); padding: 4px 0 4px 18px; min-width: 0; }
+.g-cl-lista span { font: 400 .8em "Bebas Neue", sans-serif; color: var(--cel); letter-spacing: 1px; } .g-cl-lista b { font-weight: 600; }
+/* --- Grupos (feed) --- */
+.g-gr-head { top: 50px; font-size: 64px; }
+.g-gr-cab { position: absolute; left: 60px; right: 60px; top: 150px; display: grid; justify-items: center; text-align: center; gap: 12px; }
+.g-gr-torneo { font: 400 96px "Bebas Neue", sans-serif; line-height: .95; text-transform: uppercase; }
+.g-gr-inst { font-size: 38px; color: var(--cel); }
+.g-gr-zona { position: absolute; left: 50px; right: 50px; top: 420px; bottom: 50px; overflow: hidden; display: flex; flex-direction: column; justify-content: safe center; }
+.g-gr-grilla { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; font-size: 44px; }
+.g-gr-grilla.n1 { grid-template-columns: 1fr; } .g-gr-grilla.n3 > :last-child:nth-child(odd), .g-gr-grilla.n5 > :last-child:nth-child(odd), .g-gr-grilla.n7 > :last-child:nth-child(odd) { grid-column: 1 / -1; }
+.g-gr-caja { border: 3px solid #2c4a6e; border-radius: 14px; overflow: hidden; }
+.g-gr-caja.arg { border-color: var(--oro); }
+.g-gr-caja b { display: block; background: var(--cel); color: var(--navy); font: 400 1.1em "Bebas Neue", sans-serif; letter-spacing: 1px; padding: 8px 24px; text-transform: uppercase; }
+.g-gr-caja.arg b { background: var(--oro); }
+.g-gr-caja ul { list-style: none; padding: 10px 24px 14px; display: grid; gap: 4px; }
+.g-gr-caja li.arg { color: var(--oro); font-weight: 700; }
+/* --- Fixture / Agenda (historias) --- */
+.g-fx-cab, .g-ag-cab { position: absolute; left: 60px; right: 60px; top: 200px; display: grid; justify-items: center; text-align: center; gap: 14px; }
+.g-fx-torneo, .g-ag-torneo { font: 400 76px "Bebas Neue", sans-serif; line-height: 1; text-transform: uppercase; }
+.g-fx-titulo, .g-ag-titulo { position: absolute; left: 50px; right: 50px; top: 400px; text-align: center; font-size: 210px; line-height: .9; color: var(--oro); text-transform: uppercase; }
+.g-ag-titulo { font-size: 160px; }
+.g-fx-zona, .g-ag-zona { position: absolute; left: 50px; right: 50px; top: 640px; bottom: 60px; display: flex; flex-direction: column; justify-content: safe center; gap: 30px; overflow: hidden; }
+.g-fx-lista, .g-ag-lista { display: grid; gap: 22px; font-size: 48px; }
+.g-fx-fila { display: grid; grid-template-columns: 230px 1fr auto; align-items: center; border: 3px solid #2c4a6e; border-radius: 16px; overflow: hidden; min-height: 2.6em; }
+.g-fx-fila .fe { align-self: stretch; display: grid; place-items: center; text-align: center; background: var(--oro); color: var(--navy); font: 400 1em "Bebas Neue", sans-serif; line-height: 1; padding: 10px; }
+.g-fx-fila .vs { display: grid; padding: 12px 24px; min-width: 0; }
+.g-fx-fila .vs b { font: 400 1.5em "Bebas Neue", sans-serif; line-height: 1; } .g-fx-fila .vs i { font-style: normal; color: var(--oro); font-size: .7em; }
+.g-fx-fila .vs span { font-size: .62em; color: var(--cel); }
+.g-fx-fila .ho { font: 400 1.3em "Bebas Neue", sans-serif; color: var(--cel); padding: 0 26px; }
+.g-fx-nota { text-align: center; font-size: 36px; color: #b9c6d6; }
+.g-ag-fila { display: grid; grid-template-columns: 210px 1fr; align-items: stretch; border-bottom: 2px solid #2c4a6e; padding-bottom: 18px; gap: 24px; }
+.g-ag-fila .ho { background: var(--oro); color: var(--navy); border-radius: 12px; display: grid; place-items: center; font: 400 1.3em "Bebas Neue", sans-serif; }
+.g-ag-fila .tx { display: grid; min-width: 0; } .g-ag-fila b { font: 400 .95em "Bebas Neue", sans-serif; color: var(--cel); letter-spacing: 1px; text-transform: uppercase; }
+.g-ag-fila span { font-weight: 600; line-height: 1.2; }
+.g-grupos, .g-fixture, .g-agenda { background: radial-gradient(120% 70% at 50% 0%, #17304f 0%, var(--navy) 60%); }
 
 /* ---------- agregar dato a un evento ---------- */
 .agregar-dato { margin-top: 10px; display: grid; gap: 6px; }

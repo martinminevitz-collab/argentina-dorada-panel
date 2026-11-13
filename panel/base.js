@@ -68,6 +68,16 @@
       if (error) throw error;
       await traerAcreditaciones();
     },
+    async guardarContacto(evento_id, evento_titulo, contacto) {
+      const { error } = await cliente.from("acreditacion_contactos").upsert({ evento_id, evento_titulo, contacto, cargado_por: Base.mail(), cargado_en: new Date().toISOString() });
+      if (error) throw error;
+      await traerContactos();
+    },
+    async borrarContacto(evento_id) {
+      const { error } = await cliente.from("acreditacion_contactos").delete().eq("evento_id", evento_id);
+      if (error) throw error;
+      await traerContactos();
+    },
     nombre: () => {
       const m = (window.__miembros || []).find((x) => (x.email || "").toLowerCase() === (Base.mail() || "").toLowerCase());
       return m?.nombre || (Base.mail() || "").split("@")[0];
@@ -115,12 +125,13 @@
     mostrar("dentro");
     const m = await cliente.from("miembros").select("email, nombre");
     window.__miembros = m.data || [];
-    await Promise.all([traerPublicados(), traerManuales(), traerAgregados(), traerAcreditaciones()]);
+    await Promise.all([traerPublicados(), traerManuales(), traerAgregados(), traerAcreditaciones(), traerContactos()]);
     canal = cliente.channel("publicados")
       .on("postgres_changes", { event: "*", schema: "public", table: "publicados" }, traerPublicados)
       .on("postgres_changes", { event: "*", schema: "public", table: "eventos_manuales" }, traerManuales)
       .on("postgres_changes", { event: "*", schema: "public", table: "eventos_agregados" }, traerAgregados)
       .on("postgres_changes", { event: "*", schema: "public", table: "acreditaciones" }, traerAcreditaciones)
+      .on("postgres_changes", { event: "*", schema: "public", table: "acreditacion_contactos" }, traerContactos)
       .subscribe();
   }
 
@@ -142,6 +153,12 @@
     const { data, error } = await cliente.from("acreditaciones").select("*").order("creado_en");
     if (error) { window.alCambiarAcred?.(false); return; } // false = la tabla todavía no existe (falta correr el SQL)
     window.alCambiarAcred?.(data);
+  }
+
+  async function traerContactos() {
+    const { data, error } = await cliente.from("acreditacion_contactos").select("evento_id, contacto");
+    if (error) return;
+    window.alCambiarContactos?.(Object.fromEntries(data.map((f) => [f.evento_id, f.contacto])));
   }
 
   async function traerManuales() {

@@ -41,3 +41,35 @@ create policy "miembros borran acreditaciones" on public.acreditaciones
 do $$ begin
   alter publication supabase_realtime add table public.acreditaciones;
 exception when duplicate_object then null; end $$;
+
+-- 12) Contacto para pedir acreditación de cada evento (link, mail, WhatsApp o @usuario),
+--     para los eventos que no lo tienen en la columna ACREDITACIÓN de la planilla
+create table if not exists public.acreditacion_contactos (
+  evento_id     text primary key,
+  evento_titulo text not null,
+  contacto      text not null check (length(contacto) between 3 and 500),
+  cargado_por   text not null default (auth.jwt() ->> 'email'),
+  cargado_en    timestamptz not null default now()
+);
+
+alter table public.acreditacion_contactos enable row level security;
+
+drop policy if exists "miembros ven contactos" on public.acreditacion_contactos;
+create policy "miembros ven contactos" on public.acreditacion_contactos
+  for select to authenticated using (public.es_miembro());
+
+drop policy if exists "miembros cargan contactos" on public.acreditacion_contactos;
+create policy "miembros cargan contactos" on public.acreditacion_contactos
+  for insert to authenticated with check (public.es_miembro());
+
+drop policy if exists "miembros cambian contactos" on public.acreditacion_contactos;
+create policy "miembros cambian contactos" on public.acreditacion_contactos
+  for update to authenticated using (public.es_miembro()) with check (public.es_miembro());
+
+drop policy if exists "miembros borran contactos" on public.acreditacion_contactos;
+create policy "miembros borran contactos" on public.acreditacion_contactos
+  for delete to authenticated using (public.es_miembro());
+
+do $$ begin
+  alter publication supabase_realtime add table public.acreditacion_contactos;
+exception when duplicate_object then null; end $$;

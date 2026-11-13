@@ -42,6 +42,24 @@
     "s-posicion": { formato: "story", nombre: "Historia posición y marca", campos: ["deporte", "torneo", "instancia",
       { k: "prueba", label: "Prueba", ej: "Lanzamiento de jabalina" }, { k: "nombre", label: "Deportista", ej: "Nombre Apellido" },
       { k: "posicion", label: "Posición", ej: "3°" }, { k: "marca", label: "Marca", ej: "78,45 m" }, "credito"] },
+    convocados: { formato: "feed", nombre: "Convocados", campos: ["deporte", "torneo",
+      { k: "titulo", label: "Título", ej: "Convocadas" },
+      { k: "lista", label: "Lista (una persona por línea; con \" - \" podés sumar club o puesto)", ej: "Nombre Apellido - Club", area: true, filas: 10 },
+      { k: "dt", label: "Entrenador/a (opcional)", ej: "Fernando Ferrara" }, "credito"] },
+    grupos: { formato: "feed", nombre: "Grupos", sinFoto: true, campos: ["deporte", "torneo", "instancia",
+      { k: "grupos", label: "Grupos (uno por línea: \"Grupo A: Argentina, Brasil, Chile\")", ej: "Grupo A: Argentina, Brasil, Chile, Perú", area: true, filas: 8 }] },
+    fixture: { formato: "story", nombre: "Fixture", sinFoto: true, campos: ["deporte", "torneo",
+      { k: "partidos", label: "Partidos (uno por línea: fecha | hora | rival (sigla) | instancia)", ej: "Sáb 15/11 | 15:00 | Brasil (BRA) | Fase de grupos", area: true, filas: 8 },
+      { k: "nota", label: "Nota (opcional)", ej: "Horarios de Argentina · TV: DSports" }] },
+    agenda: { formato: "story", nombre: "Agenda del día", sinFoto: true, campos: [
+      { k: "titulo", label: "Título", ej: "Agenda del día" }, { k: "fecha", label: "Día", ej: "Sábado 15/11" }, "torneo",
+      { k: "items", label: "Agenda (uno por línea: hora | deporte | quién y qué)", ej: "10:00 | Natación | Agostina Hein - 400 m libre (final)", area: true, filas: 10 },
+      { k: "nota", label: "Nota (opcional)", ej: "Horarios de Argentina" }] },
+    clasificados: { formato: "feed", nombre: "Clasificados", campos: [
+      { k: "titulo", label: "Título", ej: "Clasificados a Los Ángeles 2028" },
+      { k: "lista", label: "Clasificados (uno por línea: deporte | quién)", ej: "Hockey | Las Leonas", area: true, filas: 10 },
+      { k: "total", label: "Número grande (vacío = cuenta la lista)", ej: "" }, { k: "etiqueta", label: "Debajo del número", ej: "plazas" },
+      { k: "nuevo", label: "Último en sumarse (opcional)", ej: "Rugby 7 · Los Pumas 7s" }, "credito"] },
   };
 
   // ---------- plantillas (como vienen de Canva) ----------
@@ -66,6 +84,21 @@
       pag("s-partido", { deporte: "Fútbol", torneo: "Torneo 2026", instancia: "Final", gl: "3", gv: "1", rival_pais: "BRA", frase: "Victoria clave", goleadores: "Nombre · 00' | Nombre · 00'", credito: "Nombre Apellido / Agencia" })] },
     posicion: { nombre: "Historia posición", paginas: () => [
       pag("s-posicion", { deporte: "Atletismo", torneo: "Grand Prix 2026", instancia: "Final", prueba: "Lanzamiento de jabalina", nombre: "Nombre Apellido", posicion: "3°", marca: "78,45 m", credito: "Nombre Apellido / Agencia" })] },
+    convocados: { nombre: "Convocados", paginas: () => [
+      pag("convocados", { deporte: "Hockey", torneo: "Pro League 2026", titulo: "Convocadas", dt: "Fernando Ferrara",
+        lista: "Cristina Cosentino - GK\nAgustina Gorzelany\nValentina Raposo\nVictoria Sauze\nAgustina Albertarrio\nMaría José Granatto\nJulieta Jankunas\nRocío Sánchez Moccia\nSofía Toccalino\nEugenia Trinchinetti", credito: "CAH" })] },
+    grupos: { nombre: "Grupos", paginas: () => [
+      pag("grupos", { deporte: "Básquet", torneo: "AmeriCup 2026", instancia: "Así quedaron los grupos",
+        grupos: "Grupo A: Argentina, Brasil, Uruguay, Panamá\nGrupo B: Estados Unidos, Canadá, México, Colombia\nGrupo C: Puerto Rico, Venezuela, Dominicana, Chile" })] },
+    fixture: { nombre: "Fixture", paginas: () => [
+      pag("fixture", { deporte: "Básquet", torneo: "AmeriCup 2026",
+        partidos: "Sáb 15/11 | 15:00 | Brasil (BRA) | Fase de grupos\nLun 17/11 | 18:30 | Uruguay (URU) | Fase de grupos\nMié 19/11 | 21:00 | Panamá (PAN) | Fase de grupos", nota: "Horarios de Argentina" })] },
+    agenda: { nombre: "Agenda del día", paginas: () => [
+      pag("agenda", { titulo: "Agenda del día", fecha: "Sábado 15/11", torneo: "Dakar 2026",
+        items: "08:30 | Natación | Agostina Hein - 400 m libre (series)\n10:00 | Judo | Nombre Apellido - -57 kg\n13:00 | Hockey 5 | Las Leoncitas vs India\n17:30 | Atletismo | Nombre Apellido - salto en largo (final)", nota: "Horarios de Argentina" })] },
+    clasificados: { nombre: "Clasificados LA 2028", paginas: () => [
+      pag("clasificados", { titulo: "Clasificados a Los Ángeles 2028", etiqueta: "plazas aseguradas", nuevo: "Hockey · Las Leonas",
+        lista: "Hockey | Las Leonas\nHockey | Los Leones\nVóley | La Selección\nTiro | Nombre Apellido", credito: "COA" })] },
   };
   function pag(tipo, datos) { return { tipo, datos: { ...datos }, foto: { src: "", z: 1, x: 50, y: 50 } }; }
 
@@ -129,7 +162,45 @@
       <div><b data-lineas="2">${esc(d.torneo)}</b><span>${esc(d.instancia)}</span></div></div>${foto(p, "g-spo-foto")}${credito(d, "g-spo-cred")}
       <h2 class="g-spo-prueba" data-ancho>${esc(d.prueba)}</h2><div class="g-spo-nombre">${esc(d.nombre)}</div>
       <div class="g-spo-cajas"><div class="pos"><span>Posición</span><b>${esc(d.posicion)}</b></div><div class="mar"><span>Marca</span><b>${esc(d.marca)}</b></div></div>`; },
+    convocados: (p) => { const d = p.datos; const gente = lineas(d.lista);
+      return `${foto(p, "g-cv-foto")}<div class="g-cv-degrade"></div>
+      <div class="g-pt-arriba">${d.deporte ? `<span class="g-pill oro">${esc(d.deporte)}</span>` : ""}<div class="g-pt-torneo" data-lineas="2">${esc(d.torneo)}</div></div>
+      <div class="g-logo-caja"><span>ARGENTINA</span><b>DORADA</b></div>
+      <div class="g-cv-cuerpo" data-fit><h1 data-fs="titulo" data-ancho>${esc(d.titulo)}</h1><div class="g-linea"></div>
+        <ol class="g-cv-lista ${gente.length > 9 ? "dos" : ""}" data-fs="texto">${gente.map((g) => { const [n, x] = g.split(/\s+-\s+/); return `<li><b>${esc(n)}</b>${x ? `<span>${esc(x)}</span>` : ""}</li>`; }).join("")}</ol>
+        ${d.dt ? `<p class="g-cv-dt" data-fs="texto"><span>DT</span> ${esc(d.dt)}</p>` : ""}</div>
+      ${credito(d, "g-cv-cred")}`; },
+    grupos: (p) => { const d = p.datos;
+      const gs = lineas(d.grupos).map((l) => { const [n, r] = l.includes(":") ? [l.slice(0, l.indexOf(":")), l.slice(l.indexOf(":") + 1)] : ["", l]; return { n: n.trim(), eq: r.split(",").map((x) => x.trim()).filter(Boolean) }; });
+      return `${marcaAD("g-s-head g-gr-head")}<div class="g-gr-cab">${d.deporte ? `<span class="g-pill celeste">${esc(d.deporte)}</span>` : ""}
+        <div class="g-gr-torneo" data-lineas="2">${esc(d.torneo)}</div>${d.instancia ? `<div class="g-gr-inst">${esc(d.instancia)}</div>` : ""}</div>
+      <div class="g-gr-zona" data-fit><div class="g-gr-grilla n${Math.min(gs.length, 8)}" data-fs="texto">${gs.map((g) => `<div class="g-gr-caja ${g.eq.some(esArg) ? "arg" : ""}">
+        <b>${esc(g.n || "Grupo")}</b><ul>${g.eq.map((x) => `<li class="${esArg(x) ? "arg" : ""}">${esc(x)}</li>`).join("")}</ul></div>`).join("")}</div></div>`; },
+    fixture: (p) => { const d = p.datos;
+      const ps = lineas(d.partidos).map((l) => l.split("|").map((x) => x.trim()));
+      return `${marcaAD("g-s-head")}<div class="g-fx-cab">${d.deporte ? `<span class="g-pill celeste">${esc(d.deporte)}</span>` : ""}<div class="g-fx-torneo" data-lineas="2">${esc(d.torneo)}</div></div>
+      <h1 class="g-fx-titulo" data-ancho>Fixture</h1>
+      <div class="g-fx-zona" data-fit><div class="g-fx-lista" data-fs="texto">${ps.map(([fe, ho, ri, ins]) => { const sig = ((ri || "").match(/\(([A-Za-z]{3})\)/) || [])[1];
+        return `<div class="g-fx-fila"><div class="fe">${esc(fe || "")}</div><div class="vs"><b>ARG <i>vs</i> ${esc(sig ? sig.toUpperCase() : ri || "")}</b>${sig ? `<span>${esc(ri.replace(/\s*\([^)]*\)/, ""))}${ins ? " · " + esc(ins) : ""}</span>` : ins ? `<span>${esc(ins)}</span>` : ""}</div><div class="ho">${esc(ho || "")}</div></div>`; }).join("")}</div>
+        ${d.nota ? `<p class="g-fx-nota" data-fs="texto">${esc(d.nota)}</p>` : ""}</div>`; },
+    agenda: (p) => { const d = p.datos;
+      const its = lineas(d.items).map((l) => l.split("|").map((x) => x.trim()));
+      return `${marcaAD("g-s-head")}<div class="g-ag-cab">${d.fecha ? `<span class="g-pill oro">${esc(d.fecha)}</span>` : ""}${d.torneo ? `<div class="g-ag-torneo" data-lineas="2">${esc(d.torneo)}</div>` : ""}</div>
+      <h1 class="g-ag-titulo" data-ancho>${esc(d.titulo)}</h1>
+      <div class="g-ag-zona" data-fit><div class="g-ag-lista" data-fs="texto">${its.map(([ho, dep, det]) => `<div class="g-ag-fila"><div class="ho">${esc(ho || "")}</div>
+        <div class="tx"><b>${esc(det === undefined ? "" : dep || "")}</b><span>${esc(det === undefined ? dep || "" : det)}</span></div></div>`).join("")}</div>
+        ${d.nota ? `<p class="g-fx-nota" data-fs="texto">${esc(d.nota)}</p>` : ""}</div>`; },
+    clasificados: (p) => { const d = p.datos; const cl = lineas(d.lista).map((l) => l.split("|").map((x) => x.trim()));
+      const total = String(d.total || "").trim() || String(cl.length);
+      return `${foto(p, "g-cl-foto")}<div class="g-cv-degrade"></div><div class="g-logo-caja"><span>ARGENTINA</span><b>DORADA</b></div>
+      <div class="g-cv-cuerpo g-cl-cuerpo" data-fit><div class="g-cl-top"><div class="g-cl-numero"><b>${esc(total)}</b><span>${esc(d.etiqueta || "")}</span></div>
+        <h1 data-fs="titulo" data-ancho>${esc(d.titulo)}</h1></div><div class="g-linea"></div>
+        ${d.nuevo ? `<p class="g-cl-nuevo" data-fs="texto"><span>Se sumó</span> ${esc(d.nuevo)}</p>` : ""}
+        <ul class="g-cl-lista ${cl.length > 8 ? "dos" : ""}" data-fs="texto">${cl.map(([a, b]) => `<li>${b !== undefined ? `<span>${esc(a)}</span><b>${esc(b)}</b>` : `<b>${esc(a)}</b>`}</li>`).join("")}</ul></div>
+      ${credito(d, "g-cv-cred")}`; },
   };
+  const lineas = (s) => String(s || "").split("\n").map((x) => x.trim()).filter(Boolean);
+  const esArg = (s) => /argentin|\bARG\b/i.test(s);
   function caja(d, clase) {
     return `<div class="${clase}">${d.deporte ? `<span class="g-pill celeste">${esc(d.deporte)}</span>` : ""}
       ${d.torneo || d.instancia ? `<div class="g-caja-torneo"><b data-lineas="2">${esc(d.torneo)}</b><span>${esc(d.instancia)}</span></div>` : ""}</div>`;
@@ -237,21 +308,22 @@
     const caja = raiz.querySelector(".g-campos");
     const lista = t.campos.map((c) => (typeof c === "string" ? { k: c, ...C[c] } : c));
     caja.innerHTML = `<h3>${esc(t.nombre)} <small>${num(G.sel)}</small></h3>
-      <div class="g-foto-ctrl"><label class="g-subir">📷 ${p.foto.src ? "Cambiar foto" : "Subir foto"}<input type="file" accept="image/*" hidden></label>
+      ${t.sinFoto ? "" : `<div class="g-foto-ctrl"><label class="g-subir">📷 ${p.foto.src ? "Cambiar foto" : "Subir foto"}<input type="file" accept="image/*" hidden></label>
         ${p.foto.src ? `<label>Zoom<input type="range" data-f="z" min="1" max="3" step="0.05" value="${p.foto.z}"></label>
         <label>↔<input type="range" data-f="x" min="0" max="100" value="${p.foto.x}"></label>
-        <label>↕<input type="range" data-f="y" min="0" max="100" value="${p.foto.y}"></label>` : ""}</div>
+        <label>↕<input type="range" data-f="y" min="0" max="100" value="${p.foto.y}"></label>` : ""}</div>`}
       ${lista.map((c) => {
         const v = p.datos[c.k] ?? "";
         if (c.rango) return `<label>${esc(c.label)}<input type="range" data-k="${c.k}" min="${c.rango[0]}" max="${c.rango[1]}" step="${c.rango[2]}" value="${v || 100}"></label>`;
         if (c.opciones) return `<label>${esc(c.label)}<select data-k="${c.k}">${c.opciones.map(([val, txt]) => `<option value="${val}" ${val === (v || c.opciones[0][0]) ? "selected" : ""}>${esc(txt)}</option>`).join("")}</select></label>`;
-        return `<label>${esc(c.label)}${c.area ? `<textarea data-k="${c.k}" rows="3" placeholder="${esc(c.ej || "")}">${esc(v)}</textarea>` : `<input data-k="${c.k}" value="${esc(v)}" placeholder="${esc(c.ej || "")}">`}</label>`;
+        return `<label>${esc(c.label)}${c.area ? `<textarea data-k="${c.k}" rows="${c.filas || 3}" placeholder="${esc(c.ej || "")}">${esc(v)}</textarea>` : `<input data-k="${c.k}" value="${esc(v)}" placeholder="${esc(c.ej || "")}">`}</label>`;
       }).join("")}
       <div class="g-pag-acc">${G.sel > 0 ? `<button class="g-izq">◀ Mover</button>` : ""}${G.sel < G.paginas.length - 1 ? `<button class="g-der">Mover ▶</button>` : ""}
         ${G.paginas.length > 1 ? `<button class="g-quitar">Quitar página</button>` : ""}</div>`;
     caja.querySelectorAll("[data-k]").forEach((el) => el.addEventListener("input", () => { p.datos[el.dataset.k] = el.value; vista(); guardar(); }));
     caja.querySelectorAll("[data-f]").forEach((el) => el.addEventListener("input", () => { p.foto[el.dataset.f] = Number(el.value); vista(); }));
-    caja.querySelector("input[type=file]").onchange = (ev) => {
+    const subir = caja.querySelector("input[type=file]");
+    if (subir) subir.onchange = (ev) => {
       const archivo = ev.target.files[0]; if (!archivo) return;
       achicar(archivo).then((src) => { p.foto = { src, z: 1, x: 50, y: 50 }; vista(); campos(); });
     };
@@ -388,6 +460,12 @@
       const nombre = (l.match(/^(.+?)\s+(fue|termin[oó]|qued[oó]|finaliz[oó]|lleg[oó])\b/i) || [])[1] || "";
       pags = [pag("s-posicion", { ...base, prueba: placas[0]?.titulo || "", nombre: nombre.replace(/\(.*?\)/g, "").trim(),
         posicion: (l.match(/(\d+)\s*[°º]/) || [])[1] ? (l.match(/(\d+)\s*[°º]/))[1] + "°" : "", marca: "" })];
+    } else if (["convocados", "grupos", "fixture", "agenda", "clasificados"].includes(plantilla)) {
+      const ej = PLANTILLAS[plantilla].paginas()[0];
+      const vacio = Object.fromEntries(Object.keys(ej.datos).map((k) => [k, ""]));
+      const extra = { convocados: { titulo: "Convocados", lista: lineas.filter((l) => l.length < 60).join("\n") }, grupos: { grupos: "" }, fixture: { partidos: "" },
+        agenda: { titulo: "Agenda del día", items: "" }, clasificados: { titulo: "Clasificados a Los Ángeles 2028", lista: "" } }[plantilla];
+      pags = [pag(plantilla, { ...vacio, deporte: o.deporte, torneo: o.evento, ...extra })];
     } else {
       pags = [pag("portada", { ...base, titulo: o.titulo }), ...lasPlacas];
     }

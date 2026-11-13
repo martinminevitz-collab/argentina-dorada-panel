@@ -105,7 +105,9 @@ function llenarDeportes() {
 function refDe(fila) { return fila.ref || String(fila.id).replace(/-/g, "").slice(0, 8); }
 
 function partesConNegrita(linea) {
-  return linea.split(/\*\*/).map((t, i) => (i % 2 ? { t, b: true } : { t })).filter((p) => p.t);
+  // **negrita** y links (https://...) clickeables
+  return linea.split(/\*\*/).flatMap((t, i) => t.split(/(https?:\/\/[^\s)]+)/).map((x, j) => (j % 2 ? { t: x, href: x } : i % 2 ? { t: x, b: true } : { t: x })))
+    .filter((p) => p.t);
 }
 
 function aEvento(f) {
@@ -169,18 +171,23 @@ function cajaAgregarDato(e, t) {
     return caja;
   }
   caja.innerHTML = `<select aria-label="Tipo"><option value="dato">Dato nuevo</option><option value="correccion">Corrección</option></select>
-    <textarea rows="3" maxlength="2000" placeholder="Ej: Juana Pérez ganó la medalla de **BRONCE** en -57kg"></textarea>
+    <textarea rows="3" maxlength="1700" placeholder="Ej: Juana Pérez ganó la medalla de **BRONCE** en -57kg"></textarea>
+    <input type="url" class="link-dato" maxlength="290" placeholder="Link de la fuente (opcional): así el agente lo puede seguir">
     <div class="fila-btns"><button class="principal">Guardar</button><button class="cancelar">Cancelar</button></div>
     <p class="ayuda">Se ve al toque para todos y el agente lo pasa al Doc en la próxima vuelta. Para negrita: **así**.</p>`;
-  const ta = caja.querySelector("textarea"), sel = caja.querySelector("select");
+  const ta = caja.querySelector("textarea"), sel = caja.querySelector("select"), li = caja.querySelector(".link-dato");
   const b = estado.borradorDato[e.id] || {};
-  ta.value = b.texto || ""; sel.value = b.tipo || "dato";
-  const guardarBorrador = () => (estado.borradorDato[e.id] = { texto: ta.value, tipo: sel.value });
-  ta.oninput = guardarBorrador; sel.onchange = guardarBorrador;
+  ta.value = b.texto || ""; sel.value = b.tipo || "dato"; li.value = b.link || "";
+  const guardarBorrador = () => (estado.borradorDato[e.id] = { texto: ta.value, tipo: sel.value, link: li.value });
+  ta.oninput = guardarBorrador; sel.onchange = guardarBorrador; li.oninput = guardarBorrador;
   caja.querySelector(".cancelar").onclick = () => { estado.agregandoEn = null; delete estado.borradorDato[e.id]; t.replaceWith(tarjetaEvento(e, $("#tpl-evento"))); };
   caja.querySelector(".principal").onclick = async (ev) => {
-    const texto = ta.value.trim();
+    let texto = ta.value.trim();
     if (texto.length < 2) return ta.focus();
+    let link = li.value.trim();
+    if (link && !/^https?:\/\//i.test(link)) link = "https://" + link;
+    if (link && !/^https?:\/\/[^\s.]+\.[^\s]+$/i.test(link)) { avisar("Ese link no parece válido"); return li.focus(); }
+    if (link) texto += ` (Fuente: ${link})`;
     ev.target.disabled = true;
     try {
       estado.agregandoEn = null;
@@ -257,10 +264,23 @@ function cajaAcreditacion(e) {
   const caja = document.createElement("div");
   caja.className = "acred";
   const filas = (estado.acred || []).filter((a) => a.evento_id === e.id);
-  const contactoBase = e.contactoAcred || filas.find((a) => a.contacto)?.contacto || "";
+  // contacto: columna ACREDITACIÓN de la planilla, o el que cargó alguien desde el panel
+  const delPanel = (estado.contactos || {})[e.id] || "";
+  const contactoBase = e.contactoAcred || delPanel;
   const logueado = window.Base?.activa();
   const tit = document.createElement("div"); tit.className = "acred-tit";
   tit.innerHTML = `<b>Acreditación</b> <span>${contactoBase ? "Contacto: " + escapar(contactoBase) : "Sin contacto todavía"}</span>`;
+  if (logueado && estado.acred !== false && !e.contactoAcred) {
+    const ed = boton(delPanel ? "Editar" : "+ Cargar contacto", async () => {
+      const c = prompt("Contacto para pedir acreditación: link del formulario, mail, WhatsApp o @usuario. Dejalo vacío para borrarlo.", delPanel);
+      if (c === null) return;
+      try {
+        if (c.trim()) { await Base.guardarContacto(e.id, e.titulo, c.trim().slice(0, 500)); avisar("Contacto guardado"); }
+        else if (delPanel) { await Base.borrarContacto(e.id); avisar("Contacto borrado"); }
+      } catch { avisar("No se pudo guardar. Probá de nuevo"); }
+    });
+    ed.className = "acred-editar"; tit.append(ed);
+  }
   caja.append(tit);
   if (estado.acred === false) { caja.insertAdjacentHTML("beforeend", `<p class="acred-aviso">Falta activar esto en la base (correr supabase/acreditaciones.sql).</p>`); return caja; }
   if (!logueado) { if (filas.length) caja.insertAdjacentHTML("beforeend", `<p class="acred-aviso">${filas.length} pedido(s). Entrá con tu mail para verlos.</p>`); return caja; }
@@ -296,6 +316,7 @@ function cajaAcreditacion(e) {
     del.className = "borrar"; pie.append(del);
     f.append(pie); caja.append(f);
   }
+  if (!contactoBase) return caja; // sin link ni contacto no hay a quién pedirle: no aparece "Voy a pedir"
   const nuevo = boton("🙋 Voy a pedir", () => {
     const nota = prompt("¿Querés dejar una nota? (ej: \"la pido el lunes, avisen si se suman\"). Podés dejarlo vacío.") ?? null;
     if (nota === null) return;
@@ -806,7 +827,8 @@ function dibujarMulti(lista) {
   } else {
     if (!m.deportes.length) { lista.append(Object.assign(document.createElement("p"), { className: "vacio", textContent: "Todavía no hay deportes cargados." })); return; }
     const q = normBusca(estado.multiBusca);
-    const opciones = m.deportes.filter((d) => !q || normBusca(d.nombre).includes(q));
+    // "General" ya está en el día a día y arriba en "Info general": no va como deporte
+    const opciones = m.deportes.filter((d) => normBusca(d.nombre) !== "general" && (!q || normBusca(d.nombre).includes(q)));
     lista.append(buscadorDeporte("Buscar deporte…"));
     if (!opciones.length) { lista.append(Object.assign(document.createElement("p"), { className: "vacio", textContent: "No hay ningún deporte con ese nombre." })); return; }
     const sel = opciones.find((d) => d.nombre === estado.multiSel) || opciones[0];
@@ -1233,6 +1255,7 @@ if ("serviceWorker" in navigator) {
 // la base compartida avisa cuando cambian los publicados (de este u otro dispositivo)
 window.alCambiarPublicados = (mapa) => { estado.publicados = mapa ?? leerPublicados(); dibujar(); };
 window.alCambiarAgregados = (filas) => { estado.agregadosBase = filas; combinar(); dibujar(); };
+window.alCambiarContactos = (mapa) => { estado.contactos = mapa; if (estado.tab === "ba" && !document.querySelector(".acred-form")) dibujar(); };
 window.alCambiarAcred = (filas) => {
   // no redibujar mientras alguien escribe el pedido
   estado.acred = filas;
