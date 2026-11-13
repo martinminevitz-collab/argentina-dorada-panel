@@ -339,7 +339,7 @@
       G = { plantilla: "medalla", sel: 0, paginas: [pag("medalla", { prueba: e.deporte || "", nombre: m ? m[1].replace(/\(.*?\)/g, "").trim() : "",
         medalla: medalla.clave, evento: e.evento || e.titulo || "", credito: "" }), ...lasPlacas] };
     } else {
-      G = { plantilla: "carrusel", sel: 0, paginas: [pag("portada", { deporte: e.deporte || "", torneo: e.evento || e.titulo || "", titulo: "", credito: "" }), ...lasPlacas] };
+      G = { plantilla: "carrusel", sel: 0, paginas: [pag("portada", { deporte: e.deporte || "", torneo: e.evento || e.titulo || "", titulo: opciones.titulo || "", credito: "" }), ...lasPlacas] };
     }
     if (G.paginas.length === 1) G.paginas.push(pag("placa", { titulo: "Título", texto: "", credito: "", acento }));
     guardar();

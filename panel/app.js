@@ -1032,6 +1032,16 @@ function dibujarNoticias(lista) {
     if (n.resumen && !n.resumen.startsWith(n.titulo.slice(0, 30))) { const r = document.createElement("p"); r.className = "resumen-noticia"; r.textContent = n.resumen.slice(0, 220); t.append(r); }
     const pie = document.createElement("div"); pie.className = "pie";
     pie.append(boton("Copiar título y link", () => copiarTexto(`${n.titulo}\n${n.link}`, "Copiado")));
+    if (window.Graficas) pie.append(boton("🎨 Gráfica", () => {
+      // portada con el deporte + el título de la noticia; placa con el resumen (si trae algo más que el título)
+      const extra = n.resumen && !n.resumen.startsWith(n.titulo.slice(0, 30)) ? n.resumen.slice(0, 400) : "";
+      const bloques = [{ tipo: "sub", partes: [{ t: "Noticia" }] }, { tipo: "texto", partes: [{ t: n.titulo + (extra ? "\n" + extra : "") }] }];
+      // título corto para la portada: hasta los dos puntos y como mucho ~50 letras (se puede editar)
+      let corto = n.titulo.split(/\s*[:|–—]\s*/)[0];
+      if (corto.length > 52) corto = corto.slice(0, 52).replace(/\s+\S*$/, "") + "…";
+      Graficas.desdeEvento({ deporte: n.deporte, evento: "", bloques }, { titulo: corto });
+      estado.tab = "graficas"; dibujar(); window.scrollTo({ top: 0 });
+    }));
     const bPub = boton("Ya está", null); bPub.className = "publicado"; pie.append(bPub);
     configurarPublicado(bPub, t, miniNoticia(n));
     bPub.textContent = bPub.classList.contains("marcado") ? "✓ Ya está" : "Ya está";
