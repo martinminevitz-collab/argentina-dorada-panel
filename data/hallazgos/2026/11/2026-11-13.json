@@ -1,5 +1,18 @@
 [
  {
+  "id": "555f8cdebf86",
+  "titulo": "Argentina sale a escena en el Mundial de Tenis de Mesa Adaptado",
+  "resumen": "Argentina sale a escena en el Mundial de Tenis de Mesa Adaptado TyC Sports",
+  "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNZHZscldaR0dCZWdpdW94c0t4VnVseUNHRVU4TnVwazV4OXo3Q1NxM1E5b3kwdGNfOFd3ZlhMSVphWHROMW5DNDBGd2xQTzQzOE1aaVVSZUN4Q3d3RGliZS1WLWhnclQwM1RsM3RYeXJYNTM2RDh0U2dFcFJyV3JMZWh3WkJaZUVNZlY2SFg5ZTYzSlBBdjI1Z2xYNnlqbDlsZDVIMG5qS3ZCeTY2SW9hV2dNS3RGYjNsSlVMNw?oc=5",
+  "fuente": "TyC Sports",
+  "deporte": "Adaptados",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-13T09:56+00:00",
+  "encontrado": "2026-11-13T07:16-03:00",
+  "bot": "resultados"
+ },
+ {
   "id": "2211333a4607",
   "titulo": "La Selección Argentina de futsal derrotó a Portugal y alcanzó la gloria olímpica",
   "resumen": "La Selección Argentina de futsal derrotó a Portugal y alcanzó la gloria olímpica Nexofin",
@@ -478,6 +491,19 @@
   "en_buenos_aires": false,
   "publicado": "2026-11-11T19:17+00:00",
   "encontrado": "2026-11-13T01:14-03:00",
+  "bot": "resultados"
+ },
+ {
+  "id": "d99e0089647c",
+  "titulo": "Atletismo: La fondista Angelina Reyes integrá la selección argentina que estara compitiendo en Chile",
+  "resumen": "Atletismo: La fondista Angelina Reyes integrá la selección argentina que estara compitiendo en Chile Deportelauquen",
+  "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQSVVZVHJwdXotbDJmVmRuZGtVb1hHMHl0OG5IWjN2RnQtRkF6d1pSa3BKVkZLOTlpZFRPcVphbFRZeHpEYUhLZk92cm1jNWhzV1B2Wnctdi1CSGhRZUVtaUpHbXh3Z3EzamNpLTZFaElZLVVMbUNDYnlrQ0NrclJqMVFyaTJFV3ZwN09wZzNEODhtOXNESzVZUDNjc1NjX2lLTUlkdlhsVWhNam45SWZMcTluQkhLM2tKYjZqazZKcEZqbjQwMVA4TFZR0gHKAUFVX3lxTFBJVVlUcnB1ei1sMmZWZG5ka1VvWEcweXQ4bkhaM3ZGdC1GQXp3WlJrcEpWRks5OWlkVE9xWmFsVFl4ekRhSEtmT3ZybWM1aHNXUHZady12LUJIaFFlRW1pSkdteHdncTNqY2ktNkVoSVktVUxtQ0NieWtDQ2tyUmoxUXJpMkVXdnA3T3BnM0Q4OG05c0RLNVlQM2NzU2NfaUtNSWR2WGxVaE1qbjlJZkxxOW5CSEsza0piNmprNkpwRmpuNDAxUDhMVlE?oc=5",
+  "fuente": "Deportelauquen",
+  "deporte": "Atletismo",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-11T13:12+00:00",
+  "encontrado": "2026-11-13T07:16-03:00",
   "bot": "resultados"
  },
  {
