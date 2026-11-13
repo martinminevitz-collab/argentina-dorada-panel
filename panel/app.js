@@ -41,7 +41,7 @@ async function bajarJSON(ruta) {
 async function cargar() {
   $("#recargar").classList.add("girando");
   try {
-    const [doc, corrida, indice, medalleros, manuales, agregados, ba, archivo, insta] = await Promise.all([
+    const [doc, corrida, indice, medalleros, manuales, agregados, ba, archivo, insta, modeloAcred] = await Promise.all([
       bajarJSON("doc-resultados.json").catch(() => null),
       bajarJSON("ultima-corrida.json").catch(() => ({})),
       bajarJSON("indice.json").catch(() => ({ dias: [] })),
@@ -51,8 +51,10 @@ async function cargar() {
       bajarJSON("eventos-ba.json").catch(() => ({ eventos: [], lugares: [] })),
       bajarJSON("doc-archivo.json").catch(() => ({ eventos: {} })),
       bajarJSON("instagram.json").catch(() => ({ cuentas: {} })),
+      bajarJSON("acreditacion.json").catch(() => ({})),
     ]);
     estado.archivo = Object.values(archivo.eventos || {});
+    estado.modeloAcred = modeloAcred;
     estado.instagram = Object.entries(insta.cuentas || {}).sort((a, b) => b[0].length - a[0].length);
     estado.agregadosBot = agregados.pendientes || [];
     estado.ba = ba;
@@ -210,7 +212,7 @@ function eventosBA() {
     if (f.lugar) bloques.push({ tipo: "texto", partes: [{ t: "📍 " + f.lugar }] });
     const fechas = [f.inicio, f.fin && f.fin !== f.inicio ? f.fin : ""].filter(Boolean).join(" al ");
     return { id: "ba:" + huella(f.evento + f.inicio), titulo: f.evento, evento: f.evento, deporte: f.deporte, seccion: "agenda", etiqueta: "agenda",
-      fechas: [fechas, f.lugar].filter(Boolean).join(" · "), bloques, version: "1" };
+      fechas: [fechas, f.lugar].filter(Boolean).join(" · "), soloFechas: fechas, lugar: f.lugar, contactoAcred: f.acreditacion || "", bloques, version: "1" };
   });
   // si un evento de la Agenda ya está en la planilla (títulos parecidos), queda solo el de la planilla
   const palabras = (t) => new Set(sinTildes(t).split(/[^a-z0-9]+/).filter((w) => w.length > 3));
@@ -229,7 +231,109 @@ function dibujarBA(lista) {
     return;
   }
   const tpl = $("#tpl-evento");
-  for (const e of eventos) lista.append(tarjetaEvento(e, tpl));
+  for (const e of eventos) { const t = tarjetaEvento(e, tpl); t.append(cajaAcreditacion(e)); lista.append(t); }
+}
+
+// ---------- acreditaciones (Bs. As.) ----------
+// "🙋 Voy a pedir" (armando, los demás se suman) → "📨 Ya la pedí" (abre mail / WhatsApp / formulario con el texto) → ✅ / ✕
+const ESTADOS_ACRED = { armando: "🙋 Armando pedido", pedida: "📨 Pedida", confirmada: "✅ Confirmada", rechazada: "✕ Rechazada" };
+function tipoContacto(c) {
+  c = (c || "").trim();
+  if (/^https?:\/\//i.test(c)) return { tipo: "link", url: c };
+  if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(c)) return { tipo: "mail", mail: c };
+  if (/^@[\w.]+$/.test(c)) return { tipo: "ig", url: "https://www.instagram.com/" + c.slice(1) + "/" };
+  const n = c.replace(/\D/g, "");
+  if (n.length >= 8) return { tipo: "wa", num: n.length === 10 ? "549" + n : n.startsWith("54") ? n : n };
+  return c ? { tipo: "texto" } : null;
+}
+function textoAcred(e, personas) {
+  const m = estado.modeloAcred || {};
+  const lugar = e.lugar ? ", " + e.lugar : "";
+  const reemplazar = (s) => (s || "").replace(/\{evento\}/g, e.evento || e.titulo).replace(/\{fechas\}/g, e.soloFechas || e.fechas || "fechas a confirmar")
+    .replace(/\{lugar\}/g, lugar).replace(/\{deporte\}/g, e.deporte || "").replace(/\{personas\}/g, personas.map((p) => "- " + p).join("\n"));
+  return { asunto: reemplazar(m.asunto || "Pedido de acreditación – Argentina Dorada – {evento}"), texto: reemplazar(m.texto || "Hola, queremos pedir acreditación para {evento} para:\n{personas}\n\nArgentina Dorada") };
+}
+function cajaAcreditacion(e) {
+  const caja = document.createElement("div");
+  caja.className = "acred";
+  const filas = (estado.acred || []).filter((a) => a.evento_id === e.id);
+  const contactoBase = e.contactoAcred || filas.find((a) => a.contacto)?.contacto || "";
+  const logueado = window.Base?.activa();
+  const tit = document.createElement("div"); tit.className = "acred-tit";
+  tit.innerHTML = `<b>Acreditación</b> <span>${contactoBase ? "Contacto: " + escapar(contactoBase) : "Sin contacto todavía"}</span>`;
+  caja.append(tit);
+  if (estado.acred === false) { caja.insertAdjacentHTML("beforeend", `<p class="acred-aviso">Falta activar esto en la base (correr supabase/acreditaciones.sql).</p>`); return caja; }
+  if (!logueado) { if (filas.length) caja.insertAdjacentHTML("beforeend", `<p class="acred-aviso">${filas.length} pedido(s). Entrá con tu mail para verlos.</p>`); return caja; }
+  const yo = Base.nombre();
+  const guardar = async (fn, ok) => { try { await fn(); if (ok) avisar(ok); } catch { avisar("No se pudo guardar. Probá de nuevo"); } };
+  for (const a of filas) {
+    const f = document.createElement("div"); f.className = "acred-fila " + a.estado;
+    const quien = (window.__miembros || []).find((m) => (m.email || "").toLowerCase() === (a.creado_por || "").toLowerCase())?.nombre || (a.creado_por || "").split("@")[0];
+    const fecha = new Date(a.actualizado_en || a.creado_en).toLocaleDateString("es-AR", { day: "numeric", month: "numeric" });
+    f.innerHTML = `<div><span class="acred-estado">${ESTADOS_ACRED[a.estado]}</span> <small>${escapar(quien)} · ${fecha}</small></div>
+      <div class="acred-personas">${a.personas.length ? a.personas.map((p) => `<span>${escapar(p)}</span>`).join("") : "<em>Nadie todavía</em>"}</div>
+      ${a.nota ? `<p class="acred-nota">${escapar(a.nota)}</p>` : ""}`;
+    const pie = document.createElement("div"); pie.className = "acred-pie";
+    const estoy = a.personas.some((p) => sinTildes(p) === sinTildes(yo));
+    if (a.estado === "armando") {
+      pie.append(boton(estoy ? "Me bajo" : "🙋 Me sumo", () => guardar(() => Base.cambiarAcred(a.id, { personas: estoy ? a.personas.filter((p) => sinTildes(p) !== sinTildes(yo)) : [...a.personas, yo] }), estoy ? "Te bajaste" : "Te sumaste")));
+      pie.append(boton("+ Otra persona", () => {
+        const n = prompt("¿A quién sumás? (nombre y, si querés, rol: foto, prensa, video)");
+        if (n && n.trim()) guardar(() => Base.cambiarAcred(a.id, { personas: [...a.personas, n.trim().slice(0, 80)] }), "Sumado");
+      }));
+      pie.append(boton("📨 Ya la pido", () => abrirPedido(e, a, contactoBase, caja)));
+    } else if (a.estado === "pedida") {
+      pie.append(boton("✅ Confirmada", () => guardar(() => Base.cambiarAcred(a.id, { estado: "confirmada" }), "¡Confirmada!")));
+      pie.append(boton("✕ Rechazada", () => guardar(() => Base.cambiarAcred(a.id, { estado: "rechazada" }), "Anotado")));
+      pie.append(boton("Ver texto", () => abrirPedido(e, a, contactoBase, caja, true)));
+    } else {
+      pie.append(boton("↩ Volver a pedida", () => guardar(() => Base.cambiarAcred(a.id, { estado: "pedida" }))));
+    }
+    const del = boton("Borrar", () => {
+      if (del.dataset.ok !== "1") { del.dataset.ok = "1"; del.textContent = "¿Seguro?"; setTimeout(() => { del.dataset.ok = ""; del.textContent = "Borrar"; }, 4000); return; }
+      guardar(() => Base.borrarAcred(a.id), "Borrado");
+    });
+    del.className = "borrar"; pie.append(del);
+    f.append(pie); caja.append(f);
+  }
+  const nuevo = boton("🙋 Voy a pedir", () => {
+    const nota = prompt("¿Querés dejar una nota? (ej: \"la pido el lunes, avisen si se suman\"). Podés dejarlo vacío.") ?? null;
+    if (nota === null) return;
+    guardar(() => Base.crearAcred({ evento_id: e.id, evento_titulo: e.titulo, personas: [yo], nota: nota.trim().slice(0, 300) || null, contacto: contactoBase || null }),
+      "Listo: los demás ya pueden sumarse");
+  });
+  nuevo.className = "acred-nuevo";
+  caja.append(nuevo);
+  return caja;
+}
+function abrirPedido(e, a, contacto, caja, soloVer = false) {
+  caja.querySelector(".acred-form")?.remove();
+  const { asunto, texto } = textoAcred(e, a.personas);
+  const f = document.createElement("div"); f.className = "acred-form";
+  f.innerHTML = `<label>Contacto (link del formulario, mail, WhatsApp o @usuario)<input name="contacto" value="${escapar(a.contacto || contacto || "")}" placeholder="Ej: prensa@federacion.org.ar"></label>
+    <label>Texto (revisalo y sumá lo que pida el evento: rol, DNI, etc.)<textarea name="texto" rows="9">${escapar(texto)}</textarea></label>
+    <div class="acred-pie"></div>`;
+  const pie = f.querySelector(".acred-pie");
+  const val = () => ({ c: f.querySelector("[name=contacto]").value.trim(), t: f.querySelector("[name=texto]").value });
+  pie.append(boton("Abrir y copiar texto", async () => {
+    const { c, t } = val();
+    const k = tipoContacto(c);
+    try { await navigator.clipboard.writeText(t); } catch {}
+    if (!k || k.tipo === "texto") return avisar("Texto copiado. Poné un link, mail o WhatsApp para abrirlo directo");
+    if (k.tipo === "mail") location.href = `mailto:${k.mail}?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(t)}`;
+    else if (k.tipo === "wa") window.open(`https://wa.me/${k.num}?text=${encodeURIComponent(t)}`, "_blank");
+    else { window.open(k.url, "_blank"); avisar("Texto copiado: pegalo en el formulario o en el mensaje"); }
+    if (c && c !== a.contacto) Base.cambiarAcred(a.id, { contacto: c }).catch(() => {});
+  }));
+  if (!soloVer) pie.append(boton("✓ Marcar como pedida", async () => {
+    const { c } = val();
+    f.remove();
+    try { await Base.cambiarAcred(a.id, { estado: "pedida", contacto: c || null }); avisar("Marcada como pedida"); } catch { avisar("No se pudo guardar"); }
+    dibujar();
+  }));
+  pie.append(boton("Cerrar", () => { f.remove(); dibujar(); }));
+  caja.append(f);
+  f.scrollIntoView({ block: "nearest", behavior: "smooth" });
 }
 
 function formCrear() {
@@ -1129,6 +1233,11 @@ if ("serviceWorker" in navigator) {
 // la base compartida avisa cuando cambian los publicados (de este u otro dispositivo)
 window.alCambiarPublicados = (mapa) => { estado.publicados = mapa ?? leerPublicados(); dibujar(); };
 window.alCambiarAgregados = (filas) => { estado.agregadosBase = filas; combinar(); dibujar(); };
+window.alCambiarAcred = (filas) => {
+  // no redibujar mientras alguien escribe el pedido
+  estado.acred = filas;
+  if (estado.tab === "ba" && !document.querySelector(".acred-form")) dibujar();
+};
 window.alCambiarManuales = (filas) => { estado.manualesBase = filas; combinar(); llenarDeportes(); dibujar(); };
 window.Base?.iniciar();
 cargar();

@@ -52,6 +52,26 @@
       if (error) throw error;
       await traerAgregados();
     },
+    // acreditaciones (pestaña Bs. As.)
+    async crearAcred(datos) {
+      const { error } = await cliente.from("acreditaciones").insert(datos);
+      if (error) throw error;
+      await traerAcreditaciones();
+    },
+    async cambiarAcred(id, cambios) {
+      const { error } = await cliente.from("acreditaciones").update({ ...cambios, actualizado_en: new Date().toISOString() }).eq("id", id);
+      if (error) throw error;
+      await traerAcreditaciones();
+    },
+    async borrarAcred(id) {
+      const { error } = await cliente.from("acreditaciones").delete().eq("id", id);
+      if (error) throw error;
+      await traerAcreditaciones();
+    },
+    nombre: () => {
+      const m = (window.__miembros || []).find((x) => (x.email || "").toLowerCase() === (Base.mail() || "").toLowerCase());
+      return m?.nombre || (Base.mail() || "").split("@")[0];
+    },
     async borrarManual(id) {
       const { error } = await cliente.from("eventos_manuales").delete().eq("id", id);
       if (error) throw error;
@@ -88,16 +108,19 @@
   async function refrescar() {
     miembro = false;
     if (canal) { cliente.removeChannel(canal); canal = null; }
-    if (!sesion) { mostrar("fuera"); window.alCambiarPublicados?.(null); window.alCambiarManuales?.(null); window.alCambiarAgregados?.(null); return; }
+    if (!sesion) { mostrar("fuera"); window.alCambiarPublicados?.(null); window.alCambiarManuales?.(null); window.alCambiarAgregados?.(null); window.alCambiarAcred?.(null); return; }
     const { data, error } = await cliente.from("miembros").select("email").limit(1);
     miembro = !error && data.length > 0;
-    if (!miembro) { mostrar("sin-permiso"); window.alCambiarPublicados?.(null); window.alCambiarManuales?.(null); window.alCambiarAgregados?.(null); return; }
+    if (!miembro) { mostrar("sin-permiso"); window.alCambiarPublicados?.(null); window.alCambiarManuales?.(null); window.alCambiarAgregados?.(null); window.alCambiarAcred?.(null); return; }
     mostrar("dentro");
-    await Promise.all([traerPublicados(), traerManuales(), traerAgregados()]);
+    const m = await cliente.from("miembros").select("email, nombre");
+    window.__miembros = m.data || [];
+    await Promise.all([traerPublicados(), traerManuales(), traerAgregados(), traerAcreditaciones()]);
     canal = cliente.channel("publicados")
       .on("postgres_changes", { event: "*", schema: "public", table: "publicados" }, traerPublicados)
       .on("postgres_changes", { event: "*", schema: "public", table: "eventos_manuales" }, traerManuales)
       .on("postgres_changes", { event: "*", schema: "public", table: "eventos_agregados" }, traerAgregados)
+      .on("postgres_changes", { event: "*", schema: "public", table: "acreditaciones" }, traerAcreditaciones)
       .subscribe();
   }
 
@@ -113,6 +136,12 @@
     const { data, error } = await cliente.from("eventos_agregados").select("id, evento_id, evento_titulo, tipo, texto, creado_en").order("creado_en");
     if (error) return; // si la tabla todavía no existe, el panel usa la copia del bot
     window.alCambiarAgregados?.(data);
+  }
+
+  async function traerAcreditaciones() {
+    const { data, error } = await cliente.from("acreditaciones").select("*").order("creado_en");
+    if (error) { window.alCambiarAcred?.(false); return; } // false = la tabla todavía no existe (falta correr el SQL)
+    window.alCambiarAcred?.(data);
   }
 
   async function traerManuales() {

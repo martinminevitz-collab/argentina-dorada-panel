@@ -5,7 +5,7 @@ name: Publicar panel
 on:
   push:
     branches: [main]
-    paths: ["panel/**", "data/**", ".github/workflows/publicar-panel.yml"]
+    paths: ["panel/**", "data/**", "config/acreditacion.json", ".github/workflows/publicar-panel.yml"]
   workflow_dispatch:
   workflow_call:
 
@@ -33,6 +33,7 @@ jobs:
           mkdir _sitio
           cp -r panel/* _sitio/
           cp -r data _sitio/data
+          cp config/acreditacion.json _sitio/data/acreditacion.json
           rm -f _sitio/data/vistos.json
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

@@ -23,7 +23,8 @@ def cabecera(t):
     return " ".join(t.upper().split())
 
 COLUMNAS = {"deporte": "DEPORTE", "evento": "EVENTO", "inicio": "FECHA INICIO", "fin": "FECHA FINAL",
-            "lugar": "LUGAR", "fuente": "FUENTE", "nota": "NOTA"}
+            "lugar": "LUGAR", "fuente": "FUENTE", "nota": "NOTA",
+            "acreditacion": "ACREDITACION"}  # opcional: link de formulario, mail, WhatsApp o @usuario para pedir acreditación
 
 
 def fecha(txt):
