@@ -1,1 +1,13 @@
-{"pendientes": []}
+{
+ "_nota": "Datos que los compañeros agregaron a un evento desde el panel y que todavía no están en el Doc. El agente los suma al bloque de ese evento y al final escribe 'Ref panel: <ref>'.",
+ "pendientes": [
+  {
+   "ref": "ecccf758",
+   "evento_id": "1ffc05f899c1",
+   "evento_titulo": "RACQUETBALL - GOLDEN STATE OPEN (LPRT / IRT) EN ESTADOS UNIDOS",
+   "tipo": "correccion",
+   "texto": "[PUBLICABLE] Ya está completo: en el título cambiar (Necesito más info) por PUBLICABLE",
+   "creado_en": "2026-11-13T20:25:05.507704+00:00"
+  }
+ ]
+}
