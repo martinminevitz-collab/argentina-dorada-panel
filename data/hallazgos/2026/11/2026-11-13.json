@@ -1,5 +1,31 @@
 [
  {
+  "id": "2211333a4607",
+  "titulo": "La Selección Argentina de futsal derrotó a Portugal y alcanzó la gloria olímpica",
+  "resumen": "La Selección Argentina de futsal derrotó a Portugal y alcanzó la gloria olímpica Nexofin",
+  "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNNUhKUUlYdkdIaTQtbDZpVmtCYlgzQ2pIQzhueFJOaDNwMTFfSXBsYXd5NjE0N3o5S285TFJfWWVJeDZuWmNkSVF0VmlveW9DbVhIbHBqRDYwYmk2YzBYdWVMTTd1b09FOG80VHNFNEd6SFR0dVhYR2hjc1hQa0xxcWVYT2lCdDRzcmNEOGdackdDbXl3NWlfQWp0dkd5c09Pb3pqR2pUWElWNmpuT04wdy1pMG5qUFBGTm5TZ0MxanBpT1FX0gHEAUFVX3lxTE01SEpRSVh2R0hpNC1sNmlWa0JiWDNDakhDOG54Uk5oM3AxMV9JcGxhd3k2MTQ3ejlLbzlMUl9ZZUl4Nm5aY2RJUXRWaW95b0NtWEhscGpENjBiaTZjMFh1ZUxNN3VvT0U4bzRUc0U0R3pIVHR1WFhHaGNzWFBrTHFxZVhPaUJ0NHNyY0Q4Z1pyR0NteXc1aV9BanR2R3lzT09vempHalRYSVY2am5PTjB3LWkwbmpQUEZOblNnQzFqcGlPUVc?oc=5",
+  "fuente": "Nexofin",
+  "deporte": "Futsal",
+  "tipo": "resultado",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-13T04:06+00:00",
+  "encontrado": "2026-11-13T04:37-03:00",
+  "bot": "resultados"
+ },
+ {
+  "id": "8b14eb2837bc",
+  "titulo": "Video: el resumen de la dramática final de la Supercopa Argentina que ganó Estudiantes",
+  "resumen": "Video: el resumen de la dramática final de la Supercopa Argentina que ganó Estudiantes FM Del Sol Pehuajo",
+  "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNZ3JyNEVFUmRGRnAzbnIzRUZYclhzYlBjZ0VfZTJBdFV1YUp1d0hGRVdrRlVDVFZrczVHa3VRdXFrdmx0M1hUNC1rS2Rob1dqYVlmUnU5UFJGQU1CWlNGZW5JZGt3dU56NDZjZzQzV1EzTkZ0QWlITmZtdHRXMDBad2NLeW9wZ1BQdDc0RXhvVmI4cVBuaTFpNEd2ZUFIdmdyQzhBVmhhcnRxOUJlNjJwVTNEaElhaVE0Zi1NWTZWNjZ0UHUzR2pZWkRzRi1IT1VZZUpQbU9sdw?oc=5",
+  "fuente": "FM Del Sol Pehuajo",
+  "deporte": "Handball",
+  "tipo": "resultado",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-13T03:01+00:00",
+  "encontrado": "2026-11-13T04:37-03:00",
+  "bot": "resultados"
+ },
+ {
   "id": "2b3f33b09b15",
   "titulo": "Efemérides del 13 de noviembre: qué se conmemora en Argentina y cuáles son los hechos que marcaron esta fecha",
   "resumen": "Efemérides del 13 de noviembre: qué se conmemora en Argentina y cuáles son los hechos que marcaron esta fecha Opinando San Nicolás",
@@ -10,6 +36,19 @@
   "en_buenos_aires": false,
   "publicado": "2026-11-13T03:00+00:00",
   "encontrado": "2026-11-13T01:14-03:00",
+  "bot": "resultados"
+ },
+ {
+  "id": "c80a602056f5",
+  "titulo": "Agenda: lo mejor de la programación de ESPN en Disney+ en Argentina",
+  "resumen": "Agenda: lo mejor de la programación de ESPN en Disney+ en Argentina ESPN Argentina",
+  "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNM1FNSkpqN1NNRGdiRkJkVm96TWZfX0lieXZfd0I3QUNTV0lkaFU5NDlwU2ZTczVBTGZoYUhZUkV0d2g5UWdoQUNnVGNrang4RU9ORE5yaHlYeFNEWm5lR19jMWd2bWYwemltX0piSVF6b0RjSExhUUJ5bWRmU0hNcGdCd3R3ZVZ2czJkMEhFQWNVWXdSZDZIbEVHeF81aERxM0pkUzdMd1dJVVprY0hyMHdoTmVXdC11?oc=5",
+  "fuente": "ESPN Argentina",
+  "deporte": "Beisbol",
+  "tipo": "agenda",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-13T03:00+00:00",
+  "encontrado": "2026-11-13T04:36-03:00",
   "bot": "resultados"
  },
  {
@@ -117,6 +156,19 @@
   "bot": "resultados"
  },
  {
+  "id": "3f4d784fa52e",
+  "titulo": "Avanza el Campeonato Nacional por Golpes en en Tortugas CC - Asociación Argentina de Golf",
+  "resumen": "Avanza el Campeonato Nacional por Golpes en en Tortugas CC Asociación Argentina de Golf - AAG",
+  "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOQnN0WHlPS3ZHTk14X1RJYTBoTlRIY0g4N3lQZDNEcmFNSk5LcXRLTHo3dHFnbzN5VGwzYkZialRuYmx1UDJCWktmUWlfUkdkLW9YS2tHLVhHS0NkaTlvajBhUElkcHkxVG5TdnlvMHN1S3lMRi1FYkNOTDNqX3BYb0FmOHFHOHMzM0E?oc=5",
+  "fuente": "Asociación Argentina de Golf - AAG",
+  "deporte": "Golf",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-12T22:28+00:00",
+  "encontrado": "2026-11-13T04:37-03:00",
+  "bot": "resultados"
+ },
+ {
   "id": "5ff3d88a941e",
   "titulo": "La CIDH condenó a la Argentina por la destitución del ex juez Eduardo Moliné O’Connor en 2003",
   "resumen": "La CIDH condenó a la Argentina por la destitución del ex juez Eduardo Moliné O’Connor en 2003 Canal26",
@@ -140,6 +192,19 @@
   "en_buenos_aires": false,
   "publicado": "2026-11-12T21:51+00:00",
   "encontrado": "2026-11-13T01:13-03:00",
+  "bot": "resultados"
+ },
+ {
+  "id": "a2aeff1028b5",
+  "titulo": "Racha triunfal: la ciclista chaqueña Gisela Martínez conquista Argentina y Paraguay",
+  "resumen": "Racha triunfal: la ciclista chaqueña Gisela Martínez conquista Argentina y Paraguay Radio Facundo Quiroga",
+  "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNdDlaMVFQUUNlMzhRLWRRTnhTMUhCdTAwOEJOOE45cmpBOG95M2RBcTkwejRxcFVqQTJFbjB0VEF2cXJuOVlaM21PR1J2SDFaejhMamVtN2JyV0NwWXNVVEQ2WFRmVkZ0VDkySUtRYk4zNzBneDJLa0ZnaDlvb0hrQVpfYzVPT2dMTG92dnlGOEVFQ19wVVBzT1lEXzBwdzVFVk1HRXBlVG42ZGh5cnFJ?oc=5",
+  "fuente": "Radio Facundo Quiroga",
+  "deporte": "Ciclismo de ruta",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-12T21:25+00:00",
+  "encontrado": "2026-11-13T04:36-03:00",
   "bot": "resultados"
  },
  {
@@ -179,6 +244,32 @@
   "en_buenos_aires": false,
   "publicado": "2026-11-12T19:42+00:00",
   "encontrado": "2026-11-13T01:13-03:00",
+  "bot": "resultados"
+ },
+ {
+  "id": "7e7bc0d87821",
+  "titulo": "El único ayudante de la Selección Argentina que no será parte de la renovación",
+  "resumen": "El único ayudante de la Selección Argentina que no será parte de la renovación FM Del Sol Pehuajo",
+  "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNaG51cXktYlhoM1o5dzBXdzRtVnBKb08zakRhcWtNeDlBbWhUMDgyNmxxUW8wM0ZpeHlYM2RnbnFjUElWbG5hS1JLWUxGRXhzenBtdTJLT2ljU0toNllwejR6ZHEzSDBGTTZKa3ZDbGtBZXA1dmZrNWk1YUVjLUVKaHBXUkJ6RFpsZk9NMnJzUVBaQ2NXc0s4ekFjMC1xZVVacXRvejVmSFdZbGlURHdvZlNCREdaNE1aeEpxZWdZWHFFZ2luRWRnMlpYQ3JXZw?oc=5",
+  "fuente": "FM Del Sol Pehuajo",
+  "deporte": "Handball",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-12T19:04+00:00",
+  "encontrado": "2026-11-13T04:37-03:00",
+  "bot": "resultados"
+ },
+ {
+  "id": "6be765f4bc8e",
+  "titulo": "Argentina se consagró campeona juvenil de futsal al vencer a Portugal",
+  "resumen": "Argentina se consagró campeona juvenil de futsal al vencer a Portugal Diario Huarpe",
+  "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNeTVPSHNvbkR3bkJCNnZZS0VBcnc4M001cTVjOHZzODhJUDVCSlpSai1sYkRPYXlyaUxRdjJPR1RSSGFaWUdvWk9reUVvRjUzV0JpbDl1dTd5TjBZWnJqLWxfdGdSczUySEE3SDJTTTFnZVV1c0ZYQkNSVWo0M2gzd0wxaERLMHl0bXJ0YXhZeHI5MHRaRWZTNFk3YlZkbnlnTDdhU2ZDeXlZcEdZbEtDa2tJV09yVmdsUGgxcFJBSmlrOW5wNEhleA?oc=5",
+  "fuente": "Diario Huarpe",
+  "deporte": "Futsal",
+  "tipo": "resultado",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-12T18:54+00:00",
+  "encontrado": "2026-11-13T04:37-03:00",
   "bot": "resultados"
  },
  {
