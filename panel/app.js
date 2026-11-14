@@ -264,15 +264,17 @@ function cajaAcreditacion(e) {
   const caja = document.createElement("div");
   caja.className = "acred";
   const filas = (estado.acred || []).filter((a) => a.evento_id === e.id);
-  // contacto: columna ACREDITACIÓN de la planilla, o el que cargó alguien desde el panel
+  // contactos: columna ACREDITACIÓN de la planilla + los cargados desde el panel + el de la sede (ej. CeNARD → Secretaría)
   const delPanel = (estado.contactos || {})[e.id] || "";
-  const contactoBase = e.contactoAcred || delPanel;
+  const sede = sedeAcred(e);
+  const contactos = [...new Set([e.contactoAcred, delPanel, sede?.contacto].flatMap(partirContactos))];
+  const contactoBase = contactos[0] || "";
   const logueado = window.Base?.activa();
   const tit = document.createElement("div"); tit.className = "acred-tit";
-  tit.innerHTML = `<b>Acreditación</b> <span>${contactoBase ? "Contacto: " + escapar(contactoBase) : "Sin contacto todavía"}</span>`;
+  tit.innerHTML = `<b>Acreditación</b> <span>${contactos.length ? (contactos.length > 1 ? "Contactos: " : "Contacto: ") + contactos.map(escapar).join(" · ") : "Sin contacto todavía"}</span>`;
   if (logueado && estado.acred !== false && !e.contactoAcred) {
     const ed = boton(delPanel ? "Editar" : "+ Cargar contacto", async () => {
-      const c = prompt("Contacto para pedir acreditación: link del formulario, mail, WhatsApp o @usuario. Dejalo vacío para borrarlo.", delPanel);
+      const c = prompt("Contacto para pedir acreditación: link del formulario, mail, WhatsApp o @usuario. Si hay varios, separalos con ; (punto y coma). Dejalo vacío para borrarlo.", delPanel);
       if (c === null) return;
       try {
         if (c.trim()) { await Base.guardarContacto(e.id, e.titulo, c.trim().slice(0, 500)); avisar("Contacto guardado"); }
@@ -282,6 +284,7 @@ function cajaAcreditacion(e) {
     ed.className = "acred-editar"; tit.append(ed);
   }
   caja.append(tit);
+  if (sede) caja.insertAdjacentHTML("beforeend", `<p class="acred-sede">📍 ${escapar(sede.nota)}${sede.contacto ? "" : " (falta cargar su contacto)"}</p>`);
   if (estado.acred === false) { caja.insertAdjacentHTML("beforeend", `<p class="acred-aviso">Falta activar esto en la base (correr supabase/acreditaciones.sql).</p>`); return caja; }
   if (!logueado) { if (filas.length) caja.insertAdjacentHTML("beforeend", `<p class="acred-aviso">${filas.length} pedido(s). Entrá con tu mail para verlos.</p>`); return caja; }
   const yo = Base.nombre();
@@ -301,11 +304,11 @@ function cajaAcreditacion(e) {
         const n = prompt("¿A quién sumás? (nombre y, si querés, rol: foto, prensa, video)");
         if (n && n.trim()) guardar(() => Base.cambiarAcred(a.id, { personas: [...a.personas, n.trim().slice(0, 80)] }), "Sumado");
       }));
-      pie.append(boton("📨 Ya la pido", () => abrirPedido(e, a, contactoBase, caja)));
+      pie.append(boton("📨 Ya la pido", () => abrirPedido(e, a, contactos, caja)));
     } else if (a.estado === "pedida") {
       pie.append(boton("✅ Confirmada", () => guardar(() => Base.cambiarAcred(a.id, { estado: "confirmada" }), "¡Confirmada!")));
       pie.append(boton("✕ Rechazada", () => guardar(() => Base.cambiarAcred(a.id, { estado: "rechazada" }), "Anotado")));
-      pie.append(boton("Ver texto", () => abrirPedido(e, a, contactoBase, caja, true)));
+      pie.append(boton("Ver texto", () => abrirPedido(e, a, contactos, caja, true)));
     } else {
       pie.append(boton("↩ Volver a pedida", () => guardar(() => Base.cambiarAcred(a.id, { estado: "pedida" }))));
     }
@@ -327,13 +330,22 @@ function cajaAcreditacion(e) {
   caja.append(nuevo);
   return caja;
 }
-function abrirPedido(e, a, contacto, caja, soloVer = false) {
+function partirContactos(c) { return String(c || "").split(/\s*[;\n]\s*/).map((x) => x.trim()).filter((x) => x.length > 2); }
+function sedeAcred(e) {
+  const txt = sinTildes([e.titulo, e.evento, e.fechas, e.lugar, ...(e.bloques || []).map((b) => (b.partes || []).map((p) => p.t).join(""))].join(" "));
+  return (estado.modeloAcred?.por_sede || []).find((s) => (s.buscar || []).some((w) => txt.includes(sinTildes(w))));
+}
+function abrirPedido(e, a, contactos, caja, soloVer = false) {
   caja.querySelector(".acred-form")?.remove();
   const { asunto, texto } = textoAcred(e, a.personas);
   const f = document.createElement("div"); f.className = "acred-form";
-  f.innerHTML = `<label>Contacto (link del formulario, mail, WhatsApp o @usuario)<input name="contacto" value="${escapar(a.contacto || contacto || "")}" placeholder="Ej: prensa@federacion.org.ar"></label>
+  const lista = [...new Set([a.contacto, ...contactos].filter(Boolean))];
+  f.innerHTML = `<label>Contacto (link del formulario, mail, WhatsApp o @usuario)<input name="contacto" list="contactos-${a.id}" value="${escapar(lista[0] || "")}" placeholder="Ej: prensa@federacion.org.ar">
+    <datalist id="contactos-${a.id}">${lista.map((c) => `<option value="${escapar(c)}">`).join("")}</datalist></label>
+    ${lista.length > 1 ? `<div class="acred-opciones">${lista.map((c) => `<button type="button" data-c="${escapar(c)}">${escapar(c)}</button>`).join("")}</div>` : ""}
     <label>Texto (revisalo y sumá lo que pida el evento: rol, DNI, etc.)<textarea name="texto" rows="9">${escapar(texto)}</textarea></label>
     <div class="acred-pie"></div>`;
+  f.querySelectorAll(".acred-opciones button").forEach((b) => (b.onclick = () => { f.querySelector("[name=contacto]").value = b.dataset.c; }));
   const pie = f.querySelector(".acred-pie");
   const val = () => ({ c: f.querySelector("[name=contacto]").value.trim(), t: f.querySelector("[name=texto]").value });
   pie.append(boton("Abrir y copiar texto", async () => {

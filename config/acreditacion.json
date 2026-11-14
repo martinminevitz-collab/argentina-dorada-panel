@@ -1,5 +1,17 @@
 {
-  "_nota": "Texto modelo para pedir acreditación (panel → 📍 Bs. As. → Ya la pedí). Se puede cambiar sin tocar código. {evento}, {fechas}, {lugar}, {personas} y {deporte} se completan solos. NO poner acá DNI, teléfonos ni datos personales: este archivo es público. Esos datos los agrega cada uno a mano antes de mandar.",
+  "_nota": "Texto modelo para pedir acreditación (panel → 📍 Bs. As. → Ya la pedí). Se puede cambiar sin tocar código. {evento}, {fechas}, {lugar}, {personas} y {deporte} se completan solos. NO poner acá DNI, teléfonos ni datos personales: este archivo es público. Esos datos los agrega cada uno a mano antes de mandar. 'por_sede': si el evento es en esa sede (busca las palabras en el título, el lugar y la sede), suma esa nota y ese contacto a la lista de contactos (el contacto puede quedar vacío si todavía no lo tenemos).",
   "asunto": "Pedido de acreditación – Argentina Dorada – {evento}",
-  "texto": "Hola, ¿cómo están?\n\nLes escribimos de Argentina Dorada, un medio digital que difunde el deporte argentino, con foco en los deportes y deportistas que tienen menos difusión.\n\nNos gustaría cubrir {evento} ({fechas}{lugar}) y queríamos pedirles acreditación de prensa para:\n{personas}\n\nSi necesitan algún dato más (DNI, rol, formulario), nos avisan y se los mandamos.\n\n¡Muchas gracias!\nArgentina Dorada"
+  "texto": "Hola, ¿cómo están?\n\nLes escribimos de Argentina Dorada, un medio digital que difunde el deporte argentino, con foco en los deportes y deportistas que tienen menos difusión.\n\nNos gustaría cubrir {evento} ({fechas}{lugar}) y queríamos pedirles acreditación de prensa para:\n{personas}\n\nSi necesitan algún dato más (DNI, rol, formulario), nos avisan y se los mandamos.\n\n¡Muchas gracias!\nArgentina Dorada",
+  "por_sede": [
+    {
+      "sede": "CeNARD",
+      "buscar": [
+        "cenard",
+        "ce.n.ar.d",
+        "centro nacional de alto rendimiento"
+      ],
+      "nota": "Es en el CeNARD: además del organizador, la acreditación se puede pedir a los oficiales de prensa de la Secretaría de Deportes.",
+      "contacto": ""
+    }
+  ]
 }

@@ -303,6 +303,8 @@ input[type=search], select { width: 100%; background: var(--tarjeta); color: var
 .acred-tit span { color: var(--texto-2); font-size: 13px; overflow-wrap: anywhere; }
 .acred-editar { margin-left: auto; font-size: 12.5px; padding: 3px 10px; }
 .agregar-dato .link-dato { font: inherit; font-size: 14px; padding: 8px; border: 1px solid var(--borde); border-radius: 8px; background: var(--fondo); color: var(--texto); width: 100%; box-sizing: border-box; }
+.acred-sede { margin: 0; font-size: 13px; background: var(--celeste-fondo); color: var(--texto); border-radius: 8px; padding: 6px 10px; }
+.acred-opciones { display: flex; flex-wrap: wrap; gap: 6px; } .acred-opciones button { font-size: 12.5px; padding: 4px 10px; }
 .acred-aviso { margin: 0; font-size: 13px; color: var(--texto-2); }
 .acred-fila { border: 1px solid var(--borde); border-radius: 10px; padding: 8px 10px; display: grid; gap: 6px; font-size: 14px; }
 .acred-fila.armando { border-color: var(--oro); background: var(--oro-fondo); }
@@ -329,10 +331,10 @@ input[type=search], select { width: 100%; background: var(--tarjeta); color: var
 .g-editor { display: grid; gap: 12px; }
 .g-origen { margin: 0; font-size: 13.5px; color: var(--texto-2); display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
 .g-origen button { background: none; border: 1px solid var(--borde); border-radius: 8px; padding: 4px 10px; cursor: pointer; font-size: 12.5px; }
-.g-plantillas-caja { display: flex; align-items: center; gap: 6px; min-width: 0; }
-.g-plantillas { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; scroll-behavior: smooth; flex: 1 1 auto; min-width: 0; }
-.g-flecha { flex: 0 0 auto; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--borde); background: var(--tarjeta); color: var(--texto); font-size: 16px; cursor: pointer; display: grid; place-items: center; }
-.g-flecha[disabled] { opacity: .3; cursor: default; }
+.g-plantillas-grupos { display: grid; gap: 8px; }
+.g-grupo { display: flex; gap: 10px; align-items: baseline; min-width: 0; }
+.g-grupo > span { flex: 0 0 74px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--texto-2); }
+.g-plantillas { display: flex; gap: 6px; flex-wrap: wrap; min-width: 0; }
 .g-plantillas button { flex: 0 0 auto; background: var(--tarjeta); border: 1px solid var(--borde); border-radius: 10px; padding: 7px 12px; cursor: pointer; font-weight: 600; }
 .g-plantillas button.activo { background: var(--texto); border-color: var(--texto); color: var(--fondo); }
 .g-tira { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 4px; align-items: flex-end; }
@@ -470,7 +472,7 @@ input[type=search], select { width: 100%; background: var(--tarjeta); color: var
 .g-sets.n5 { font-size: 88px; } .g-sets.n5 td:first-child { width: 34%; font-size: 50px; padding: 18px 16px; } .g-sets.n5 th { font-size: 42px; padding: 8px 4px; }
 .g-sets.n5 td, .g-sets.n4 td { padding-left: 4px; padding-right: 4px; }
 .g-sets td:first-child { overflow-wrap: normal; hyphens: none; } .g-sets td:first-child span { display: block; white-space: normal; }
-.g-sets tr.arg td { color: var(--oro); } .g-sets tr.arg td:first-child { background: var(--oro); color: var(--navy); }
+.g-sets td.gana { color: var(--oro); } .g-sets tr.gana td:first-child { background: var(--oro); color: var(--navy); }
 .g-frase { text-align: center; display: grid; gap: 26px; padding-bottom: 20px; }
 .g-frase h1 { font-size: 150px; line-height: .95; text-transform: uppercase; }
 .g-adorno { height: 3px; background: linear-gradient(90deg, transparent, var(--oro) 30%, var(--oro) 70%, transparent); }
@@ -513,7 +515,7 @@ input[type=search], select { width: 100%; background: var(--tarjeta); color: var
 .g-cv-lista { list-style: none; padding: 0; font-size: 44px; display: grid; gap: 4px 40px; counter-reset: n; }
 .g-cv-lista.dos, .g-cl-lista.dos { grid-template-columns: 1fr 1fr; }
 .g-cv-lista li { counter-increment: n; display: flex; gap: 16px; align-items: baseline; border-bottom: 1px solid #2c4a6e; padding: 6px 0; min-width: 0; }
-.g-cv-lista li::before { content: counter(n, decimal-leading-zero); font: 400 1em "Bebas Neue", sans-serif; color: var(--oro); min-width: 1.4em; }
+.g-cv-lista i { font: 400 1em "Bebas Neue", sans-serif; font-style: normal; color: var(--oro); min-width: 1.4em; text-align: right; }
 .g-cv-lista b { font-weight: 600; } .g-cv-lista span { color: var(--cel); font-size: .78em; margin-left: auto; text-align: right; }
 .g-cv-dt { font-size: 40px; color: #d5dde7; } .g-cv-dt span { background: var(--cel); color: var(--navy); font: 400 1em "Bebas Neue", sans-serif; padding: 2px 16px; border-radius: 8px; margin-right: 10px; }
 .g-cv-cred { right: 60px; bottom: 40px; font-size: 24px; }
@@ -522,7 +524,21 @@ input[type=search], select { width: 100%; background: var(--tarjeta); color: var
 .g-cl-numero { flex: 0 0 auto; display: grid; justify-items: center; line-height: .85; border-right: 4px solid var(--oro); padding-right: 36px; max-width: 330px; text-align: center; }
 .g-cl-numero b { font: 400 250px "Bebas Neue", sans-serif; color: var(--oro); }
 .g-cl-numero span { font: 400 44px "Bebas Neue", sans-serif; color: #fff; text-transform: uppercase; }
-.g-cl-cuerpo { top: 400px; }
+.g-cl-cuerpo { top: 250px; }
+.g-cl-velo { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(12, 26, 44, .55) 0%, rgba(12, 26, 44, .88) 30%, rgba(12, 26, 44, .96) 60%); }
+.g-logo-evento { position: absolute; left: 60px; top: 50px; max-width: 230px; max-height: 150px; object-fit: contain; }
+div.g-logo-evento { width: 200px; height: 110px; border: 2px dashed #4a6a8e; display: grid; place-items: center; font-size: 24px; color: #7d93ad; }
+/* --- Clasificado (uno solo, feed) --- */
+.g-c1-foto { left: 0; right: 0; top: 0; height: 900px; }
+.g-c1-degrade { position: absolute; left: 0; right: 0; top: 0; height: 960px; background: linear-gradient(to top, var(--navy) 4%, rgba(12, 26, 44, .5) 30%, rgba(12, 26, 44, 0) 60%), linear-gradient(to bottom, rgba(12, 26, 44, .55), rgba(12, 26, 44, 0) 25%); }
+.g-c1-abajo { position: absolute; left: 60px; right: 60px; top: 520px; bottom: 90px; display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-start; gap: 18px; overflow: hidden; }
+.g-c1-abajo > * { margin: 0; }
+.g-c1-abajo h1 { font-size: 104px; line-height: .9; color: var(--oro); text-transform: uppercase; }
+.g-c1-nombre { font: 400 96px "Bebas Neue", sans-serif; line-height: .95; text-transform: uppercase; }
+.g-c1-detalle { font-size: 40px; color: #d5dde7; }
+.g-c1-plaza { display: flex; align-items: center; gap: 16px; } .g-c1-plaza b { font: 400 90px "Bebas Neue", sans-serif; color: var(--navy); background: var(--oro); border-radius: 14px; padding: 4px 24px 0; line-height: 1; }
+.g-c1-plaza span { font: 400 44px "Bebas Neue", sans-serif; text-transform: uppercase; }
+.g-clasificado .g-ad { display: none; }
 .g-cl-cuerpo h1 { font-size: 108px; min-width: 0; flex: 1 1 auto; }
 .g-cl-nuevo { font-size: 40px; } .g-cl-nuevo span { background: var(--oro); color: var(--navy); font: 400 1em "Bebas Neue", sans-serif; padding: 2px 16px; border-radius: 8px; margin-right: 10px; }
 .g-cl-lista { list-style: none; padding: 0; font-size: 42px; display: grid; gap: 4px 40px; }
@@ -547,7 +563,7 @@ input[type=search], select { width: 100%; background: var(--tarjeta); color: var
 .g-fx-torneo, .g-ag-torneo { font: 400 76px "Bebas Neue", sans-serif; line-height: 1; text-transform: uppercase; }
 .g-fx-titulo, .g-ag-titulo { position: absolute; left: 50px; right: 50px; top: 400px; text-align: center; font-size: 210px; line-height: .9; color: var(--oro); text-transform: uppercase; }
 .g-ag-titulo { font-size: 160px; }
-.g-fx-zona, .g-ag-zona { position: absolute; left: 50px; right: 50px; top: 640px; bottom: 60px; display: flex; flex-direction: column; justify-content: safe center; gap: 30px; overflow: hidden; }
+.g-fx-zona, .g-ag-zona { position: absolute; left: 50px; right: 50px; top: 640px; bottom: 60px; display: flex; flex-direction: column; justify-content: flex-start; gap: 30px; overflow: hidden; }
 .g-fx-lista, .g-ag-lista { display: grid; gap: 22px; font-size: 48px; }
 .g-fx-fila { display: grid; grid-template-columns: 230px 1fr auto; align-items: center; border: 3px solid #2c4a6e; border-radius: 16px; overflow: hidden; min-height: 2.6em; }
 .g-fx-fila .fe { align-self: stretch; display: grid; place-items: center; text-align: center; background: var(--oro); color: var(--navy); font: 400 1em "Bebas Neue", sans-serif; line-height: 1; padding: 10px; }
