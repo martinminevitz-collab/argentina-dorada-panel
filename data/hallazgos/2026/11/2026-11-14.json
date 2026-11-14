@@ -1,5 +1,75 @@
 [
  {
+  "id": "c74073157ec4",
+  "titulo": "Catalina Borrelli cerró su participación en Dakar 2026 en el cuarto puesto",
+  "resumen": "Catalina Borrelli cerró su participación en Dakar 2026 en el cuarto puesto Argentina Amateur Deporte",
+  "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPZm1PcjFsOTdQNnljN2VaWDI3RGVNT24wdGlMUmhqdU84ZFhBaTdHTUVMZG5MRXRvckoxWTkzM2FyeHNuNjZpcFp2ZGFjQ1gtYUk0UklsdVBKZHJkZnJ0dzE1Rl9ibjNDMXNOUkE3dFpRaGo5U0NGcEJNbGJRUjZ3NEpfYlEyMDBxQ1FkaWtVdlQtYTRGbDJLc3RuZ0kxOTNKV3NhLXQyOHFJTkNlMWZKOQ?oc=5",
+  "fuente": "Argentina Amateur Deporte",
+  "deporte": "Esgrima",
+  "tipo": "resultado",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-14T17:49+00:00",
+  "encontrado": "2026-11-14T16:03-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
+  "id": "80a7c4636d4f",
+  "titulo": "La Crossover y una final histórica: El 22 de noviembre en la Bombonerita",
+  "resumen": "La Crossover y una final histórica: El 22 de noviembre en la Bombonerita Argentina Amateur Deporte",
+  "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPenZqWnhoc1U4eFlLUTZNWlg0SEswcmdYXzhZd0R4MFBrZ0RDcW5jQUdsSmhDNWNBdm01cG9rNG93UW1WUFJFS2xCOUhiU0M0S21xN2hkZUVqUVI2SS15Qjc5aktEUXVvZGI2WDhiOVEwd2NYQ2NaWDAyZXo0YU5CMHNJa0xwcXRTbTUyMzVVMW83RGNUQmdJS1lhWHUyUnNxZHQ5YUdacnhiQ0VG?oc=5",
+  "fuente": "Argentina Amateur Deporte",
+  "deporte": "Skate",
+  "tipo": "resultado",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-14T17:29+00:00",
+  "encontrado": "2026-11-14T16:04-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
+  "id": "fae8155ff091",
+  "titulo": "Dónde ver UFC 334 en Argentina: transmisión y horarios",
+  "resumen": "Dónde ver UFC 334 en Argentina: transmisión y horarios 365Scores",
+  "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOT2ZkZXBacnVqRWRaeExRaU1IM0tBMUFtU21xOFBRTEVEOGJJY3F1YUpXOEh0WGo2bFMxVjU2NU5XVlpGMkZJX05mT0syMDlzYzJHM1ljMU9iaE9LbHFFY3lWSTRyZWRnSG9lWVJiV2U4eGRsWUZQSUlaaF9DUmZOZA?oc=5",
+  "fuente": "365Scores",
+  "deporte": "UFC",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-14T17:00+00:00",
+  "encontrado": "2026-11-14T16:04-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
+  "id": "66fd234114a6",
+  "titulo": "Cinco equipos de Chile y Argentina disputarán la primera Copa Austral de hockey pista femenino en Punta Arenas",
+  "resumen": "Cinco equipos de Chile y Argentina disputarán la primera Copa Austral de hockey pista femenino en Punta Arenas El Pingüino",
+  "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOa2tWTEVUSmZCMklkTjhGV19yTTZnZkF2XzhtMGtsMzlBbkxhRUxMUGFQSlhSd1ZlR3Y5OXhNbHdEQkE1V0RydnhyVUhYY1VILUNCQkJET0RyNDg5WmRqVms3VXVIV05qZTRzNUlMYmREa3VkeEwtTWxWLVpHaXN2MTVNaE5OeGY1YU1FeTl0NmJkSkllTlZ4SXBPdkFtcGREdW5obW5xVy12dnRVN0xIRlU5UUlKMHAweG8wMGV3clJDOXpvUG01OTdmamN4VzJaMExuOFlwUXRhNVREMURNZQ?oc=5",
+  "fuente": "El Pingüino",
+  "deporte": "Tenis de mesa",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-14T16:48+00:00",
+  "encontrado": "2026-11-14T16:04-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
+  "id": "098f6482eef2",
+  "titulo": "Justicia argentina autoriza extradición a EE.UU. de dos chilenos acusados de robar al esposo de Taylor Swift",
+  "resumen": "Justicia argentina autoriza extradición a EE.UU. de dos chilenos acusados de robar al esposo de Taylor Swift 24horas",
+  "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQazBRdDdhWVloVWZSTFJNVDRSeHRWSDl5M3ZYdDk5eVlDOHFQczFzTUZZM0xISTJlNDFaYzZSUDN0cThMbXRlbEhZZzhnS2Rnb2lJZVNkT3JaNHJ3Q2JOaC1UUnJvbXYyLS1FVW9KbjFKRFhSQlJTWmQ5TG85czdqY1J6SXhOWW1KSVNrOUozS3ZTSkJONE1EU1l2ci1rSlVMbVVSdjN3WlFGbXZkaEQxUUwwVVhnRmJXV1B3enhCUEtrREg5WXVR0gHMAUFVX3lxTE5JTlUyaHRteVVTN3ltOHZyU2J4QnVzN3NFSThjRnp1UHExV2N6Zkxwa3hkcEdNdW91Yk9iZ0N2b2IyZFcwY3dwOC1UUlNPVG54S0lHZkNQQ1ZWZ2RWUXIydTZoLUxVV0ZqOEczZ29XeXFaTnFKaWplVWtyZ2JFcGgyZHRfa0czUDZ0SENRYVc0eHE3WklqWTl1VENxODNTMFd2YThlSWw4U1lKRVdkUjFnV0xvYTVQaDVDV3dJOHZpeWRVa3V5dGtoYlNqOQ?oc=5",
+  "fuente": "24horas",
+  "deporte": "Hockey sobre hielo",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-14T15:46+00:00",
+  "encontrado": "2026-11-14T16:03-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
   "id": "ae5778d31483",
   "titulo": "BOXEO: EL TOTORALENSE NAHUEL ”CAÑA” GARCÍA PELEARÁ POR EL TÍTULO ARGENTINO EN BUENOS AIRES",
   "resumen": "BOXEO: EL TOTORALENSE NAHUEL ”CAÑA” GARCÍA PELEARÁ POR EL TÍTULO ARGENTINO EN BUENOS AIRES Estación FM",
@@ -98,6 +168,20 @@
   "noticia": false
  },
  {
+  "id": "d4d05a3cf2ce",
+  "titulo": "El importante respaldo que recibió Argentina para el regreso de la F1: \"Sería algo bueno...\"",
+  "resumen": "El importante respaldo que recibió Argentina para el regreso de la F1: \"Sería algo bueno...\" Carburando",
+  "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOWktmdXBzMl9iSjFtTWVRYTUybjRMbnY2X2RSY1U2NzZTbmJFMGdZMW9tc2VkN3pQdnhlWkdobFBHX2NLTGFBUVY1dDVMWEEyNXhVU2dJT196Y1ZSZlhnb0x6RjFYNVhWOXVsRVJHdkFqMVZkdXhoMkNLaDA5TGhITUE0bjBnN1ZoemtXR204YzZTWUE4bjlpVXNCTjFpbWNFV3g2M1Fsb01qb3BOTmEtRjh2Yk05VFZNRGctNkdxT2JuQlptbjFwWUtkdFJ1YXc2UlA4a1FyMA?oc=5",
+  "fuente": "Carburando",
+  "deporte": "Formula 1",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-14T13:46+00:00",
+  "encontrado": "2026-11-14T16:03-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
   "id": "14b77380d8e8",
   "titulo": "Simón Domínguez finalista con Argentina en Paraguay",
   "resumen": "Simón Domínguez finalista con Argentina en Paraguay La Razon de Chivilcoy",
@@ -180,6 +264,20 @@
   "encontrado": "2026-11-14T12:55-03:00",
   "bot": "resultados",
   "noticia": false
+ },
+ {
+  "id": "9c757042b774",
+  "titulo": "Jesús Montenegro al frente del Ranking Beca Galperín al Mérito - Asociación Argentina de Golf",
+  "resumen": "Jesús Montenegro al frente del Ranking Beca Galperín al Mérito Asociación Argentina de Golf - AAG",
+  "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNTGJ3SGVTNHNsdmkweVZEejBxX3FtZS11N0JyMlY1SWdKdjVWLUNoWDU2dGtWckFuem9aa1pTY1Nvand6aXZESklza1dmOC02NFdoSWkyLU1DakxTWnJqalgxUFZsZzRCMkh0TnlZVnJteUh6NHEyWUQtZjg2VlZYMUJSYVBnb3RsNXp0a250MA?oc=5",
+  "fuente": "Asociación Argentina de Golf - AAG",
+  "deporte": "Golf",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-14T13:14+00:00",
+  "encontrado": "2026-11-14T16:03-03:00",
+  "bot": "resultados",
+  "noticia": true
  },
  {
   "id": "753c3d13890a",
@@ -574,6 +672,20 @@
   "noticia": false
  },
  {
+  "id": "0ca61b6bb4a5",
+  "titulo": "El blooper de la defensa argentina que terminó con el gol en contra de Leonardo Balerdi en el clásico ante Uruguay",
+  "resumen": "El blooper de la defensa argentina que terminó con el gol en contra de Leonardo Balerdi en el clásico ante Uruguay Infobae",
+  "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQeUUtNEt3RlViNFFwUFFKeDk3Q0VMSXV0U0RDNXFqRVhmaDlLbmpHTk5vV1J6dlBremhlem9kNkNodndiT1NqeVRJM3RaTGVSMnRBT0hudnV5VjVsSWV6UkxpTmZsdHE3eS1SVnFKZHJyQXB6b20zV1dsN0hzYnAtNVJIY2s0eWQ3ZzE4bHFsWnNsRWxVX1RnTlp5LVAxQnhSdmVJUG1QWk90VGhhbFhneHF4RkZ0TXJZbDR3VG1pZEJBMng5Sm5tSThnS0VyWjhrWEpRcXkyWFQ2MEpDUmZLc0JDdFpRTEoteXI5S0JUaVLSAYsCQVVfeXFMT2Q1UEQ3eklweWVTcG1Tc3RaenBRa3lsLW5uUG0ydmtJS0dHUk9MZ1NodzZUb1gza1BRVTJFQ3A3Vy11T3h5SEVlREJSY3UtQWp2cGJObWhKYUp0dGR2cFJYOGRlaFdFSjNXNTlhdHNoY1Rzd01FNW5xR24xRHc4WmdSU25kNUhzR1A0RnJ2d2JjX0ZqdE9YYzVHVXRIUWhibjJTY2tZWkx2NUY3cGJ4RjhCZ09aRHJvem05aW5zUEhQZkd0bF9MU01rM3VMOHhmRVRDazNnWjlKVHhES1JqV000TnRfSTZ2YlgwT0YyYV82dTVuVWthTW1TNFJHTjVNenBNUWwtWGQ1YWI4?oc=5",
+  "fuente": "Infobae",
+  "deporte": "Formula 1",
+  "tipo": "resultado",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-14T01:31+00:00",
+  "encontrado": "2026-11-14T16:03-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
   "id": "07f7f6727d52",
   "titulo": "Tras cruzar a Fernando Ferrara por su salida de Las Leonas, Delfina Merino denunció que eliminaron su comentario",
   "resumen": "Tras cruzar a Fernando Ferrara por su salida de Las Leonas, Delfina Merino denunció que eliminaron su comentario La Voz del Interior",
@@ -812,6 +924,34 @@
   "noticia": false
  },
  {
+  "id": "3dce05ee3461",
+  "titulo": "El Gobierno promete auditorías y trabajo con la Justicia tras la explosión en Remedios de Escalada",
+  "resumen": "El Gobierno promete auditorías y trabajo con la Justicia tras la explosión en Remedios de Escalada Agencia Noticias Argentinas",
+  "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNa0p6cFFMRmdNb3piSEtTcGpTdFV5ajlXOUM5SjNVdDZhd0RObHBSWGdMZG5VN0ZiYjZROUJmRnVOTlhvY0NFd1lEeEdNeE5zUElwLXJ4WnhBRk5HRU8xcFpfbzV2Q1cyN2EtWGtkSnZ2Vk1IRlNHNnU4bWx0ZVp3bnM2UDl1QjV1aUJrOWtqdUJfVXZBeFFiek1kSGFsaWJMTUh1emZjaUJfVW5Fd2l5Nk8tSzlTbVpwZzB4TEJ4SnlnNi1KYkxhajJqV0NJRDFLemtiVDgzNTcwT1N2cGd3TjMzemFXNmwwYTVLODZrSdIB_gFBVV95cUxOTkNJUUs3RUhsNzVkQmpmM3gwek9IRktzMzNBNVktNWVzUFI1Y0JwRVRvTWdBdmNJSkp0Q0c2RWJtWXNFREZIcnZSNDRMcWhldU9kUUxvUWVfLWhIMlBBMk4tczBDSzlhRkFkSnFWV2lmdHZyUWtQcS1ycmE2ZUVoQ0dlZlNSWnV6eDlpM2xRZElyS1lUZjJOZE00ZTNHMEpRdUozOURvZHhFN0dmVjh4NGV3MFVSOVlmSXVHWTFYYWU1TU15ZEJ2RDlDTTE1NkxQckQ1S1Y1bTNGdVdxZFZ5M3ZnQ2tsc1hvVlBZQ0M3NjFYNEFCcnFiVlQzYXo4Zw?oc=5",
+  "fuente": "Agencia Noticias Argentinas",
+  "deporte": "Escalada",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-13T20:21+00:00",
+  "encontrado": "2026-11-14T16:02-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
+  "id": "746fce88fe6d",
+  "titulo": "Terror en España: un arquero argentino sufrió un asalto en su casa y estuvo a minutos de cruzarse con los delincuentes",
+  "resumen": "Terror en España: un arquero argentino sufrió un asalto en su casa y estuvo a minutos de cruzarse con los delincuentes FM Del Sol Pehuajo",
+  "link": "https://news.google.com/rss/articles/CBMiggJBVV95cUxNd21zRDRaRnRDZFNrYUJWSWRiaEliQXRDWXZZdUhJOTZiYWlqLVhGMDN0Q3RCUmMtOUhSNWxaWmZjUDVDMlVqRDJZdldUYlhTUzBQa3hZeVc1R2s4d0IzSkdyRUxUNFhEOTBrVHRnVHg0a1NUYzFNM3pVclF1TGVVckVLbHY3RTEtamJoV0xwS1pzdXpYT2lncVJaS0prMzNfTGdWNm83aC1tMFRZZUp6VnZjaDhMaUgxeXFiNGRBRGpGQ0hYek5GbHlJQmRZM2R5d1d6MU9MdHpTYU9TQnV5elVMb0cwQ3JKdExUSjN1RXFKTWhRUVVnSEtUT0lzREtET2c?oc=5",
+  "fuente": "FM Del Sol Pehuajo",
+  "deporte": "Handball",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-13T20:00+00:00",
+  "encontrado": "2026-11-14T16:03-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
   "id": "ae30a1669b5f",
   "titulo": "¡No duró nada! Argentino viaja a México por un título del CMB y termina noqueado en 19 segundos",
   "resumen": "¡No duró nada! Argentino viaja a México por un título del CMB y termina noqueado en 19 segundos Juanfutbol",
@@ -878,6 +1018,20 @@
   "en_buenos_aires": false,
   "publicado": "2026-11-13T16:09+00:00",
   "encontrado": "2026-11-14T10:12-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
+  "id": "b66c28d16d99",
+  "titulo": "Amenaza y denuncia: tensión entre Icardi y Migueles",
+  "resumen": "Amenaza y denuncia: tensión entre Icardi y Migueles Canal 7 Argentina",
+  "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOV2dwNnlJYnVsdW9FVngxWkRHSDI1akRiYzBUMmJNZG94dUdLcWR6Z1RYODB6Ym4za2Q4blZha05mVFRrc01wdEphMmpxZGVqemlwTld5bmJKc0N5SnB5VTZCN1ZhaF9ZQVRELVlVcW82Q1d1UWY3ak00VGEzcWVFVTRaYUdnMFVoaWhWdw?oc=5",
+  "fuente": "Canal 7 Argentina",
+  "deporte": "Boxeo",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-13T16:07+00:00",
+  "encontrado": "2026-11-14T16:02-03:00",
   "bot": "resultados",
   "noticia": false
  },
@@ -980,6 +1134,20 @@
   "noticia": false
  },
  {
+  "id": "bc7aa4ddece3",
+  "titulo": "Supremacía X llega a Rafaela con figuras de la Selección Argentina y dos títulos en juego",
+  "resumen": "Supremacía X llega a Rafaela con figuras de la Selección Argentina y dos títulos en juego Radio Rafaela",
+  "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPTTNQRUVweV9NMlpNMHBOWl9QcV9COFVNTDBVQ2pRdU1oZFJWM01HTHdtc240WmVubjFNb1doUmpsMFN4V1V5S2JreXBNRGU1M0hXcUtmZDRicHdWOTlGYUtGcXZDSTRtWmx3RXdvREd3eEo2WThfd3otdXBEajlKR0lUeXF4a0RWRmxCOER4MS1fV2kyMUxMWHJHQWtvbC0zVDQ4N1pzeDZwYkU4Z0F3UVhWMDRhRk9xXzdadVM3T25ORk9C?oc=5",
+  "fuente": "Radio Rafaela",
+  "deporte": "Boxeo",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-13T12:45+00:00",
+  "encontrado": "2026-11-14T16:02-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
   "id": "0e64efa01ed0",
   "titulo": "Francia. Movimiento de Octubre: La lucha continúa",
   "resumen": "Francia. Movimiento de Octubre: La lucha continúa Indymedia Argentina",
@@ -1032,6 +1200,34 @@
   "en_buenos_aires": false,
   "publicado": "2026-11-13T09:02+00:00",
   "encontrado": "2026-11-14T01:11-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
+  "id": "eb7eb8eb1654",
+  "titulo": "Los mejores memes de la consagración de Estudiantes por la Supercopa Argentina: Lucas Alario, Marcos Rojo y Muslera, los elegidos",
+  "resumen": "Los mejores memes de la consagración de Estudiantes por la Supercopa Argentina: Lucas Alario, Marcos Rojo y Muslera, los elegidos Infobae",
+  "link": "https://news.google.com/rss/articles/CBMigAJBVV95cUxNbVRHeHhvLWRJcGhjd0wwNnJKdVBqUjdLUFpabDdGRDhRWWJSdHI4N1JFVDRZVUxPeVVaWDhDOUlRZkhZVDQ1amdubWRvU0w3UU9JaDY4RmsyZXFfd2tnaklfXzBkOGN2RHp1R19LSkZFb1FNdjZuVHlxRHRSallUSmwwenZlVUJsUEtNQVdUVWdUaEtYQUJvR1psTjlsYkZ6dU9STU5fSXdvMlZnUDNLN1pCa0RoU0llZlJ0cm5DQS04U19JUklma09CY3Z2OXN2QmZIeDZOT0E5MmJnNFhjTnZKZFNwTkx0ZXhSNUc1aGNLOU1rbFBiWWJRUDMxNWN00gGbAkFVX3lxTE9XNFlTUDR5SUdoY0N0bTlUMkp6WkVaSm1fdjRqOUJkZmFSeTYyMTNlYmpJYmtBdU5qbVFIaUJYNk0xcUowa2IyUmpVRFV6R1RLcE15V0l4X1V5NEpWUmM0RnNNRzBjbGNCM2ZlOGlINURYeXRQbTV5WTZIcWhuTGhPdDlTdS1kR0F0LTYzcGp5WHI4NjFBNjZoLUw4WUhDWHd2SkFhU0F3c1NWekN3enBLLVZLYXZValJHaG1aUEtfRWEwRkpoek05eGxXM1lXMG5jLWtzRjUtS2ptdXJWYzZvLW51N0FENFpscXloRWNZQWV4X0RQYTlZRllSUERyR3VxNWFHTC1KMUlNT3g1Y0I3LVM2SVZkZ2VUdDg?oc=5",
+  "fuente": "Infobae",
+  "deporte": "Formula 1",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-13T03:02+00:00",
+  "encontrado": "2026-11-14T16:03-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
+  "id": "ae8f6f85cffa",
+  "titulo": "¡Fulminado! Jonathan Fierro noqueó al argentino Sergio Sosa en el primer round",
+  "resumen": "¡Fulminado! Jonathan Fierro noqueó al argentino Sergio Sosa en el primer round ESPN Deportes",
+  "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQb0RIMHJISTlNYjRCN1pQMk5BVndYeW1GRUFpSGxyUjNQbDNoOTNnV0VyUFpRQ3E2MjdZMUNjOXdDaGRMZTB3XzdiR1VXb1dZeEJtQ0lpQVBpbW9NWlIyN1ptR0E2TnRtSE5XQlZDTnFxMkRXQVBPMmhRbE9SaWJPa2thNjVjMXk3VnZsRWstOUZOa0ZtTUdhcm5UYWxPRUJKZm5QS3BIWHMwZXhxZzZRNlZzdE9xdzQ2dVdjdWdtSnpOSFZobWFiU0p4VQ?oc=5",
+  "fuente": "ESPN Deportes",
+  "deporte": "Boxeo",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-13T01:47+00:00",
+  "encontrado": "2026-11-14T16:02-03:00",
   "bot": "resultados",
   "noticia": false
  },
