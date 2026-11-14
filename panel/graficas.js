@@ -125,14 +125,17 @@
     return `<div class="g-foto ${clase}">${img}</div>`;
   }
   const credito = (d, clase = "") => d.credito ? `<div class="g-credito ${clase}">Foto: ${esc(d.credito)}</div>` : "";
-  const marcaAD = (clase = "") => `<div class="g-ad ${clase}"><span>ARGENTINA</span> <b>DORADA</b></div>`;
+  // logo de Argentina Dorada (círculo): panel/img/logo-ad.png
+  const LOGO_AD = "img/logo-ad.png";
+  const marcaAD = (clase = "") => `<img class="g-ad-logo ${clase}" src="${LOGO_AD}" alt="Argentina Dorada">`;
+  const logoAD = () => `<img class="g-logo-ad" src="${LOGO_AD}" alt="Argentina Dorada">`;
   const num = (i) => String(i + 1).padStart(2, "0");
   const MEDALLAS = { oro: ["¡Medalla dorada!", "oro"], plata: ["¡Medalla plateada!", "plata"], bronce: ["¡Medalla de bronce!", "bronce"] };
 
   const DIBUJO = {
     portada: (p) => { const d = p.datos; return `${foto(p, "g-full")}<div class="g-degrade"></div>
       <div class="g-pt-arriba">${d.deporte ? `<span class="g-pill oro">${esc(d.deporte)}</span>` : ""}<div class="g-pt-torneo" data-lineas="2">${esc(d.torneo)}</div></div>
-      <div class="g-logo-caja"><span>ARGENTINA</span><b>DORADA</b></div>
+      ${logoAD()}
       <div class="g-pt-titulo" data-fit><div class="g-linea"></div><h1 data-fs="titulo" data-ancho>${br(d.titulo)}</h1></div>
       ${credito(d, "caja")}<div class="g-desliza">Deslizá <span>⟶</span></div>`; },
     placa: (p, i) => { const d = p.datos; return `<div class="g-placa ${d.fondo === "claro" ? "claro" : ""}">
@@ -141,7 +144,7 @@
       ${marcaAD("g-pl-ad")}<div class="g-pl-num ${d.acento || "celeste"}">${num(i)}</div></div>`; },
     medalla: (p) => { const d = p.datos; const [txt, cls] = MEDALLAS[d.medalla] || MEDALLAS.oro; return `${foto(p, "g-full")}<div class="g-degrade suave"></div>
       <div class="g-md-prueba">${esc(d.prueba)}</div><div class="g-md-nombre">${esc(d.nombre)}</div>
-      <div class="g-logo-caja blanca"><i>AD</i><span>ARGENTINA</span><b>DORADA</b></div>
+      ${logoAD()}
       <h1 class="g-md-titulo ${cls}" data-ancho>${esc(txt)}</h1><div class="g-md-evento">${esc(d.evento)}</div>
       <div class="g-guarda"></div><div class="g-desliza naranja">Deslizá <span>⟶</span></div>${credito(d, "g-md-cred")}`; },
     "s-portada": (p) => { const d = p.datos; return `${foto(p, "g-full")}<div class="g-degrade story"></div>${marcaAD("g-s-head")}
@@ -173,7 +176,7 @@
     convocados: (p) => { const d = p.datos; const gente = lineas(d.lista);
       return `${foto(p, "g-cv-foto")}<div class="g-cv-degrade"></div>
       <div class="g-pt-arriba">${d.deporte ? `<span class="g-pill oro">${esc(d.deporte)}</span>` : ""}<div class="g-pt-torneo" data-lineas="2">${esc(d.torneo)}</div></div>
-      <div class="g-logo-caja"><span>ARGENTINA</span><b>DORADA</b></div>
+      ${logoAD()}
       <div class="g-cv-cuerpo" data-fit><h1 data-fs="titulo" data-ancho>${esc(d.titulo)}</h1><div class="g-linea"></div>
         <ol class="g-cv-lista ${gente.length > 9 ? "dos" : ""}" data-fs="texto">${gente.map((g) => {
           // "10 Nombre - Club", "#10 Nombre", "10. Nombre" → número de camiseta aparte
@@ -203,7 +206,7 @@
         ${d.nota ? `<p class="g-fx-nota" data-fs="texto">${esc(d.nota)}</p>` : ""}</div>`; },
     clasificados: (p) => { const d = p.datos; const cl = lineas(d.lista).map((l) => l.split("|").map((x) => x.trim()));
       const total = String(d.total || "").trim() || String(cl.length);
-      return `${foto(p, "g-full")}<div class="g-cl-velo"></div>${logoEvento()}<div class="g-logo-caja"><span>ARGENTINA</span><b>DORADA</b></div>
+      return `${foto(p, "g-full")}<div class="g-cl-velo"></div>${logoEvento()}${logoAD()}
       <div class="g-cv-cuerpo g-cl-cuerpo" data-fit><div class="g-cl-top"><div class="g-cl-numero"><b>${esc(total)}</b><span>${esc(d.etiqueta || "")}</span></div>
         <h1 data-fs="titulo" data-ancho>${esc(d.titulo)}</h1></div><div class="g-linea"></div>
         ${d.nuevo ? `<p class="g-cl-nuevo" data-fs="texto"><span>Se sumó</span> ${esc(d.nuevo)}</p>` : ""}
@@ -211,7 +214,7 @@
       ${credito(d, "g-cv-cred")}`; },
   };
   DIBUJO.clasificado = (p) => { const d = p.datos;
-    return `${foto(p, "g-c1-foto")}<div class="g-c1-degrade"></div>${logoEvento()}<div class="g-logo-caja"><span>ARGENTINA</span><b>DORADA</b></div>
+    return `${foto(p, "g-c1-foto")}<div class="g-c1-degrade"></div>${logoEvento()}${logoAD()}
       <div class="g-c1-abajo" data-fit>${d.deporte ? `<span class="g-pill oro">${esc(d.deporte)}</span>` : ""}
         <h1 data-fs="titulo" data-ancho>${esc(d.titulo)}</h1><div class="g-linea"></div>
         <h2 class="g-c1-nombre" data-ancho>${esc(d.nombre)}</h2>

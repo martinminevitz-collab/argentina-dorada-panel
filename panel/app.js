@@ -1027,7 +1027,14 @@ function selector(opciones, actual, etiqueta = (x) => x) {
   caja.append(izq, d, der);
   requestAnimationFrame(() => {
     if (estado.selScroll != null) { d.scrollLeft = estado.selScroll; estado.selScroll = null; }
-    else d.querySelector(".activo")?.scrollIntoView({ inline: "nearest", block: "nearest" });
+    else {
+      // solo se corre la fila de costado: scrollIntoView movía toda la página cada vez que se redibujaba al abrir
+      const act = d.querySelector(".activo");
+      if (act) {
+        const r = act.getBoundingClientRect(), rd = d.getBoundingClientRect();
+        if (r.left < rd.left || r.right > rd.right) d.scrollLeft += r.left - rd.left - (rd.width - r.width) / 2;
+      }
+    }
     actualizar();
   });
   return caja;
