@@ -57,6 +57,7 @@ async function cargar() {
     estado.archivo = Object.values(archivo.eventos || {});
     estado.modeloAcred = modeloAcred;
     estado.instagram = Object.entries(insta.cuentas || {}).sort((a, b) => b[0].length - a[0].length);
+    estado.homonimos = Object.entries(insta.homonimos || {}).sort((a, b) => b[0].length - a[0].length);
     estado.agregadosBot = agregados.pendientes || [];
     estado.ba = ba;
     estado.manualesBot = manuales.pendientes || [];
@@ -730,7 +731,15 @@ function emojiDe(linea) {
 }
 // nombres que ya tuvieron su Instagram en el Doc (data/instagram.json): se etiquetan solos
 function etiquetar(txt) {
-  for (const [nombre, usuario] of estado.instagram || []) {
+  // dos con el mismo nombre (ej. dos atletas): gana el que tiene el deporte/disciplina que aparece en el evento; si no se puede saber, no se etiqueta
+  const ctx = sinTildes(estado.ctxIG || "") + " " + sinTildes(txt);
+  const palabras = (s) => sinTildes(s || "").split(/[^a-z0-9]+/).filter((w) => w.length > 3);
+  const elegidos = (estado.homonimos || []).map(([nombre, lista]) => {
+    const puntos = lista.map((x) => palabras(x.disciplina).filter((w) => ctx.includes(w)).length * 2 + palabras(x.deporte).filter((w) => ctx.includes(w)).length);
+    const mejor = Math.max(...puntos);
+    return mejor > 0 && puntos.filter((p) => p === mejor).length === 1 ? [nombre, lista[puntos.indexOf(mejor)].usuario] : null;
+  }).filter(Boolean);
+  for (const [nombre, usuario] of [...(estado.instagram || []), ...elegidos]) {
     if (txt.includes("@" + usuario)) continue;
     const i = txt.indexOf(nombre);
     if (i < 0) continue;
@@ -766,9 +775,12 @@ function textoIG(e, { cabecera, hashtags, incluirGris = true } = {}) {
   lineas.push(cabecera || `🇦🇷 ${e.deporte ? e.deporte.toUpperCase() + " | " : ""}${(e.evento || e.titulo).toUpperCase()}`);
   if (e.fechas) lineas.push(`🗓️ ${e.fechas}`);
   lineas.push("");
+  let sub = "";
   for (const b of e.bloques || []) {
     if (b.tipo === "link") continue;
     if (b.tipo === "espacio") { if (lineas.at(-1) !== "") lineas.push(""); continue; }
+    if (b.tipo === "sub") sub = (b.partes || []).map((p) => p.t).join("");
+    estado.ctxIG = [e.deporte, e.titulo, e.evento, sub].join(" "); // para elegir entre homónimos
     const t = lineaIG(b.partes, incluirGris);
     if (!t) continue;
     if (b.tipo === "sub") { if (lineas.at(-1) !== "") lineas.push(""); lineas.push(`▪️ ${t.toUpperCase()}`); }

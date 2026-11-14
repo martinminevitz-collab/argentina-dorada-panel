@@ -376,6 +376,7 @@ def directorio_instagram(eventos):
     cuentas = {k: v for k, v in cuentas.items() if not any(k != o and k.endswith(" " + o) for o in cuentas)}
     # la planilla "Etiquetas Instagram" (config/instagram.json) manda: suma, corrige y con "-" saca
     cfg = guardar.leer(guardar.RAIZ / "config" / "instagram.json", {})
+    de_planilla = {}  # nombre -> [{usuario, deporte, disciplina}] (puede haber homónimos)
     for url in cfg.get("csv", []):
         try:
             filas = list(csv.reader(io.StringIO(bajar(url) or "")))
@@ -388,10 +389,9 @@ def directorio_instagram(eventos):
         if "NOMBRE" not in cab or "INSTAGRAM" not in cab:
             print("⚠️  Planilla de etiquetas sin columnas NOMBRE / INSTAGRAM")
             continue
-        iN, iI = cab.index("NOMBRE"), cab.index("INSTAGRAM")
+        col = lambda f, k: (f[cab.index(k)] if k in cab and cab.index(k) < len(f) else "").strip()
         for f in filas[1:]:
-            nombre = (f[iN] if iN < len(f) else "").strip()
-            ig = (f[iI] if iI < len(f) else "").strip()
+            nombre, ig = col(f, "NOMBRE"), col(f, "INSTAGRAM")
             if not nombre:
                 continue
             if ig == "-":
@@ -399,9 +399,19 @@ def directorio_instagram(eventos):
                 continue
             ig = re.sub(r"^https?://(www\.)?instagram\.com/", "", ig).strip("/@ ").split("/")[0].split("?")[0]
             if re.fullmatch(r"[A-Za-z0-9._]{1,30}", ig):
-                cuentas[nombre] = ig
+                lista = de_planilla.setdefault(nombre, [])
+                if ig not in [x["usuario"] for x in lista]:
+                    lista.append({"usuario": ig, "deporte": col(f, "DEPORTE"), "disciplina": col(f, "DISCIPLINA")})
+    # mismo nombre con distintas cuentas → "homonimos": el panel elige según el deporte/disciplina del evento
+    homonimos = {}
+    for nombre, lista in de_planilla.items():
+        if len(lista) == 1:
+            cuentas[nombre] = lista[0]["usuario"]
+        else:
+            cuentas.pop(nombre, None)
+            homonimos[nombre] = lista
     guardar.escribir(ruta, {"_nota": "Nombre del deportista -> usuario de Instagram (sin @). Se arma solo con lo que hay en el Doc. Se puede agregar o corregir a mano.",
-                            "cuentas": dict(sorted(cuentas.items()))})
+                            "cuentas": dict(sorted(cuentas.items())), "homonimos": dict(sorted(homonimos.items()))})
 
 
 def main():
