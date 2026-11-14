@@ -1,4 +1,17 @@
 {
  "_nota": "Eventos cargados a mano en el panel que todavía no están en el Doc. El agente los pasa al Doc y al final del bloque escribe la línea 'Ref panel: <ref>'.",
- "pendientes": []
+ "pendientes": [
+  {
+   "ref": "577a6f84",
+   "seccion": "agenda",
+   "estado": "agenda",
+   "deporte": "ENDURANCE - ECUESTRE",
+   "titulo": "MUNDIAL FEI ENDURANCE",
+   "fechas": "19/12",
+   "lugar": "BOUTHEEB, EMIRATOS ARABES UNIDOS",
+   "detalle": "Argentina estará representada por:\n- Beatriz Muriel (caballo: Ras Platón)\n- Carolina Muriel (Box Ascot)\n- Martina Spelanzon (Ghepard)\n- Josefina Rolt (HCE Magsodia)\n- Gonzalo Heredia (AG Lubumba)\n- Florencia Serra (HT Zaria)\n- Josefina Ballester (Box Presumida)",
+   "link": "https://www.fei.org/events/2026_CH-M_0004/Butheeb#events",
+   "creado_en": "2026-11-14T03:16:21.908567+00:00"
+  }
+ ]
 }
