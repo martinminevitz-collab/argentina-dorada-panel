@@ -3,7 +3,8 @@
 // - Radar del bot: noticias sueltas que junta el bot (data/hallazgos/...).
 // "Publicado" se guarda en este dispositivo. Cuando se sume la base compartida, se sincroniza con todos.
 
-const DATA = "data/";
+// publicado: los datos están en data/ al lado del panel. Abierto desde la compu (VS Code / Live Server, .../panel/index.html): están en ../data/
+const DATA = /\/panel\/(index\.html)?$/.test(location.pathname) ? "../data/" : "data/";
 const $ = (s) => document.querySelector(s);
 const ETIQUETAS = {
   publicable: "Publicable", en_curso: "En curso", mas_info: "Falta info", agenda: "Agenda",
