@@ -471,7 +471,7 @@
    "deporte": "RACQUETBALL",
    "evento": "GOLDEN STATE OPEN (LPRT / IRT) EN ESTADOS UNIDOS",
    "fechas": null,
-   "etiqueta": "mas_info",
+   "etiqueta": "publicable",
    "seccion": "resultados",
    "ya_publicado": false,
    "bloques": [
@@ -565,6 +565,18 @@
      ]
     },
     {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Natalia Méndez y Alan Natera (MEX) lograron la medalla de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      }
+     ]
+    },
+    {
      "tipo": "espacio"
     },
     {
@@ -580,21 +592,20 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Diego García llegó por primera vez a una semifinal del IRT: le ganó a Diego Gastelum, Jake Bredenbeck y Juan José Salvatierra, y en semis perdió vs Conrrado Moscoso (BOL)"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
+       "t": "Diego García llegó por primera vez a una semifinal del IRT: le ganó a Diego Gastelum, Jake Bredenbeck y Juan José Salvatierra, y en semis perdió vs Conrrado Moscoso (BOL), logrando la medalla de "
+      },
       {
-       "t": "Falta: ciudad y resultados de los otros argentinos"
+       "t": "BRONCE",
+       "b": true
       }
      ]
     }
    ],
+   "refs_panel": [
+    "ecccf758"
+   ],
    "id": "1ffc05f899c1",
-   "version": "de11d7513c",
+   "version": "03c527b24b",
    "publicado_en_doc": false,
    "terminado_desde": "2026-11-12",
    "visto": "2026-11-14"
@@ -3616,16 +3627,37 @@
      ]
     },
     {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.0223.com.ar/nota/2026-11-14-10-46-0-los-pumas-sobrevivieron-a-un-final-increible-en-italia-y-se-llevaron-un-triunfazo",
+       "href": "https://www.0223.com.ar/nota/2026-11-14-10-46-0-los-pumas-sobrevivieron-a-un-final-increible-en-italia-y-se-llevaron-un-triunfazo"
+      },
+      {
+       "t": " (Resultado)"
+      }
+     ]
+    },
+    {
      "tipo": "texto",
      "partes": [
       {
-       "t": "21-11 17:10 Hs Vs Francia"
+       "t": "14-11 Vs Italia: ganó 19-14 en Génova (tries de Bautista Bernasconi, Rodrigo Isgró y Mateo Carreras; 2 conversiones de Tomás Albornoz). Con 11 pts quedó 3° de la conferencia Sur"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "vs Francia el sábado 21/11 a las 17:10hs",
+       "b": true
       }
      ]
     }
    ],
    "id": "de102f71eab3",
-   "version": "b0c2e42c65",
+   "version": "ca2f2203e4",
    "publicado_en_doc": false,
    "visto": "2026-11-14"
   },
