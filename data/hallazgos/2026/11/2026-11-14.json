@@ -1,5 +1,33 @@
 [
  {
+  "id": "29d491bdd3da",
+  "titulo": "El Manchester United no es un lugar acogedor para los argentinos.",
+  "resumen": "El Manchester United no es un lugar acogedor para los argentinos. Vietnam.vn",
+  "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9rYVFpeHRDZFFobjNObjF1Q0QtNjdNYUNWcm1EaUxDVWhfNzI5WkVBTXJFaEJLS28tZFlIWjFfYmNNRUNfS29Icm5LSVhCNjV1SWlSOXRTQWh1cXUzMUpMRV8yb0JqNjVxX283LU9jMDhiOUpvWDdr?oc=5",
+  "fuente": "Vietnam.vn",
+  "deporte": "Futbol",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-14T04:51+00:00",
+  "encontrado": "2026-11-14T04:24-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
+  "id": "98c0da1a11a3",
+  "titulo": "El argentino Thiago Tirante derrotó a Alejandro Tabilo en Estocolmo y jugará por primera vez una final ATP",
+  "resumen": "El argentino Thiago Tirante derrotó a Alejandro Tabilo en Estocolmo y jugará por primera vez una final ATP Noticias de Bariloche",
+  "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQQndPVU0xMzhDSWpxeTZZQ1ZFSVhLc1ZidE5GeS1nZ1dHYjNtRHVMbktTQ0ZsM2pXYmxiLTBVRXFBREotZ2VXOGVmMWI1cmVLcjBtRHBYZGF2a2E0azctZGVyV1dlbjlSeEJySHVPN3F2SGdjVWYtZFJrWlBRdzJZaFlPN0pWeDF4REdacnNHNGh1UXEzTVJlU3R2X01iRm5sd1J0ZnFKU0hFNmVCWDg0MXg0V3B3NThzXzZEV0h0Y2thMm1rSUltdl9jUnh3Ui1BVzgyWWtETzh4amtsWldUVEZqS2bSAeQBQVVfeXFMUEJ3T1VNMTM4Q0lqcXk2WUNWRUlYS3NWYnRORnktZ2dXR2IzbUR1TG5LU0NGbDNqV2JsYi0wVUVxQURKLWdlVzhlZjFiNXJlS3IwbURwWGRhdmthNGs3LWRlcldXZW45UnhCckh1TzdxdkhnY1VmLWRSa1pQUXcyWWhZTzdKVngxeERHWnJzRzRodVFxM01SZVN0dl9NYkZubHdSdGZxSlNIRTZlQlg4NDF4NFdwdzU4c182RFdIdGNrYTJta0lJbXZfY1J4d1ItQVc4MllrRE84eGprbFpXVFRGaktm?oc=5",
+  "fuente": "Noticias de Bariloche",
+  "deporte": "Tenis",
+  "tipo": "resultado",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-14T04:40+00:00",
+  "encontrado": "2026-11-14T04:26-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
   "id": "7d7c486364cb",
   "titulo": "Los Pumas tiene todo listo para buscar la recuperación ante Italia",
   "resumen": "Los Pumas tiene todo listo para buscar la recuperación ante Italia Tucumán Noticias",
@@ -332,6 +360,20 @@
   "en_buenos_aires": false,
   "publicado": "2026-11-13T14:20+00:00",
   "encontrado": "2026-11-14T01:09-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
+  "id": "3498d5448b43",
+  "titulo": "Desvalijaron a Del Potro y al marido de Taylor Swift y fueron detenidos en Argentina",
+  "resumen": "Desvalijaron a Del Potro y al marido de Taylor Swift y fueron detenidos en Argentina La Síntesis",
+  "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQSlpCNjRnVHhnb0NqRnFTRy1sRVdLUkZxVnprRFFxaGNrYTlkWVdwd19EQ0YzbmRTWjRHbWo5REk0THA2ZjVmWkF2a01PdS1MYVRiVTZiUDY3bWJLTm9kLV9TeWRnTFU0bGwwaDNneG5NLUYyNTEtRDB4ZC15NXhRU3RDWXVadE83bFZiZk1VeWtMaVNXWXMyd2ZTeDR2UmI5T2VKc0hUQ1FlWDktbDR0TVc5M2daLXVOY0ltRHBXMHBGMDQ?oc=5",
+  "fuente": "La Síntesis",
+  "deporte": "Hockey sobre hielo",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-13T14:11+00:00",
+  "encontrado": "2026-11-14T04:25-03:00",
   "bot": "resultados",
   "noticia": false
  },
