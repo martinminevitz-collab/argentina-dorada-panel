@@ -5,7 +5,9 @@ No usa IA (cero tokens). Corre cada hora en GitHub Actions.
 
 Para probarlo:  python -m bots.doc_resultados.main
 """
+import csv
 import hashlib
+import io
 import json
 import re
 from urllib.parse import parse_qs, urlparse
@@ -372,6 +374,32 @@ def directorio_instagram(eventos):
                     cuentas[m.group(1).strip()] = usuario
     # "Compiten Bianca Chimento" sobra si ya está "Bianca Chimento"
     cuentas = {k: v for k, v in cuentas.items() if not any(k != o and k.endswith(" " + o) for o in cuentas)}
+    # la planilla "Etiquetas Instagram" (config/instagram.json) manda: suma, corrige y con "-" saca
+    cfg = guardar.leer(guardar.RAIZ / "config" / "instagram.json", {})
+    for url in cfg.get("csv", []):
+        try:
+            filas = list(csv.reader(io.StringIO(bajar(url) or "")))
+        except Exception as err:
+            print(f"⚠️  Planilla de etiquetas: {err}")
+            continue
+        if not filas:
+            continue
+        cab = [c.strip().upper() for c in filas[0]]
+        if "NOMBRE" not in cab or "INSTAGRAM" not in cab:
+            print("⚠️  Planilla de etiquetas sin columnas NOMBRE / INSTAGRAM")
+            continue
+        iN, iI = cab.index("NOMBRE"), cab.index("INSTAGRAM")
+        for f in filas[1:]:
+            nombre = (f[iN] if iN < len(f) else "").strip()
+            ig = (f[iI] if iI < len(f) else "").strip()
+            if not nombre:
+                continue
+            if ig == "-":
+                cuentas.pop(nombre, None)
+                continue
+            ig = re.sub(r"^https?://(www\.)?instagram\.com/", "", ig).strip("/@ ").split("/")[0].split("?")[0]
+            if re.fullmatch(r"[A-Za-z0-9._]{1,30}", ig):
+                cuentas[nombre] = ig
     guardar.escribir(ruta, {"_nota": "Nombre del deportista -> usuario de Instagram (sin @). Se arma solo con lo que hay en el Doc. Se puede agregar o corregir a mano.",
                             "cuentas": dict(sorted(cuentas.items()))})
 
