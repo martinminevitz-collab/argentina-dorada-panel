@@ -263,8 +263,10 @@
     const otros = Object.entries(TIPOS).filter(([, t]) => t.formato === formato());
     raiz.innerHTML = `
       ${G.origen ? `<p class="g-origen">Con los datos de <b>${esc(G.origen.evento || G.origen.deporte)}</b>. Tocá otra plantilla para pasarlos (feed o historia). <button class="g-soltar">Empezar de cero</button></p>` : ""}
+      <div class="g-plantillas-caja"><button class="g-flecha izq" aria-label="Ver plantillas anteriores">◀</button>
       <div class="g-plantillas" role="tablist">${Object.entries(PLANTILLAS).map(([id, t]) =>
         `<button data-p="${id}" class="${id === G.plantilla ? "activo" : ""}">${esc(t.nombre)}</button>`).join("")}</div>
+      <button class="g-flecha der" aria-label="Ver más plantillas">▶</button></div>
       <div class="g-tira">${G.paginas.map((p, i) => `<button class="g-mini ${i === G.sel ? "activo" : ""}" data-i="${i}">${escalada(p, i, 92)}<span>${num(i)}</span></button>`).join("")}
         <div class="g-agregar"><select aria-label="Agregar página">${otros.map(([k, t]) => `<option value="${k}">${esc(t.nombre)}</option>`).join("")}</select><button class="g-mas">+ Página</button></div></div>
       <div class="g-trabajo"><div class="g-vista"></div><div class="g-campos"></div></div>
@@ -278,6 +280,17 @@
       G.paginas.forEach((p, i) => { if (fotos[i]?.src) p.foto = fotos[i]; });
       guardar(); armar();
     }));
+    // flechas para correr la fila de plantillas (en la compu no se puede arrastrar)
+    const fila = raiz.querySelector(".g-plantillas"), izq = raiz.querySelector(".g-flecha.izq"), der = raiz.querySelector(".g-flecha.der");
+    const flechas = () => { izq.disabled = fila.scrollLeft <= 2; der.disabled = fila.scrollLeft + fila.clientWidth >= fila.scrollWidth - 2;
+      const ocultar = fila.scrollWidth <= fila.clientWidth + 2; izq.hidden = der.hidden = ocultar; };
+    izq.onclick = () => fila.scrollBy({ left: -fila.clientWidth * 0.7 });
+    der.onclick = () => fila.scrollBy({ left: fila.clientWidth * 0.7 });
+    fila.addEventListener("scroll", flechas);
+    fila.addEventListener("wheel", (ev) => { if (Math.abs(ev.deltaY) > Math.abs(ev.deltaX)) { fila.scrollLeft += ev.deltaY; ev.preventDefault(); } }, { passive: false });
+    const act = fila.querySelector(".activo");
+    if (act) { fila.style.scrollBehavior = "auto"; fila.scrollLeft = act.offsetLeft - fila.offsetLeft - (fila.clientWidth - act.offsetWidth) / 2; fila.style.scrollBehavior = ""; }
+    setTimeout(flechas, 0);
     raiz.querySelector(".g-soltar")?.addEventListener("click", () => { G = nuevo(G.plantilla); guardar(); armar(); });
     raiz.querySelectorAll(".g-mini").forEach((b) => (b.onclick = () => { G.sel = Number(b.dataset.i); armar(); }));
     raiz.querySelector(".g-mas").onclick = () => {

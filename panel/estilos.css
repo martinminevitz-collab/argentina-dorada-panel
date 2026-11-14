@@ -298,7 +298,7 @@ input[type=search], select { width: 100%; background: var(--tarjeta); color: var
 .crear .principal { background: var(--oro); border-color: var(--oro); color: #fff; }
 .chip.manual { background: var(--oro-fondo); color: var(--oro); }
 .pie .pasar-publicable { background: var(--celeste-fondo); color: var(--celeste); border-color: var(--celeste); font-weight: 600; }
-.acred { margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--borde); display: grid; gap: 8px; }
+.acred { margin: 2px 14px 0; padding: 12px 0 14px; border-top: 1px dashed var(--borde); display: grid; gap: 8px; }
 .acred-tit { display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; font-size: 14px; }
 .acred-tit span { color: var(--texto-2); font-size: 13px; overflow-wrap: anywhere; }
 .acred-editar { margin-left: auto; font-size: 12.5px; padding: 3px 10px; }
@@ -329,7 +329,10 @@ input[type=search], select { width: 100%; background: var(--tarjeta); color: var
 .g-editor { display: grid; gap: 12px; }
 .g-origen { margin: 0; font-size: 13.5px; color: var(--texto-2); display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
 .g-origen button { background: none; border: 1px solid var(--borde); border-radius: 8px; padding: 4px 10px; cursor: pointer; font-size: 12.5px; }
-.g-plantillas { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; }
+.g-plantillas-caja { display: flex; align-items: center; gap: 6px; min-width: 0; }
+.g-plantillas { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; scroll-behavior: smooth; flex: 1 1 auto; min-width: 0; }
+.g-flecha { flex: 0 0 auto; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--borde); background: var(--tarjeta); color: var(--texto); font-size: 16px; cursor: pointer; display: grid; place-items: center; }
+.g-flecha[disabled] { opacity: .3; cursor: default; }
 .g-plantillas button { flex: 0 0 auto; background: var(--tarjeta); border: 1px solid var(--borde); border-radius: 10px; padding: 7px 12px; cursor: pointer; font-weight: 600; }
 .g-plantillas button.activo { background: var(--texto); border-color: var(--texto); color: var(--fondo); }
 .g-tira { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 4px; align-items: flex-end; }
