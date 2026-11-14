@@ -1474,10 +1474,151 @@
        "b": true
       }
      ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.lacapitalmdp.com/passeri-e-indurain-siguen-y-los-hermanos-munoz-larreta-son-los-primeros-eliminados/",
+       "href": "https://www.lacapitalmdp.com/passeri-e-indurain-siguen-y-los-hermanos-munoz-larreta-son-los-primeros-eliminados/"
+      },
+      {
+       "t": " (Nota jueves 12/11)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "4ta ronda del Repechaje (jueves 12/11)",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Thiago Passeri fue 2° en la serie 3 con 10.04 (detrás de Uriel Uziel (ISR) 12.83, por delante de Darshan Antequera (CRC) 9.33) y pasó a la 5ta ronda del Repechaje"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Lucía Indurain fue 2° en la serie 9 con 4.80 (detrás de Charlotte Mulley (GBR) 9.50) y pasó a la 5ta ronda del Repechaje"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Joaquín Muñoz Larreta fue 3° en la serie 5 con 9.67 (detrás de George Pittar (AUS) 15.34 y Guilherme Ribeiro (POR) 11.50) y quedó eliminado (puesto 49°)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Victoria Muñoz Larreta fue 3° en la serie 7 con 1.43 (detrás de Ocea Green (CAN) 10.67 y Dominic Barona (ECU) 10.00) y quedó eliminada (puesto 49°)"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.lacapitalmdp.com/radziunas-paso-a-un-campeon-mundial-y-olimpico-y-passeri-hizo-un-dos-por-uno/",
+       "href": "https://www.lacapitalmdp.com/radziunas-paso-a-un-campeon-mundial-y-olimpico-y-passeri-hizo-un-dos-por-uno/"
+      },
+      {
+       "t": " (Nota viernes 13/11)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Viernes 13/11",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Franco Radziunas fue 2° en el heat 4 de la 4ta ronda con 11.70 (detrás de Yago Dora (BRA) 15.16, por delante de Italo Ferreira (BRA) 11.10 y Kanoa Igarashi (JPN) 9.80) y pasó a la 5ta ronda del cuadro principal"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Thiago Passeri ganó la serie 2 de la 5ta ronda del Repechaje con 10.24 (por delante de Kai Odriozola (GER) 9.84, Teo Gale Grani (PAN) 7.70 y José Joaquín López (VEN) 5.64)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Thiago Passeri fue 2° en la serie 6 de la 6ta ronda del Repechaje con 13.80 (detrás de Connor O'Leary (JPN) 14.67, por delante de Marco Mignot (FRA) 11.44 y Tom Butland (NZL) 8.07) y pasó a la 7ma ronda. Ya se aseguró por lo menos el puesto 22°"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Vera Jarisz fue 4° en el heat 5 de la 5ta ronda con 5.77 (ganó Johanne Defay (FRA) 13.46) y fue al Repechaje, donde fue 4° en la 6ta ronda con 8.36 (detrás de Luana Silva (BRA), Rachel Agüero (CRC) y Candelaria Resano (NCA)) y quedó eliminada (puesto 31°)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Lucía Indurain fue 4° en la serie 6 de la 5ta ronda del Repechaje con 6.24 (detrás de Candelaria Resano (NCA) 10.04, Isidora Bulto (CHI) 9.67 y Faviola Alcalá (PUR) 8.90) y quedó eliminada (puesto 43°)"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Radziunas en el heat 1 de la 5ta ronda el sábado 14/11 vs Lucca Mesinas (PER), Crosby Colapinto (USA) y Ethan Ewing (AUS)",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Passeri en el heat 1 de la 7ma ronda del Repechaje el sábado 14/11 vs Kai Odriozola (GER), Kanoa Igarashi (JPN) y Guilherme Ribeiro (POR)",
+       "b": true
+      }
+     ]
     }
    ],
    "id": "31518371aee9",
-   "version": "964ef79bbd",
+   "version": "278057986c",
    "publicado_en_doc": false,
    "visto": "2026-11-13"
   },
@@ -1509,6 +1650,197 @@
    ],
    "id": "321e6c965b68",
    "version": "10fd985e43",
+   "publicado_en_doc": false,
+   "visto": "2026-11-13"
+  },
+  "366cb072cee3": {
+   "titulo": "ORIENTACIÓN - CAMPEONATO SUDAMERICANO EN PUCÓN, CHILE (12 al 15 de noviembre)",
+   "deporte": "ORIENTACIÓN",
+   "evento": "CAMPEONATO SUDAMERICANO EN PUCÓN, CHILE",
+   "fechas": "12 al 15 de noviembre",
+   "etiqueta": "en_curso",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://municipalidadpucon.cl/?p=62094",
+       "href": "https://municipalidadpucon.cl/?p=62094"
+      },
+      {
+       "t": " (Nota)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Fuente: Instagram de Orientatlón Argentina"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Argentinos (18 en total), por categoría",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Beto Sanchez: Elite"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Daniela Cravino: W35"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Luis Scaglia: M40"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Celeste Marra: W40"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Juan Pablo y Laura: M55 / W55"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Claudio Valva: M60"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Maxi e Isa Dorf: M40 y Familia"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Fernando Giannini: M60"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Marcela Kurina Sanz: M60"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Bruno Pierini: M20-Elite"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Hernan Murmis: Elite"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Ezequiel Nadalez: Elite"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Ekaterina Sheynikova: N-Menor"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Irina Tretiakova: W40"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Mikhail Sheynokov: M45"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Gabriela Laura Ponce: W50"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Ramon Eduardo Beron: M55"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan resultados"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "2a72a972"
+   ],
+   "id": "366cb072cee3",
+   "version": "407befd80f",
    "publicado_en_doc": false,
    "visto": "2026-11-13"
   },
@@ -2030,6 +2362,26 @@
      ]
     },
     {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://pressmare.it/en/association/star-class/2026-11-13/altolaguirre-brothers-claim-second-win-94099",
+       "href": "https://pressmare.it/en/association/star-class/2026-11-13/altolaguirre-brothers-claim-second-win-94099"
+      },
+      {
+       "t": " (Nota)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Los Altolaguirre también ganaron la 4ta regata, su segunda victoria en el Mundial. Lideran Diego Negri / Sergio Lambertenghi (ITA) con 35 puntos"
+      }
+     ]
+    },
+    {
      "tipo": "texto",
      "partes": [
       {
@@ -2084,10 +2436,19 @@
        "t": "Erich Mones Ruiz / Julián Gazari Barroso 77°"
       }
      ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Última regata (5ta) el sábado 14/11",
+       "b": true
+      }
+     ]
     }
    ],
    "id": "90414b5fde29",
-   "version": "e28ec8eac1",
+   "version": "1820e09df2",
    "publicado_en_doc": false,
    "visto": "2026-11-13"
   },
@@ -2599,6 +2960,91 @@
    "version": "f5be742de1",
    "publicado_en_doc": false,
    "terminado_desde": "2026-11-10",
+   "visto": "2026-11-13"
+  },
+  "9b8960c27c6e": {
+   "titulo": "FÚTBOL - FECHA FIFA: AMISTOSOS DE LA SELECCIÓN MAYOR EN ARGENTINA (13 y 17 de noviembre)",
+   "deporte": "FÚTBOL",
+   "evento": "FECHA FIFA: AMISTOSOS DE LA SELECCIÓN MAYOR EN ARGENTINA",
+   "fechas": "13 y 17 de noviembre",
+   "etiqueta": "en_curso",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://442.perfil.com/noticias/seleccion-argentina/la-seleccion-argentina-sera-local-de-uruguay-y-costa-rica-en-la-fecha-fifa-de-noviembre.phtml",
+       "href": "https://442.perfil.com/noticias/seleccion-argentina/la-seleccion-argentina-sera-local-de-uruguay-y-costa-rica-en-la-fecha-fifa-de-noviembre.phtml"
+      },
+      {
+       "t": " (Info)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "vs Uruguay el viernes 13/11 a las 20hs en La Bombonera (CABA)",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.lanacion.com.ar/deportes/futbol/argentina-vs-uruguay-amistoso-internacional-2026-dia-hora-y-como-seguir-online-nid12112026/",
+       "href": "https://www.lanacion.com.ar/deportes/futbol/argentina-vs-uruguay-amistoso-internacional-2026-dia-hora-y-como-seguir-online-nid12112026/"
+      },
+      {
+       "t": " (Horario)"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.vavel.com/ar/futbol-argentino/2026/11/13/seleccion-argentina/1279202-argentina-1-uruguay-2-golpazo-en-la-bombonera-y-derrota-en-el-clasico.html",
+       "href": "https://www.vavel.com/ar/futbol-argentino/2026/11/13/seleccion-argentina/1279202-argentina-1-uruguay-2-golpazo-en-la-bombonera-y-derrota-en-el-clasico.html"
+      },
+      {
+       "t": " (Resultado)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Argentina perdió 2-1 vs Uruguay: en contra de Leonardo Balerdi y gol de Maximiliano Araújo para Uruguay en el arranque del ST; descontó Julián Álvarez"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "vs Costa Rica el martes 17/11 en el Kempes (Córdoba)",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Horario a confirmar"
+      }
+     ]
+    }
+   ],
+   "id": "9b8960c27c6e",
+   "version": "149ea4d34b",
+   "publicado_en_doc": false,
    "visto": "2026-11-13"
   },
   "9c2641b1daed": {
@@ -3149,10 +3595,22 @@
      ]
     },
     {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.ellitoral.com/deportes/lospumas-rugby-italia-nationschampionship2026_0_WPqg9wE7MN.html",
+       "href": "https://www.ellitoral.com/deportes/lospumas-rugby-italia-nationschampionship2026_0_WPqg9wE7MN.html"
+      },
+      {
+       "t": " (Previa)"
+      }
+     ]
+    },
+    {
      "tipo": "sub",
      "partes": [
       {
-       "t": "vs Italia el sábado 14/11 a las 18hs",
+       "t": "vs Italia el sábado 14/11 a las 8:40hs en el Luigi Ferraris de Génova",
        "b": true
       }
      ]
@@ -3167,7 +3625,7 @@
     }
    ],
    "id": "de102f71eab3",
-   "version": "a06449abf9",
+   "version": "b0c2e42c65",
    "publicado_en_doc": false,
    "visto": "2026-11-13"
   },
@@ -3262,14 +3720,38 @@
      ]
     },
     {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://handballargentina.org/cah/2026/11/los-juveniles-y-juniors-definiran-los-titulos-sur-centro-ante-brasil/",
+       "href": "https://handballargentina.org/cah/2026/11/los-juveniles-y-juniors-definiran-los-titulos-sur-centro-ante-brasil/"
+      },
+      {
+       "t": " (Nota semis)"
+      }
+     ]
+    },
+    {
      "tipo": "texto",
      "partes": [
       {
-       "t": "Semis vs Uruguay el viernes 13/11 a las 16hs",
+       "t": "Semis: 29-24 vs Uruguay (Bautista Torossian 7, también MVP) y "
+      },
+      {
+       "t": "CLASIFICÓ A LA FINAL",
        "b": true
       },
       {
-       "t": " (falta el resultado)"
+       "t": " y al Mundial 2027 (da 3 plazas)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Final vs Brasil el sábado 14/11 a las 19:30hs",
+       "b": true
       }
      ]
     },
@@ -3317,17 +3799,29 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Semis vs Chile el viernes 13/11 a las 18hs",
+       "t": "Semis: 36-24 vs Chile (Nicolás La Delfa 8; MVP Felipe Alvarez) y "
+      },
+      {
+       "t": "CLASIFICÓ A LA FINAL",
        "b": true
       },
       {
-       "t": " (falta el resultado)"
+       "t": " y al Mundial 2027 (da 3 plazas)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Final vs Brasil el sábado 14/11 a las 17:30hs",
+       "b": true
       }
      ]
     }
    ],
    "id": "e443096a7e7f",
-   "version": "fbebc705ea",
+   "version": "6f7a438dd0",
    "publicado_en_doc": false,
    "visto": "2026-11-13"
   },
