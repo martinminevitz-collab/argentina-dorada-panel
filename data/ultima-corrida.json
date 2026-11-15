@@ -1,17 +1,17 @@
 {
  "resultados": {
-  "cuando": "2026-11-15T12:59-03:00",
-  "nuevos": 12,
-  "resultado": 1,
-  "agenda": 1,
-  "otro": 10,
+  "cuando": "2026-11-15T16:07-03:00",
+  "nuevos": 8,
+  "resultado": 4,
+  "agenda": 0,
+  "otro": 4,
   "noticias": 0,
-  "en_buenos_aires": 2,
-  "revisadas": 2565,
+  "en_buenos_aires": 1,
+  "revisadas": 2526,
   "viejas": 134,
-  "no_argentinas": 587,
+  "no_argentinas": 577,
   "excluidas": 50,
-  "repetidas": 286,
+  "repetidas": 271,
   "fuentes_caidas": [
    "Comité Olímpico Argentino",
    "Totallympics (Argentina)",
@@ -38,7 +38,7 @@
   "segundos": 285
  },
  "doc": {
-  "cuando": "2026-11-15T15:47-03:00",
+  "cuando": "2026-11-15T16:07-03:00",
   "ok": true,
   "eventos": 58,
   "publicable": 14,
