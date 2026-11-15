@@ -140,6 +140,34 @@
   "noticia": false
  },
  {
+  "id": "69156bfb344c",
+  "titulo": "Continúa la búsqueda de Marcelo García, el operario desaparecido tras la explosión en Remedios de Escalada",
+  "resumen": "Continúa la búsqueda de Marcelo García, el operario desaparecido tras la explosión en Remedios de Escalada Cadena 3 Argentina",
+  "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNelpuSXhGN0plY2c0ZDBYaWZlRXEzejFOSnVVSUxlWGpubzg2NjNSRXFEVEN2YnFKa295T3NqcnRNTWhzMmlBOGVTWkdoQWxuQzlCMV9jUlZhLV9WekdlWm5ZVHotYUFSOFJ3cDZobGNTZ2xGSU9wUDlvOFlzeEtKQ0RlcVdQYTZJSDhWTkNCMzh1QjVVd0xCTmJGSTU2NEx3Z0dIbnVXUDFpLU1nS0R3MDdSclJFeV9OWXBxUW9tNi1zZ09QQVBLSno5ZDRHaWJZXy15V0J0NC05SzR2TW9oX2JwTktDcWJR0gHuAUFVX3lxTE04bmwzWllIX0tSTzZjZ2tMNEhyWVNuTlNWeXljSEx1ZnB3dHRzTW9XV2F0MDE3elBVUDQzMk91U3M2dFlXS0Z4UDZHaWt6enRZV3pJNFU4Zk5La1VpUkV4X0NQR3hLUUtBcjRZeWpvdmcwTEt3SUVvOG9HTnFBUXJKa3hhQThnSU8zWkh2YW5sSl83a0l3bFFVVTlFcEp2NG0xWThNeG1hbUhzSnJzTUlBd0M2VzJtYkFRS3NrcGZkM1AyTWhFaGhjaVpqMVhsUTFObXJEb2I4eVFvQW51V2k0RWhRcXYta1hPVVQzVmc?oc=5",
+  "fuente": "Cadena 3 Argentina",
+  "deporte": "Escalada",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-14T17:16+00:00",
+  "encontrado": "2026-11-15T07:02-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
+  "id": "cd4affc7d855",
+  "titulo": "Argentina XV le ganó a Chile gracias a un penal del rosarino Teo Castiglioni en la última jugada",
+  "resumen": "Argentina XV le ganó a Chile gracias a un penal del rosarino Teo Castiglioni en la última jugada El Ciudadano",
+  "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOa25JQVQ2M2Z0SWJ6TTFfMUZHOExOd0V5cHg3VzhLajhiZVR1LTJiZ1FGZ3ZkRkJrQjY4eFAxc3J1WXQ0ZTU2VVoxeFNLQ0k4YUw4TEplMTlObXlnMVhNeUlpWU5PSUZlVmx6MUw2Y0c2QVVTYnZ0RzJOTzBuWEM3NzRQR0p1S2hJRjlwanVuSjEza3hQX3o1QkM2MnEwR1dZLWdvc254RDZWRHA0YUdUWnpRdG5fSE9CZWtvWWJRWHdxRC1EazFj0gHHAUFVX3lxTE5rbklBVDYzZnRJYnpNMV8xRkc4TE53RXlweDdXOEtqOGJlVHUtMmJnUUZndmRGQmtCNjh4UDFzcnVZdDRlNTZVWjF4U0tDSThhTDhMSmUxOU5teWcxWE15SWlZTk9JRmVWbHoxTDZjRzZBVVNidnRHMk5PMG5YQzc3NFBHSnVLaElGOXBqdW5KMTNreFBfejVCQzYycTBHV1ktZ29zbnhENlZEcDRhR1RaelF0bl9IT0Jla29ZYlFYd3FELURrMWM?oc=5",
+  "fuente": "El Ciudadano",
+  "deporte": "Esgrima",
+  "tipo": "resultado",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-14T15:34+00:00",
+  "encontrado": "2026-11-15T07:02-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
   "id": "733f2b6f3dc7",
   "titulo": "Las chicanas de Uruguay a la Selección Argentina tras la victoria en el amistoso",
   "resumen": "Las chicanas de Uruguay a la Selección Argentina tras la victoria en el amistoso FM Del Sol Pehuajo",
@@ -248,6 +276,20 @@
   "en_buenos_aires": false,
   "publicado": "2026-11-14T10:51+00:00",
   "encontrado": "2026-11-15T01:13-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
+  "id": "fa846835b94e",
+  "titulo": "Dakar 2026: Argentina terminó con 6 medallas, el puesto 35, una figura confirmada y la mira en 2032",
+  "resumen": "Dakar 2026: Argentina terminó con 6 medallas, el puesto 35, una figura confirmada y la mira en 2032 La Nación",
+  "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNeFg5eDdvV0h2M0Z3Q3JGS3VsSENnM0JkLXRHbGlpREhNRE9vcHc5QjNGRXVaTGxQY2hBSHhYSmxPNllGQ21YbndSM3g5a3dDM1pxSVhzaUNIcTNaV1NpVm1YNjJXRHNiNHRsMEEzZjJjSms4ZEt0SDF3dk9tX0dObTVJZGJHLTlaelZvSWNDRjd5ajRTUUwxaHYxQzVXVlMzeVRrWjBMMUVNTGZBeF9pdDk3dVlUTnoxZlpUc09uRzNZUQ?oc=5",
+  "fuente": "La Nación",
+  "deporte": "Futsal",
+  "tipo": "resultado",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-14T01:49+00:00",
+  "encontrado": "2026-11-15T07:02-03:00",
   "bot": "resultados",
   "noticia": false
  },
