@@ -1,6 +1,69 @@
 {
  "_nota": "Resultados vistos en el Doc en los últimos 7 días (incluye los ya publicados que el agente sacó).",
  "eventos": {
+  "088209cc961e": {
+   "titulo": "TENIS DE MESA ADAPTADO - CAMPEONATO MUNDIAL EN PATTAYA, TAILANDIA (13 al 19 de noviembre)",
+   "deporte": "TENIS DE MESA ADAPTADO",
+   "evento": "CAMPEONATO MUNDIAL EN PATTAYA, TAILANDIA",
+   "fechas": "13 al 19 de noviembre",
+   "etiqueta": "en_curso",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://enard.org.ar/agenda_noviembre_2026/",
+       "href": "https://enard.org.ar/agenda_noviembre_2026/"
+      },
+      {
+       "t": " (Agenda ENARD)"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://paradeportes.com/tenis-de-mesa-adaptado-argentina-al-mundial-de-tailandia-con-4-jugadores/",
+       "href": "https://paradeportes.com/tenis-de-mesa-adaptado-argentina-al-mundial-de-tailandia-con-4-jugadores/"
+      },
+      {
+       "t": " (Nota)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Argentinos: Constanza Garrone (C2), Gabriel Copola (Clase 3), Giselle Muñoz (C7) y Eithan Skliarsky (C9). Garrone y Muñoz fueron bronce en el Mundial 2022"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Los primeros 3 días se juegan dobles y dobles mixtos; los singles arrancan el domingo 15/11"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan resultados"
+      }
+     ]
+    }
+   ],
+   "id": "088209cc961e",
+   "version": "0291104b7d",
+   "publicado_en_doc": false,
+   "visto": "2026-11-14"
+  },
   "090e0ef4a21e": {
    "titulo": "POLE Y DEPORTES AÉREOS - CAMPEONATO MUNDIAL IPSF EN PRAGA, REPÚBLICA CHECA",
    "deporte": "POLE Y DEPORTES AÉREOS",
@@ -1633,6 +1696,73 @@
    "publicado_en_doc": false,
    "visto": "2026-11-14"
   },
+  "31f587ef5664": {
+   "titulo": "GIMNASIA EN TRAMPOLÍN - MUNDIAL JUVENIL (WORLD AGE GROUP COMPETITIONS) EN NANJING, CHINA (12 al 15 de noviembre)",
+   "deporte": "GIMNASIA EN TRAMPOLÍN",
+   "evento": "MUNDIAL JUVENIL (WORLD AGE GROUP COMPETITIONS) EN NANJING, CHINA",
+   "fechas": "12 al 15 de noviembre",
+   "etiqueta": "en_curso",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://diariojornada.com.ar/426511/deportes/tres_chubutenses_representaran_a_argentina_en_el_mundial_de_china",
+       "href": "https://diariojornada.com.ar/426511/deportes/tres_chubutenses_representaran_a_argentina_en_el_mundial_de_china"
+      },
+      {
+       "t": " (Nota)"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.gymnastics.sport/site/events/detail.php?id=18190",
+       "href": "https://www.gymnastics.sport/site/events/detail.php?id=18190"
+      },
+      {
+       "t": " (Web oficial)"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.superdepor.com.ar/superdepor/nota/2026-11-12-19-24-0-tres-gimnastas-chubutenses-presentes-en-el-mundial-de-nanjing",
+       "href": "https://www.superdepor.com.ar/superdepor/nota/2026-11-12-19-24-0-tres-gimnastas-chubutenses-presentes-en-el-mundial-de-nanjing"
+      },
+      {
+       "t": " (Nota)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Argentinas: Martina Arguiano Salinas (17 años), Amaia Navarro (13) y Milagros Albarracin Hammond (11), del club Fly de Trelew, y una gimnasta de la Federación Bonaerense"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan pruebas y horarios"
+      }
+     ]
+    }
+   ],
+   "id": "31f587ef5664",
+   "version": "7e42ee5d73",
+   "publicado_en_doc": false,
+   "visto": "2026-11-14"
+  },
   "321e6c965b68": {
    "titulo": "BOCHAS - CAMPEONATO MUNDIAL EN RIJEKA, CROACIA (fechas a confirmar)",
    "deporte": "BOCHAS",
@@ -2331,15 +2461,177 @@
    "terminado_desde": "2026-11-10",
    "visto": "2026-11-14"
   },
-  "90414b5fde29": {
-   "titulo": "VELA - CAMPEONATO MUNDIAL DE STAR EN MIAMI, ESTADOS UNIDOS (9 al 14 de noviembre)",
+  "7a44a2ecec03": {
+   "titulo": "VELA - CAMPEONATO SUDAMERICANO EN RÍO DE JANEIRO, BRASIL (14 al 18 de noviembre)",
    "deporte": "VELA",
-   "evento": "CAMPEONATO MUNDIAL DE STAR EN MIAMI, ESTADOS UNIDOS",
-   "fechas": "9 al 14 de noviembre",
+   "evento": "CAMPEONATO SUDAMERICANO EN RÍO DE JANEIRO, BRASIL",
+   "fechas": "14 al 18 de noviembre",
    "etiqueta": "en_curso",
    "seccion": "resultados",
    "ya_publicado": false,
    "bloques": [
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://enard.org.ar/agenda_noviembre_2026/",
+       "href": "https://enard.org.ar/agenda_noviembre_2026/"
+      },
+      {
+       "t": " (Agenda ENARD)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan clases y regatistas argentinos"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Según el Iate Clube do Rio de Janeiro en noviembre hay Sudamericanos de Finn y de 470 (Creo que son parte de este evento): "
+      },
+      {
+       "t": "https://www.icrj.com.br/velaicrj/images/aviso_regata/2026/11_nov/NOR_SUDAM_470_-_2026_-_FINAL.pdf",
+       "href": "https://www.icrj.com.br/velaicrj/images/aviso_regata/2026/11_nov/NOR_SUDAM_470_-_2026_-_FINAL.pdf"
+      }
+     ]
+    }
+   ],
+   "id": "7a44a2ecec03",
+   "version": "e838669259",
+   "publicado_en_doc": false,
+   "visto": "2026-11-14"
+  },
+  "80e2d045e7a9": {
+   "titulo": "GIMNASIA AERÓBICA - CAMPEONATO PANAMERICANO EN BRASIL (11 al 15 de noviembre)",
+   "deporte": "GIMNASIA AERÓBICA",
+   "evento": "CAMPEONATO PANAMERICANO EN BRASIL",
+   "fechas": "11 al 15 de noviembre",
+   "etiqueta": "en_curso",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan la ciudad y los argentinos convocados"
+      }
+     ]
+    }
+   ],
+   "id": "80e2d045e7a9",
+   "version": "7586aa7361",
+   "publicado_en_doc": false,
+   "visto": "2026-11-14"
+  },
+  "85250ce34db4": {
+   "titulo": "BOXEO - PAPP CUP EN BUDAPEST, HUNGRÍA",
+   "deporte": "BOXEO",
+   "evento": "PAPP CUP EN BUDAPEST, HUNGRÍA",
+   "fechas": null,
+   "etiqueta": "publicable",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://pappcup.org/en/home/",
+       "href": "https://pappcup.org/en/home/"
+      },
+      {
+       "t": " (Web oficial)"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.nemzetisport.hu/okolvivas/2026/11/europa-nyerte-meg-az-elso-papp-kupat-budapesten",
+       "href": "https://www.nemzetisport.hu/okolvivas/2026/11/europa-nyerte-meg-az-elso-papp-kupat-budapesten"
+      },
+      {
+       "t": " (Resultado)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se hizo el sábado 14/11. Europa ganó la primera edición 12-6 vs América"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Formato nuevo de 10 combates en el que cada victoria suma para definir qué continente gana la copa, parecido a la Laver Cup de tenis"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "65kg Femenino",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Lucía Muello (@luu_muello) vs Anna Luca Hamori (HUN), diploma olímpico en París 2024"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Lucía Muello perdió vs Anna Luca Hámori (HUN) por decisión unánime (5-0)"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "eefc9fb9"
+   ],
+   "id": "85250ce34db4",
+   "version": "15fd288018",
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-14",
+   "visto": "2026-11-14"
+  },
+  "90414b5fde29": {
+   "titulo": "VELA - CAMPEONATO MUNDIAL DE STAR EN MIAMI, ESTADOS UNIDOS",
+   "deporte": "VELA",
+   "evento": "CAMPEONATO MUNDIAL DE STAR EN MIAMI, ESTADOS UNIDOS",
+   "fechas": null,
+   "etiqueta": "publicable",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se corrió del 9 al 14/11"
+      }
+     ]
+    },
     {
      "tipo": "link",
      "partes": [
@@ -2449,18 +2741,85 @@
      ]
     },
     {
+     "tipo": "espacio"
+    },
+    {
      "tipo": "sub",
      "partes": [
       {
-       "t": "Última regata (5ta) el sábado 14/11",
+       "t": "Clasificación final (6 regatas)",
        "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Leandro Altolaguirre / Lucas Altolaguirre terminaron en el "
+      },
+      {
+       "t": "4° PUESTO",
+       "b": true
+      },
+      {
+       "t": " con 51 puntos netos (1, 10, 48, 1, 18 y 21), ganando 2 regatas. Campeones Diego Negri / Sergio Lambertenghi (ITA) con 24, 2° Melleby / Nehammer (NOR) con 37 y 3° Robert Scheidt / Austin Sperry (BRA) con 47"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Juan Kouyoumdjian / Fernando Rivero 53°"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Erich Mones Ruiz / Julián Gazari Barroso 58°"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Federico Calegari / Lucas Carissimi 68°"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Juan Pablo Percossi / Felipe Caivano 78°"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Gerardo Della Torre / Jurgen Berger 80°"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "La web oficial todavía marca algunas regatas como provisorias (Creo que no cambia)"
       }
      ]
     }
    ],
    "id": "90414b5fde29",
-   "version": "1820e09df2",
+   "version": "2452d0ea5d",
    "publicado_en_doc": false,
+   "terminado_desde": "2026-11-14",
    "visto": "2026-11-14"
   },
   "907e68f79b63": {
@@ -2582,6 +2941,53 @@
    "version": "50188760bd",
    "publicado_en_doc": false,
    "terminado_desde": "2026-11-10",
+   "visto": "2026-11-14"
+  },
+  "90b3a227d0f3": {
+   "titulo": "JUDO - GRAND PRIX DE ZAGREB, CROACIA (13 al 15 de noviembre)",
+   "deporte": "JUDO",
+   "evento": "GRAND PRIX DE ZAGREB, CROACIA",
+   "fechas": "13 al 15 de noviembre",
+   "etiqueta": "en_curso",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://ijf.org/events/gp_cro2026/draw",
+       "href": "https://ijf.org/events/gp_cro2026/draw"
+      },
+      {
+       "t": " (Draw y resultados)"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.ijf.org/index.php/country/arg",
+       "href": "https://www.ijf.org/index.php/country/arg"
+      },
+      {
+       "t": " (Inscriptos ARG)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Argentina tiene 6 judokas inscriptos (varones). Faltan los nombres"
+      }
+     ]
+    }
+   ],
+   "id": "90b3a227d0f3",
+   "version": "22a44c7895",
+   "publicado_en_doc": false,
    "visto": "2026-11-14"
   },
   "93a941b2307c": {
@@ -3045,16 +3451,28 @@
      ]
     },
     {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.nacion.com/puro-deporte/argentina-vs-costa-rica-hora-y-canales-para-ver/4VGMZMZIZRE6DHTZSHV6MXTE34/story/",
+       "href": "https://www.nacion.com/puro-deporte/argentina-vs-costa-rica-hora-y-canales-para-ver/4VGMZMZIZRE6DHTZSHV6MXTE34/story/"
+      },
+      {
+       "t": " (Horario)"
+      }
+     ]
+    },
+    {
      "tipo": "texto",
      "partes": [
       {
-       "t": "Horario a confirmar"
+       "t": "Sería a las 20hs (Creo, todavía a confirmar)"
       }
      ]
     }
    ],
    "id": "9b8960c27c6e",
-   "version": "149ea4d34b",
+   "version": "3c76c77c66",
    "publicado_en_doc": false,
    "visto": "2026-11-14"
   },
@@ -3161,10 +3579,47 @@
        "c": "gris"
       }
      ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://paradeportes.com/paraciclismo-federico-ambrossi-top-5-en-el-mundial-de-pista/",
+       "href": "https://paradeportes.com/paraciclismo-federico-ambrossi-top-5-en-el-mundial-de-pista/"
+      },
+      {
+       "t": " (Nota)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "C4 Masculino",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Federico Ambrossi fue 5° en el Scratch entre 23 competidores (ganó Andrea Biancalani (ITA)) y 7° en otra prueba que la nota nombra como \"relevos\" (Creo)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Falta confirmar si compitió algún otro argentino"
+      }
+     ]
     }
    ],
    "id": "9e25d4feeb24",
-   "version": "76c0fd29db",
+   "version": "cc3d22b206",
    "publicado_en_doc": false,
    "terminado_desde": "2026-11-10",
    "visto": "2026-11-14"
@@ -3410,6 +3865,29 @@
    "terminado_desde": "2026-11-10",
    "visto": "2026-11-14"
   },
+  "b904de21ef8b": {
+   "titulo": "BEACH VOLEY - 2DA ETAPA CSVP 2026-2027 EN CAYENA, GUYANA FRANCESA (11 al 15 de noviembre)",
+   "deporte": "BEACH VOLEY",
+   "evento": "2DA ETAPA CSVP 2026-2027 EN CAYENA, GUYANA FRANCESA",
+   "fechas": "11 al 15 de noviembre",
+   "etiqueta": "en_curso",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan parejas argentinas"
+      }
+     ]
+    }
+   ],
+   "id": "b904de21ef8b",
+   "version": "2f763bf564",
+   "publicado_en_doc": false,
+   "visto": "2026-11-14"
+  },
   "c397f3c8f523": {
    "titulo": "LUCHA DE BRAZOS - CAMPEONATO MUNDIAL",
    "deporte": "LUCHA DE BRAZOS",
@@ -3552,6 +4030,225 @@
    "terminado_desde": "2026-11-10",
    "visto": "2026-11-14"
   },
+  "d76e45b4bd6a": {
+   "titulo": "NATACIÓN ADAPTADA - PARA SWIMMING WORLD SERIES EN LIMA, PERÚ",
+   "deporte": "NATACIÓN ADAPTADA",
+   "evento": "PARA SWIMMING WORLD SERIES EN LIMA, PERÚ",
+   "fechas": null,
+   "etiqueta": "mas_info",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.paralympic.org/swimming/world-series-2026",
+       "href": "https://www.paralympic.org/swimming/world-series-2026"
+      },
+      {
+       "t": " (Web oficial)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Delegación argentina de 15 deportistas: Nadia Báez, Matías de Andrade, Elizabeth Noriega, Analuz Pellitero, Mateo Vives, Lucas Leguiza, Nicolás Ricci, Nicolás Rivero, Paula Ibarra, Tomás Fangio, Tiziana Forlano, Santino Insaurralde, Alma Roisman, Paul Ferreira y Lautaro Núñez"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se nadó del 12 al 14/11 en el Centro Acuático de la VIDENA"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://paradeportes.com/natacion-baez-insaurralde-pellitero-y-rivero-las-primeras-medallas-en-la-world-series-de-lima/",
+       "href": "https://paradeportes.com/natacion-baez-insaurralde-pellitero-y-rivero-las-primeras-medallas-en-la-world-series-de-lima/"
+      },
+      {
+       "t": " (Nota primeras medallas)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Medallas",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Nadia Báez ganó la medalla "
+      },
+      {
+       "t": "DORADA",
+       "b": true
+      },
+      {
+       "t": " en los 50m pecho SB11"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Nadia Báez ganó la medalla de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      },
+      {
+       "t": " en los 100m pecho"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Santino Insaurralde ganó la medalla "
+      },
+      {
+       "t": "DORADA",
+       "b": true
+      },
+      {
+       "t": " en los 50m pecho SB4 (final juvenil)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Analuz Pellitero ganó la medalla "
+      },
+      {
+       "t": "PLATEADA",
+       "b": true
+      },
+      {
+       "t": " en los 50m espalda S11, con récord americano"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Nicolás Rivero ganó la medalla de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      },
+      {
+       "t": " en los 50m pecho SB4"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Otros resultados",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Nicolás Ricci fue 8° en la final A de 50m pecho SB3"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Paul Ferreira fue 6° en la final A de 200m libre S14 y 4° en la final B de 100m mariposa"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Lucas Leguiza fue 6° en la final A de 100m mariposa y 6° en la final B de 200m combinado SM9"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Mateo Vives ganó la final B de 200m combinado SM9"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Tomás Fangio fue 7° en la final juvenil de 200m combinado SM8"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Nadia Báez ganó la final B de 200m combinado SM11"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Paula Ibarra fue 3° en la final B de 200m combinado SM10"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan: tiempos y resultados de los otros días"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "51c960f0"
+   ],
+   "id": "d76e45b4bd6a",
+   "version": "8d3697c1b2",
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-14",
+   "visto": "2026-11-14"
+  },
   "de102f71eab3": {
    "titulo": "RUGBY - NATIONS CHAMPIONSHIP (06 al 21 de noviembre)",
    "deporte": "RUGBY",
@@ -3662,14 +4359,34 @@
    "visto": "2026-11-14"
   },
   "e443096a7e7f": {
-   "titulo": "HANDBALL - SUR-CENTRO JUNIOR (U20) Y JUVENIL (U18) MASCULINO EN ASUNCIÓN, PARAGUAY (10 al 14 de noviembre)",
+   "titulo": "HANDBALL - SUR-CENTRO JUNIOR (U20) Y JUVENIL (U18) MASCULINO EN ASUNCIÓN, PARAGUAY",
    "deporte": "HANDBALL",
    "evento": "SUR-CENTRO JUNIOR (U20) Y JUVENIL (U18) MASCULINO EN ASUNCIÓN, PARAGUAY",
-   "fechas": "10 al 14 de noviembre",
-   "etiqueta": "en_curso",
+   "fechas": null,
+   "etiqueta": "publicable",
    "seccion": "resultados",
    "ya_publicado": false,
    "bloques": [
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://handballargentina.org/cah/2026/11/oro-y-plata-para-argentina-en-los-sur-centro-u-20-y-u-18-de-asuncion/",
+       "href": "https://handballargentina.org/cah/2026/11/oro-y-plata-para-argentina-en-los-sur-centro-u-20-y-u-18-de-asuncion/"
+      },
+      {
+       "t": " (Nota final)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se jugó del 10 al 14/11"
+      }
+     ]
+    },
     {
      "tipo": "link",
      "partes": [
@@ -3779,10 +4496,13 @@
      ]
     },
     {
-     "tipo": "sub",
+     "tipo": "texto",
      "partes": [
       {
-       "t": "Final vs Brasil el sábado 14/11 a las 19:30hs",
+       "t": "Final: perdió 32-24 vs Brasil (Bautista Torossian 9) y logró la medalla "
+      },
+      {
+       "t": "PLATEADA",
        "b": true
       }
      ]
@@ -3843,18 +4563,29 @@
      ]
     },
     {
-     "tipo": "sub",
+     "tipo": "texto",
      "partes": [
       {
-       "t": "Final vs Brasil el sábado 14/11 a las 17:30hs",
+       "t": "Final: le ganó 18-15 a Brasil (Nicolás La Delfa 11, también MVP) y se consagró "
+      },
+      {
+       "t": "CAMPEÓN SUR-CENTRO",
+       "b": true
+      },
+      {
+       "t": " con la medalla "
+      },
+      {
+       "t": "DORADA",
        "b": true
       }
      ]
     }
    ],
    "id": "e443096a7e7f",
-   "version": "6f7a438dd0",
+   "version": "694e442efb",
    "publicado_en_doc": false,
+   "terminado_desde": "2026-11-14",
    "visto": "2026-11-14"
   },
   "e4d21e003f06": {
