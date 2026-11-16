@@ -1,17 +1,17 @@
 {
  "resultados": {
-  "cuando": "2026-11-16T12:30-03:00",
-  "nuevos": 30,
-  "resultado": 10,
-  "agenda": 1,
-  "otro": 19,
-  "noticias": 1,
+  "cuando": "2026-11-16T16:21-03:00",
+  "nuevos": 25,
+  "resultado": 7,
+  "agenda": 0,
+  "otro": 18,
+  "noticias": 0,
   "en_buenos_aires": 0,
-  "revisadas": 2528,
+  "revisadas": 2532,
   "viejas": 134,
-  "no_argentinas": 599,
-  "excluidas": 44,
-  "repetidas": 229,
+  "no_argentinas": 624,
+  "excluidas": 42,
+  "repetidas": 236,
   "fuentes_caidas": [
    "Comité Olímpico Argentino",
    "Totallympics (Argentina)",
@@ -19,7 +19,6 @@
    "Olé – Polideportivo",
    "bwfbadminton.com",
    "wbsc.org",
-   "cheerunion.org",
    "uci.org",
    "cricketargentina.com",
    "fei.org",
@@ -32,14 +31,15 @@
    "infinity.worldskate.org",
    "uww.org",
    "iwf.sport",
+   "remodeprimera.com.ar",
    "atptour.com",
    "ittf.com",
    "sailing.org"
   ],
-  "segundos": 283
+  "segundos": 281
  },
  "doc": {
-  "cuando": "2026-11-16T14:16-03:00",
+  "cuando": "2026-11-16T16:21-03:00",
   "ok": true,
   "eventos": 58,
   "publicable": 14,
