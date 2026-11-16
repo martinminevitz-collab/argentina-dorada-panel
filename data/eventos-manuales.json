@@ -1,4 +1,17 @@
 {
  "_nota": "Eventos cargados a mano en el panel que todavía no están en el Doc. El agente los pasa al Doc y al final del bloque escribe la línea 'Ref panel: <ref>'.",
- "pendientes": []
+ "pendientes": [
+  {
+   "ref": "e8637829",
+   "seccion": "agenda",
+   "estado": "agenda",
+   "deporte": "REMO",
+   "titulo": "Campeonato Argentino de Remo",
+   "fechas": "20 al 22/11",
+   "lugar": "Tigre, Buenos Aires",
+   "detalle": null,
+   "link": null,
+   "creado_en": "2026-11-16T00:53:50.246957+00:00"
+  }
+ ]
 }

@@ -1,4 +1,37 @@
 {
  "_nota": "Datos que los compañeros agregaron a un evento desde el panel y que todavía no están en el Doc. El agente los suma al bloque de ese evento y al final escribe 'Ref panel: <ref>'.",
- "pendientes": []
+ "pendientes": [
+  {
+   "ref": "71ff5cee",
+   "evento_id": "2cd9eccdc019",
+   "evento_titulo": "ATLETISMO - CAMPEONATO SUDAMERICANO DE MARATÓN Y RUTA EN SANTIAGO (15 de noviembre)",
+   "tipo": "dato",
+   "texto": "Argentina logró 10 medallas:\n**DORADAS**\nMicaela Levaggi - Milla\nBelén Casetta - 5km\n\n**PLATEADAS**\nMatias Reynaga - Milla\nNélida Peñaflor - 5km\nTomás Vega - 5km\nAnahí Castaño - Maratón\n\n**BRONCE**\nKaren Rocca - Milla\nGermán Vega - 5km\nSofía Goméz - 21km\nEulalio Muñoz - Maratón",
+   "creado_en": "2026-11-16T00:58:22.210845+00:00"
+  },
+  {
+   "ref": "9f6f3cc5",
+   "evento_id": "d76e45b4bd6a",
+   "evento_titulo": "NATACIÓN ADAPTADA - PARA SWIMMING WORLD SERIES EN LIMA, PERÚ",
+   "tipo": "dato",
+   "texto": "Nicolás Ricci logró la medalla **PLATEADA** en 150m combinado SM4\nAnaluz Pellitero logró la medalla de **BRONCE** en 100m espalda S11\n\n**Otros resultado**\nMatías de Andrade fue 4º en la final A de 100m espalda S6\nLucas Leguiza fue 7º en la final A de 50m libre S9\nTomás Fangio fue 7º en la final juvenil de 100m espalda S8 y 8º en los 50m libre S8\nAlma Roisman fue 7º en la final juvenil de 100m espalda S10, 5º en la de 50m libre S10 y 3º en 400m libre S10\nMateo Vives fue 3º en la final B de 100m espalda S9\nPaula Ibarra fue 1º en la final B de 100m espalda S10\nTiziana Forlano fue 7º en la final B 100m espalda S6\nMatías de Andrade fue 8º en la final B de 50m libre S6\nNadia Báez fue 3º en la final B de 50m libre S11\nElizabeth Noriega fue 4º en la final B de 50m libre S5",
+   "creado_en": "2026-11-16T01:06:03.161797+00:00"
+  },
+  {
+   "ref": "9e9e840d",
+   "evento_id": "d76e45b4bd6a",
+   "evento_titulo": "NATACIÓN ADAPTADA - PARA SWIMMING WORLD SERIES EN LIMA, PERÚ",
+   "tipo": "correccion",
+   "texto": "[PUBLICABLE] Ya está completo: en el título cambiar (Necesito más info) por PUBLICABLE",
+   "creado_en": "2026-11-16T01:06:05.92369+00:00"
+  },
+  {
+   "ref": "05f33191",
+   "evento_id": "31f587ef5664",
+   "evento_titulo": "GIMNASIA EN TRAMPOLÍN - MUNDIAL JUVENIL (WORLD AGE GROUP COMPETITIONS) EN NANJING, CHINA (12 al 15 de noviembre)",
+   "tipo": "dato",
+   "texto": "Resultados:\nTrampolín individual\nGimnasta Categoría Puesto Puntaje\nLucca Constantino De Pedro Casali Varones 13-14 54.º 81,66\nMacarena Cainzos Mujeres Junior 62.º 46,94\nMartina Quimey Arguiano Salinas Mujeres 17-21 65.º 62,30\nDoble mini-trampolín\nGimnasta Categoría Puesto Puntaje\nLucca Constantino De Pedro Casali Varones 13-14 24.º 42,60\nMilagros Albarracín Hammond Mujeres 11-12 20.º 39,80\nAmaia Sol Navarro Mujeres 13-14 37.º 35,00",
+   "creado_en": "2026-11-16T01:22:04.696732+00:00"
+  }
+ ]
 }
