@@ -1,13 +1,4 @@
 {
- "_nota": "Eventos terminados hace más de 7 días o eliminados desde el panel. El agente los saca del Doc y deja de seguirlos.",
- "vencidos": [
-  "BATALLA DE ESTRELLAS DE CALISTENIA EN PANAMÁ",
-  "BOXEO - PAPP CUP EN BUDAPEST, HUNGRÍA",
-  "FUTSAL - FINALISSIMA EN NITERÓI (RÍO DE JANEIRO), BRASIL",
-  "GIMNASIA EN TRAMPOLÍN - CAMPEONATO MUNDIAL EN NANJING, CHINA",
-  "PARA REMO - DEVELOPMENT AMÉRICAS (AMERICAS INTERNATIONAL PARA ROWING REGATTA) EN CIUDAD DE MÉXICO, MÉXICO",
-  "PARATRIATLÓN - WORLD TRIATHLON PARA CUP EN SAN PEDRO DE LA PAZ, CHILE",
-  "PÁDEL - MUNDIAL FIP EN DOHA, QATAR",
-  "RACQUETBALL - GOLDEN STATE OPEN (LPRT / IRT) EN ESTADOS UNIDOS"
- ]
+ "_nota": "Eventos terminados hace más de 7 días. El agente los saca del Doc y deja de seguirlos.",
+ "vencidos": []
 }
