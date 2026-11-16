@@ -1,5 +1,19 @@
 [
  {
+  "id": "8cd3808c836f",
+  "titulo": "Histórico: la Selección Argentina de futsal venció a Portugal y ganó por primera vez la medalla de oro",
+  "resumen": "Histórico: la Selección Argentina de futsal venció a Portugal y ganó por primera vez la medalla de oro Uno Entre Rios",
+  "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQSWR2V2ZVdGl0cXlwSXp2SXdtQllvcGZ1U214Vy0wRGxQUXNJRDk5a01jaF9zQmx3YnVoelNYY1JfQU1wWjZJMlBiMlFmb21nTklNUXpvT3I3OHNRNHBQTXhOYkoxWkhpQ0lVa0VOdGg1bHVLaGNGRkxXUkZWa3VYZXBZN2sxMVBvY0gtNnVZcldRWnhwbDJuRl96OVk4WXY0bnBEWTMxbUlUWWRXQzZjUWdFUjBrbWpNRU96ZU1SZHhwbkNjczNvV1JnRnZFT0ZtRjFzOGt6VVhZck1D0gHiAUFVX3lxTFBvWUxvb0xGLUltT1dQeF95a1ZJRFprUVprcDV0cnhNbDJsT2hzU1FNbnVXYVRldzVPRzlqcFFfdm1nbS1PaGZyZ01CNGlUbkZRNHNPUG9qU21PT2l0amRXa3k1Q0I0a1pvVjY3LVQ1SXdzWERlX3huNkpLVFY0VVhMOFJsSEhrTnJINnNqbHlILXk5MUxXbE54ZzRKeUZaMGR5M1FTM2g1QmZBLVN3UjZvN1FLVzJtRDFyeGVmZWVIa2F2ajlSV2hHNkxmanQ5RjBOa0UyN1p4YzNMeUI2RnBLYUE?oc=5",
+  "fuente": "Uno Entre Rios",
+  "deporte": "Futsal",
+  "tipo": "resultado",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-16T07:43+00:00",
+  "encontrado": "2026-11-16T06:04-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
   "id": "3ec1c0996b72",
   "titulo": "Otra baja en el plantel de Los Pumas, Bautista Bernasconi se suma a la lista.",
   "resumen": "Otra baja en el plantel de Los Pumas, Bautista Bernasconi se suma a la lista. Rugby Champagne",
@@ -98,6 +112,20 @@
   "noticia": false
  },
  {
+  "id": "81cfe3f2320d",
+  "titulo": "Doblete argentino en la San Felipe y Santiago",
+  "resumen": "Doblete argentino en la San Felipe y Santiago la diaria",
+  "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxON0F4ZmJmV3Z3NHJmUkZ3TjFQRmwzdWFrQ3ZmdjV3Q0hFTDREaGJiZDk1d0hsNHpmaFdTY2hWSTBLcDl5VnF3Mkt1UEVBOTgyNWx3bDl5Qm1FUXBlTm03S2hnYVZLWmJsMzVsTTNSN3AxZF9HNzFVVTVkOWE4ZHBkd2o3eWEzT1VIbVQzemd1eGFBWGN0RnFjWDlMTdIBqwFBVV95cUxQLXB2TXpfSElHSFl0amRlZnBONmZYbXRMT1lOY2IyVWFFNUQ3Qk1LM2JSZzZQV2FuRG9KLXhESmFCaWF0eDJ4YlJDVWt4Uk8tQ0RmT1NFbnNic1pMd2MtOGJmcTdKYU85MjhHaktWdDljclR2cWhFR0xNWnlXdFhqOGVXbmlNbzVMOTdQek5FUVMxcTFmOFlfUGJiYkhzb1NiOEoxeV9pdHNsSHM?oc=5",
+  "fuente": "la diaria",
+  "deporte": "Atletismo",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-15T19:32+00:00",
+  "encontrado": "2026-11-16T06:03-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
   "id": "7aabfff61fa0",
   "titulo": "¿Por qué no juega Pedri en España vs. Inglaterra por la UEFA Nations League?",
   "resumen": "¿Por qué no juega Pedri en España vs. Inglaterra por la UEFA Nations League? Bolavip Argentina",
@@ -150,6 +178,20 @@
   "en_buenos_aires": false,
   "publicado": "2026-11-15T03:04+00:00",
   "encontrado": "2026-11-16T01:51-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
+  "id": "a983b4f91c0d",
+  "titulo": "Selección de Costa Rica llegó a Córdoba para su partido contra Argentina",
+  "resumen": "Selección de Costa Rica llegó a Córdoba para su partido contra Argentina Everardo Herrera",
+  "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPZk9zZ2tUZGFrR01OajQwbVdrN2JQbzhkMjRDNHUwQ0dWakF1YXRJSmJVOHlMN2ltU2l6LTd2dzJwaGU3U0FWYjRtQTNVbHBtYWpoeG93X19RelVSN1FNZDdJYm9aTTFZUC1ma05HQmgzcHIycHFFR0xjNW5qTHhkQnR5b0FQelhMMnFzWFdYT2Ffd0p1RXFtNDRWdWg3eEpCZ0FnV3NTNkV2eVgybDlRRnlEZ3pONUdxdnhkNUs1c2pzcFJYMmNXRWNGR21mZnByY2VhaTVJbklTUQ?oc=5",
+  "fuente": "Everardo Herrera",
+  "deporte": "Futbol",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-15T02:18+00:00",
+  "encontrado": "2026-11-16T06:04-03:00",
   "bot": "resultados",
   "noticia": false
  },
@@ -210,6 +252,20 @@
   "noticia": false
  },
  {
+  "id": "d999c0195284",
+  "titulo": "James Vowles apoyó la candidatura de Argentina para volver a tener un Gran Premio de F1",
+  "resumen": "James Vowles apoyó la candidatura de Argentina para volver a tener un Gran Premio de F1 Bolavip Argentina",
+  "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQcXJlZVhQMEZ0MGZNbzd0a1d6NWQ5Ul9fb3ZPci1XUk9sMTFmd3NFbHZhakdBdEFtYkJvTXB0UXdyQjNjUEdmVVF5M0VKWWhsa05mNHppM0NFYlZnZ0JfY1NIR3RSQmNERndDS0FGVExHd3VTWFE2Z2Z2MDJPQ083OXdjLWk3ZzBUamdHSlJJTjVqVERRTjlvVFotT2l3Qy1FdURtVzhNUmpPZXVzWl9sdnBwdmRvUHFEbnRBT9IBwgFBVV95cUxQNTQwV1puRWhIWFZpejUxY1ZjajRzUEdPOUgwSHNFYklrTXJUNTZWSDNCSjR0WWs1Q1g3bUdIa0sxN1ZFemF3T2xZVVVoaWlQRlo2UmFmS1gzV016U3RFRDBEOEwtTmhRTHU3enMzWEpqNmZWRjRndmNsQkhkanE4NER4MTJYRU5zWHBxQ0g3RmZPUVBiOG45WHpZY0R5Nkx1bVRQazF5VEY2dTY0ZkpYNWpYcHQxck43UmQyMnZSMGJtUQ?oc=5",
+  "fuente": "Bolavip Argentina",
+  "deporte": "Formula 1",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-14T20:12+00:00",
+  "encontrado": "2026-11-16T06:04-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
   "id": "4660e86b0c0a",
   "titulo": "Los Pumas estrenaron ante Italia una camiseta especial en homenaje a los campeones del Mundial de 1986",
   "resumen": "Los Pumas estrenaron ante Italia una camiseta especial en homenaje a los campeones del Mundial de 1986 La Gaceta",
@@ -234,6 +290,20 @@
   "en_buenos_aires": false,
   "publicado": "2026-11-14T17:21+00:00",
   "encontrado": "2026-11-16T01:52-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
+  "id": "0aa1e75d1329",
+  "titulo": "Los Pumas remontan contra la Italia de Gonzalo Quesada",
+  "resumen": "Los Pumas remontan contra la Italia de Gonzalo Quesada Flashscore.es",
+  "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNYkZNWkl2cE1uYVREcjhKM1VjNWxkS0Z2XzlzQ0lEUm9HeGQyZFBnU21pWW9kLU1FWU5QMkQ0Tkh6SDRCb0JKY2hJUHpBeGNFLXRwTmNjU2tKekk4eEVraXRWdTVybEFpZ25kYTZSNmtNQ2ptZ0dEU3ZJdkdManM1dXFDNy0xNnUtZzBTaVhxejZUMGxfS1JwMnJaWVZ5VEpvbndydXhRQjd6cUU?oc=5",
+  "fuente": "Flashscore.es",
+  "deporte": "Rugby",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-14T16:46+00:00",
+  "encontrado": "2026-11-16T06:06-03:00",
   "bot": "resultados",
   "noticia": false
  },
@@ -318,6 +388,20 @@
   "en_buenos_aires": false,
   "publicado": "2026-11-14T11:30+00:00",
   "encontrado": "2026-11-16T01:52-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
+  "id": "598c35d7e51e",
+  "titulo": "Cómo sigue la agenda de Argentina tras la dura derrota contra Uruguay",
+  "resumen": "Cómo sigue la agenda de Argentina tras la dura derrota contra Uruguay La Verdad Junín",
+  "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxOMThkbzB4UzFXdjJ1d3U0NW96QktSeF9rMnAwZThLYzFLbmZQM2VjNmVpeTd6V0ItMDVGamxTM3BnLTJwOWhwd054Q2lMblhkb1VJYWx5V1RyVFQ2V0c4a0ljdFdXRlRSTnF2OU5wZUpDLTZXb3h0ellKWjhHZzlvalJFTGpPakdwRS11QzhrQTlEaERhaUlheTVNcjZNQQ?oc=5",
+  "fuente": "La Verdad Junín",
+  "deporte": "Tenis de mesa",
+  "tipo": "agenda",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-14T11:29+00:00",
+  "encontrado": "2026-11-16T06:06-03:00",
   "bot": "resultados",
   "noticia": false
  },
