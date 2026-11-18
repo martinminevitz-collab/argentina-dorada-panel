@@ -27,16 +27,6 @@
  ],
  "eventos": [
   {
-   "deporte": "Vóley",
-   "evento": "Copas Argentinas (FEVA)",
-   "inicio": "03/11",
-   "fin": "25/11",
-   "lugar": "Chapadmalal (Prov. de Buenos Aires)",
-   "fuente": "https://feva.org.ar/",
-   "nota": "Torneo nacional. Ya en curso. Fechas por categoría a confirmar",
-   "orden": "2026-11-03"
-  },
-  {
    "deporte": "Básquet",
    "evento": "Clasificatorios FIBA al Mundial Qatar 2027 (5ta ventana): Argentina vs Bahamas",
    "inicio": "26/11",
@@ -65,16 +55,6 @@
    "fuente": "",
    "nota": "",
    "orden": "2026-12-11"
-  },
-  {
-   "deporte": "Fútbol",
-   "evento": "Final del Torneo Clausura 2026 (Liga Profesional)",
-   "inicio": "12/12",
-   "fin": "12/12",
-   "lugar": "Estadio Único Diego A. Maradona, La Plata (Prov. de Buenos Aires)",
-   "fuente": "https://www.elancasti.com.ar/deportes/la-final-del-torneo-clausura-se-jugara-el-estadio-unico-diego-armando-maradona-la-plata-n618666",
-   "nota": "De clubes, no de selecciones. Horario a confirmar",
-   "orden": "2026-12-12"
   },
   {
    "deporte": "Remo",

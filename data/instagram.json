@@ -157,5 +157,293 @@
   "Valentino Martinez Florio": "valenmartinez.17",
   "Zoe Gorski": "zoe.gorski"
  },
- "homonimos": {}
+ "homonimos": {},
+ "federaciones": {
+  "Aguas abiertas": [
+   "cadda1969"
+  ],
+  "Arqueria": [
+   "fatarco"
+  ],
+  "Atletismo": [
+   "cada.atletismo"
+  ],
+  "Badminton": [
+   "febara_arg"
+  ],
+  "Basquet": [
+   "cabboficial"
+  ],
+  "Basquet 3x3": [
+   "cabboficial"
+  ],
+  "Beach Handball": [
+   "kamikazesbh",
+   "cahandball"
+  ],
+  "Beach Voley": [
+   "voley_feva"
+  ],
+  "Beisbol": [
+   "beisbolargentina"
+  ],
+  "Billar": [
+   "federacionargentinadebillar"
+  ],
+  "Bochas": [
+   "cabochas"
+  ],
+  "Bowling": [
+   "aadebowling"
+  ],
+  "Boxeo": [
+   "federacionargentinadebox"
+  ],
+  "Breaking": [
+   "breakingargentina"
+  ],
+  "Canoa Polo": [
+   "federacionargentinadecanoas"
+  ],
+  "Canotaje": [
+   "federacionargentinadecanoas"
+  ],
+  "Canotaje Extremo": [
+   "federacionargentinadecanoas"
+  ],
+  "Canotaje Slalom": [
+   "federacionargentinadecanoas"
+  ],
+  "Carreras de Obstaculos": [
+   "ocr_argentina"
+  ],
+  "Cheer": [
+   "cheer_argentina"
+  ],
+  "Cheerleading": [
+   "cheer_argentina"
+  ],
+  "Ciclismo BMX": [
+   "federacion_argentina_de_bmx"
+  ],
+  "Ciclismo Pista": [
+   "ciclismo.argentina"
+  ],
+  "Ciclismo Ruta": [
+   "ciclismo.argentina"
+  ],
+  "Clavados": [
+   "cadda1969"
+  ],
+  "Cricket": [
+   "cricket.argentina"
+  ],
+  "Dodgeball": [
+   "dodgeball.ar"
+  ],
+  "Escalada": [
+   "fasateamandinismo"
+  ],
+  "Esgrima": [
+   "esgrimaargentina"
+  ],
+  "Esqui": [
+   "fasateamandinismo"
+  ],
+  "Esqui Nautico": [
+   "fadewargentina"
+  ],
+  "Faustball": [
+   "faustballarg"
+  ],
+  "Footgolf": [
+   "aafootgolf"
+  ],
+  "Futbol": [
+   "afaseleccion"
+  ],
+  "Futsal": [
+   "afaseleccion"
+  ],
+  "Gimnasia Acrobatica": [
+   "cagimnasia"
+  ],
+  "Gimnasia Aerobica": [
+   "cagimnasia"
+  ],
+  "Gimnasia Artistica": [
+   "cagimnasia"
+  ],
+  "Gimnasia Ritmica": [
+   "cagimnasia"
+  ],
+  "Gimnasia Trampolin": [
+   "cagimnasia"
+  ],
+  "Golf": [
+   "golfaag"
+  ],
+  "Golf Adaptado": [
+   "golfadaptadoaag"
+  ],
+  "Handball": [
+   "cahandball"
+  ],
+  "Hockey 5s": [
+   "argentina.hockey"
+  ],
+  "Hockey Indoor": [
+   "argentina.hockey"
+  ],
+  "Hockey Subacuatico": [
+   "argentina.uwh"
+  ],
+  "Hockey en Linea": [
+   "capatinoficial"
+  ],
+  "Hockey sobre Cesped": [
+   "argentina.hockey"
+  ],
+  "Hockey sobre Hielo": [
+   "fahh.hockey"
+  ],
+  "Hockey sobre Patines": [
+   "capatinoficial"
+  ],
+  "Judo": [
+   "argjudo"
+  ],
+  "Kabaddi": [
+   "kabaddi_argentina"
+  ],
+  "Karate": [
+   "equipokaratearg"
+  ],
+  "Kickboxing": [
+   "wakoargentinaoficial"
+  ],
+  "Lacrosse": [
+   "argentinalacrosse"
+  ],
+  "Levantamiento de Pesas": [
+   "fa.pesas"
+  ],
+  "Lucha de brazos": [
+   "luchadebrazos.arg"
+  ],
+  "Muaythai": [
+   "muaythai_argentina"
+  ],
+  "Natación": [
+   "cadda1969"
+  ],
+  "Netball": [
+   "netballargentina"
+  ],
+  "Patin Artistico": [
+   "capatinoficial"
+  ],
+  "Patin Carrera": [
+   "capatinoficial"
+  ],
+  "Patinaje sobre Hielo": [
+   "faph_arg"
+  ],
+  "Pelota": [
+   "cappelota"
+  ],
+  "Pentatlon Moderno": [
+   "pentathlonarg"
+  ],
+  "Pickleball": [
+   "argentinapickleball"
+  ],
+  "Racquetball": [
+   "rqbargentina"
+  ],
+  "Remo": [
+   "aara.remo"
+  ],
+  "Remo Costal": [
+   "aara.remo"
+  ],
+  "Roller Derby": [
+   "rollerderbyargentina"
+  ],
+  "Roller Freestyle": [
+   "capatinoficial"
+  ],
+  "Rugby": [
+   "unionargentina"
+  ],
+  "Rugby 7s": [
+   "unionargentina"
+  ],
+  "SUP Paddleboarding": [
+   "asasurfargentina"
+  ],
+  "Salvamento Acuatico": [
+   "fasaarg"
+  ],
+  "Slackline": [
+   "fas.slackline"
+  ],
+  "Softbol": [
+   "argentinasoftbol"
+  ],
+  "Squash": [
+   "asociacion_argentina_de_squash"
+  ],
+  "Sumo": [
+   "sumoargentina"
+  ],
+  "Surf": [
+   "asasurfargentina"
+  ],
+  "Taekwondo": [
+   "cataekwondo"
+  ],
+  "Tchoukball": [
+   "tchoukballargentina"
+  ],
+  "Tenis": [
+   "aatenis"
+  ],
+  "Tenis de Mesa": [
+   "fatmoficial"
+  ],
+  "Tiro": [
+   "argtiro.oficial"
+  ],
+  "Tiro con Arco": [
+   "fatarco"
+  ],
+  "Triatlon": [
+   "tri.arg"
+  ],
+  "Vela": [
+   "fay.argentina"
+  ],
+  "Voley": [
+   "voley_feva"
+  ],
+  "Wakeboard": [
+   "fadewargentina"
+  ],
+  "Waterski": [
+   "fadewargentina"
+  ],
+  "Wushu": [
+   "eventos_fawk"
+  ],
+  "Yachting": [
+   "fay.argentina"
+  ],
+  "natacion artistica": [
+   "cadda1969"
+  ],
+  "waterpolo": [
+   "cadda1969"
+  ]
+ }
 }

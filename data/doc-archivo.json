@@ -4287,6 +4287,176 @@
    "terminado_desde": "2026-11-12",
    "visto": "2026-11-18"
   },
+  "99fd3e13fa42": {
+   "titulo": "PÁDEL - PANAMERICANO DE MENORES (FIP JUNIOR AMERICA PADEL CUP) EN CANCÚN, MÉXICO",
+   "deporte": "PÁDEL",
+   "evento": "PANAMERICANO DE MENORES (FIP JUNIOR AMERICA PADEL CUP) EN CANCÚN, MÉXICO",
+   "fechas": null,
+   "etiqueta": "mas_info",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se jugó del 10 al 14/11"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://padel.org.ar/",
+       "href": "https://padel.org.ar/"
+      },
+      {
+       "t": " (APA)"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.infomerlo.com/noticias/2026/11/16/57375-zoe-benitez-brillo-en-cancun-y-sumo-dos-nuevos-titulos-continentales-para-argentina",
+       "href": "https://www.infomerlo.com/noticias/2026/11/16/57375-zoe-benitez-brillo-en-cancun-y-sumo-dos-nuevos-titulos-continentales-para-argentina"
+      },
+      {
+       "t": " (Nota)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Argentina logró el doblete: "
+      },
+      {
+       "t": "CAMPEONES PANAMERICANOS",
+       "b": true
+      },
+      {
+       "t": " en masculino y femenino. Llegaba como bicampeona en las dos ramas (2022 y 2024)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Por equipos Masculino",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "La Selección masculina le ganó la final 2-1 a Paraguay y se consagró "
+      },
+      {
+       "t": "CAMPEONA PANAMERICANA",
+       "b": true
+      },
+      {
+       "t": ": medalla "
+      },
+      {
+       "t": "DORADA",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Por equipos Femenino",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "La Selección femenina le ganó la final 2-0 a Brasil y se consagró "
+      },
+      {
+       "t": "CAMPEONA PANAMERICANA",
+       "b": true
+      },
+      {
+       "t": ": medalla "
+      },
+      {
+       "t": "DORADA",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Felicitas Siage y Camila Ingrassia (Sub 14) ganaron el primer punto y Zoe Benítez y Victoria Vílchez el segundo por 6-1 y 6-2"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Antes, en semis, le ganaron 3-0 a Panamá sin ceder games"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Open Sub 16 Femenino",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Zoe Benítez y Jazmín Dos Santos se consagraron "
+      },
+      {
+       "t": "CAMPEONAS",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan: plantel completo y resultados del resto de las categorías"
+      }
+     ]
+    }
+   ],
+   "id": "99fd3e13fa42",
+   "version": "ce81ce17fc",
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-18",
+   "visto": "2026-11-18"
+  },
   "9a144f04a210": {
    "titulo": "PARATRIATLÓN - WORLD TRIATHLON PARA CUP EN SAN PEDRO DE LA PAZ, CHILE",
    "deporte": "PARATRIATLÓN",
