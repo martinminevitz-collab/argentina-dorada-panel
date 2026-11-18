@@ -145,9 +145,9 @@ function combinar() {
   const esDe = (a, e) => a.evento_id === e.id || sinTildes(a.evento_titulo) === sinTildes(e.titulo);
   estado.eventos = [...manuales, ...doc, ...archivados].map((e) => {
     const baja = bajas.find((a) => esDe(a, e));
-    if (baja) e = { ...e, eliminado: { idBase: String(baja.id || "").includes("-") ? baja.id : null } };
-    const listo = e.etiqueta === "mas_info" && listos.find((a) => esDe(a, e));
-    if (listo) e = { ...e, etiqueta: "publicable", pasadoAPublicable: { idBase: String(listo.id || "").includes("-") ? listo.id : null } };
+    if (baja) e = { ...e, eliminado: { en: baja.creado_en, idBase: String(baja.id || "").includes("-") ? baja.id : null } };
+    const listo = (e.etiqueta === "mas_info" || e.etiqueta === "en_curso") && listos.find((a) => esDe(a, e));
+    if (listo) e = { ...e, etiqueta: "publicable", pasadoAPublicable: { antes: e.etiqueta, idBase: String(listo.id || "").includes("-") ? listo.id : null } };
     const mios = ags.filter((a) => esDe(a, e));
     if (!mios.length) return e;
     return { ...e, version: e.version + ":" + huella(mios.map((a) => a.texto).join("|")),
@@ -224,9 +224,13 @@ function eventosBA() {
       fechas: [fechas, f.lugar].filter(Boolean).join(" · "), soloFechas: fechas, lugar: f.lugar, contactoAcred: f.acreditacion || "", bloques, version: "1" };
   });
   // si un evento de la Agenda ya está en la planilla (títulos parecidos), queda solo el de la planilla
-  const palabras = (t) => new Set(sinTildes(t).split(/[^a-z0-9]+/).filter((w) => w.length > 3));
-  const planilla = deLaPlanilla.map((e) => palabras(e.titulo));
-  const repetido = (e) => { const p = palabras(e.titulo); return planilla.some((q) => [...p].filter((w) => q.has(w)).length >= Math.max(2, Math.min(p.size, q.size) * 0.5)); };
+  // (mismo deporte y palabras propias en común: "campeonato", "argentino", "remo"... no cuentan)
+  const COMUNES = new Set(["campeonato", "argentino", "argentina", "nacional", "torneo", "abierto", "copa", "mundial", "buenos", "aires",
+    "tigre", "caba", "fecha", "etapa", "open", "grand", "gran", "premio", "internacional", "sudamericano", "panamericano", "americano"]);
+  const palabras = (t) => new Set(sinTildes(t).split(/[^a-z0-9]+/).filter((w) => w.length > 3 && !COMUNES.has(w)));
+  const planilla = deLaPlanilla.map((e) => ({ dep: sinTildes(e.deporte), p: palabras(e.titulo) }));
+  const repetido = (e) => { const p = palabras(e.evento || e.titulo), dep = sinTildes(e.deporte);
+    return planilla.some((q) => (!q.dep || !dep || q.dep === dep) && [...p].filter((w) => q.p.has(w)).length >= Math.max(2, Math.min(p.size, q.p.size) * 0.6)); };
   const deLaAgenda = estado.eventos.filter((e) => e.seccion === "agenda" && !e.multideportivo && !e.eliminado && esDeBA(e) && !repetido(e));
   const q = sinTildes($("#buscar").value), dep = $("#deporte").value;
   return [...deLaPlanilla, ...deLaAgenda].filter((e) => (!dep || e.deporte === dep) && (!q || sinTildes(e.titulo + " " + e.deporte + " " + e.fechas).includes(q)));
@@ -452,9 +456,11 @@ function eventosDe(tab, conFiltros = true) {
     if (seccion === "resultados" && e.multideportivo) return false;
     if (e.vencido) return false; // terminó hace más de 7 días
     if (e.eliminado && (!conFiltros || !$("#ver-publicados").checked)) return false;
+    if (e.eliminado && haceMasDeUnaSemana(e.eliminado.en)) return false; // eliminados: se ven 7 días y desaparecen
     const esAgenda = seccion === "agenda"; // la agenda no se "publica": siempre se ve todo
     if (!conFiltros) return esAgenda || !estaPublicado(e) || tieneNovedades(e);
     if (!esAgenda && !$("#ver-publicados").checked && estaPublicado(e) && !tieneNovedades(e)) return false;
+    if (!esAgenda && estaPublicado(e) && !tieneNovedades(e) && haceMasDeUnaSemana(estado.publicados[e.id]?.en)) return false; // publicados: 7 días
     if (tab === "resultados" && estado.filtroEstado && e.etiqueta !== estado.filtroEstado) return false;
     const dep = $("#deporte").value;
     if (dep && e.deporte !== dep) return false;
@@ -463,6 +469,8 @@ function eventosDe(tab, conFiltros = true) {
     return true;
   });
 }
+
+function haceMasDeUnaSemana(fecha) { return !!fecha && Date.now() - new Date(fecha).getTime() > 7 * 864e5; }
 
 function dentroDelRango(n) {
   const desde = Date.now() - Number($("#rango").value) * 864e5;
@@ -556,7 +564,7 @@ function tarjetaEvento(e, tpl) {
     t.querySelector(".pie").insertBefore(g, t.querySelector(".pie .publicado"));
   }
   if (!e.manual && !e.archivado && !e.id.startsWith("ba:")) botonEliminar(e, t);
-  if (!e.archivado && (e.etiqueta === "mas_info" || e.pasadoAPublicable)) botonPublicable(e, t);
+  if (!e.archivado && (e.etiqueta === "mas_info" || e.etiqueta === "en_curso" || e.pasadoAPublicable)) botonPublicable(e, t);
   if (e.manual) {
     const chip = document.createElement("span"); chip.className = "chip manual"; chip.textContent = "✍️ A mano";
     chip.title = "Lo cargó alguien desde el panel. Cuando el agente lo pase al Doc, queda el del Doc.";
@@ -577,15 +585,18 @@ function tarjetaEvento(e, tpl) {
 function botonPublicable(e, t) {
   if (!window.Base?.activa()) return;
   const volver = !!e.pasadoAPublicable;
-  const b = boton(volver ? "↩ Volver a Falta info" : "✓ Pasar a Publicable", async () => {
+  const antes = volver ? e.pasadoAPublicable.antes : e.etiqueta;
+  const b = boton(volver ? `↩ Volver a ${ETIQUETAS[antes] || "Falta info"}` : "✓ Pasar a Publicable", async () => {
     b.disabled = true;
     try {
       if (volver) {
         if (!e.pasadoAPublicable.idBase) { b.disabled = false; return avisar("El agente ya lo pasó en el Doc"); }
-        await Base.borrarDato(e.pasadoAPublicable.idBase); avisar("Volvió a Falta info");
+        await Base.borrarDato(e.pasadoAPublicable.idBase); avisar(`Volvió a ${ETIQUETAS[antes] || "Falta info"}`);
       } else {
         await Base.agregarDato({ evento_id: e.id, evento_titulo: e.titulo, tipo: "correccion",
-          texto: "[PUBLICABLE] Ya está completo: en el título cambiar (Necesito más info) por PUBLICABLE" });
+          texto: antes === "en_curso"
+            ? "[PUBLICABLE] Ya se puede publicar aunque siga en curso: en el título cambiar (EN CURSO) por PUBLICABLE y seguir actualizándolo"
+            : "[PUBLICABLE] Ya está completo: en el título cambiar (Necesito más info) por PUBLICABLE" });
         avisar("Pasó a Publicable");
       }
     } catch { b.disabled = false; avisar("No se pudo guardar. Probá de nuevo"); }

@@ -136,10 +136,10 @@
   }
 
   async function traerPublicados() {
-    const { data, error } = await cliente.from("publicados").select("evento_id, version, marcado_por");
+    const { data, error } = await cliente.from("publicados").select("evento_id, version, marcado_por, marcado_en");
     if (error) return;
     const mapa = {};
-    for (const f of data) mapa[f.evento_id] = { v: f.version, por: f.marcado_por };
+    for (const f of data) mapa[f.evento_id] = { v: f.version, por: f.marcado_por, en: f.marcado_en };
     window.alCambiarPublicados?.(mapa);
   }
 

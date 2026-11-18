@@ -71,6 +71,8 @@ def main():
                 ini, fin = fecha(ev.get("inicio")), fecha(ev.get("fin"))
                 if (fin or ini) and (fin or ini) < hoy - timedelta(days=1):
                     continue  # ya pasó
+                if any(normalizar(x) in normalizar(ev["evento"]) for x in cfg.get("excluir", [])):
+                    continue  # torneo nacional de un deporte de equipo: no va
                 clave = normalizar(ev["evento"]) + (ev.get("inicio") or "")
                 if clave in vistos:
                     continue

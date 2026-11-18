@@ -33,13 +33,27 @@
     "anuncio su retiro",
     "becas",
     "beca",
-    "becad*"
+    "becad*",
+    "lesion*",
+    "lesionad*",
+    "se lesiono",
+    "rotura de ligamento",
+    "ligamentos cruzados",
+    "desgarro",
+    "fractura",
+    "se pierde el",
+    "se pierde la",
+    "baja por",
+    "quedo afuera",
+    "sera operad*",
+    "fue operad*"
   ],
   "busquedas": [
     "(\"Las Leonas\" OR \"Los Leones\" OR \"Los Pumas\" OR \"Las Pumas\" OR \"Los Gladiadores\" OR \"La Garra\" OR \"Las Panteras\" OR \"Los Murciélagos\" OR \"Las Murciélagas\" OR \"Las Guerreras\" OR \"Los Pumas 7s\") (nominada OR nominado OR nominadas OR premio OR terna OR convocatoria OR convocados OR convocadas OR récord OR \"del año\" OR capitana OR entrenador)",
     "(deportista OR atleta OR nadadora OR nadador OR tenista OR judoca OR remero OR ciclista) argentina (nominada OR nominado OR premio OR terna OR récord OR abanderado OR abanderada OR \"mejor del mundo\" OR \"ranking mundial\")",
     "(\"Premios Olimpia\" OR \"Olimpia de Plata\" OR \"Olimpia de Oro\" OR \"Premios Jorge Newbery\" OR \"Premio Konex\")",
-    "(ENARD OR \"Comité Olímpico Argentino\" OR \"Equipo Argentino\") (becas OR abanderado OR abanderada OR delegación OR anuncio)"
+    "(ENARD OR \"Comité Olímpico Argentino\" OR \"Equipo Argentino\") (becas OR abanderado OR abanderada OR delegación OR anuncio)",
+    "(\"Las Leonas\" OR \"Los Leones\" OR \"Los Pumas\" OR \"Las Pumas\" OR \"Los Gladiadores\" OR \"La Garra\" OR \"Las Panteras\" OR selección OR deportista OR atleta) argentina (lesión OR lesionada OR lesionado OR \"se pierde\" OR baja OR operada OR operado OR desgarro OR ligamentos)"
   ],
   "excluir": [
     "gran premio",
@@ -48,6 +62,11 @@
     "premio konex de",
     "recordar",
     "manchester",
-    "real madrid"
+    "real madrid",
+    "baja del petroleo",
+    "baja de tasas",
+    "baja de precios",
+    "baja la inflacion",
+    "riesgo pais"
   ]
 }

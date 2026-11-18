@@ -62,7 +62,7 @@ def leer_planilla():
             if extra.get("activo", True):
                 # prioridad: columna BUSCAR de la planilla > deportes.json > nombre del deporte
                 buscar = celda(fila, col_buscar) or extra.get("buscar", nombre)
-                excluir = [x.strip().lower() for x in celda(fila, col_excluir).split(",") if x.strip()]
+                excluir = [x.strip().lower() for x in celda(fila, col_excluir).split(",") if x.strip()] + extra.get("excluir", [])
                 deportes.append({"nombre": nombre, "buscar": buscar, "excluir": excluir, "activo": True})
         for i, valor in enumerate(fila[1:], start=1):
             if i in (col_buscar, col_excluir):

@@ -9,7 +9,7 @@
     {"nombre": "Invierno", "buscar": "esquí OR snowboard OR biatlón OR \"deportes de invierno\"", "activo": true},
     {"nombre": "Pesas", "buscar": "\"levantamiento olímpico\" OR halterofilia OR pesista", "activo": true},
     {"nombre": "Rugby", "buscar": "Pumas OR Pumitas OR \"Argentina XV\" rugby", "activo": true},
-    {"nombre": "Rugby y Rugby 7s", "buscar": "\"Pumas 7s\" OR \"rugby seven\" OR Yaguaretés", "activo": true},
+    {"nombre": "Rugby y Rugby 7s", "buscar": "\"Pumas 7s\" OR \"rugby seven\" OR \"Yaguaretés rugby\" OR \"Yaguaretés XV\"", "excluir": ["yaguarete SALVO rugby / seven / pumas / try"], "activo": true},
     {"nombre": "Hockey", "buscar": "Leonas OR Leones OR \"hockey sobre césped\"", "activo": true},
     {"nombre": "Tenis", "buscar": "\"Copa Davis\" OR \"Billie Jean King\" OR \"tenis juvenil\" OR \"Junior Davis\"", "activo": true},
     {"nombre": "Basquet", "buscar": "\"selección de básquet\" OR AmeriCup OR \"Mundial de básquet\" OR \"básquet femenino selección\"", "activo": true},
@@ -18,6 +18,8 @@
     {"nombre": "Adaptados", "buscar": "paralímpico OR parapanamericano OR \"para atletismo\" OR \"para natación\" OR \"deporte adaptado\"", "activo": true},
     {"nombre": "Tiro", "buscar": "\"tiro deportivo\" OR \"tiro olímpico\" OR \"tiro skeet\"", "activo": true},
     {"nombre": "OCR", "buscar": "\"carrera de obstáculos\" OR \"OCR mundial\"", "activo": true},
+    {"nombre": "Escalada", "buscar": "\"escalada deportiva\" OR escaladora OR escalador OR boulder OR \"muro de escalada\"", "excluir": ["remedios de escalada", "escalada diplomatica", "escalada de tension", "escalada con iran"], "activo": true},
+    {"nombre": "Lucha", "buscar": "\"lucha olímpica\" OR \"lucha grecorromana\" OR \"lucha libre olímpica\" OR \"luchadora argentina\" OR \"luchador argentino\" OR \"Federación Argentina de Lucha\"", "excluir": ["lucha contra", "wwe", "jornada de lucha", "semana nacional de lucha"], "activo": true},
     {"nombre": "Natacion", "buscar": "natación Sudamericano OR Mundial OR Panamericano OR récord", "activo": true}
   ]
 }

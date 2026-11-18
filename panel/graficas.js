@@ -447,13 +447,14 @@
   function alertar(t) { const a = $("#aviso"); if (!a) return; a.textContent = t; a.hidden = false; setTimeout(() => (a.hidden = true), 2500); }
 
   // ---------- desde un resultado: arma el carrusel con los datos del evento ----------
+  function sinTildesG(t) { return String(t || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase(); }
   function limpio(partes) {
     return partes.filter((x) => !x.href).map((x) => x.t).join("").replace(/https?:\/\/\S+/g, "").replace(/\(\s*\)/g, "").replace(/\s+/g, " ").trim();
   }
   // opciones.medalla(partes) -> {clave: "oro"|"plata"|"bronce"} si la línea tiene una medalla en negrita
   function desdeEvento(e, opciones = {}) {
     // se guarda de dónde salió, así se puede pasar a otra plantilla (carrusel, medalla, historias) con los mismos datos
-    const origen = { deporte: e.deporte || "", evento: e.evento || e.titulo || "", bloques: (e.bloques || []).filter((b) => b.partes),
+    const origen = { deporte: e.deporte || "", evento: e.evento || e.titulo || "", bloques: (e.bloques || []).filter((b) => b.partes || b.tipo === "espacio"),
       titulo: opciones.titulo || "", medallaAuto: !!opciones.medalla };
     G = armarDesde(origen, opciones.plantilla);
     guardar();
@@ -473,24 +474,60 @@
     return txt;
   }
 
+  // ---- de un evento a placas: solo lo importante y corto ----
+  // Señales de que una línea es un resultado (las de fecha, lugar, horario o "compitieron 24" no van a la gráfica)
+  const ES_RESULTADO = /medall|dorad|platead|bronce|\bgan[oó]|venci[oó]|cay[oó]|perdi[oó]|empat|campe[oó]n|subcampe|podio|r[eé]cord|clasific|\d+\s*[°º]|\bfinal\b|\d+\s*-\s*\d+|\bvs\.?\b|puesto|termin[oó]|lleg[oó]|eliminad|avanz|pas[oó] a/i;
+  const TITULO_NO = /^(fecha|lugar|sede|horario|cronograma|c[oó]mo (ver|seguir)|transmisi|links?|fuentes?|inscript|participan|delegaci[oó]n)/i;
+  // acorta una línea: primera oración, sin aclaraciones largas entre paréntesis (los tiempos y países quedan)
+  function corta(t) {
+    t = t.replace(/\s*\((?![A-Z]{3}\)|\d)[^)]{25,}\)/g, "").trim();
+    const primera = t.split(/(?<=[a-záéíóú0-9)])\.\s+(?=[A-ZÁÉÍÓÚ])/)[0];
+    if (primera.length >= 25) t = primera;
+    if (t.length > 130) t = t.slice(0, 130).replace(/\s+\S*$/, "") + "…";
+    return t.replace(/\.$/, "");
+  }
+  const MED = { oro: /dorad|\boro\b/i, plata: /platead|\bplata\b/i, bronce: /bronce/i };
+
   function armarDesde(o, plantilla) {
-    const placas = [], lineas = [];
-    let actual = null, medalla = null;
+    let placas = [];
+    const lineas = [], agregados = [];
+    let actual = null, medalla = null, vioSub = false;
     const fnMedalla = o.medallaAuto || plantilla === "medalla" ? window.tipoMedalla : null;
     for (const b of o.bloques) {
+      if (b.tipo === "espacio") { actual = null; continue; } // un renglón vacío en el Doc corta la placa
       const txt = b.tipo === "texto" ? soloArg(limpio(b.partes) || "") : limpio(b.partes);
-      if (!txt) continue;
+      if (!txt || /^corrección:/i.test(txt)) continue; // las correcciones son para el agente, no para la gráfica
       if (b.tipo === "texto" || b.tipo === "sub") lineas.push(txt);
       if (!medalla && fnMedalla && (b.tipo === "texto" || b.tipo === "sub")) {
         const m = fnMedalla(b.partes);
         if (m) medalla = { clave: m.clave, texto: txt };
       }
-      if (b.tipo === "sub") { actual = { titulo: txt, texto: [] }; placas.push(actual); }
-      else if (b.tipo === "texto") { if (!actual) { actual = { titulo: "", texto: [] }; placas.push(actual); } actual.texto.push(txt); }
+      if (b.agregado && b.tipo === "texto") { agregados.push({ txt, med: window.tipoMedalla?.(b.partes)?.clave }); continue; }
+      if (b.tipo === "sub") { vioSub = true; actual = { titulo: txt.replace(/:\s*$/, ""), texto: [] }; placas.push(actual); }
+      else if (b.tipo === "texto") { if (!actual) { actual = { titulo: "", texto: [], intro: !vioSub }; placas.push(actual); } actual.texto.push(corta(txt)); }
     }
+    // los datos agregados (amarillo) van donde corresponden: una medalla a su placa de medallas, si nombra una prueba a esa placa
+    for (const a of agregados) {
+      const t = corta(a.txt), pal = sinTildesG(a.txt);
+      const destino = (a.med && placas.find((pl) => MED[a.med].test(pl.titulo)))
+        || placas.find((pl) => pl.titulo && sinTildesG(pl.titulo).split(/\s+/).filter((w) => w.length > 3).some((w) => pal.includes(w)));
+      if (destino) destino.texto.push(t);
+      else if (a.med) placas.unshift({ titulo: "Medalla", texto: [t] }); // una medalla nueva sin placa: va primero
+      else (placas.find((pl) => /otros/i.test(pl.titulo)) || placas[placas.push({ titulo: "", texto: [] }) - 1]).texto.push(t);
+    }
+    // afuera: placas de fecha, lugar, horarios... y textos sueltos que no traen ningún resultado
+    const conRes = (pl) => pl.texto.some((x) => ES_RESULTADO.test(x));
+    const hayRes = placas.some(conRes); // si no hay ningún resultado (ej. una noticia), queda todo
+    placas = placas.filter((pl) => pl.texto.length && !TITULO_NO.test(pl.titulo) && (!hayRes || conRes(pl)));
+    placas = placas.map((pl) => (pl.titulo ? pl : { ...pl, titulo: pl.texto.some((x) => /medall/i.test(x)) ? "Medallero" : "Resultado" }));
+    // en una placa de medallas no hace falta repetir "ganó la medalla DORADA en": queda "Micaela Levaggi – Milla (4:58.6)"
+    const REPITE = /\s+(?:gan[oó]|se colg[oó]|obtuvo|consigui[oó]|logr[oó]|conquist[oó])\s+(?:la\s+)?medalla\s+(?:de\s+)?(?:dorada|plateada|bronce|oro|plata)\s*(?:en\s+(?:el|la|los|las)\s+|en\s+)?/i;
+    placas = placas.map((pl) => (Object.values(MED).some((r) => r.test(pl.titulo)) ? { ...pl, texto: pl.texto.map((x) => x.replace(REPITE, " – ")) } : pl));
+    // máximo 3 renglones por placa: si hay más, sigue en otra placa con el mismo título (así la letra no queda chiquita)
+    placas = placas.flatMap((pl) => { const r = []; for (let i = 0; i < pl.texto.length; i += 3) r.push({ ...pl, texto: pl.texto.slice(i, i + 3) }); return r; });
     if (!plantilla) plantilla = medalla && o.medallaAuto ? "medalla" : "carrusel";
     const acento = plantilla === "medalla" ? "naranja" : undefined;
-    const lasPlacas = placas.slice(0, 6).map((pl) => pag("placa", { titulo: pl.titulo || "Resultado", texto: pl.texto.join("\n").slice(0, 700), credito: "", acento }));
+    const lasPlacas = placas.slice(0, 9).map((pl) => pag("placa", { titulo: pl.titulo, texto: pl.texto.join("\n"), credito: "", acento }));
     const base = { deporte: o.deporte, torneo: o.evento, instancia: "", credito: "" };
     // marcador: "2-0 vs Nueva Zelanda (NZL)", "21-16, 21-12 vs X (DOM)"
     const lineaVs = lineas.find((l) => /\bvs\.?\b/i.test(l) && /\d+\s*-\s*\d+/.test(l)) || "";
@@ -504,7 +541,7 @@
       const m = txt.match(/^(.+?)\s+(?:les?\s+)?(gan[oó]|logr[oó]|se (colg[oó]|qued[oó]|consagr[oó]|llev[oó])|conquist[oó]|obtuvo|consigui[oó]|fue|termin[oó]|sum[oó])(?=\s|$)/i);
       pags = [pag("medalla", { prueba: o.deporte, nombre: m ? m[1].replace(/\(.*?\)/g, "").trim() : "", medalla: medalla?.clave || "oro", evento: o.evento, credito: "" }), ...lasPlacas];
     } else if (plantilla === "historia") {
-      const pls = placas.slice(0, 4).map((pl) => pag("s-texto", { ...base, titulo: pl.titulo || "Resultado", texto: pl.texto.join("\n").slice(0, 500) }));
+      const pls = placas.slice(0, 6).map((pl) => pag("s-texto", { ...base, titulo: pl.titulo, texto: pl.texto.join("\n") }));
       pags = [pag("s-portada", { ...base, linea1: "Argentina", linea2: "", credito: "" }), ...pls];
     } else if (plantilla === "sets") {
       pags = [pag("s-sets", { ...base, arg: "Argentina", rival, rival_pais: pais, sets: marcadores.map((s) => s.join("-")).join(", "), frase: "" })];
