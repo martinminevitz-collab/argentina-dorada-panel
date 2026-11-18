@@ -1,4 +1,14 @@
 {
- "_nota": "Datos que los compañeros agregaron a un evento desde el panel y que todavía no están en el Doc. El agente los suma al bloque de ese evento y al final escribe 'Ref panel: <ref>'.",
- "pendientes": []
+ "_nota": "Datos que los compañeros agregaron a un evento desde el panel y que todavía no están en el Doc. El agente los suma al bloque de ese evento y al final escribe 'Ref panel: <ref>'. 'noticias' son noticias cargadas a mano: son solo para el panel, el agente no las toca.",
+ "pendientes": [
+  {
+   "ref": "cbdcf02f",
+   "evento_id": "dfbf893bf031",
+   "evento_titulo": "REMO - CAMPEONATO ARGENTINO EN TIGRE, BUENOS AIRES (20 al 22 de noviembre)",
+   "tipo": "dato",
+   "texto": "Sede: Pista Nacional de Remo, Tigre.\nParticipación récord de la serie 2021–2026: 377 botes, 416 atletas y 36 clubes.\nSerán 53 pruebas.\n\nDato extra: La AARA cumple 125 años. (Fuente: https://www.remodeprimera.com.ar/2026/?m=1)",
+   "creado_en": "2026-11-18T23:02:26.14073+00:00"
+  }
+ ],
+ "noticias": []
 }
