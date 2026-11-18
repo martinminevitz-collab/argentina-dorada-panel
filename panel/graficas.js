@@ -294,8 +294,11 @@
       <div class="g-tira">${G.paginas.map((p, i) => `<button class="g-mini ${i === G.sel ? "activo" : ""}" data-i="${i}">${escalada(p, i, 92)}<span>${num(i)}</span></button>`).join("")}
         <div class="g-agregar"><select aria-label="Agregar página">${otros.map(([k, t]) => `<option value="${k}">${esc(t.nombre)}</option>`).join("")}</select><button class="g-mas">+ Página</button></div></div>
       <div class="g-trabajo"><div class="g-vista"></div><div class="g-campos"></div></div>
-      <div class="g-acciones"><button class="g-bajar principal">⬇ Descargar ${G.paginas.length > 1 ? `las ${G.paginas.length} imágenes` : "imagen"}</button>
+      <div class="g-acciones">${navigator.canShare ? `<button class="g-compartir principal">📲 Publicar (Instagram, X, WhatsApp…)</button>` : ""}
+        <button class="g-bajar ${navigator.canShare ? "" : "principal"}">⬇ Descargar ${G.paginas.length > 1 ? `las ${G.paginas.length} imágenes` : "imagen"}</button>
         <button class="g-reset">Volver a la plantilla</button></div>
+      ${navigator.canShare ? `<p class="ayuda">📲 Publicar abre la lista de apps del celu: elegí Instagram → Publicación y ya va con las ${G.paginas.length} imágenes en orden, sin guardarlas.
+        Si Instagram las muestra cuadradas, tocá el ícono de las flechitas (abajo a la izquierda de la foto) para que queden 4:5.</p>` : ""}
       <p class="ayuda">Las fotos quedan solo en este dispositivo. Los textos se guardan como borrador acá mismo.</p>`;
     raiz.querySelectorAll(".g-plantillas button").forEach((b) => (b.onclick = () => {
       // fotos ya subidas: se conservan en el mismo orden
@@ -313,7 +316,8 @@
         acento: base.datos.acento, fondo: base.datos.fondo, titulo: "Título", texto: "Texto" });
       G.paginas.push(nueva); G.sel = G.paginas.length - 1; guardar(); armar();
     };
-    raiz.querySelector(".g-bajar").onclick = descargar;
+    raiz.querySelector(".g-bajar").onclick = () => descargar(false);
+    raiz.querySelector(".g-compartir")?.addEventListener("click", () => descargar(true));
     raiz.querySelector(".g-reset").onclick = () => { G = G.origen ? armarDesde(G.origen, G.plantilla) : nuevo(G.plantilla); guardar(); armar(); };
     raiz.querySelectorAll(".g-mini").forEach((m) => ajustar(m.querySelector(".g-pagina"), G.paginas[Number(m.dataset.i)]));
     vista(); campos();
@@ -413,8 +417,8 @@
     return fuentesCSS;
   }
 
-  async function descargar() {
-    const b = raiz.querySelector(".g-bajar"); const txt = b.textContent;
+  async function descargar(compartir) {
+    const b = raiz.querySelector(compartir ? ".g-compartir" : ".g-bajar"); const txt = b.textContent;
     b.disabled = true; b.textContent = "Armando las imágenes…";
     const taller = document.createElement("div"); taller.className = "g-taller";
     document.body.append(taller);
@@ -431,9 +435,10 @@
         const blob = await htmlToImage.toBlob(nodo, { width: w, height: h, pixelRatio: 1, fontEmbedCSS });
         archivos.push(new File([blob], `argentina-dorada-${G.plantilla}-${num(i)}.png`, { type: "image/png" }));
       }
-      // en el celu: se abre "Compartir" (guardar en la galería o mandar directo a Instagram)
-      if (navigator.canShare?.({ files: archivos }) && matchMedia("(pointer: coarse)").matches) {
-        await navigator.share({ files: archivos }).catch(() => {});
+      // "Publicar": se abre la lista de apps (Instagram, X, WhatsApp...) con las imágenes en orden, sin guardarlas
+      if (compartir) {
+        if (navigator.canShare?.({ files: archivos })) await navigator.share({ files: archivos }).catch(() => {});
+        else alertar("Este navegador no deja compartir imágenes: usá Descargar");
       } else {
         for (const f of archivos) {
           const a = document.createElement("a"); a.href = URL.createObjectURL(f); a.download = f.name; a.click();

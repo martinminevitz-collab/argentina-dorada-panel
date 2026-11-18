@@ -42,13 +42,23 @@ def main():
         return
     doc = guardar.leer(guardar.DATA / "doc-resultados.json", {})
     refs = {r for ev in doc.get("eventos", []) for r in ev.get("refs_panel", [])}
-    pendientes = []
+    pendientes, multi = [], []
     for ev in eventos:
         ref = ev["id"].replace("-", "")[:REF]
+        es_multi = str(ev.get("detalle") or "").startswith("[MULTIDEPORTIVO]")
+        if es_multi:
+            multi.append(ref)  # creado como multideportivo: el lector del Doc lo pone en su propia pestaña
         if ref in refs:
             continue
-        pendientes.append({"ref": ref, **{k: ev.get(k) for k in
-                           ("seccion", "estado", "deporte", "titulo", "fechas", "lugar", "detalle", "link", "creado_en")}})
+        fila = {"ref": ref, **{k: ev.get(k) for k in
+                ("seccion", "estado", "deporte", "titulo", "fechas", "lugar", "detalle", "link", "creado_en")}}
+        if es_multi:
+            fila["detalle"] = re.sub(r"^\[MULTIDEPORTIVO\]\n?", "", fila["detalle"]) or None
+            fila["multideportivo"] = True
+        pendientes.append(fila)
+    rm = guardar.DATA / "multi-refs.json"
+    if guardar.leer(rm, {}).get("refs") != multi:
+        guardar.escribir(rm, {"_nota": "Eventos creados en el panel como multideportivos (por su 'Ref panel'): van en su propia pestaña.", "refs": multi})
     ruta = guardar.DATA / "eventos-manuales.json"
     nuevo = {"_nota": "Eventos cargados a mano en el panel que todavía no están en el Doc. El agente los pasa al Doc "
                       "y al final del bloque escribe la línea 'Ref panel: <ref>'.",
@@ -66,9 +76,12 @@ def agregados(refs):
     except Exception as e:
         print(f"⚠️  No se pudieron leer los datos agregados: {e}")
         return
-    pendientes, eliminados = [], []
+    pendientes, eliminados, noticias = [], [], []
     for f in filas:
         ref = f["id"].replace("-", "")[:REF]
+        if str(f.get("texto") or "").startswith("[NOTICIA]"):  # noticia cargada a mano en 📰 Noticias: es solo para el panel, no va al Doc
+            noticias.append({k: f.get(k) for k in ("id", "evento_id", "evento_titulo", "tipo", "texto", "creado_en")})
+            continue
         if f.get("tipo") == "eliminar" or str(f.get("texto") or "").startswith("[ELIMINAR]"):  # "🗑 Eliminar" del panel: va a la lista de vencidos y el agente saca el bloque del Doc
             eliminados.append(f.get("evento_titulo") or "")
             continue
@@ -77,9 +90,10 @@ def agregados(refs):
         pendientes.append({"ref": ref, **{k: f.get(k) for k in ("evento_id", "evento_titulo", "tipo", "texto", "creado_en")}})
     ruta = guardar.DATA / "agregados.json"
     nuevo = {"_nota": "Datos que los compañeros agregaron a un evento desde el panel y que todavía no están en el Doc. "
-                      "El agente los suma al bloque de ese evento y al final escribe 'Ref panel: <ref>'.",
-             "pendientes": pendientes}
-    if guardar.leer(ruta, {}).get("pendientes") != pendientes:
+                      "El agente los suma al bloque de ese evento y al final escribe 'Ref panel: <ref>'. 'noticias' son noticias cargadas a mano: son solo para el panel, el agente no las toca.",
+             "pendientes": pendientes, "noticias": noticias}
+    viejo = guardar.leer(ruta, {})
+    if viejo.get("pendientes") != pendientes or viejo.get("noticias", []) != noticias:
         guardar.escribir(ruta, nuevo)
     print(f"✅ Datos agregados: {len(filas)} en la base, {len(pendientes)} pendientes de pasar al Doc")
     # vencidos.json lo arma el lector del Doc (corre antes); acá se le suman los eliminados desde el panel

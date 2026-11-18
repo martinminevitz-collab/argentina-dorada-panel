@@ -58,7 +58,7 @@ async function cargar() {
     estado.modeloAcred = modeloAcred;
     estado.instagram = Object.entries(insta.cuentas || {}).sort((a, b) => b[0].length - a[0].length);
     estado.homonimos = Object.entries(insta.homonimos || {}).sort((a, b) => b[0].length - a[0].length);
-    estado.agregadosBot = agregados.pendientes || [];
+    estado.agregadosBot = [...(agregados.pendientes || []), ...(agregados.noticias || [])];
     estado.ba = ba;
     estado.manualesBot = manuales.pendientes || [];
     estado.medalleros = medalleros;
@@ -115,7 +115,8 @@ function partesConNegrita(linea) {
 function aEvento(f) {
   const bloques = [];
   if (f.link) bloques.push({ tipo: "link", partes: [{ t: f.link, href: f.link }, { t: " (Fuente)" }] });
-  for (const linea of String(f.detalle || "").split("\n")) {
+  const multi = String(f.detalle || "").startsWith("[MULTIDEPORTIVO]");
+  for (const linea of String(f.detalle || "").replace(/^\[MULTIDEPORTIVO\]\n?/, "").split("\n")) {
     const l = linea.trim();
     if (!l) { if (bloques.length && bloques.at(-1).tipo !== "espacio") bloques.push({ tipo: "espacio" }); continue; }
     bloques.push({ tipo: /^\*\*[^*]+\*\*:?$/.test(l) ? "sub" : "texto", partes: partesConNegrita(l) });
@@ -124,7 +125,7 @@ function aEvento(f) {
   return { id: "manual:" + ref, ref, idBase: f.id && f.id.includes("-") ? f.id : null, manual: true,
     titulo: f.titulo, evento: f.titulo, deporte: f.deporte || "", seccion: f.seccion,
     etiqueta: f.seccion === "agenda" ? "agenda" : (f.estado || "en_curso"),
-    fechas: [f.fechas, f.lugar].filter(Boolean).join(" · "), bloques, version: huella(JSON.stringify(f)) };
+    fechas: [f.fechas, f.lugar].filter(Boolean).join(" · "), bloques, version: huella(JSON.stringify(f)), esMulti: multi };
 }
 
 function combinar() {
@@ -136,7 +137,14 @@ function combinar() {
   const todos = (estado.agregadosBase ?? estado.agregadosBot ?? []).filter((a) => !refs.has(refDe(a)));
   // marcas especiales (se guardan como "correccion" con [ELIMINAR] / [PUBLICABLE] adelante: no hace falta tocar la base)
   const esMarca = (a, m) => a.tipo === m.toLowerCase() || String(a.texto || "").startsWith(`[${m}]`);
-  const ags = todos.filter((a) => !esMarca(a, "ELIMINAR") && !esMarca(a, "PUBLICABLE"));
+  const ags = todos.filter((a) => !esMarca(a, "ELIMINAR") && !esMarca(a, "PUBLICABLE") && !esMarca(a, "NOTICIA"));
+  // noticias cargadas a mano en la pestaña 📰 Noticias (se guardan como dato con [NOTICIA] adelante)
+  estado.noticiasMano = (estado.agregadosBase ?? estado.agregadosBot ?? []).filter((a) => esMarca(a, "NOTICIA")).map((a) => {
+    let d = {}; try { d = JSON.parse(String(a.texto).replace(/^\[NOTICIA\]\s*/, "")); } catch {}
+    return { id: "mano-" + refDe(a), idBase: String(a.id || "").includes("-") ? a.id : null, manual: true, noticia: true,
+      titulo: d.titulo || a.evento_titulo, link: d.link || "", deporte: d.deporte || "", resumen: d.resumen || "",
+      fuente: "Cargada a mano", publicado: a.creado_en, encontrado: a.creado_en };
+  }).filter((n) => n.titulo);
   const bajas = todos.filter((a) => esMarca(a, "ELIMINAR")); // "🗑 Eliminar": se oculta para todos y el agente lo saca del Doc
   const listos = todos.filter((a) => esMarca(a, "PUBLICABLE")); // "Falta info" que ya completaron: pasa a Publicable
   // lo que el agente ya sacó del Doc por publicado: queda 7 días para "Mostrar los que ya publiqué"
@@ -394,6 +402,7 @@ function formCrear() {
     </div>
     <label>Qué pasó / detalle<textarea name="detalle" rows="5" maxlength="5000" placeholder="Una línea por resultado. Para negrita: **BRONCE**"></textarea></label>
     <label>Link de la fuente<input name="link" type="url" placeholder="https://…"></label>
+    <label class="check"><input type="checkbox" name="multi"> 🏅 Es multideportivo (Juegos con muchos deportes: va en su propia pestaña, como Dakar)</label>
     <p class="ayuda">Queda en el panel al toque. En la próxima vuelta el agente lo pasa al Doc y le sigue el rastro.</p>
     <div class="pie"><button type="submit" class="principal">Guardar</button><button type="button" class="cancelar">Cancelar</button></div>
     <datalist id="lista-deportes"></datalist>`;
@@ -401,7 +410,10 @@ function formCrear() {
   f.onsubmit = async (ev) => {
     ev.preventDefault();
     const d = Object.fromEntries(new FormData(f));
+    const multi = !!d.multi; delete d.multi;
     for (const k in d) d[k] = d[k].trim() || null;
+    // multideportivo: marca al principio del detalle; el bot le avisa al lector del Doc que lo ponga en su propia pestaña
+    if (multi) d.detalle = "[MULTIDEPORTIVO]" + (d.detalle ? "\n" + d.detalle : "");
     const fila = { ...d, seccion: d.estado === "agenda" ? "agenda" : "resultados" };
     const b = f.querySelector("[type=submit]"); b.disabled = true;
     try {
@@ -500,8 +512,16 @@ function pestanasMulti() {
   const tabs = activos.map((e) => ({ tab: "m:" + e.id, txt: e.multi.nombre, en_vivo: true }));
   if (!activos.length && multiProximo()) tabs.push({ tab: "m:prox", txt: "Próximamente" });
   caja.innerHTML = tabs.map((t) =>
-    `<button role="tab" data-tab="${t.tab}" class="multi">${t.en_vivo ? '<span class="vivo">●</span> ' : ""}${escapar(t.txt)} <span class="n"></span></button>`).join("");
-  caja.querySelectorAll("button").forEach((b) => (b.onclick = () => { estado.tab = b.dataset.tab; llenarDeportes(); dibujar(); window.scrollTo({ top: 0 }); }));
+    `<button role="tab" data-tab="${t.tab}" class="multi">${t.en_vivo ? '<span class="vivo">●</span> ' : ""}${escapar(t.txt)} <span class="n"></span></button>`).join("")
+    + `<button type="button" class="crear-multi">+ Multideportivo</button>`;
+  caja.querySelector(".crear-multi").onclick = () => {
+    if (!window.Base?.activa()) return avisar("Entrá con tu mail (arriba a la izquierda) para crear eventos");
+    estado.tab = "agenda"; estado.creando = true; dibujar();
+    const f = estado.formEl; f.querySelector("[name=estado]").value = "agenda"; f.querySelector("[name=multi]").checked = true;
+    f.querySelector("[name=titulo]").placeholder = "Ej: Juegos Panamericanos Lima 2027"; f.querySelector("[name=titulo]").focus();
+    window.scrollTo({ top: 0 });
+  };
+  caja.querySelectorAll("button[data-tab]").forEach((b) => (b.onclick = () => { estado.tab = b.dataset.tab; llenarDeportes(); dibujar(); window.scrollTo({ top: 0 }); }));
   // si la pestaña elegida ya no existe (terminó el evento), volvemos a Resultados
   if (estado.tab.startsWith("m:") && !tabs.some((t) => t.tab === estado.tab)) estado.tab = "resultados";
   if (!estado.eligioTab && tabs[0]?.en_vivo) { estado.tab = tabs[0].tab; estado.eligioTab = true; }
@@ -510,7 +530,7 @@ function pestanasMulti() {
 function dibujar() {
   pestanasMulti();
   const esMulti = estado.tab.startsWith("m:");
-  for (const b of document.querySelectorAll(".pestanas button")) {
+  for (const b of document.querySelectorAll(".pestanas button[data-tab]")) {
     const t = b.dataset.tab;
     b.classList.toggle("activa", t === estado.tab);
     const n = t === "radar" ? noticiasFiltradas(false).length : t === "noticias" ? noticiasParaPublicar(false).length : t === "ba" ? eventosBA().length : t.startsWith("m:") || t === "graficas" ? "" : eventosDe(t, false).length;
@@ -567,6 +587,7 @@ function tarjetaEvento(e, tpl) {
   if (!e.archivado && (e.etiqueta === "mas_info" || e.etiqueta === "en_curso" || e.pasadoAPublicable)) botonPublicable(e, t);
   if (e.manual) {
     const chip = document.createElement("span"); chip.className = "chip manual"; chip.textContent = "✍️ A mano";
+    if (e.esMulti) { const m = document.createElement("span"); m.className = "chip manual"; m.textContent = "🏅 Multideportivo"; t.querySelector(".chips").append(m); }
     chip.title = "Lo cargó alguien desde el panel. Cuando el agente lo pase al Doc, queda el del Doc.";
     t.querySelector(".chips").append(chip);
     if (window.Base?.activa() && e.idBase) {
@@ -1212,39 +1233,101 @@ function dibujarRadar(lista) {
 
 // ---------- noticias para publicar (no resultados) ----------
 function miniNoticia(n) { return { id: "n:" + n.id, titulo: n.titulo, bloques: [], version: "1" }; }
+// "✓ Publicada" guarda la versión "1"; "✕ Descartar" guarda "descartada". Las dos salen de la lista (se ven 7 días tildando "Mostrar publicados y eliminados")
+function estadoNoticia(n) { const m = estado.publicados["n:" + n.id]; return !m ? "" : m.v === "descartada" ? "descartada" : "publicada"; }
 function noticiasParaPublicar(conFiltros = true) {
-  return noticiasFiltradas(conFiltros).filter((n) => n.noticia && (($("#ver-publicados").checked && conFiltros) || !estaPublicado(miniNoticia(n))));
+  const dep = conFiltros ? $("#deporte").value : "", q = conFiltros ? sinTildes($("#buscar").value) : "";
+  const mano = (estado.noticiasMano || []).filter((n) => dentroDelRango(n) && (!dep || n.deporte === dep) && (!q || sinTildes(n.titulo + " " + n.resumen).includes(q)));
+  const verViejas = $("#ver-publicados").checked && conFiltros;
+  return [...mano, ...noticiasFiltradas(conFiltros)].filter((n) => n.noticia && (!estadoNoticia(n)
+    || (verViejas && !haceMasDeUnaSemana(estado.publicados["n:" + n.id]?.en))));
 }
 function dibujarNoticias(lista) {
+  lista.append(barraNoticia());
   const items = noticiasParaPublicar();
-  if (!items.length) { lista.innerHTML = `<p class="vacio">No hay noticias nuevas. El bot las suma cada 3 horas.</p>`; return; }
+  if (!items.length) { lista.insertAdjacentHTML("beforeend", `<p class="vacio">No hay noticias nuevas. El bot las suma cada 3 horas.</p>`); return; }
   const tpl = $("#tpl-noticia");
-  for (const n of items) {
-    const t = tpl.content.firstElementChild.cloneNode(true);
-    t.querySelector(".deporte").textContent = n.deporte;
-    const tipo = t.querySelector(".tipo"); tipo.textContent = "📰 Noticia"; tipo.classList.add("otro");
-    t.querySelector(".ba").hidden = !n.en_buenos_aires;
-    const a = t.querySelector("h2 a"); a.href = n.link; a.textContent = n.titulo;
-    t.querySelector(".meta").textContent = `${n.fuente || ""} · ${haceCuanto(n.publicado || n.encontrado)}`;
-    if (n.resumen && !n.resumen.startsWith(n.titulo.slice(0, 30))) { const r = document.createElement("p"); r.className = "resumen-noticia"; r.textContent = n.resumen.slice(0, 220); t.append(r); }
-    const pie = document.createElement("div"); pie.className = "pie";
-    pie.append(boton("Copiar título y link", () => copiarTexto(`${n.titulo}\n${n.link}`, "Copiado")));
-    if (window.Graficas) pie.append(boton("🎨 Gráfica", () => {
-      // portada con el deporte + el título de la noticia; placa con el resumen (si trae algo más que el título)
-      const extra = n.resumen && !n.resumen.startsWith(n.titulo.slice(0, 30)) ? n.resumen.slice(0, 400) : "";
-      const bloques = [{ tipo: "sub", partes: [{ t: "Noticia" }] }, { tipo: "texto", partes: [{ t: n.titulo + (extra ? "\n" + extra : "") }] }];
-      // título corto para la portada: hasta los dos puntos y como mucho ~50 letras (se puede editar)
-      let corto = n.titulo.split(/\s*[:|–—]\s*/)[0];
-      if (corto.length > 52) corto = corto.slice(0, 52).replace(/\s+\S*$/, "") + "…";
-      Graficas.desdeEvento({ deporte: n.deporte, evento: "", bloques }, { titulo: corto });
-      estado.tab = "graficas"; dibujar(); window.scrollTo({ top: 0 });
-    }));
-    const bPub = boton("Ya está", null); bPub.className = "publicado"; pie.append(bPub);
-    configurarPublicado(bPub, t, miniNoticia(n));
-    bPub.textContent = bPub.classList.contains("marcado") ? "✓ Ya está" : "Ya está";
-    t.append(pie);
-    lista.append(t);
+  const pendientes = items.filter((n) => !estadoNoticia(n)), hechas = items.filter((n) => estadoNoticia(n));
+  for (const [grupo, titulo] of [[pendientes, ""], [hechas.filter((n) => estadoNoticia(n) === "publicada"), "✓ Publicadas"], [hechas.filter((n) => estadoNoticia(n) === "descartada"), "✕ Descartadas"]]) {
+    if (!grupo.length) continue;
+    if (titulo) lista.insertAdjacentHTML("beforeend", `<h3 class="grupo-noticias">${titulo} <small>(se van solas a la semana)</small></h3>`);
+    for (const n of grupo) lista.append(tarjetaNoticia(n, tpl));
   }
+}
+
+function tarjetaNoticia(n, tpl) {
+  const t = tpl.content.firstElementChild.cloneNode(true);
+  t.querySelector(".deporte").textContent = n.deporte || "—";
+  const tipo = t.querySelector(".tipo"); tipo.textContent = n.manual ? "✍️ A mano" : "📰 Noticia"; tipo.classList.add(n.manual ? "manual" : "otro");
+  t.querySelector(".ba").hidden = !n.en_buenos_aires;
+  const a = t.querySelector("h2 a"); a.textContent = n.titulo; if (n.link) a.href = n.link; else a.removeAttribute("href");
+  t.querySelector(".meta").textContent = `${n.fuente || ""} · ${haceCuanto(n.publicado || n.encontrado)}`;
+  if (n.resumen && !n.resumen.startsWith(n.titulo.slice(0, 30))) { const r = document.createElement("p"); r.className = "resumen-noticia"; r.textContent = n.resumen.slice(0, 220); t.append(r); }
+  const pie = document.createElement("div"); pie.className = "pie";
+  pie.append(boton("Copiar", () => copiarTexto(`${n.titulo}${n.link ? "\n" + n.link : ""}`, "Copiado")));
+  if (window.Graficas) pie.append(boton("🎨 Gráfica", () => {
+    // portada con el deporte + el título de la noticia; placa con el resumen (si trae algo más que el título)
+    const extra = n.resumen && !n.resumen.startsWith(n.titulo.slice(0, 30)) ? n.resumen.slice(0, 400) : "";
+    const bloques = [{ tipo: "sub", partes: [{ t: "Noticia" }] }, { tipo: "texto", partes: [{ t: n.titulo + (extra ? "\n" + extra : "") }] }];
+    // título corto para la portada: hasta los dos puntos y como mucho ~50 letras (se puede editar)
+    let corto = n.titulo.split(/\s*[:|–—]\s*/)[0];
+    if (corto.length > 52) corto = corto.slice(0, 52).replace(/\s+\S*$/, "") + "…";
+    Graficas.desdeEvento({ deporte: n.deporte, evento: "", bloques }, { titulo: corto });
+    estado.tab = "graficas"; dibujar(); window.scrollTo({ top: 0 });
+  }));
+  const ahora = estadoNoticia(n);
+  t.classList.toggle("ya-publicado", !!ahora);
+  const marcar = (version, txt) => async () => {
+    const id = "n:" + n.id, antes = estado.publicados[id], sacar = antes?.v === version;
+    if (sacar) delete estado.publicados[id]; else estado.publicados[id] = { v: version, por: window.Base?.mail(), en: new Date().toISOString() };
+    guardarPublicados(); dibujar();
+    try {
+      if (window.Base?.activa()) { if (sacar) await Base.desmarcar({ id }); else await Base.marcar({ id, version, titulo: n.titulo }); }
+      avisar(sacar ? "Volvió a la lista" : txt);
+    } catch { if (antes) estado.publicados[id] = antes; else delete estado.publicados[id]; dibujar(); avisar("No se pudo guardar. Probá de nuevo"); }
+  };
+  const bPub = boton(ahora === "publicada" ? "↩ Volver a la lista" : "✓ Publicada", marcar("1", "Marcada como publicada"));
+  bPub.className = "publicado" + (ahora === "publicada" ? " marcado" : "");
+  const bDes = boton(ahora === "descartada" ? "↩ Volver a la lista" : "✕ Descartar", marcar("descartada", "Descartada"));
+  bDes.className = "borrar";
+  if (ahora !== "descartada") pie.append(bPub);
+  if (ahora !== "publicada") pie.append(bDes);
+  if (n.manual && n.idBase && window.Base?.activa()) pie.append(boton("Borrar", async () => {
+    try { await Base.borrarDato(n.idBase); avisar("Borrada"); } catch { avisar("No se pudo borrar"); }
+  }));
+  t.append(pie);
+  return t;
+}
+
+// "+ Agregar noticia": se guarda en la base compartida (como dato con [NOTICIA] adelante) y la ven todos
+function barraNoticia() {
+  const barra = document.createElement("div"); barra.className = "barra-crear";
+  if (!estado.creandoNoticia) {
+    const b = boton("+ Agregar noticia", () => {
+      if (!window.Base?.activa()) return avisar("Entrá con tu mail (arriba a la izquierda) para agregar noticias");
+      estado.creandoNoticia = true; dibujar(); $("#form-noticia [name=titulo]")?.focus();
+    });
+    b.className = "btn-crear"; barra.append(b); return barra;
+  }
+  const deps = [...new Set([...estado.eventos.map((e) => e.deporte), ...estado.noticias.map((n) => n.deporte)].filter(Boolean))].sort((a, b) => a.localeCompare(b, "es"));
+  barra.innerHTML = `<form id="form-noticia" class="crear"><h3>Agregar noticia</h3>
+    <label>Deporte<input name="deporte" list="deps-noticia" required placeholder="Ej: Hockey"></label><datalist id="deps-noticia">${deps.map((d) => `<option value="${escapar(d)}">`).join("")}</datalist>
+    <label>Título<input name="titulo" required minlength="5" maxlength="200" placeholder="Ej: Las Leonas, nominadas a mejor equipo del año"></label>
+    <label>Link (opcional)<input name="link" type="url" placeholder="https://..."></label>
+    <label>Resumen (opcional)<textarea name="resumen" rows="2" maxlength="600"></textarea></label>
+    <div class="pie"><button type="submit" class="principal">Guardar noticia</button><button type="button" class="cancelar">Cancelar</button></div></form>`;
+  const f = barra.querySelector("form");
+  f.querySelector(".cancelar").onclick = () => { estado.creandoNoticia = false; dibujar(); };
+  f.onsubmit = async (ev) => {
+    ev.preventDefault();
+    const d = Object.fromEntries(new FormData(f)); for (const k in d) d[k] = d[k].trim();
+    f.querySelector("[type=submit]").disabled = true;
+    try {
+      await Base.agregarDato({ evento_id: "noticia:" + Date.now().toString(36), evento_titulo: d.titulo.slice(0, 200), tipo: "dato", texto: "[NOTICIA] " + JSON.stringify(d) });
+      estado.creandoNoticia = false; avisar("Noticia agregada"); dibujar();
+    } catch { f.querySelector("[type=submit]").disabled = false; avisar("No se pudo guardar. Probá de nuevo"); }
+  };
+  return barra;
 }
 
 // ---------- varios ----------
@@ -1263,7 +1346,7 @@ function chips(id, clave) {
 }
 chips("#filtro-estado", "filtroEstado");
 chips("#filtro-tipo", "filtroTipo");
-document.querySelectorAll(".pestanas button").forEach((b) => (b.onclick = () => {
+document.querySelectorAll(".pestanas button[data-tab]").forEach((b) => (b.onclick = () => {
   estado.tab = b.dataset.tab; llenarDeportes(); dibujar(); window.scrollTo({ top: 0 });
 }));
 ["#buscar", "#deporte"].forEach((s) => $(s).addEventListener("input", dibujar));

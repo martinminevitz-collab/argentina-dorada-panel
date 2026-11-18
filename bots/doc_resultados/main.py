@@ -115,7 +115,11 @@ def _norm(t):
     return "".join(c for c in unicodedata.normalize("NFD", (t or "").lower()) if unicodedata.category(c) != "Mn")
 
 
-def es_multideportivo(titulo):
+def es_multideportivo(titulo, refs=()):
+    # creado en el panel con el tilde "Es multideportivo" (data/multi-refs.json, lo arma el bot de eventos a mano)
+    marcados = set(guardar.leer(guardar.DATA / "multi-refs.json", {}).get("refs", []))
+    if marcados & set(refs):
+        return True
     cfg = json.loads((guardar.RAIZ / "config" / "multideportivos.json").read_text(encoding="utf-8"))
     t = _norm(titulo)
     return any(p in t for p in cfg["palabras"]) and not any(x in t for x in cfg["excluir"])
@@ -300,7 +304,7 @@ def leer_doc(html):
         e["id"] = hashlib.sha1(re.sub(r"[^a-z0-9]", "", base).encode()).hexdigest()[:12]
         # huella del contenido: si cambia después de marcarlo "Publicado", el panel avisa que hay novedades
         e["version"] = hashlib.sha1(json.dumps(e["bloques"], ensure_ascii=False).encode()).hexdigest()[:10]
-        if es_multideportivo(e["titulo"]):
+        if es_multideportivo(e["titulo"], e.get("refs_panel", [])):
             e["multideportivo"] = True
             armar_multideportivo(e)
         e["publicado_en_doc"] = e["ya_publicado"] or (
