@@ -381,6 +381,7 @@ def directorio_instagram(eventos):
     # la planilla "Etiquetas Instagram" (config/instagram.json) manda: suma, corrige y con "-" saca
     cfg = guardar.leer(guardar.RAIZ / "config" / "instagram.json", {})
     de_planilla = {}  # nombre -> [{usuario, deporte, disciplina}] (puede haber homónimos)
+    federaciones = {}  # deporte -> [usuarios]: se etiquetan en todo posteo de ese deporte
     for url in cfg.get("csv", []):
         try:
             filas = list(csv.reader(io.StringIO(bajar(url) or "")))
@@ -402,6 +403,16 @@ def directorio_instagram(eventos):
                 cuentas.pop(nombre, None)
                 continue
             ig = re.sub(r"^https?://(www\.)?instagram\.com/", "", ig).strip("/@ ").split("/")[0].split("?")[0]
+            # TIPO = FEDERACION: se etiqueta en todo posteo de ese deporte (DEPORTE puede traer varios: "Remo, Remo Costal")
+            es_fed = _norm(col(f, "TIPO")).startswith("federac") if "TIPO" in cab else bool(re.match(
+                r"(federaci|confederaci|asociaci[oó]n argentina|uni[oó]n argentina)", _norm(nombre)))
+            if es_fed and re.fullmatch(r"[A-Za-z0-9._]{1,30}", ig):
+                for dep in re.split(r"\s*,\s*|\s+y\s+", re.sub(r"\(.*?\)", "", col(f, "DEPORTE"))):
+                    dep = dep.strip()
+                    if dep and _norm(dep) != "etc":
+                        lista = federaciones.setdefault(dep, [])
+                        if ig not in lista:
+                            lista.append(ig)
             if re.fullmatch(r"[A-Za-z0-9._]{1,30}", ig):
                 lista = de_planilla.setdefault(nombre, [])
                 if ig not in [x["usuario"] for x in lista]:
@@ -415,7 +426,8 @@ def directorio_instagram(eventos):
             cuentas.pop(nombre, None)
             homonimos[nombre] = lista
     guardar.escribir(ruta, {"_nota": "Nombre del deportista -> usuario de Instagram (sin @). Se arma solo con lo que hay en el Doc. Se puede agregar o corregir a mano.",
-                            "cuentas": dict(sorted(cuentas.items())), "homonimos": dict(sorted(homonimos.items()))})
+                            "cuentas": dict(sorted(cuentas.items())), "homonimos": dict(sorted(homonimos.items())),
+                            "federaciones": dict(sorted(federaciones.items()))})
 
 
 def main():

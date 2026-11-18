@@ -58,6 +58,7 @@ async function cargar() {
     estado.modeloAcred = modeloAcred;
     estado.instagram = Object.entries(insta.cuentas || {}).sort((a, b) => b[0].length - a[0].length);
     estado.homonimos = Object.entries(insta.homonimos || {}).sort((a, b) => b[0].length - a[0].length);
+    estado.federaciones = insta.federaciones || {};
     estado.agregadosBot = [...(agregados.pendientes || []), ...(agregados.noticias || [])];
     estado.ba = ba;
     estado.manualesBot = manuales.pendientes || [];
@@ -781,6 +782,16 @@ function etiquetar(txt) {
   }
   return txt;
 }
+function federacionesDe(deporte) {
+  const d = sinTildes(deporte);
+  if (!d) return [];
+  const todas = Object.entries(estado.federaciones || {});
+  const igual = todas.filter(([dep]) => sinTildes(dep) === d);
+  if (igual.length) return [...new Set(igual.flatMap(([, u]) => u))];
+  // "Hockey" vs "Hockey sobre Cesped": solo si hay una sola federación posible (si no, no se adivina)
+  const parecidas = [...new Set(todas.filter(([dep]) => { const x = sinTildes(dep); return d.startsWith(x + " ") || x.startsWith(d + " "); }).flatMap(([, u]) => u))];
+  return parecidas.length === 1 ? parecidas : [];
+}
 function lineaIG(partes, incluirGris) {
   let txt = "";
   for (const p of partes) {
@@ -819,6 +830,9 @@ function textoIG(e, { cabecera, hashtags, incluirGris = true } = {}) {
     else lineas.push(emojiDe(b.partes.filter((p) => p.b && (incluirGris || p.c !== "gris")).map((p) => p.t).join(" ")) + t);
   }
   while (lineas.at(-1) === "") lineas.pop();
+  // federación del deporte (planilla de etiquetas): va siempre al final, aunque no aparezca en el texto
+  const feds = federacionesDe(e.deporte).filter((u) => !lineas.join(" ").includes("@" + u));
+  if (feds.length) lineas.push("", feds.map((u) => "@" + u).join(" "));
   const tags = hashtags || hashtagsEvento(e);
   if (tags.length) lineas.push("", tags.join(" "));
   return lineas.join("\n");
