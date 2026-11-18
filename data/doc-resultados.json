@@ -1,5 +1,5 @@
 {
- "leido": "2026-11-17T23:54-03:00",
+ "leido": "2026-11-18T00:57-03:00",
  "actualizado_doc": "17/11/2026 23:00",
  "eventos": [
   {
@@ -8044,7 +8044,8 @@
    "id": "410c978a4ed6",
    "version": "beb64b246b",
    "publicado_en_doc": false,
-   "terminado_desde": "2026-11-11"
+   "terminado_desde": "2026-11-11",
+   "vencido": true
   },
   {
    "titulo": "RUGBY - NATIONS CHAMPIONSHIP (06 al 21 de noviembre)",
