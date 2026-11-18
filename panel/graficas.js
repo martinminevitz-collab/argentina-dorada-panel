@@ -572,5 +572,7 @@
     return { plantilla, sel: 0, paginas: pags, origen: o };
   }
 
-  window.Graficas = { dibujar, desdeEvento };
+  // abre una plantilla con datos ya cargados (ej. desde la pestaña 🎯 Clasificados)
+  function conDatos(plantilla, datos) { G = nuevo(plantilla); Object.assign(G.paginas[0].datos, datos); guardar(); }
+  window.Graficas = { dibujar, desdeEvento, conDatos };
 })();

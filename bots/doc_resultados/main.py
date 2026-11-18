@@ -10,6 +10,7 @@ import hashlib
 import io
 import json
 import re
+from datetime import date
 from urllib.parse import parse_qs, urlparse
 
 from bs4 import BeautifulSoup
@@ -360,6 +361,42 @@ def archivar(eventos):
 NOMBRE_ANTES = re.compile(r"((?:[A-ZÁÉÍÓÚÑÜ][\wáéíóúñü'.-]+\s+){1,3}[A-ZÁÉÍÓÚÑÜ][\wáéíóúñü'.-]+)\s*[(\[]?\s*$")
 
 
+# ---------- clasificados a los Juegos (pestaña 🎯 del panel: aparece sola cuando hay alguno) ----------
+JUEGOS = [("Los Ángeles 2028", r"los [aá]ngeles 2028|\bla ?28\b|\bla 2028\b|juegos ol[ií]mpicos(?! de la juventud)|\bjjoo\b"),
+          ("Paralímpicos LA 2028", r"paral[ií]mpicos (de )?(los [aá]ngeles|la) ?2028|\bla28 paral|juegos paral[ií]mpicos")]
+SI_CLASIFICO = re.compile(r"\b(clasific[oó]|clasificaron|se clasific|consigui[oó]|consiguieron|obtuvo|obtuvieron|asegur[oó]|aseguraron|logr[oó]|lograron|gan[oó]|ganaron|sell[oó]|sellaron)\b", re.I)
+NO_ES = re.compile(r"\b(clasificatori[oa]s?|buscar[aá]n?|busca|buscan|podr[ií]a|podr[ií]an|si gana|en juego|reparte|otorga|da (un|una|el) (cupo|plaza|pasaje)|rumbo a)\b", re.I)
+
+
+def clasificados(eventos):
+    """data/clasificados.json -> 'del_doc': líneas del Doc que dicen que alguien clasificó a los Juegos. Se acumula (no se borra)."""
+    ruta = guardar.DATA / "clasificados.json"
+    datos = guardar.leer(ruta, {})
+    viejos = {c["id"]: c for c in datos.get("del_doc", [])}
+    for e in eventos:
+        if e.get("seccion") != "resultados":
+            continue
+        for b in e["bloques"]:
+            t = texto_de(b.get("partes", [])) if b.get("partes") else ""
+            if b.get("tipo") != "texto" or not t or not SI_CLASIFICO.search(t) or NO_ES.search(t):
+                continue
+            juegos = next((n for n, r in reversed(JUEGOS) if re.search(r, t, re.I)), None)
+            if not juegos or not re.search(r"clasific|plaza|cupo|pasaje|boleto|lugar", t, re.I):
+                continue
+            cid = hashlib.sha1(_norm(t).encode()).hexdigest()[:10]
+            m = SI_CLASIFICO.search(t)
+            quien = re.sub(r"[(\[].*$", "", t[:m.start()]).strip(" ,:-–") or t[:80]
+            viejos.setdefault(cid, {"id": cid, "juegos": juegos, "quien": quien[:120], "texto": t[:400],
+                                     "deporte": e.get("deporte", ""), "evento": e.get("evento") or e["titulo"],
+                                     "desde": date.today().isoformat()})
+    nuevo = {**datos, "_nota": "Clasificados a los Juegos. 'del_doc' lo junta el lector del Doc; 'a_mano' lo cargan los chicos desde "
+                               "el panel (Agregar dato → Clasificó); 'quitados' son ids que alguien sacó desde el panel.",
+             "del_doc": sorted(viejos.values(), key=lambda c: c["desde"])}
+    if nuevo != datos:
+        guardar.escribir(ruta, nuevo)
+    print(f"🎯 Clasificados (del Doc): {len(viejos)}")
+
+
 def directorio_instagram(eventos):
     """data/instagram.json = nombre -> @usuario, juntado de todo lo que el agente escribió en el Doc.
     Se acumula para siempre: si un deportista tuvo su Instagram una vez, el panel lo etiqueta en los próximos posteos."""
@@ -442,6 +479,7 @@ def main():
     archivar(eventos)
     try:
         directorio_instagram(eventos)
+        clasificados(eventos)
     except Exception as err:  # el directorio es un extra: si falla, el resto sigue
         print(f"⚠️  Directorio de Instagram: {err}")
     ruta = guardar.DATA / "doc-resultados.json"

@@ -76,9 +76,12 @@ def agregados(refs):
     except Exception as e:
         print(f"⚠️  No se pudieron leer los datos agregados: {e}")
         return
-    pendientes, eliminados, noticias = [], [], []
+    pendientes, eliminados, noticias, clasif = [], [], [], []
     for f in filas:
         ref = f["id"].replace("-", "")[:REF]
+        if str(f.get("texto") or "").startswith(("[CLASIFICADO]", "[QUITAR-CLASIFICADO]")):  # pestaña 🎯: no va al Doc
+            clasif.append(f)
+            continue
         if str(f.get("texto") or "").startswith("[NOTICIA]"):  # noticia cargada a mano en 📰 Noticias: es solo para el panel, no va al Doc
             noticias.append({k: f.get(k) for k in ("id", "evento_id", "evento_titulo", "tipo", "texto", "creado_en")})
             continue
@@ -96,6 +99,7 @@ def agregados(refs):
     if viejo.get("pendientes") != pendientes or viejo.get("noticias", []) != noticias:
         guardar.escribir(ruta, nuevo)
     print(f"✅ Datos agregados: {len(filas)} en la base, {len(pendientes)} pendientes de pasar al Doc")
+    guardar_clasificados(clasif)
     # vencidos.json lo arma el lector del Doc (corre antes); acá se le suman los eliminados desde el panel
     rv = guardar.DATA / "vencidos.json"
     v = guardar.leer(rv, {"vencidos": []})
@@ -105,6 +109,37 @@ def agregados(refs):
         v["_nota"] = "Eventos terminados hace más de 7 días o eliminados desde el panel. El agente los saca del Doc y deja de seguirlos."
         guardar.escribir(rv, v)
     print(f"🗑  Eliminados desde el panel: {len(eliminados)}")
+
+
+def guardar_clasificados(filas):
+    """data/clasificados.json -> 'a_mano' y 'quitados'. La base borra los datos a los 30 días, así que acá se guardan para siempre
+    (si alguien lo borra en el panel antes de los 30 días, se va también de acá)."""
+    ruta = guardar.DATA / "clasificados.json"
+    datos = guardar.leer(ruta, {})
+    en_base = {f["id"] for f in filas}
+    a_mano = {c["id"]: c for c in datos.get("a_mano", []) if c["id"] not in en_base and str(c.get("creado_en", "")) < _hace_29_dias()}
+    quitados = set(datos.get("quitados", []))
+    for f in filas:
+        texto = str(f.get("texto") or "")
+        if texto.startswith("[QUITAR-CLASIFICADO]"):
+            quitados.add(texto.split("]", 1)[1].strip())
+            continue
+        try:
+            d = json.loads(texto.split("]", 1)[1])
+        except ValueError:
+            continue
+        a_mano[f["id"]] = {"id": f["id"], "juegos": d.get("juegos") or "Los Ángeles 2028", "quien": str(d.get("quien", ""))[:200],
+                           "deporte": d.get("deporte", ""), "evento": d.get("evento", ""), "texto": str(d.get("texto", ""))[:400],
+                           "desde": str(f.get("creado_en", ""))[:10], "creado_en": f.get("creado_en")}
+    nuevo = {**datos, "a_mano": sorted(a_mano.values(), key=lambda c: c["desde"]), "quitados": sorted(quitados)}
+    if nuevo != datos:
+        guardar.escribir(ruta, nuevo)
+    print(f"🎯 Clasificados a mano: {len(a_mano)} · quitados: {len(quitados)}")
+
+
+def _hace_29_dias():
+    from datetime import datetime, timedelta, timezone
+    return (datetime.now(timezone.utc) - timedelta(days=29)).isoformat()
 
 
 if __name__ == "__main__":

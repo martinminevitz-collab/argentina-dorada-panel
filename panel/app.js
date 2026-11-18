@@ -42,7 +42,7 @@ async function bajarJSON(ruta) {
 async function cargar() {
   $("#recargar").classList.add("girando");
   try {
-    const [doc, corrida, indice, medalleros, manuales, agregados, ba, archivo, insta, modeloAcred] = await Promise.all([
+    const [doc, corrida, indice, medalleros, manuales, agregados, ba, archivo, insta, modeloAcred, clasif] = await Promise.all([
       bajarJSON("doc-resultados.json").catch(() => null),
       bajarJSON("ultima-corrida.json").catch(() => ({})),
       bajarJSON("indice.json").catch(() => ({ dias: [] })),
@@ -53,9 +53,11 @@ async function cargar() {
       bajarJSON("doc-archivo.json").catch(() => ({ eventos: {} })),
       bajarJSON("instagram.json").catch(() => ({ cuentas: {} })),
       bajarJSON("acreditacion.json").catch(() => ({})),
+      bajarJSON("clasificados.json").catch(() => ({})),
     ]);
     estado.archivo = Object.values(archivo.eventos || {});
     estado.modeloAcred = modeloAcred;
+    estado.clasifBot = clasif || {};
     estado.instagram = Object.entries(insta.cuentas || {}).sort((a, b) => b[0].length - a[0].length);
     estado.homonimos = Object.entries(insta.homonimos || {}).sort((a, b) => b[0].length - a[0].length);
     estado.federaciones = insta.federaciones || {};
@@ -138,7 +140,7 @@ function combinar() {
   const todos = (estado.agregadosBase ?? estado.agregadosBot ?? []).filter((a) => !refs.has(refDe(a)));
   // marcas especiales (se guardan como "correccion" con [ELIMINAR] / [PUBLICABLE] adelante: no hace falta tocar la base)
   const esMarca = (a, m) => a.tipo === m.toLowerCase() || String(a.texto || "").startsWith(`[${m}]`);
-  const ags = todos.filter((a) => !esMarca(a, "ELIMINAR") && !esMarca(a, "PUBLICABLE") && !esMarca(a, "NOTICIA"));
+  const ags = todos.filter((a) => !esMarca(a, "ELIMINAR") && !esMarca(a, "PUBLICABLE") && !esMarca(a, "NOTICIA") && !esMarca(a, "CLASIFICADO") && !esMarca(a, "QUITAR-CLASIFICADO"));
   // noticias cargadas a mano en la pestaña 📰 Noticias (se guardan como dato con [NOTICIA] adelante)
   estado.noticiasMano = (estado.agregadosBase ?? estado.agregadosBot ?? []).filter((a) => esMarca(a, "NOTICIA")).map((a) => {
     let d = {}; try { d = JSON.parse(String(a.texto).replace(/^\[NOTICIA\]\s*/, "")); } catch {}
@@ -181,7 +183,7 @@ function cajaAgregarDato(e, t) {
     }));
     return caja;
   }
-  caja.innerHTML = `<select aria-label="Tipo"><option value="dato">Dato nuevo</option><option value="correccion">Corrección</option></select>
+  caja.innerHTML = `<select aria-label="Tipo"><option value="dato">Dato nuevo</option><option value="correccion">Corrección</option><option value="clasificado">🎯 Clasificó a LA 2028</option></select>
     <textarea rows="3" maxlength="1700" placeholder="Ej: Juana Pérez ganó la medalla de **BRONCE** en -57kg"></textarea>
     <input type="url" class="link-dato" maxlength="290" placeholder="Link de la fuente (opcional): así el agente lo puede seguir">
     <div class="fila-btns"><button class="principal">Guardar</button><button class="cancelar">Cancelar</button></div>
@@ -202,7 +204,12 @@ function cajaAgregarDato(e, t) {
     ev.target.disabled = true;
     try {
       estado.agregandoEn = null;
-      await Base.agregarDato({ evento_id: e.id, evento_titulo: e.titulo, tipo: sel.value, texto });
+      if (sel.value === "clasificado") { // va a la pestaña 🎯 (no al Doc)
+        const quien = (texto.match(/^(.+?)\s+(?:se\s+)?(?:clasific|consigui|obtuv|asegur|logr|gan)/i) || [])[1] || texto.split(/[.,]/)[0];
+        texto = "[CLASIFICADO] " + JSON.stringify({ quien: quien.replace(/\*\*/g, "").slice(0, 200), texto: texto.replace(/\*\*/g, "").slice(0, 400),
+          deporte: e.deporte || "", evento: e.evento || e.titulo, juegos: /paral[ií]mpic/i.test(texto) ? "Paralímpicos LA 2028" : "Los Ángeles 2028" });
+      }
+      await Base.agregarDato({ evento_id: e.id, evento_titulo: e.titulo, tipo: sel.value === "clasificado" ? "dato" : sel.value, texto });
       delete estado.borradorDato[e.id];
       dibujar(); avisar("Dato agregado");
     } catch (err) {
@@ -513,15 +520,7 @@ function pestanasMulti() {
   const tabs = activos.map((e) => ({ tab: "m:" + e.id, txt: e.multi.nombre, en_vivo: true }));
   if (!activos.length && multiProximo()) tabs.push({ tab: "m:prox", txt: "Próximamente" });
   caja.innerHTML = tabs.map((t) =>
-    `<button role="tab" data-tab="${t.tab}" class="multi">${t.en_vivo ? '<span class="vivo">●</span> ' : ""}${escapar(t.txt)} <span class="n"></span></button>`).join("")
-    + `<button type="button" class="crear-multi">+ Multideportivo</button>`;
-  caja.querySelector(".crear-multi").onclick = () => {
-    if (!window.Base?.activa()) return avisar("Entrá con tu mail (arriba a la izquierda) para crear eventos");
-    estado.tab = "agenda"; estado.creando = true; dibujar();
-    const f = estado.formEl; f.querySelector("[name=estado]").value = "agenda"; f.querySelector("[name=multi]").checked = true;
-    f.querySelector("[name=titulo]").placeholder = "Ej: Juegos Panamericanos Lima 2027"; f.querySelector("[name=titulo]").focus();
-    window.scrollTo({ top: 0 });
-  };
+    `<button role="tab" data-tab="${t.tab}" class="multi">${t.en_vivo ? '<span class="vivo">●</span> ' : ""}${escapar(t.txt)} <span class="n"></span></button>`).join("");
   caja.querySelectorAll("button[data-tab]").forEach((b) => (b.onclick = () => { estado.tab = b.dataset.tab; llenarDeportes(); dibujar(); window.scrollTo({ top: 0 }); }));
   // si la pestaña elegida ya no existe (terminó el evento), volvemos a Resultados
   if (estado.tab.startsWith("m:") && !tabs.some((t) => t.tab === estado.tab)) estado.tab = "resultados";
@@ -534,7 +533,8 @@ function dibujar() {
   for (const b of document.querySelectorAll(".pestanas button[data-tab]")) {
     const t = b.dataset.tab;
     b.classList.toggle("activa", t === estado.tab);
-    const n = t === "radar" ? noticiasFiltradas(false).length : t === "noticias" ? noticiasParaPublicar(false).length : t === "ba" ? eventosBA().length : t.startsWith("m:") || t === "graficas" ? "" : eventosDe(t, false).length;
+    if (t === "clasif") b.hidden = !listaClasif().length; // la pestaña aparece recién cuando clasifica alguien
+    const n = t === "clasif" ? listaClasif().length : t === "radar" ? noticiasFiltradas(false).length : t === "noticias" ? noticiasParaPublicar(false).length : t === "ba" ? eventosBA().length : t.startsWith("m:") || t === "graficas" ? "" : eventosDe(t, false).length;
     b.querySelector(".n").textContent = n || "";
   }
   document.querySelectorAll("[data-para]").forEach((el) => (el.hidden = !el.dataset.para.split(" ").includes(estado.tab)));
@@ -546,6 +546,7 @@ function dibujar() {
   if (estado.tab === "graficas") return window.Graficas?.dibujar(lista);
   if (estado.tab === "radar") return dibujarRadar(lista);
   if (estado.tab === "noticias") return dibujarNoticias(lista);
+  if (estado.tab === "clasif") return dibujarClasif(lista);
   if (estado.tab === "ba") return dibujarBA(lista);
   if (esMulti) return dibujarMulti(lista);
 
@@ -1342,6 +1343,55 @@ function barraNoticia() {
     } catch { f.querySelector("[type=submit]").disabled = false; avisar("No se pudo guardar. Probá de nuevo"); }
   };
   return barra;
+}
+
+// ---------- 🎯 clasificados a los Juegos (LA 2028) ----------
+// del Doc (lo detecta el lector) + a mano ("Agregar dato" → 🎯 Clasificó) - los que alguien quitó
+function listaClasif() {
+  const base = estado.agregadosBase ?? [];
+  const leer = (a) => { try { return JSON.parse(String(a.texto).replace(/^\[CLASIFICADO\]\s*/, "")); } catch { return null; } };
+  const vivos = base.filter((a) => String(a.texto || "").startsWith("[CLASIFICADO]")).map((a) => ({ ...leer(a), id: a.id, desde: String(a.creado_en || "").slice(0, 10), idBase: a.id, mano: true })).filter((c) => c.quien);
+  const quitados = new Set([...(estado.clasifBot.quitados || []),
+    ...base.filter((a) => String(a.texto || "").startsWith("[QUITAR-CLASIFICADO]")).map((a) => String(a.texto).split("]")[1].trim())]);
+  const todos = new Map();
+  for (const c of [...(estado.clasifBot.del_doc || []), ...(estado.clasifBot.a_mano || []).map((c) => ({ ...c, mano: true })), ...vivos]) todos.set(c.id, c);
+  return [...todos.values()].filter((c) => !quitados.has(c.id));
+}
+function dibujarClasif(lista) {
+  const cs = listaClasif();
+  const porJuegos = {};
+  for (const c of cs) (porJuegos[c.juegos || "Los Ángeles 2028"] ||= []).push(c);
+  for (const [juegos, grupo] of Object.entries(porJuegos)) {
+    const cab = document.createElement("div"); cab.className = "clasif-cab";
+    cab.innerHTML = `<h3>🎯 ${escapar(juegos)} <small>${grupo.length} ${grupo.length === 1 ? "clasificado" : "clasificados"}</small></h3>`;
+    const pieCab = document.createElement("div"); pieCab.className = "pie"; cab.append(pieCab);
+    if (window.Graficas) pieCab.append(boton("🎨 Gráfica con todos", () => {
+      const orden = [...grupo].sort((a, b) => (a.deporte || "").localeCompare(b.deporte || "", "es"));
+      Graficas.conDatos("clasificados", { titulo: `Clasificados a ${juegos}`, etiqueta: grupo.length === 1 ? "plaza asegurada" : "plazas aseguradas",
+        lista: orden.map((c) => `${c.deporte || ""} | ${c.quien}`).join("\n"), nuevo: [grupo.at(-1).deporte, grupo.at(-1).quien].filter(Boolean).join(" · ") });
+      estado.tab = "graficas"; dibujar(); window.scrollTo({ top: 0 });
+    }));
+    lista.append(cab);
+    for (const c of [...grupo].sort((a, b) => (a.deporte || "").localeCompare(b.deporte || "", "es") || (a.desde || "").localeCompare(b.desde || ""))) {
+      const t = document.createElement("article"); t.className = "noticia";
+      t.innerHTML = `<div class="chips"><span class="chip deporte"></span>${c.mano ? `<span class="chip manual">✍️ A mano</span>` : ""}</div><h2></h2><span class="meta"></span>`;
+      t.querySelector(".deporte").textContent = c.deporte || "—";
+      t.querySelector("h2").textContent = c.quien;
+      t.querySelector(".meta").textContent = [c.evento, c.desde ? "desde " + c.desde.split("-").reverse().join("/") : ""].filter(Boolean).join(" · ");
+      if (c.texto && c.texto !== c.quien) { const r = document.createElement("p"); r.className = "resumen-noticia"; r.textContent = c.texto; t.append(r); }
+      const pie = document.createElement("div"); pie.className = "pie";
+      if (window.Graficas) pie.append(boton("🎨 Gráfica", () => {
+        Graficas.conDatos("clasificado", { deporte: c.deporte || "", titulo: `¡Clasificó a ${juegos}!`, nombre: c.quien, detalle: c.texto && c.texto !== c.quien ? c.texto.slice(0, 120) : "", plaza: "" });
+        estado.tab = "graficas"; dibujar(); window.scrollTo({ top: 0 });
+      }));
+      if (window.Base?.activa()) pie.append(boton("Quitar", async () => {
+        try { await (c.idBase ? Base.borrarDato(c.idBase) : Base.agregarDato({ evento_id: "clasif:" + c.id, evento_titulo: c.quien.slice(0, 200), tipo: "dato", texto: "[QUITAR-CLASIFICADO] " + c.id })); avisar("Quitado"); }
+        catch { avisar("No se pudo quitar"); }
+      }));
+      t.append(pie); lista.append(t);
+    }
+  }
+  lista.insertAdjacentHTML("beforeend", `<p class="ayuda clasif-ayuda">Se arma solo con lo que dice el Doc. Para sumar uno: en el resultado, "+ Agregar dato" → "🎯 Clasificó a LA 2028".</p>`);
 }
 
 // ---------- varios ----------
