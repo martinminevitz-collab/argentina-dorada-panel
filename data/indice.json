@@ -1,55 +1,55 @@
 {
- "actualizado": "2026-11-18T10:36-03:00",
+ "actualizado": "2026-11-18T13:22-03:00",
  "dias": [
   {
    "fecha": "2026-11-18",
    "archivo": "hallazgos/2026/11/2026-11-18.json",
-   "cantidad": 73
+   "cantidad": 77
   },
   {
    "fecha": "2026-11-17",
    "archivo": "hallazgos/2026/11/2026-11-17.json",
-   "cantidad": 111
+   "cantidad": 99
   },
   {
    "fecha": "2026-11-16",
    "archivo": "hallazgos/2026/11/2026-11-16.json",
-   "cantidad": 124
+   "cantidad": 110
   },
   {
    "fecha": "2026-11-15",
    "archivo": "hallazgos/2026/11/2026-11-15.json",
-   "cantidad": 94
+   "cantidad": 79
   },
   {
    "fecha": "2026-11-14",
    "archivo": "hallazgos/2026/11/2026-11-14.json",
-   "cantidad": 115
+   "cantidad": 106
   },
   {
    "fecha": "2026-11-13",
    "archivo": "hallazgos/2026/11/2026-11-13.json",
-   "cantidad": 119
+   "cantidad": 98
   },
   {
    "fecha": "2026-11-12",
    "archivo": "hallazgos/2026/11/2026-11-12.json",
-   "cantidad": 128
+   "cantidad": 117
   },
   {
    "fecha": "2026-11-11",
    "archivo": "hallazgos/2026/11/2026-11-11.json",
-   "cantidad": 103
+   "cantidad": 90
   },
   {
    "fecha": "2026-11-10",
    "archivo": "hallazgos/2026/11/2026-11-10.json",
-   "cantidad": 105
+   "cantidad": 94
   },
   {
    "fecha": "2026-11-09",
    "archivo": "hallazgos/2026/11/2026-11-09.json",
-   "cantidad": 205
+   "cantidad": 189
   }
  ]
 }
