@@ -1,5 +1,19 @@
 [
  {
+  "id": "9484a5616549",
+  "titulo": "El Women’s Amateur Latin America se juega esta semana con ocho argentinas - Asociación Argentina de Golf",
+  "resumen": "El Women’s Amateur Latin America se juega esta semana con ocho argentinas Asociación Argentina de Golf - AAG",
+  "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPOTdvR2lZeFdId3lHMEVxUjlxSURKajFqRE5HT2hCcDI2TUpqc2Z5bWNfalhqRmwzQjZiT2JPa2MxbFhRX0M4SnVRa2w4enhLQTRqWnMzUE94WmxvV0RsWXBmXzFVZmN5RHJHYnZuQUNYSjhZb2FpbVpkS0NFc3ByVms2Qi01b1lXeWl0WFZvVlI3ZkdtSUdpdloxVUk?oc=5",
+  "fuente": "Asociación Argentina de Golf - AAG",
+  "deporte": "Golf",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-18T05:01+00:00",
+  "encontrado": "2026-11-18T04:38-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
   "id": "a575b1eb6d6d",
   "titulo": "Hollie Davidson será la primera mujer en dirigir un test match de Los Pumas",
   "resumen": "Hollie Davidson será la primera mujer en dirigir un test match de Los Pumas Rugby Champagne",
@@ -10,6 +24,20 @@
   "en_buenos_aires": false,
   "publicado": "2026-11-18T03:03+00:00",
   "encontrado": "2026-11-18T01:17-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
+  "id": "b85bd0f94fa2",
+  "titulo": "Facu Conte subió fotos a 5 años de la medalla olímpica con Argentina y luce irreconocible",
+  "resumen": "Facu Conte subió fotos a 5 años de la medalla olímpica con Argentina y luce irreconocible TN",
+  "link": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxQZGtuTWxibUJjWmtsRi1CdDUzZ3JTTWVJODl2WUVuSFRCbWZManBlbmRFUkpLVUd6Z3ZvVmtZZzViZC03czAtc0V4ajlBSnlZWmVVeWt2UGdJbEJfRktfU2o3NGxuTGhHTVdXUVZ0V1F6YnF6aEx5bWVwbmREcWt6MXlRWGJZbVNGTVVsVG9oTktVQWs4eWpOOXRid0FTRXhINGhVa1NvNG1jWk9SOFdLS0hJT2tsR0FoSnZSXzJ1TGZPdG55U1N3RUFvcGhWZ2toRndReXViZXRWMUJmRGVRam1YWXM5M1NrM1lMbHMzU1ZNM0xpbGZJ0gH3AUFVX3lxTFBka25NbGJtQmNaa2xGLUJ0NTNnclNNZUk4OXZZRW5IVEJtZkxqcGVuZEVSSktVR3pndm9Wa1lnNWJkLTdzMC1zRXhqOUFKeVlaZVV5a3ZQZ0lsQl9GS19Tajc0bG5MaEdNV1dRVnRXUXpicXpoTHltZXBuZERxa3oxeVFYYlltU0ZNVWxUb2hOS1VBazh5ak45dGJ3QVNFeEg0aFVrU280bWNaT1I4V0tLSElPa2xHQWhKdlJfMnVMZk90bnlTU3dFQW9waFZna2hGd1F5dWJldFYxQmZEZVFqbVhZczkzU2szWUxsczNTVk0zTGlsZkk?oc=5",
+  "fuente": "TN",
+  "deporte": "Voley",
+  "tipo": "resultado",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-18T02:48+00:00",
+  "encontrado": "2026-11-18T04:39-03:00",
   "bot": "resultados",
   "noticia": false
  },
@@ -252,6 +280,34 @@
   "noticia": false
  },
  {
+  "id": "13e1456f86cb",
+  "titulo": "Bautista Yunes, palista de Choele Choel brilló con Argentina en el Sudamericano de Canotaje y sueña con nuevos desafíos internacionales",
+  "resumen": "Bautista Yunes, palista de Choele Choel brilló con Argentina en el Sudamericano de Canotaje y sueña con nuevos desafíos internacionales 7 en punto",
+  "link": "https://news.google.com/rss/articles/CBMilAJBVV95cUxOdktLWnRuTWMxckNfSHpISS14S091SW10ZDhqNklkXzlCR2RTTFY0a2NWUHFDMkNDekVWRkNnM3hNSkhBeF9wZnlYYmlob0ZKdV9td3E3NkFQQi00SVJiY09aQnJ3MU5XM2VOaXd6ZTJrVUVZRmx3QkdsVU13U2dXZ0JYTDBsYWx2dllhTEVDUWZORGZoRVZDWk9ScWFwbXRTd25xZEhSRHE4QzRnajg0Vm1zMW1YaVctdk5XUmlXTjZ2b1dlUTVvYXNHb1Nsek5wU1ZFUFROMk1ZT0p4dW5NNTd0SWUxMzV1OWpYWjlfTnlqdWNDN1liLUtPUUVvSUFWeDFFbFFfRzNRenRaVF9ZbVdVUzjSAZoCQVVfeXFMTTlLRmFSWVAtUThNSTNpUGFjMGpNTWVCX3ctQzhZaklmMktvdTFpeVJ4RVdxSmV4Vl9FZU84bE9CdV9GeXZfeHVtYWRsQkYzclAyODA0SkRVRTA5cWt6d0xDaXBEeXA2Y01PWXJEODhYNFdPdjhreXJmbVd5dG9MV2tDdGhacTBWTXVzblZ2QTZwMUJJMXZyZmNRU051MkI2MU13ZHZvbGJpOUQ5VkgtR2Y3czNVR3Z6ZFdGWXdVMk85TWJaRW5uNloydDJGZnY1dDFLLU51NWFCOTNIeWJhLWhWYkowRW4tYjhvYlFocHR5eExEZVM1R3hxczFaUHBqY29xNEtlbFI5ZFYtald5cjJFcU41OHNhS0RB?oc=5",
+  "fuente": "7 en punto",
+  "deporte": "Canotaje",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-17T20:55+00:00",
+  "encontrado": "2026-11-18T04:37-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
+  "id": "485c2bf06872",
+  "titulo": "La Universidad Católica Argentina cuestionó las cifras oficiales de pobreza y estimó que alcanza al 42,4% de la población",
+  "resumen": "La Universidad Católica Argentina cuestionó las cifras oficiales de pobreza y estimó que alcanza al 42,4% de la población CONCORDIA 102.1 DIGITAL",
+  "link": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxPVUpPMFZoRmR4YS0ycDFJdjkyU3ozZUxiTktiZGIzWWZmTEI5NlppZVAxMGN2ckgxMXZSQVlkRlZ4TEszazBWTmZJbFVMZERwWXZycU9Lc3VJYTFGVUM1bm9sbXRwdkFkdWhTTC1zZlV6LWs5aWlTbUZLM3EzdmlwOEFpN0twZmxSSVoyMndmYXlaak96LXZybEFZZFAtZ2NVaUN4TVAyU05jd1NZQXFMYVBGaXozVmp0QkR2eTQ3b3JTTUFDSWpqOUdvYndySE1pcDVIZGIwbXR0VXl3U0hQLU41YkE0Tm1JemhhbWk5MndGQWJ3T1M5T2pfdw?oc=5",
+  "fuente": "CONCORDIA 102.1 DIGITAL",
+  "deporte": "Lucha",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-17T20:27+00:00",
+  "encontrado": "2026-11-18T04:38-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
   "id": "e509df38db9f",
   "titulo": "Los Pumas entrenan en París, con el regreso de Julián Montoya, \"ocupándose\" de lo que será el duelo ante Francia",
   "resumen": "Los Pumas entrenan en París, con el regreso de Julián Montoya, \"ocupándose\" de lo que será el duelo ante Francia Rugby Champagne",
@@ -276,6 +332,20 @@
   "en_buenos_aires": false,
   "publicado": "2026-11-17T18:40+00:00",
   "encontrado": "2026-11-18T01:15-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
+  "id": "072f482eb48e",
+  "titulo": "Inaugura la muestra Homenaje al Dibujo Argentino",
+  "resumen": "Inaugura la muestra Homenaje al Dibujo Argentino Diario La Capital de Mar del Plata",
+  "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOVnVlSF9fenk3WE9LWnUwZks0Z3NMWXlsNXRiV2szY0hXSzlzYUdOd0h1bkpCQ3haZDE2YW9QWWlQS2RGU3dSZWdlVE51R3dDbnppRWtnbmFuSDlnS0hYZUg3aXR0blZzUFdtNkFSby1uNnE3OFF3X1NZTjJRQlVkNGR3QWg?oc=5",
+  "fuente": "Diario La Capital de Mar del Plata",
+  "deporte": "Salvamento acuatico",
+  "tipo": "resultado",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-17T18:35+00:00",
+  "encontrado": "2026-11-18T04:39-03:00",
   "bot": "resultados",
   "noticia": false
  },
