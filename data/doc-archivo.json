@@ -232,6 +232,595 @@
    "terminado_desde": "2026-11-10",
    "visto": "2026-11-16"
   },
+  "09aee7b6024c": {
+   "titulo": "RACQUETBALL - TURKEY SHOOT EN ESTADOS UNIDOS",
+   "deporte": "RACQUETBALL",
+   "evento": "TURKEY SHOOT EN ESTADOS UNIDOS",
+   "fechas": null,
+   "etiqueta": "publicable",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se jugó del 12 al 15/11"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Singles",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Diego Garcia logró la medalla de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      },
+      {
+       "t": " tras caer en semis vs Moscoso por 15-8 y 15-9"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Fernando Kurzbard perdió en primera ronda vs Emir Martinez por 15-10, 13-15 y 4-11"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Dobles Open",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Diego Garcia y Fernando Kurzbard se consagraron "
+      },
+      {
+       "t": "CAMPEONES",
+       "b": true
+      },
+      {
+       "t": ": en semis le ganaron a Carter / Flowers por 11-7 y 11-3 y en la final a Trujillo / Carrasco por No Show"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "403905cd"
+   ],
+   "id": "09aee7b6024c",
+   "version": "2bf4fbd4e4",
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-17",
+   "visto": "2026-11-17"
+  },
+  "0afd6a9ee3c5": {
+   "titulo": "GIMNASIA AERÓBICA - CAMPEONATO PANAMERICANO DE CATEGORÍAS EN ARACAJU, BRASIL",
+   "deporte": "GIMNASIA AERÓBICA",
+   "evento": "CAMPEONATO PANAMERICANO DE CATEGORÍAS EN ARACAJU, BRASIL",
+   "fechas": null,
+   "etiqueta": "publicable",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se compitió del 11 al 15/11"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://sporttech.io/events/6b2bdf5e-18cf-4cdc-7818-e3874d0a6802/ovs/info?tab=medals",
+       "href": "https://sporttech.io/events/6b2bdf5e-18cf-4cdc-7818-e3874d0a6802/ovs/info?tab=medals"
+      },
+      {
+       "t": " (Medallero)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Argentina terminó 4° en el medallero con 29 medallas: 7 "
+      },
+      {
+       "t": "DORADAS",
+       "b": true
+      },
+      {
+       "t": ", 12 "
+      },
+      {
+       "t": "PLATEADAS",
+       "b": true
+      },
+      {
+       "t": " y 10 de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Individual",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Guadalupe Aberastain ganó la medalla "
+      },
+      {
+       "t": "DORADA",
+       "b": true
+      },
+      {
+       "t": " en Senior"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Guadalupe Aberastain ganó la medalla "
+      },
+      {
+       "t": "DORADA",
+       "b": true
+      },
+      {
+       "t": " en Senior de Copa"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Guadalupe Aberastain ganó la medalla "
+      },
+      {
+       "t": "DORADA",
+       "b": true
+      },
+      {
+       "t": " en Senior Panamericano"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Valentina Ramos ganó la medalla "
+      },
+      {
+       "t": "PLATEADA",
+       "b": true
+      },
+      {
+       "t": " en Senior"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Valentina Ramos ganó la medalla "
+      },
+      {
+       "t": "PLATEADA",
+       "b": true
+      },
+      {
+       "t": " en Senior de Copa"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Valentina Ramos ganó la medalla "
+      },
+      {
+       "t": "PLATEADA",
+       "b": true
+      },
+      {
+       "t": " en Senior Panamericano"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Juana Calderon ganó la medalla de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      },
+      {
+       "t": " en Desarrollo Nacional"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Pareja mixta",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Abril Nahiara Chazarreta y Santino De Santis ganaron la medalla "
+      },
+      {
+       "t": "PLATEADA",
+       "b": true
+      },
+      {
+       "t": " en Junior Panamericano"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Giuliana Lorenzetti y Lionel Ivan Marquez ganaron la medalla de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      },
+      {
+       "t": " en Junior Panamericano"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Lautaro Nicolas Morlibo y Valentina Nahir Oros Remesar ganaron la medalla "
+      },
+      {
+       "t": "DORADA",
+       "b": true
+      },
+      {
+       "t": " en Senior de Copa"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Lautaro Nicolas Morlibo y Valentina Nahir Oros Remesar ganaron la medalla "
+      },
+      {
+       "t": "PLATEADA",
+       "b": true
+      },
+      {
+       "t": " en Senior"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Lautaro Nicolas Morlibo y Valentina Nahir Oros Remesar ganaron la medalla "
+      },
+      {
+       "t": "PLATEADA",
+       "b": true
+      },
+      {
+       "t": " en Senior Panamericano"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Roman Gabriel Fernandez Martin y Valentina Ramos ganaron la medalla "
+      },
+      {
+       "t": "PLATEADA",
+       "b": true
+      },
+      {
+       "t": " en Senior de Copa"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Trío",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Juana Calderon, Lara Romero y Maria Paz Acosta ganaron la medalla de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      },
+      {
+       "t": " en Desarrollo Nacional"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Malena Baldrich, Morena Fillon y Sol Iriarte ganaron la medalla de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      },
+      {
+       "t": " en Senior de Copa"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Amparo Ponce Zuin, Matilda Mendez Corvalan y Umma Alba Fuentes ganaron la medalla de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      },
+      {
+       "t": " en Youth"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Grupo",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Bianca Agostina Horta Salamino, Lourdes Astiz Pelagatti, Mailen Grosso, Renata Di Prinzio y Sofia Abril Legrottaglie Valero ganaron la medalla "
+      },
+      {
+       "t": "PLATEADA",
+       "b": true
+      },
+      {
+       "t": " en Junior"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Bianca Agostina Horta Salamino, Lourdes Astiz Pelagatti, Mailen Grosso, Renata Di Prinzio y Sofia Abril Legrottaglie Valero ganaron la medalla "
+      },
+      {
+       "t": "PLATEADA",
+       "b": true
+      },
+      {
+       "t": " en Junior Panamericano"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Alma Celene Espejo, Charo Rotger, Guadalupe Mendez, Josefina Vincenti y Mia Constanza Morcillo Vargas ganaron la medalla de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      },
+      {
+       "t": " en Junior Panamericano"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Brenda Weber, Matilda Pez, Guadalupe Aberastain, Malena Baldrich y Valentina Ramos ganaron la medalla "
+      },
+      {
+       "t": "PLATEADA",
+       "b": true
+      },
+      {
+       "t": " en Senior"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Brenda Weber, Matilda Pez, Guadalupe Aberastain, Malena Baldrich y Valentina Ramos ganaron la medalla "
+      },
+      {
+       "t": "PLATEADA",
+       "b": true
+      },
+      {
+       "t": " en Senior Panamericano"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Daiana Morate, Damila Cian, Eva Guiber, Morena Fillon y Sol Iriarte ganaron la medalla "
+      },
+      {
+       "t": "DORADA",
+       "b": true
+      },
+      {
+       "t": " en Senior de Copa"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Daiana Morate, Damila Cian, Eva Guiber, Morena Fillon y Sol Iriarte ganaron la medalla de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      },
+      {
+       "t": " en Senior"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Daiana Morate, Damila Cian, Eva Guiber, Morena Fillon y Sol Iriarte ganaron la medalla de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      },
+      {
+       "t": " en Senior Panamericano"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Amparo Ponce Zuin, Matilda Mendez Corvalan, Morena Ariadna Mariani, Samara Fernandez y Umma Alba Fuentes ganaron la medalla de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      },
+      {
+       "t": " en Youth"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Amparo Ponce Zuin, Matilda Mendez Corvalan, Morena Ariadna Mariani, Samara Fernandez y Umma Alba Fuentes ganaron la medalla de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      },
+      {
+       "t": " en Youth Panamericano"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "b8e1520e"
+   ],
+   "id": "0afd6a9ee3c5",
+   "version": "065f413392",
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-17",
+   "visto": "2026-11-17"
+  },
   "10e265e39647": {
    "titulo": "FAUSTBALL - CAMPEONATO PANAMERICANO PAFA EN SANTIAGO, CHILE",
    "deporte": "FAUSTBALL",
@@ -1111,14 +1700,22 @@
    "visto": "2026-11-16"
   },
   "31518371aee9": {
-   "titulo": "SURF - ISA WORLD SURFING GAMES EN PUNTA ROCAS, PERÚ (6 al 15 de noviembre)",
+   "titulo": "SURF - ISA WORLD SURFING GAMES EN PUNTA ROCAS, PERÚ",
    "deporte": "SURF",
    "evento": "ISA WORLD SURFING GAMES EN PUNTA ROCAS, PERÚ",
-   "fechas": "6 al 15 de noviembre",
-   "etiqueta": "en_curso",
+   "fechas": null,
+   "etiqueta": "publicable",
    "seccion": "resultados",
    "ya_publicado": false,
    "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se corrió del 6 al 15/11"
+      }
+     ]
+    },
     {
      "tipo": "link",
      "partes": [
@@ -1689,22 +2286,162 @@
        "b": true
       }
      ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.lacapitalmdp.com/radziunas-es-top-ten-en-el-mundial/",
+       "href": "https://www.lacapitalmdp.com/radziunas-es-top-ten-en-el-mundial/"
+      },
+      {
+       "t": " (Nota sábado 14/11)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Sábado 14/11",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Franco Radziunas fue 4° en el heat 1 de la 5ta ronda con 7.60 (detrás de Lucca Mesinas (PER) 16.83, Crosby Colapinto (USA) 13.66 y Ethan Ewing (AUS) 12.60) y fue al Repechaje"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Franco Radziunas fue 2° en el heat 2 de la 8va ronda del Repechaje con 11.50 (detrás de Yago Dora (BRA) 12.43; empató con Kai Odriozola (GER) y pasó por mejor ola, 7.33 a 6.00)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Franco Radziunas fue 2° en el heat 1 de la 9na ronda del Repechaje con 13.50 (detrás de Kanoa Igarashi (JPN) 17.60, por delante de Jorgan Couzinet 8.17)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Thiago Passeri fue 4° en el heat 1 de la 7ma ronda del Repechaje con 7.30 (detrás de Kanoa Igarashi (JPN), Kai Odriozola (GER) y Guilherme Ribeiro (POR)) y terminó 22°"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.lacapitalmdp.com/radziunas-termino-sexto-y-se-gano-la-consideracion-de-la-elite-mundial/",
+       "href": "https://www.lacapitalmdp.com/radziunas-termino-sexto-y-se-gano-la-consideracion-de-la-elite-mundial/"
+      },
+      {
+       "t": " (Nota final)"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://estacionk2.com/nota/184683/mundial-de-surf-argentina-fue-decima-en-el-ranking-por-naciones/",
+       "href": "https://estacionk2.com/nota/184683/mundial-de-surf-argentina-fue-decima-en-el-ranking-por-naciones/"
+      },
+      {
+       "t": " (Nota final)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Clasificación final",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Franco Radziunas terminó en el "
+      },
+      {
+       "t": "6° PUESTO",
+       "b": true
+      },
+      {
+       "t": " entre 124 surfistas, su mejor resultado en un Mundial ISA (antes había sido 11° en El Salvador 2025). En la ronda previa a la final se le rompió la tabla a 14 minutos del final del heat, fue 4° con 4.86 y quedó a dos puestos de la medalla"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Thiago Passeri 22°, Joaquín Muñoz Larreta 49°, Vera Jarisz 31°, Lucía Indurain 43° y Victoria Muñoz Larreta 49°"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Argentina terminó 10° en el ranking por naciones (entre 52 países) con 2038 puntos. Campeón por equipos: Australia, 2° Perú y 3° Estados Unidos"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Oro individual: Ethan Ewing (AUS) y Leihan Zoric (AUS). Los cupos a Los Ángeles 2028 fueron para Perú (masculino) y Australia (femenino)"
+      }
+     ]
     }
    ],
    "id": "31518371aee9",
-   "version": "278057986c",
+   "version": "08a0976025",
    "publicado_en_doc": false,
+   "terminado_desde": "2026-11-17",
    "visto": "2026-11-17"
   },
   "31f587ef5664": {
-   "titulo": "GIMNASIA EN TRAMPOLÍN - MUNDIAL JUVENIL (WORLD AGE GROUP COMPETITIONS) EN NANJING, CHINA (12 al 15 de noviembre)",
+   "titulo": "GIMNASIA EN TRAMPOLÍN - MUNDIAL JUVENIL (WORLD AGE GROUP COMPETITIONS) EN NANJING, CHINA",
    "deporte": "GIMNASIA EN TRAMPOLÍN",
    "evento": "MUNDIAL JUVENIL (WORLD AGE GROUP COMPETITIONS) EN NANJING, CHINA",
-   "fechas": "12 al 15 de noviembre",
-   "etiqueta": "en_curso",
+   "fechas": null,
+   "etiqueta": "publicable",
    "seccion": "resultados",
    "ya_publicado": false,
    "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se compitió del 12 al 15/11"
+      }
+     ]
+    },
     {
      "tipo": "link",
      "partes": [
@@ -1750,25 +2487,93 @@
      ]
     },
     {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Trampolín individual",
+       "b": true
+      }
+     ]
+    },
+    {
      "tipo": "texto",
      "partes": [
       {
-       "t": "Faltan pruebas y horarios"
+       "t": "Lucca Constantino De Pedro Casali (13-14 años) fue 54° con 81.66"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Macarena Cainzos (junior) fue 62° con 46.94"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Martina Quimey Arguiano Salinas (17-21 años) fue 65° con 62.30"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Doble mini-trampolín",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Milagros Albarracín Hammond (11-12 años) fue 20° con 39.80"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Lucca Constantino De Pedro Casali (13-14 años) fue 24° con 42.60"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Amaia Sol Navarro (13-14 años) fue 37° con 35.00"
       }
      ]
     }
    ],
+   "refs_panel": [
+    "05f33191"
+   ],
    "id": "31f587ef5664",
-   "version": "7e42ee5d73",
+   "version": "2d621a7fcc",
    "publicado_en_doc": false,
+   "terminado_desde": "2026-11-17",
    "visto": "2026-11-17"
   },
   "321e6c965b68": {
-   "titulo": "BOCHAS - CAMPEONATO MUNDIAL EN RIJEKA, CROACIA (fechas a confirmar)",
+   "titulo": "BOCHAS - CAMPEONATO MUNDIAL EN RIJEKA, CROACIA",
    "deporte": "BOCHAS",
-   "evento": "CAMPEONATO MUNDIAL EN RIJEKA, CROACIA (fechas a confirmar)",
+   "evento": "CAMPEONATO MUNDIAL EN RIJEKA, CROACIA",
    "fechas": null,
-   "etiqueta": "en_curso",
+   "etiqueta": "mas_info",
    "seccion": "resultados",
    "ya_publicado": false,
    "bloques": [
@@ -1781,28 +2586,169 @@
      ]
     },
     {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Individual",
+       "b": true
+      }
+     ]
+    },
+    {
      "tipo": "texto",
      "partes": [
       {
-       "t": "Faltan fechas, categorías y resultados"
+       "t": "Guillermo Montemerlo ("
+      },
+      {
+       "t": "https://www.instagram.com/guillemontemerlo/",
+       "href": "https://www.instagram.com/guillemontemerlo/"
+      },
+      {
+       "t": ") logró la medalla de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      },
+      {
+       "t": " tras caer en la semifinal vs Eslovenia por 8-4"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Parejas",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Guillermo Montemerlo y Nicolás Pretto ("
+      },
+      {
+       "t": "https://www.instagram.com/nicoprettoarg/",
+       "href": "https://www.instagram.com/nicoprettoarg/"
+      },
+      {
+       "t": ") lograron la medalla de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      },
+      {
+       "t": " tras caer en la semifinal vs Italia por 8-3"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Combinado",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Guadalupe Serantes ("
+      },
+      {
+       "t": "https://www.instagram.com/guadalupeserantes/",
+       "href": "https://www.instagram.com/guadalupeserantes/"
+      },
+      {
+       "t": ") y el combinado argentino perdieron en 4tos vs Eslovenia por 28-26"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Dobles masculino de Tiro Rápido",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Brian Martini ("
+      },
+      {
+       "t": "https://www.instagram.com/brian_martini_06/",
+       "href": "https://www.instagram.com/brian_martini_06/"
+      },
+      {
+       "t": ") y Daniel Bogado ("
+      },
+      {
+       "t": "https://www.instagram.com/daniibogadoo16/",
+       "href": "https://www.instagram.com/daniibogadoo16/"
+      },
+      {
+       "t": ") perdieron en 4tos vs Francia"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan: fechas del evento y link de resultados"
       }
      ]
     }
    ],
+   "refs_panel": [
+    "24d5aa22"
+   ],
    "id": "321e6c965b68",
-   "version": "10fd985e43",
+   "version": "7b05481ace",
    "publicado_en_doc": false,
+   "terminado_desde": "2026-11-17",
    "visto": "2026-11-17"
   },
   "366cb072cee3": {
-   "titulo": "ORIENTACIÓN - CAMPEONATO SUDAMERICANO EN PUCÓN, CHILE (12 al 15 de noviembre)",
+   "titulo": "ORIENTACIÓN - CAMPEONATO SUDAMERICANO EN PUCÓN, CHILE",
    "deporte": "ORIENTACIÓN",
    "evento": "CAMPEONATO SUDAMERICANO EN PUCÓN, CHILE",
-   "fechas": "12 al 15 de noviembre",
-   "etiqueta": "en_curso",
+   "fechas": null,
+   "etiqueta": "mas_info",
    "seccion": "resultados",
    "ya_publicado": false,
    "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se corrió del 12 al 15/11"
+      }
+     ]
+    },
     {
      "tipo": "link",
      "partes": [
@@ -1981,8 +2927,9 @@
     "2a72a972"
    ],
    "id": "366cb072cee3",
-   "version": "407befd80f",
+   "version": "f828cc6382",
    "publicado_en_doc": false,
+   "terminado_desde": "2026-11-17",
    "visto": "2026-11-17"
   },
   "3f83ee1c3780": {
@@ -2944,11 +3891,11 @@
    "visto": "2026-11-16"
   },
   "90b3a227d0f3": {
-   "titulo": "JUDO - GRAND PRIX DE ZAGREB, CROACIA (13 al 15 de noviembre)",
+   "titulo": "JUDO - GRAND PRIX DE ZAGREB, CROACIA",
    "deporte": "JUDO",
    "evento": "GRAND PRIX DE ZAGREB, CROACIA",
-   "fechas": "13 al 15 de noviembre",
-   "etiqueta": "en_curso",
+   "fechas": null,
+   "etiqueta": "mas_info",
    "seccion": "resultados",
    "ya_publicado": false,
    "bloques": [
@@ -2980,14 +3927,35 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Argentina tiene 6 judokas inscriptos (varones). Faltan los nombres"
+       "t": "Se compitió del 13 al 15/11"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://ijf.org/events/gp_cro2026/results",
+       "href": "https://ijf.org/events/gp_cro2026/results"
+      },
+      {
+       "t": " (Resultados)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Argentina tenía 6 judokas inscriptos (varones). Ningún argentino aparece en el medallero. Faltan los nombres y los resultados de cada uno"
       }
      ]
     }
    ],
    "id": "90b3a227d0f3",
-   "version": "22a44c7895",
+   "version": "ba07cee63c",
    "publicado_en_doc": false,
+   "terminado_desde": "2026-11-17",
    "visto": "2026-11-17"
   },
   "93a941b2307c": {
@@ -3380,14 +4348,22 @@
    "visto": "2026-11-16"
   },
   "9b8960c27c6e": {
-   "titulo": "FÚTBOL - FECHA FIFA: AMISTOSOS DE LA SELECCIÓN MAYOR EN ARGENTINA (13 y 17 de noviembre)",
+   "titulo": "FÚTBOL - FECHA FIFA: AMISTOSOS DE LA SELECCIÓN MAYOR EN ARGENTINA",
    "deporte": "FÚTBOL",
    "evento": "FECHA FIFA: AMISTOSOS DE LA SELECCIÓN MAYOR EN ARGENTINA",
-   "fechas": "13 y 17 de noviembre",
-   "etiqueta": "en_curso",
+   "fechas": null,
+   "etiqueta": "publicable",
    "seccion": "resultados",
    "ya_publicado": false,
    "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se jugaron el 13 y 17/11"
+      }
+     ]
+    },
     {
      "tipo": "link",
      "partes": [
@@ -3445,7 +4421,7 @@
      "tipo": "sub",
      "partes": [
       {
-       "t": "vs Costa Rica el martes 17/11 en el Kempes (Córdoba)",
+       "t": "vs Costa Rica el martes 17/11 a las 20hs en el Kempes (Córdoba)",
        "b": true
       }
      ]
@@ -3463,17 +4439,30 @@
      ]
     },
     {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.lanacion.com.ar/deportes/canchallena/argentina-vencio-7-0-a-costa-rica-en-un-amistoso-internacional-nid17112026/",
+       "href": "https://www.lanacion.com.ar/deportes/canchallena/argentina-vencio-7-0-a-costa-rica-en-un-amistoso-internacional-nid17112026/"
+      },
+      {
+       "t": " (Resultado)"
+      }
+     ]
+    },
+    {
      "tipo": "texto",
      "partes": [
       {
-       "t": "Sería a las 20hs (Creo, todavía a confirmar)"
+       "t": "Argentina goleó 7-0 a Costa Rica a las 20hs en el Kempes (Nico Paz x2, Julián Álvarez x2, Franco Mastantuono x2 y Alexis Mac Allister) y cerró el año"
       }
      ]
     }
    ],
    "id": "9b8960c27c6e",
-   "version": "3c76c77c66",
+   "version": "760914ebfd",
    "publicado_en_doc": false,
+   "terminado_desde": "2026-11-17",
    "visto": "2026-11-17"
   },
   "9c2641b1daed": {
@@ -3866,11 +4855,11 @@
    "visto": "2026-11-16"
   },
   "b904de21ef8b": {
-   "titulo": "BEACH VOLEY - 2DA ETAPA CSVP 2026-2027 EN CAYENA, GUYANA FRANCESA (11 al 15 de noviembre)",
+   "titulo": "BEACH VOLEY - 2DA ETAPA CSVP 2026-2027 EN CAYENA, GUYANA FRANCESA",
    "deporte": "BEACH VOLEY",
    "evento": "2DA ETAPA CSVP 2026-2027 EN CAYENA, GUYANA FRANCESA",
-   "fechas": "11 al 15 de noviembre",
-   "etiqueta": "en_curso",
+   "fechas": null,
+   "etiqueta": "mas_info",
    "seccion": "resultados",
    "ya_publicado": false,
    "bloques": [
@@ -3878,14 +4867,23 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Faltan parejas argentinas"
+       "t": "Se jugó del 11 al 15/11"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan parejas argentinas y resultados"
       }
      ]
     }
    ],
    "id": "b904de21ef8b",
-   "version": "2f763bf564",
+   "version": "f053cdb4dd",
    "publicado_en_doc": false,
+   "terminado_desde": "2026-11-17",
    "visto": "2026-11-17"
   },
   "c397f3c8f523": {
@@ -4035,7 +5033,7 @@
    "deporte": "NATACIÓN ADAPTADA",
    "evento": "PARA SWIMMING WORLD SERIES EN LIMA, PERÚ",
    "fechas": null,
-   "etiqueta": "mas_info",
+   "etiqueta": "publicable",
    "seccion": "resultados",
    "ya_publicado": false,
    "bloques": [
@@ -4164,6 +5162,36 @@
      ]
     },
     {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Nicolás Ricci ganó la medalla "
+      },
+      {
+       "t": "PLATEADA",
+       "b": true
+      },
+      {
+       "t": " en los 150m combinado SM4"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Analuz Pellitero ganó la medalla de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      },
+      {
+       "t": " en los 100m espalda S11"
+      }
+     ]
+    },
+    {
      "tipo": "espacio"
     },
     {
@@ -4235,18 +5263,189 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Faltan: tiempos y resultados de los otros días"
+       "t": "Matías de Andrade fue 4° en la final A de 100m espalda S6 y 8° en la final B de 50m libre S6"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Lucas Leguiza fue 7° en la final A de 50m libre S9"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Tomás Fangio fue 7° en la final juvenil de 100m espalda S8 y 8° en 50m libre S8"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Alma Roisman fue 7° en la final juvenil de 100m espalda S10, 5° en 50m libre S10 y 3° en 400m libre S10"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Mateo Vives fue 3° en la final B de 100m espalda S9"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Paula Ibarra ganó la final B de 100m espalda S10"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Tiziana Forlano fue 7° en la final B de 100m espalda S6"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Nadia Báez fue 3° en la final B de 50m libre S11"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Elizabeth Noriega fue 4° en la final B de 50m libre S5"
       }
      ]
     }
    ],
    "refs_panel": [
-    "51c960f0"
+    "51c960f0",
+    "9f6f3cc5",
+    "9e9e840d"
    ],
    "id": "d76e45b4bd6a",
-   "version": "8d3697c1b2",
+   "version": "4a654e7c59",
    "publicado_en_doc": false,
    "terminado_desde": "2026-11-14",
+   "visto": "2026-11-17"
+  },
+  "dd6ed1609c4e": {
+   "titulo": "GIMNASIA ARTÍSTICA - GYMPIES GYMNOVA CUP EN BÉLGICA",
+   "deporte": "GIMNASIA ARTÍSTICA",
+   "evento": "GYMPIES GYMNOVA CUP EN BÉLGICA",
+   "fechas": null,
+   "etiqueta": "publicable",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se compitió del 12 al 15/11"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://dnl-ie-ggc-cupapp-app.azurewebsites.net/?se=se_1794684372231_beam",
+       "href": "https://dnl-ie-ggc-cupapp-app.azurewebsites.net/?se=se_1794684372231_beam"
+      },
+      {
+       "t": " (Resultados)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Junior",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Eugenia García ("
+      },
+      {
+       "t": "https://www.instagram.com/euge_garciiaa/",
+       "href": "https://www.instagram.com/euge_garciiaa/"
+      },
+      {
+       "t": ") logró la medalla de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      },
+      {
+       "t": " en el All-Around con 47.417"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Eugenia García hizo 12.533 en la final de Salto y fue 6° en la final de Suelo con 11.067"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Senior",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Angelina Bottazzini ("
+      },
+      {
+       "t": "https://www.instagram.com/bottazziniangelina/",
+       "href": "https://www.instagram.com/bottazziniangelina/"
+      },
+      {
+       "t": ") fue 19° en el All-Around con 42.383"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "470e2707"
+   ],
+   "id": "dd6ed1609c4e",
+   "version": "b0f0b8714e",
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-17",
    "visto": "2026-11-17"
   },
   "de102f71eab3": {
@@ -4347,14 +5546,34 @@
      "tipo": "sub",
      "partes": [
       {
-       "t": "vs Francia el sábado 21/11 a las 17:10hs",
+       "t": "vs Francia el sábado 21/11 a las 17:10hs en el Stade de France (Saint-Denis)",
        "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.diariopanorama.com/noticia/573003/tras-triunfo-ante-italia-cuando-vuelven-jugar-pumas-nations-championship-2026",
+       "href": "https://www.diariopanorama.com/noticia/573003/tras-triunfo-ante-italia-cuando-vuelven-jugar-pumas-nations-championship-2026"
+      },
+      {
+       "t": " (Previa)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Es el último partido de la fase de grupos. Después Argentina viaja a Londres para los cruces por posiciones, el último fin de semana de noviembre"
       }
      ]
     }
    ],
    "id": "de102f71eab3",
-   "version": "ca2f2203e4",
+   "version": "12667448cf",
    "publicado_en_doc": false,
    "visto": "2026-11-17"
   },
@@ -4772,6 +5991,334 @@
    "publicado_en_doc": false,
    "terminado_desde": "2026-11-10",
    "visto": "2026-11-16"
+  },
+  "fde01f59acd9": {
+   "titulo": "ATLETISMO - CAMPEONATO SUDAMERICANO DE MARATÓN Y RUTA EN SANTIAGO, CHILE",
+   "deporte": "ATLETISMO",
+   "evento": "CAMPEONATO SUDAMERICANO DE MARATÓN Y RUTA EN SANTIAGO, CHILE",
+   "fechas": null,
+   "etiqueta": "publicable",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se corrió el domingo 15/11, con Sudamericano de Maratón y de Carreras de Ruta (Milla, 5 km y 21 km) en simultáneo. Compitieron 24 argentinos"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.elchubut.com.ar/superdepor/2026-11-14-16-22-0-eulalio-coco-munoz-dice-presente-en-el-sudamericano-de-maraton",
+       "href": "https://www.elchubut.com.ar/superdepor/2026-11-14-16-22-0-eulalio-coco-munoz-dice-presente-en-el-sudamericano-de-maraton"
+      },
+      {
+       "t": " (Nota)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Largada y llegada en el Estadio Nacional el domingo 15/11 a las 6:45hs (circuito de 2 vueltas)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Maratón Masculino",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Eulalio \"Coco\" Muñoz, Esteban Angulo y Daniel Penta"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Maratón Femenino",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Natacha Castaño y María Angelina Reyes"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://cada-atletismo.org/argentina-suma-titulos-en-el-sudamericano-de-ruta-en-santiago-2026/",
+       "href": "https://cada-atletismo.org/argentina-suma-titulos-en-el-sudamericano-de-ruta-en-santiago-2026/"
+      },
+      {
+       "t": " (Resultados)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Argentina ganó 10 medallas: 2 "
+      },
+      {
+       "t": "DORADAS",
+       "b": true
+      },
+      {
+       "t": ", 4 "
+      },
+      {
+       "t": "PLATEADAS",
+       "b": true
+      },
+      {
+       "t": " y 4 de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Doradas:",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Micaela Levaggi ganó la medalla "
+      },
+      {
+       "t": "DORADA",
+       "b": true
+      },
+      {
+       "t": " en la Milla (4:58.6)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Belén Casetta ganó la medalla "
+      },
+      {
+       "t": "DORADA",
+       "b": true
+      },
+      {
+       "t": " en los 5 km (15:51)"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Plateadas:",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Matías Reynaga ganó la medalla "
+      },
+      {
+       "t": "PLATEADA",
+       "b": true
+      },
+      {
+       "t": " en la Milla (4:08.9)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Nélida Peñaflor ganó la medalla "
+      },
+      {
+       "t": "PLATEADA",
+       "b": true
+      },
+      {
+       "t": " en los 5 km (15:53)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Tomás Vega ganó la medalla "
+      },
+      {
+       "t": "PLATEADA",
+       "b": true
+      },
+      {
+       "t": " en los 5 km (14:31)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Anahí Castaño ganó la medalla "
+      },
+      {
+       "t": "PLATEADA",
+       "b": true
+      },
+      {
+       "t": " en el Maratón"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Bronces:",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Karen Rocca ganó la medalla de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      },
+      {
+       "t": " en la Milla"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Germán Vega ganó la medalla de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      },
+      {
+       "t": " en los 5 km (14:33)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Sofía Gómez ganó la medalla de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      },
+      {
+       "t": " en los 21 km (1:14:09)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Eulalio \"Coco\" Muñoz ganó la medalla de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      },
+      {
+       "t": " en el Maratón"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Otros resultados",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Sofía Luna fue 4° en los 21 km (1:14:14) y Alexis Corrías 4° en los 21 km masculino (1:06:44)"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "71ff5cee"
+   ],
+   "id": "fde01f59acd9",
+   "version": "efffeaebb2",
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-17",
+   "visto": "2026-11-17"
   }
  }
 }
