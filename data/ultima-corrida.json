@@ -40,13 +40,13 @@
   "segundos": 287
  },
  "doc": {
-  "cuando": "2026-11-18T22:37-03:00",
+  "cuando": "2026-11-18T23:55-03:00",
   "ok": true,
   "eventos": 45,
   "publicable": 14,
-  "en_curso": 3,
+  "en_curso": 2,
   "mas_info": 6,
-  "agenda": 22,
-  "actualizado_doc": "18/11/2026 10:56"
+  "agenda": 23,
+  "actualizado_doc": "18/11/2026 23:15"
  }
 }

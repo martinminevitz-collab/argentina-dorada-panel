@@ -1,7 +1,62 @@
 {
- "leido": "2026-11-18T11:58-03:00",
- "actualizado_doc": "18/11/2026 10:56",
+ "leido": "2026-11-18T23:55-03:00",
+ "actualizado_doc": "18/11/2026 23:15",
  "eventos": [
+  {
+   "titulo": "VELA - CAMPEONATO SUDAMERICANO EN RÍO DE JANEIRO, BRASIL",
+   "deporte": "VELA",
+   "evento": "CAMPEONATO SUDAMERICANO EN RÍO DE JANEIRO, BRASIL",
+   "fechas": null,
+   "etiqueta": "mas_info",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se corrió del 14 al 18/11"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://enard.org.ar/agenda_noviembre_2026/",
+       "href": "https://enard.org.ar/agenda_noviembre_2026/"
+      },
+      {
+       "t": " (Agenda ENARD)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan clases, regatistas argentinos y resultados"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Según el Iate Clube do Rio de Janeiro en noviembre hay Sudamericanos de Finn y de 470 (Creo que son parte de este evento): "
+      },
+      {
+       "t": "https://www.icrj.com.br/velaicrj/images/aviso_regata/2026/11_nov/NOR_SUDAM_470_-_2026_-_FINAL.pdf",
+       "href": "https://www.icrj.com.br/velaicrj/images/aviso_regata/2026/11_nov/NOR_SUDAM_470_-_2026_-_FINAL.pdf"
+      }
+     ]
+    }
+   ],
+   "id": "7a44a2ecec03",
+   "version": "6750dad024",
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-18"
+  },
   {
    "titulo": "PÁDEL - PANAMERICANO DE MENORES (FIP JUNIOR AMERICA PADEL CUP) EN CANCÚN, MÉXICO",
    "deporte": "PÁDEL",
@@ -3819,7 +3874,14 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Agustín Hoffmann corrió las últimas regatas del Techno 293 y cerró su participación. Falta su puesto final en la general (venía 19°)"
+       "t": "Agustín Hoffmann corrió las últimas regatas del Techno 293 y terminó 19° en la general ("
+      },
+      {
+       "t": "https://www.instagram.com/p/Dfr0Hp5IBST/",
+       "href": "https://www.instagram.com/p/Dfr0Hp5IBST/"
+      },
+      {
+       "t": " - ENARD)"
       }
      ]
     },
@@ -5100,7 +5162,7 @@
     }
    ],
    "id": "a9a35774136e",
-   "version": "b26560ca96",
+   "version": "0afbf78e5b",
    "multideportivo": true,
    "multi": {
     "nombre": "Dakar 2026",
@@ -5427,7 +5489,14 @@
           "tipo": "texto",
           "partes": [
            {
-            "t": "Agustín Hoffmann corrió las últimas regatas del Techno 293 y cerró su participación. Falta su puesto final en la general (venía 19°)"
+            "t": "Agustín Hoffmann corrió las últimas regatas del Techno 293 y terminó 19° en la general ("
+           },
+           {
+            "t": "https://www.instagram.com/p/Dfr0Hp5IBST/",
+            "href": "https://www.instagram.com/p/Dfr0Hp5IBST/"
+           },
+           {
+            "t": " - ENARD)"
            }
           ]
          }
@@ -6749,7 +6818,14 @@
           "tipo": "texto",
           "partes": [
            {
-            "t": "Agustín Hoffmann corrió las últimas regatas del Techno 293 y cerró su participación. Falta su puesto final en la general (venía 19°)"
+            "t": "Agustín Hoffmann corrió las últimas regatas del Techno 293 y terminó 19° en la general ("
+           },
+           {
+            "t": "https://www.instagram.com/p/Dfr0Hp5IBST/",
+            "href": "https://www.instagram.com/p/Dfr0Hp5IBST/"
+           },
+           {
+            "t": " - ENARD)"
            }
           ]
          }
@@ -8158,65 +8234,6 @@
    "terminado_desde": "2026-11-12"
   },
   {
-   "titulo": "GIMNASIA RÍTMICA - SUDAMERICANO JUNIOR Y GRUPO DE EDADES EN MEDELLÍN, COLOMBIA",
-   "deporte": "GIMNASIA RÍTMICA",
-   "evento": "SUDAMERICANO JUNIOR Y GRUPO DE EDADES EN MEDELLÍN, COLOMBIA",
-   "fechas": null,
-   "etiqueta": "mas_info",
-   "seccion": "resultados",
-   "ya_publicado": false,
-   "bloques": [
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Se compitió del 3 al 8/11"
-      }
-     ]
-    },
-    {
-     "tipo": "sub",
-     "partes": [
-      {
-       "t": "All Around",
-       "b": true
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Catalina Neri obtuvo la medalla de "
-      },
-      {
-       "t": "BRONCE",
-       "b": true
-      },
-      {
-       "t": " en el All Around"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Faltan: link de resultados, puntaje y resto de las argentinas"
-      }
-     ]
-    }
-   ],
-   "refs_panel": [
-    "14dac091"
-   ],
-   "id": "410c978a4ed6",
-   "version": "beb64b246b",
-   "publicado_en_doc": false,
-   "terminado_desde": "2026-11-11",
-   "vencido": true
-  },
-  {
    "titulo": "RUGBY - NATIONS CHAMPIONSHIP (06 al 21 de noviembre)",
    "deporte": "RUGBY",
    "evento": "NATIONS CHAMPIONSHIP",
@@ -8475,52 +8492,6 @@
    "publicado_en_doc": false
   },
   {
-   "titulo": "VELA - CAMPEONATO SUDAMERICANO EN RÍO DE JANEIRO, BRASIL (14 al 18 de noviembre)",
-   "deporte": "VELA",
-   "evento": "CAMPEONATO SUDAMERICANO EN RÍO DE JANEIRO, BRASIL",
-   "fechas": "14 al 18 de noviembre",
-   "etiqueta": "en_curso",
-   "seccion": "resultados",
-   "ya_publicado": false,
-   "bloques": [
-    {
-     "tipo": "link",
-     "partes": [
-      {
-       "t": "https://enard.org.ar/agenda_noviembre_2026/",
-       "href": "https://enard.org.ar/agenda_noviembre_2026/"
-      },
-      {
-       "t": " (Agenda ENARD)"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Faltan clases y regatistas argentinos"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Según el Iate Clube do Rio de Janeiro en noviembre hay Sudamericanos de Finn y de 470 (Creo que son parte de este evento): "
-      },
-      {
-       "t": "https://www.icrj.com.br/velaicrj/images/aviso_regata/2026/11_nov/NOR_SUDAM_470_-_2026_-_FINAL.pdf",
-       "href": "https://www.icrj.com.br/velaicrj/images/aviso_regata/2026/11_nov/NOR_SUDAM_470_-_2026_-_FINAL.pdf"
-      }
-     ]
-    }
-   ],
-   "id": "7a44a2ecec03",
-   "version": "e838669259",
-   "publicado_en_doc": false
-  },
-  {
    "titulo": "FÚTBOL - MUNDIAL SUB 17 MASCULINO EN DOHA, QATAR (19 de noviembre al 13 de diciembre)",
    "deporte": "FÚTBOL",
    "evento": "MUNDIAL SUB 17 MASCULINO EN DOHA, QATAR",
@@ -8629,16 +8600,37 @@
      ]
     },
     {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://bolavip.com/ar/seleccion/argentina-comienza-su-travesia-en-el-mundial-sub-17-plantel-como-ver-los-partidos-y-el-cronograma-completo",
+       "href": "https://bolavip.com/ar/seleccion/argentina-comienza-su-travesia-en-el-mundial-sub-17-plantel-como-ver-los-partidos-y-el-cronograma-completo"
+      },
+      {
+       "t": " (Plantel y horarios)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Plantel (21)",
+       "b": true
+      }
+     ]
+    },
+    {
      "tipo": "texto",
      "partes": [
       {
-       "t": "Horarios de Mozambique y Dinamarca en hora argentina (Creo)"
+       "t": "Valentín Reigia (Argentinos Juniors), Thiago Parga (Huracán), Kevin Báez (Aldosivi), Thiago Pérez (Huracán), Julio Coria (Boca), Álvaro Güich (Rosario Central), Mateo Mendizábal (Banfield), Bautista Giménez (River), Simón Escobar (Vélez, capitán), Alex Cardozo (Lanús), Matheo Machuca (Independiente), Galo Escobar (River), Benjamín Vallejo (Vélez), Marcos Ortiz (Belgrano), Giovanni Baroni (Talleres), Mateo Sánchez (Boca), Alan Alcaraz (Argentinos Juniors), Facundo Salinas (Vélez), Emiliano Barrionuevo (Boca), Tobías Goytía (River) y Juan Cruz Policella (Vélez)"
       }
      ]
     }
    ],
    "id": "da9041c32bff",
-   "version": "7b1f3f978a",
+   "version": "41880a9863",
    "publicado_en_doc": false
   },
   {
@@ -8664,6 +8656,40 @@
    "publicado_en_doc": false
   },
   {
+   "titulo": "RACQUETBALL - MILE HIGH OPEN EN DENVER, ESTADOS UNIDOS (19 al 21 de noviembre)",
+   "deporte": "RACQUETBALL",
+   "evento": "MILE HIGH OPEN EN DENVER, ESTADOS UNIDOS",
+   "fechas": "19 al 21 de noviembre",
+   "etiqueta": "agenda",
+   "seccion": "agenda",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://enard.org.ar/agenda_noviembre_2026-2-2-2-2-2-2-2-2/",
+       "href": "https://enard.org.ar/agenda_noviembre_2026-2-2-2-2-2-2-2-2/"
+      },
+      {
+       "t": " (Agenda ENARD)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan argentinos inscriptos y cuadros"
+      }
+     ]
+    }
+   ],
+   "id": "08cc43ed292e",
+   "version": "50db566385",
+   "publicado_en_doc": false
+  },
+  {
    "titulo": "JUDO - CAMPEONATO MUNDIAL JUNIOR EN TASHKENT, UZBEKISTÁN (19 al 22 de noviembre)",
    "deporte": "JUDO",
    "evento": "CAMPEONATO MUNDIAL JUNIOR EN TASHKENT, UZBEKISTÁN",
@@ -8672,6 +8698,18 @@
    "seccion": "agenda",
    "ya_publicado": false,
    "bloques": [
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.ijf.org/competition/3207",
+       "href": "https://www.ijf.org/competition/3207"
+      },
+      {
+       "t": " (Web oficial)"
+      }
+     ]
+    },
     {
      "tipo": "link",
      "partes": [
@@ -8694,7 +8732,7 @@
     }
    ],
    "id": "cde49e99022c",
-   "version": "48b8342156",
+   "version": "4933a3fd32",
    "publicado_en_doc": false
   },
   {
@@ -8707,19 +8745,56 @@
    "ya_publicado": false,
    "bloques": [
     {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.remodeprimera.com.ar/2026/?m=1",
+       "href": "https://www.remodeprimera.com.ar/2026/?m=1"
+      },
+      {
+       "t": " (Fuente)"
+      }
+     ]
+    },
+    {
      "tipo": "texto",
      "partes": [
       {
-       "t": "Faltan detalles"
+       "t": "Sede: Pista Nacional de Remo, Tigre"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Participación récord de la serie 2021–2026: 377 botes, 416 atletas y 36 clubes"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Serán 53 pruebas"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Dato extra: la AARA cumple 125 años"
       }
      ]
     }
    ],
    "refs_panel": [
-    "e8637829"
+    "e8637829",
+    "cbdcf02f"
    ],
    "id": "dfbf893bf031",
-   "version": "c6ba28f887",
+   "version": "55e6380751",
    "publicado_en_doc": false
   },
   {
@@ -9431,7 +9506,7 @@
      ]
     },
     {
-     "tipo": "sub",
+     "tipo": "texto",
      "partes": [
       {
        "t": "Equipo (",
@@ -9439,7 +9514,6 @@
       },
       {
        "t": "https://www.instagram.com/sslteamargentina/",
-       "b": true,
        "href": "https://www.instagram.com/sslteamargentina/"
       },
       {
@@ -9618,7 +9692,7 @@
     "f7d1b4d1"
    ],
    "id": "293979ee6706",
-   "version": "0dcd618cef",
+   "version": "d36e702a46",
    "publicado_en_doc": false
   },
   {

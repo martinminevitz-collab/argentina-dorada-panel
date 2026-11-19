@@ -3409,14 +3409,22 @@
    "visto": "2026-11-16"
   },
   "7a44a2ecec03": {
-   "titulo": "VELA - CAMPEONATO SUDAMERICANO EN RÍO DE JANEIRO, BRASIL (14 al 18 de noviembre)",
+   "titulo": "VELA - CAMPEONATO SUDAMERICANO EN RÍO DE JANEIRO, BRASIL",
    "deporte": "VELA",
    "evento": "CAMPEONATO SUDAMERICANO EN RÍO DE JANEIRO, BRASIL",
-   "fechas": "14 al 18 de noviembre",
-   "etiqueta": "en_curso",
+   "fechas": null,
+   "etiqueta": "mas_info",
    "seccion": "resultados",
    "ya_publicado": false,
    "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se corrió del 14 al 18/11"
+      }
+     ]
+    },
     {
      "tipo": "link",
      "partes": [
@@ -3433,7 +3441,7 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Faltan clases y regatistas argentinos"
+       "t": "Faltan clases, regatistas argentinos y resultados"
       }
      ]
     },
@@ -3451,8 +3459,9 @@
     }
    ],
    "id": "7a44a2ecec03",
-   "version": "e838669259",
+   "version": "6750dad024",
    "publicado_en_doc": false,
+   "terminado_desde": "2026-11-18",
    "visto": "2026-11-18"
   },
   "80e2d045e7a9": {
