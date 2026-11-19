@@ -8,7 +8,24 @@
    "tipo": "correccion",
    "texto": "[PUBLICABLE] Ya está completo: en el título cambiar (Necesito más info) por PUBLICABLE",
    "creado_en": "2026-11-19T20:08:31.793848+00:00"
+  },
+  {
+   "ref": "3156086f",
+   "evento_id": "manual:3e10a17f",
+   "evento_titulo": "Amistoso vs Uruguay",
+   "tipo": "correccion",
+   "texto": "El partido es 20:15hs",
+   "creado_en": "2026-11-19T22:21:54.416692+00:00"
   }
  ],
- "noticias": []
+ "noticias": [
+  {
+   "id": "4f56a086-6993-459c-b279-f1105880458f",
+   "evento_id": "noticia:mwo4d2pe",
+   "evento_titulo": "Premios CADA a los mejores atletas del año",
+   "tipo": "dato",
+   "texto": "[NOTICIA] {\"deporte\":\"ATLETISMO\",\"titulo\":\"Premios CADA a los mejores atletas del año\",\"link\":\"https://cada-atletismo.com/segunda-edicion-de-los-premios-a-los-mejores-atletas-del-ano/\",\"resumen\":\"En ese link están las ternas y se puede votar online.\"}",
+   "creado_en": "2026-11-19T22:26:02.187313+00:00"
+  }
+ ]
 }

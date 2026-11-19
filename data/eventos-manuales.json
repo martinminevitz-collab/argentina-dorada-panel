@@ -1,4 +1,113 @@
 {
  "_nota": "Eventos cargados a mano en el panel que todavía no están en el Doc. El agente los pasa al Doc y al final del bloque escribe la línea 'Ref panel: <ref>'.",
- "pendientes": []
+ "pendientes": [
+  {
+   "ref": "97682b19",
+   "seccion": "agenda",
+   "estado": "agenda",
+   "deporte": "FUTBOL",
+   "titulo": "Amistoso vs Alemania",
+   "fechas": "29/11 (19hs)",
+   "lugar": "Estadio Único Tricampeones del Mundo - Diego Armando Maradona de La Plata",
+   "detalle": null,
+   "link": null,
+   "creado_en": "2026-11-19T22:20:55.391558+00:00"
+  },
+  {
+   "ref": "3e10a17f",
+   "seccion": "agenda",
+   "estado": "agenda",
+   "deporte": "FUTBOL",
+   "titulo": "Amistoso vs Uruguay",
+   "fechas": "04/12",
+   "lugar": "Estadio de Barracas Central",
+   "detalle": "19hs",
+   "link": null,
+   "creado_en": "2026-11-19T22:21:40.393972+00:00"
+  },
+  {
+   "ref": "d2eb3bd9",
+   "seccion": "agenda",
+   "estado": "agenda",
+   "deporte": "FUTBOL",
+   "titulo": "Sorteo Mundial de Brasil 2027",
+   "fechas": "11/12",
+   "lugar": "Brasil",
+   "detalle": null,
+   "link": null,
+   "creado_en": "2026-11-19T22:22:57.765717+00:00"
+  },
+  {
+   "ref": "5e117001",
+   "seccion": "agenda",
+   "estado": "agenda",
+   "deporte": "PREMIOS OLIMPIA",
+   "titulo": "Premios Olimpia 2026",
+   "fechas": "21/12",
+   "lugar": "Tango Porteño",
+   "detalle": "Todavia no estan los nominados",
+   "link": null,
+   "creado_en": "2026-11-19T22:29:13.091391+00:00"
+  },
+  {
+   "ref": "a86ca35a",
+   "seccion": "agenda",
+   "estado": "agenda",
+   "deporte": "BOXEO",
+   "titulo": "Beto Palmetta vs Willy Gilheaney (GBR)",
+   "fechas": "20/11 (19hs)",
+   "lugar": "Cardiff",
+   "detalle": "Por el titulo europeo WBO del peso Welter",
+   "link": null,
+   "creado_en": "2026-11-19T22:34:30.277973+00:00"
+  },
+  {
+   "ref": "8dd5c1f9",
+   "seccion": "agenda",
+   "estado": "agenda",
+   "deporte": "BEIBOL",
+   "titulo": "Serie de las Américas 2027",
+   "fechas": "09 al 16/02/2027",
+   "lugar": "Caracas, Venezuela",
+   "detalle": "Argentina estará en el Grupo B con México, República Dominicana, Panamá y Colombia",
+   "link": null,
+   "creado_en": "2026-11-19T22:37:35.299195+00:00"
+  },
+  {
+   "ref": "61c14a16",
+   "seccion": "resultados",
+   "estado": "en_curso",
+   "deporte": "GOLF",
+   "titulo": "WALA (Womens Amateur Latin America)",
+   "fechas": "19 al 22/11",
+   "lugar": "Guatemala",
+   "detalle": "Argentina está representada por: María Cabanillas, María Olivero, Mía Yaya, Bernardita Villalba, Ana Giuliano, Malena Castro, Mercedes Aldana y Clementina Castaño",
+   "link": "https://walagolf.com/leaderboard/T20261112-452",
+   "creado_en": "2026-11-19T22:40:52.460556+00:00"
+  },
+  {
+   "ref": "27aa5cea",
+   "seccion": "agenda",
+   "estado": "agenda",
+   "deporte": "BOCHAS",
+   "titulo": "Mundial de Petanca",
+   "fechas": "20 al 25/11",
+   "lugar": "Khon Kaen, Tailandia",
+   "detalle": "Competirán: Juan Roldán, Gabriel Crespi, Ezequiel Pereyra y José Giménez",
+   "link": "https://khon-kaen2026.fipjp.com/",
+   "creado_en": "2026-11-19T22:44:46.060669+00:00"
+  },
+  {
+   "ref": "fe2c6321",
+   "seccion": "resultados",
+   "estado": "en_curso",
+   "deporte": "PICKLEBALL",
+   "titulo": "Campeonato Sudamericano",
+   "fechas": "17 al 22/11",
+   "lugar": "Carmelo, Uruguay",
+   "detalle": "Argentina estará representada por:\n**OPEN:**\nMariela Coien, Sofia Andino, Lupe Ubeda, Jesica Orseli, Nicolas Yannuzzi, Fernando Zurita, Tomás Alaimo y Martín Petagna\n\n**SENIOR:**\nRomina Rosales, Karina Rossi, Gonzalo Valdez, Patricio Bertero, Marcelo Galati y Mariano Garcia Malbrán\n\n**JUNIOR:**\nAna Lombardo, Sara Marcos, Luana Galati, Joaquin Bertainam Thiago Balmaceda y Martino De Santis",
+   "link": "https://www.sudamericanodepickleball.com/cronograma",
+   "creado_en": "2026-11-19T22:49:45.356155+00:00"
+  }
+ ]
 }
