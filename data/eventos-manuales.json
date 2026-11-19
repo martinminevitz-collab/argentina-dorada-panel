@@ -1,17 +1,4 @@
 {
  "_nota": "Eventos cargados a mano en el panel que todavía no están en el Doc. El agente los pasa al Doc y al final del bloque escribe la línea 'Ref panel: <ref>'.",
- "pendientes": [
-  {
-   "ref": "14dac091",
-   "seccion": "resultados",
-   "estado": "mas_info",
-   "deporte": "GIMNASIA RÍTMICA",
-   "titulo": "Sudamericano Junior y Grupo de Edades",
-   "fechas": "3 al 8/11",
-   "lugar": "Medellín, Colombia",
-   "detalle": "Catalina Neri logró la medalla de BRONCE en el All Around",
-   "link": null,
-   "creado_en": "2026-11-11T04:54:19.241477+00:00"
-  }
- ]
+ "pendientes": []
 }

@@ -1,5 +1,14 @@
 {
  "_nota": "Datos que los compañeros agregaron a un evento desde el panel y que todavía no están en el Doc. El agente los suma al bloque de ese evento y al final escribe 'Ref panel: <ref>'. 'noticias' son noticias cargadas a mano: son solo para el panel, el agente no las toca.",
- "pendientes": [],
+ "pendientes": [
+  {
+   "ref": "9d7a0eca",
+   "evento_id": "321e6c965b68",
+   "evento_titulo": "BOCHAS - CAMPEONATO MUNDIAL EN RIJEKA, CROACIA",
+   "tipo": "correccion",
+   "texto": "[PUBLICABLE] Ya está completo: en el título cambiar (Necesito más info) por PUBLICABLE",
+   "creado_en": "2026-11-19T20:08:31.793848+00:00"
+  }
+ ],
  "noticias": []
 }
