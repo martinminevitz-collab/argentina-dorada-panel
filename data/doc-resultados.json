@@ -1,5 +1,5 @@
 {
- "leido": "2026-11-18T23:55-03:00",
+ "leido": "2026-11-19T00:59-03:00",
  "actualizado_doc": "18/11/2026 23:15",
  "eventos": [
   {
@@ -7760,7 +7760,8 @@
     ]
    },
    "publicado_en_doc": false,
-   "terminado_desde": "2026-11-12"
+   "terminado_desde": "2026-11-12",
+   "vencido": true
   },
   {
    "titulo": "BOCCIA - WORLD CUP EN SAN PABLO, BRASIL",
@@ -8088,7 +8089,8 @@
    "id": "93a941b2307c",
    "version": "2e58c99446",
    "publicado_en_doc": false,
-   "terminado_desde": "2026-11-12"
+   "terminado_desde": "2026-11-12",
+   "vencido": true
   },
   {
    "titulo": "RACQUETBALL - GOLDEN STATE OPEN (LPRT / IRT) EN ESTADOS UNIDOS",
@@ -8231,7 +8233,8 @@
    "id": "1ffc05f899c1",
    "version": "03c527b24b",
    "publicado_en_doc": false,
-   "terminado_desde": "2026-11-12"
+   "terminado_desde": "2026-11-12",
+   "vencido": true
   },
   {
    "titulo": "RUGBY - NATIONS CHAMPIONSHIP (06 al 21 de noviembre)",
