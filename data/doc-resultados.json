@@ -1,6 +1,6 @@
 {
- "leido": "2026-11-19T00:59-03:00",
- "actualizado_doc": "18/11/2026 23:15",
+ "leido": "2026-11-19T11:58-03:00",
+ "actualizado_doc": "19/11/2026 10:55",
  "eventos": [
   {
    "titulo": "VELA - CAMPEONATO SUDAMERICANO EN RÍO DE JANEIRO, BRASIL",
@@ -8474,6 +8474,35 @@
      ]
     },
     {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://442.perfil.com/noticias/automovilismo/colapinto-va-por-la-recuperacion-en-las-vegas-queremos-un-fin-de-semana-sin-contratiempos.phtml",
+       "href": "https://442.perfil.com/noticias/automovilismo/colapinto-va-por-la-recuperacion-en-las-vegas-queremos-un-fin-de-semana-sin-contratiempos.phtml"
+      },
+      {
+       "t": " (Horarios)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Horarios en Las Vegas (hora argentina): FP1 el jueves 19/11 a las 21:30hs, FP2 el viernes 20/11 a la 1hs, FP3 el viernes 20/11 a las 21:30hs y clasificación el sábado 21/11 a la 1hs"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Carrera el domingo 22/11 a la 1hs",
+       "b": true
+      }
+     ]
+    },
+    {
      "tipo": "texto",
      "partes": [
       {
@@ -8491,7 +8520,7 @@
     }
    ],
    "id": "3f83ee1c3780",
-   "version": "e74035bfd6",
+   "version": "87be7d509d",
    "publicado_en_doc": false
   },
   {
@@ -8579,7 +8608,7 @@
      "tipo": "sub",
      "partes": [
       {
-       "t": "vs Australia el jueves 19/11 a las 13hs",
+       "t": "Debut vs Australia hoy jueves 19/11 a las 13hs",
        "b": true
       }
      ]
@@ -8633,7 +8662,7 @@
     }
    ],
    "id": "da9041c32bff",
-   "version": "41880a9863",
+   "version": "9240f7e657",
    "publicado_en_doc": false
   },
   {
@@ -8729,13 +8758,13 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Individual del 19 al 21/11 y equipos mixtos el 22/11. Argentina tiene 1 judoka inscripto. Falta el nombre"
+       "t": "Arrancó hoy. Individual del 19 al 21/11 y equipos mixtos el 22/11. Argentina tiene 1 judoka inscripto. Falta el nombre"
       }
      ]
     }
    ],
    "id": "cde49e99022c",
-   "version": "4933a3fd32",
+   "version": "19a8227940",
    "publicado_en_doc": false
   },
   {
