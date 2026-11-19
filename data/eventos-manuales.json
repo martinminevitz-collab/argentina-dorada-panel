@@ -108,6 +108,67 @@
    "detalle": "Argentina estará representada por:\n**OPEN:**\nMariela Coien, Sofia Andino, Lupe Ubeda, Jesica Orseli, Nicolas Yannuzzi, Fernando Zurita, Tomás Alaimo y Martín Petagna\n\n**SENIOR:**\nRomina Rosales, Karina Rossi, Gonzalo Valdez, Patricio Bertero, Marcelo Galati y Mariano Garcia Malbrán\n\n**JUNIOR:**\nAna Lombardo, Sara Marcos, Luana Galati, Joaquin Bertainam Thiago Balmaceda y Martino De Santis",
    "link": "https://www.sudamericanodepickleball.com/cronograma",
    "creado_en": "2026-11-19T22:49:45.356155+00:00"
+  },
+  {
+   "ref": "92863303",
+   "seccion": "agenda",
+   "estado": "agenda",
+   "deporte": "ESQUI ALPINO",
+   "titulo": "Copa del Mundo",
+   "fechas": "21/11",
+   "lugar": "Gurgl, Austria",
+   "detalle": "Compite Francesca Baruzzi en Slalom",
+   "link": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=AL&eventid=62773&seasoncode=2027",
+   "creado_en": "2026-11-19T23:22:01.487265+00:00"
+  },
+  {
+   "ref": "50809f8d",
+   "seccion": "agenda",
+   "estado": "agenda",
+   "deporte": "ESQUI CROSS COUNTRY",
+   "titulo": "Campeonato FIS",
+   "fechas": "20 al 22/11",
+   "lugar": "Beitostoelen, Noruega",
+   "detalle": "Compite Agustina Groetzner",
+   "link": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=CC&eventid=63292&seasoncode=2027",
+   "creado_en": "2026-11-19T23:23:20.913901+00:00"
+  },
+  {
+   "ref": "478d58aa",
+   "seccion": "resultados",
+   "estado": "mas_info",
+   "deporte": "OCEANMAN",
+   "titulo": "Final Mundial",
+   "fechas": "11 al 15/11",
+   "lugar": "República Dominicana",
+   "detalle": "https://www.instagram.com/oceanman_argentina/\nAhi no hay info pero es a quien etiquetar. El unico resultado que tengo es de Ayelen Milenka Trcka (@ayelenmilenkatrcka) que fue campeona en la categoria de 30-39 años en el half oceanman.",
+   "link": "https://results.oceanmanswim.com/eventos/dominican-republic-wfc/clasificacion",
+   "creado_en": "2026-11-19T23:30:30.39915+00:00"
+  },
+  {
+   "ref": "407a3c54",
+   "seccion": "resultados",
+   "estado": "en_curso",
+   "deporte": "GIMNASIA ARTÍSTICA",
+   "titulo": "Campeonato Sudamericano",
+   "fechas": "17 al 23/11",
+   "lugar": "Lima, Perú",
+   "detalle": null,
+   "link": "https://consugi.consugisoft.com/Artistica/151?subdivision=1&categoria=SENIOR&ver=resultados&concurso=I&modalidad=SUELO&genero=MASCULINO",
+   "creado_en": "2026-11-19T23:32:49.471798+00:00"
+  },
+  {
+   "ref": "9be44e2c",
+   "seccion": "agenda",
+   "estado": "agenda",
+   "deporte": "MULTIDEPORTIVO",
+   "titulo": "VI Juegos Suramericanos de Playa 2027",
+   "fechas": "11 al 21/03/2027",
+   "lugar": "Iquique, Chile",
+   "detalle": "El evento reunirá 14 disciplinas deportivas:\nVóley Playa\nFútbol Playa\nRugby Playa\nTenis Playa\nLucha de Playa\nSurf\nNatación en Aguas Abiertas\nEsquí Náutico\nRemo (Beach Sprint Coastal)\nTriatlón\nVela\nActividades Subacuáticas\nSkateboarding\nHandball de Playa / Canotaje",
+   "link": "https://iquique2027.cl/",
+   "creado_en": "2026-11-19T23:41:23.458672+00:00",
+   "multideportivo": true
   }
  ]
 }

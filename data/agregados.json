@@ -16,6 +16,22 @@
    "tipo": "correccion",
    "texto": "El partido es 20:15hs",
    "creado_en": "2026-11-19T22:21:54.416692+00:00"
+  },
+  {
+   "ref": "bd1103ad",
+   "evento_id": "manual:50809f8d",
+   "evento_titulo": "Campeonato FIS",
+   "tipo": "dato",
+   "texto": "Compiten tambien Franco Dal Farra, Nahiara Diaz Gonzalez y Mateo Sauma",
+   "creado_en": "2026-11-19T23:24:12.029842+00:00"
+  },
+  {
+   "ref": "6dc4877c",
+   "evento_id": "manual:478d58aa",
+   "evento_titulo": "Final Mundial",
+   "tipo": "dato",
+   "texto": "Alexis Gregorat Krebs (@alexis.gregorat.krebs) fue 4° en los 2km y **BRONCE** en la posta 3x500 con Agos y Santi",
+   "creado_en": "2026-11-19T23:36:37.770053+00:00"
   }
  ],
  "noticias": [
