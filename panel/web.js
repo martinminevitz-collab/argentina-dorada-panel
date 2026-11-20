@@ -18,7 +18,7 @@
     agenda: { nombre: "Agenda", nueva: "Nuevo evento", ruta: "eventos" },
     resultados: { nombre: "Resultados", nueva: "Nuevo resultado", ruta: "resultados" },
   };
-  const NOTA = [["foto", "Foto principal", "foto"], ["titulo", "Título", "titulo"], ["bajada", "Bajada", "bajada"], ["cuerpo", "Texto de la nota", "cuerpo"],
+  const NOTA = [["foto", "Foto principal", "foto"], ["credito", "Crédito de la foto (sale debajo de la foto; ej.: Foto: COA)", "credito"], ["titulo", "Título", "titulo"], ["bajada", "Bajada", "bajada"], ["cuerpo", "Texto de la nota", "cuerpo"],
     ["seccion", "Sección", "seccion"], ["deporte", "Deporte", "deporte"], ["ad_atleta", "Atletas de la nota", "atletas"], ["ad_video_youtube", "Video de YouTube (link)", "url"],
     ["sticky", "Nota destacada de la portada (si hay varias marcadas, sale la más nueva)", "destacada"]];
   const CAMPOS = {
@@ -34,7 +34,7 @@
       ["ad_resultado", "Resultado", "texto"], ["deporte", "Deporte", "deporte"], ["ad_atleta", "Atletas", "atletas"], ["ad_nota", "Nota relacionada", "nota"]],
   };
 
-  const est = { seccion: "notas", estado: "draft", buscar: "", pagina: 1, total: 0, items: [], cat: null, deportes: null, ediciones: null };
+  const est = { seccion: "notas", estado: "draft", buscar: "", edicion: "", pagina: 1, total: 0, items: [], cat: null, deportes: null, ediciones: null };
 
   function conexion() { try { return JSON.parse(localStorage.getItem(CLAVE)) || null; } catch { return null; } }
 
@@ -117,11 +117,19 @@
       .sort((a, b) => a.grupo.localeCompare(b.grupo, "es") || b.nombre.localeCompare(a.nombre, "es"));
   }
 
+  // Ediciones agrupadas por competencia (Juegos Olímpicos › Tokio 2020…), para los desplegables.
+  function opcionesEdiciones(actual) {
+    const grupos = {};
+    for (const e of est.ediciones) (grupos[e.grupo] ||= []).push(e);
+    return Object.entries(grupos).map(([g, eds]) => `<optgroup label="${esc(g)}">${eds.map((e) => `<option value="${e.id}"${String(e.id) === String(actual ?? "") ? " selected" : ""}>${esc(e.nombre)}</option>`).join("")}</optgroup>`).join("");
+  }
+
   async function cargar() {
     const s = SECCIONES[est.seccion];
     const q = new URLSearchParams({ status: est.estado, context: "edit", per_page: 20, page: est.pagina, _embed: "wp:featuredmedia" });
     if (est.buscar) q.set("search", est.buscar);
     if (s.categoria) q.set("categories", est.cat[s.categoria]?.id || 0);
+    if (est.seccion === "medallas" && est.edicion) q.set("ediciones", est.edicion);
     const { datos, total } = await api(`${s.ruta}?${q}`);
     est.items = est.pagina === 1 ? datos : est.items.concat(datos);
     est.total = total;
@@ -154,6 +162,13 @@
     lista.append(cont);
     try {
       await apoyo();
+      if (est.seccion === "medallas") { // filtro por evento (edición), para revisar las medallas de a una competencia
+        const se = document.createElement("select");
+        se.setAttribute("aria-label", "Evento");
+        se.innerHTML = `<option value="">Todos los eventos</option>` + opcionesEdiciones(est.edicion);
+        se.onchange = () => { est.edicion = se.value; est.pagina = 1; dibujar(lista); };
+        barra.append(se);
+      }
       await cargar();
     } catch (e) {
       cont.innerHTML = `<p class="vacio">No se pudo leer la web: ${esc(e.message)}</p>`;
@@ -291,6 +306,9 @@
     const form = document.createElement("form");
     form.className = "crear w-editar";
     const extras = {};
+    const pieFoto = document.createElement("div");
+    pieFoto.innerHTML = it._embedded?.["wp:featuredmedia"]?.[0]?.caption?.rendered || "";
+    let credito = pieFoto.textContent.trim();
     for (const [k, etiqueta, tipo] of campos) {
       // El editor y los buscadores no van dentro de <label>: el navegador toma cualquier click adentro
       // como un click en su primer botón (la "N" de negrita, o la × del primer atleta).
@@ -308,7 +326,9 @@
         label.prepend(Object.assign(document.createElement("input"), { type: "checkbox", name: "sticky", checked: Boolean(it.sticky) }));
         form.append(label); continue;
       }
-      if (tipo === "titulo") control = Object.assign(document.createElement("input"), { name: "titulo", value: it.title?.raw ?? "", required: true });
+      // El crédito es el "pie" de la foto en WordPress: se guarda en la propia foto, no en la nota.
+      if (tipo === "credito") control = Object.assign(document.createElement("input"), { name: "credito", value: credito });
+      else if (tipo === "titulo") control = Object.assign(document.createElement("input"), { name: "titulo", value: it.title?.raw ?? "", required: true });
       else if (tipo === "bajada") control = Object.assign(document.createElement("textarea"), { name: "bajada", rows: 2, value: it.excerpt?.raw ?? "" });
       else if (tipo === "area") control = Object.assign(document.createElement("textarea"), { name: k, rows: 3, value: it.meta?.[k] ?? "" });
       else if (tipo === "cuerpo") { control = editorTexto(it.content?.raw ?? ""); extras.cuerpo = control; }
@@ -319,9 +339,7 @@
       else if (tipo === "deporte") control = sel("deporte", [["", "— Elegir —"], ...est.deportes.map((d) => [d.id, d.name])], it.deportes?.[0]);
       else if (tipo === "edicion") {
         control = document.createElement("select"); control.name = "edicion";
-        const grupos = {};
-        for (const e of est.ediciones) (grupos[e.grupo] ||= []).push(e);
-        control.innerHTML = `<option value="">— Elegir —</option>` + Object.entries(grupos).map(([g, eds]) => `<optgroup label="${esc(g)}">${eds.map((e) => `<option value="${e.id}"${it.ediciones?.[0] === e.id ? " selected" : ""}>${esc(e.nombre)}</option>`).join("")}</optgroup>`).join("");
+        control.innerHTML = `<option value="">— Elegir —</option>` + opcionesEdiciones(it.ediciones?.[0]);
       } else control = Object.assign(document.createElement("input"), { name: k, type: tipo === "fecha" ? "date" : tipo === "url" ? "url" : "text", value: it.meta?.[k] ?? "" });
       label.append(control);
       form.append(label);
@@ -362,7 +380,7 @@
         else if (tipo === "edicion") cuerpo.ediciones = f.get("edicion") ? [Number(f.get("edicion"))] : [];
         else if (tipo === "atletas") cuerpo.meta[k] = extras[k].valor();
         else if (tipo === "nota") cuerpo.meta[k] = extras[k].valor()[0] || 0;
-        else if (tipo !== "foto") cuerpo.meta[k] = f.get(k) ?? "";
+        else if (tipo !== "foto" && tipo !== "credito") cuerpo.meta[k] = f.get(k) ?? "";
       }
       if (est.seccion === "atletas") cuerpo.title = `${cuerpo.meta.ad_nombre} ${cuerpo.meta.ad_apellido}`.trim();
       if (!it.id && !cuerpo.title && est.seccion === "medallas") cuerpo.title = "Medalla"; // la web le arma el título solo
@@ -377,6 +395,11 @@
         }
         msj.textContent = "Guardando…";
         const { datos } = await api(it.id ? `${s.ruta}/${it.id}?context=edit` : `${s.ruta}?context=edit`, { metodo: "POST", cuerpo });
+        const nuevoCredito = (f.get("credito") ?? credito).trim();
+        if (datos.featured_media && (nuevoCredito !== credito || (cuerpo.featured_media && nuevoCredito))) {
+          await api(`media/${datos.featured_media}`, { metodo: "POST", cuerpo: { caption: nuevoCredito } });
+          credito = nuevoCredito;
+        }
         const nombre = datos.title?.raw || "Listo";
         if (accion === "publish" || accion === "draft") {
           art.replaceWith(Object.assign(document.createElement("p"), { className: "w-hecho", textContent: `«${nombre}» ${accion === "publish" ? "quedó publicado" : "volvió a borrador"}.` }));
