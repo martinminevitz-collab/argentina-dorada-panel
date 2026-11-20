@@ -34,7 +34,7 @@
       ["ad_resultado", "Resultado", "texto"], ["deporte", "Deporte", "deporte"], ["ad_atleta", "Atletas", "atletas"], ["ad_nota", "Nota relacionada", "nota"]],
   };
 
-  const est = { seccion: "notas", estado: "draft", buscar: "", edicion: "", pagina: 1, total: 0, items: [], cat: null, deportes: null, ediciones: null };
+  const est = { seccion: "notas", estado: "draft", buscar: "", edicion: "", competencia: "", pagina: 1, total: 0, items: [], cat: null, deportes: null, ediciones: null };
 
   function conexion() { try { return JSON.parse(localStorage.getItem(CLAVE)) || null; } catch { return null; } }
 
@@ -113,8 +113,10 @@
     est.cat = Object.fromEntries(cats.map((c) => [c.slug, c]));
     est.deportes = deps.sort((a, b) => a.name.localeCompare(b.name, "es"));
     const padres = Object.fromEntries(eds.filter((e) => !e.parent).map((e) => [e.id, e.name]));
-    est.ediciones = eds.filter((e) => e.parent).map((e) => ({ id: e.id, nombre: e.name, grupo: padres[e.parent] || "Otras" }))
-      .sort((a, b) => a.grupo.localeCompare(b.grupo, "es") || b.nombre.localeCompare(a.nombre, "es"));
+    const anio = (n) => Number(n.match(/\b(18|19|20)\d\d\b/)?.[0] || 0); // "Tokio 2020" → 2020
+    est.competencias = eds.filter((e) => !e.parent).map((e) => ({ id: e.id, nombre: e.name })).sort((a, b) => a.nombre.localeCompare(b.nombre, "es"));
+    est.ediciones = eds.filter((e) => e.parent).map((e) => ({ id: e.id, nombre: e.name, padre: e.parent, grupo: padres[e.parent] || "Otras" }))
+      .sort((a, b) => a.grupo.localeCompare(b.grupo, "es") || anio(b.nombre) - anio(a.nombre) || b.nombre.localeCompare(a.nombre, "es"));
   }
 
   // Ediciones agrupadas por competencia (Juegos Olímpicos › Tokio 2020…), para los desplegables.
@@ -129,7 +131,10 @@
     const q = new URLSearchParams({ status: est.estado, context: "edit", per_page: 20, page: est.pagina, _embed: "wp:featuredmedia" });
     if (est.buscar) q.set("search", est.buscar);
     if (s.categoria) q.set("categories", est.cat[s.categoria]?.id || 0);
-    if (est.seccion === "medallas" && est.edicion) q.set("ediciones", est.edicion);
+    if (est.seccion === "medallas" && (est.edicion || est.competencia)) {
+      q.set("ediciones[terms]", est.edicion || est.competencia);
+      q.set("ediciones[include_children]", "true"); // solo el tipo: todas sus ediciones
+    }
     const { datos, total } = await api(`${s.ruta}?${q}`);
     est.items = est.pagina === 1 ? datos : est.items.concat(datos);
     est.total = total;
@@ -162,12 +167,25 @@
     lista.append(cont);
     try {
       await apoyo();
-      if (est.seccion === "medallas") { // filtro por evento (edición), para revisar las medallas de a una competencia
-        const se = document.createElement("select");
-        se.setAttribute("aria-label", "Evento");
-        se.innerHTML = `<option value="">Todos los eventos</option>` + opcionesEdiciones(est.edicion);
-        se.onchange = () => { est.edicion = se.value; est.pagina = 1; dibujar(lista); };
-        barra.append(se);
+      if (est.seccion === "medallas") {
+        // Dos pasos: tipo de evento (Juegos Olímpicos, Paralímpicos…) y, al elegirlo, el año (edición).
+        // Así no se confunden ediciones con el mismo nombre en dos competencias (Tokio 2020 olímpico y paralímpico).
+        const fila = document.createElement("div");
+        fila.className = "fila w-filtro-evento";
+        const tipo = document.createElement("select");
+        tipo.setAttribute("aria-label", "Tipo de evento");
+        tipo.innerHTML = `<option value="">Todos los eventos</option>` + est.competencias.map((c) => `<option value="${c.id}"${String(c.id) === est.competencia ? " selected" : ""}>${esc(c.nombre)}</option>`).join("");
+        tipo.onchange = () => { est.competencia = tipo.value; est.edicion = ""; est.pagina = 1; dibujar(lista); };
+        fila.append(tipo);
+        if (est.competencia) {
+          const anio = document.createElement("select");
+          anio.setAttribute("aria-label", "Año");
+          anio.innerHTML = `<option value="">Todos los años</option>` + est.ediciones.filter((e) => String(e.padre) === est.competencia)
+            .map((e) => `<option value="${e.id}"${String(e.id) === est.edicion ? " selected" : ""}>${esc(e.nombre)}</option>`).join("");
+          anio.onchange = () => { est.edicion = anio.value; est.pagina = 1; dibujar(lista); };
+          fila.append(anio);
+        }
+        barra.append(fila);
       }
       await cargar();
     } catch (e) {
