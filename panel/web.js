@@ -429,5 +429,83 @@
   // Menú Web: elegir sección (lo usa el desplegable de pestañas).
   function irA(seccion) { if (SECCIONES[seccion]) { est.seccion = seccion; est.pagina = 1; est.buscar = ""; } }
 
-  window.Web = { dibujar, irA, secciones: Object.fromEntries(Object.entries(SECCIONES).map(([k, s]) => [k, s.nombre])), actual: () => est.seccion };
+  // ---------- puente Doc → web (tanda 16) ----------
+  // Una tarjeta de Redes (resultado publicable o evento de agenda) pasa a la web como BORRADOR de Resultado o Evento,
+  // con lo que se puede deducir solo: deporte, fechas, lugar, link, texto y atletas que ya existen en la web.
+  // Nada se publica: alguien lo revisa en Web → Resultados / Agenda y recién ahí lo publica.
+  const norm = (s) => String(s ?? "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/\s+/g, " ").trim();
+  const MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
+
+  // "20 al 22 de noviembre", "21 y 22 de noviembre", "21 de noviembre al 1 de diciembre" → ["2026-11-20", "2026-11-22"]
+  function fechasDoc(txt, hoy = new Date()) {
+    const conAnio = norm(txt).match(/\b(20\d\d)\b/)?.[1]; // "… de 2027"
+    const partes = [...norm(txt).replace(/\s*(de\s+)?\b20\d\d\b/g, "").matchAll(/(\d{1,2})(?:\s+de\s+([a-z]+))?/g)].map((m) => ({ dia: Number(m[1]), mes: MESES.indexOf(m[2] ?? "") }));
+    for (let i = partes.length - 2; i >= 0; i--) if (partes[i].mes < 0) partes[i].mes = partes[i + 1].mes; // "20 al 22 de nov": el 20 también es de nov
+    const ok = partes.filter((p) => p.mes >= 0 && p.dia >= 1 && p.dia <= 31);
+    if (!ok.length) return [];
+    let anio = hoy.getFullYear();
+    if (conAnio) anio = Number(conAnio) - (ok[ok.length - 1].mes < ok[0].mes ? 1 : 0); // el año escrito es el del final
+    else if (ok[0].mes < hoy.getMonth() - 6) anio++; // en noviembre, "enero" es del año que viene
+    const iso = (p, a) => `${a}-${String(p.mes + 1).padStart(2, "0")}-${String(p.dia).padStart(2, "0")}`;
+    const ini = ok[0], fin = ok[ok.length - 1];
+    return [iso(ini, anio), iso(fin, fin.mes < ini.mes ? anio + 1 : anio)];
+  }
+
+  // El Doc y la web no siempre llaman igual al deporte. Si la web no lo tiene, se crea (ej. "PÁDEL" → "Pádel").
+  const ALIAS_DEPORTE = { "gimnasia en trampolin": "gimnasia de trampolin", "gimnasia aerobica": "gimnasia", "pelota vasca": "pelota",
+    hockey: "hockey sobre cesped", ecuestre: "equitacion", "rugby 7": "rugby 7s", "tenis adaptado": "tenis", "natacion adaptada": "natacion",
+    "tenis de mesa adaptado": "tenis de mesa" };
+  async function deporteWeb(nombre) {
+    const n = norm(nombre);
+    if (!n) return null;
+    const hay = est.deportes.find((d) => norm(d.name) === (ALIAS_DEPORTE[n] || n));
+    if (hay) return hay;
+    // "PÁDEL" → "Pádel", "FÓRMULA 1" → "Fórmula 1"; siglas cortas quedan en mayúscula ("UFC").
+    const nuevo = String(nombre).trim().toLowerCase().split(/\s+/).map((p, i) =>
+      (p.length <= 3 && /\p{L}/u.test(p) && !["de", "en", "y", "del"].includes(p) ? p.toUpperCase() : i && ["de", "en", "y", "del"].includes(p) ? p : p[0].toUpperCase() + p.slice(1))).join(" ");
+    const { datos } = await api("deportes", { metodo: "POST", cuerpo: { name: nuevo } });
+    est.deportes.push({ id: datos.id, name: datos.name });
+    return datos;
+  }
+
+  async function todosLosAtletas() {
+    if (!est.atletas) est.atletas = await todo("atletas?status=publish,draft&context=edit&_fields=id,title");
+    return est.atletas;
+  }
+
+  async function desdeDoc(e) {
+    if (!conexion()) throw new Error("Primero conectá tu usuario en el menú 🌐 Web.");
+    await apoyo();
+    const agenda = e.seccion === "agenda";
+    const seccion = agenda ? "agenda" : "resultados";
+    const ruta = SECCIONES[seccion].ruta;
+    const evento = (e.evento || e.titulo || "").trim();
+    // ¿Ya se pasó? (lo puede haber hecho otra persona del equipo)
+    const { datos: hay } = await api(`${ruta}?search=${encodeURIComponent(evento)}&status=publish,draft,pending&context=edit&per_page=20&_fields=id,title`);
+    if (hay.some((x) => norm(x.title.raw) === norm(evento))) return { seccion, repetido: true };
+
+    const lineas = (e.bloques || []).filter((b) => b.tipo === "texto" || b.tipo === "sub").map((b) => (b.partes || []).map((p) => p.t).join("").trim()).filter(Boolean);
+    const link = (e.bloques || []).flatMap((b) => b.partes || []).find((p) => p.href)?.href || "";
+    const deporte = await deporteWeb(e.deporte);
+    const todoTexto = norm([evento, ...lineas].join(" "));
+    const atletas = (await todosLosAtletas()).filter((a) => a.title.raw && todoTexto.includes(norm(a.title.raw))).map((a) => a.id);
+    const cuerpo = { title: evento, status: "draft", deportes: deporte ? [deporte.id] : [], meta: { ad_atleta: atletas } };
+    if (agenda) {
+      const [ini, fin] = fechasDoc(e.fechas || "");
+      const lugar = evento.match(/\sEN\s+([^()]+?)\s*(\(|$)/i)?.[1] || "";
+      Object.assign(cuerpo.meta, { ad_inicio: ini || "", ad_fin: fin && fin !== ini ? fin : "", ad_lugar: lugar, ad_link: link });
+      cuerpo.content = lineas.map((l) => `<p>${esc(l)}</p>`).join("");
+    } else {
+      // El renglón más largo suele ser el resultado ("Gustavo Fernández le ganó la final…"); se revisa antes de publicar.
+      const resultado = lineas.filter((l) => !/^se (jug|corri|disput)/i.test(l)).sort((a, b) => b.length - a.length)[0] || "";
+      Object.assign(cuerpo.meta, { ad_fecha: e.terminado_desde || "", ad_competencia: evento, ad_resultado: resultado });
+    }
+    const { datos } = await api(`${ruta}?context=edit`, { metodo: "POST", cuerpo });
+    return { seccion, id: datos.id, atletas: atletas.length, deporte: Boolean(deporte) };
+  }
+
+  // Al volver de un "A la web": mostrar los borradores de esa sección.
+  function irABorradores(seccion) { irA(seccion); est.estado = "draft"; }
+
+  window.Web = { dibujar, irA, irABorradores, desdeDoc, fechasDoc, conectado: () => Boolean(conexion()), secciones: Object.fromEntries(Object.entries(SECCIONES).map(([k, s]) => [k, s.nombre])), actual: () => est.seccion };
 })();

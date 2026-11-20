@@ -586,6 +586,20 @@ function tarjetaEvento(e, tpl) {
     const g = boton("🎨 Gráfica", () => { Graficas.desdeEvento(e, { medalla: tipoMedalla }); estado.tab = "graficas"; dibujar(); window.scrollTo({ top: 0 }); });
     t.querySelector(".pie").insertBefore(g, t.querySelector(".pie .publicado"));
   }
+  // Puente a la web (tanda 16): resultados listos para publicar y eventos de agenda → borrador en la web.
+  if (window.Web?.conectado() && !e.archivado && (e.seccion === "agenda" || e.etiqueta === "publicable" || e.pasadoAPublicable)) {
+    const w = boton("🌐 A la web", async () => {
+      w.disabled = true; w.textContent = "Pasando…";
+      try {
+        const r = await Web.desdeDoc(e);
+        const donde = r.seccion === "agenda" ? "Agenda" : "Resultados";
+        if (r.repetido) avisar(`Ya estaba en Web → ${donde}`);
+        else avisar(`Quedó como borrador en Web → ${donde}${r.atletas ? ` (con ${r.atletas} atleta${r.atletas > 1 ? "s" : ""})` : ""}. Revisalo y publicalo.`);
+        Web.irABorradores(r.seccion); estado.tab = "web"; dibujar(); window.scrollTo({ top: 0 });
+      } catch (err) { avisar("No se pudo pasar: " + err.message); w.disabled = false; w.textContent = "🌐 A la web"; }
+    });
+    t.querySelector(".pie").insertBefore(w, t.querySelector(".pie .publicado") || null);
+  }
   if (!e.manual && !e.archivado && !e.id.startsWith("ba:")) botonEliminar(e, t);
   if (!e.archivado && (e.etiqueta === "mas_info" || e.etiqueta === "en_curso" || e.pasadoAPublicable)) botonPublicable(e, t);
   if (e.manual) {
