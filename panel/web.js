@@ -18,8 +18,9 @@
     agenda: { nombre: "Agenda", nueva: "Nuevo evento", ruta: "eventos" },
     resultados: { nombre: "Resultados", nueva: "Nuevo resultado", ruta: "resultados" },
   };
-  const NOTA = [["foto", "Foto principal", "foto"], ["credito", "Crédito de la foto (sale debajo de la foto; ej.: Foto: COA)", "credito"], ["titulo", "Título", "titulo"], ["bajada", "Bajada", "bajada"], ["cuerpo", "Texto de la nota", "cuerpo"],
-    ["seccion", "Sección", "seccion"], ["deporte", "Deporte", "deporte"], ["ad_atleta", "Atletas de la nota", "atletas"], ["ad_video_youtube", "Video de YouTube (link)", "url"],
+  const NOTA = [["foto", "Foto principal", "foto"], ["ad_video_youtube", "…o video de YouTube en la portada (pegá el link; si lo ponés, va el video en vez de la foto)", "url"],
+    ["credito", "Crédito de la foto (sale debajo de la foto; ej.: Foto: COA)", "credito"], ["titulo", "Título", "titulo"], ["bajada", "Bajada", "bajada"], ["cuerpo", "Texto de la nota", "cuerpo"],
+    ["seccion", "Sección", "seccion"], ["deporte", "Deporte", "deporte"], ["ad_atleta", "Atletas de la nota", "atletas"],
     ["sticky", "Nota destacada de la portada (si hay varias marcadas, sale la más nueva)", "destacada"]];
   const CAMPOS = {
     notas: NOTA, entrevistas: NOTA, investigaciones: NOTA,
