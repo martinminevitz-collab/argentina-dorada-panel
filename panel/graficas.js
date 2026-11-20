@@ -546,8 +546,14 @@
       await Promise.all([...nodo.querySelectorAll("img")].map((im) => im.decode().catch(() => {})));
       const caja0 = nodo.getBoundingClientRect();
       // los textos a animar (solo los de más afuera), de arriba hacia abajo
-      const todos = [...nodo.querySelectorAll(ANIMA)].filter((el) => el.offsetWidth && !el.parentElement.closest(ANIMA));
-      todos.sort((a, c) => a.getBoundingClientRect().top - c.getBoundingClientRect().top);
+      // las listas (fixture, convocados, agenda, grupos, sets...) entran renglón por renglón
+      const LISTAS = "ol, ul, table, .g-fx-lista, .g-ag-lista, .g-gr-grilla";
+      const todos = [...nodo.querySelectorAll(ANIMA)].filter((el) => el.offsetWidth && !el.parentElement.closest(ANIMA))
+        .flatMap((el) => { if (!el.matches(LISTAS)) return [el];
+          const hijos = [...(el.tagName === "TABLE" ? el.querySelectorAll("tr") : el.children)].filter((x) => x.offsetWidth);
+          hijos.forEach((x) => (x.dataset.renglon = "1")); return hijos.length ? hijos : [el]; });
+      const pos = (el) => el.getBoundingClientRect();
+      todos.sort((a, c) => pos(a).top - pos(c).top || pos(a).left - pos(c).left);
       const foto = nodo.querySelector(".g-foto");
       const conVideo = !!(p.foto.video && foto);
       // la foto (o el video) va en su propia capa: así solo ella hace el zoom lento y el logo, el torneo, etc. quedan quietos
@@ -586,7 +592,7 @@
         // por dónde entra: los títulos grandes desde el costado, lo demás desde abajo (o todo igual, según el selector)
         const esTitulo = /^H[12]$/.test(el.tagName) || el.matches(".g-md-titulo, .g-md-nombre, .g-sd-etiqueta, .g-cl-numero, .g-marcador, .g-spo-nombre");
         const desde = ENTRADA === "abajo" ? "abajo" : ENTRADA === "costado" ? "costado" : esTitulo ? "costado" : "abajo";
-        capas.push({ c: await htmlToImage.toCanvas(nodo, opts), desde, titulo: esTitulo });
+        capas.push({ c: await htmlToImage.toCanvas(nodo, opts), desde: el.dataset.renglon ? "abajo" : desde, renglon: !!el.dataset.renglon });
         fondos.forEach(([x, bg]) => (x.style.background = bg));
       }
       // fondo en movimiento
@@ -594,7 +600,8 @@
         video = document.createElement("video"); video.src = p.foto.video; video.playsInline = true; video.preload = "auto";
         await new Promise((ok, mal) => { video.onloadeddata = ok; video.onerror = mal; });
       }
-      const dur = conVideo ? Math.min(20, video.duration || 6) : Math.max(6, 0.3 + capas.length * 0.45 + 1.6 + 2.5); // con foto: que se llegue a leer quieto
+      const ultimo = capas.reduce((m, c, k) => m + (k ? (c.renglon && capas[k - 1].renglon ? 0.25 : 0.45) : 0.3), 0);
+      const dur = conVideo ? Math.min(20, video.duration || 6) : Math.min(15, Math.max(6, ultimo + 1.6 + 2.5)); // que se llegue a leer quieto
       const lienzo = document.createElement("canvas"); lienzo.width = w; lienzo.height = h;
       const ctx = lienzo.getContext("2d");
       const stream = lienzo.captureStream(30);
@@ -615,7 +622,10 @@
       const suave = (t) => { t = Math.min(1, Math.max(0, t)); return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2; };
       const suaveL = (t) => Math.min(1, Math.max(0, t));
       // cuándo entra cada texto: de a uno, 0,45 s de diferencia, y cada uno tarda 1,6 s en llegar a su lugar
-      const INICIO = 0.3, ENTRE = 0.45, TARDA = 1.6;
+      // (los renglones de una lista salen más seguidos: 0,25 s)
+      const INICIO = 0.3, ENTRE = 0.45, ENTRE_RENGLON = 0.25, TARDA = 1.6;
+      let cuando = INICIO;
+      capas.forEach((capa, k) => { if (k) cuando += capa.renglon && capas[k - 1].renglon ? ENTRE_RENGLON : ENTRE; capa.t0 = cuando; });
       const cuadro = (t) => {
         ctx.globalAlpha = 1;
         if (aparte) {
@@ -624,7 +634,7 @@
           else cubrir(fotoQuieta, fotoQuieta.naturalWidth, fotoQuieta.naturalHeight, rectFoto, p.foto.z * (1 + 0.06 * suaveL(t / dur)), p.foto.x, p.foto.y); // zoom lento solo de la foto
           ctx.drawImage(base, 0, 0);
         } else ctx.drawImage(base, 0, 0); // sin foto: el fondo queda quieto
-        capas.forEach((capa, k) => { const a = suave((t - INICIO - k * ENTRE) / TARDA); if (a <= 0) return;
+        capas.forEach((capa) => { const a = suave((t - capa.t0) / (capa.renglon ? TARDA * 0.8 : TARDA)); if (a <= 0) return;
           const falta = 1 - a; // 1 al arrancar, 0 cuando ya está en su lugar
           ctx.globalAlpha = Math.min(1, a * 1.4);
           if (capa.desde === "costado") ctx.drawImage(capa.c, -w * 0.3 * falta, 0);
