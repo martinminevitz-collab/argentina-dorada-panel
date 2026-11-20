@@ -15,7 +15,7 @@
     // modo noche: se aplica antes de dibujar para que no "parpadee" en blanco
     try { const t = localStorage.getItem("ad-tema"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
   </script>
-  <link rel="stylesheet" href="estilos.css?v=42">
+  <link rel="stylesheet" href="estilos.css?v=43">
 </head>
 <body>
   <header class="top">
@@ -52,14 +52,30 @@
 
       <nav class="pestanas" role="tablist">
         <span id="tabs-multi"></span>
-        <button role="tab" data-tab="resultados" class="activa">Resultados <span class="n"></span></button>
-        <button role="tab" data-tab="agenda">Agenda <span class="n"></span></button>
-        <button role="tab" data-tab="ba">📍 Bs. As. <span class="n"></span></button>
-        <button role="tab" data-tab="noticias">📰 Noticias <span class="n"></span></button>
-        <button role="tab" data-tab="clasif" hidden>🎯 LA 2028 <span class="n"></span></button>
-        <button role="tab" data-tab="radar">Radar del bot <span class="n"></span></button>
-        <button role="tab" data-tab="graficas">🎨 Gráficas <span class="n"></span></button>
-        <button role="tab" data-tab="web">🌐 Web <span class="n"></span></button>
+        <div class="menu" data-menu="redes">
+          <button type="button" class="menu-boton" aria-expanded="false" aria-haspopup="true">Redes <span class="menu-actual"></span> ▾</button>
+          <div class="menu-lista" hidden>
+            <button role="tab" data-tab="resultados" class="activa">Resultados <span class="n"></span></button>
+            <button role="tab" data-tab="agenda">Agenda <span class="n"></span></button>
+            <button role="tab" data-tab="ba">📍 Bs. As. <span class="n"></span></button>
+            <button role="tab" data-tab="noticias">📰 Noticias <span class="n"></span></button>
+            <button role="tab" data-tab="clasif" hidden>🎯 LA 2028 <span class="n"></span></button>
+            <button role="tab" data-tab="radar">Radar del bot <span class="n"></span></button>
+            <button role="tab" data-tab="graficas">🎨 Gráficas <span class="n"></span></button>
+          </div>
+        </div>
+        <div class="menu" data-menu="web">
+          <button type="button" class="menu-boton" aria-expanded="false" aria-haspopup="true">🌐 Web <span class="menu-actual"></span> ▾</button>
+          <div class="menu-lista" hidden>
+            <button role="tab" data-tab="web" data-web="notas">Notas <span class="n"></span></button>
+            <button role="tab" data-tab="web" data-web="entrevistas">Entrevistas <span class="n"></span></button>
+            <button role="tab" data-tab="web" data-web="investigaciones">Investigaciones <span class="n"></span></button>
+            <button role="tab" data-tab="web" data-web="atletas">Atletas <span class="n"></span></button>
+            <button role="tab" data-tab="web" data-web="medallas">Medallas <span class="n"></span></button>
+            <button role="tab" data-tab="web" data-web="agenda">Agenda <span class="n"></span></button>
+            <button role="tab" data-tab="web" data-web="resultados">Resultados <span class="n"></span></button>
+          </div>
+        </div>
       </nav>
 
       <section class="filtros">
@@ -119,10 +135,11 @@
 
   <div id="aviso" class="aviso" hidden></div>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.3/dist/umd/supabase.min.js"></script>
-  <script src="config.js?v=42"></script>
-  <script src="base.js?v=42"></script>
-  <script src="graficas.js?v=42"></script>
-  <script src="web.js?v=42"></script>
-  <script src="app.js?v=42"></script>
+  <script src="config.js?v=43"></script>
+  <script src="base.js?v=43"></script>
+  <script src="graficas.js?v=43"></script>
+  <script src="web.js?v=43"></script>
+  <script src="menus.js?v=43"></script>
+  <script src="app.js?v=43"></script>
 </body>
 </html>

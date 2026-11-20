@@ -619,10 +619,39 @@ div.g-logo-evento { width: 200px; height: 110px; border: 2px dashed #4a6a8e; dis
 .w-foto img { width: 100%; height: 100%; object-fit: cover; }
 .w-editar input[readonly] { background: var(--suave); }
 .w-editar .pie { justify-content: flex-start; flex-wrap: wrap; align-items: center; }
-.w-editar .pie .link-btn { margin-right: auto; }
+
 .chip.w-sinfoto { background: var(--ambar-fondo, var(--oro-fondo)); color: var(--ambar, var(--oro)); }
 .chip.w-metal-oro { background: var(--oro-fondo); color: var(--oro); }
 .chip.w-metal-plata { background: var(--suave); color: var(--texto); }
 .chip.w-metal-bronce { background: #F1E1D3; color: #9A5B2E; }
 .w-hecho { background: var(--oro-fondo); color: var(--texto); border-radius: var(--radio); padding: 10px 12px; margin: 0; font-size: 14px; }
 .w-mas { justify-self: center; }
+
+/* ---------- Pestañas en dos desplegables: Redes y Web (menus.js) ---------- */
+.pestanas { overflow: visible; flex-wrap: wrap; }
+.pestanas .menu { position: relative; }
+.pestanas .menu-boton { display: inline-flex; align-items: center; gap: 6px; }
+.pestanas .menu-actual:not(:empty)::before { content: "· "; opacity: .6; }
+.pestanas .menu-lista { position: absolute; top: calc(100% + 6px); left: 0; z-index: 20; min-width: 220px; display: grid; gap: 2px;
+  background: var(--tarjeta); border: 1px solid var(--borde); border-radius: var(--radio); padding: 6px; box-shadow: 0 8px 24px rgba(11,30,51,.18); }
+.pestanas .menu-lista[hidden] { display: none; }
+.pestanas .menu-lista button { text-align: left; border-radius: 8px; background: transparent; font-size: 15px; }
+.pestanas .menu-lista button:hover { background: var(--suave); }
+
+/* ---------- Sección Web: crear, editor de texto, selector de atletas, eliminar ---------- */
+.w-cabeza-seccion { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+.w-cabeza-seccion h2 { margin: 0; font-family: "Barlow Condensed", system-ui, sans-serif; font-size: 24px; color: var(--texto); }
+.w-texto { border: 1px solid var(--borde); border-radius: 8px; overflow: hidden; background: var(--fondo); font-weight: 400; }
+.w-herramientas { display: flex; flex-wrap: wrap; gap: 4px; padding: 6px; border-bottom: 1px solid var(--borde); background: var(--suave); }
+.w-herramientas button, .w-subir-img { background: var(--tarjeta); border: 1px solid var(--borde); border-radius: 6px; padding: 4px 8px; font-size: 13px; color: var(--texto); cursor: pointer; font-weight: 600; }
+.w-editor { min-height: 220px; max-height: 60vh; overflow-y: auto; padding: 10px 12px; color: var(--texto); font-size: 15px; line-height: 1.6; outline: none; }
+.w-editor h2 { font-size: 18px; margin: 14px 0 6px; }
+.w-editor blockquote { margin: 10px 0; padding-left: 10px; border-left: 3px solid var(--oro); }
+.w-editor img { max-width: 100%; height: auto; border-radius: 6px; }
+.w-editor figcaption { font-size: 13px; color: var(--texto-2); }
+.w-selector { display: grid; gap: 6px; font-weight: 400; }
+.w-opciones { display: grid; gap: 2px; }
+.w-opciones button { text-align: left; background: var(--suave); border: 0; border-radius: 6px; padding: 6px 10px; color: var(--texto); cursor: pointer; }
+.chip.w-chip { display: inline-flex; align-items: center; gap: 4px; text-transform: none; }
+.w-chip button { background: none; border: 0; color: var(--texto-2); cursor: pointer; padding: 0 2px; font-size: 15px; }
+.pie .w-eliminar { border-color: var(--rojo); color: var(--rojo); margin-right: auto; }
