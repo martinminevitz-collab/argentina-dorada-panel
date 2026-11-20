@@ -552,6 +552,7 @@ function pestanasMulti() {
 }
 
 function dibujar() {
+  if (estado.fondo && (estado.tab === "web" || estado.tab === "graficas")) return; // no pisar lo que se está editando
   pestanasMulti();
   const esMulti = estado.tab.startsWith("m:");
   for (const b of document.querySelectorAll(".pestanas button[data-tab]")) {
@@ -1532,7 +1533,9 @@ $("#tema").onclick = () => {
   pintarBotonTema();
 };
 pintarBotonTema();
-document.addEventListener("visibilitychange", () => { if (!document.hidden) cargar(); });
+// al volver a la pestaña se actualizan los datos, pero sin redibujar si estás escribiendo una nota o armando una gráfica (se perdía lo abierto)
+document.addEventListener("visibilitychange", () => { if (!document.hidden) enFondo(cargar); });
+function enFondo(fn) { estado.fondo = true; try { const r = fn(); if (r?.finally) r.finally(() => (estado.fondo = false)); else estado.fondo = false; } catch (e) { estado.fondo = false; throw e; } }
 
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("sw.js", { updateViaCache: "none" }).then((r) => r.update()).catch(() => {});
@@ -1541,14 +1544,14 @@ if ("serviceWorker" in navigator) {
   navigator.serviceWorker.addEventListener("controllerchange", () => { if (!recargado) { recargado = true; location.reload(); } });
 }
 // la base compartida avisa cuando cambian los publicados (de este u otro dispositivo)
-window.alCambiarPublicados = (mapa) => { estado.publicados = mapa ?? leerPublicados(); dibujar(); };
-window.alCambiarAgregados = (filas) => { estado.agregadosBase = filas; combinar(); dibujar(); };
+window.alCambiarPublicados = (mapa) => { estado.publicados = mapa ?? leerPublicados(); enFondo(dibujar); };
+window.alCambiarAgregados = (filas) => { estado.agregadosBase = filas; combinar(); enFondo(dibujar); };
 window.alCambiarContactos = (mapa) => { estado.contactos = mapa; if (estado.tab === "ba" && !document.querySelector(".acred-form")) dibujar(); };
 window.alCambiarAcred = (filas) => {
   // no redibujar mientras alguien escribe el pedido
   estado.acred = filas;
   if (estado.tab === "ba" && !document.querySelector(".acred-form")) dibujar();
 };
-window.alCambiarManuales = (filas) => { estado.manualesBase = filas; combinar(); llenarDeportes(); dibujar(); };
+window.alCambiarManuales = (filas) => { estado.manualesBase = filas; combinar(); llenarDeportes(); enFondo(dibujar); };
 window.Base?.iniciar();
 cargar();
