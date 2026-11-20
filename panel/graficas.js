@@ -343,7 +343,7 @@
         <button class="g-bajar ${navigator.canShare ? "" : "principal"}">⬇ Descargar ${G.paginas.length > 1 ? `las ${G.paginas.length} imágenes` : "imagen"}</button>
         <button class="g-video">🎬 Video animado (página ${num(G.sel)})</button>
         <button class="g-reset">Volver a la plantilla</button></div>
-      <p class="ayuda">🎬 Video animado: los textos entran de a uno sobre la foto (o sobre el video, si subiste uno). Dura 6 segundos con foto o lo que dure el video (hasta 20 s). Se arma en el momento: no cierres la pantalla mientras graba.</p>
+      <p class="ayuda">🎬 Video animado: al terminar de grabar aparece abajo para verlo, descargarlo o publicarlo ("Descargar imágenes" baja solo las fotos). Los textos entran de a uno sobre la foto (o sobre el video, si subiste uno). Dura 6 segundos con foto o lo que dure el video (hasta 20 s). Se arma en el momento: no cierres la pantalla mientras graba.</p>
       ${navigator.canShare ? `<p class="ayuda">📲 Publicar abre la lista de apps del celu: elegí Instagram → Publicación y ya va con las ${G.paginas.length} imágenes en orden, sin guardarlas.
         Si Instagram las muestra cuadradas, tocá el ícono de las flechitas (abajo a la izquierda de la foto) para que queden 4:5.</p>` : ""}
       <p class="ayuda">Las fotos quedan solo en este dispositivo. Los textos se guardan como borrador acá mismo.</p>`;
@@ -623,12 +623,28 @@
       video?.pause(); rec.stop(); await listo;
       const ext = tipo.includes("mp4") ? "mp4" : "webm";
       const archivo = new File(partes, `argentina-dorada-${G.plantilla}-${num(i)}.${ext}`, { type: tipo.split(";")[0] });
-      if (navigator.canShare?.({ files: [archivo] })) await navigator.share({ files: [archivo] }).catch(() => {});
-      else { const a = document.createElement("a"); a.href = URL.createObjectURL(archivo); a.download = archivo.name; a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 4000); }
-      if (ext === "webm") alertar("Salió en WebM: si Instagram no lo acepta, pasalo a MP4 (o grabalo desde el celu)");
+      mostrarVideo(archivo, ext);
     } catch (e) {
       console.error(e); alertar("No se pudo armar el video. Probá de nuevo.");
     } finally { audio?.close(); taller.remove(); b.disabled = false; b.textContent = txt; }
+  }
+  // el video terminado se muestra en pantalla con sus botones (compartir/descargar necesitan un toque nuevo: el navegador no deja hacerlo solo)
+  let ultimoVideo = null;
+  function mostrarVideo(archivo, ext) {
+    if (ultimoVideo) URL.revokeObjectURL(ultimoVideo);
+    const url = ultimoVideo = URL.createObjectURL(archivo);
+    raiz.querySelector(".g-video-listo")?.remove();
+    const caja = document.createElement("div"); caja.className = "g-video-listo";
+    const puede = navigator.canShare?.({ files: [archivo] });
+    caja.innerHTML = `<h3>🎬 Video listo</h3><video src="${url}" controls playsinline loop autoplay muted></video>
+      <div class="g-acciones">${puede ? `<button class="principal v-compartir">📲 Publicar / compartir</button>` : ""}
+        <a class="boton ${puede ? "" : "principal"} v-bajar" href="${url}" download="${archivo.name}">⬇ Descargar video</a>
+        <button class="v-cerrar">Cerrar</button></div>
+      ${ext === "webm" ? `<p class="ayuda">Salió en WebM: si Instagram no lo toma, armalo desde el celu (ahí sale en MP4).</p>` : ""}`;
+    caja.querySelector(".v-compartir")?.addEventListener("click", () => navigator.share({ files: [archivo] }).catch(() => {}));
+    caja.querySelector(".v-cerrar").onclick = () => caja.remove();
+    raiz.querySelector(".g-acciones").after(caja);
+    caja.scrollIntoView({ behavior: "smooth", block: "center" });
   }
   function alertar(t) { const a = $("#aviso"); if (!a) return; a.textContent = t; a.hidden = false; setTimeout(() => (a.hidden = true), 2500); }
 
