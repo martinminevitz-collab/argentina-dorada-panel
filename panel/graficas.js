@@ -550,17 +550,20 @@
       todos.sort((a, c) => a.getBoundingClientRect().top - c.getBoundingClientRect().top);
       const foto = nodo.querySelector(".g-foto");
       const conVideo = !!(p.foto.video && foto);
+      // la foto (o el video) va en su propia capa: así solo ella hace el zoom lento y el logo, el torneo, etc. quedan quietos
+      const aparte = !!(foto && (conVideo || (p.foto.src && foto.querySelector("img"))));
       const opts = { width: w, height: h, pixelRatio: 1, fontEmbedCSS };
       // capa base: sin textos (y, si hay video, con un agujero donde va el video)
       todos.forEach((el) => (el.style.visibility = "hidden"));
       let colorFondo = getComputedStyle(nodo).backgroundColor, rectFoto = null;
       const fondosSacados = [];
-      if (conVideo) {
+      if (aparte) {
         const r = foto.getBoundingClientRect();
         rectFoto = { x: r.left - caja0.left, y: r.top - caja0.top, w: r.width, h: r.height };
+        let hallado = false;
         for (let el = foto; el; el = el.parentElement) {
           const bg = getComputedStyle(el).backgroundColor;
-          if (el !== foto && bg && !/rgba\(0, 0, 0, 0\)|transparent/.test(bg) && !fondosSacados.length) colorFondo = bg;
+          if (el !== foto && !hallado && bg && !/rgba\(0, 0, 0, 0\)|transparent/.test(bg)) { colorFondo = bg; hallado = true; }
           fondosSacados.push([el, el.style.background]); el.style.background = "transparent";
           if (el === nodo) break;
         }
@@ -568,7 +571,9 @@
       }
       const base = await htmlToImage.toCanvas(nodo, opts);
       fondosSacados.forEach(([el, bg]) => (el.style.background = bg));
-      if (conVideo) foto.querySelector("img").style.visibility = "";
+      if (aparte) foto.querySelector("img").style.visibility = "";
+      let fotoQuieta = null;
+      if (aparte && !conVideo) { fotoQuieta = new Image(); fotoQuieta.src = p.foto.src; await fotoQuieta.decode().catch(() => {}); }
       // una capa por texto
       const capas = [];
       nodo.style.background = "transparent";
@@ -589,7 +594,7 @@
         video = document.createElement("video"); video.src = p.foto.video; video.playsInline = true; video.preload = "auto";
         await new Promise((ok, mal) => { video.onloadeddata = ok; video.onerror = mal; });
       }
-      const dur = conVideo ? Math.min(20, video.duration || 6) : Math.max(6, 0.4 + capas.length * 0.35 + 1.2 + 2.5); // con foto: que se llegue a leer quieto
+      const dur = conVideo ? Math.min(20, video.duration || 6) : Math.max(6, 0.3 + capas.length * 0.45 + 1.6 + 2.5); // con foto: que se llegue a leer quieto
       const lienzo = document.createElement("canvas"); lienzo.width = w; lienzo.height = h;
       const ctx = lienzo.getContext("2d");
       const stream = lienzo.captureStream(30);
@@ -606,18 +611,24 @@
         dx = ox + (dx - ox) * z; dy = oy + (dy - oy) * z; dw *= z; dh *= z;
         ctx.save(); ctx.beginPath(); ctx.rect(r.x, r.y, r.w, r.h); ctx.clip(); ctx.drawImage(src, r.x + dx, r.y + dy, dw, dh); ctx.restore();
       };
-      const suave = (t) => 1 - Math.pow(1 - Math.min(1, Math.max(0, t)), 4); // arranca rápido y frena despacito al llegar
-      // cuándo entra cada texto: de a uno, 0,35 s de diferencia, y cada uno tarda 1,2 s en llegar a su lugar
-      const INICIO = 0.4, ENTRE = 0.35, TARDA = 1.2;
+      // entra suave y frena despacito al llegar (sin tirón al arrancar)
+      const suave = (t) => { t = Math.min(1, Math.max(0, t)); return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2; };
+      const suaveL = (t) => Math.min(1, Math.max(0, t));
+      // cuándo entra cada texto: de a uno, 0,45 s de diferencia, y cada uno tarda 1,6 s en llegar a su lugar
+      const INICIO = 0.3, ENTRE = 0.45, TARDA = 1.6;
       const cuadro = (t) => {
         ctx.globalAlpha = 1;
-        if (conVideo) { ctx.fillStyle = colorFondo; ctx.fillRect(0, 0, w, h); cubrir(video, video.videoWidth, video.videoHeight, rectFoto, p.foto.z, p.foto.x, p.foto.y); ctx.drawImage(base, 0, 0); }
-        else { const z = 1 + 0.05 * (t / dur); ctx.drawImage(base, (w - w * z) / 2, (h - h * z) / 2, w * z, h * z); } // foto: zoom lento
+        if (aparte) {
+          ctx.fillStyle = colorFondo; ctx.fillRect(0, 0, w, h);
+          if (conVideo) cubrir(video, video.videoWidth, video.videoHeight, rectFoto, p.foto.z, p.foto.x, p.foto.y);
+          else cubrir(fotoQuieta, fotoQuieta.naturalWidth, fotoQuieta.naturalHeight, rectFoto, p.foto.z * (1 + 0.06 * suaveL(t / dur)), p.foto.x, p.foto.y); // zoom lento solo de la foto
+          ctx.drawImage(base, 0, 0);
+        } else ctx.drawImage(base, 0, 0); // sin foto: el fondo queda quieto
         capas.forEach((capa, k) => { const a = suave((t - INICIO - k * ENTRE) / TARDA); if (a <= 0) return;
           const falta = 1 - a; // 1 al arrancar, 0 cuando ya está en su lugar
-          ctx.globalAlpha = Math.min(1, a * 1.6);
-          if (capa.desde === "costado") ctx.drawImage(capa.c, -w * 0.45 * falta, 0);
-          else ctx.drawImage(capa.c, 0, h * 0.12 * falta); });
+          ctx.globalAlpha = Math.min(1, a * 1.4);
+          if (capa.desde === "costado") ctx.drawImage(capa.c, -w * 0.3 * falta, 0);
+          else ctx.drawImage(capa.c, 0, h * 0.08 * falta); });
       };
       cuadro(0); rec.start(250);
       if (conVideo) { video.currentTime = 0; await audio?.resume().catch(() => {});
