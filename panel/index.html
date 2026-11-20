@@ -15,7 +15,7 @@
     // modo noche: se aplica antes de dibujar para que no "parpadee" en blanco
     try { const t = localStorage.getItem("ad-tema"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
   </script>
-  <link rel="stylesheet" href="estilos.css?v=39">
+  <link rel="stylesheet" href="estilos.css?v=40">
 </head>
 <body>
   <header class="top">
@@ -59,6 +59,7 @@
         <button role="tab" data-tab="clasif" hidden>🎯 LA 2028 <span class="n"></span></button>
         <button role="tab" data-tab="radar">Radar del bot <span class="n"></span></button>
         <button role="tab" data-tab="graficas">🎨 Gráficas <span class="n"></span></button>
+        <button role="tab" data-tab="web">🌐 Web <span class="n"></span></button>
       </nav>
 
       <section class="filtros">
@@ -118,9 +119,10 @@
 
   <div id="aviso" class="aviso" hidden></div>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.3/dist/umd/supabase.min.js"></script>
-  <script src="config.js?v=39"></script>
-  <script src="base.js?v=39"></script>
-  <script src="graficas.js?v=39"></script>
-  <script src="app.js?v=39"></script>
+  <script src="config.js?v=40"></script>
+  <script src="base.js?v=40"></script>
+  <script src="graficas.js?v=40"></script>
+  <script src="web.js?v=40"></script>
+  <script src="app.js?v=40"></script>
 </body>
 </html>

@@ -608,3 +608,28 @@ div.g-logo-evento { width: 200px; height: 110px; border: 2px dashed #4a6a8e; dis
 .clasif-cab h3 { margin: 6px 0; font-family: "Barlow Condensed", system-ui, sans-serif; font-size: 22px; }
 .clasif-cab small { font-family: system-ui, sans-serif; font-size: 13px; color: var(--texto-2); font-weight: 400; }
 .clasif-ayuda { grid-column: 1 / -1; }
+
+/* ---------- Sección Web (web.js) ---------- */
+.w-caja { background: var(--tarjeta); border: 1px solid var(--borde); border-radius: 10px; padding: 14px 16px; margin-bottom: 14px; }
+.w-caja h2 { margin: 0 0 8px; font-size: 1.05rem; }
+.w-pasos { margin: 0 0 12px; padding-left: 1.2em; color: var(--texto-2); }
+.w-form { display: grid; gap: 10px; }
+.w-form label { display: grid; gap: 4px; font-size: .85rem; color: var(--texto-2); }
+.w-form input, .w-form textarea, .w-form select { font: inherit; color: var(--texto); padding: 8px 10px; border: 1px solid var(--borde); border-radius: 8px; background: var(--fondo); }
+.w-form input[readonly] { background: var(--suave); }
+.w-form button { justify-self: start; }
+.w-link { background: none; border: 0; color: var(--celeste); text-decoration: underline; cursor: pointer; padding: 0; font: inherit; }
+.w-barra { display: grid; gap: 8px; margin-bottom: 12px; }
+.w-buscar { display: flex; gap: 8px; }
+.w-buscar input { flex: 1; min-width: 0; padding: 8px 10px; border: 1px solid var(--borde); border-radius: 8px; font: inherit; color: var(--texto); background: var(--fondo); }
+.w-cuenta { color: var(--texto-2); font-size: .85rem; margin: 0 0 8px; }
+.w-item { display: grid; grid-template-columns: 120px 1fr; gap: 14px; background: var(--tarjeta); border: 1px solid var(--borde); border-radius: 10px; padding: 12px; margin-bottom: 10px; }
+.w-item:not(:has(.w-foto)) { grid-template-columns: 1fr; }
+.w-foto { aspect-ratio: 3 / 2; background: var(--suave); border-radius: 6px; overflow: hidden; display: flex; align-items: center; justify-content: center; color: var(--texto-2); font-size: .8rem; }
+.w-foto img { width: 100%; height: 100%; object-fit: cover; }
+.w-acciones { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.w-publicar { background: var(--oro); color: #fff; border-color: var(--oro); }
+.w-msj { margin: 0; font-size: .85rem; color: var(--texto-2); }
+.w-hecho { background: var(--oro-fondo); border-radius: 8px; padding: 10px 12px; margin: 0 0 10px; }
+.w-mas { display: block; margin: 8px auto 0; }
+@media (max-width: 560px) { .w-item { grid-template-columns: 1fr; } .w-foto { max-width: 220px; } }

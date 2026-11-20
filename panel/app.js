@@ -534,16 +534,17 @@ function dibujar() {
     const t = b.dataset.tab;
     b.classList.toggle("activa", t === estado.tab);
     if (t === "clasif") b.hidden = !listaClasif().length; // la pestaña aparece recién cuando clasifica alguien
-    const n = t === "clasif" ? listaClasif().length : t === "radar" ? noticiasFiltradas(false).length : t === "noticias" ? noticiasParaPublicar(false).length : t === "ba" ? eventosBA().length : t.startsWith("m:") || t === "graficas" ? "" : eventosDe(t, false).length;
+    const n = t === "clasif" ? listaClasif().length : t === "radar" ? noticiasFiltradas(false).length : t === "noticias" ? noticiasParaPublicar(false).length : t === "ba" ? eventosBA().length : t.startsWith("m:") || t === "graficas" || t === "web" ? "" : eventosDe(t, false).length;
     b.querySelector(".n").textContent = n || "";
   }
   document.querySelectorAll("[data-para]").forEach((el) => (el.hidden = !el.dataset.para.split(" ").includes(estado.tab)));
-  document.querySelector(".filtros").hidden = esMulti || estado.tab === "graficas";
+  document.querySelector(".filtros").hidden = esMulti || estado.tab === "graficas" || estado.tab === "web";
 
   const lista = $("#lista");
   lista.innerHTML = "";
-  lista.classList.remove("modo-multi", "modo-graficas");
+  lista.classList.remove("modo-multi", "modo-graficas", "modo-web");
   if (estado.tab === "graficas") return window.Graficas?.dibujar(lista);
+  if (estado.tab === "web") return window.Web?.dibujar(lista);
   if (estado.tab === "radar") return dibujarRadar(lista);
   if (estado.tab === "noticias") return dibujarNoticias(lista);
   if (estado.tab === "clasif") return dibujarClasif(lista);
