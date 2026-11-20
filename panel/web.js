@@ -42,24 +42,19 @@
   function cajaConexion(lista) {
     const c = conexion();
     const caja = document.createElement("section");
-    caja.className = "w-caja";
+    caja.className = "cuenta w-cuenta-web"; // mismo estilo que la caja de cuenta del panel
     if (c) {
-      caja.innerHTML = `<p>Conectado a la web como <strong>${esc(c.nombre)}</strong>. <button type="button" class="w-link">Desconectar</button></p>`;
+      caja.innerHTML = `Web: <b>argentinadorada.com.ar</b> · conectado como <b>${esc(c.nombre)}</b> · <button type="button" class="link-btn">Desconectar</button>`;
       $("button", caja).onclick = () => { localStorage.removeItem(CLAVE); dibujar(lista); };
       return caja;
     }
     caja.innerHTML = `
-      <h2>Conectar con la web</h2>
-      <ol class="w-pasos">
-        <li>Entrá a tu <a href="${WEB}/wp-admin/profile.php#application-passwords-section" target="_blank" rel="noopener">perfil de la web</a>.</li>
-        <li>Abajo de todo, en <em>Contraseñas de aplicación</em>, escribí <strong>Panel</strong> y tocá <em>Añadir</em>.</li>
-        <li>Copiá la contraseña que aparece (se muestra una sola vez) y pegala acá.</li>
-      </ol>
-      <form class="w-form">
-        <label>Tu usuario de la web <input name="usuario" required autocomplete="username"></label>
-        <label>Contraseña de aplicación <input name="clave" required autocomplete="off" placeholder="xxxx xxxx xxxx xxxx xxxx xxxx"></label>
-        <button>Conectar</button>
-        <p class="w-msj" role="status"></p>
+      <label><b>Conectá tu usuario de la web</b> (una sola vez por equipo)</label>
+      <p class="ayuda">1. Entrá a tu <a href="${WEB}/wp-admin/profile.php#application-passwords-section" target="_blank" rel="noopener">perfil de la web</a>. 2. Abajo de todo, en <em>Contraseñas de aplicación</em>, escribí <b>Panel</b> y tocá <em>Añadir</em>. 3. Copiá la contraseña (se muestra una sola vez) y pegala acá.</p>
+      <form class="w-conectar">
+        <div class="fila-entrar"><input name="usuario" required autocomplete="username" placeholder="Tu usuario de la web"></div>
+        <div class="fila-entrar"><input name="clave" required autocomplete="off" placeholder="Contraseña de aplicación"><button>Conectar</button></div>
+        <p class="ayuda w-msj" role="status"></p>
       </form>`;
     $("form", caja).onsubmit = async (ev) => {
       ev.preventDefault();
@@ -98,14 +93,14 @@
     if (!conexion()) return;
 
     const barra = document.createElement("div");
-    barra.className = "w-barra";
+    barra.className = "filtros w-barra"; // mismas pastillas y buscador que los filtros del panel
     barra.innerHTML = `
-      <div class="chips">${Object.entries(TIPOS).map(([k, t]) => `<button type="button" class="chip${k === est.tipo ? " activa" : ""}" data-tipo="${k}">${t.nombre}</button>`).join("")}</div>
-      <div class="chips">
-        <button type="button" class="chip${est.estado === "draft" ? " activa" : ""}" data-estado="draft">Para revisar (borrador)</button>
-        <button type="button" class="chip${est.estado === "publish" ? " activa" : ""}" data-estado="publish">Publicados</button>
+      <div class="chips-filtro">${Object.entries(TIPOS).map(([k, t]) => `<button type="button" class="${k === est.tipo ? "activo" : ""}" data-tipo="${k}">${t.nombre}</button>`).join("")}</div>
+      <div class="chips-filtro">
+        <button type="button" class="${est.estado === "draft" ? "activo" : ""}" data-estado="draft">Para revisar</button>
+        <button type="button" class="${est.estado === "publish" ? "activo" : ""}" data-estado="publish">Publicados</button>
       </div>
-      <form class="w-buscar"><input type="search" placeholder="Buscar por nombre o título" value="${esc(est.buscar)}"><button>Buscar</button></form>`;
+      <form><input type="search" placeholder="Buscar por nombre o título" value="${esc(est.buscar)}"></form>`;
     barra.querySelectorAll("[data-tipo]").forEach((b) => (b.onclick = () => { est.tipo = b.dataset.tipo; est.pagina = 1; dibujar(lista); }));
     barra.querySelectorAll("[data-estado]").forEach((b) => (b.onclick = () => { est.estado = b.dataset.estado; est.pagina = 1; dibujar(lista); }));
     $("form", barra).onsubmit = (ev) => { ev.preventDefault(); est.buscar = $("input", barra).value.trim(); est.pagina = 1; dibujar(lista); };
@@ -120,12 +115,13 @@
       cont.innerHTML = `<p class="vacio">No se pudo leer la web: ${esc(e.message)}</p>`;
       return;
     }
-    cont.innerHTML = `<p class="w-cuenta">${est.total} ${est.estado === "draft" ? "para revisar" : "publicados"}</p>`;
+    cont.className = "w-lista";
+    cont.innerHTML = `<p class="ayuda">${est.total} ${est.estado === "draft" ? "para revisar" : "publicados"}</p>`;
     if (!est.items.length) cont.insertAdjacentHTML("beforeend", `<p class="vacio">Nada por acá.</p>`);
     for (const it of est.items) cont.append(tarjeta(it, lista));
     if (est.items.length < est.total) {
       const mas = document.createElement("button");
-      mas.className = "w-mas";
+      mas.className = "btn-crear w-mas";
       mas.textContent = "Ver más";
       mas.onclick = () => { est.pagina++; dibujar(lista); };
       cont.append(mas);
@@ -138,26 +134,47 @@
     const foto = it._embedded?.["wp:featuredmedia"]?.[0];
     const mini = foto?.media_details?.sizes?.medium?.source_url || foto?.source_url || "";
     const art = document.createElement("article");
-    art.className = "w-item";
+    art.className = "evento w-item"; // misma tarjeta plegable que los eventos del panel
     const campo = (k) => {
       if (k === "bajada") return `<label>Bajada <textarea name="bajada" rows="2">${esc(it.excerpt?.raw ?? "")}</textarea></label>`;
       if (k === "seccion") return `<label>Sección <select name="seccion">${(est.secciones || []).map((s) => `<option value="${s.id}"${it.categories?.includes(s.id) ? " selected" : ""}>${esc(s.name)}</option>`).join("")}</select></label>`;
       if (k === "ad_metal") return `<label>Metal <select name="ad_metal">${["oro", "plata", "bronce"].map((m) => `<option${it.meta?.ad_metal === m ? " selected" : ""}>${m}</option>`).join("")}</select></label>`;
       return `<label>${ETIQUETAS[k]} <input name="${k}" value="${esc(it.meta?.[k] ?? "")}"></label>`;
     };
+    const seccion = (est.secciones || []).find((s) => it.categories?.includes(s.id))?.name;
+    const chips = [
+      est.tipo === "notas" && seccion ? `<span class="chip">${esc(seccion)}</span>` : "",
+      est.tipo === "medallas" && it.meta?.ad_metal ? `<span class="chip w-metal-${esc(it.meta.ad_metal)}">${esc(it.meta.ad_metal)}</span>` : "",
+      !t.sinFoto && !mini ? `<span class="chip w-sinfoto">Sin foto</span>` : "",
+    ].join("");
+    const fecha = it.date ? new Date(it.date).toLocaleDateString("es-AR", { day: "numeric", month: "short", year: "numeric" }) : "";
     art.innerHTML = `
-      ${t.sinFoto ? "" : `<div class="w-foto">${mini ? `<img src="${esc(mini)}" alt="">` : `<span>Sin foto</span>`}</div>`}
-      <form class="w-form">
-        <label>${est.tipo === "atletas" ? "Nombre y apellido" : "Título"} <input name="titulo" value="${esc(it.title?.raw ?? "")}"${est.tipo === "medallas" ? " readonly" : ""}></label>
-        ${t.campos.map(campo).join("")}
-        ${t.sinFoto ? "" : `<label>${mini ? "Cambiar foto" : "Agregar foto"} <input type="file" name="foto" accept="image/*"></label>`}
-        <div class="w-acciones">
-          <button name="accion" value="guardar">Guardar</button>
-          ${it.status === "publish" ? `<button name="accion" value="draft">Volver a borrador</button>` : `<button name="accion" value="publish" class="w-publicar">Guardar y publicar</button>`}
-          <a href="${esc(conexion().web)}/wp-admin/post.php?post=${it.id}&action=edit" target="_blank" rel="noopener">Abrir en WordPress</a>
-        </div>
-        <p class="w-msj" role="status"></p>
-      </form>`;
+      <button type="button" class="cabeza" aria-expanded="false">
+        <span class="chips">${chips}</span>
+        <span class="titulo">${esc(it.title?.raw || "(sin título)")}</span>
+        <span class="fechas">${esc(fecha)}</span>
+        <span class="flecha" aria-hidden="true">▾</span>
+      </button>
+      <div class="detalle" hidden>
+        <form class="crear w-editar">
+          ${t.sinFoto ? "" : `<div class="w-foto">${mini ? `<img src="${esc(mini)}" alt="">` : `<span>Sin foto</span>`}</div>`}
+          <label>${est.tipo === "atletas" ? "Nombre y apellido" : "Título"} <input name="titulo" value="${esc(it.title?.raw ?? "")}"${est.tipo === "medallas" ? " readonly" : ""}></label>
+          ${t.campos.map(campo).join("")}
+          ${t.sinFoto ? "" : `<label>${mini ? "Cambiar foto" : "Agregar foto"} <input type="file" name="foto" accept="image/*"></label>`}
+          <div class="pie">
+            <a class="link-btn" href="${esc(conexion().web)}/wp-admin/post.php?post=${it.id}&action=edit" target="_blank" rel="noopener">Abrir en WordPress</a>
+            <button name="accion" value="guardar">Guardar</button>
+            ${it.status === "publish" ? `<button name="accion" value="draft">Volver a borrador</button>` : `<button name="accion" value="publish" class="principal">Guardar y publicar</button>`}
+          </div>
+          <p class="ayuda w-msj" role="status"></p>
+        </form>
+      </div>`;
+    const cab = $(".cabeza", art);
+    cab.onclick = () => {
+      const abierta = art.classList.toggle("abierto");
+      cab.setAttribute("aria-expanded", String(abierta));
+      $(".detalle", art).hidden = !abierta;
+    };
 
     $("form", art).onsubmit = async (ev) => {
       ev.preventDefault();
