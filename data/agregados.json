@@ -2,20 +2,12 @@
  "_nota": "Datos que los compañeros agregaron a un evento desde el panel y que todavía no están en el Doc. El agente los suma al bloque de ese evento y al final escribe 'Ref panel: <ref>'. 'noticias' son noticias cargadas a mano: son solo para el panel, el agente no las toca.",
  "pendientes": [
   {
-   "ref": "9d7a0eca",
-   "evento_id": "321e6c965b68",
-   "evento_titulo": "BOCHAS - CAMPEONATO MUNDIAL EN RIJEKA, CROACIA",
+   "ref": "ecccf758",
+   "evento_id": "1ffc05f899c1",
+   "evento_titulo": "RACQUETBALL - GOLDEN STATE OPEN (LPRT / IRT) EN ESTADOS UNIDOS",
    "tipo": "correccion",
    "texto": "[PUBLICABLE] Ya está completo: en el título cambiar (Necesito más info) por PUBLICABLE",
-   "creado_en": "2026-11-19T20:08:31.793848+00:00"
-  },
-  {
-   "ref": "3156086f",
-   "evento_id": "manual:3e10a17f",
-   "evento_titulo": "Amistoso vs Uruguay",
-   "tipo": "correccion",
-   "texto": "El partido es 20:15hs",
-   "creado_en": "2026-11-19T22:21:54.416692+00:00"
+   "creado_en": "2026-11-13T20:25:05.507704+00:00"
   },
   {
    "ref": "bd1103ad",

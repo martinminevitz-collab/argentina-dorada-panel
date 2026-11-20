@@ -86,16 +86,62 @@
      ]
     },
     {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.r2sports.com/website/event-website.asp?TID=54381",
+       "href": "https://www.r2sports.com/website/event-website.asp?TID=54381"
+      },
+      {
+       "t": " (Resultados)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Dobles Femenino",
+       "b": true
+      }
+     ]
+    },
+    {
      "tipo": "texto",
      "partes": [
       {
-       "t": "Faltan argentinos inscriptos y cuadros"
+       "t": "María José Vargas y Valeria Centellas le ganaron en 4tos a Reyes Pérez / Aldana (GUA) por 15-9 y 15-4 y pasaron a semis"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Natalia Méndez y Brenda Laime (COL) perdieron en 4tos vs Manilla / Andersen (USA) por 15-4, 11-15 y 11-3"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Finales el sábado 21/11",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan resultados de singles"
       }
      ]
     }
    ],
    "id": "08cc43ed292e",
-   "version": "50db566385",
+   "version": "f639a5d7fd",
    "publicado_en_doc": false,
    "visto": "2026-11-20"
   },
@@ -2631,7 +2677,7 @@
    "deporte": "BOCHAS",
    "evento": "CAMPEONATO MUNDIAL EN RIJEKA, CROACIA",
    "fechas": null,
-   "etiqueta": "mas_info",
+   "etiqueta": "publicable",
    "seccion": "resultados",
    "ya_publicado": false,
    "bloques": [
@@ -2782,7 +2828,8 @@
     }
    ],
    "refs_panel": [
-    "24d5aa22"
+    "24d5aa22",
+    "9d7a0eca"
    ],
    "id": "321e6c965b68",
    "version": "7b05481ace",
@@ -3140,6 +3187,26 @@
      ]
     },
     {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.diariocronica.com.ar/noticias/2026/11/20/178962-franco-colapinto-finalizo-noveno-en-la-segunda-practica-del-gran-premio-de-las-vegas",
+       "href": "https://www.diariocronica.com.ar/noticias/2026/11/20/178962-franco-colapinto-finalizo-noveno-en-la-segunda-practica-del-gran-premio-de-las-vegas"
+      },
+      {
+       "t": " (FP2)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Viernes 20/11: Colapinto fue 9° en la FP2 con 1:49.229 (venía 16° y mejoró sobre el final). Gasly fue 2°, a 0.071 del más rápido, George Russell (Mercedes) con 1:47.272"
+      }
+     ]
+    },
+    {
      "tipo": "sub",
      "partes": [
       {
@@ -3166,7 +3233,7 @@
     }
    ],
    "id": "3f83ee1c3780",
-   "version": "9166d0af96",
+   "version": "b3fa9d7f2b",
    "publicado_en_doc": false,
    "visto": "2026-11-20"
   },
@@ -3665,6 +3732,18 @@
      ]
     },
     {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Según el aviso oficial del ICRJ el Sudamericano de Finn se corre del 18 al 22/11: "
+      },
+      {
+       "t": "https://www.icrj.com.br/velaicrj/images/aviso_regata/2026/11_nov/NR_FINN_SOUTH_AMERICAN_CHAMPIONSHIP_2026.pdf",
+       "href": "https://www.icrj.com.br/velaicrj/images/aviso_regata/2026/11_nov/NR_FINN_SOUTH_AMERICAN_CHAMPIONSHIP_2026.pdf"
+      }
+     ]
+    },
+    {
      "tipo": "sub",
      "partes": [
       {
@@ -3698,7 +3777,7 @@
     }
    ],
    "id": "7a44a2ecec03",
-   "version": "cee5cd8c00",
+   "version": "cc7587780a",
    "publicado_en_doc": false,
    "terminado_desde": "2026-11-18",
    "visto": "2026-11-20"
@@ -4798,7 +4877,7 @@
      "tipo": "sub",
      "partes": [
       {
-       "t": "vs Uruguay el viernes 13/11 a las 20hs en La Bombonera (CABA)",
+       "t": "vs Uruguay el viernes 13/11 a las 20:15hs en La Bombonera (CABA)",
        "b": true
       }
      ]
@@ -4877,8 +4956,11 @@
      ]
     }
    ],
+   "refs_panel": [
+    "3156086f"
+   ],
    "id": "9b8960c27c6e",
-   "version": "760914ebfd",
+   "version": "e07371645f",
    "publicado_en_doc": false,
    "terminado_desde": "2026-11-17",
    "visto": "2026-11-20"
@@ -5290,6 +5372,26 @@
      ]
     },
     {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.misurdeportes.cl/2026/11/circuito-sudamericano-de-voley-playa-brasil-se-llevo-los-oros/",
+       "href": "https://www.misurdeportes.cl/2026/11/circuito-sudamericano-de-voley-playa-brasil-se-llevo-los-oros/"
+      },
+      {
+       "t": " (Resultados)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "En la nota de resultados no aparece ninguna pareja argentina (Creo que Argentina no compitió en esta etapa)"
+      }
+     ]
+    },
+    {
      "tipo": "texto",
      "partes": [
       {
@@ -5299,7 +5401,7 @@
     }
    ],
    "id": "b904de21ef8b",
-   "version": "f053cdb4dd",
+   "version": "ab8fd6a0fc",
    "publicado_en_doc": false,
    "terminado_desde": "2026-11-17",
    "visto": "2026-11-20"
@@ -5492,6 +5594,70 @@
    "publicado_en_doc": false,
    "terminado_desde": "2026-11-10",
    "visto": "2026-11-16"
+  },
+  "d686a7382d49": {
+   "titulo": "BMX FREESTYLE - CAMPEONATO PANAMERICANO EN SANTIAGO, CHILE (18 al 21 de noviembre)",
+   "deporte": "BMX FREESTYLE",
+   "evento": "CAMPEONATO PANAMERICANO EN SANTIAGO, CHILE",
+   "fechas": "18 al 21 de noviembre",
+   "etiqueta": "en_curso",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://deportv.gob.ar/polideportivo/argentina-representantes-panamericano-bmx-freestyle-chile-nid:19048",
+       "href": "https://deportv.gob.ar/polideportivo/argentina-representantes-panamericano-bmx-freestyle-chile-nid:19048"
+      },
+      {
+       "t": " (Nota)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se compite en el Parque Estadio Nacional. "
+      },
+      {
+       "t": "Finales el sábado 21/11",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Argentinos",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Manu Turone (Neuquén, plata en los Panamericanos Junior Asunción 2025), Santiago Dotta (Tierra del Fuego), Octavio Augusto Miranda (Tierra del Fuego) y Analía Zacarías (Misiones, en femenino)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan resultados"
+      }
+     ]
+    }
+   ],
+   "id": "d686a7382d49",
+   "version": "4a20b18b11",
+   "publicado_en_doc": false,
+   "visto": "2026-11-20"
   },
   "d76e45b4bd6a": {
    "titulo": "NATACIÓN ADAPTADA - PARA SWIMMING WORLD SERIES EN LIMA, PERÚ",
@@ -6216,10 +6382,93 @@
        "t": "Es el último partido de la fase de grupos. Después Argentina viaja a Londres para los cruces por posiciones, el último fin de semana de noviembre"
       }
      ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.lagaceta.com.ar/nota/1163219/deportes/sorpresa-pumas-gonzalo-garcia-mateo-carreras-no-estaran-ante-francia.html",
+       "href": "https://www.lagaceta.com.ar/nota/1163219/deportes/sorpresa-pumas-gonzalo-garcia-mateo-carreras-no-estaran-ante-francia.html"
+      },
+      {
+       "t": " (Bajas)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Mateo Carreras quedó afuera por una lesión en el hombro (podría necesitar cirugía) y entra Ignacio Mendy. Gonzalo García quedó afuera de los 23 por decisión técnica"
+      }
+     ]
     }
    ],
    "id": "de102f71eab3",
-   "version": "238be6209c",
+   "version": "60577459b5",
+   "publicado_en_doc": false,
+   "visto": "2026-11-20"
+  },
+  "dfbf893bf031": {
+   "titulo": "REMO - CAMPEONATO ARGENTINO EN TIGRE, BUENOS AIRES (20 al 22 de noviembre)",
+   "deporte": "REMO",
+   "evento": "CAMPEONATO ARGENTINO EN TIGRE, BUENOS AIRES",
+   "fechas": "20 al 22 de noviembre",
+   "etiqueta": "en_curso",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.remodeprimera.com.ar/2026/?m=1",
+       "href": "https://www.remodeprimera.com.ar/2026/?m=1"
+      },
+      {
+       "t": " (Fuente)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Sede: Pista Nacional de Remo, Tigre"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Participación récord de la serie 2021–2026: 377 botes, 416 atletas y 36 clubes"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Serán 53 pruebas"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Dato extra: la AARA cumple 125 años"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "e8637829",
+    "cbdcf02f"
+   ],
+   "id": "dfbf893bf031",
+   "version": "55e6380751",
    "publicado_en_doc": false,
    "visto": "2026-11-20"
   },
