@@ -20,7 +20,9 @@
 
   async function api(ruta, { metodo = "GET", cuerpo, archivo } = {}) {
     const c = conexion();
-    const cab = { Authorization: "Basic " + btoa(unescape(encodeURIComponent(c.usuario + ":" + c.clave))) };
+    const credencial = btoa(unescape(encodeURIComponent(c.usuario + ":" + c.clave)));
+    // "X-AD-Auth" lleva lo mismo: el hosting de la web descarta "Authorization" y el plugin lo lee de ahí.
+    const cab = { Authorization: "Basic " + credencial, "X-AD-Auth": credencial };
     let body;
     if (archivo) {
       cab["Content-Type"] = archivo.type || "image/jpeg";
@@ -71,7 +73,8 @@
         dibujar(lista);
       } catch (e) {
         localStorage.removeItem(CLAVE);
-        $(".w-msj", caja).textContent = "No se pudo conectar: " + e.message;
+        // Con el cartel prendido, una clave mala vuelve como "Estamos actualizándonos".
+        $(".w-msj", caja).textContent = /actualiz/i.test(e.message) ? "No se reconoció el usuario o la contraseña de aplicación. Revisalos y probá de nuevo." : "No se pudo conectar: " + e.message;
       }
     };
     return caja;
