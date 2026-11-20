@@ -232,19 +232,40 @@
     caja.querySelectorAll("[data-cmd]").forEach((b) => (b.onclick = () => hacer(b.dataset.cmd)));
     caja.querySelectorAll("[data-bloque]").forEach((b) => (b.onclick = () => hacer("formatBlock", b.dataset.bloque)));
     $("[data-link]", caja).onclick = () => { const url = prompt("Dirección del link (https://…)"); if (url) hacer("createLink", url); };
+    // se recuerda dónde estaba el cursor: al elegir el archivo y subirlo, el editor lo pierde y la foto iba arriba de todo
+    let rango = null;
+    const guardarCursor = () => { const s = getSelection(); if (s.rangeCount && ed.contains(s.anchorNode)) rango = s.getRangeAt(0).cloneRange(); };
+    ["keyup", "mouseup", "touchend", "input", "blur"].forEach((t) => ed.addEventListener(t, guardarCursor));
+    document.addEventListener("selectionchange", guardarCursor);
+    $(".w-subir-img", caja).addEventListener("mousedown", guardarCursor);
+    // tocar una foto del texto: botones para subirla, bajarla o sacarla
+    ed.addEventListener("click", (ev) => {
+      ed.querySelectorAll(".w-foto-ctrl").forEach((x) => x.remove());
+      const fig = ev.target.closest("figure"); if (!fig) return;
+      const c = document.createElement("span"); c.className = "w-foto-ctrl"; c.contentEditable = "false";
+      c.innerHTML = `<button type="button" data-m="arriba">↑ Subir</button><button type="button" data-m="abajo">↓ Bajar</button><button type="button" data-m="sacar">✕ Sacar</button>`;
+      c.onclick = (e2) => { e2.stopPropagation(); const m = e2.target.dataset.m; c.remove();
+        if (m === "arriba" && fig.previousElementSibling) fig.previousElementSibling.before(fig);
+        if (m === "abajo" && fig.nextElementSibling) fig.nextElementSibling.after(fig);
+        if (m === "sacar") fig.remove(); };
+      fig.prepend(c);
+    });
     $(".w-subir-img input", caja).onchange = async (ev) => {
       const archivo = ev.target.files[0];
       if (!archivo) return;
+      const donde = rango;
       try {
         const { datos: media } = await api("media", { metodo: "POST", archivo });
         ed.focus();
+        if (donde) { const s = getSelection(); s.removeAllRanges(); s.addRange(donde); }
+        else { const r = document.createRange(); r.selectNodeContents(ed); r.collapse(false); const s = getSelection(); s.removeAllRanges(); s.addRange(r); }
         document.execCommand("insertHTML", false, `<figure><img src="${esc(media.source_url)}" alt=""><figcaption>Epígrafe</figcaption></figure><p></p>`);
       } catch (e) { alert("No se pudo subir la foto: " + e.message); }
       ev.target.value = "";
     };
     // Pegar solo texto: evita traer estilos de Word o de otras webs.
     ed.addEventListener("paste", (ev) => { ev.preventDefault(); document.execCommand("insertText", false, ev.clipboardData.getData("text/plain")); });
-    caja.valor = () => ed.innerHTML.replace(/<p><br><\/p>/g, "").trim();
+    caja.valor = () => { ed.querySelectorAll(".w-foto-ctrl").forEach((x) => x.remove()); return ed.innerHTML.replace(/<p><br><\/p>/g, "").trim(); };
     return caja;
   }
 
