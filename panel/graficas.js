@@ -341,7 +341,9 @@
       <div class="g-trabajo"><div class="g-vista"></div><div class="g-campos"></div></div>
       <div class="g-acciones">${navigator.canShare ? `<button class="g-compartir principal">📲 Publicar (Instagram, X, WhatsApp…)</button>` : ""}
         <button class="g-bajar ${navigator.canShare ? "" : "principal"}">⬇ Descargar ${G.paginas.length > 1 ? `las ${G.paginas.length} imágenes` : "imagen"}</button>
-        <button class="g-video">🎬 Video animado (página ${num(G.sel)})</button>
+        <span class="g-video-grupo"><button class="g-video">🎬 Video animado (página ${num(G.sel)})</button>
+        <select class="g-entrada" aria-label="Cómo entran los textos">${[["mezcla", "Títulos del costado, resto de abajo"], ["abajo", "Todo desde abajo"], ["costado", "Todo desde el costado"]]
+          .map(([v, t]) => `<option value="${v}" ${v === ENTRADA ? "selected" : ""}>${t}</option>`).join("")}</select></span>
         <button class="g-reset">Volver a la plantilla</button></div>
       <p class="ayuda">🎬 Video animado: al terminar de grabar aparece abajo para verlo, descargarlo o publicarlo ("Descargar imágenes" baja solo las fotos). Los textos entran de a uno sobre la foto (o sobre el video, si subiste uno). Dura 6 segundos con foto o lo que dure el video (hasta 20 s). Se arma en el momento: no cierres la pantalla mientras graba.</p>
       ${navigator.canShare ? `<p class="ayuda">📲 Publicar abre la lista de apps del celu: elegí Instagram → Publicación y ya va con las ${G.paginas.length} imágenes en orden, sin guardarlas.
@@ -366,6 +368,7 @@
     raiz.querySelector(".g-bajar").onclick = () => descargar(false);
     raiz.querySelector(".g-compartir")?.addEventListener("click", () => descargar(true));
     raiz.querySelector(".g-video").onclick = () => grabarVideo(G.paginas[G.sel], G.sel);
+    raiz.querySelector(".g-entrada").onchange = (ev) => { ENTRADA = ev.target.value; try { localStorage.setItem("ad-entrada", ENTRADA); } catch {} };
     raiz.querySelector(".g-reset").onclick = () => { G = G.origen ? armarDesde(G.origen, G.plantilla) : nuevo(G.plantilla); guardar(); armar(); };
     raiz.querySelectorAll(".g-mini").forEach((m) => ajustar(m.querySelector(".g-pagina"), G.paginas[Number(m.dataset.i)]));
     vista(); campos();
@@ -523,6 +526,7 @@
   const ANIMA = "h1, h2, p, ol, ul, table, .g-pill, .g-linea, .g-marcador, .g-spo-cajas, .g-spo-nombre, .g-gr-grilla, .g-fx-lista, .g-ag-lista, .g-c1-plaza, "
     + ".g-cl-numero, .g-caja-torneo, .g-st-caja, .g-sm-caja, .g-md-titulo, .g-md-nombre, .g-md-prueba, .g-md-evento, .g-pt-torneo, .g-sd-etiqueta, .g-sd-ciudad, "
     + ".g-sd-fechas, .g-frase, .g-desliza, .g-pl-num, .g-gr-torneo, .g-gr-inst, .g-fx-titulo, .g-ag-titulo, .g-sm-gol, .g-cv-dt";
+  let ENTRADA = "mezcla"; try { ENTRADA = localStorage.getItem("ad-entrada") || "mezcla"; } catch {}
   function tipoVideo() {
     for (const t of ["video/mp4;codecs=avc1.42E01E", "video/mp4", "video/webm;codecs=vp9", "video/webm"]) if (window.MediaRecorder?.isTypeSupported?.(t)) return t;
     return "";
@@ -574,7 +578,10 @@
         el.style.visibility = "visible"; el.querySelectorAll("*").forEach((x) => (x.style.visibility = "visible"));
         const fondos = []; // los contenedores no tienen que tapar
         for (let x = el.parentElement; x && x !== nodo.parentElement; x = x.parentElement) { fondos.push([x, x.style.background]); x.style.background = "transparent"; }
-        capas.push(await htmlToImage.toCanvas(nodo, opts));
+        // por dónde entra: los títulos grandes desde el costado, lo demás desde abajo (o todo igual, según el selector)
+        const esTitulo = /^H[12]$/.test(el.tagName) || el.matches(".g-md-titulo, .g-md-nombre, .g-sd-etiqueta, .g-cl-numero, .g-marcador, .g-spo-nombre");
+        const desde = ENTRADA === "abajo" ? "abajo" : ENTRADA === "costado" ? "costado" : esTitulo ? "costado" : "abajo";
+        capas.push({ c: await htmlToImage.toCanvas(nodo, opts), desde, titulo: esTitulo });
         fondos.forEach(([x, bg]) => (x.style.background = bg));
       }
       // fondo en movimiento
@@ -582,7 +589,7 @@
         video = document.createElement("video"); video.src = p.foto.video; video.playsInline = true; video.preload = "auto";
         await new Promise((ok, mal) => { video.onloadeddata = ok; video.onerror = mal; });
       }
-      const dur = conVideo ? Math.min(20, video.duration || 6) : 6;
+      const dur = conVideo ? Math.min(20, video.duration || 6) : Math.max(6, 0.4 + capas.length * 0.35 + 1.2 + 2.5); // con foto: que se llegue a leer quieto
       const lienzo = document.createElement("canvas"); lienzo.width = w; lienzo.height = h;
       const ctx = lienzo.getContext("2d");
       const stream = lienzo.captureStream(30);
@@ -599,13 +606,18 @@
         dx = ox + (dx - ox) * z; dy = oy + (dy - oy) * z; dw *= z; dh *= z;
         ctx.save(); ctx.beginPath(); ctx.rect(r.x, r.y, r.w, r.h); ctx.clip(); ctx.drawImage(src, r.x + dx, r.y + dy, dw, dh); ctx.restore();
       };
-      const suave = (t) => 1 - Math.pow(1 - Math.min(1, Math.max(0, t)), 3);
+      const suave = (t) => 1 - Math.pow(1 - Math.min(1, Math.max(0, t)), 4); // arranca rápido y frena despacito al llegar
+      // cuándo entra cada texto: de a uno, 0,35 s de diferencia, y cada uno tarda 1,2 s en llegar a su lugar
+      const INICIO = 0.4, ENTRE = 0.35, TARDA = 1.2;
       const cuadro = (t) => {
         ctx.globalAlpha = 1;
         if (conVideo) { ctx.fillStyle = colorFondo; ctx.fillRect(0, 0, w, h); cubrir(video, video.videoWidth, video.videoHeight, rectFoto, p.foto.z, p.foto.x, p.foto.y); ctx.drawImage(base, 0, 0); }
         else { const z = 1 + 0.05 * (t / dur); ctx.drawImage(base, (w - w * z) / 2, (h - h * z) / 2, w * z, h * z); } // foto: zoom lento
-        capas.forEach((c, k) => { const a = suave((t - 0.35 - k * 0.22) / 0.55); if (a <= 0) return;
-          ctx.globalAlpha = a; ctx.drawImage(c, 0, 40 * (1 - a)); });
+        capas.forEach((capa, k) => { const a = suave((t - INICIO - k * ENTRE) / TARDA); if (a <= 0) return;
+          const falta = 1 - a; // 1 al arrancar, 0 cuando ya está en su lugar
+          ctx.globalAlpha = Math.min(1, a * 1.6);
+          if (capa.desde === "costado") ctx.drawImage(capa.c, -w * 0.45 * falta, 0);
+          else ctx.drawImage(capa.c, 0, h * 0.12 * falta); });
       };
       cuadro(0); rec.start(250);
       if (conVideo) { video.currentTime = 0; await audio?.resume().catch(() => {});
