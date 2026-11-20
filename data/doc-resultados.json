@@ -1,6 +1,6 @@
 {
- "leido": "2026-11-19T11:58-03:00",
- "actualizado_doc": "19/11/2026 10:55",
+ "leido": "2026-11-19T23:18-03:00",
+ "actualizado_doc": "19/11/2026 23:00",
  "eventos": [
   {
    "titulo": "VELA - CAMPEONATO SUDAMERICANO EN RÍO DE JANEIRO, BRASIL",
@@ -50,10 +50,54 @@
        "href": "https://www.icrj.com.br/velaicrj/images/aviso_regata/2026/11_nov/NOR_SUDAM_470_-_2026_-_FINAL.pdf"
       }
      ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.noticiasdelacalle.com.ar/noticias/2026/11/17/208086-martin-cloos-y-sofia-videla-clasificaron-a-los-juegos-panamericanos-lima-2027",
+       "href": "https://www.noticiasdelacalle.com.ar/noticias/2026/11/17/208086-martin-cloos-y-sofia-videla-clasificaron-a-los-juegos-panamericanos-lima-2027"
+      },
+      {
+       "t": " (Nota)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "470 Mixto",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Martín Cloos y Sofía Videla terminaron 4° en el Sudamericano de 470 con 35 puntos netos en 10 regatas (ganaron la regata 2) y "
+      },
+      {
+       "t": "CLASIFICARON A LOS JUEGOS PANAMERICANOS DE LIMA 2027",
+       "b": true
+      },
+      {
+       "t": " (se llevaron la última de las 4 plazas). Fue su primera competencia juntos"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan: el resto de las clases y los otros regatistas argentinos"
+      }
+     ]
     }
    ],
    "id": "7a44a2ecec03",
-   "version": "6750dad024",
+   "version": "cee5cd8c00",
    "publicado_en_doc": false,
    "terminado_desde": "2026-11-18"
   },
@@ -342,6 +386,93 @@
    "version": "760914ebfd",
    "publicado_en_doc": false,
    "terminado_desde": "2026-11-17"
+  },
+  {
+   "titulo": "TENIS ADAPTADO - WHEELCHAIR SINGLES FINALS (MASTERS) EN BARCELONA, ESPAÑA",
+   "deporte": "TENIS ADAPTADO",
+   "evento": "WHEELCHAIR SINGLES FINALS (MASTERS) EN BARCELONA, ESPAÑA",
+   "fechas": null,
+   "etiqueta": "publicable",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se jugó en el Centre Internacional de Tennis de Cornellà (Barcelona), con final el domingo 15/11"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://herqles.com/2026/11/15/gustavo-fernandez-gana-masters-tenis-silla-ruedas/",
+       "href": "https://herqles.com/2026/11/15/gustavo-fernandez-gana-masters-tenis-silla-ruedas/"
+      },
+      {
+       "t": " (Nota)"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://hoydiario.es/noticias/deporte/tenis-en-silla-de-ruedas/gustavo-fernandez-masters-silla-ruedas-barcelona-2026.html",
+       "href": "https://hoydiario.es/noticias/deporte/tenis-en-silla-de-ruedas/gustavo-fernandez-masters-silla-ruedas-barcelona-2026.html"
+      },
+      {
+       "t": " (Nota)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Singles Masculino",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Gustavo Fernández le ganó la final a Alfie Hewett (GBR) por 2-6, 6-4 y 6-1 y se consagró "
+      },
+      {
+       "t": "CAMPEÓN DEL MASTERS",
+       "b": true
+      },
+      {
+       "t": " por primera vez: es el primer argentino en ganarlo"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Fase de grupos: 6-1 y 6-0 vs Tom Egberink (NED), 7-6 (2) y 6-0 vs Ji Zhenxu (CHN) y derrota 6-3 y 6-4 vs Alfie Hewett (GBR)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Semis: le ganó 6-1 y 6-2 a Martín de la Puente (ESP)"
+      }
+     ]
+    }
+   ],
+   "id": "5dc4078d3657",
+   "version": "7993f9546e",
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-19"
   },
   {
    "titulo": "ATLETISMO - CAMPEONATO SUDAMERICANO DE MARATÓN Y RUTA EN SANTIAGO, CHILE",
@@ -8343,6 +8474,34 @@
      "tipo": "link",
      "partes": [
       {
+       "t": "https://www.infobae.com/deportes/2026/11/19/los-pumas-confirmaron-siete-cambios-para-enfrentar-a-francia-por-el-nations-championship/",
+       "href": "https://www.infobae.com/deportes/2026/11/19/los-pumas-confirmaron-siete-cambios-para-enfrentar-a-francia-por-el-nations-championship/"
+      },
+      {
+       "t": " (Formación)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Formación (7 cambios respecto a Italia; Bernasconi afuera por lesión): Boris Wenger, Julián Montoya (C), Francisco Moreno; Guido Petti, Tomás Lavanini; Juan Martín González, Juan Martín Scelzo, Facundo Isa; Simón Benítez Cruz, Tomás Albornoz; Ignacio Mendy, Santiago Chocobares, Lucio Cinti, Bautista Delguy; Gerónimo Prisciantelli"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Suplentes: Facundo Bosch, Mayco Vivas, Joel Sclavi, Efraín Elías, Pedro Rubiolo, Pablo Matera, Agustín Moyano y Rodrigo Isgró"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
        "t": "https://www.diariopanorama.com/noticia/573003/tras-triunfo-ante-italia-cuando-vuelven-jugar-pumas-nations-championship-2026",
        "href": "https://www.diariopanorama.com/noticia/573003/tras-triunfo-ante-italia-cuando-vuelven-jugar-pumas-nations-championship-2026"
       },
@@ -8361,7 +8520,7 @@
     }
    ],
    "id": "de102f71eab3",
-   "version": "12667448cf",
+   "version": "238be6209c",
    "publicado_en_doc": false
   },
   {
@@ -8494,6 +8653,26 @@
      ]
     },
     {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.lanacion.com.ar/deportes/automovilismo/franco-colapinto-en-el-gran-premio-de-las-vegas-de-formula-1-en-vivo-nid19112026/",
+       "href": "https://www.lanacion.com.ar/deportes/automovilismo/franco-colapinto-en-el-gran-premio-de-las-vegas-de-formula-1-en-vivo-nid19112026/"
+      },
+      {
+       "t": " (FP1)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Jueves 19/11: FP1 con lluvia y sin tiempos válidos para nadie. Colapinto (y Gasly) salió sobre el final, dio una sola vuelta y no marcó tiempo. Alpine llevó una mejora de turbo para los dos autos"
+      }
+     ]
+    },
+    {
      "tipo": "sub",
      "partes": [
       {
@@ -8520,7 +8699,7 @@
     }
    ],
    "id": "3f83ee1c3780",
-   "version": "87be7d509d",
+   "version": "9166d0af96",
    "publicado_en_doc": false
   },
   {
@@ -8528,8 +8707,8 @@
    "deporte": "FÚTBOL",
    "evento": "MUNDIAL SUB 17 MASCULINO EN DOHA, QATAR",
    "fechas": "19 de noviembre al 13 de diciembre",
-   "etiqueta": "agenda",
-   "seccion": "agenda",
+   "etiqueta": "en_curso",
+   "seccion": "resultados",
    "ya_publicado": false,
    "bloques": [
     {
@@ -8605,11 +8784,22 @@
      ]
     },
     {
-     "tipo": "sub",
+     "tipo": "link",
      "partes": [
       {
-       "t": "Debut vs Australia hoy jueves 19/11 a las 13hs",
-       "b": true
+       "t": "https://www.lanacion.com.ar/deportes/futbol/resultado-de-la-seleccion-argentina-sub-17-vs-australia-sub-17-quien-gano-el-partido-del-mundial-nid19112026/",
+       "href": "https://www.lanacion.com.ar/deportes/futbol/resultado-de-la-seleccion-argentina-sub-17-vs-australia-sub-17-quien-gano-el-partido-del-mundial-nid19112026/"
+      },
+      {
+       "t": " (Resultado)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Debut: perdió 2-0 vs Australia el jueves 19/11 (en contra de Álvaro Güich a los 60' y gol de Akol Akon a los 71', convalidado por el VAR). Benjamín Vallejo fue expulsado en el final"
       }
      ]
     },
@@ -8623,11 +8813,10 @@
      ]
     },
     {
-     "tipo": "sub",
+     "tipo": "texto",
      "partes": [
       {
-       "t": "vs Dinamarca el miércoles 25/11 a las 12:30hs",
-       "b": true
+       "t": "vs Dinamarca el miércoles 25/11 a las 12:30hs"
       }
      ]
     },
@@ -8662,63 +8851,7 @@
     }
    ],
    "id": "da9041c32bff",
-   "version": "9240f7e657",
-   "publicado_en_doc": false
-  },
-  {
-   "titulo": "SURF - SURF FEST PRO LEAGUE BY SOFIA MILANOVICH (2DA FECHA) EN PUNTA ROCAS, PERU (19 al 22 de noviembre)",
-   "deporte": "SURF",
-   "evento": "SURF FEST PRO LEAGUE BY SOFIA MILANOVICH (2DA FECHA) EN PUNTA ROCAS, PERU",
-   "fechas": "19 al 22 de noviembre",
-   "etiqueta": "agenda",
-   "seccion": "agenda",
-   "ya_publicado": false,
-   "bloques": [
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Faltan surfistas argentinos"
-      }
-     ]
-    }
-   ],
-   "id": "221c34045158",
-   "version": "b678ca096b",
-   "publicado_en_doc": false
-  },
-  {
-   "titulo": "RACQUETBALL - MILE HIGH OPEN EN DENVER, ESTADOS UNIDOS (19 al 21 de noviembre)",
-   "deporte": "RACQUETBALL",
-   "evento": "MILE HIGH OPEN EN DENVER, ESTADOS UNIDOS",
-   "fechas": "19 al 21 de noviembre",
-   "etiqueta": "agenda",
-   "seccion": "agenda",
-   "ya_publicado": false,
-   "bloques": [
-    {
-     "tipo": "link",
-     "partes": [
-      {
-       "t": "https://enard.org.ar/agenda_noviembre_2026-2-2-2-2-2-2-2-2/",
-       "href": "https://enard.org.ar/agenda_noviembre_2026-2-2-2-2-2-2-2-2/"
-      },
-      {
-       "t": " (Agenda ENARD)"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Faltan argentinos inscriptos y cuadros"
-      }
-     ]
-    }
-   ],
-   "id": "08cc43ed292e",
-   "version": "50db566385",
+   "version": "068fb4e9df",
    "publicado_en_doc": false
   },
   {
@@ -8726,8 +8859,8 @@
    "deporte": "JUDO",
    "evento": "CAMPEONATO MUNDIAL JUNIOR EN TASHKENT, UZBEKISTÁN",
    "fechas": "19 al 22 de noviembre",
-   "etiqueta": "agenda",
-   "seccion": "agenda",
+   "etiqueta": "en_curso",
+   "seccion": "resultados",
    "ya_publicado": false,
    "bloques": [
     {
@@ -8758,13 +8891,69 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Arrancó hoy. Individual del 19 al 21/11 y equipos mixtos el 22/11. Argentina tiene 1 judoka inscripto. Falta el nombre"
+       "t": "Arrancó el jueves 19/11. Individual del 19 al 21/11 y equipos mixtos el 22/11. Argentina tiene 1 judoka inscripto. Falta el nombre"
       }
      ]
     }
    ],
    "id": "cde49e99022c",
-   "version": "19a8227940",
+   "version": "8ce29e3e7f",
+   "publicado_en_doc": false
+  },
+  {
+   "titulo": "RACQUETBALL - MILE HIGH OPEN EN DENVER, ESTADOS UNIDOS (19 al 21 de noviembre)",
+   "deporte": "RACQUETBALL",
+   "evento": "MILE HIGH OPEN EN DENVER, ESTADOS UNIDOS",
+   "fechas": "19 al 21 de noviembre",
+   "etiqueta": "en_curso",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://enard.org.ar/agenda_noviembre_2026-2-2-2-2-2-2-2-2/",
+       "href": "https://enard.org.ar/agenda_noviembre_2026-2-2-2-2-2-2-2-2/"
+      },
+      {
+       "t": " (Agenda ENARD)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan argentinos inscriptos y cuadros"
+      }
+     ]
+    }
+   ],
+   "id": "08cc43ed292e",
+   "version": "50db566385",
+   "publicado_en_doc": false
+  },
+  {
+   "titulo": "SURF - SURF FEST PRO LEAGUE BY SOFIA MILANOVICH (2DA FECHA) EN PUNTA ROCAS, PERU (19 al 22 de noviembre)",
+   "deporte": "SURF",
+   "evento": "SURF FEST PRO LEAGUE BY SOFIA MILANOVICH (2DA FECHA) EN PUNTA ROCAS, PERU",
+   "fechas": "19 al 22 de noviembre",
+   "etiqueta": "en_curso",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan surfistas argentinos"
+      }
+     ]
+    }
+   ],
+   "id": "221c34045158",
+   "version": "b678ca096b",
    "publicado_en_doc": false
   },
   {
@@ -8907,11 +9096,14 @@
      ]
     },
     {
-     "tipo": "sub",
+     "tipo": "link",
      "partes": [
       {
-       "t": "Viernes 20/11 desde las 23:50hs y sábado 21/11 desde las 23hs (hora argentina) (Creo)",
-       "b": true
+       "t": "https://www.lagaceta.com.ar/nota/1163257/deportes/billie-jean-king-cup-argentina-ultima-detalles-tokio-para-enfrentar-japon-playoffs.html",
+       "href": "https://www.lagaceta.com.ar/nota/1163257/deportes/billie-jean-king-cup-argentina-ultima-detalles-tokio-para-enfrentar-japon-playoffs.html"
+      },
+      {
+       "t": " (Nota)"
       }
      ]
     },
@@ -8919,13 +9111,49 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Faltan: equipo completo y orden de partidos"
+       "t": "Equipo completo: Justina González Daniele (número 1 del equipo), Florencia Urrutia, Luciana Moyano y Sol Larraya Guidi, las cuatro debutantes. Capitana: Paola Suárez; entrenador: Mariano Hood"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Japón (capitana Ai Sugiyama): Himeno Sakatsume, Mai Hontama, Ena Shibahara, Shuko Aoyama y Eri Hozumi. No juegan Naomi Osaka ni Moyuka Uchijima"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Superficie rápida bajo techo"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Viernes 20/11 desde las 23:50hs los dos primeros singles; sábado 21/11 desde las 23hs el dobles y los dos singles restantes",
+       "b": true
+      },
+      {
+       "t": " (hora argentina)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Falta el orden de partidos (sale del sorteo)"
       }
      ]
     }
    ],
    "id": "9aac4f5ebb84",
-   "version": "cadcbcd8dd",
+   "version": "37cad93e48",
    "publicado_en_doc": false
   },
   {
@@ -8970,16 +9198,36 @@
      ]
     },
     {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.infobae.com/america/agencias/2026/11/19/campeonato-de-las-americas-de-tiro-deportivo-otorgara-en-lima-12-cupos-a-los-angeles-2028/",
+       "href": "https://www.infobae.com/america/agencias/2026/11/19/campeonato-de-las-americas-de-tiro-deportivo-otorgara-en-lima-12-cupos-a-los-angeles-2028/"
+      },
+      {
+       "t": " (Nota)"
+      }
+     ]
+    },
+    {
      "tipo": "texto",
      "partes": [
       {
-       "t": "Faltan los tiradores argentinos y las pruebas"
+       "t": "Según EFE la competencia es del 22 al 30/11 en el Polígono Las Palmas: 359 tiradores de 22 países, 12 cupos directos a Los Ángeles 2028 y 208 plazas para Lima 2027. Pruebas de rifle, pistola y escopeta (fosa y skeet)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan los tiradores argentinos"
       }
      ]
     }
    ],
    "id": "daca2fda8556",
-   "version": "0c8dfa7451",
+   "version": "357af5eea3",
    "publicado_en_doc": false
   },
   {

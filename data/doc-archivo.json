@@ -64,6 +64,41 @@
    "publicado_en_doc": false,
    "visto": "2026-11-17"
   },
+  "08cc43ed292e": {
+   "titulo": "RACQUETBALL - MILE HIGH OPEN EN DENVER, ESTADOS UNIDOS (19 al 21 de noviembre)",
+   "deporte": "RACQUETBALL",
+   "evento": "MILE HIGH OPEN EN DENVER, ESTADOS UNIDOS",
+   "fechas": "19 al 21 de noviembre",
+   "etiqueta": "en_curso",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://enard.org.ar/agenda_noviembre_2026-2-2-2-2-2-2-2-2/",
+       "href": "https://enard.org.ar/agenda_noviembre_2026-2-2-2-2-2-2-2-2/"
+      },
+      {
+       "t": " (Agenda ENARD)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan argentinos inscriptos y cuadros"
+      }
+     ]
+    }
+   ],
+   "id": "08cc43ed292e",
+   "version": "50db566385",
+   "publicado_en_doc": false,
+   "visto": "2026-11-19"
+  },
   "090e0ef4a21e": {
    "titulo": "POLE Y DEPORTES AÉREOS - CAMPEONATO MUNDIAL IPSF EN PRAGA, REPÚBLICA CHECA",
    "deporte": "POLE Y DEPORTES AÉREOS",
@@ -1634,6 +1669,29 @@
    "terminado_desde": "2026-11-10",
    "visto": "2026-11-16"
   },
+  "221c34045158": {
+   "titulo": "SURF - SURF FEST PRO LEAGUE BY SOFIA MILANOVICH (2DA FECHA) EN PUNTA ROCAS, PERU (19 al 22 de noviembre)",
+   "deporte": "SURF",
+   "evento": "SURF FEST PRO LEAGUE BY SOFIA MILANOVICH (2DA FECHA) EN PUNTA ROCAS, PERU",
+   "fechas": "19 al 22 de noviembre",
+   "etiqueta": "en_curso",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan surfistas argentinos"
+      }
+     ]
+    }
+   ],
+   "id": "221c34045158",
+   "version": "b678ca096b",
+   "publicado_en_doc": false,
+   "visto": "2026-11-19"
+  },
   "2a61a8857cd6": {
    "titulo": "ESGRIMA - COPA DEL MUNDO JUVENIL EN COSTA RICA",
    "deporte": "ESGRIMA",
@@ -3062,6 +3120,26 @@
      ]
     },
     {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.lanacion.com.ar/deportes/automovilismo/franco-colapinto-en-el-gran-premio-de-las-vegas-de-formula-1-en-vivo-nid19112026/",
+       "href": "https://www.lanacion.com.ar/deportes/automovilismo/franco-colapinto-en-el-gran-premio-de-las-vegas-de-formula-1-en-vivo-nid19112026/"
+      },
+      {
+       "t": " (FP1)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Jueves 19/11: FP1 con lluvia y sin tiempos válidos para nadie. Colapinto (y Gasly) salió sobre el final, dio una sola vuelta y no marcó tiempo. Alpine llevó una mejora de turbo para los dos autos"
+      }
+     ]
+    },
+    {
      "tipo": "sub",
      "partes": [
       {
@@ -3088,7 +3166,7 @@
     }
    ],
    "id": "3f83ee1c3780",
-   "version": "87be7d509d",
+   "version": "9166d0af96",
    "publicado_en_doc": false,
    "visto": "2026-11-19"
   },
@@ -3393,6 +3471,94 @@
    "terminado_desde": "2026-11-10",
    "visto": "2026-11-16"
   },
+  "5dc4078d3657": {
+   "titulo": "TENIS ADAPTADO - WHEELCHAIR SINGLES FINALS (MASTERS) EN BARCELONA, ESPAÑA",
+   "deporte": "TENIS ADAPTADO",
+   "evento": "WHEELCHAIR SINGLES FINALS (MASTERS) EN BARCELONA, ESPAÑA",
+   "fechas": null,
+   "etiqueta": "publicable",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se jugó en el Centre Internacional de Tennis de Cornellà (Barcelona), con final el domingo 15/11"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://herqles.com/2026/11/15/gustavo-fernandez-gana-masters-tenis-silla-ruedas/",
+       "href": "https://herqles.com/2026/11/15/gustavo-fernandez-gana-masters-tenis-silla-ruedas/"
+      },
+      {
+       "t": " (Nota)"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://hoydiario.es/noticias/deporte/tenis-en-silla-de-ruedas/gustavo-fernandez-masters-silla-ruedas-barcelona-2026.html",
+       "href": "https://hoydiario.es/noticias/deporte/tenis-en-silla-de-ruedas/gustavo-fernandez-masters-silla-ruedas-barcelona-2026.html"
+      },
+      {
+       "t": " (Nota)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Singles Masculino",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Gustavo Fernández le ganó la final a Alfie Hewett (GBR) por 2-6, 6-4 y 6-1 y se consagró "
+      },
+      {
+       "t": "CAMPEÓN DEL MASTERS",
+       "b": true
+      },
+      {
+       "t": " por primera vez: es el primer argentino en ganarlo"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Fase de grupos: 6-1 y 6-0 vs Tom Egberink (NED), 7-6 (2) y 6-0 vs Ji Zhenxu (CHN) y derrota 6-3 y 6-4 vs Alfie Hewett (GBR)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Semis: le ganó 6-1 y 6-2 a Martín de la Puente (ESP)"
+      }
+     ]
+    }
+   ],
+   "id": "5dc4078d3657",
+   "version": "7993f9546e",
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-19",
+   "visto": "2026-11-19"
+  },
   "73b580f88431": {
    "titulo": "PARKOUR - COPA DEL MUNDO EN CHINA",
    "deporte": "PARKOUR",
@@ -3485,10 +3651,54 @@
        "href": "https://www.icrj.com.br/velaicrj/images/aviso_regata/2026/11_nov/NOR_SUDAM_470_-_2026_-_FINAL.pdf"
       }
      ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.noticiasdelacalle.com.ar/noticias/2026/11/17/208086-martin-cloos-y-sofia-videla-clasificaron-a-los-juegos-panamericanos-lima-2027",
+       "href": "https://www.noticiasdelacalle.com.ar/noticias/2026/11/17/208086-martin-cloos-y-sofia-videla-clasificaron-a-los-juegos-panamericanos-lima-2027"
+      },
+      {
+       "t": " (Nota)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "470 Mixto",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Martín Cloos y Sofía Videla terminaron 4° en el Sudamericano de 470 con 35 puntos netos en 10 regatas (ganaron la regata 2) y "
+      },
+      {
+       "t": "CLASIFICARON A LOS JUEGOS PANAMERICANOS DE LIMA 2027",
+       "b": true
+      },
+      {
+       "t": " (se llevaron la última de las 4 plazas). Fue su primera competencia juntos"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan: el resto de las clases y los otros regatistas argentinos"
+      }
+     ]
     }
    ],
    "id": "7a44a2ecec03",
-   "version": "6750dad024",
+   "version": "cee5cd8c00",
    "publicado_en_doc": false,
    "terminado_desde": "2026-11-18",
    "visto": "2026-11-19"
@@ -5150,6 +5360,53 @@
    "terminado_desde": "2026-11-10",
    "visto": "2026-11-16"
   },
+  "cde49e99022c": {
+   "titulo": "JUDO - CAMPEONATO MUNDIAL JUNIOR EN TASHKENT, UZBEKISTÁN (19 al 22 de noviembre)",
+   "deporte": "JUDO",
+   "evento": "CAMPEONATO MUNDIAL JUNIOR EN TASHKENT, UZBEKISTÁN",
+   "fechas": "19 al 22 de noviembre",
+   "etiqueta": "en_curso",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.ijf.org/competition/3207",
+       "href": "https://www.ijf.org/competition/3207"
+      },
+      {
+       "t": " (Web oficial)"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.ijf.org/index.php/country/arg",
+       "href": "https://www.ijf.org/index.php/country/arg"
+      },
+      {
+       "t": " (Inscriptos ARG)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Arrancó el jueves 19/11. Individual del 19 al 21/11 y equipos mixtos el 22/11. Argentina tiene 1 judoka inscripto. Falta el nombre"
+      }
+     ]
+    }
+   ],
+   "id": "cde49e99022c",
+   "version": "8ce29e3e7f",
+   "publicado_en_doc": false,
+   "visto": "2026-11-19"
+  },
   "d4a54d7e99fc": {
    "titulo": "JUEGOS PANAMERICANOS PARA PERSONAS TRASPLANTADAS EN MALDONADO, URUGUAY",
    "deporte": "",
@@ -5551,6 +5808,159 @@
    "terminado_desde": "2026-11-14",
    "visto": "2026-11-19"
   },
+  "da9041c32bff": {
+   "titulo": "FÚTBOL - MUNDIAL SUB 17 MASCULINO EN DOHA, QATAR (19 de noviembre al 13 de diciembre)",
+   "deporte": "FÚTBOL",
+   "evento": "MUNDIAL SUB 17 MASCULINO EN DOHA, QATAR",
+   "fechas": "19 de noviembre al 13 de diciembre",
+   "etiqueta": "en_curso",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.diariojornada.com.ar/417086/deportes/el_sub_17_de_argentina_quedo_en_el_grupo_c",
+       "href": "https://www.diariojornada.com.ar/417086/deportes/el_sub_17_de_argentina_quedo_en_el_grupo_c"
+      },
+      {
+       "t": " (Grupo)"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.qfa.qa/en/news/fifa-confirms-full-fixture-list-for-qatar-2026-u-17-world-cup",
+       "href": "https://www.qfa.qa/en/news/fifa-confirms-full-fixture-list-for-qatar-2026-u-17-world-cup"
+      },
+      {
+       "t": " (Fixture)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Argentina integra el Grupo C con Australia, Dinamarca y Mozambique"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://es-us.noticias.yahoo.com/deportes/cronograma-partidos-selecci%C3%B3n-argentina-sub-145625465.html",
+       "href": "https://es-us.noticias.yahoo.com/deportes/cronograma-partidos-selecci%C3%B3n-argentina-sub-145625465.html"
+      },
+      {
+       "t": " (Fixture)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "DT: Diego Placente. El rival africano del grupo es Mozambique"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.diariojornada.com.ar/427190/deportes/la_seleccion_argentina_sub17_llego_a_qatar_para_disputar_el_mundial",
+       "href": "https://www.diariojornada.com.ar/427190/deportes/la_seleccion_argentina_sub17_llego_a_qatar_para_disputar_el_mundial"
+      },
+      {
+       "t": " (Nota llegada a Qatar)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "La fase de grupos se juega en el complejo Aspire Zone (Al Rayyan)"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.lanacion.com.ar/deportes/futbol/resultado-de-la-seleccion-argentina-sub-17-vs-australia-sub-17-quien-gano-el-partido-del-mundial-nid19112026/",
+       "href": "https://www.lanacion.com.ar/deportes/futbol/resultado-de-la-seleccion-argentina-sub-17-vs-australia-sub-17-quien-gano-el-partido-del-mundial-nid19112026/"
+      },
+      {
+       "t": " (Resultado)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Debut: perdió 2-0 vs Australia el jueves 19/11 (en contra de Álvaro Güich a los 60' y gol de Akol Akon a los 71', convalidado por el VAR). Benjamín Vallejo fue expulsado en el final"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "vs Mozambique el domingo 22/11 a las 12:30hs",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "vs Dinamarca el miércoles 25/11 a las 12:30hs"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://bolavip.com/ar/seleccion/argentina-comienza-su-travesia-en-el-mundial-sub-17-plantel-como-ver-los-partidos-y-el-cronograma-completo",
+       "href": "https://bolavip.com/ar/seleccion/argentina-comienza-su-travesia-en-el-mundial-sub-17-plantel-como-ver-los-partidos-y-el-cronograma-completo"
+      },
+      {
+       "t": " (Plantel y horarios)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Plantel (21)",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Valentín Reigia (Argentinos Juniors), Thiago Parga (Huracán), Kevin Báez (Aldosivi), Thiago Pérez (Huracán), Julio Coria (Boca), Álvaro Güich (Rosario Central), Mateo Mendizábal (Banfield), Bautista Giménez (River), Simón Escobar (Vélez, capitán), Alex Cardozo (Lanús), Matheo Machuca (Independiente), Galo Escobar (River), Benjamín Vallejo (Vélez), Marcos Ortiz (Belgrano), Giovanni Baroni (Talleres), Mateo Sánchez (Boca), Alan Alcaraz (Argentinos Juniors), Facundo Salinas (Vélez), Emiliano Barrionuevo (Boca), Tobías Goytía (River) y Juan Cruz Policella (Vélez)"
+      }
+     ]
+    }
+   ],
+   "id": "da9041c32bff",
+   "version": "068fb4e9df",
+   "publicado_en_doc": false,
+   "visto": "2026-11-19"
+  },
   "dd6ed1609c4e": {
    "titulo": "GIMNASIA ARTÍSTICA - GYMPIES GYMNOVA CUP EN BÉLGICA",
    "deporte": "GIMNASIA ARTÍSTICA",
@@ -5763,6 +6173,34 @@
      "tipo": "link",
      "partes": [
       {
+       "t": "https://www.infobae.com/deportes/2026/11/19/los-pumas-confirmaron-siete-cambios-para-enfrentar-a-francia-por-el-nations-championship/",
+       "href": "https://www.infobae.com/deportes/2026/11/19/los-pumas-confirmaron-siete-cambios-para-enfrentar-a-francia-por-el-nations-championship/"
+      },
+      {
+       "t": " (Formación)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Formación (7 cambios respecto a Italia; Bernasconi afuera por lesión): Boris Wenger, Julián Montoya (C), Francisco Moreno; Guido Petti, Tomás Lavanini; Juan Martín González, Juan Martín Scelzo, Facundo Isa; Simón Benítez Cruz, Tomás Albornoz; Ignacio Mendy, Santiago Chocobares, Lucio Cinti, Bautista Delguy; Gerónimo Prisciantelli"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Suplentes: Facundo Bosch, Mayco Vivas, Joel Sclavi, Efraín Elías, Pedro Rubiolo, Pablo Matera, Agustín Moyano y Rodrigo Isgró"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
        "t": "https://www.diariopanorama.com/noticia/573003/tras-triunfo-ante-italia-cuando-vuelven-jugar-pumas-nations-championship-2026",
        "href": "https://www.diariopanorama.com/noticia/573003/tras-triunfo-ante-italia-cuando-vuelven-jugar-pumas-nations-championship-2026"
       },
@@ -5781,7 +6219,7 @@
     }
    ],
    "id": "de102f71eab3",
-   "version": "12667448cf",
+   "version": "238be6209c",
    "publicado_en_doc": false,
    "visto": "2026-11-19"
   },
