@@ -702,3 +702,9 @@ details.iguales small { color: var(--texto-2); }
 .g-video-listo a.boton.principal { background: var(--oro); color: #14191e; border-color: var(--oro); }
 .g-video-grupo { display: inline-flex; gap: 6px; align-items: center; flex-wrap: wrap; }
 .g-video-grupo select { max-width: 230px; }
+details.prox-multi { border: 1px solid var(--borde); border-radius: 14px; padding: 12px 16px; margin: 10px 0; background: var(--superficie, transparent); }
+details.prox-multi summary { cursor: pointer; display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: baseline; }
+details.prox-multi summary b { font-size: 18px; }
+details.prox-multi .fechas { color: var(--texto-2); font-size: 14px; }
+details.prox-multi { grid-column: 1 / -1; }
+details.prox-multi summary b { text-transform: none; }

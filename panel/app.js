@@ -118,7 +118,7 @@ function partesConNegrita(linea) {
 function aEvento(f) {
   const bloques = [];
   if (f.link) bloques.push({ tipo: "link", partes: [{ t: f.link, href: f.link }, { t: " (Fuente)" }] });
-  const multi = String(f.detalle || "").startsWith("[MULTIDEPORTIVO]");
+  const multi = String(f.detalle || "").startsWith("[MULTIDEPORTIVO]") || !!f.multideportivo;
   for (const linea of String(f.detalle || "").replace(/^\[MULTIDEPORTIVO\]\n?/, "").split("\n")) {
     const l = linea.trim();
     if (!l) { if (bloques.length && bloques.at(-1).tipo !== "espacio") bloques.push({ tipo: "espacio" }); continue; }
@@ -531,13 +531,18 @@ function noticiasFiltradas(conFiltros = true) {
 
 // ---------- dibujo ----------
 function multiActivos() { return estado.eventos.filter((e) => e.multideportivo && e.seccion === "resultados" && !e.vencido); }
-function multiProximo() { return estado.eventos.find((e) => e.multideportivo && e.seccion === "agenda"); }
+// los multideportivos que vienen (del Doc y los creados en el panel que el agente todavía no pasó), por fecha
+function multiProximos() {
+  return estado.eventos.filter((e) => e.seccion === "agenda" && (e.multideportivo || e.esMulti) && !e.eliminado)
+    .sort((a, b) => fechaInicio(a) - fechaInicio(b));
+}
+function multiProximo() { return multiProximos()[0]; }
 
 function pestanasMulti() {
   const caja = $("#tabs-multi");
   const activos = multiActivos();
   const tabs = activos.map((e) => ({ tab: "m:" + e.id, txt: e.multi.nombre, en_vivo: true }));
-  if (!activos.length && multiProximo()) tabs.push({ tab: "m:prox", txt: "Próximamente" });
+  if (multiProximo()) tabs.push({ tab: "m:prox", txt: "Próximamente" });
   caja.innerHTML = tabs.map((t) =>
     `<button role="tab" data-tab="${t.tab}" class="multi">${t.en_vivo ? '<span class="vivo">●</span> ' : ""}${escapar(t.txt)} <span class="n"></span></button>`).join("");
   caja.querySelectorAll("button[data-tab]").forEach((b) => (b.onclick = () => { estado.tab = b.dataset.tab; llenarDeportes(); dibujar(); window.scrollTo({ top: 0 }); }));
@@ -903,11 +908,16 @@ function copiarEvento(e, opciones) { return copiarTexto(textoIG(e, opciones)); }
 function dibujarMulti(lista) {
   lista.classList.add("modo-multi");
   if (estado.tab === "m:prox") {
-    const e = multiProximo();
-    lista.innerHTML = `<section class="multi-cab"><p class="chip agenda">Próximo multideportivo</p>
-      <h2>${escapar(e.multi.nombre)}</h2><p class="fechas">${escapar(e.fechas || "")}</p>
-      <p class="ayuda">Cuando arranque, acá va a aparecer el día a día.</p></section>`;
-    if (e.bloques.length) { const d = document.createElement("div"); d.className = "detalle suelto"; d.append(...renderBloques(e.bloques)); lista.append(d); }
+    const todos = multiProximos();
+    lista.innerHTML = `<section class="multi-cab"><p class="chip agenda">Próximos multideportivos</p>
+      <p class="ayuda">Ordenados por fecha. Cuando uno arranca, pasa a su propia pestaña con el día a día.</p></section>`;
+    todos.forEach((e, i) => {
+      const nombre = e.titulo.replace(/\s*\([^)]*\)\s*$/, "");
+      const c = document.createElement("details"); c.className = "prox-multi"; if (i === 0) c.open = true;
+      c.innerHTML = `<summary><b>${escapar(nombre)}</b><span class="fechas">${escapar(e.fechas || "")}</span>${e.manual ? `<span class="chip manual">✍️ A mano · el agente lo pasa al Doc en la próxima vuelta</span>` : ""}</summary>`;
+      if (e.bloques.length) { const d = document.createElement("div"); d.className = "detalle suelto"; d.append(...renderBloques(e.bloques)); c.append(d); }
+      lista.append(c);
+    });
     return;
   }
   const e = estado.eventos.find((x) => "m:" + x.id === estado.tab);
