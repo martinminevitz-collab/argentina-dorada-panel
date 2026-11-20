@@ -183,7 +183,7 @@ function cajaAgregarDato(e, t) {
     }));
     return caja;
   }
-  caja.innerHTML = `<select aria-label="Tipo"><option value="dato">Dato nuevo</option><option value="correccion">Corrección</option><option value="clasificado">🎯 Clasificó a LA 2028</option></select>
+  caja.innerHTML = `<select aria-label="Tipo"><option value="dato">Dato nuevo</option><option value="correccion">Corrección</option><option value="clasificado">🎯 Clasificó a LA 2028</option><option value="transmision">📺 Transmisión (dónde se ve)</option></select>
     <textarea rows="3" maxlength="1700" placeholder="Ej: Juana Pérez ganó la medalla de **BRONCE** en -57kg"></textarea>
     <input type="url" class="link-dato" maxlength="290" placeholder="Link de la fuente (opcional): así el agente lo puede seguir">
     <div class="fila-btns"><button class="principal">Guardar</button><button class="cancelar">Cancelar</button></div>
@@ -200,7 +200,9 @@ function cajaAgregarDato(e, t) {
     let link = li.value.trim();
     if (link && !/^https?:\/\//i.test(link)) link = "https://" + link;
     if (link && !/^https?:\/\/[^\s.]+\.[^\s]+$/i.test(link)) { avisar("Ese link no parece válido"); return li.focus(); }
-    if (link) texto += ` (Fuente: ${link})`;
+    if (sel.value === "transmision") { // "Transmisión: YouTube de la federación https://..." (el agente lo pasa al Doc y el botón 📺 lo abre)
+      texto = "Transmisión: " + texto.replace(/^transmisi[oó]n:?\s*/i, "") + (link ? " " + link : "");
+    } else if (link) texto += ` (Fuente: ${link})`;
     ev.target.disabled = true;
     try {
       estado.agregandoEn = null;
@@ -209,7 +211,7 @@ function cajaAgregarDato(e, t) {
         texto = "[CLASIFICADO] " + JSON.stringify({ quien: quien.replace(/\*\*/g, "").slice(0, 200), texto: texto.replace(/\*\*/g, "").slice(0, 400),
           deporte: e.deporte || "", evento: e.evento || e.titulo, juegos: /paral[ií]mpic/i.test(texto) ? "Paralímpicos LA 2028" : "Los Ángeles 2028" });
       }
-      await Base.agregarDato({ evento_id: e.id, evento_titulo: e.titulo, tipo: sel.value === "clasificado" ? "dato" : sel.value, texto });
+      await Base.agregarDato({ evento_id: e.id, evento_titulo: e.titulo, tipo: ["clasificado", "transmision"].includes(sel.value) ? "dato" : sel.value, texto });
       delete estado.borradorDato[e.id];
       dibujar(); avisar("Dato agregado");
     } catch (err) {
@@ -249,7 +251,7 @@ function eventosBA() {
     return planilla.some((q) => (!q.dep || !dep || q.dep === dep) && [...p].filter((w) => q.p.has(w)).length >= Math.max(2, Math.min(p.size, q.p.size) * 0.6)); };
   const deLaAgenda = estado.eventos.filter((e) => e.seccion === "agenda" && !e.multideportivo && !e.eliminado && esDeBA(e) && !repetido(e));
   const q = sinTildes($("#buscar").value), dep = $("#deporte").value;
-  return [...deLaPlanilla, ...deLaAgenda].filter((e) => (!dep || e.deporte === dep) && (!q || sinTildes(e.titulo + " " + e.deporte + " " + e.fechas).includes(q)));
+  return [...deLaPlanilla, ...deLaAgenda].sort((a, b) => fechaInicio(a) - fechaInicio(b)).filter((e) => (!dep || e.deporte === dep) && (!q || sinTildes(e.titulo + " " + e.deporte + " " + e.fechas).includes(q)));
 }
 function dibujarBA(lista) {
   barraCrear(lista);
@@ -467,10 +469,27 @@ function textoEvento(e) {
 // Dentro de cada grupo se respeta el orden del Doc. La Agenda queda por fecha (como en el Doc).
 const ORDEN = { publicable: 0, en_curso: 1, mas_info: 2 };
 
+// "21 de noviembre al 1 de diciembre", "03 al 06/12", "1 al 10 de enero de 2027" -> fecha del primer día (sin fecha: al final)
+const MESES_C = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"];
+function fechaInicio(e) {
+  const t = sinTildes(e.fechas || "") || sinTildes(String(e.titulo || "").match(/\(([^)]*\d[^)]*)\)\s*$/)?.[1] || "");
+  const m = t.match(/(\d{1,2})(?:\s*(?:de\s+)?([a-z]{3,})|\s*\/\s*(\d{1,2}))?/);
+  if (!m) return 9e15;
+  let mes = m[3] ? Number(m[3]) - 1 : MESES_C.indexOf((m[2] || "").slice(0, 3));
+  if (mes < 0) { // "21 y 22 de noviembre": el mes viene después
+    const n = t.match(/de\s+([a-z]{3,})/) || t.match(/\/\s*(\d{1,2})/);
+    mes = n ? (/\d/.test(n[1]) ? Number(n[1]) - 1 : MESES_C.indexOf(n[1].slice(0, 3))) : -1;
+  }
+  if (mes < 0) return 9e15;
+  const hoy = new Date(), anio = Number((t.match(/\b(20\d\d)\b/) || [])[1]) || (mes < hoy.getMonth() - 2 ? hoy.getFullYear() + 1 : hoy.getFullYear());
+  return new Date(anio, mes, Number(m[1])).getTime();
+}
+
 function eventosDe(tab, conFiltros = true) {
   const seccion = tab === "agenda" ? "agenda" : "resultados";
   const lista = estado.eventos.map((e, i) => ({ e, i }));
   if (seccion === "resultados") lista.sort((a, b) => (ORDEN[a.e.etiqueta] ?? 9) - (ORDEN[b.e.etiqueta] ?? 9) || a.i - b.i);
+  else lista.sort((a, b) => fechaInicio(a.e) - fechaInicio(b.e) || a.i - b.i); // agenda: por fecha de inicio (los cargados a mano también)
   return lista.map((x) => x.e).filter((e) => {
     if (e.seccion !== seccion) return false;
     if (seccion === "resultados" && e.multideportivo) return false;
@@ -602,6 +621,7 @@ function tarjetaEvento(e, tpl) {
   }
   if (!e.manual && !e.archivado && !e.id.startsWith("ba:")) botonEliminar(e, t);
   if (!e.archivado && (e.etiqueta === "mas_info" || e.etiqueta === "en_curso" || e.pasadoAPublicable)) botonPublicable(e, t);
+  if (e.seccion === "agenda" || e.etiqueta === "en_curso") botonTransmision(e, t);
   if (e.manual) {
     const chip = document.createElement("span"); chip.className = "chip manual"; chip.textContent = "✍️ A mano";
     if (e.esMulti) { const m = document.createElement("span"); m.className = "chip manual"; m.textContent = "🏅 Multideportivo"; t.querySelector(".chips").append(m); }
@@ -620,6 +640,27 @@ function tarjetaEvento(e, tpl) {
 }
 
 // "Falta info" que ya completaron con "+ Agregar dato": se pasa a Publicable para todos (el agente cambia el título en el Doc)
+// 📺 dónde se ve: si el evento ya tiene un link de transmisión lo abre; si no, busca en Google (y se carga con "+ Agregar dato" → 📺 Transmisión)
+const ES_TRANSMISION = /youtube\.com|youtu\.be|twitch\.tv|olympics\.com\/.*(live|en-vivo|directo)|\btv\b|dsports|espn|tyc|deportv|disney|star\+|stream|en vivo|directo|transmisi/i;
+function linkTransmision(e) {
+  for (const b of e.bloques || []) {
+    const txt = (b.partes || []).map((p) => p.t).join(" ");
+    const conLink = (b.partes || []).find((p) => p.href && (ES_TRANSMISION.test(p.href) || /transmisi|c[oó]mo ver|en vivo|tv/i.test(txt)));
+    if (conLink) return conLink.href;
+    const m = /transmisi[oó]n:?\s*(https?:\/\/\S+)/i.exec(txt); if (m) return m[1];
+  }
+  return "";
+}
+function botonTransmision(e, t) {
+  const link = linkTransmision(e);
+  const b = boton(link ? "📺 Ver transmisión" : "📺 Buscar transmisión", () => {
+    const q = `${e.evento || e.titulo.replace(/\s*\([^)]*\)\s*$/, "")} transmisión en vivo`;
+    window.open(link || "https://www.google.com/search?q=" + encodeURIComponent(q), "_blank", "noopener");
+  });
+  if (link) b.classList.add("con-tv");
+  t.querySelector(".pie")?.insertBefore(b, t.querySelector(".pie .publicado") || null);
+}
+
 function botonPublicable(e, t) {
   if (!window.Base?.activa()) return;
   const volver = !!e.pasadoAPublicable;
@@ -1281,12 +1322,42 @@ function dibujarNoticias(lista) {
   for (const [grupo, titulo] of [[pendientes, ""], [hechas.filter((n) => estadoNoticia(n) === "publicada"), "✓ Publicadas"], [hechas.filter((n) => estadoNoticia(n) === "descartada"), "✕ Descartadas"]]) {
     if (!grupo.length) continue;
     if (titulo) lista.insertAdjacentHTML("beforeend", `<h3 class="grupo-noticias">${titulo} <small>(se van solas a la semana)</small></h3>`);
-    for (const n of grupo) lista.append(tarjetaNoticia(n, tpl));
+    for (const g of agruparNoticias(grupo)) lista.append(tarjetaNoticia(g[0], tpl, g.slice(1)));
   }
 }
 
-function tarjetaNoticia(n, tpl) {
+// La misma noticia en varios medios (o el mismo tema: "Premios Olimpia") va en UNA tarjeta, con las otras notas adentro
+const TEMAS_NOTICIA = ["olimpia", "jorge newbery", "konex", "abanderad", "deportista del ano", "deportistas del ano", "premios fox sports", "balon de oro"];
+const NO_CUENTA = new Set(["argentina", "argentino", "argentinos", "argentinas", "seleccion", "sobre", "para", "desde", "hasta", "entre", "contra", "tras", "como",
+  "cuando", "donde", "este", "esta", "todo", "todos", "nuevo", "nueva", "anos", "2026", "2027"]);
+function agruparNoticias(items) {
+  // palabras recortadas ("convocado" y "convocados" cuentan igual) y nombres propios (con mayúscula, no al principio)
+  const clave = (n) => { const t = sinTildes(n.titulo);
+    const propios = new Set(String(n.titulo).split(/[^\p{L}0-9]+/u).slice(1).filter((w) => /^\p{Lu}\p{Ll}{3,}/u.test(w)).map(sinTildes).filter((w) => !NO_CUENTA.has(w)));
+    return { tema: TEMAS_NOTICIA.find((x) => t.includes(x)), dep: sinTildes(n.deporte), propios,
+      pal: new Set(t.split(/[^a-z0-9]+/).filter((w) => w.length > 3 && !NO_CUENTA.has(w)).map((w) => w.slice(0, 5))) }; };
+  const grupos = [];
+  for (const n of items) {
+    const k = clave(n);
+    const g = grupos.find((g) => (k.tema && g.k.tema === k.tema) || (() => {
+      const comun = [...k.pal].filter((w) => g.k.pal.has(w)).length;
+      if (comun >= 3 && comun / Math.min(k.pal.size, g.k.pal.size) >= 0.5) return true;
+      // mismo deporte + mismo nombre propio + otra palabra en común ("Dato fue convocado" / "Dato, entre los convocados")
+      return k.dep && k.dep === g.k.dep && [...k.propios].some((w) => g.k.propios.has(w)) && comun >= 2;
+    })());
+    if (g) g.n.push(n); else grupos.push({ k, n: [n] });
+  }
+  return grupos.map((g) => g.n);
+}
+
+function tarjetaNoticia(n, tpl, iguales = []) {
   const t = tpl.content.firstElementChild.cloneNode(true);
+  if (iguales.length) { // las otras notas del mismo tema, plegadas
+    const d = document.createElement("details"); d.className = "iguales";
+    d.innerHTML = `<summary>+${iguales.length} ${iguales.length === 1 ? "nota más" : "notas más"} sobre lo mismo</summary><ul>${iguales.map((x) =>
+      `<li><a target="_blank" rel="noopener" href="${escapar(x.link || "#")}">${escapar(x.titulo)}</a> <small>${escapar(x.fuente || "")}</small></li>`).join("")}</ul>`;
+    queueMicrotask(() => t.querySelector(".pie")?.before(d));
+  }
   t.querySelector(".deporte").textContent = n.deporte || "—";
   const tipo = t.querySelector(".tipo"); tipo.textContent = n.manual ? "✍️ A mano" : "📰 Noticia"; tipo.classList.add(n.manual ? "manual" : "otro");
   t.querySelector(".ba").hidden = !n.en_buenos_aires;
@@ -1307,14 +1378,16 @@ function tarjetaNoticia(n, tpl) {
   }));
   const ahora = estadoNoticia(n);
   t.classList.toggle("ya-publicado", !!ahora);
+  // marca la noticia y todas las iguales de su tarjeta
   const marcar = (version, txt) => async () => {
-    const id = "n:" + n.id, antes = estado.publicados[id], sacar = antes?.v === version;
-    if (sacar) delete estado.publicados[id]; else estado.publicados[id] = { v: version, por: window.Base?.mail(), en: new Date().toISOString() };
+    const sacar = estado.publicados["n:" + n.id]?.v === version, todas = [n, ...iguales];
+    const antes = Object.fromEntries(todas.map((x) => ["n:" + x.id, estado.publicados["n:" + x.id]]));
+    for (const x of todas) { const id = "n:" + x.id; if (sacar) delete estado.publicados[id]; else estado.publicados[id] = { v: version, por: window.Base?.mail(), en: new Date().toISOString() }; }
     guardarPublicados(); dibujar();
     try {
-      if (window.Base?.activa()) { if (sacar) await Base.desmarcar({ id }); else await Base.marcar({ id, version, titulo: n.titulo }); }
+      if (window.Base?.activa()) for (const x of todas) { if (sacar) await Base.desmarcar({ id: "n:" + x.id }); else await Base.marcar({ id: "n:" + x.id, version, titulo: x.titulo }); }
       avisar(sacar ? "Volvió a la lista" : txt);
-    } catch { if (antes) estado.publicados[id] = antes; else delete estado.publicados[id]; dibujar(); avisar("No se pudo guardar. Probá de nuevo"); }
+    } catch { for (const [id, v] of Object.entries(antes)) { if (v) estado.publicados[id] = v; else delete estado.publicados[id]; } dibujar(); avisar("No se pudo guardar. Probá de nuevo"); }
   };
   const bPub = boton(ahora === "publicada" ? "↩ Volver a la lista" : "✓ Publicada", marcar("1", "Marcada como publicada"));
   bPub.className = "publicado" + (ahora === "publicada" ? " marcado" : "");

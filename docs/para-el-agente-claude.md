@@ -22,3 +22,5 @@ Cada hallazgo trae: `titulo`, `resumen`, `link`, `fuente`, `deporte`,
 - Instagram de deportistas y federaciones (vía Google).
 - Torneos chicos o raros que no salen en noticias.
 - Seguimiento de los eventos del Doc que están en curso o "Necesito más info".
+- **Dónde se ve:** en cada evento de la agenda (y los en curso), si encontrás la transmisión (YouTube de la federación, Olympics, TV), sumá una línea
+  `Transmisión: <dónde> <link>` al final del bloque. El panel la muestra con el botón "📺 Ver transmisión".

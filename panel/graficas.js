@@ -55,6 +55,22 @@
       { k: "titulo", label: "Título", ej: "Agenda del día" }, { k: "fecha", label: "Día", ej: "Sábado 15/11" }, "torneo",
       { k: "items", label: "Agenda (uno por línea: hora | deporte | quién y qué)", ej: "10:00 | Natación | Agostina Hein - 400 m libre (final)", area: true, filas: 10 },
       { k: "nota", label: "Nota (opcional)", ej: "Horarios de Argentina" }] },
+    "s-convocados": { formato: "story", nombre: "Historia convocados", campos: ["deporte", "torneo",
+      { k: "titulo", label: "Título", ej: "Convocadas" },
+      { k: "lista", label: "Lista (una persona por línea: número, nombre y, con \" - \", club o puesto)", ej: "10 Nombre Apellido - Club", area: true, filas: 12 },
+      { k: "dt", label: "Entrenador/a (opcional)", ej: "Fernando Ferrara" }, "credito"] },
+    "s-grupos": { formato: "story", nombre: "Historia grupos", sinFoto: true, campos: ["deporte", "torneo", "instancia",
+      { k: "grupos", label: "Grupos (uno por línea: \"Grupo A: Argentina, Brasil, Chile\")", ej: "Grupo A: Argentina, Brasil, Chile, Perú", area: true, filas: 8 }] },
+    lateral: { formato: "feed", nombre: "Placa foto al costado", campos: ["titulo", "texto", "tam", "credito",
+      { k: "acento", label: "Color del número", opciones: [["celeste", "Celeste"], ["naranja", "Naranja"], ["dorado", "Dorado"]] }] },
+    sede: { formato: "feed", nombre: "Sede confirmada", campos: ["deporte",
+      { k: "etiqueta", label: "Arriba del evento", ej: "¡Es oficial!" }, { k: "evento", label: "Evento", ej: "Mundial de Hockey 2030" },
+      { k: "ciudad", label: "Sede (ciudad, país)", ej: "Buenos Aires, Argentina" }, { k: "fechas", label: "Fechas (opcional)", ej: "Del 4 al 18 de julio de 2030" },
+      { k: "detalle", label: "Detalle (opcional)", ej: "Argentina vuelve a recibir un Mundial después de 20 años" }, "credito"] },
+    "s-sede": { formato: "story", nombre: "Historia sede confirmada", campos: ["deporte",
+      { k: "etiqueta", label: "Arriba del evento", ej: "¡Es oficial!" }, { k: "evento", label: "Evento", ej: "Mundial de Hockey 2030" },
+      { k: "ciudad", label: "Sede (ciudad, país)", ej: "Buenos Aires, Argentina" }, { k: "fechas", label: "Fechas (opcional)", ej: "Del 4 al 18 de julio de 2030" },
+      { k: "detalle", label: "Detalle (opcional)", ej: "Argentina vuelve a recibir un Mundial después de 20 años" }, "credito"] },
     clasificados: { formato: "feed", nombre: "Clasificados", logo: true, campos: [
       { k: "titulo", label: "Título", ej: "Clasificados a Los Ángeles 2028" },
       { k: "lista", label: "Clasificados (uno por línea: deporte | quién)", ej: "Hockey | Las Leonas", area: true, filas: 10 },
@@ -72,6 +88,11 @@
       pag("portada", { deporte: "Básquet 3x3", torneo: "Americup - El Salvador", titulo: "Argentina entre los ocho mejores del continente", credito: "CAB" }),
       pag("placa", { titulo: "Femenino y masculino", texto: "En ambas ramas, los seleccionados argentinos se despidieron de la Americup en cuartos de final.", credito: "CAB" }),
       pag("placa", { titulo: "La final", texto: "El argentino largó tercero y en los últimos 500 metros pasó a sus rivales para quedarse con el oro.", credito: "Nombre Apellido / Agencia", fondo: "claro" }),
+    ] },
+    lateral: { nombre: "Carrusel foto al costado", paginas: () => [
+      pag("portada", { deporte: "Remo", torneo: "Mundial de Remo 2026", titulo: "Argentina, a la final", credito: "AAR" }),
+      pag("lateral", { titulo: "La regata", texto: "El doble par ligero terminó segundo en su semifinal y se metió entre los seis mejores del mundo.", credito: "AAR" }),
+      pag("lateral", { titulo: "Lo que viene", texto: "La final se corre el domingo a las 9:30 (hora argentina).", credito: "AAR", acento: "dorado" }),
     ] },
     medalla: { nombre: "Medalla multideportivo", paginas: () => [
       pag("medalla", { prueba: "Natación · 200 m espalda", nombre: "Cecilia Dieleke", medalla: "oro", evento: "Dakar 2026 - Juegos Olímpicos de la Juventud", credito: "Olympics" }),
@@ -94,6 +115,16 @@
     grupos: { nombre: "Grupos", paginas: () => [
       pag("grupos", { deporte: "Básquet", torneo: "AmeriCup 2026", instancia: "Así quedaron los grupos",
         grupos: "Grupo A: Argentina, Brasil, Uruguay, Panamá\nGrupo B: Estados Unidos, Canadá, México, Colombia\nGrupo C: Puerto Rico, Venezuela, Dominicana, Chile" })] },
+    "s-convocados": { nombre: "Historia convocados", paginas: () => [
+      pag("s-convocados", { deporte: "Hockey", torneo: "Pro League 2026", titulo: "Convocadas", dt: "Fernando Ferrara",
+        lista: "1 Cristina Cosentino - Arquera\n4 Agustina Gorzelany\n7 Valentina Raposo\n9 Victoria Sauze\n11 Agustina Albertarrio\n12 María José Granatto\n14 Julieta Jankunas\n15 Rocío Sánchez Moccia", credito: "CAH" })] },
+    "s-grupos": { nombre: "Historia grupos", paginas: () => [
+      pag("s-grupos", { deporte: "Básquet", torneo: "AmeriCup 2026", instancia: "Así quedaron los grupos",
+        grupos: "Grupo A: Argentina, Brasil, Uruguay, Panamá\nGrupo B: Estados Unidos, Canadá, México, Colombia\nGrupo C: Puerto Rico, Venezuela, Dominicana, Chile" })] },
+    sede: { nombre: "Sede confirmada", paginas: () => [
+      pag("sede", { deporte: "Hockey", etiqueta: "¡Es oficial!", evento: "Mundial de Hockey 2030", ciudad: "Buenos Aires, Argentina", fechas: "Del 4 al 18 de julio de 2030", detalle: "", credito: "CAH" })] },
+    "s-sede": { nombre: "Historia sede confirmada", paginas: () => [
+      pag("s-sede", { deporte: "Hockey", etiqueta: "¡Es oficial!", evento: "Mundial de Hockey 2030", ciudad: "Buenos Aires, Argentina", fechas: "Del 4 al 18 de julio de 2030", detalle: "", credito: "CAH" })] },
     fixture: { nombre: "Fixture", paginas: () => [
       pag("fixture", { deporte: "Básquet", torneo: "AmeriCup 2026",
         partidos: "Sáb 15/11 | 15:00 | Brasil (BRA) | Fase de grupos\nLun 17/11 | 18:30 | Uruguay (URU) | Fase de grupos\nMié 19/11 | 21:00 | Panamá (PAN) | Fase de grupos", nota: "Horarios de Argentina" })] },
@@ -113,7 +144,7 @@
   function nuevo(id) { return { plantilla: id, paginas: PLANTILLAS[id].paginas(), sel: 0 }; }
   function cargarBorrador() { try { const g = JSON.parse(localStorage.getItem("ad-grafica") || "null"); return g && PLANTILLAS[g.plantilla] ? g : null; } catch { return null; } }
   function guardar() {
-    try { localStorage.setItem("ad-grafica", JSON.stringify({ ...G, paginas: G.paginas.map((p) => ({ ...p, foto: { ...p.foto, src: "" } })) })); } catch {}
+    try { localStorage.setItem("ad-grafica", JSON.stringify({ ...G, paginas: G.paginas.map((p) => ({ ...p, foto: { ...p.foto, src: "", video: "" } })) })); } catch {}
   }
   const formato = () => TIPOS[G.paginas[0].tipo].formato;
 
@@ -122,7 +153,7 @@
     const f = p.foto;
     const img = f.src ? `<img src="${f.src}" style="object-position:${f.x}% ${f.y}%;transform:scale(${f.z});transform-origin:${f.x}% ${f.y}%">`
       : `<div class="g-sinfoto">Foto (tocá "Subir foto")</div>`;
-    return `<div class="g-foto ${clase}">${img}</div>`;
+    return `<div class="g-foto ${clase}">${img}${f.video ? `<span class="g-es-video">🎬 Video</span>` : ""}</div>`;
   }
   const credito = (d, clase = "") => d.credito ? `<div class="g-credito ${clase}">Foto: ${esc(d.credito)}</div>` : "";
   // logo de Argentina Dorada (círculo): panel/img/logo-ad.png
@@ -221,6 +252,20 @@
         ${d.detalle ? `<p class="g-c1-detalle" data-fs="texto">${esc(d.detalle)}</p>` : ""}
         ${d.plaza ? `<div class="g-c1-plaza"><b>${esc(d.plaza)}</b><span>${/^\d+$/.test(String(d.plaza).trim()) ? "plaza para Argentina" : ""}</span></div>` : ""}</div>
       ${credito(d, "g-cv-cred")}`; };
+  DIBUJO["s-convocados"] = (p) => DIBUJO.convocados(p).replace(logoAD(), marcaAD("g-s-head"));
+  DIBUJO["s-grupos"] = DIBUJO.grupos;
+  // placa con la foto vertical a la izquierda y el texto a la derecha
+  DIBUJO.lateral = (p, i) => { const d = p.datos; return `<div class="g-placa g-lat">${foto(p, "g-lat-foto")}${credito(d, "g-lat-cred")}
+      <div class="g-lat-cuerpo" data-fit><div class="g-linea"></div><h2 data-fs="titulo" data-ancho>${br(d.titulo)}</h2><p data-fs="texto">${br(d.texto)}</p></div>
+      ${marcaAD("g-lat-ad")}<div class="g-pl-num ${d.acento || "celeste"}">${num(i)}</div></div>`; };
+  // sede confirmada: foto de la ciudad/estadio, "¡Es oficial!", evento y la sede con un pin
+  const sedeHTML = (d, story) => `<div class="${story ? "g-sd-abajo story" : "g-sd-abajo"}" data-fit>
+      ${d.deporte ? `<span class="g-pill oro">${esc(d.deporte)}</span>` : ""}${d.etiqueta ? `<div class="g-sd-etiqueta">${esc(d.etiqueta)}</div>` : ""}
+      <h1 data-fs="titulo" data-ancho>${br(d.evento)}</h1><div class="g-linea"></div>
+      <div class="g-sd-ciudad"><span class="pin"></span><b data-ancho>${esc(d.ciudad)}</b></div>
+      ${d.fechas ? `<div class="g-sd-fechas">${esc(d.fechas)}</div>` : ""}${d.detalle ? `<p data-fs="texto">${esc(d.detalle)}</p>` : ""}</div>`;
+  DIBUJO.sede = (p) => `${foto(p, "g-full")}<div class="g-degrade"></div>${logoAD()}${sedeHTML(p.datos)}${credito(p.datos, "caja")}`;
+  DIBUJO["s-sede"] = (p) => `${foto(p, "g-full")}<div class="g-degrade story"></div>${marcaAD("g-s-head")}${sedeHTML(p.datos, true)}<div class="g-marco"></div>${credito(p.datos, "g-s-cred-abajo")}`;
   // logo del evento (ej. LA28): lo sube cada uno, queda guardado en ese dispositivo y no se sube a ningún lado
   let LOGO = ""; try { LOGO = localStorage.getItem("ad-logo-evento") || ""; } catch {}
   const logoEvento = () => LOGO ? `<img class="g-logo-evento" src="${LOGO}" alt="">` : `<div class="g-logo-evento g-sinfoto">Logo (opcional)</div>`;
@@ -296,7 +341,9 @@
       <div class="g-trabajo"><div class="g-vista"></div><div class="g-campos"></div></div>
       <div class="g-acciones">${navigator.canShare ? `<button class="g-compartir principal">📲 Publicar (Instagram, X, WhatsApp…)</button>` : ""}
         <button class="g-bajar ${navigator.canShare ? "" : "principal"}">⬇ Descargar ${G.paginas.length > 1 ? `las ${G.paginas.length} imágenes` : "imagen"}</button>
+        <button class="g-video">🎬 Video animado (página ${num(G.sel)})</button>
         <button class="g-reset">Volver a la plantilla</button></div>
+      <p class="ayuda">🎬 Video animado: los textos entran de a uno sobre la foto (o sobre el video, si subiste uno). Dura 6 segundos con foto o lo que dure el video (hasta 20 s). Se arma en el momento: no cierres la pantalla mientras graba.</p>
       ${navigator.canShare ? `<p class="ayuda">📲 Publicar abre la lista de apps del celu: elegí Instagram → Publicación y ya va con las ${G.paginas.length} imágenes en orden, sin guardarlas.
         Si Instagram las muestra cuadradas, tocá el ícono de las flechitas (abajo a la izquierda de la foto) para que queden 4:5.</p>` : ""}
       <p class="ayuda">Las fotos quedan solo en este dispositivo. Los textos se guardan como borrador acá mismo.</p>`;
@@ -318,6 +365,7 @@
     };
     raiz.querySelector(".g-bajar").onclick = () => descargar(false);
     raiz.querySelector(".g-compartir")?.addEventListener("click", () => descargar(true));
+    raiz.querySelector(".g-video").onclick = () => grabarVideo(G.paginas[G.sel], G.sel);
     raiz.querySelector(".g-reset").onclick = () => { G = G.origen ? armarDesde(G.origen, G.plantilla) : nuevo(G.plantilla); guardar(); armar(); };
     raiz.querySelectorAll(".g-mini").forEach((m) => ajustar(m.querySelector(".g-pagina"), G.paginas[Number(m.dataset.i)]));
     vista(); campos();
@@ -338,7 +386,7 @@
     const caja = raiz.querySelector(".g-campos");
     const lista = t.campos.map((c) => (typeof c === "string" ? { k: c, ...C[c] } : c));
     caja.innerHTML = `<h3>${esc(t.nombre)} <small>${num(G.sel)}</small></h3>
-      ${t.sinFoto ? "" : `<div class="g-foto-ctrl"><label class="g-subir">📷 ${p.foto.src ? "Cambiar foto" : "Subir foto"}<input type="file" accept="image/*" hidden></label>
+      ${t.sinFoto ? "" : `<div class="g-foto-ctrl"><label class="g-subir">📷 ${p.foto.src ? "Cambiar foto o video" : "Subir foto o video"}<input type="file" accept="image/*,video/*" hidden></label>
         ${p.foto.src ? `<label>Zoom<input type="range" data-f="z" min="1" max="3" step="0.05" value="${p.foto.z}"></label>
         <label>↔<input type="range" data-f="x" min="0" max="100" value="${p.foto.x}"></label>
         <label>↕<input type="range" data-f="y" min="0" max="100" value="${p.foto.y}"></label>` : ""}</div>`}
@@ -371,12 +419,32 @@
     const subir = caja.querySelector("input[type=file]:not([data-logo])");
     if (subir) subir.onchange = (ev) => {
       const archivo = ev.target.files[0]; if (!archivo) return;
-      achicar(archivo).then((src) => { p.foto = { src, z: 1, x: 50, y: 50 }; vista(); campos(); });
+      if (archivo.type.startsWith("video/")) {
+        // video: se guarda solo en memoria (no se sube a ningún lado); para la vista se usa un cuadro del principio
+        const url = URL.createObjectURL(archivo);
+        cuadroDeVideo(url).then((src) => { p.foto = { src, video: url, z: 1, x: 50, y: 50 }; vista(); campos(); armar(); })
+          .catch(() => alertar("No se pudo abrir ese video"));
+        return;
+      }
+      achicar(archivo).then((src) => { p.foto = { src, z: 1, x: 50, y: 50 }; vista(); campos(); armar(); });
     };
     const mover = (d) => { const [x] = G.paginas.splice(G.sel, 1); G.sel += d; G.paginas.splice(G.sel, 0, x); guardar(); armar(); };
     caja.querySelector(".g-izq")?.addEventListener("click", () => mover(-1));
     caja.querySelector(".g-der")?.addEventListener("click", () => mover(1));
     caja.querySelector(".g-quitar")?.addEventListener("click", () => { G.paginas.splice(G.sel, 1); G.sel = Math.max(0, G.sel - 1); guardar(); armar(); });
+  }
+
+  function cuadroDeVideo(url) {
+    return new Promise((ok, mal) => {
+      const v = document.createElement("video"); v.muted = true; v.playsInline = true; v.preload = "auto"; v.src = url;
+      v.onloadeddata = () => { v.currentTime = Math.min(0.3, (v.duration || 1) / 2); };
+      v.onseeked = () => {
+        const s = Math.min(1, 1600 / Math.max(v.videoWidth, v.videoHeight));
+        const c = document.createElement("canvas"); c.width = v.videoWidth * s; c.height = v.videoHeight * s;
+        c.getContext("2d").drawImage(v, 0, 0, c.width, c.height); ok(c.toDataURL("image/jpeg", 0.85));
+      };
+      v.onerror = mal;
+    });
   }
 
   // las fotos del celu son enormes: se achican a 2000 px para que la descarga sea rápida
@@ -448,6 +516,119 @@
     } catch (e) {
       console.error(e); alertar("No se pudieron armar las imágenes. Probá de nuevo.");
     } finally { taller.remove(); b.disabled = false; b.textContent = txt; }
+  }
+  // ---------- video animado ----------
+  // Capas: 1) fondo (color + foto o video), 2) la gráfica sin textos, 3) cada texto, que entra de a uno (aparece y sube un poco).
+  // Se dibuja todo en un canvas y se graba con MediaRecorder (MP4 si el navegador puede; si no, WebM).
+  const ANIMA = "h1, h2, p, ol, ul, table, .g-pill, .g-linea, .g-marcador, .g-spo-cajas, .g-spo-nombre, .g-gr-grilla, .g-fx-lista, .g-ag-lista, .g-c1-plaza, "
+    + ".g-cl-numero, .g-caja-torneo, .g-st-caja, .g-sm-caja, .g-md-titulo, .g-md-nombre, .g-md-prueba, .g-md-evento, .g-pt-torneo, .g-sd-etiqueta, .g-sd-ciudad, "
+    + ".g-sd-fechas, .g-frase, .g-desliza, .g-pl-num, .g-gr-torneo, .g-gr-inst, .g-fx-titulo, .g-ag-titulo, .g-sm-gol, .g-cv-dt";
+  function tipoVideo() {
+    for (const t of ["video/mp4;codecs=avc1.42E01E", "video/mp4", "video/webm;codecs=vp9", "video/webm"]) if (window.MediaRecorder?.isTypeSupported?.(t)) return t;
+    return "";
+  }
+  async function grabarVideo(p, i) {
+    const tipo = tipoVideo();
+    if (!tipo || !HTMLCanvasElement.prototype.captureStream) return alertar("Este navegador no puede grabar video. Probá con Chrome o con el celu.");
+    const b = raiz.querySelector(".g-video"); const txt = b.textContent; b.disabled = true; b.textContent = "Preparando…";
+    const taller = document.createElement("div"); taller.className = "g-taller"; document.body.append(taller);
+    let video = null, audio = null;
+    try {
+      await cargarLibreria(); await document.fonts.ready;
+      const fontEmbedCSS = await cssFuentes();
+      const [w, h] = TAM[TIPOS[p.tipo].formato];
+      taller.innerHTML = paginaHTML(p, i);
+      const nodo = taller.firstElementChild; ajustar(nodo, p);
+      await Promise.all([...nodo.querySelectorAll("img")].map((im) => im.decode().catch(() => {})));
+      const caja0 = nodo.getBoundingClientRect();
+      // los textos a animar (solo los de más afuera), de arriba hacia abajo
+      const todos = [...nodo.querySelectorAll(ANIMA)].filter((el) => el.offsetWidth && !el.parentElement.closest(ANIMA));
+      todos.sort((a, c) => a.getBoundingClientRect().top - c.getBoundingClientRect().top);
+      const foto = nodo.querySelector(".g-foto");
+      const conVideo = !!(p.foto.video && foto);
+      const opts = { width: w, height: h, pixelRatio: 1, fontEmbedCSS };
+      // capa base: sin textos (y, si hay video, con un agujero donde va el video)
+      todos.forEach((el) => (el.style.visibility = "hidden"));
+      let colorFondo = getComputedStyle(nodo).backgroundColor, rectFoto = null;
+      const fondosSacados = [];
+      if (conVideo) {
+        const r = foto.getBoundingClientRect();
+        rectFoto = { x: r.left - caja0.left, y: r.top - caja0.top, w: r.width, h: r.height };
+        for (let el = foto; el; el = el.parentElement) {
+          const bg = getComputedStyle(el).backgroundColor;
+          if (el !== foto && bg && !/rgba\(0, 0, 0, 0\)|transparent/.test(bg) && !fondosSacados.length) colorFondo = bg;
+          fondosSacados.push([el, el.style.background]); el.style.background = "transparent";
+          if (el === nodo) break;
+        }
+        foto.querySelector("img").style.visibility = "hidden";
+      }
+      const base = await htmlToImage.toCanvas(nodo, opts);
+      fondosSacados.forEach(([el, bg]) => (el.style.background = bg));
+      if (conVideo) foto.querySelector("img").style.visibility = "";
+      // una capa por texto
+      const capas = [];
+      nodo.style.background = "transparent";
+      for (const [k, el] of todos.entries()) {
+        b.textContent = `Preparando… ${k + 1}/${todos.length}`;
+        nodo.querySelectorAll("*").forEach((x) => (x.style.visibility = "hidden"));
+        el.style.visibility = "visible"; el.querySelectorAll("*").forEach((x) => (x.style.visibility = "visible"));
+        const fondos = []; // los contenedores no tienen que tapar
+        for (let x = el.parentElement; x && x !== nodo.parentElement; x = x.parentElement) { fondos.push([x, x.style.background]); x.style.background = "transparent"; }
+        capas.push(await htmlToImage.toCanvas(nodo, opts));
+        fondos.forEach(([x, bg]) => (x.style.background = bg));
+      }
+      // fondo en movimiento
+      if (conVideo) {
+        video = document.createElement("video"); video.src = p.foto.video; video.playsInline = true; video.preload = "auto";
+        await new Promise((ok, mal) => { video.onloadeddata = ok; video.onerror = mal; });
+      }
+      const dur = conVideo ? Math.min(20, video.duration || 6) : 6;
+      const lienzo = document.createElement("canvas"); lienzo.width = w; lienzo.height = h;
+      const ctx = lienzo.getContext("2d");
+      const stream = lienzo.captureStream(30);
+      if (conVideo) { // el sonido del video también va
+        try { audio = new AudioContext(); const dest = audio.createMediaStreamDestination(); audio.createMediaElementSource(video).connect(dest);
+          dest.stream.getAudioTracks().forEach((t) => stream.addTrack(t)); } catch {}
+      }
+      const rec = new MediaRecorder(stream, { mimeType: tipo, videoBitsPerSecond: 8e6 });
+      const partes = []; rec.ondataavailable = (ev) => ev.data.size && partes.push(ev.data);
+      const listo = new Promise((ok) => (rec.onstop = ok));
+      const cubrir = (src, sw, sh, r, z, x, y) => { // como object-fit: cover + zoom y encuadre del editor
+        const s0 = Math.max(r.w / sw, r.h / sh); let dw = sw * s0, dh = sh * s0;
+        let dx = (r.w - dw) * x / 100, dy = (r.h - dh) * y / 100; const ox = r.w * x / 100, oy = r.h * y / 100;
+        dx = ox + (dx - ox) * z; dy = oy + (dy - oy) * z; dw *= z; dh *= z;
+        ctx.save(); ctx.beginPath(); ctx.rect(r.x, r.y, r.w, r.h); ctx.clip(); ctx.drawImage(src, r.x + dx, r.y + dy, dw, dh); ctx.restore();
+      };
+      const suave = (t) => 1 - Math.pow(1 - Math.min(1, Math.max(0, t)), 3);
+      const cuadro = (t) => {
+        ctx.globalAlpha = 1;
+        if (conVideo) { ctx.fillStyle = colorFondo; ctx.fillRect(0, 0, w, h); cubrir(video, video.videoWidth, video.videoHeight, rectFoto, p.foto.z, p.foto.x, p.foto.y); ctx.drawImage(base, 0, 0); }
+        else { const z = 1 + 0.05 * (t / dur); ctx.drawImage(base, (w - w * z) / 2, (h - h * z) / 2, w * z, h * z); } // foto: zoom lento
+        capas.forEach((c, k) => { const a = suave((t - 0.35 - k * 0.22) / 0.55); if (a <= 0) return;
+          ctx.globalAlpha = a; ctx.drawImage(c, 0, 40 * (1 - a)); });
+      };
+      cuadro(0); rec.start(250);
+      if (conVideo) { video.currentTime = 0; await audio?.resume().catch(() => {});
+        await video.play().catch(() => { video.muted = true; return video.play(); }); } // si el navegador no deja con sonido, va sin sonido
+      const t0 = performance.now();
+      await new Promise((ok) => {
+        const paso = () => {
+          const t = conVideo ? video.currentTime : (performance.now() - t0) / 1000;
+          cuadro(t); b.textContent = `Grabando… ${Math.ceil(dur - t)} s`;
+          if (t >= dur || (conVideo && video.ended)) return ok();
+          requestAnimationFrame(paso);
+        };
+        paso();
+      });
+      video?.pause(); rec.stop(); await listo;
+      const ext = tipo.includes("mp4") ? "mp4" : "webm";
+      const archivo = new File(partes, `argentina-dorada-${G.plantilla}-${num(i)}.${ext}`, { type: tipo.split(";")[0] });
+      if (navigator.canShare?.({ files: [archivo] })) await navigator.share({ files: [archivo] }).catch(() => {});
+      else { const a = document.createElement("a"); a.href = URL.createObjectURL(archivo); a.download = archivo.name; a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 4000); }
+      if (ext === "webm") alertar("Salió en WebM: si Instagram no lo acepta, pasalo a MP4 (o grabalo desde el celu)");
+    } catch (e) {
+      console.error(e); alertar("No se pudo armar el video. Probá de nuevo.");
+    } finally { audio?.close(); taller.remove(); b.disabled = false; b.textContent = txt; }
   }
   function alertar(t) { const a = $("#aviso"); if (!a) return; a.textContent = t; a.hidden = false; setTimeout(() => (a.hidden = true), 2500); }
 
@@ -532,7 +713,8 @@
     placas = placas.flatMap((pl) => { const r = []; for (let i = 0; i < pl.texto.length; i += 3) r.push({ ...pl, texto: pl.texto.slice(i, i + 3) }); return r; });
     if (!plantilla) plantilla = medalla && o.medallaAuto ? "medalla" : "carrusel";
     const acento = plantilla === "medalla" ? "naranja" : undefined;
-    const lasPlacas = placas.slice(0, 9).map((pl) => pag("placa", { titulo: pl.titulo, texto: pl.texto.join("\n"), credito: "", acento }));
+    const tipoPlaca = plantilla === "lateral" ? "lateral" : "placa";
+    const lasPlacas = placas.slice(0, 9).map((pl) => pag(tipoPlaca, { titulo: pl.titulo, texto: pl.texto.join("\n"), credito: "", acento }));
     const base = { deporte: o.deporte, torneo: o.evento, instancia: "", credito: "" };
     // marcador: "2-0 vs Nueva Zelanda (NZL)", "21-16, 21-12 vs X (DOM)"
     const lineaVs = lineas.find((l) => /\bvs\.?\b/i.test(l) && /\d+\s*-\s*\d+/.test(l)) || "";
@@ -558,13 +740,16 @@
       const nombre = (l.match(/^(.+?)\s+(fue|termin[oó]|qued[oó]|finaliz[oó]|lleg[oó])\b/i) || [])[1] || "";
       pags = [pag("s-posicion", { ...base, prueba: placas[0]?.titulo || "", nombre: nombre.replace(/\(.*?\)/g, "").trim(),
         posicion: (l.match(/(\d+)\s*[°º]/) || [])[1] ? (l.match(/(\d+)\s*[°º]/))[1] + "°" : "", marca: "" })];
-    } else if (["convocados", "grupos", "fixture", "agenda", "clasificados", "clasificado"].includes(plantilla)) {
+    } else if (["convocados", "grupos", "s-convocados", "s-grupos", "fixture", "agenda", "clasificados", "clasificado", "sede", "s-sede"].includes(plantilla)) {
       const ej = PLANTILLAS[plantilla].paginas()[0];
       const vacio = Object.fromEntries(Object.keys(ej.datos).map((k) => [k, ""]));
-      const extra = { convocados: { titulo: "Convocados", lista: lineas.filter((l) => l.length < 60).join("\n") }, grupos: { grupos: "" }, fixture: { partidos: "" },
+      const conv = { titulo: "Convocados", lista: lineas.filter((l) => l.length < 60).join("\n") };
+      const sedeX = { etiqueta: "¡Es oficial!", evento: o.evento, ciudad: "", fechas: "" };
+      const extra = { convocados: conv, "s-convocados": conv, grupos: { grupos: "" }, "s-grupos": { grupos: "" }, fixture: { partidos: "" }, sede: sedeX, "s-sede": sedeX,
         agenda: { titulo: "Agenda del día", items: "" }, clasificados: { titulo: "Clasificados a Los Ángeles 2028", lista: "" },
         clasificado: { titulo: "¡Clasificó a Los Ángeles 2028!", detalle: lineas[0] || "" } }[plantilla];
       pags = [pag(plantilla, { ...vacio, deporte: o.deporte, torneo: o.evento, ...extra })];
+      if (plantilla === "sede" || plantilla === "s-sede") pags[0].datos.credito = "";
     } else {
       pags = [pag("portada", { ...base, titulo: o.titulo }), ...lasPlacas];
     }
