@@ -289,7 +289,7 @@ input[type=search], select { width: 100%; background: var(--tarjeta); color: var
 .crear { grid-column: 1 / -1; background: var(--tarjeta); border: 1px solid var(--oro); border-radius: var(--radio);
   padding: 14px 16px; display: grid; gap: 10px; }
 .crear h3 { margin: 0; font-family: "Barlow Condensed", system-ui, sans-serif; font-size: 20px; }
-.crear label { display: grid; gap: 4px; font-size: 13px; font-weight: 600; color: var(--texto-2); }
+.crear label, .crear .w-campo { display: grid; gap: 4px; font-size: 13px; font-weight: 600; color: var(--texto-2); }
 .crear input, .crear textarea, .crear select { width: 100%; font: inherit; font-weight: 400; color: var(--texto);
   background: var(--fondo); border: 1px solid var(--borde); border-radius: 8px; padding: 8px 10px; }
 .crear textarea { resize: vertical; }
@@ -632,7 +632,7 @@ div.g-logo-evento { width: 200px; height: 110px; border: 2px dashed #4a6a8e; dis
 .pestanas .menu { position: relative; }
 .pestanas .menu-boton { display: inline-flex; align-items: center; gap: 6px; }
 .pestanas .menu-actual:not(:empty)::before { content: "· "; opacity: .6; }
-.pestanas .menu-lista { position: absolute; top: calc(100% + 6px); left: 0; z-index: 20; min-width: 220px; display: grid; gap: 2px;
+.pestanas .menu-lista { position: fixed; z-index: 30; min-width: 220px; max-height: calc(100vh - 24px); overflow-y: auto; display: grid; gap: 2px;
   background: var(--tarjeta); border: 1px solid var(--borde); border-radius: var(--radio); padding: 6px; box-shadow: 0 8px 24px rgba(11,30,51,.18); }
 .pestanas .menu-lista[hidden] { display: none; }
 .pestanas .menu-lista button { text-align: left; border-radius: 8px; background: transparent; font-size: 15px; }

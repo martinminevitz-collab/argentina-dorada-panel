@@ -19,7 +19,8 @@
     resultados: { nombre: "Resultados", nueva: "Nuevo resultado", ruta: "resultados" },
   };
   const NOTA = [["foto", "Foto principal", "foto"], ["titulo", "Título", "titulo"], ["bajada", "Bajada", "bajada"], ["cuerpo", "Texto de la nota", "cuerpo"],
-    ["seccion", "Sección", "seccion"], ["deporte", "Deporte", "deporte"], ["ad_atleta", "Atletas de la nota", "atletas"], ["ad_video_youtube", "Video de YouTube (link)", "url"]];
+    ["seccion", "Sección", "seccion"], ["deporte", "Deporte", "deporte"], ["ad_atleta", "Atletas de la nota", "atletas"], ["ad_video_youtube", "Video de YouTube (link)", "url"],
+    ["sticky", "Nota destacada de la portada (si hay varias marcadas, sale la más nueva)", "destacada"]];
   const CAMPOS = {
     notas: NOTA, entrevistas: NOTA, investigaciones: NOTA,
     atletas: [["foto", "Foto", "foto"], ["ad_nombre", "Nombre", "texto"], ["ad_apellido", "Apellido", "texto"], ["deporte", "Deporte", "deporte"],
@@ -106,14 +107,14 @@
 
   // ---------- listas de apoyo ----------
   async function apoyo() {
-    if (!est.cat) est.cat = Object.fromEntries((await todo("categories?_fields=id,slug,name")).map((c) => [c.slug, c]));
-    if (!est.deportes) est.deportes = (await todo("deportes?_fields=id,name&orderby=name")).sort((a, b) => a.name.localeCompare(b.name, "es"));
-    if (!est.ediciones) {
-      const eds = await todo("ediciones?_fields=id,name,parent&orderby=name");
-      const padres = Object.fromEntries(eds.filter((e) => !e.parent).map((e) => [e.id, e.name]));
-      est.ediciones = eds.filter((e) => e.parent).map((e) => ({ id: e.id, nombre: e.name, grupo: padres[e.parent] || "Otras" }))
-        .sort((a, b) => a.grupo.localeCompare(b.grupo, "es") || b.nombre.localeCompare(a.nombre, "es"));
-    }
+    if (est.ediciones) return;
+    // Las tres a la vez (antes una después de la otra): la primera carga tarda la mitad.
+    const [cats, deps, eds] = await Promise.all([todo("categories?_fields=id,slug,name"), todo("deportes?_fields=id,name&orderby=name"), todo("ediciones?_fields=id,name,parent&orderby=name")]);
+    est.cat = Object.fromEntries(cats.map((c) => [c.slug, c]));
+    est.deportes = deps.sort((a, b) => a.name.localeCompare(b.name, "es"));
+    const padres = Object.fromEntries(eds.filter((e) => !e.parent).map((e) => [e.id, e.name]));
+    est.ediciones = eds.filter((e) => e.parent).map((e) => ({ id: e.id, nombre: e.name, grupo: padres[e.parent] || "Otras" }))
+      .sort((a, b) => a.grupo.localeCompare(b.grupo, "es") || b.nombre.localeCompare(a.nombre, "es"));
   }
 
   async function cargar() {
@@ -291,11 +292,20 @@
     form.className = "crear w-editar";
     const extras = {};
     for (const [k, etiqueta, tipo] of campos) {
-      const label = document.createElement("label");
+      // El editor y los buscadores no van dentro de <label>: el navegador toma cualquier click adentro
+      // como un click en su primer botón (la "N" de negrita, o la × del primer atleta).
+      const compuesto = ["cuerpo", "atletas", "nota"].includes(tipo);
+      const label = document.createElement(compuesto ? "div" : "label");
+      if (compuesto) label.className = "w-campo";
       label.textContent = etiqueta;
       let control;
       if (tipo === "foto") {
         label.innerHTML = `${etiqueta}<div class="w-foto">${mini ? `<img src="${esc(mini)}" alt="">` : `<span>Sin foto</span>`}</div><input type="file" name="foto" accept="image/*">`;
+        form.append(label); continue;
+      }
+      if (tipo === "destacada") {
+        label.className = "check";
+        label.prepend(Object.assign(document.createElement("input"), { type: "checkbox", name: "sticky", checked: Boolean(it.sticky) }));
         form.append(label); continue;
       }
       if (tipo === "titulo") control = Object.assign(document.createElement("input"), { name: "titulo", value: it.title?.raw ?? "", required: true });
@@ -345,6 +355,7 @@
       for (const [k, , tipo] of campos) {
         if (tipo === "titulo") cuerpo.title = f.get("titulo");
         else if (tipo === "bajada") cuerpo.excerpt = f.get("bajada");
+        else if (tipo === "destacada") cuerpo.sticky = f.get("sticky") === "on";
         else if (tipo === "cuerpo") cuerpo.content = extras.cuerpo.valor();
         else if (tipo === "seccion") cuerpo.categories = [Number(f.get("seccion"))];
         else if (tipo === "deporte") cuerpo.deportes = f.get("deporte") ? [Number(f.get("deporte"))] : [];

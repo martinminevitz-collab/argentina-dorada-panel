@@ -15,12 +15,24 @@
     }
   }
 
+  // La lista flota sobre todo (la columna de la izquierda recorta lo que sobresale): va justo debajo del botón,
+  // o arriba si abajo no entra. Si la página se mueve, la acompaña.
+  function ubicar(m) {
+    const lista = m.querySelector(".menu-lista");
+    if (lista.hidden) return;
+    const r = m.querySelector(".menu-boton").getBoundingClientRect(), alto = lista.offsetHeight;
+    lista.style.left = r.left + "px";
+    lista.style.top = (r.bottom + 6 + alto > innerHeight && r.top - 6 - alto > 0 ? r.top - 6 - alto : r.bottom + 6) + "px";
+  }
+  const reubicar = () => menus().forEach(ubicar);
+
   document.addEventListener("click", (ev) => {
     const boton = ev.target.closest(".menu-boton");
     if (boton) {
       const m = boton.closest(".menu"), lista = m.querySelector(".menu-lista");
       cerrar(m);
       lista.hidden = !lista.hidden;
+      ubicar(m);
       boton.setAttribute("aria-expanded", String(!lista.hidden));
       return;
     }
@@ -34,6 +46,8 @@
     if (!ev.target.closest(".menu")) cerrar();
   }, true);
   document.addEventListener("keydown", (ev) => { if (ev.key === "Escape") cerrar(); });
+  addEventListener("scroll", reubicar, true);
+  addEventListener("resize", reubicar);
 
   // Cada vez que el panel redibuja las pestañas (clases "activa"), actualizar los nombres de los menús.
   new MutationObserver(() => etiquetas()).observe(document.querySelector(".pestanas"), { subtree: true, attributes: true, attributeFilter: ["class"] });
