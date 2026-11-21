@@ -3434,6 +3434,26 @@
      ]
     },
     {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.cadena3.com/noticia/las-vegas-2026/colapinto-tuvo-una-buena-clasificacion-y-largara-noveno-en-el-gp-de-las-vegas_615350",
+       "href": "https://www.cadena3.com/noticia/las-vegas-2026/colapinto-tuvo-una-buena-clasificacion-y-largara-noveno-en-el-gp-de-las-vegas_615350"
+      },
+      {
+       "t": " (Clasificación)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Sábado 21/11: Colapinto pasó la Q1 15°, fue 7° en la Q2 con 1:34.982 y terminó 10° en la Q3. Por la sanción a Oscar Piastri larga 9° (Gasly 8°). Pole para Max Verstappen"
+      }
+     ]
+    },
+    {
      "tipo": "sub",
      "partes": [
       {
@@ -3472,7 +3492,7 @@
     }
    ],
    "id": "3f83ee1c3780",
-   "version": "4665ea8703",
+   "version": "37605bfaca",
    "publicado_en_doc": false,
    "visto": "2026-11-21"
   },
@@ -5083,6 +5103,239 @@
    "terminado_desde": "2026-11-10",
    "visto": "2026-11-16"
   },
+  "9aac4f5ebb84": {
+   "titulo": "TENIS - BILLIE JEAN KING CUP PLAY-OFFS: JAPÓN VS ARGENTINA EN TOKIO, JAPÓN (20 al 22 de noviembre)",
+   "deporte": "TENIS",
+   "evento": "BILLIE JEAN KING CUP PLAY-OFFS: JAPÓN VS ARGENTINA EN TOKIO, JAPÓN",
+   "fechas": "20 al 22 de noviembre",
+   "etiqueta": "en_curso",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.lanacion.com.ar/deportes/tenis/billie-jean-king-cup-el-equipo-argentino-viajara-a-japon-en-busca-del-ascenso-a-la-elite-nid23042026/",
+       "href": "https://www.lanacion.com.ar/deportes/tenis/billie-jean-king-cup-el-equipo-argentino-viajara-a-japon-en-busca-del-ascenso-a-la-elite-nid23042026/"
+      },
+      {
+       "t": " (Nota)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Argentina va en busca del ascenso a la élite. Capitana: Paola Suárez"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.noticiasnqn.com.ar/noticias/2026/11/03/359280-tres-tenistas-de-la-seleccion-argentina-compiten-en-neuquen-antes-de-viajar-a-japon",
+       "href": "https://www.noticiasnqn.com.ar/noticias/2026/11/03/359280-tres-tenistas-de-la-seleccion-argentina-compiten-en-neuquen-antes-de-viajar-a-japon"
+      },
+      {
+       "t": " (Nota)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se juega el 21 y 22/11 en el Ariake Colosseum de Tokio. Serie al mejor de 5 puntos (4 singles y 1 dobles); está en juego el ascenso al Grupo Mundial"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Del equipo están confirmadas Justina González Daniele, Luciana Moyano y Sol Larraya Guidi"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.lagaceta.com.ar/nota/1162927/deportes/billie-jean-king-cup-argentina-comenzo-entrenarse-japon-paola-suarez-ajusta-detalles-para-playoffs.html",
+       "href": "https://www.lagaceta.com.ar/nota/1162927/deportes/billie-jean-king-cup-argentina-comenzo-entrenarse-japon-paola-suarez-ajusta-detalles-para-playoffs.html"
+      },
+      {
+       "t": " (Nota)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "El equipo ya entrena en Tokio. Además está Florencia Urrutia"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.lagaceta.com.ar/nota/1163257/deportes/billie-jean-king-cup-argentina-ultima-detalles-tokio-para-enfrentar-japon-playoffs.html",
+       "href": "https://www.lagaceta.com.ar/nota/1163257/deportes/billie-jean-king-cup-argentina-ultima-detalles-tokio-para-enfrentar-japon-playoffs.html"
+      },
+      {
+       "t": " (Nota)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Equipo completo: Justina González Daniele (número 1 del equipo), Florencia Urrutia, Luciana Moyano y Sol Larraya Guidi, las cuatro debutantes. Capitana: Paola Suárez; entrenador: Mariano Hood"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Japón (capitana Ai Sugiyama): Himeno Sakatsume, Mai Hontama, Ena Shibahara, Shuko Aoyama y Eri Hozumi. No juegan Naomi Osaka ni Moyuka Uchijima"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Superficie rápida bajo techo"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Viernes 20/11 desde las 23:50hs los dos primeros singles; sábado 21/11 desde las 23hs el dobles y los dos singles restantes",
+       "b": true
+      },
+      {
+       "t": " (hora argentina)"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://deportv.gob.ar/tenis/copa-billie-jean-king-justina-gonzalez-daniele-abrira-serie-japon-nid:19064",
+       "href": "https://deportv.gob.ar/tenis/copa-billie-jean-king-justina-gonzalez-daniele-abrira-serie-japon-nid:19064"
+      },
+      {
+       "t": " (Sorteo)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Orden de juego",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Viernes 20/11 desde las 23:50hs: Justina González Daniele vs Mai Hontama (JPN) y Florencia Urrutia vs Himeno Sakatsume (JPN)",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Sábado 21/11: dobles Justina González Daniele / Luciana Moyano vs Shuko Aoyama / Eri Hozumi (JPN) y después, si hace falta, González Daniele vs Sakatsume y Urrutia vs Hontama"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.infobae.com/deportes/2026/11/21/japon-se-adelanto-2-0-y-argentina-esta-obligada-a-ganar-los-tres-puntos-para-clasificarse-al-grupo-mundial-i/",
+       "href": "https://www.infobae.com/deportes/2026/11/21/japon-se-adelanto-2-0-y-argentina-esta-obligada-a-ganar-los-tres-puntos-para-clasificarse-al-grupo-mundial-i/"
+      },
+      {
+       "t": " (Resultados)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Viernes 20/11: Japón 2 - Argentina 0",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Justina González Daniele perdió vs Mai Hontama (JPN) por 7-6 (4) y 6-3"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Florencia Urrutia perdió vs Himeno Sakatsume (JPN) por 6-0 y 6-4"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Sábado 21/11 desde las 23hs el dobles y, si hace falta, los dos singles restantes",
+       "b": true
+      },
+      {
+       "t": " (hora argentina). Argentina necesita ganar los tres puntos para ascender"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Transmisión: TyC Sports 2 "
+      },
+      {
+       "t": "https://www.infobae.com/deportes/2026/11/21/japon-se-adelanto-2-0-y-argentina-esta-obligada-a-ganar-los-tres-puntos-para-clasificarse-al-grupo-mundial-i/",
+       "href": "https://www.infobae.com/deportes/2026/11/21/japon-se-adelanto-2-0-y-argentina-esta-obligada-a-ganar-los-tres-puntos-para-clasificarse-al-grupo-mundial-i/"
+      }
+     ]
+    }
+   ],
+   "id": "9aac4f5ebb84",
+   "version": "cdfbf45ad0",
+   "publicado_en_doc": false,
+   "visto": "2026-11-21"
+  },
   "9b8960c27c6e": {
    "titulo": "FÚTBOL - FECHA FIFA: AMISTOSOS DE LA SELECCIÓN MAYOR EN ARGENTINA",
    "deporte": "FÚTBOL",
@@ -6003,6 +6256,26 @@
        "b": true
       }
      ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.fis-ski.com/DB/general/results.html?sectorcode=CC&raceid=52683",
+       "href": "https://www.fis-ski.com/DB/general/results.html?sectorcode=CC&raceid=52683"
+      },
+      {
+       "t": " (Sprint femenino)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "En los resultados del sprint clásico femenino no figura ninguna argentina (Creo que no largaron). Falta el sprint masculino"
+      }
+     ]
     }
    ],
    "refs_panel": [
@@ -6010,7 +6283,7 @@
     "bd1103ad"
    ],
    "id": "c801c33caff0",
-   "version": "7f47d8f175",
+   "version": "81987b8ea5",
    "publicado_en_doc": false,
    "visto": "2026-11-21"
   },
@@ -7057,10 +7330,22 @@
        "t": "Mateo Carreras quedó afuera por una lesión en el hombro (podría necesitar cirugía) y entra Ignacio Mendy. Gonzalo García quedó afuera de los 23 por decisión técnica"
       }
      ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Transmisión: ESPN 2 y Disney+ Premium "
+      },
+      {
+       "t": "https://www.lanacion.com.ar/deportes/rugby/los-pumas-vs-francia-por-el-nations-championship-2026-dia-horario-tv-y-como-ver-online-nid19112026/",
+       "href": "https://www.lanacion.com.ar/deportes/rugby/los-pumas-vs-francia-por-el-nations-championship-2026-dia-horario-tv-y-como-ver-online-nid19112026/"
+      }
+     ]
     }
    ],
    "id": "de102f71eab3",
-   "version": "60577459b5",
+   "version": "34ce4d773e",
    "publicado_en_doc": false,
    "visto": "2026-11-21"
   },

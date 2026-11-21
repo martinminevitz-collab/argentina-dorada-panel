@@ -1,6 +1,6 @@
 {
- "leido": "2026-11-21T00:55-03:00",
- "actualizado_doc": "20/11/2026 23:00",
+ "leido": "2026-11-21T11:01-03:00",
+ "actualizado_doc": "21/11/2026 11:00",
  "eventos": [
   {
    "titulo": "BOXEO - BETO PALMETTA VS WILLY GILHEANEY (GBR) EN CARDIFF, GALES",
@@ -2841,842 +2841,6 @@
    "terminado_desde": "2026-11-17"
   },
   {
-   "titulo": "NATACIÓN ADAPTADA - PARA SWIMMING WORLD SERIES EN LIMA, PERÚ",
-   "deporte": "NATACIÓN ADAPTADA",
-   "evento": "PARA SWIMMING WORLD SERIES EN LIMA, PERÚ",
-   "fechas": null,
-   "etiqueta": "publicable",
-   "seccion": "resultados",
-   "ya_publicado": false,
-   "bloques": [
-    {
-     "tipo": "link",
-     "partes": [
-      {
-       "t": "https://www.paralympic.org/swimming/world-series-2026",
-       "href": "https://www.paralympic.org/swimming/world-series-2026"
-      },
-      {
-       "t": " (Web oficial)"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Delegación argentina de 15 deportistas: Nadia Báez, Matías de Andrade, Elizabeth Noriega, Analuz Pellitero, Mateo Vives, Lucas Leguiza, Nicolás Ricci, Nicolás Rivero, Paula Ibarra, Tomás Fangio, Tiziana Forlano, Santino Insaurralde, Alma Roisman, Paul Ferreira y Lautaro Núñez"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Se nadó del 12 al 14/11 en el Centro Acuático de la VIDENA"
-      }
-     ]
-    },
-    {
-     "tipo": "link",
-     "partes": [
-      {
-       "t": "https://paradeportes.com/natacion-baez-insaurralde-pellitero-y-rivero-las-primeras-medallas-en-la-world-series-de-lima/",
-       "href": "https://paradeportes.com/natacion-baez-insaurralde-pellitero-y-rivero-las-primeras-medallas-en-la-world-series-de-lima/"
-      },
-      {
-       "t": " (Nota primeras medallas)"
-      }
-     ]
-    },
-    {
-     "tipo": "sub",
-     "partes": [
-      {
-       "t": "Medallas",
-       "b": true
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Nadia Báez ganó la medalla "
-      },
-      {
-       "t": "DORADA",
-       "b": true
-      },
-      {
-       "t": " en los 50m pecho SB11"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Nadia Báez ganó la medalla de "
-      },
-      {
-       "t": "BRONCE",
-       "b": true
-      },
-      {
-       "t": " en los 100m pecho"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Santino Insaurralde ganó la medalla "
-      },
-      {
-       "t": "DORADA",
-       "b": true
-      },
-      {
-       "t": " en los 50m pecho SB4 (final juvenil)"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Analuz Pellitero ganó la medalla "
-      },
-      {
-       "t": "PLATEADA",
-       "b": true
-      },
-      {
-       "t": " en los 50m espalda S11, con récord americano"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Nicolás Rivero ganó la medalla de "
-      },
-      {
-       "t": "BRONCE",
-       "b": true
-      },
-      {
-       "t": " en los 50m pecho SB4"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Nicolás Ricci ganó la medalla "
-      },
-      {
-       "t": "PLATEADA",
-       "b": true
-      },
-      {
-       "t": " en los 150m combinado SM4"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Analuz Pellitero ganó la medalla de "
-      },
-      {
-       "t": "BRONCE",
-       "b": true
-      },
-      {
-       "t": " en los 100m espalda S11"
-      }
-     ]
-    },
-    {
-     "tipo": "espacio"
-    },
-    {
-     "tipo": "sub",
-     "partes": [
-      {
-       "t": "Otros resultados",
-       "b": true
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Nicolás Ricci fue 8° en la final A de 50m pecho SB3"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Paul Ferreira fue 6° en la final A de 200m libre S14 y 4° en la final B de 100m mariposa"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Lucas Leguiza fue 6° en la final A de 100m mariposa y 6° en la final B de 200m combinado SM9"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Mateo Vives ganó la final B de 200m combinado SM9"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Tomás Fangio fue 7° en la final juvenil de 200m combinado SM8"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Nadia Báez ganó la final B de 200m combinado SM11"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Paula Ibarra fue 3° en la final B de 200m combinado SM10"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Matías de Andrade fue 4° en la final A de 100m espalda S6 y 8° en la final B de 50m libre S6"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Lucas Leguiza fue 7° en la final A de 50m libre S9"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Tomás Fangio fue 7° en la final juvenil de 100m espalda S8 y 8° en 50m libre S8"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Alma Roisman fue 7° en la final juvenil de 100m espalda S10, 5° en 50m libre S10 y 3° en 400m libre S10"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Mateo Vives fue 3° en la final B de 100m espalda S9"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Paula Ibarra ganó la final B de 100m espalda S10"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Tiziana Forlano fue 7° en la final B de 100m espalda S6"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Nadia Báez fue 3° en la final B de 50m libre S11"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Elizabeth Noriega fue 4° en la final B de 50m libre S5"
-      }
-     ]
-    }
-   ],
-   "refs_panel": [
-    "51c960f0",
-    "9f6f3cc5",
-    "9e9e840d"
-   ],
-   "id": "d76e45b4bd6a",
-   "version": "4a654e7c59",
-   "publicado_en_doc": false,
-   "terminado_desde": "2026-11-14",
-   "vencido": true
-  },
-  {
-   "titulo": "HANDBALL - SUR-CENTRO JUNIOR (U20) Y JUVENIL (U18) MASCULINO EN ASUNCIÓN, PARAGUAY",
-   "deporte": "HANDBALL",
-   "evento": "SUR-CENTRO JUNIOR (U20) Y JUVENIL (U18) MASCULINO EN ASUNCIÓN, PARAGUAY",
-   "fechas": null,
-   "etiqueta": "publicable",
-   "seccion": "resultados",
-   "ya_publicado": false,
-   "bloques": [
-    {
-     "tipo": "link",
-     "partes": [
-      {
-       "t": "https://handballargentina.org/cah/2026/11/oro-y-plata-para-argentina-en-los-sur-centro-u-20-y-u-18-de-asuncion/",
-       "href": "https://handballargentina.org/cah/2026/11/oro-y-plata-para-argentina-en-los-sur-centro-u-20-y-u-18-de-asuncion/"
-      },
-      {
-       "t": " (Nota final)"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Se jugó del 10 al 14/11"
-      }
-     ]
-    },
-    {
-     "tipo": "link",
-     "partes": [
-      {
-       "t": "https://handballargentina.org/cah/2026/11/debut-con-victoria-para-argentina-en-los-sur-centro-u-18-y-u-20/",
-       "href": "https://handballargentina.org/cah/2026/11/debut-con-victoria-para-argentina-en-los-sur-centro-u-18-y-u-20/"
-      },
-      {
-       "t": " (Nota)"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Se juega en el Arena COP. Cada torneo da 3 plazas para el Mundial 2027"
-      }
-     ]
-    },
-    {
-     "tipo": "sub",
-     "partes": [
-      {
-       "t": "Junior (U20)",
-       "b": true
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Debut: 53-8 vs Nicaragua (Juan Martín Lete 8, Iker Lazcano 6, Juan Cruz Gawlinski 5 y Jeremías Bus 5)"
-      }
-     ]
-    },
-    {
-     "tipo": "link",
-     "partes": [
-      {
-       "t": "https://handballargentina.org/cah/2026/11/triunfo-de-los-juniors-y-los-juveniles-en-la-continuidad-de-los-sur-centro-de-asuncion/",
-       "href": "https://handballargentina.org/cah/2026/11/triunfo-de-los-juniors-y-los-juveniles-en-la-continuidad-de-los-sur-centro-de-asuncion/"
-      },
-      {
-       "t": " (Nota)"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Segunda fecha: 32-19 vs Guayana Francesa (Felipe Parón 7; MVP Francisco Colombo)"
-      }
-     ]
-    },
-    {
-     "tipo": "link",
-     "partes": [
-      {
-       "t": "https://handballargentina.org/cah/2026/11/argentina-a-paso-firme-en-los-sur-centro-u-20-y-u-18-de-asuncion/",
-       "href": "https://handballargentina.org/cah/2026/11/argentina-a-paso-firme-en-los-sur-centro-u-20-y-u-18-de-asuncion/"
-      },
-      {
-       "t": " (Nota)"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Tercera fecha: 28-20 vs Chile (Francisco Colombo 6; MVP Simón Viera). Terminó 1° del Grupo A y "
-      },
-      {
-       "t": "CLASIFICÓ A SEMIS",
-       "b": true
-      }
-     ]
-    },
-    {
-     "tipo": "link",
-     "partes": [
-      {
-       "t": "https://handballargentina.org/cah/2026/11/los-juveniles-y-juniors-definiran-los-titulos-sur-centro-ante-brasil/",
-       "href": "https://handballargentina.org/cah/2026/11/los-juveniles-y-juniors-definiran-los-titulos-sur-centro-ante-brasil/"
-      },
-      {
-       "t": " (Nota semis)"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Semis: 29-24 vs Uruguay (Bautista Torossian 7, también MVP) y "
-      },
-      {
-       "t": "CLASIFICÓ A LA FINAL",
-       "b": true
-      },
-      {
-       "t": " y al Mundial 2027 (da 3 plazas)"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Final: perdió 32-24 vs Brasil (Bautista Torossian 9) y logró la medalla "
-      },
-      {
-       "t": "PLATEADA",
-       "b": true
-      }
-     ]
-    },
-    {
-     "tipo": "espacio"
-    },
-    {
-     "tipo": "sub",
-     "partes": [
-      {
-       "t": "Juvenil (U18)",
-       "b": true
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Debut: 38-9 vs Paraguay (Matías Svarzchtein 7, Juan Pallero 7 y Camilo Sciglitano 5)"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Segunda fecha: 53-7 vs El Salvador (Camilo Sciglitano 10, también MVP)"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Tercera fecha: 38-16 vs Uruguay (Juan Bautista Dirr 7, también MVP, y Gonzalo Perznianko 7). Terminó 1° del Grupo B y "
-      },
-      {
-       "t": "CLASIFICÓ A SEMIS",
-       "b": true
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Semis: 36-24 vs Chile (Nicolás La Delfa 8; MVP Felipe Alvarez) y "
-      },
-      {
-       "t": "CLASIFICÓ A LA FINAL",
-       "b": true
-      },
-      {
-       "t": " y al Mundial 2027 (da 3 plazas)"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Final: le ganó 18-15 a Brasil (Nicolás La Delfa 11, también MVP) y se consagró "
-      },
-      {
-       "t": "CAMPEÓN SUR-CENTRO",
-       "b": true
-      },
-      {
-       "t": " con la medalla "
-      },
-      {
-       "t": "DORADA",
-       "b": true
-      }
-     ]
-    }
-   ],
-   "id": "e443096a7e7f",
-   "version": "694e442efb",
-   "publicado_en_doc": false,
-   "terminado_desde": "2026-11-14",
-   "vencido": true
-  },
-  {
-   "titulo": "VELA - CAMPEONATO MUNDIAL DE STAR EN MIAMI, ESTADOS UNIDOS",
-   "deporte": "VELA",
-   "evento": "CAMPEONATO MUNDIAL DE STAR EN MIAMI, ESTADOS UNIDOS",
-   "fechas": null,
-   "etiqueta": "publicable",
-   "seccion": "resultados",
-   "ya_publicado": false,
-   "bloques": [
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Se corrió del 9 al 14/11"
-      }
-     ]
-    },
-    {
-     "tipo": "link",
-     "partes": [
-      {
-       "t": "https://worlds.starchampionships.org",
-       "href": "https://worlds.starchampionships.org"
-      },
-      {
-       "t": " (Web oficial)"
-      }
-     ]
-    },
-    {
-     "tipo": "link",
-     "partes": [
-      {
-       "t": "https://www.regattaweb.org/events/2026-star-world-championship/standings",
-       "href": "https://www.regattaweb.org/events/2026-star-world-championship/standings"
-      },
-      {
-       "t": " (Resultados)"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Leandro y Lucas Altolaguirre ganaron la primera regata"
-      }
-     ]
-    },
-    {
-     "tipo": "link",
-     "partes": [
-      {
-       "t": "https://pressmare.it/en/association/star-class/2026-11-13/altolaguirre-brothers-claim-second-win-94099",
-       "href": "https://pressmare.it/en/association/star-class/2026-11-13/altolaguirre-brothers-claim-second-win-94099"
-      },
-      {
-       "t": " (Nota)"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Los Altolaguirre también ganaron la 4ta regata, su segunda victoria en el Mundial. Lideran Diego Negri / Sergio Lambertenghi (ITA) con 35 puntos"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Después de 4 regatas (1, 10, 48 y 1):"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Leandro Altolaguirre / Lucas Altolaguirre marchan 9° con 60 puntos"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Juan Kouyoumdjian / Fernando Rivero 60°"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Gerardo Della Torre / Jurgen Berger 65°"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Federico Calegari / Lucas Carissimi 74°"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Juan Pablo Percossi / Felipe Caivano 75°"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Erich Mones Ruiz / Julián Gazari Barroso 77°"
-      }
-     ]
-    },
-    {
-     "tipo": "espacio"
-    },
-    {
-     "tipo": "sub",
-     "partes": [
-      {
-       "t": "Clasificación final (6 regatas)",
-       "b": true
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Leandro Altolaguirre / Lucas Altolaguirre terminaron en el "
-      },
-      {
-       "t": "4° PUESTO",
-       "b": true
-      },
-      {
-       "t": " con 51 puntos netos (1, 10, 48, 1, 18 y 21), ganando 2 regatas. Campeones Diego Negri / Sergio Lambertenghi (ITA) con 24, 2° Melleby / Nehammer (NOR) con 37 y 3° Robert Scheidt / Austin Sperry (BRA) con 47"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Juan Kouyoumdjian / Fernando Rivero 53°"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Erich Mones Ruiz / Julián Gazari Barroso 58°"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Federico Calegari / Lucas Carissimi 68°"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Juan Pablo Percossi / Felipe Caivano 78°"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Gerardo Della Torre / Jurgen Berger 80°"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "La web oficial todavía marca algunas regatas como provisorias (Creo que no cambia)"
-      }
-     ]
-    }
-   ],
-   "id": "90414b5fde29",
-   "version": "2452d0ea5d",
-   "publicado_en_doc": false,
-   "terminado_desde": "2026-11-14",
-   "vencido": true
-  },
-  {
-   "titulo": "BOXEO - PAPP CUP EN BUDAPEST, HUNGRÍA",
-   "deporte": "BOXEO",
-   "evento": "PAPP CUP EN BUDAPEST, HUNGRÍA",
-   "fechas": null,
-   "etiqueta": "publicable",
-   "seccion": "resultados",
-   "ya_publicado": false,
-   "bloques": [
-    {
-     "tipo": "link",
-     "partes": [
-      {
-       "t": "https://pappcup.org/en/home/",
-       "href": "https://pappcup.org/en/home/"
-      },
-      {
-       "t": " (Web oficial)"
-      }
-     ]
-    },
-    {
-     "tipo": "link",
-     "partes": [
-      {
-       "t": "https://www.nemzetisport.hu/okolvivas/2026/11/europa-nyerte-meg-az-elso-papp-kupat-budapesten",
-       "href": "https://www.nemzetisport.hu/okolvivas/2026/11/europa-nyerte-meg-az-elso-papp-kupat-budapesten"
-      },
-      {
-       "t": " (Resultado)"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Se hizo el sábado 14/11. Europa ganó la primera edición 12-6 vs América"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Formato nuevo de 10 combates en el que cada victoria suma para definir qué continente gana la copa, parecido a la Laver Cup de tenis"
-      }
-     ]
-    },
-    {
-     "tipo": "sub",
-     "partes": [
-      {
-       "t": "65kg Femenino",
-       "b": true
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Lucía Muello (@luu_muello) vs Anna Luca Hamori (HUN), diploma olímpico en París 2024"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Lucía Muello perdió vs Anna Luca Hámori (HUN) por decisión unánime (5-0)"
-      }
-     ]
-    }
-   ],
-   "refs_panel": [
-    "eefc9fb9"
-   ],
-   "id": "85250ce34db4",
-   "version": "15fd288018",
-   "publicado_en_doc": false,
-   "terminado_desde": "2026-11-14",
-   "vencido": true
-  },
-  {
    "titulo": "BOCHAS - CAMPEONATO MUNDIAL EN RIJEKA, CROACIA",
    "deporte": "BOCHAS",
    "evento": "CAMPEONATO MUNDIAL EN RIJEKA, CROACIA",
@@ -4010,10 +3174,22 @@
        "t": "Mateo Carreras quedó afuera por una lesión en el hombro (podría necesitar cirugía) y entra Ignacio Mendy. Gonzalo García quedó afuera de los 23 por decisión técnica"
       }
      ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Transmisión: ESPN 2 y Disney+ Premium "
+      },
+      {
+       "t": "https://www.lanacion.com.ar/deportes/rugby/los-pumas-vs-francia-por-el-nations-championship-2026-dia-horario-tv-y-como-ver-online-nid19112026/",
+       "href": "https://www.lanacion.com.ar/deportes/rugby/los-pumas-vs-francia-por-el-nations-championship-2026-dia-horario-tv-y-como-ver-online-nid19112026/"
+      }
+     ]
     }
    ],
    "id": "de102f71eab3",
-   "version": "60577459b5",
+   "version": "34ce4d773e",
    "publicado_en_doc": false
   },
   {
@@ -4215,6 +3391,26 @@
      ]
     },
     {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.cadena3.com/noticia/las-vegas-2026/colapinto-tuvo-una-buena-clasificacion-y-largara-noveno-en-el-gp-de-las-vegas_615350",
+       "href": "https://www.cadena3.com/noticia/las-vegas-2026/colapinto-tuvo-una-buena-clasificacion-y-largara-noveno-en-el-gp-de-las-vegas_615350"
+      },
+      {
+       "t": " (Clasificación)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Sábado 21/11: Colapinto pasó la Q1 15°, fue 7° en la Q2 con 1:34.982 y terminó 10° en la Q3. Por la sanción a Oscar Piastri larga 9° (Gasly 8°). Pole para Max Verstappen"
+      }
+     ]
+    },
+    {
      "tipo": "sub",
      "partes": [
       {
@@ -4253,7 +3449,7 @@
     }
    ],
    "id": "3f83ee1c3780",
-   "version": "4665ea8703",
+   "version": "37605bfaca",
    "publicado_en_doc": false
   },
   {
@@ -5197,6 +4393,26 @@
        "b": true
       }
      ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.fis-ski.com/DB/general/results.html?sectorcode=CC&raceid=52683",
+       "href": "https://www.fis-ski.com/DB/general/results.html?sectorcode=CC&raceid=52683"
+      },
+      {
+       "t": " (Sprint femenino)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "En los resultados del sprint clásico femenino no figura ninguna argentina (Creo que no largaron). Falta el sprint masculino"
+      }
+     ]
     }
    ],
    "refs_panel": [
@@ -5204,16 +4420,16 @@
     "bd1103ad"
    ],
    "id": "c801c33caff0",
-   "version": "7f47d8f175",
+   "version": "81987b8ea5",
    "publicado_en_doc": false
   },
   {
-   "titulo": "TENIS - BILLIE JEAN KING CUP PLAY-OFFS: JAPÓN VS ARGENTINA EN TOKIO, JAPÓN (21 y 22 de noviembre)",
+   "titulo": "TENIS - BILLIE JEAN KING CUP PLAY-OFFS: JAPÓN VS ARGENTINA EN TOKIO, JAPÓN (20 al 22 de noviembre)",
    "deporte": "TENIS",
    "evento": "BILLIE JEAN KING CUP PLAY-OFFS: JAPÓN VS ARGENTINA EN TOKIO, JAPÓN",
-   "fechas": "21 y 22 de noviembre",
-   "etiqueta": "agenda",
-   "seccion": "agenda",
+   "fechas": "20 al 22 de noviembre",
+   "etiqueta": "en_curso",
+   "seccion": "resultados",
    "ya_publicado": false,
    "bloques": [
     {
@@ -5369,10 +4585,74 @@
        "t": "Sábado 21/11: dobles Justina González Daniele / Luciana Moyano vs Shuko Aoyama / Eri Hozumi (JPN) y después, si hace falta, González Daniele vs Sakatsume y Urrutia vs Hontama"
       }
      ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.infobae.com/deportes/2026/11/21/japon-se-adelanto-2-0-y-argentina-esta-obligada-a-ganar-los-tres-puntos-para-clasificarse-al-grupo-mundial-i/",
+       "href": "https://www.infobae.com/deportes/2026/11/21/japon-se-adelanto-2-0-y-argentina-esta-obligada-a-ganar-los-tres-puntos-para-clasificarse-al-grupo-mundial-i/"
+      },
+      {
+       "t": " (Resultados)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Viernes 20/11: Japón 2 - Argentina 0",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Justina González Daniele perdió vs Mai Hontama (JPN) por 7-6 (4) y 6-3"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Florencia Urrutia perdió vs Himeno Sakatsume (JPN) por 6-0 y 6-4"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Sábado 21/11 desde las 23hs el dobles y, si hace falta, los dos singles restantes",
+       "b": true
+      },
+      {
+       "t": " (hora argentina). Argentina necesita ganar los tres puntos para ascender"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Transmisión: TyC Sports 2 "
+      },
+      {
+       "t": "https://www.infobae.com/deportes/2026/11/21/japon-se-adelanto-2-0-y-argentina-esta-obligada-a-ganar-los-tres-puntos-para-clasificarse-al-grupo-mundial-i/",
+       "href": "https://www.infobae.com/deportes/2026/11/21/japon-se-adelanto-2-0-y-argentina-esta-obligada-a-ganar-los-tres-puntos-para-clasificarse-al-grupo-mundial-i/"
+      }
+     ]
     }
    ],
    "id": "9aac4f5ebb84",
-   "version": "15e264c753",
+   "version": "cdfbf45ad0",
    "publicado_en_doc": false
   },
   {
