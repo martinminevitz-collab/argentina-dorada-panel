@@ -1,5 +1,47 @@
 [
  {
+  "id": "d3f4d111b0a2",
+  "titulo": "Rugby: Los Pumas buscan dar un golpe ante Francia en el Stade France de París",
+  "resumen": "Rugby: Los Pumas buscan dar un golpe ante Francia en el Stade France de París La Capital",
+  "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQZm9lWFVadXhiaC1EbWV1RVI2ZGN3VmhzRFAtYU5JdTB4dWc2RGRsSXM4enFkeXpyYXNaRThBNXh1bG5ra1Y5RU1QS1c3aHlrcEExb25NcEN0dzdCa1p2TU16S1Q0Z3Q1djNJQnE0X2V1MDVEVUhfOXR6VW9QVm9PZ3Y5Y0N2TElJSGVPdHp3VlpiUU5TeVF5ZjIxaDRmN0Y1aVRsd3ZoYkc5eHlLNTVzemYxQWktSmdq?oc=5",
+  "fuente": "La Capital",
+  "deporte": "Rugby",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-21T09:10+00:00",
+  "encontrado": "2026-11-21T07:06-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
+  "id": "882785ea8b09",
+  "titulo": "¿A qué hora es y qué canal pasa la pelea de Kevin Vallejos vs. Aljamain Sterling en UFC?",
+  "resumen": "¿A qué hora es y qué canal pasa la pelea de Kevin Vallejos vs. Aljamain Sterling en UFC? Bolavip Argentina",
+  "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPLVB6Zm9faDhQWm93aWNuSFNLUmVncWR4Q0RWaFVuVzcwalRhbHE0M1BUYnMzYm94STd6NHlJN1hVTUZkYlRFQ2ZYVkRjNEpRVjg0aS1paGg5bnc3THFKdzBRVzkydzhBYUxhYUw4TGFoUXhEa2EzRFUyMUhqWEl5SEVUWEVrYUdEckdZN0I1Wl9tQ3FrcW8wUFdKVXpYd1hxaE1Wbk9tWHA2RXlobmlXMng3R092QkZSV1gw0gG7AUFVX3lxTE8tUHpmb19oOFBab3dpY25IU0tSZWdxZHhDRFZoVW5XNzBqVGFscTQzUFRiczNib3hJN3o0eUk3WFVNRmRiVEVDZlhWRGM0SlFWODRpLWloaDludzdMcUp3MFFXOTJ3OEFhTGFhTDhMYWhReERrYTNEVTIxSGpYSXlIRVRYRWthR0RyR1k3QjVaX21DcWtxbzBQV0pVelh3WHFoTVZuT21YcDZFeWhuaVcyeDdHT3ZCRlJXWDA?oc=5",
+  "fuente": "Bolavip Argentina",
+  "deporte": "UFC",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-21T09:00+00:00",
+  "encontrado": "2026-11-21T07:06-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
+  "id": "c3a1b69194a4",
+  "titulo": "Kevin Vallejos enfrentará a Aljamain Sterling en la UFC en Qatar y vaticinó otra coronación de gloria argentina en Doha",
+  "resumen": "Kevin Vallejos enfrentará a Aljamain Sterling en la UFC en Qatar y vaticinó otra coronación de gloria argentina en Doha TN",
+  "link": "https://news.google.com/rss/articles/CBMiggJBVV95cUxPMGNsUTZjcXJmcWVpN3BSNG9TX3F6Mlp6a1Z0cW04LW9kRENzLTBXU1NObGJXa2kycm1kNTFOa0o2MjBicUlfYTlmRG5QdDkwdFVIcFV0bDNqYWlBU1Nmem40YWZ6RWpXTHY4QjF4ZS1aWVBSSmExaVItRnJ3T21RSk9jbFBCbjhGcXExVTYycV80Y2Uzb2xGNm0tYlZPSXVrXzNYanZDVHpocHVPWDZsTzY0bmhhMlktMjdNRTloLUJ1YW95dWcySFBZVzNfSmRhN2g0Vmc4azRlY1Y3bDIzNEs5MFUwbmdaRzZZcTVDN204LWdGSU1GR3R4ZzYtRWZ0OFE?oc=5",
+  "fuente": "TN",
+  "deporte": "UFC",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-21T08:39+00:00",
+  "encontrado": "2026-11-21T07:06-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
   "id": "8f47d9769e02",
   "titulo": "Fórmula 1: Colapinto clasificó 10° en Las Vegas, Antonelli se llevó una pole que hereda Verstappen",
   "resumen": "Fórmula 1: Colapinto clasificó 10° en Las Vegas, Antonelli se llevó una pole que hereda Verstappen Cadena 3 Argentina",
@@ -196,6 +238,20 @@
   "noticia": false
  },
  {
+  "id": "8f3753ca46b6",
+  "titulo": "RD da paliza 26-1 a Argentina en Panam Sub-12 de Béisbol",
+  "resumen": "RD da paliza 26-1 a Argentina en Panam Sub-12 de Béisbol Momento Deportivo RD",
+  "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOZENsSURZT05wOG1qcjBzcTB6ZUw5dERwX1d0UXZhMkNFaER3aWdwWHgwVy1BSmo4SkdkQV9Dd0M4amV2eGRrd3E5YkdHMTBRdkF2UkRYZkRtdXltM0M2ak9PRHVLRGxkcUFZZlpIY2ptNDBFdFBpNXRtRlZLTUFuQThKQzVORmVzVWE0eXVqSGE3TmhpVmZpdg?oc=5",
+  "fuente": "Momento Deportivo RD",
+  "deporte": "UFC",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-20T23:23+00:00",
+  "encontrado": "2026-11-21T07:06-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
   "id": "c8961645a741",
   "titulo": "Judocas de Chile Chico se coronan campeones en torneo internacional disputado en Argentina",
   "resumen": "Judocas de Chile Chico se coronan campeones en torneo internacional disputado en Argentina Radio Revelación FM",
@@ -220,6 +276,20 @@
   "en_buenos_aires": false,
   "publicado": "2026-11-20T22:34+00:00",
   "encontrado": "2026-11-21T04:30-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
+  "id": "7ef0653d6d7a",
+  "titulo": "Las Leonas le ganaron a Australia y jugarán la final con Países Bajos",
+  "resumen": "Las Leonas le ganaron a Australia y jugarán la final con Países Bajos Perspectiva Sur",
+  "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPZWFOMTNMTTlXd0hBd3ZWOGFlZGYyTEV2NmdlV3k2OUczYjZSRk8xSFcxYW9EUm5UTHpvTGR0Y0FMbXc3QS1OUHBmUzBvNy1WcEVmVlBaMjFpc0g1OEtab2diZWJBaG5sWHVBWFJoRTRyY2lqSlJ0OFhLdDlDUFNHNGsyT2Jyc2hIaXhqZFBabWY1SjVnVVhMZXY3Nk5PRVRqWlhnYXpFWU0yVm9acVluSg?oc=5",
+  "fuente": "Perspectiva Sur",
+  "deporte": "Hockey",
+  "tipo": "resultado",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-20T21:31+00:00",
+  "encontrado": "2026-11-21T07:05-03:00",
   "bot": "resultados",
   "noticia": false
  },
@@ -332,6 +402,20 @@
   "en_buenos_aires": false,
   "publicado": "2026-11-20T19:18+00:00",
   "encontrado": "2026-11-21T01:11-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
+  "id": "d8997aa053e0",
+  "titulo": "“El legado de la N°20 sigue”: Dante y Nico Ginóbili se volvieron virales con el equipo de su colegio en Texas",
+  "resumen": "“El legado de la N°20 sigue”: Dante y Nico Ginóbili se volvieron virales con el equipo de su colegio en Texas Canal 7 Argentina",
+  "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQT2RRLUl2bkZwSWFFY1QzQmZ4RzF5anF0cVZtbV8xVTVnUUU1ZmlPSnZ1WFN3eHZCUGUtWl8wZ3Fqd2xjYUxHeVRxbXNSbWU1S1FxVGg2MEk1UE9UOVZrVnowRVhHTmhXQjgyUkt4RXdtNm1QNS1zTXlvY2M3S3hIZnYwWU5YVVY0aHRzMVdRQVV1MjBBVEh2ZnBnN1lSZVlURXNUSXFSV2lSVTFSVlczZFJxanNBeWF5ZXlVTkJmQlhVODF0Z294SU1pcTNmcGNZS1E?oc=5",
+  "fuente": "Canal 7 Argentina",
+  "deporte": "Basquet",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-20T19:05+00:00",
+  "encontrado": "2026-11-21T07:03-03:00",
   "bot": "resultados",
   "noticia": false
  },
@@ -514,6 +598,20 @@
   "en_buenos_aires": false,
   "publicado": "2026-11-20T07:14+00:00",
   "encontrado": "2026-11-21T01:10-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
+  "id": "34bac58a84a1",
+  "titulo": "El Ladies 9 Tour presentado por RUS cerró su temporada regular en el Club Náutico de San Isidro - Asociación Argentina de Golf",
+  "resumen": "El Ladies 9 Tour presentado por RUS cerró su temporada regular en el Club Náutico de San Isidro Asociación Argentina de Golf - AAG",
+  "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOZ2FRN2JfdWVqeklsOHlwanFrbEhuXzhpbWxOSDJGLXJGX0RjMS1qcndoOXJYUVNDZ3ZYYkgzYjFmV2wyV3VIcmJOczVPVUFER0NQUGJReVBValJNZ3hVb08xdndfNXJ0S0Y2MFZGWERLdTQ3ODN1RlRsenMtQllGdmI0QWlNVEVTcE02YUhacE14cVdBbmNIa0tmdUNDS1hCTFlqOVVRVDlNc0FQNmRkZXRPRnpyVXRBaWRV?oc=5",
+  "fuente": "Asociación Argentina de Golf - AAG",
+  "deporte": "Golf",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-20T00:43+00:00",
+  "encontrado": "2026-11-21T07:05-03:00",
   "bot": "resultados",
   "noticia": false
  },
