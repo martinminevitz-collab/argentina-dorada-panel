@@ -1,7 +1,74 @@
 {
- "leido": "2026-11-20T11:57-03:00",
- "actualizado_doc": "20/11/2026 11:30",
+ "leido": "2026-11-20T23:51-03:00",
+ "actualizado_doc": "20/11/2026 23:00",
  "eventos": [
+  {
+   "titulo": "BOXEO - BETO PALMETTA VS WILLY GILHEANEY (GBR) EN CARDIFF, GALES",
+   "deporte": "BOXEO",
+   "evento": "BETO PALMETTA VS WILLY GILHEANEY (GBR) EN CARDIFF, GALES",
+   "fechas": null,
+   "etiqueta": "publicable",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.bbbofc.com/results",
+       "href": "https://www.bbbofc.com/results"
+      },
+      {
+       "t": " (Resultado)"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.fightmag.com/boxing-lauren-price-vs-michaela-kotaskova-live-results/",
+       "href": "https://www.fightmag.com/boxing-lauren-price-vs-michaela-kotaskova-live-results/"
+      },
+      {
+       "t": " (Previa)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Peso Welter",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Beto Palmetta le ganó por decisión unánime en 10 rounds al galés Willy Gilheaney (invicto, 7-0) en el Utilita Arena de Cardiff"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Estaba en juego el título Continental Gold de la AMB del peso Welter (Creo) (en el panel figuraba como título europeo de la OMB)"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "a86ca35a"
+   ],
+   "id": "eb926937b172",
+   "version": "7174295318",
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-20"
+  },
   {
    "titulo": "VELA - CAMPEONATO SUDAMERICANO EN RÍO DE JANEIRO, BRASIL",
    "deporte": "VELA",
@@ -112,6 +179,88 @@
    "version": "cc7587780a",
    "publicado_en_doc": false,
    "terminado_desde": "2026-11-18"
+  },
+  {
+   "titulo": "OCEANMAN - FINAL MUNDIAL EN REPÚBLICA DOMINICANA",
+   "deporte": "OCEANMAN",
+   "evento": "FINAL MUNDIAL EN REPÚBLICA DOMINICANA",
+   "fechas": null,
+   "etiqueta": "mas_info",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se nadó del 11 al 15/11"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://results.oceanmanswim.com/eventos/dominican-republic-wfc/clasificacion",
+       "href": "https://results.oceanmanswim.com/eventos/dominican-republic-wfc/clasificacion"
+      },
+      {
+       "t": " (Resultados)"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.instagram.com/oceanman_argentina/",
+       "href": "https://www.instagram.com/oceanman_argentina/"
+      },
+      {
+       "t": " (Oceanman Argentina, para etiquetar)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Ayelen Milenka Trcka (@ayelenmilenkatrcka) fue campeona en la categoría 30-39 años en el Half Oceanman"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Alexis Gregorat Krebs (@alexis.gregorat.krebs) fue 4° en los 2km y "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      },
+      {
+       "t": " en la posta 3x500 con Agos y Santi"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan el resto de los argentinos y sus resultados"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "478d58aa",
+    "6dc4877c"
+   ],
+   "id": "dafa7a05a13b",
+   "version": "289e2455ec",
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-20"
   },
   {
    "titulo": "PÁDEL - PANAMERICANO DE MENORES (FIP JUNIOR AMERICA PADEL CUP) EN CANCÚN, MÉXICO",
@@ -4033,6 +4182,35 @@
      ]
     },
     {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.labrujula24.com/notas/2026/11/20/colapinto-volo-en-las-vegas-y-termino-quinto-en-la-ultima-practica-antes-de-la-clasificacion-n531841/",
+       "href": "https://www.labrujula24.com/notas/2026/11/20/colapinto-volo-en-las-vegas-y-termino-quinto-en-la-ultima-practica-antes-de-la-clasificacion-n531841/"
+      },
+      {
+       "t": " (FP3)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Viernes 20/11: Colapinto fue 5° en la FP3 con 1:35.198, a 1.1 del más rápido, George Russell (Mercedes). Gasly quedó entre los diez primeros"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Clasificación el sábado 21/11 a la 1hs",
+       "b": true
+      }
+     ]
+    },
+    {
      "tipo": "sub",
      "partes": [
       {
@@ -4056,10 +4234,22 @@
        "t": "GP de Abu Dabi (UAE): 4 al 6/12"
       }
      ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Transmisión: Fox Sports, Disney+ y F1 TV "
+      },
+      {
+       "t": "https://www.lanacion.com.ar/deportes/automovilismo/franco-colapinto-en-el-gran-premio-de-las-vegas-en-vivo-el-minuto-a-minuto-de-la-tercera-practica-nid20112026/",
+       "href": "https://www.lanacion.com.ar/deportes/automovilismo/franco-colapinto-en-el-gran-premio-de-las-vegas-en-vivo-el-minuto-a-minuto-de-la-tercera-practica-nid20112026/"
+      }
+     ]
     }
    ],
    "id": "3f83ee1c3780",
-   "version": "b3fa9d7f2b",
+   "version": "4665ea8703",
    "publicado_en_doc": false
   },
   {
@@ -4322,6 +4512,23 @@
      "tipo": "sub",
      "partes": [
       {
+       "t": "Singles Femenino",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "María José Vargas y Valeria Centellas llegaron a la final y se enfrentan entre ellas el sábado 21/11 (Creo)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
        "t": "Finales el sábado 21/11",
        "b": true
       }
@@ -4337,7 +4544,7 @@
     }
    ],
    "id": "08cc43ed292e",
-   "version": "f639a5d7fd",
+   "version": "ae159b0403",
    "publicado_en_doc": false
   },
   {
@@ -4396,6 +4603,26 @@
      ]
     },
     {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.noticiasdelacalle.com.ar/noticias/2026/11/20/208800-argentina-tendra-cuatro-representantes-en-el-panamericano-de-bmx-freestyle-en-chile",
+       "href": "https://www.noticiasdelacalle.com.ar/noticias/2026/11/20/208800-argentina-tendra-cuatro-representantes-en-el-panamericano-de-bmx-freestyle-en-chile"
+      },
+      {
+       "t": " (Nota)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Modalidades Park y Flatland. Clasificación el viernes 20/11"
+      }
+     ]
+    },
+    {
      "tipo": "sub",
      "partes": [
       {
@@ -4422,7 +4649,7 @@
     }
    ],
    "id": "d686a7382d49",
-   "version": "4a20b18b11",
+   "version": "331fef7f5a",
    "publicado_en_doc": false
   },
   {
@@ -4485,6 +4712,495 @@
    ],
    "id": "dfbf893bf031",
    "version": "55e6380751",
+   "publicado_en_doc": false
+  },
+  {
+   "titulo": "GOLF - WALA (WOMENS AMATEUR LATIN AMERICA) EN GUATEMALA (19 al 22 de noviembre)",
+   "deporte": "GOLF",
+   "evento": "WALA (WOMENS AMATEUR LATIN AMERICA) EN GUATEMALA",
+   "fechas": "19 al 22 de noviembre",
+   "etiqueta": "en_curso",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://walagolf.com/leaderboard/T20261112-452",
+       "href": "https://walagolf.com/leaderboard/T20261112-452"
+      },
+      {
+       "t": " (Resultados)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Argentina está representada por: María Cabanillas, María Olivero, Mía Yaya, Bernardita Villalba, Ana Giuliano, Malena Castro, Mercedes Aldana y Clementina Castaño"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Después de 2 vueltas (par 72)",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Mía Yaya es la mejor argentina: 10° con 144 golpes (73-71, par)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Mercedes Aldana 13° con 144 (70-74, par)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "María Olivero 15° con 145 (76-69, +1)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Ana Giuliano 27° con 149 (77-72, +5)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "María Cabanillas 34° con 152 (81-71, +8)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Malena Castro 35° con 152 (75-77, +8)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Clementina Castaño 41° con 153 (74-79, +9)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Bernardita Villalba 51° con 159 (81-78, +15)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Lidera María José Marín (COL) con 132 (-12)"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "61c14a16"
+   ],
+   "id": "a4cfb7f743ac",
+   "version": "85ce42db2b",
+   "publicado_en_doc": false
+  },
+  {
+   "titulo": "PICKLEBALL - CAMPEONATO SUDAMERICANO EN CARMELO, URUGUAY (17 al 22 de noviembre)",
+   "deporte": "PICKLEBALL",
+   "evento": "CAMPEONATO SUDAMERICANO EN CARMELO, URUGUAY",
+   "fechas": "17 al 22 de noviembre",
+   "etiqueta": "en_curso",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.sudamericanodepickleball.com/cronograma",
+       "href": "https://www.sudamericanodepickleball.com/cronograma"
+      },
+      {
+       "t": " (Cronograma)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Es el 1° Sudamericano de Pickleball. Argentina estará representada por:"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "OPEN",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Mariela Coien, Sofia Andino, Lupe Ubeda, Jesica Orseli, Nicolas Yannuzzi, Fernando Zurita, Tomás Alaimo y Martín Petagna"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "SENIOR",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Romina Rosales, Karina Rossi, Gonzalo Valdez, Patricio Bertero, Marcelo Galati y Mariano Garcia Malbrán"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "JUNIOR",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Ana Lombardo, Sara Marcos, Luana Galati, Joaquin Bertainam Thiago Balmaceda y Martino De Santis"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan resultados"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "fe2c6321"
+   ],
+   "id": "1683acdc480f",
+   "version": "46c024e5d0",
+   "publicado_en_doc": false
+  },
+  {
+   "titulo": "GIMNASIA ARTÍSTICA - CAMPEONATO SUDAMERICANO EN LIMA, PERÚ (17 al 23 de noviembre)",
+   "deporte": "GIMNASIA ARTÍSTICA",
+   "evento": "CAMPEONATO SUDAMERICANO EN LIMA, PERÚ",
+   "fechas": "17 al 23 de noviembre",
+   "etiqueta": "en_curso",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://consugi.consugisoft.com/Artistica/151?subdivision=1&categoria=SENIOR&ver=resultados&concurso=I&modalidad=SUELO&genero=MASCULINO",
+       "href": "https://consugi.consugisoft.com/Artistica/151?subdivision=1&categoria=SENIOR&ver=resultados&concurso=I&modalidad=SUELO&genero=MASCULINO"
+      },
+      {
+       "t": " (Resultados)"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://consugi.com/",
+       "href": "https://consugi.com/"
+      },
+      {
+       "t": " (CONSUGI)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Es el Sudamericano Senior y Prejuvenil GAM y GAF, junto con la Copa Abierta Senior"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://lanotasj.com.ar/tres-representantes-sanjuaninos-llegan-a-la-seleccion-argentina-de-gimnasia-artistica-y-competiran-en-el-sudamericano-de-lima/",
+       "href": "https://lanotasj.com.ar/tres-representantes-sanjuaninos-llegan-a-la-seleccion-argentina-de-gimnasia-artistica-y-competiran-en-el-sudamericano-de-lima/"
+      },
+      {
+       "t": " (Nota)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Argentinos confirmados: Nahuel Martínez y Mariano Cornejo (Selección Mayor), Felipe Bruni y Yasmín Aispitarte"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan el resto de la delegación y los resultados"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "407a3c54"
+   ],
+   "id": "350ac4239230",
+   "version": "ca645c8fd5",
+   "publicado_en_doc": false
+  },
+  {
+   "titulo": "BOCHAS - MUNDIAL DE PETANCA EN KHON KAEN, TAILANDIA (20 al 25 de noviembre)",
+   "deporte": "BOCHAS",
+   "evento": "MUNDIAL DE PETANCA EN KHON KAEN, TAILANDIA",
+   "fechas": "20 al 25 de noviembre",
+   "etiqueta": "en_curso",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://khon-kaen2026.fipjp.com/",
+       "href": "https://khon-kaen2026.fipjp.com/"
+      },
+      {
+       "t": " (Web oficial)"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://kkupetanqueworld2026.com/fixtures",
+       "href": "https://kkupetanqueworld2026.com/fixtures"
+      },
+      {
+       "t": " (Fixture y resultados)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Competirán: Juan Roldán, Gabriel Crespi, Ezequiel Pereyra y José Giménez"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Es el Mundial de tripletas masculino con 48 países. Argentina se clasificó en el clasificatorio de Iquique 2025"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan grupo y resultados de Argentina"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "27aa5cea"
+   ],
+   "id": "b8c1d6b05111",
+   "version": "d1fd514d77",
+   "publicado_en_doc": false
+  },
+  {
+   "titulo": "ESQUÍ CROSS COUNTRY - CAMPEONATO FIS EN BEITOSTØLEN, NORUEGA (20 al 22 de noviembre)",
+   "deporte": "ESQUÍ CROSS COUNTRY",
+   "evento": "CAMPEONATO FIS EN BEITOSTØLEN, NORUEGA",
+   "fechas": "20 al 22 de noviembre",
+   "etiqueta": "en_curso",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=CC&eventid=63292&seasoncode=2027",
+       "href": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=CC&eventid=63292&seasoncode=2027"
+      },
+      {
+       "t": " (Web oficial)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Compiten Agustina Groetzner, Franco Dal Farra, Nahiara Diaz Gonzalez y Mateo Sauma"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "10km Clásico Femenino (20/11)",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.fis-ski.com/DB/general/results.html?sectorcode=CC&raceid=52681",
+       "href": "https://www.fis-ski.com/DB/general/results.html?sectorcode=CC&raceid=52681"
+      },
+      {
+       "t": " (Resultados)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Nahiara Diaz Gonzalez fue 63° con 31:28.7 (+5:15.7)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Agustina Groetzner fue 70° con 33:02.4 (+6:49.4)"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "10km Clásico Masculino (20/11)",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.fis-ski.com/DB/general/results.html?sectorcode=CC&raceid=52682",
+       "href": "https://www.fis-ski.com/DB/general/results.html?sectorcode=CC&raceid=52682"
+      },
+      {
+       "t": " (Resultados)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Franco Dal Farra fue 95° con 25:49.2 (+3:03.3)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Mateo Sauma fue 142° con 28:08.9 (+5:23.0)"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Sprint clásico el sábado 21/11 y 15km libre el domingo 22/11",
+       "b": true
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "50809f8d",
+    "bd1103ad"
+   ],
+   "id": "c801c33caff0",
+   "version": "7f47d8f175",
    "publicado_en_doc": false
   },
   {
@@ -4653,6 +5369,43 @@
    ],
    "id": "9aac4f5ebb84",
    "version": "15e264c753",
+   "publicado_en_doc": false
+  },
+  {
+   "titulo": "ESQUÍ ALPINO - COPA DEL MUNDO EN GURGL, AUSTRIA (21 de noviembre)",
+   "deporte": "ESQUÍ ALPINO",
+   "evento": "COPA DEL MUNDO EN GURGL, AUSTRIA",
+   "fechas": "21 de noviembre",
+   "etiqueta": "agenda",
+   "seccion": "agenda",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=AL&eventid=62773&seasoncode=2027",
+       "href": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=AL&eventid=62773&seasoncode=2027"
+      },
+      {
+       "t": " (Web oficial)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Compite Francesca Baruzzi en Slalom"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "92863303"
+   ],
+   "id": "62a1f09b395b",
+   "version": "8eed86f4ae",
    "publicado_en_doc": false
   },
   {
@@ -5256,6 +6009,35 @@
    "publicado_en_doc": false
   },
   {
+   "titulo": "FÚTBOL - AMISTOSO DE LA SELECCIÓN VS ALEMANIA EN LA PLATA, ARGENTINA (29 de noviembre)",
+   "deporte": "FÚTBOL",
+   "evento": "AMISTOSO DE LA SELECCIÓN VS ALEMANIA EN LA PLATA, ARGENTINA",
+   "fechas": "29 de noviembre",
+   "etiqueta": "agenda",
+   "seccion": "agenda",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "vs Alemania el domingo 29/11 a las 19hs",
+       "b": true
+      },
+      {
+       "t": " en el Estadio Único Tricampeones del Mundo - Diego Armando Maradona de La Plata"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "97682b19"
+   ],
+   "id": "b533ebd242c4",
+   "version": "e7bc207d0d",
+   "publicado_en_doc": false
+  },
+  {
    "titulo": "VELA - SSL GOLD CUP (COPA DEL MUNDO DE VELA) EN RÍO DE JANEIRO, BRASIL (2 al 13 de diciembre)",
    "deporte": "VELA",
    "evento": "SSL GOLD CUP (COPA DEL MUNDO DE VELA) EN RÍO DE JANEIRO, BRASIL",
@@ -5514,6 +6296,35 @@
    "publicado_en_doc": false
   },
   {
+   "titulo": "FÚTBOL - AMISTOSO DE LA SELECCIÓN VS URUGUAY EN BARRACAS, ARGENTINA (4 de diciembre)",
+   "deporte": "FÚTBOL",
+   "evento": "AMISTOSO DE LA SELECCIÓN VS URUGUAY EN BARRACAS, ARGENTINA",
+   "fechas": "4 de diciembre",
+   "etiqueta": "agenda",
+   "seccion": "agenda",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "vs Uruguay el viernes 4/12 a las 19hs",
+       "b": true
+      },
+      {
+       "t": " en el Estadio de Barracas Central"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "3e10a17f"
+   ],
+   "id": "86a834f665cb",
+   "version": "c1feb89f57",
+   "publicado_en_doc": false
+  },
+  {
    "titulo": "DODGEBALL - CAMPEONATO MUNDIAL EN BANGKOK, TAILANDIA (5 al 13 de diciembre)",
    "deporte": "DODGEBALL",
    "evento": "CAMPEONATO MUNDIAL EN BANGKOK, TAILANDIA",
@@ -5616,6 +6427,31 @@
    ],
    "id": "61326fe2ad0f",
    "version": "12336fc7a9",
+   "publicado_en_doc": false
+  },
+  {
+   "titulo": "FÚTBOL - SORTEO DEL MUNDIAL FEMENINO BRASIL 2027 (11 de diciembre)",
+   "deporte": "FÚTBOL",
+   "evento": "SORTEO DEL MUNDIAL FEMENINO BRASIL 2027",
+   "fechas": "11 de diciembre",
+   "etiqueta": "agenda",
+   "seccion": "agenda",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Sorteo del Mundial de Brasil 2027"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "d2eb3bd9"
+   ],
+   "id": "ad2d495bfcec",
+   "version": "52e2e2d7ef",
    "publicado_en_doc": false
   },
   {
@@ -5785,6 +6621,31 @@
    "publicado_en_doc": false
   },
   {
+   "titulo": "PREMIOS OLIMPIA 2026 EN TANGO PORTEÑO, BUENOS AIRES (21 de diciembre)",
+   "deporte": "",
+   "evento": "PREMIOS OLIMPIA 2026 EN TANGO PORTEÑO, BUENOS AIRES",
+   "fechas": "21 de diciembre",
+   "etiqueta": "agenda",
+   "seccion": "agenda",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Todavía no están los nominados"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "5e117001"
+   ],
+   "id": "051702656cd1",
+   "version": "ccf486824b",
+   "publicado_en_doc": false
+  },
+  {
    "titulo": "TENIS - UNITED CUP EN AUSTRALIA (1 al 10 de enero de 2027)",
    "deporte": "TENIS",
    "evento": "UNITED CUP EN AUSTRALIA",
@@ -5815,6 +6676,98 @@
    ],
    "id": "7a7ae83319ac",
    "version": "3a7cf95340",
+   "publicado_en_doc": false
+  },
+  {
+   "titulo": "BÉISBOL - SERIE DE LAS AMÉRICAS 2027 EN CARACAS, VENEZUELA (9 al 16 de febrero de 2027)",
+   "deporte": "BÉISBOL",
+   "evento": "SERIE DE LAS AMÉRICAS 2027 EN CARACAS, VENEZUELA",
+   "fechas": "9 al 16 de febrero de 2027",
+   "etiqueta": "agenda",
+   "seccion": "agenda",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Argentina estará en el Grupo B con México, República Dominicana, Panamá y Colombia"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "8dd5c1f9"
+   ],
+   "id": "9725fc4440c9",
+   "version": "7879ac4663",
+   "publicado_en_doc": false
+  },
+  {
+   "titulo": "VI JUEGOS SURAMERICANOS DE PLAYA IQUIQUE 2027, CHILE (11 al 21 de marzo de 2027)",
+   "deporte": "",
+   "evento": "VI JUEGOS SURAMERICANOS DE PLAYA IQUIQUE 2027, CHILE",
+   "fechas": "11 al 21 de marzo de 2027",
+   "etiqueta": "agenda",
+   "seccion": "agenda",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://iquique2027.cl/",
+       "href": "https://iquique2027.cl/"
+      },
+      {
+       "t": " (Web oficial)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "El evento reunirá 14 disciplinas deportivas: Vóley Playa, Fútbol Playa, Rugby Playa, Tenis Playa, Lucha de Playa, Surf, Natación en Aguas Abiertas, Esquí Náutico, Remo (Beach Sprint Coastal), Triatlón, Vela, Actividades Subacuáticas, Skateboarding y Handball de Playa / Canotaje"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "9be44e2c"
+   ],
+   "id": "3a2df7596a41",
+   "version": "d087912bc9",
+   "multideportivo": true,
+   "multi": {
+    "nombre": "Playa Iquique 2027",
+    "general": [
+     {
+      "tipo": "link",
+      "partes": [
+       {
+        "t": "https://iquique2027.cl/",
+        "href": "https://iquique2027.cl/"
+       },
+       {
+        "t": " (Web oficial)"
+       }
+      ]
+     },
+     {
+      "tipo": "texto",
+      "partes": [
+       {
+        "t": "El evento reunirá 14 disciplinas deportivas: Vóley Playa, Fútbol Playa, Rugby Playa, Tenis Playa, Lucha de Playa, Surf, Natación en Aguas Abiertas, Esquí Náutico, Remo (Beach Sprint Coastal), Triatlón, Vela, Actividades Subacuáticas, Skateboarding y Handball de Playa / Canotaje"
+       }
+      ]
+     }
+    ],
+    "medallero": null,
+    "resumen_final": "",
+    "dias": [],
+    "deportes": []
+   },
    "publicado_en_doc": false
   },
   {
