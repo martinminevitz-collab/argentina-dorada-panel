@@ -135,7 +135,18 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "María José Vargas y Valeria Centellas llegaron a la final y se enfrentan entre ellas el sábado 21/11 (Creo)"
+       "t": "María José Vargas le ganó la final a Valeria Centellas por 15-7 y 15-6 y se consagró "
+      },
+      {
+       "t": "CAMPEONA",
+       "b": true
+      },
+      {
+       "t": " del Mile High Open. Centellas fue "
+      },
+      {
+       "t": "SUBCAMPEONA",
+       "b": true
       }
      ]
     },
@@ -143,7 +154,7 @@
      "tipo": "sub",
      "partes": [
       {
-       "t": "Finales el sábado 21/11",
+       "t": "Final de dobles el sábado 21/11",
        "b": true
       }
      ]
@@ -152,13 +163,13 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Faltan resultados de singles"
+       "t": "Vargas y Centellas juegan la final de dobles vs Herrera / Martínez (MEX/GUA). Falta el resultado"
       }
      ]
     }
    ],
    "id": "08cc43ed292e",
-   "version": "ae159b0403",
+   "version": "49f092a970",
    "publicado_en_doc": false,
    "visto": "2026-11-21"
   },
@@ -5714,13 +5725,94 @@
        "t": "Lidera María José Marín (COL) con 132 (-12)"
       }
      ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Después de 3 vueltas (par 72)",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "María Olivero es la mejor argentina: 8° con 213 golpes (76-69-68, -3)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Mercedes Aldana 14° con 217 (70-74-73, +1)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Mía Yaya 19° con 221 (73-71-77, +5)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "María Cabanillas 36° con 226 (81-71-74, +10)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Clementina Castaño 39° con 227 (74-79-74, +11)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Ana Giuliano 42° con 228 (77-72-79, +12)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Malena Castro 43° con 228 (75-77-76, +12)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Bernardita Villalba 50° con 237 (81-78-78, +21)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Lidera María José Marín (COL) con 197 (-19)"
+      }
+     ]
     }
    ],
    "refs_panel": [
     "61c14a16"
    ],
    "id": "a4cfb7f743ac",
-   "version": "85ce42db2b",
+   "version": "22ec653268",
    "publicado_en_doc": false,
    "visto": "2026-11-21"
   },
@@ -6288,11 +6380,11 @@
    "visto": "2026-11-21"
   },
   "cde49e99022c": {
-   "titulo": "JUDO - CAMPEONATO MUNDIAL JUNIOR EN TASHKENT, UZBEKISTÁN (19 al 22 de noviembre)",
+   "titulo": "JUDO - CAMPEONATO MUNDIAL JUNIOR EN TASHKENT, UZBEKISTÁN",
    "deporte": "JUDO",
    "evento": "CAMPEONATO MUNDIAL JUNIOR EN TASHKENT, UZBEKISTÁN",
-   "fechas": "19 al 22 de noviembre",
-   "etiqueta": "en_curso",
+   "fechas": null,
+   "etiqueta": "publicable",
    "seccion": "resultados",
    "ya_publicado": false,
    "bloques": [
@@ -6324,14 +6416,47 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Arrancó el jueves 19/11. Individual del 19 al 21/11 y equipos mixtos el 22/11. Argentina tiene 1 judoka inscripto. Falta el nombre"
+       "t": "Arrancó el jueves 19/11. Individual del 19 al 21/11 y equipos mixtos el 22/11. Argentina tuvo 1 judoka: Ignacio Landolfi"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "-81kg Masculino",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Ignacio Landolfi perdió en primera ronda vs Szymon Szulik (POL) por ippon"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://ijf.org/judoka/100377/contests",
+       "href": "https://ijf.org/judoka/100377/contests"
+      },
+      {
+       "t": " (Fuente)"
       }
      ]
     }
    ],
+   "refs_panel": [
+    "7e614ed6"
+   ],
    "id": "cde49e99022c",
-   "version": "8ce29e3e7f",
+   "version": "88520f38ca",
    "publicado_en_doc": false,
+   "terminado_desde": "2026-11-21",
    "visto": "2026-11-21"
   },
   "d4a54d7e99fc": {
@@ -7332,6 +7457,43 @@
      ]
     },
     {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.adnsur.com.ar/deportes/los-pumas-se-derrumbaron-ante-francia--45-17-y-jugaran-por-el-septimo-puesto-del-nations-championship_a6b02382bfd7203bb626680aa",
+       "href": "https://www.adnsur.com.ar/deportes/los-pumas-se-derrumbaron-ante-francia--45-17-y-jugaran-por-el-septimo-puesto-del-nations-championship_a6b02382bfd7203bb626680aa"
+      },
+      {
+       "t": " (Resultado)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "21-11 Vs Francia: perdió 45-17 en el Stade de France (tries de Justo Piccardo y Pablo Matera, 2 conversiones de Tomás Albornoz). Iba 14-10 abajo al descanso. Roja para Mayco Vivas y amarilla para Julián Montoya"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Argentina cerró 4° de la conferencia Sur con 11 pts y jugará por el 7° puesto"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "7° puesto vs Escocia en Twickenham (Londres) el próximo fin de semana",
+       "b": true
+      }
+     ]
+    },
+    {
      "tipo": "texto",
      "partes": [
       {
@@ -7345,7 +7507,7 @@
     }
    ],
    "id": "de102f71eab3",
-   "version": "34ce4d773e",
+   "version": "a8c156a20e",
    "publicado_en_doc": false,
    "visto": "2026-11-21"
   },
@@ -7893,6 +8055,91 @@
    "version": "7174295318",
    "publicado_en_doc": false,
    "terminado_desde": "2026-11-20",
+   "visto": "2026-11-21"
+  },
+  "f9141d114373": {
+   "titulo": "UFC - FIGHT NIGHT EN DOHA, QATAR",
+   "deporte": "UFC",
+   "evento": "FIGHT NIGHT EN DOHA, QATAR",
+   "fechas": null,
+   "etiqueta": "publicable",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://agentmma.com/news/90837-aljamain-sterling-to-face-kevin-vallejos-at-ufc-qatar-on-nov-21",
+       "href": "https://agentmma.com/news/90837-aljamain-sterling-to-face-kevin-vallejos-at-ufc-qatar-on-nov-21"
+      },
+      {
+       "t": " (Info)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Peso Pluma",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Kevin \"Chino\" Vallejos (récord 18-1) vs Aljamain Sterling (USA) en la cartelera principal, es la co-estelar (3 rounds)"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.ufcalendar.com/events/ufc-fight-night-2026-11-21",
+       "href": "https://www.ufcalendar.com/events/ufc-fight-night-2026-11-21"
+      },
+      {
+       "t": " (Horarios)"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.infobae.com/deportes/2026/11/21/el-argentino-kevin-chino-vallejos-gano-la-pelea-mas-importante-de-su-carrera-en-ufc-en-las-tarjetas-rompio-en-llanto-y-pidio-pelear-por-el-titulo/",
+       "href": "https://www.infobae.com/deportes/2026/11/21/el-argentino-kevin-chino-vallejos-gano-la-pelea-mas-importante-de-su-carrera-en-ufc-en-las-tarjetas-rompio-en-llanto-y-pidio-pelear-por-el-titulo/"
+      },
+      {
+       "t": " (Resultado)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Kevin \"Chino\" Vallejos le ganó por decisión unánime al ex campeón de peso gallo Aljamain Sterling (USA), 4° del ranking pluma (30-27, 30-27 y 29-28). Es su 5° victoria seguida en UFC"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Después de la pelea pidió ir por el título: \"Quedo a las órdenes de Volkanovski\""
+      }
+     ]
+    }
+   ],
+   "id": "f9141d114373",
+   "version": "977bfa2dbb",
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-21",
    "visto": "2026-11-21"
   },
   "fde01f59acd9": {
