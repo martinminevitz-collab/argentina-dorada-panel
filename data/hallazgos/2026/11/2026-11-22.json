@@ -1,5 +1,47 @@
 [
  {
+  "id": "7a9694e76b5c",
+  "titulo": "María Olivero nuevamente entre las diez mejores del WALA - Asociación Argentina de Golf",
+  "resumen": "María Olivero nuevamente entre las diez mejores del WALA Asociación Argentina de Golf - AAG",
+  "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNYmxqZV95QS13NnIxVTF6NDBjVDBXLU9XVUhYdVRJX3RWM185cGRkVWt3cXJsMzZpTEhBZUZRNzZubktRLUl3RlFtdWM4OTlkS1FSdmxuSUJ4ZEpUUVEweHJ0Z08xcVAyaTdmc2NKVkNoRVJGWHlySElHUVhDR0MxOG4tRHVKdWxLNkswSHJrSGk0b0ZFWFE?oc=5",
+  "fuente": "Asociación Argentina de Golf - AAG",
+  "deporte": "Golf",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-22T21:51+00:00",
+  "encontrado": "2026-11-22T18:59-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
+  "id": "934c4d9ae13b",
+  "titulo": "Briatore destacó a Colapinto y Gasly tras el GP de Las Vegas: “Un gran trabajo”",
+  "resumen": "Briatore destacó a Colapinto y Gasly tras el GP de Las Vegas: “Un gran trabajo” Bolavip Argentina",
+  "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQQ3dQRTc1UERLQ1JMTDNzekJ6NkFIbzhZcU5NejVlZ1JzU1dYMmNmbTl5WV9HN1lqWlJMbHBzRS1lXzNCeFREYTFVX1c1X0Z0NEhxbWZRajBWcGQzNmRLRFI3TkVtYWlqUFM2eklVeS1aZU1MM0kxcUxaWFNjRHV1MlJTVVdiZFZrc0hnVHlDWkx6aVVUQ0F4ejNQTzZqVERCRy0zRzl3bzlhdF9ObnfSAbMBQVVfeXFMTV95TDJya3NRaUg4UEYwUmwxS3Ftb19HaEJGUk5xSGdjb1dmcS02SHdJcGVvcTlGR21TbW5pUmItWVBfWlBmOXR5Qy1JTGRPSkU2U0lpVS1TWlhUMTRXV24tV3FoQVFJUm16LW1jUzdVa3R6SlZQWm5UQ194bnZyZXlkNENXdjlQM2Z6NEx3aVowVXlCNjFhQXkxNWVYYnFqcWpEWEZYNFM3b3dGVlVTc0hsVFU?oc=5",
+  "fuente": "Bolavip Argentina",
+  "deporte": "Formula 1",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-22T19:52+00:00",
+  "encontrado": "2026-11-22T18:59-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
+  "id": "92dca648637d",
+  "titulo": "Argentina comienza a entrenarse para los dos partidos clave en las eliminatorias al Mundial 2027",
+  "resumen": "Argentina comienza a entrenarse para los dos partidos clave en las eliminatorias al Mundial 2027 La Voz del Interior",
+  "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxONUExZ1gxdHdFNzFzTUxTTXJxcEZyM0hRWEtvWGh6Z21VQkd0UFllRDI3Szk1X2F2dXRHZmpCa2ZYQnhXMHl4TVJhcHNqdVVyYUNxZG82MERpdGxaNG5OcU5KR3dkN2M5VUloTnh2OTBfbmdrc0cwZ0U5YnJ2S2ppaHgtRXRqZFplUWJYOUNzN3B6RU9vYnNHUXY1ZXRNcmcxeEhpVHhBSm9RYjduRk1NRTV5aGRTbnM5bzlDUkg3dV8?oc=5",
+  "fuente": "La Voz del Interior",
+  "deporte": "Basquet",
+  "tipo": "agenda",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-22T19:51+00:00",
+  "encontrado": "2026-11-22T18:58-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
   "id": "9eeab0ebfe32",
   "titulo": "Después del kimchi, viene el soju: las bebidas coreanas que conquistan las mesas argentinas",
   "resumen": "Después del kimchi, viene el soju: las bebidas coreanas que conquistan las mesas argentinas La Nación",
@@ -12,6 +54,20 @@
   "encontrado": "2026-11-22T16:10-03:00",
   "bot": "resultados",
   "noticia": false
+ },
+ {
+  "id": "ac53714d25d6",
+  "titulo": "🫂🇦🇷 ¡El récord para cerrar! \n\n🫡💫",
+  "resumen": "🫂🇦🇷 ¡El récord para cerrar! \n\n🫡💫",
+  "link": "https://www.instagram.com/reel/DgCv224BExo/",
+  "fuente": "cadda.org.ar",
+  "deporte": "Natacion",
+  "tipo": "resultado",
+  "en_buenos_aires": false,
+  "publicado": null,
+  "encontrado": "2026-11-22T19:01-03:00",
+  "bot": "resultados",
+  "noticia": true
  },
  {
   "id": "adec63f70db4",
@@ -112,6 +168,20 @@
   "noticia": false
  },
  {
+  "id": "a77205f4b59c",
+  "titulo": "Cuándo vuelve a jugar la Selección Argentina en el Mundial Sub 17 y qué necesita para clasificar",
+  "resumen": "Cuándo vuelve a jugar la Selección Argentina en el Mundial Sub 17 y qué necesita para clasificar Olé",
+  "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPdTlBS3dlOFN1RUxBc3d6ZmExclJwYTBsekJTZlh6eEh4MlY1X2JOXzFOTUtaSWFPTVdhdnQ0TVlOSElYb0M1NlVoaXJIOGNwS1B3X3BSZm1kb3dBenhld1RxQklpcDhMTWJpTTNHQjZ1amViUENscUF2TW1PMFFXMHl2NVRJQVlwODBZT0NJbmJaMU9pclpNU0xubDVkb0RuOWphRktENjE2VlhzTUpwVG9ZYjFlTWM0SWhsX0Zha9IBvwFBVV95cUxPdTlBS3dlOFN1RUxBc3d6ZmExclJwYTBsekJTZlh6eEh4MlY1X2JOXzFOTUtaSWFPTVdhdnQ0TVlOSElYb0M1NlVoaXJIOGNwS1B3X3BSZm1kb3dBenhld1RxQklpcDhMTWJpTTNHQjZ1amViUENscUF2TW1PMFFXMHl2NVRJQVlwODBZT0NJbmJaMU9pclpNU0xubDVkb0RuOWphRktENjE2VlhzTUpwVG9ZYjFlTWM0SWhsX0Zhaw?oc=5",
+  "fuente": "Olé",
+  "deporte": "Futsal",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-22T17:39+00:00",
+  "encontrado": "2026-11-22T18:59-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
   "id": "2c63333a5719",
   "titulo": "La Selección Argentina falló muchos goles en el Mundial Sub 17, pero venció a Mozambique y sigue viva",
   "resumen": "La Selección Argentina falló muchos goles en el Mundial Sub 17, pero venció a Mozambique y sigue viva El Destape",
@@ -122,6 +192,20 @@
   "en_buenos_aires": false,
   "publicado": "2026-11-22T17:26+00:00",
   "encontrado": "2026-11-22T16:09-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
+  "id": "b0849d12d6db",
+  "titulo": "Colapinto superó a Norris y Piastri a la vez en la vuelta 12 de Las Vegas",
+  "resumen": "Colapinto superó a Norris y Piastri a la vez en la vuelta 12 de Las Vegas El Argentino Diario",
+  "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQRWNUbVZmajJoMHRya2o5T0ZpX05EUVVOU1lPRk11ZnFqQmJHSDg2SEVqNEk5a0VUQnY0dERPQURVV1pDZUREM1J1QmNaOHFfSmpseUFNSWNWQWpaYmdyUE5Rb3RGd09tbTFRb0Z2ZkdzSU55cGhLanYxRER1RnhfR1RhbFlCeWh0YXRWQ1NSX1I0b1B0VmEyZmZfVVBoSjZRaUZiQjkyT3ItYWVickVqa3V4cnpTYWUwa1FkQmlXd2RCM2w4c0E?oc=5",
+  "fuente": "El Argentino Diario",
+  "deporte": "Formula 1",
+  "tipo": "resultado",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-22T17:24+00:00",
+  "encontrado": "2026-11-22T18:59-03:00",
   "bot": "resultados",
   "noticia": false
  },
@@ -192,6 +276,20 @@
   "en_buenos_aires": false,
   "publicado": "2026-11-22T14:45+00:00",
   "encontrado": "2026-11-22T12:59-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
+  "id": "fc6a6d449877",
+  "titulo": "Federico Beligoy, el árbitro argentino en el centro de una polémica inmobiliaria",
+  "resumen": "Federico Beligoy, el árbitro argentino en el centro de una polémica inmobiliaria Radio El Condor",
+  "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQcWt1YThyZVd5Z0g0WW9Na1JwVGJaUVZSWEkxZUVPODlfZG1LQlRGRnd1Zno1Tm5pVXRfNkUxdGYwc01iTGl4c3VmSW1NbXUzeGhDbC1jZ04yME1iM3FRVlV4N3RpZktnRER4bG50d25yVWFEd1N4eU9RcGNiMHJ4LW1YODJ5cGZxN01EbHBkdE9MWGdFTF9kLTF0RHJiTXY5bjh6bDZfR1dsejRxdHZXaw?oc=5",
+  "fuente": "Radio El Condor",
+  "deporte": "Golf",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-22T14:22+00:00",
+  "encontrado": "2026-11-22T18:59-03:00",
   "bot": "resultados",
   "noticia": false
  },
@@ -626,6 +724,20 @@
   "en_buenos_aires": false,
   "publicado": "2026-11-21T19:56+00:00",
   "encontrado": "2026-11-22T01:15-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
+  "id": "15f04a7079a9",
+  "titulo": "Mauro Corbalán ganó por puntos en la Federación Argentina de Box",
+  "resumen": "Mauro Corbalán ganó por puntos en la Federación Argentina de Box » Cholila Online",
+  "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1PTGJhclhjX2E4WW40aW11VWRGTV9yWDNhb2NXS1RNUExJTmRuN2tOWU9qVHJlbHE3MUJTQVVhOEZncHFCZTdZcXhMbllmRUg3cklXRVYtTUliNlktelhkd3ZwdnBTV1lK?oc=5",
+  "fuente": "» Cholila Online",
+  "deporte": "Boxeo",
+  "tipo": "resultado",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-21T18:18+00:00",
+  "encontrado": "2026-11-22T18:58-03:00",
   "bot": "resultados",
   "noticia": false
  },
