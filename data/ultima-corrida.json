@@ -1,17 +1,17 @@
 {
  "resultados": {
-  "cuando": "2026-11-22T01:17-03:00",
-  "nuevos": 31,
-  "resultado": 4,
+  "cuando": "2026-11-22T04:34-03:00",
+  "nuevos": 3,
+  "resultado": 0,
   "agenda": 0,
-  "otro": 27,
-  "noticias": 1,
+  "otro": 3,
+  "noticias": 0,
   "en_buenos_aires": 0,
-  "revisadas": 2616,
+  "revisadas": 2505,
   "viejas": 167,
-  "no_argentinas": 666,
+  "no_argentinas": 635,
   "excluidas": 26,
-  "repetidas": 259,
+  "repetidas": 281,
   "fuentes_caidas": [
    "Comité Olímpico Argentino",
    "Totallympics (Argentina)",
@@ -31,6 +31,7 @@
    "allsportdb.com",
    "totallympics.com",
    "infinity.worldskate.org",
+   "ajptour.com",
    "wkf.net",
    "uww.org",
    "iwf.sport",
@@ -38,10 +39,10 @@
    "ittf.com",
    "sailing.org"
   ],
-  "segundos": 284
+  "segundos": 287
  },
  "doc": {
-  "cuando": "2026-11-22T02:00-03:00",
+  "cuando": "2026-11-22T04:34-03:00",
   "ok": true,
   "eventos": 54,
   "publicable": 12,
