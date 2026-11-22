@@ -1,5 +1,33 @@
 [
  {
+  "id": "56962233419b",
+  "titulo": "La estrella argentina se desmayó inesperadamente mientras concedía una entrevista en el campo de fútbol.",
+  "resumen": "La estrella argentina se desmayó inesperadamente mientras concedía una entrevista en el campo de fútbol. Vietnam.vn",
+  "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOTmdUanhEc1lJNmJiMW9udmlYUTFIaXRZUV9ORXFFRXBRaHRxUWZEb042RjhJYW9fYnRKX2VqRVY1Si1ZYXV4OXVZdnNJOHhTMkNrbk1hOElweGtmTU5CcllSc25ockVDd0VoTFR1M2J5em9IUEx6OU1TVURwSVF3bXppSHdwRDlMa1h3bmxpeHBGRnd4UFQxaWVXaUdXVXJlek4zNA?oc=5",
+  "fuente": "Vietnam.vn",
+  "deporte": "Futbol",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-22T09:09+00:00",
+  "encontrado": "2026-11-22T07:02-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
+  "id": "55a7354a78b1",
+  "titulo": "De Cusco a Ushuaia en bicicleta: la travesía de 8 mil kilómetros de un argentino para reforestar Sudamérica",
+  "resumen": "De Cusco a Ushuaia en bicicleta: la travesía de 8 mil kilómetros de un argentino para reforestar Sudamérica Critica Sur",
+  "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQZXdzQUp5cWNUTUZmY3o4NWxhYkNLWHdYR04yYWNoM0dYR0lJbWoyaUtTOHk0OC1SRzNna0dkaGRFeHI2cDFqYk5od3prZEVRT0stbVVZOUdNc0t5YXR2c0YzSWY4bTZUNF8tTmYtaE1IVy1kdTZaaTFKRS1oTVFwT1AtMlNabW1NSkdHZ0hpX1lQbkRGbW5vLW4zY0dOMUpTZEdCdElVX0doWlFtczFtTlF0bXh0Y0dDLXNoQ0pERTM4WFNvZFFFWWYtajloVnhjMWU1UDJ5RHJYQkla?oc=5",
+  "fuente": "Critica Sur",
+  "deporte": "Ciclismo de ruta",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-22T07:31+00:00",
+  "encontrado": "2026-11-22T07:02-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
   "id": "1d8675268c4f",
   "titulo": "Colapinto y un balance positivo del GP de Las Vegas: “Lindo haber peleado con los de adelante”",
   "resumen": "Colapinto y un balance positivo del GP de Las Vegas: “Lindo haber peleado con los de adelante” Bolavip Argentina",
@@ -108,6 +136,20 @@
   "en_buenos_aires": false,
   "publicado": "2026-11-21T23:53+00:00",
   "encontrado": "2026-11-22T04:29-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
+  "id": "1b27904e58fd",
+  "titulo": "Gustavo Silva y Gabriel Morgan B. comparten la punta del Abierto Los Leones antes de la ronda final",
+  "resumen": "Gustavo Silva y Gabriel Morgan B. comparten la punta del Abierto Los Leones antes de la ronda final Federación Chilena de Golf",
+  "link": "https://news.google.com/rss/articles/CBMimgJBVV95cUxOdkxBM3NhYzhYTUdFaEloN2w1amdGS2ZHdkRRWnZBQW9hRXVSRUUybUZRZUx6TzR6TnphTDg1OFdVb0dxeE4yYmdYQ0IxaHM0SGxFMDV5dWo5czA0TXp4V2haLUFIZ2tGU2k1LVg4VmVyUzdLVnNsNHQ2Z1VVOEF2X280WnI3QmZIcWRFRUpIOUVKNERETTk2NnMzMDdQdzRSd0hDVEcxX2VoMmV5VzdMeEhCM1V2cjlTdVQzWmdEdlpCYWpyZGdEa3AtRzlFcVVhUHZkUHQ1dFFBV2FpX1BlUGx5QXl2R1RRbi13VUpXUGxnZkNlWFBpTHlhazZVMVFCaVlVTzhEVVlWRnFZVk5oYmFnaWhOcW9hOWc?oc=5",
+  "fuente": "Federación Chilena de Golf",
+  "deporte": "Golf",
+  "tipo": "resultado",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-21T23:42+00:00",
+  "encontrado": "2026-11-22T07:03-03:00",
   "bot": "resultados",
   "noticia": false
  },
@@ -276,6 +318,20 @@
   "en_buenos_aires": false,
   "publicado": "2026-11-21T14:53+00:00",
   "encontrado": "2026-11-22T01:13-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
+  "id": "5057dc18a3d0",
+  "titulo": "Papeschi recuperó la corona argentina en una gran pelea",
+  "resumen": "Papeschi recuperó la corona argentina en una gran pelea El Civismo",
+  "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1DNTBYbWxHQVFuQkxXVTlKWUR6ZlJ5VVd0YWpXVnNTNy1SNmNwQnlrMV83eHFhSFRFNkVvMzRUYXhsUDZTWk5sWWdrVG56bTVSeXc?oc=5",
+  "fuente": "El Civismo",
+  "deporte": "Boxeo",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-21T14:15+00:00",
+  "encontrado": "2026-11-22T07:02-03:00",
   "bot": "resultados",
   "noticia": false
  },
