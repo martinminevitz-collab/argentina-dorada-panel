@@ -1,5 +1,33 @@
 [
  {
+  "id": "58171d00ebe2",
+  "titulo": "Promesa del judo argentino competirá en el Panamericano Infantil en Cancún",
+  "resumen": "Promesa del judo argentino competirá en el Panamericano Infantil en Cancún La Posta Noticias",
+  "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNSFVTWkxmVWs1ZHR4WDBZZVMwMGdpUTM0d0pEU0tPTmZmOTBjZzRyLUhBam1PZWpvSVo1X012NHE2YnhPVWZoQVFSckVBTTM1R0NuY1NFNGpObldNekhuRWw5LVJxNDVycjRybnZsQWpYQ1paZDAtWTYtRVBqbkRIeEUzT2dMMGoxQThwU3N2Qi1NbHd4TzZRb1ZQUTdDQXVKWmFoc3B6TUtOMnJqazljcDJ2bUFPVkhha2pYdzZFR3VacU4tM1E?oc=5",
+  "fuente": "La Posta Noticias",
+  "deporte": "Judo",
+  "tipo": "agenda",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-23T10:07+00:00",
+  "encontrado": "2026-11-23T07:30-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
+  "id": "e46f0cb03d6c",
+  "titulo": "La Selección Argentina busca clasificar al Mundial de básquet 2027",
+  "resumen": "La Selección Argentina busca clasificar al Mundial de básquet 2027 Minuto Neuquén",
+  "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPOUwxVFh5aWZtVk5tUmpzMUJ4aTBfREN6NGMwZW5GalViSHU2aVpPZWdQNjRXcFg1aXFmdjVyaUp6WkpfSUFyWm1YV1YyWllKOHNfT0NrUDkzY1BRSm84UXVXTVZCV09NcHY4SFdFWXpGTVVQUUE0eXpZXzNJTHhVODVubWsxNlcza0s0NUo0S1k3RHNWdzd1YlNPdWNEakRXa0c1b0xraTF2ZUJTWkJzUVFHMEx5Qm9CcTlNSkt0MGlGRzZ5QzFz?oc=5",
+  "fuente": "Minuto Neuquén",
+  "deporte": "Basquet",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-23T08:00+00:00",
+  "encontrado": "2026-11-23T07:29-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
   "id": "c4d16f8afd28",
   "titulo": "En San Juan, el salteño Maxi Farfán se coronó campeón argentino junior en judo",
   "resumen": "En San Juan, el salteño Maxi Farfán se coronó campeón argentino junior en judo Nuevo Diario de Salta",
@@ -80,6 +108,20 @@
   "en_buenos_aires": false,
   "publicado": null,
   "encontrado": "2026-11-23T01:31-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
+  "id": "97aebf0ca0d9",
+  "titulo": "Salta será sede de la primera competencia Hike & Fly de Argentina",
+  "resumen": "Salta será sede de la primera competencia Hike & Fly de Argentina HolaSalta Noticias",
+  "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPUUZ4c25mdFlETS1KS1B2eXU3d3N6ZFMzNi1YX0pQUFNfUjdfelhnQnM3UWMwMjdMWVJISFZ5UmhDLWhLSEhsSXh6QWhWNmFBRHctSllGblRYYmJNVWYydXNtcFI0RHRIUnV6aHh4b1BKcFc0OEZWT052bm13YjZIa2JSdkF1RVg2aUFoTndQbXl1RWZSTlQzMg?oc=5",
+  "fuente": "HolaSalta Noticias",
+  "deporte": "Atletismo",
+  "tipo": "agenda",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-23T00:36+00:00",
+  "encontrado": "2026-11-23T07:29-03:00",
   "bot": "resultados",
   "noticia": false
  },
@@ -206,6 +248,20 @@
   "en_buenos_aires": false,
   "publicado": "2026-11-22T20:16+00:00",
   "encontrado": "2026-11-23T01:28-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
+  "id": "28df30a67123",
+  "titulo": "Resultados argentinos en la cuarta jornada de competencia",
+  "resumen": "Resultados argentinos en la cuarta jornada de competencia Perspectiva Sur",
+  "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQWENib00ySTY2MjFvRG4xQlFPVXNzOXpibzZkOG9pa3EyUDJ5UTM3dzF5aUNlSXdhUDVSa25IYUZQLTZYZ2txU1BMVTBlNFBnbkVHNHNkSGEyYzlCUF9rNGZYYUNvcTRLaE10SzdQLTJPSERSWmNmZHJYTzV0NW00b0Uxb0NDeUdtRE9rcjdQbVQxdEZXMjFDazI2SQ?oc=5",
+  "fuente": "Perspectiva Sur",
+  "deporte": "Triatlon",
+  "tipo": "resultado",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-22T16:46+00:00",
+  "encontrado": "2026-11-23T07:32-03:00",
   "bot": "resultados",
   "noticia": false
  },
@@ -350,6 +406,20 @@
   "noticia": false
  },
  {
+  "id": "c0bf55ead79b",
+  "titulo": "Argentina brilló en el UTMB Bariloche 2026: una corredora nacional ganó los 85K",
+  "resumen": "Argentina brilló en el UTMB Bariloche 2026: una corredora nacional ganó los 85K barilo noticias",
+  "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPeTZic0xYdEhPOTdFeW1CUW95WTRXNzBIeDh2bV9TcU5pa0JROWNNSVk4LVBuQm1GQzFZcURzcGV2ajVnTVdEYWk2d3lORmxWeS1MaHQ2UkJBREJOdldoSTVURVhVcXo3VUhFc0lrc21xRWFPcFYwc1BxREZVTG55dzlobjVwMzRUTENBOHRha3ZubmxLdjJ6WThmYlhWSFMzcXB3aXJjT1FOeXJOU0p2M1JVU3A2bm5tUFMwVy12RmpCZjBQ0gHKAUFVX3lxTE5vR0VxeTJyVDJCcjFaZ1ZFOVkwd2pCdmF4bVJjSG50TmtIdHlmOHBUNUNDX2tZNGNSZ2FqWFZ0bEkxZkdtZmJ5cmJHQTVVSk5nNzlBd19lcklwcFd1dkZJcXR3bjBpdzBLSUlveGhaTUw1emFCM2RYN1J1LUZRSHpqajFmbWNRTmthd2hGNExJaVVGd3ZKWjdTZmxOY2kzM2hOSm1QVi1VaFZwUUZCejllYnh3Q1JxVFBFOTMtT3NYeE5UVW4yZHJkY3c?oc=5",
+  "fuente": "barilo noticias",
+  "deporte": "Atletismo",
+  "tipo": "resultado",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-21T20:46+00:00",
+  "encontrado": "2026-11-23T07:29-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
   "id": "1c4035498f6b",
   "titulo": "Argentina quedó match point en contra en los playoffs de la Billie Jean King Cup en Japón",
   "resumen": "Argentina quedó match point en contra en los playoffs de la Billie Jean King Cup en Japón La Nación",
@@ -374,6 +444,20 @@
   "en_buenos_aires": false,
   "publicado": "2026-11-21T19:54+00:00",
   "encontrado": "2026-11-23T01:31-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
+  "id": "460942d0e872",
+  "titulo": "Los Pumas visitan a Francia en París: un triunfo les asegura el tercer puesto en el Nations Championship",
+  "resumen": "Los Pumas visitan a Francia en París: un triunfo les asegura el tercer puesto en el Nations Championship Canal 7 Argentina",
+  "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOTGlaR0tJa3o1OWF6TkdZVWpPakl4ZnJWYmNtWkVYSEJyOGpQYzlKX3dleXAtbmluX2pJZ3NiOXQ2ajRqOGVNNzJzMzNSTTRSUmV6SnFiZzlodkFsQkJpTFk0bF8tT1RxbDNUUXN4ZGpTVFBrd084V05mRjloWEdUZ1NoeU1DbjJiTTdqaTA5QjgwU1dWMndPUE5wRDIwb012aVhZR0tYWmdSczM2NXpmbnQ1S0NyYjRjaFpmMWM4cjNGR3NyaDdNdFZYVWpJNnM?oc=5",
+  "fuente": "Canal 7 Argentina",
+  "deporte": "Rugby",
+  "tipo": "resultado",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-21T19:04+00:00",
+  "encontrado": "2026-11-23T07:32-03:00",
   "bot": "resultados",
   "noticia": false
  },
