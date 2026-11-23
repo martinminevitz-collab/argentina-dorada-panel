@@ -126,6 +126,20 @@
   "noticia": false
  },
  {
+  "id": "1989d2db253c",
+  "titulo": "Argentina se rehízo ante Mozambique: ganó 2-1 y definirá con Dinamarca su pase a octavos de final",
+  "resumen": "Argentina se rehízo ante Mozambique: ganó 2-1 y definirá con Dinamarca su pase a octavos de final ADNSUR",
+  "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQQ2xacWQtMVQtOHJiOGZQc29LT0pFcEZMX0pMVGpOWVpHZkFWQ01IQkV6a3otRHJhUlVqRV9TVkF1azdid2lJLTI4VGgtTXlLSUY3dlVjMWx1b19uR3NveHJSUEU3ZjB0U0FrMW5RQ3haUFpSTnBReXZIV19CM3pZOF9VdGhfRXhmQnNmZjJkb0tON005dUdIZWlLbFBBTTVzcWR5X04xT21Zemt0bUx3QXBpWHJwQ2ZCMVc1MUNoOFV6ZzNlVnU5X0ZhU1M0VUdaN2hfZ1NtQkVtaWxXbWM0RHlqQmNsdkcxRXk4VE1KYw?oc=5",
+  "fuente": "ADNSUR",
+  "deporte": "Futbol",
+  "tipo": "resultado",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-22T22:18+00:00",
+  "encontrado": "2026-11-23T04:55-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
   "id": "4b48d7fa2126",
   "titulo": "Argentina debuta en el Mundial ante Australia: hora y TV",
   "resumen": "Argentina debuta en el Mundial ante Australia: hora y TV Mendoza Post",
@@ -360,6 +374,20 @@
   "en_buenos_aires": false,
   "publicado": "2026-11-21T19:54+00:00",
   "encontrado": "2026-11-23T01:31-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
+  "id": "0e9a76fb7af9",
+  "titulo": "¡A puro batazo! República Dominicana aplasta a Argentina en su debut en el Panamericano Sub-12",
+  "resumen": "¡A puro batazo! República Dominicana aplasta a Argentina en su debut en el Panamericano Sub-12 Cachicha.com",
+  "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQWjJ6WTJmSDhNRjhvanB2dHZ1YUdHWHN2MHlVS0tHa21BWnpPajFCbkVWeXBtdjhabXZfR3pYRk1qdV9sSE9zTk16cXBLRmZuLWlwaTl6VGVocEhzcTE0UUNjZ05hR2w0T0dkZ1YwMDFXR3BtREZpVGdpMGROVlVCRzVjLUZ5YTZqXzZpN3VzZjlvcHpRRWFUMFhHVmswVTUwYS13U0Y1YUdhemFqZkoxdDAzZFZKSy1NN1dUV0MyUU1YSldP?oc=5",
+  "fuente": "Cachicha.com",
+  "deporte": "Beisbol",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-21T13:18+00:00",
+  "encontrado": "2026-11-23T04:54-03:00",
   "bot": "resultados",
   "noticia": false
  },
