@@ -96,6 +96,14 @@
    "tipo": "dato",
    "texto": "Ignacio Landolfi ( -81 kg) \nPerdió en primera ronda ante el polaco Szulik por IPPON. (Fuente: https://ijf.org/judoka/100377/contests)",
    "creado_en": "2026-11-21T20:00:56.789038+00:00"
+  },
+  {
+   "ref": "ca81803a",
+   "evento_id": "manual:fe2c6321",
+   "evento_titulo": "Campeonato Sudamericano",
+   "tipo": "dato",
+   "texto": "🇦🇷 ¡ARGENTINA HIZO HISTORIA EN EL SUDAMERICANO DE PICKLEBALL! 🏆\n\nEl 21 y 22 de noviembre quedarán grabados en la historia del pickleball argentino.\n\nNuestra Selección alcanzó tres podios en tres categorías: Open, Senior y Junior, llevando la bandera argentina a lo más alto de la competencia. 🇦🇷\n\n🥉 Categoría Open\n🥈 Categoría Senior\n🥉 Categoría Junior",
+   "creado_en": "2026-11-23T15:54:36.065673+00:00"
   }
  ],
  "noticias": [
@@ -106,6 +114,14 @@
    "tipo": "dato",
    "texto": "[NOTICIA] {\"deporte\":\"ATLETISMO\",\"titulo\":\"Premios CADA a los mejores atletas del año\",\"link\":\"https://cada-atletismo.com/segunda-edicion-de-los-premios-a-los-mejores-atletas-del-ano/\",\"resumen\":\"En ese link están las ternas y se puede votar online.\"}",
    "creado_en": "2026-11-19T22:26:02.187313+00:00"
+  },
+  {
+   "id": "00a55e6c-750e-4108-b482-ad2e498b05b4",
+   "evento_id": "noticia:mwtfsh8r",
+   "evento_titulo": "Copa Mundial Femenina 2031",
+   "tipo": "dato",
+   "texto": "[NOTICIA] {\"deporte\":\"FUTBOL\",\"titulo\":\"Copa Mundial Femenina 2031\",\"link\":\"\",\"resumen\":\"El torneo se disputará en EEUU, Mexico, Costa Rica y Jamaica\"}",
+   "creado_en": "2026-11-23T15:44:46.854677+00:00"
   }
  ]
 }
