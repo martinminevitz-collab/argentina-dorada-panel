@@ -96,12 +96,36 @@ function mostrarEstado() {
   $("#estado").innerHTML = partes.join("<br>");
 }
 
+// palabras de deportes que a veces llegan sin tilde: se muestran con tilde (respetando mayúsculas)
+const CON_TILDE = { basquet: "básquet", basquetbol: "básquetbol", equitacion: "equitación", acrobatica: "acrobática", aerobica: "aeróbica",
+  artistica: "artística", ritmica: "rítmica", futbol: "fútbol", voley: "vóley", voleibol: "vóleibol", beisbol: "béisbol", softbol: "sóftbol",
+  esqui: "esquí", natacion: "natación", triatlon: "triatlón", duatlon: "duatlón", pentatlon: "pentatlón", decatlon: "decatlón", heptatlon: "heptatlón",
+  maraton: "maratón", patin: "patín", badminton: "bádminton", paralimpico: "paralímpico", paralimpicos: "paralímpicos", olimpico: "olímpico",
+  formula: "fórmula", montana: "montaña", trampolin: "trampolín", halterofilia: "halterofilia", sincronizada: "sincronizada", mountain: "mountain",
+  beibol: "béisbol", aristica: "artística" }; // + errores de tipeo que aparecieron
+function conTilde(d) {
+  return String(d).replace(/[A-Za-zÁÉÍÓÚÑáéíóúñ]+/g, (w) => {
+    const ok = CON_TILDE[w.toLowerCase()];
+    if (!ok || /[áéíóúñ]/i.test(w)) return w;
+    return w === w.toUpperCase() ? ok.toUpperCase() : w[0] === w[0].toUpperCase() ? ok[0].toUpperCase() + ok.slice(1) : ok;
+  });
+}
+
 function llenarDeportes() {
   const sel = $("#deporte"), actual = sel.value;
   const fuente = estado.tab === "radar" || estado.tab === "noticias" ? estado.noticias.map((n) => n.deporte) : estado.eventos.map((e) => e.deporte);
-  const deportes = [...new Set(fuente.filter(Boolean))].sort((a, b) => a.localeCompare(b, "es"));
-  sel.innerHTML = `<option value="">Todos los deportes</option>` + deportes.map((d) => `<option>${escapar(d)}</option>`).join("");
-  sel.value = deportes.includes(actual) ? actual : "";
+  // "Natación" y "Natacion" son el mismo: una sola opción, con la versión con tilde; el valor es sin tildes
+  const porClave = new Map();
+  for (const d of [...fuente, ...estado.eventos.map((e) => e.deporte), ...estado.noticias.map((n) => n.deporte)].filter(Boolean)) {
+    const k = sinTildes(conTilde(d)), ya = porClave.get(k);
+    const tildes = (x) => (x.normalize("NFD").match(/[\u0300-\u036f]/g) || []).length;
+    if (!ya || tildes(conTilde(d)) > tildes(ya)) porClave.set(k, conTilde(d));
+  }
+  // las tarjetas también muestran la versión con tilde
+  for (const x of [...estado.eventos, ...estado.noticias]) if (x.deporte && porClave.has(sinTildes(conTilde(x.deporte)))) x.deporte = porClave.get(sinTildes(conTilde(x.deporte)));
+  const deportes = [...porClave].sort((a, b) => a[1].localeCompare(b[1], "es"));
+  sel.innerHTML = `<option value="">Todos los deportes</option>` + deportes.map(([k, d]) => `<option value="${escapar(k)}">${escapar(d)}</option>`).join("");
+  sel.value = porClave.has(actual) ? actual : "";
 }
 
 // ---------- eventos cargados a mano ("+ Crear evento") ----------
@@ -248,10 +272,10 @@ function eventosBA() {
   const palabras = (t) => new Set(sinTildes(t).split(/[^a-z0-9]+/).filter((w) => w.length > 3 && !COMUNES.has(w)));
   const planilla = deLaPlanilla.map((e) => ({ dep: sinTildes(e.deporte), p: palabras(e.titulo) }));
   const repetido = (e) => { const p = palabras(e.evento || e.titulo), dep = sinTildes(e.deporte);
-    return planilla.some((q) => (!q.dep || !dep || q.dep === dep) && [...p].filter((w) => q.p.has(w)).length >= Math.max(2, Math.min(p.size, q.p.size) * 0.6)); };
+    return planilla.some((q) => (!q.dep || !dep || q.dep === sinTildes(dep)) && [...p].filter((w) => q.p.has(w)).length >= Math.max(2, Math.min(p.size, q.p.size) * 0.6)); };
   const deLaAgenda = estado.eventos.filter((e) => e.seccion === "agenda" && !e.multideportivo && !e.eliminado && esDeBA(e) && !repetido(e));
   const q = sinTildes($("#buscar").value), dep = $("#deporte").value;
-  return [...deLaPlanilla, ...deLaAgenda].sort((a, b) => fechaInicio(a) - fechaInicio(b)).filter((e) => (!dep || e.deporte === dep) && (!q || sinTildes(e.titulo + " " + e.deporte + " " + e.fechas).includes(q)));
+  return [...deLaPlanilla, ...deLaAgenda].sort((a, b) => fechaInicio(a) - fechaInicio(b)).filter((e) => (!dep || sinTildes(e.deporte) === dep) && (!q || sinTildes(e.titulo + " " + e.deporte + " " + e.fechas).includes(q)));
 }
 function dibujarBA(lista) {
   barraCrear(lista);
@@ -502,9 +526,9 @@ function eventosDe(tab, conFiltros = true) {
     if (!esAgenda && estaPublicado(e) && !tieneNovedades(e) && haceMasDeUnaSemana(estado.publicados[e.id]?.en)) return false; // publicados: 7 días
     if (tab === "resultados" && estado.filtroEstado && e.etiqueta !== estado.filtroEstado) return false;
     const dep = $("#deporte").value;
-    if (dep && e.deporte !== dep) return false;
-    const q = $("#buscar").value.trim().toLowerCase();
-    if (q && !textoEvento(e).includes(q)) return false;
+    if (dep && sinTildes(e.deporte) !== dep) return false;
+    const q = sinTildes($("#buscar").value);
+    if (q && !sinTildes(textoEvento(e)).includes(q)) return false; // buscar sin tilde también encuentra
     return true;
   });
 }
@@ -522,9 +546,9 @@ function noticiasFiltradas(conFiltros = true) {
     const t = estado.filtroTipo;
     if (t === "ba" ? !n.en_buenos_aires : t && n.tipo !== t) return false;
     const dep = $("#deporte").value;
-    if (dep && n.deporte !== dep) return false;
-    const q = $("#buscar").value.trim().toLowerCase();
-    if (q && !`${n.titulo} ${n.resumen} ${n.fuente}`.toLowerCase().includes(q)) return false;
+    if (dep && sinTildes(n.deporte) !== dep) return false;
+    const q = sinTildes($("#buscar").value);
+    if (q && !sinTildes(`${n.titulo} ${n.resumen} ${n.fuente}`).includes(q)) return false;
     return true;
   });
 }
@@ -1324,7 +1348,7 @@ function miniNoticia(n) { return { id: "n:" + n.id, titulo: n.titulo, bloques: [
 function estadoNoticia(n) { const m = estado.publicados["n:" + n.id]; return !m ? "" : m.v === "descartada" ? "descartada" : "publicada"; }
 function noticiasParaPublicar(conFiltros = true) {
   const dep = conFiltros ? $("#deporte").value : "", q = conFiltros ? sinTildes($("#buscar").value) : "";
-  const mano = (estado.noticiasMano || []).filter((n) => dentroDelRango(n) && (!dep || n.deporte === dep) && (!q || sinTildes(n.titulo + " " + n.resumen).includes(q)));
+  const mano = (estado.noticiasMano || []).filter((n) => dentroDelRango(n) && (!dep || sinTildes(n.deporte) === dep) && (!q || sinTildes(n.titulo + " " + n.resumen).includes(q)));
   const verViejas = $("#ver-publicados").checked && conFiltros;
   return [...mano, ...noticiasFiltradas(conFiltros)].filter((n) => n.noticia && (!estadoNoticia(n)
     || (verViejas && !haceMasDeUnaSemana(estado.publicados["n:" + n.id]?.en))));
