@@ -295,6 +295,7 @@
         <button type="button" data-link title="Link">Link</button>
         <button type="button" data-video title="Video de YouTube en el texto">▶ Video</button>
         <label class="w-subir-img" title="Foto en el texto">Foto<input type="file" accept="image/*" hidden></label>
+        <label class="w-subir-video" title="Subir un video propio (sin YouTube)">🎬 Subir video<input type="file" accept="video/mp4,video/webm,video/quicktime" hidden></label>
       </div>
       <div class="w-editor" contenteditable="true"></div>`;
     const ed = $(".w-editor", caja);
@@ -304,6 +305,22 @@
     // bloque donde está el cursor (párrafo, subtítulo, cita…)
     const bloqueActual = () => { const sel = getSelection(); let n = sel.rangeCount ? sel.anchorNode : null;
       while (n && n.parentNode !== ed) n = n.parentNode; return n && n.nodeType === 1 ? n : null; };
+    // mete un bloque (foto, video, link) después del renglón donde estaba el cursor y deja el cursor en un párrafo nuevo abajo
+    // (antes, con dos fotos seguidas la segunda quedaba metida adentro del epígrafe de la primera)
+    const insertarBloque = (html, donde) => {
+      let blq = null;
+      if (donde?.startContainer === ed) blq = ed.childNodes[Math.max(0, donde.startOffset - 1)] || null;
+      else if (donde) { let n = donde.startContainer; while (n && n.parentNode !== ed) n = n.parentNode; if (n?.nodeType === 1) blq = n; }
+      const tmp = document.createElement("div"); tmp.innerHTML = html;
+      const nodos = [...tmp.childNodes];
+      if (blq?.nodeType !== 1) blq = null;
+      if (blq && blq.tagName === "P" && !blq.textContent.trim() && !blq.querySelector("img, video")) blq.replaceWith(...nodos);
+      else if (blq) blq.after(...nodos); else ed.append(...nodos);
+      let sig = nodos.at(-1).nextElementSibling;
+      if (!sig || sig.tagName !== "P" || sig.textContent.trim()) { sig = Object.assign(document.createElement("p"), { innerHTML: "<br>" }); nodos.at(-1).after(sig); }
+      ed.focus(); const r = document.createRange(); r.setStart(sig, 0); r.collapse(true);
+      const sel = getSelection(); sel.removeAllRanges(); sel.addRange(r); rango = r.cloneRange();
+    };
     // sacar la cita: el bloque vuelve a ser párrafo normal (si adentro ya había párrafos, quedan como están)
     const sacarCita = (bq) => { const nuevos = bq.querySelector("p, h2, ul") ? [...bq.childNodes] : [Object.assign(document.createElement("p"), { innerHTML: bq.innerHTML || "<br>" })];
       bq.replaceWith(...nuevos); };
@@ -318,13 +335,7 @@
       const url = (prompt("Link del video de YouTube") || "").trim();
       if (!url) return;
       if (!/^https?:\/\/(www\.|m\.)?(youtube\.com|youtu\.be)\//i.test(url)) { alert("Tiene que ser un link de YouTube (youtube.com o youtu.be)."); return; }
-      if (rango) { const sel = getSelection(); sel.removeAllRanges(); sel.addRange(rango); }
-      const blq = bloqueActual();
-      const p = document.createElement("p"); p.textContent = url;
-      const vacio = Object.assign(document.createElement("p"), { innerHTML: "<br>" });
-      if (blq && !blq.textContent.trim() && !blq.querySelector("img")) blq.replaceWith(p);
-      else if (blq) blq.after(p); else ed.append(p);
-      if (!p.nextElementSibling) p.after(vacio);
+      insertarBloque(`<p>${esc(url)}</p>`, rango);
     };
     $("[data-link]", caja).onclick = () => { const url = prompt("Dirección del link (https://…)"); if (url) hacer("createLink", url); };
     // se recuerda dónde estaba el cursor: al elegir el archivo y subirlo, el editor lo pierde y la foto iba arriba de todo
@@ -333,6 +344,7 @@
     ["keyup", "mouseup", "touchend", "input", "blur"].forEach((t) => ed.addEventListener(t, guardarCursor));
     document.addEventListener("selectionchange", guardarCursor);
     $(".w-subir-img", caja).addEventListener("mousedown", guardarCursor);
+    $(".w-subir-video", caja).addEventListener("mousedown", guardarCursor);
     // tocar una foto del texto: botones para subirla, bajarla o sacarla
     ed.addEventListener("click", (ev) => {
       ed.querySelectorAll(".w-foto-ctrl").forEach((x) => x.remove());
@@ -351,11 +363,21 @@
       const donde = rango;
       try {
         const { datos: media } = await api("media", { metodo: "POST", archivo });
-        ed.focus();
-        if (donde) { const s = getSelection(); s.removeAllRanges(); s.addRange(donde); }
-        else { const r = document.createRange(); r.selectNodeContents(ed); r.collapse(false); const s = getSelection(); s.removeAllRanges(); s.addRange(r); }
-        document.execCommand("insertHTML", false, `<figure><img src="${esc(media.source_url)}" alt=""><figcaption>Epígrafe</figcaption></figure><p></p>`);
+        insertarBloque(`<figure><img class="wp-image-${media.id}" src="${esc(media.source_url)}" alt=""><figcaption>Epígrafe</figcaption></figure>`, donde);
       } catch (e) { alert("No se pudo subir la foto: " + e.message); }
+      ev.target.value = "";
+    };
+    // video propio: se sube a la biblioteca de la web y va con su reproductor donde estaba el cursor
+    $(".w-subir-video input", caja).onchange = async (ev) => {
+      const archivo = ev.target.files[0];
+      if (!archivo) return;
+      const donde = rango, etiqueta = $(".w-subir-video", caja), txt = etiqueta.firstChild.textContent;
+      etiqueta.firstChild.textContent = `Subiendo video (${Math.round(archivo.size / 1048576)} MB)…`;
+      try {
+        const { datos: media } = await api("media", { metodo: "POST", archivo });
+        insertarBloque(`<figure class="wp-block-video"><video controls preload="metadata" src="${esc(media.source_url)}"></video></figure>`, donde);
+      } catch (e) { alert("No se pudo subir el video: " + e.message + (archivo.size > 60 * 1048576 ? "\nPuede ser muy pesado para la web: probá uno más corto o subilo a YouTube como «no listado» y usá ▶ Video." : "")); }
+      etiqueta.firstChild.textContent = txt;
       ev.target.value = "";
     };
     // Pegar solo texto: evita traer estilos de Word o de otras webs.
