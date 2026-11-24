@@ -156,11 +156,14 @@
       <div class="chips-filtro">
         <button type="button" class="${est.estado === "draft" ? "activo" : ""}" data-estado="draft">Para revisar</button>
         <button type="button" class="${est.estado === "publish" ? "activo" : ""}" data-estado="publish">Publicados</button>
+        ${est.seccion === "investigaciones" ? `<button type="button" class="${est.estado === "ideas" ? "activo" : ""}" data-estado="ideas">💡 Ideas</button>` : ""}
       </div>
       <form><input type="search" placeholder="Buscar por nombre o título" value="${esc(est.buscar)}"></form>`;
     barra.querySelectorAll("[data-estado]").forEach((b) => (b.onclick = () => { est.estado = b.dataset.estado; est.pagina = 1; dibujar(lista); }));
     $("form", barra).onsubmit = (ev) => { ev.preventDefault(); est.buscar = $("input", barra).value.trim(); est.pagina = 1; dibujar(lista); };
     lista.append(barra);
+    if (est.estado === "ideas" && est.seccion !== "investigaciones") est.estado = "draft";
+    if (est.estado === "ideas") { $("form", barra).remove(); $(".w-nuevo", barra).remove(); return dibujarIdeas(lista); }
 
     const cont = document.createElement("div");
     cont.className = "w-lista";
@@ -209,6 +212,72 @@
       mas.onclick = () => { est.pagina++; dibujar(lista); };
       cont.append(mas);
     }
+  }
+
+  // ---------- 💡 Ideas de investigaciones: no se publican, solo las ve el equipo (Supabase) ----------
+  const ESTADOS_IDEA = [["idea", "💡 Idea"], ["investigando", "🔎 Investigando"], ["lista", "✅ Lista para nota"], ["hecha", "📰 Hecha"]];
+  async function dibujarIdeas(lista) {
+    const cont = document.createElement("div"); cont.className = "w-lista w-ideas";
+    lista.append(cont);
+    if (!window.Base?.activa()) { cont.innerHTML = `<p class="vacio">Entrá con tu mail (arriba) para ver y cargar ideas.</p>`; return; }
+    cont.innerHTML = `<p class="vacio">Cargando…</p>`;
+    let ideas;
+    try { ideas = await Base.ideas(); } catch (e) {
+      cont.innerHTML = `<p class="vacio">No se pudieron leer las ideas (${esc(e.message)}). ¿Se corrió el SQL de ideas_investigacion?</p>`; return; }
+    cont.innerHTML = `<p class="ayuda">Ideas para investigar: no se publican, solo las ve el equipo. Cualquiera puede sumar notas y links.</p>`;
+    const nueva = document.createElement("form"); nueva.className = "crear w-idea-nueva";
+    nueva.innerHTML = `<input name="titulo" placeholder="Nueva idea (ej. ¿Cuántos medallistas olímpicos salieron del CeNARD?)" maxlength="200" required>
+      <input name="deporte" placeholder="Deporte (opcional)"><button class="btn-crear">+ Agregar idea</button>`;
+    nueva.onsubmit = async (ev) => { ev.preventDefault(); const f = new FormData(nueva);
+      try { await Base.crearIdea({ titulo: f.get("titulo").trim(), deporte: f.get("deporte").trim() || null, encargado: Base.nombre?.() || null }); est.ideaAbierta = null; lista.innerHTML = ""; dibujar(lista); }
+      catch (e) { alert("No se pudo guardar: " + e.message); } };
+    cont.append(nueva);
+    // filtro por estado (las hechas quedan escondidas salvo que se elijan)
+    est.filtroIdea ??= "activas";
+    const filtro = document.createElement("div"); filtro.className = "chips-filtro";
+    filtro.innerHTML = [["activas", "En curso"], ...ESTADOS_IDEA].map(([k, t]) => `<button type="button" data-f="${k}" class="${est.filtroIdea === k ? "activo" : ""}">${t} <span class="n">${k === "activas" ? ideas.filter((i) => i.estado !== "hecha").length : ideas.filter((i) => i.estado === k).length}</span></button>`).join("");
+    filtro.querySelectorAll("[data-f]").forEach((b) => (b.onclick = () => { est.filtroIdea = b.dataset.f; dibujar(lista); }));
+    cont.append(filtro);
+    const vis = ideas.filter((i) => est.filtroIdea === "activas" ? i.estado !== "hecha" : i.estado === est.filtroIdea);
+    if (!vis.length) cont.insertAdjacentHTML("beforeend", `<p class="vacio">Nada por acá.</p>`);
+    for (const i of vis) cont.append(tarjetaIdea(i, lista));
+  }
+  function tarjetaIdea(i, lista) {
+    const art = document.createElement("article"); art.className = "tarjeta w-idea";
+    const est_ = ESTADOS_IDEA.find(([k]) => k === i.estado)?.[1] || i.estado;
+    const abierta = est.ideaAbierta === i.id;
+    art.innerHTML = `<div class="cabeza"><div class="chips"><span class="chip">${esc(est_)}</span>${i.deporte ? `<span class="chip">${esc(i.deporte)}</span>` : ""}${i.encargado ? `<span class="chip">👤 ${esc(i.encargado)}</span>` : ""}</div>
+      <h3>${esc(i.titulo)}</h3><small class="meta">Actualizada ${new Date(i.actualizado_en).toLocaleDateString("es-AR")}</small></div>`;
+    $(".cabeza", art).onclick = () => { est.ideaAbierta = abierta ? null : i.id; art.replaceWith(tarjetaIdea(i, lista)); };
+    if (!abierta) return art;
+    const f = document.createElement("form"); f.className = "crear w-editar";
+    f.innerHTML = `<label>Título<input name="titulo" value="${esc(i.titulo)}" maxlength="200" required></label>
+      <label>Deporte<input name="deporte" value="${esc(i.deporte || "")}"></label>
+      <label>Quién la lleva<input name="encargado" value="${esc(i.encargado || "")}"></label>
+      <label>Estado<select name="estado">${ESTADOS_IDEA.map(([k, t]) => `<option value="${k}" ${k === i.estado ? "selected" : ""}>${t}</option>`).join("")}</select></label>
+      <label>Notas (lo que van averiguando: datos, fuentes, a quién entrevistar…)<textarea name="notas" rows="8">${esc(i.notas)}</textarea></label>
+      <label>Links (uno por renglón)<textarea name="links" rows="3">${esc(i.links)}</textarea></label>
+      <div class="links-idea">${(i.links || "").split(/\s+/).filter((l) => /^https?:\/\//.test(l)).map((l) => `<a href="${esc(l)}" target="_blank" rel="noopener">${esc(l.replace(/^https?:\/\/(www\.)?/, "").slice(0, 50))}</a>`).join(" · ")}</div>
+      <div class="fila"><button class="btn-crear">Guardar</button><button type="button" class="w-a-nota">📝 Pasar a nota</button><button type="button" class="w-borrar-idea">🗑 Borrar</button></div>`;
+    const datos = () => { const d = new FormData(f); return { titulo: d.get("titulo").trim(), deporte: d.get("deporte").trim() || null, encargado: d.get("encargado").trim() || null, estado: d.get("estado"), notas: d.get("notas"), links: d.get("links") }; };
+    f.onsubmit = async (ev) => { ev.preventDefault(); try { await Base.cambiarIdea(i.id, datos()); dibujar(lista); } catch (e) { alert("No se pudo guardar: " + e.message); } };
+    let borrar = false;
+    $(".w-borrar-idea", f).onclick = async (ev) => { if (!borrar) { borrar = true; ev.target.textContent = "Tocá de nuevo para borrar"; return; }
+      try { await Base.borrarIdea(i.id); dibujar(lista); } catch (e) { alert("No se pudo borrar: " + e.message); } };
+    // crea el borrador de la investigación con lo juntado (notas como párrafos + links) y deja la idea "Hecha"
+    $(".w-a-nota", f).onclick = async () => {
+      const d = datos();
+      const html = [...d.notas.split(/\n+/).filter((l) => l.trim()).map((l) => `<p>${esc(l.trim())}</p>`),
+        ...(d.links.trim() ? [`<h2>Fuentes</h2>`, ...d.links.split(/\s+/).filter(Boolean).map((l) => `<p><a href="${esc(l)}">${esc(l)}</a></p>`)] : [])].join("");
+      try {
+        await Base.cambiarIdea(i.id, { ...d, estado: "hecha" });
+        est.estado = "draft"; est.pagina = 1; await dibujar(lista);
+        const t = tarjeta({ id: 0, status: "draft", meta: {}, title: { raw: d.titulo }, content: { raw: html } }, lista);
+        $(".w-lista", lista)?.prepend(t); $(".cabeza", t).click(); t.scrollIntoView({ behavior: "smooth" });
+      } catch (e) { alert("No se pudo: " + e.message); }
+    };
+    art.append(f);
+    return art;
   }
 
   // ---------- editor de texto (negrita, cursiva, subtítulo, lista, cita, link, foto) ----------

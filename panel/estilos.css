@@ -724,3 +724,12 @@ details.prox-multi summary b { text-transform: none; }
 .g-texto-ig textarea { width: 100%; margin-top: 6px; font: inherit; font-size: 14px; padding: 10px; border-radius: 10px; border: 1px solid var(--borde); background: var(--suave); color: var(--texto); box-sizing: border-box; }
 
 .w-sacar-foto { margin-top: 6px; font-size: 13px; color: var(--rojo); background: transparent; border: 1px solid var(--borde); border-radius: 8px; padding: 4px 10px; cursor: pointer; }
+/* ideas de investigaciones */
+.w-idea { display: block; padding: 14px 16px; }
+.w-idea .cabeza { display: block; cursor: pointer; }
+.w-idea .cabeza .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.w-idea .cabeza .chip { height: auto; padding: 2px 8px; font-size: 12px; }
+.w-idea h3 { margin: 8px 0 2px; font-size: 17px; text-align: left; }
+.w-idea .meta { color: var(--texto-2); font-size: 12px; }
+.w-idea form { margin-top: 12px; }
+.w-idea .links-idea a { color: var(--c-azul, #2a6fd6); font-size: 13px; }

@@ -52,6 +52,11 @@
       if (error) throw error;
       await traerAgregados();
     },
+    // ideas de investigaciones (Web → Investigaciones → 💡 Ideas; tabla ideas_investigacion, solo el equipo)
+    async ideas() { const { data, error } = await cliente.from("ideas_investigacion").select("*").order("actualizado_en", { ascending: false }); if (error) throw error; return data; },
+    async crearIdea(d) { const { error } = await cliente.from("ideas_investigacion").insert(d); if (error) throw error; },
+    async cambiarIdea(id, d) { const { error } = await cliente.from("ideas_investigacion").update({ ...d, actualizado_en: new Date().toISOString() }).eq("id", id); if (error) throw error; },
+    async borrarIdea(id) { const { error } = await cliente.from("ideas_investigacion").delete().eq("id", id); if (error) throw error; },
     // acreditaciones (pestaña Bs. As.)
     async crearAcred(datos) {
       const { error } = await cliente.from("acreditaciones").insert(datos);
