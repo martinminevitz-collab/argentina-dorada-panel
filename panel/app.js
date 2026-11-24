@@ -102,14 +102,27 @@ const CON_TILDE = { basquet: "básquet", basquetbol: "básquetbol", equitacion: 
   esqui: "esquí", natacion: "natación", triatlon: "triatlón", duatlon: "duatlón", pentatlon: "pentatlón", decatlon: "decatlón", heptatlon: "heptatlón",
   maraton: "maratón", patin: "patín", badminton: "bádminton", paralimpico: "paralímpico", paralimpicos: "paralímpicos", olimpico: "olímpico",
   formula: "fórmula", montana: "montaña", trampolin: "trampolín", halterofilia: "halterofilia", sincronizada: "sincronizada", mountain: "mountain",
-  beibol: "béisbol", aristica: "artística" }; // + errores de tipeo que aparecieron
+  beibol: "béisbol", aristica: "artística", linea: "línea", artistico: "artístico", acuatico: "acuático", orientacion: "orientación" }; // + errores de tipeo que aparecieron
 function conTilde(d) {
   return String(d).replace(/[A-Za-zÁÉÍÓÚÑáéíóúñ]+/g, (w) => {
-    const ok = CON_TILDE[w.toLowerCase()];
-    if (!ok || /[áéíóúñ]/i.test(w)) return w;
+    const ok = CON_TILDE[sinTildes(w)];
+    if (!ok || (w.toLowerCase() === ok)) return w;
     return w === w.toUpperCase() ? ok.toUpperCase() : w[0] === w[0].toUpperCase() ? ok[0].toUpperCase() + ok.slice(1) : ok;
   });
 }
+
+// nombre único de cada deporte: con tilde, primera letra en mayúscula (siglas quedan) y sinónimos juntos
+const SIGLAS = new Set(["BMX", "MMA", "ATP", "WTA", "HYROX", "3X3", "F1", "UCI", "FIBA", "II", "III", "OCR", "UFC"]);
+const SINONIMO = { "flag football": "flag fútbol", "basquetbol": "básquet", "basquet 3x3": "básquet 3x3", "voleibol": "vóley", "voley playa": "beach vóley",
+  "futbol de playa": "fútbol playa", "softball": "sóftbol", "baseball": "béisbol", "equitacion": "equitación",
+  "gimnasia en trampolin": "gimnasia trampolín", "skatebording": "skate", "skateboarding": "skate" };
+function nombreDeporte(d) {
+  let t = conTilde(String(d || "").trim().replace(/\s+/g, " ")).toLowerCase();
+  t = SINONIMO[sinTildes(t)] || t;
+  return t.split(" ").map((w, i) => SIGLAS.has(w.toUpperCase()) ? w.toUpperCase() : i === 0 ? w.charAt(0).toUpperCase() + w.slice(1) : w).join(" ");
+}
+// lista para elegir al cargar (sin repetidos)
+function listaDeportes() { return [...new Set([...estado.eventos.map((e) => e.deporte), ...estado.noticias.map((n) => n.deporte)].filter(Boolean).map(nombreDeporte))].sort((a, b) => a.localeCompare(b, "es")); }
 
 function llenarDeportes() {
   const sel = $("#deporte"), actual = sel.value;
@@ -117,12 +130,10 @@ function llenarDeportes() {
   // "Natación" y "Natacion" son el mismo: una sola opción, con la versión con tilde; el valor es sin tildes
   const porClave = new Map();
   for (const d of [...fuente, ...estado.eventos.map((e) => e.deporte), ...estado.noticias.map((n) => n.deporte)].filter(Boolean)) {
-    const k = sinTildes(conTilde(d)), ya = porClave.get(k);
-    const tildes = (x) => (x.normalize("NFD").match(/[\u0300-\u036f]/g) || []).length;
-    if (!ya || tildes(conTilde(d)) > tildes(ya)) porClave.set(k, conTilde(d));
+    const n = nombreDeporte(d); porClave.set(sinTildes(n), n);
   }
   // las tarjetas también muestran la versión con tilde
-  for (const x of [...estado.eventos, ...estado.noticias]) if (x.deporte && porClave.has(sinTildes(conTilde(x.deporte)))) x.deporte = porClave.get(sinTildes(conTilde(x.deporte)));
+  for (const x of [...estado.eventos, ...estado.noticias]) if (x.deporte) x.deporte = nombreDeporte(x.deporte);
   const deportes = [...porClave].sort((a, b) => a[1].localeCompare(b[1], "es"));
   sel.innerHTML = `<option value="">Todos los deportes</option>` + deportes.map(([k, d]) => `<option value="${escapar(k)}">${escapar(d)}</option>`).join("");
   sel.value = porClave.has(actual) ? actual : "";
@@ -444,6 +455,7 @@ function formCrear() {
   f.onsubmit = async (ev) => {
     ev.preventDefault();
     const d = Object.fromEntries(new FormData(f));
+    if (d.deporte) d.deporte = nombreDeporte(d.deporte); // si escriben "natacion" o "NATACIÓN" queda "Natación", igual que en la lista
     const multi = !!d.multi; delete d.multi;
     for (const k in d) d[k] = d[k].trim() || null;
     // multideportivo: marca al principio del detalle; el bot le avisa al lector del Doc que lo ponga en su propia pestaña
@@ -479,7 +491,7 @@ function barraCrear(lista) {
     return;
   }
   const f = formCrear();
-  const deps = [...new Set(estado.eventos.map((e) => e.deporte).filter(Boolean))].sort((a, b) => a.localeCompare(b, "es"));
+  const deps = listaDeportes();
   f.querySelector("#lista-deportes").innerHTML = deps.map((d) => `<option value="${escapar(d)}">`).join("");
   lista.append(f);
 }
@@ -1455,7 +1467,7 @@ function barraNoticia() {
     });
     b.className = "btn-crear"; barra.append(b); return barra;
   }
-  const deps = [...new Set([...estado.eventos.map((e) => e.deporte), ...estado.noticias.map((n) => n.deporte)].filter(Boolean))].sort((a, b) => a.localeCompare(b, "es"));
+  const deps = listaDeportes();
   barra.innerHTML = `<form id="form-noticia" class="crear"><h3>Agregar noticia</h3>
     <label>Deporte<input name="deporte" list="deps-noticia" required placeholder="Ej: Hockey"></label><datalist id="deps-noticia">${deps.map((d) => `<option value="${escapar(d)}">`).join("")}</datalist>
     <label>Título<input name="titulo" required minlength="5" maxlength="200" placeholder="Ej: Las Leonas, nominadas a mejor equipo del año"></label>
@@ -1467,6 +1479,7 @@ function barraNoticia() {
   f.onsubmit = async (ev) => {
     ev.preventDefault();
     const d = Object.fromEntries(new FormData(f)); for (const k in d) d[k] = d[k].trim();
+    if (d.deporte) d.deporte = nombreDeporte(d.deporte);
     f.querySelector("[type=submit]").disabled = true;
     try {
       await Base.agregarDato({ evento_id: "noticia:" + Date.now().toString(36), evento_titulo: d.titulo.slice(0, 200), tipo: "dato", texto: "[NOTICIA] " + JSON.stringify(d) });
