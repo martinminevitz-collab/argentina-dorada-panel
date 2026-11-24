@@ -224,6 +224,7 @@
         <button type="button" data-cmd="insertUnorderedList" title="Lista">• Lista</button>
         <button type="button" data-bloque="blockquote" title="Cita destacada">“ Cita</button>
         <button type="button" data-link title="Link">Link</button>
+        <button type="button" data-video title="Video de YouTube en el texto">▶ Video</button>
         <label class="w-subir-img" title="Foto en el texto">Foto<input type="file" accept="image/*" hidden></label>
       </div>
       <div class="w-editor" contenteditable="true"></div>`;
@@ -231,7 +232,31 @@
     ed.innerHTML = html || "<p></p>";
     const hacer = (cmd, valor) => { ed.focus(); document.execCommand(cmd, false, valor); };
     caja.querySelectorAll("[data-cmd]").forEach((b) => (b.onclick = () => hacer(b.dataset.cmd)));
-    caja.querySelectorAll("[data-bloque]").forEach((b) => (b.onclick = () => hacer("formatBlock", b.dataset.bloque)));
+    // bloque donde está el cursor (párrafo, subtítulo, cita…)
+    const bloqueActual = () => { const sel = getSelection(); let n = sel.rangeCount ? sel.anchorNode : null;
+      while (n && n.parentNode !== ed) n = n.parentNode; return n && n.nodeType === 1 ? n : null; };
+    // sacar la cita: el bloque vuelve a ser párrafo normal (si adentro ya había párrafos, quedan como están)
+    const sacarCita = (bq) => { const nuevos = bq.querySelector("p, h2, ul") ? [...bq.childNodes] : [Object.assign(document.createElement("p"), { innerHTML: bq.innerHTML || "<br>" })];
+      bq.replaceWith(...nuevos); };
+    caja.querySelectorAll("[data-bloque]").forEach((b) => (b.onclick = () => {
+      ed.focus(); const blq = bloqueActual();
+      // "Cita" sobre una cita (o "Párrafo"/"Subtítulo" sobre una cita) la saca: antes no había forma de quitar la línea amarilla
+      if (blq?.tagName === "BLOCKQUOTE") { sacarCita(blq); if (b.dataset.bloque === "blockquote" || b.dataset.bloque === "p") return; }
+      hacer("formatBlock", b.dataset.bloque);
+    }));
+    // video: el link de YouTube solo en su propio párrafo (la web lo muestra como video)
+    $("[data-video]", caja).onclick = () => {
+      const url = (prompt("Link del video de YouTube") || "").trim();
+      if (!url) return;
+      if (!/^https?:\/\/(www\.|m\.)?(youtube\.com|youtu\.be)\//i.test(url)) { alert("Tiene que ser un link de YouTube (youtube.com o youtu.be)."); return; }
+      if (rango) { const sel = getSelection(); sel.removeAllRanges(); sel.addRange(rango); }
+      const blq = bloqueActual();
+      const p = document.createElement("p"); p.textContent = url;
+      const vacio = Object.assign(document.createElement("p"), { innerHTML: "<br>" });
+      if (blq && !blq.textContent.trim() && !blq.querySelector("img")) blq.replaceWith(p);
+      else if (blq) blq.after(p); else ed.append(p);
+      if (!p.nextElementSibling) p.after(vacio);
+    };
     $("[data-link]", caja).onclick = () => { const url = prompt("Dirección del link (https://…)"); if (url) hacer("createLink", url); };
     // se recuerda dónde estaba el cursor: al elegir el archivo y subirlo, el editor lo pierde y la foto iba arriba de todo
     let rango = null;
@@ -358,7 +383,14 @@
       label.textContent = etiqueta;
       let control;
       if (tipo === "foto") {
-        label.innerHTML = `${etiqueta}<div class="w-foto">${mini ? `<img src="${esc(mini)}" alt="">` : `<span>Sin foto</span>`}</div><input type="file" name="foto" accept="image/*">`;
+        label.innerHTML = `${etiqueta}<div class="w-foto">${mini ? `<img src="${esc(mini)}" alt="">` : `<span>Sin foto</span>`}</div><input type="file" name="foto" accept="image/*">
+          ${mini ? `<button type="button" class="w-sacar-foto">✕ Sacar foto</button>` : ""}`;
+        const bSacar = label.querySelector(".w-sacar-foto");
+        if (bSacar) bSacar.onclick = (ev) => { ev.preventDefault();
+          extras.sacarFoto = !extras.sacarFoto;
+          label.querySelector(".w-foto").innerHTML = extras.sacarFoto ? `<span>Sin foto (se saca al guardar)</span>` : `<img src="${esc(mini)}" alt="">`;
+          bSacar.textContent = extras.sacarFoto ? "↩ Dejar la foto" : "✕ Sacar foto"; };
+        label.querySelector('input[type="file"]').addEventListener("change", () => { if (extras.sacarFoto) bSacar?.click(); });
         form.append(label); continue;
       }
       if (tipo === "destacada") {
@@ -432,7 +464,7 @@
         if (archivo && archivo.size) {
           msj.textContent = "Subiendo foto…";
           cuerpo.featured_media = (await api("media", { metodo: "POST", archivo })).datos.id;
-        }
+        } else if (extras.sacarFoto) cuerpo.featured_media = 0; // sin foto de portada
         msj.textContent = "Guardando…";
         const { datos } = await api(it.id ? `${s.ruta}/${it.id}?context=edit` : `${s.ruta}?context=edit`, { metodo: "POST", cuerpo });
         const nuevoCredito = (f.get("credito") ?? credito).trim();
