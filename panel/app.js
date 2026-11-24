@@ -115,14 +115,25 @@ function conTilde(d) {
 const SIGLAS = new Set(["BMX", "MMA", "ATP", "WTA", "HYROX", "3X3", "F1", "UCI", "FIBA", "II", "III", "OCR", "UFC"]);
 const SINONIMO = { "flag football": "flag fútbol", "basquetbol": "básquet", "basquet 3x3": "básquet 3x3", "voleibol": "vóley", "voley playa": "beach vóley",
   "futbol de playa": "fútbol playa", "softball": "sóftbol", "baseball": "béisbol", "equitacion": "equitación",
-  "gimnasia en trampolin": "gimnasia trampolín", "skatebording": "skate", "skateboarding": "skate" };
+  "gimnasia en trampolin": "gimnasia trampolín", "orientatlon": "orientación", "rugby y rugby 7s": "rugby",
+  "rugby seven": "rugby 7s", "rugby sevens": "rugby 7s", "rugby 7": "rugby 7s", "seven": "rugby 7s", "sevens": "rugby 7s", "skatebording": "skate", "skateboarding": "skate" };
 function nombreDeporte(d) {
   let t = conTilde(String(d || "").trim().replace(/\s+/g, " ")).toLowerCase();
   t = SINONIMO[sinTildes(t)] || t;
   return t.split(" ").map((w, i) => SIGLAS.has(w.toUpperCase()) ? w.toUpperCase() : i === 0 ? w.charAt(0).toUpperCase() + w.slice(1) : w).join(" ");
 }
 // lista para elegir al cargar (sin repetidos)
-function listaDeportes() { return [...new Set([...estado.eventos.map((e) => e.deporte), ...estado.noticias.map((n) => n.deporte)].filter(Boolean).map(nombreDeporte))].sort((a, b) => a.localeCompare(b, "es")); }
+// deportes olímpicos, paralímpicos y panamericanos: están siempre para elegir aunque todavía no haya eventos
+const DEPORTES_BASE = ["Atletismo", "Bádminton", "Básquet", "Básquet 3x3", "Béisbol", "Sóftbol", "Boxeo", "Breaking", "Canotaje", "Canotaje slalom",
+  "Ciclismo de ruta", "Ciclismo de pista", "Ciclismo BMX", "BMX freestyle", "Mountain bike", "Clavados", "Equitación", "Escalada", "Esgrima", "Flag fútbol",
+  "Fútbol", "Futsal", "Golf", "Gimnasia artística", "Gimnasia rítmica", "Gimnasia trampolín", "Gimnasia aeróbica", "Gimnasia acrobática", "Handball",
+  "Beach handball", "Hockey", "Hockey sobre patines", "Judo", "Karate", "Lucha", "Natación", "Natación artística", "Aguas abiertas", "Waterpolo",
+  "Pentatlón moderno", "Levantamiento de pesas", "Remo", "Rugby", "Rugby 7s", "Skate", "Surf", "Taekwondo", "Tenis", "Tenis de mesa", "Tiro",
+  "Tiro con arco", "Triatlón", "Vela", "Vóley", "Beach vóley", "Squash", "Pádel", "Pelota", "Patín artístico", "Patín carrera", "Bowling", "Racquetball",
+  "Esquí alpino", "Esquí cross country", "Snowboard", "Biatlón", "Patinaje artístico sobre hielo", "Hockey sobre hielo", "Curling",
+  "Boccia", "Goalball", "Fútbol para ciegos", "Básquet en silla de ruedas", "Tenis adaptado", "Tenis de mesa adaptado", "Natación adaptada",
+  "Atletismo adaptado", "Para powerlifting", "Rugby en silla de ruedas", "Vóley sentado", "Para ciclismo", "Para triatlón", "Para canotaje", "Para remo"];
+function listaDeportes() { return [...new Set([...DEPORTES_BASE, ...estado.eventos.map((e) => e.deporte), ...estado.noticias.map((n) => n.deporte)].filter(Boolean).map(nombreDeporte))].sort((a, b) => a.localeCompare(b, "es")); }
 
 function llenarDeportes() {
   const sel = $("#deporte"), actual = sel.value;
