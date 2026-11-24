@@ -4,7 +4,10 @@
 (function () {
   const $ = (s, r = document) => r.querySelector(s);
   const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
-  const br = (s) => esc(s).replace(/\n/g, "<br>");
+  // DORADA / PLATEADA / BRONCE en mayúscula salen con el color de su medalla
+  const colorMed = (h) => h.replace(/\b(DORAD[AO]S?|ORO)\b/g, '<span class="g-med-oro">$1</span>')
+    .replace(/\b(PLATEAD[AO]S?|PLATA)\b/g, '<span class="g-med-plata">$1</span>').replace(/\b(BRONCES?)\b/g, '<span class="g-med-bronce">$1</span>');
+  const br = (s) => colorMed(esc(s)).replace(/\n/g, "<br>");
   const TAM = { feed: [1080, 1350], story: [1080, 1920] };
   const LIBRERIA = "https://cdn.jsdelivr.net/npm/html-to-image@1.11.11/dist/html-to-image.js";
   const FUENTES = "https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&display=swap";
@@ -731,7 +734,8 @@
     for (const b of o.bloques) {
       if (b.tipo === "espacio") { actual = null; continue; } // un renglón vacío en el Doc corta la placa
       const txt = b.tipo === "texto" ? soloArg(limpio(b.partes) || "") : limpio(b.partes);
-      if (!txt || /^corrección:/i.test(txt)) continue; // las correcciones son para el agente, no para la gráfica
+      if (!txt || /^corrección:/i.test(txt)) continue;
+      if (b.tipo === "texto" && /:\s*$/.test(txt) && txt.length < 60) continue; // "Resumen de medallas de Argentina:" sobra (la placa ya dice Medallero) // las correcciones son para el agente, no para la gráfica
       if (b.tipo === "texto" || b.tipo === "sub") lineas.push(txt);
       if (!medalla && fnMedalla && (b.tipo === "texto" || b.tipo === "sub")) {
         const m = fnMedalla(b.partes);
@@ -758,9 +762,41 @@
     // en una placa de medallas no hace falta repetir "ganó la medalla DORADA en": queda "Micaela Levaggi – Milla (4:58.6)"
     const REPITE = /\s+(?:gan[oó]|se colg[oó]|obtuvo|consigui[oó]|logr[oó]|conquist[oó])\s+(?:la\s+)?medalla\s+(?:de\s+)?(?:dorada|plateada|bronce|oro|plata)\s*(?:en\s+(?:el|la|los|las)\s+|en\s+)?/i;
     placas = placas.map((pl) => (Object.values(MED).some((r) => r.test(pl.titulo)) ? { ...pl, texto: pl.texto.map((x) => x.replace(REPITE, " – ")) } : pl));
+    // muchas medallas (ej. 29): se agrupan por color, una línea por persona con todas sus pruebas ("Ana – Senior, Copa y Panamericano")
+    const lineasMed = [];
+    if (window.tipoMedalla) for (const b of o.bloques) {
+      if (b.tipo !== "texto" || !b.partes) continue;
+      const m = window.tipoMedalla(b.partes); const t = limpio(b.partes);
+      const varias = (t.match(/dorad|platead|bronce/gi) || []).length > 1 || /medallero/i.test(t); // "7 DORADAS, 12 PLATEADAS…" es el resumen, no una medalla
+      if (m && t && !varias && soloArg(t)) lineasMed.push({ clave: m.clave, t });
+    }
+    const porColor = lineasMed.length >= 6;
+    if (porColor) {
+      const CORTE = /\s+(?:les?\s+)?(?:gan[oó]|ganaron|se colg[oó]|se colgaron|obtuvo|obtuvieron|consigui[oó]|consiguieron|logr[oó]|lograron|conquist[oó]|conquistaron|se qued[oó]|se quedaron)\s+(?:con\s+)?(?:la\s+)?medalla\s+(?:de\s+)?(?:dorada|plateada|bronce|oro|plata)\s*(?:en\s+(?:el|la|los|las)\s+|en\s+)?/i;
+      const NOMBRE = { oro: "DORADAS", plata: "PLATEADAS", bronce: "DE BRONCE" };
+      const intro = placas.filter((pl) => pl.intro).map((pl) => ({ ...pl, titulo: "Medallero", texto: pl.texto.filter((x) => ES_RESULTADO.test(x)) })).filter((pl) => pl.texto.length);
+      const grupos = [];
+      for (const k of ["oro", "plata", "bronce"]) {
+        const quien = new Map();
+        for (const l of lineasMed.filter((x) => x.clave === k)) {
+          const [nom, ...resto] = l.t.split(CORTE);
+          const prueba = resto.join(" ").replace(/\.$/, "").trim();
+          if (!quien.has(nom)) quien.set(nom, []);
+          if (prueba) quien.get(nom).push(prueba);
+        }
+        const filas = [...quien].map(([nom, pr]) => pr.length ? `${nom} – ${pr.length > 1 ? pr.slice(0, -1).join(", ") + " y " + pr.at(-1) : pr[0]}` : nom);
+        // hasta 4 renglones y ~260 letras por placa, así la letra no queda chiquita
+        let pl = null;
+        for (const f of filas) {
+          if (!pl || pl.texto.length >= 4 || pl.texto.join("").length + f.length > 260) { pl = { titulo: NOMBRE[k], texto: [] }; grupos.push(pl); }
+          pl.texto.push(f);
+        }
+      }
+      placas = [...intro, ...grupos];
+    }
     // máximo 3 renglones por placa: si hay más, sigue en otra placa con el mismo título (así la letra no queda chiquita)
-    placas = placas.flatMap((pl) => { const r = []; for (let i = 0; i < pl.texto.length; i += 3) r.push({ ...pl, texto: pl.texto.slice(i, i + 3) }); return r; });
-    if (!plantilla) plantilla = medalla && o.medallaAuto ? "medalla" : "carrusel";
+    if (!porColor) placas = placas.flatMap((pl) => { const r = []; for (let i = 0; i < pl.texto.length; i += 3) r.push({ ...pl, texto: pl.texto.slice(i, i + 3) }); return r; });
+    if (!plantilla) plantilla = medalla && o.medallaAuto && !porColor ? "medalla" : "carrusel";
     const acento = plantilla === "medalla" ? "naranja" : undefined;
     const tipoPlaca = plantilla === "lateral" ? "lateral" : "placa";
     const lasPlacas = placas.slice(0, 9).map((pl) => pag(tipoPlaca, { titulo: pl.titulo, texto: pl.texto.join("\n"), credito: "", acento }));
@@ -800,10 +836,21 @@
       pags = [pag(plantilla, { ...vacio, deporte: o.deporte, torneo: o.evento, ...extra })];
       if (plantilla === "sede" || plantilla === "s-sede") pags[0].datos.credito = "";
     } else {
-      pags = [pag("portada", { ...base, titulo: o.titulo }), ...lasPlacas];
+      pags = [pag("portada", { ...base, titulo: o.titulo || tituloAuto(lineas, lineasMed) }), ...lasPlacas];
     }
     if (pags.length === 1 && TIPOS[pags[0].tipo].formato === "feed") pags.push(pag("placa", { titulo: "Título", texto: "", credito: "", acento }));
     return { plantilla, sel: 0, paginas: pags, origen: o };
+  }
+
+  // título de la portada cuando el evento no trae uno
+  function tituloAuto(lineas, meds) {
+    const total = +((lineas.join(" ").match(/(\d+)\s+medallas/i) || [])[1] || meds.length);
+    if (total > 1) return `¡${total} medallas para Argentina!`;
+    if (meds.length === 1) return { oro: "¡Medalla DORADA!", plata: "¡Medalla PLATEADA!", bronce: "¡Medalla de BRONCE!" }[meds[0].clave];
+    if (lineas.some((l) => /campeon(es|as)\b/i.test(l))) return "¡Campeones!";
+    if (lineas.some((l) => /campe[oó]n(a)?\b/i.test(l))) return "¡Campeón!";
+    if (lineas.some((l) => /clasific/i.test(l))) return "¡Clasificados!";
+    return "Así le fue a Argentina";
   }
 
   // abre una plantilla con datos ya cargados (ej. desde la pestaña 🎯 Clasificados)

@@ -732,6 +732,8 @@ function renderPartes(partes, destino) {
       });
     }
     if (p.c) nodo.classList.add("c-" + p.c);
+    // DORADA / PLATEADA / BRONCE en negrita, con el color de su medalla
+    if (p.b && !p.href) { const m = tipoMedalla([p]); if (m && /DORAD|PLATEAD|BRONCE|\bORO\b|\bPLATA\b/.test(p.t)) nodo.classList.add("med-" + m.clave); }
     destino.append(nodo);
   }
 }

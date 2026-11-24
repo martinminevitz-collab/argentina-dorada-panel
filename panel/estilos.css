@@ -711,3 +711,11 @@ details.prox-multi summary b { text-transform: none; }
 .w-editor figure { position: relative; }
 .w-foto-ctrl { position: absolute; top: 8px; left: 8px; display: flex; gap: 6px; z-index: 2; }
 .w-foto-ctrl button { background: rgba(12,26,44,.85); color: #fff; border: 0; border-radius: 8px; padding: 6px 10px; font-size: 13px; cursor: pointer; }
+
+/* colores de medalla en el texto (panel y gráficas) */
+:root { --med-oro: #A8801F; --med-plata: #7A8894; --med-bronce: #A8612A; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --med-oro: #E8C15A; --med-plata: #C9D1D9; --med-bronce: #D58B4A; } }
+:root[data-theme="dark"] { --med-oro: #E8C15A; --med-plata: #C9D1D9; --med-bronce: #D58B4A; }
+.med-oro { color: var(--med-oro); } .med-plata { color: var(--med-plata); } .med-bronce { color: var(--med-bronce); }
+.g-med-oro { color: #E8C15A; } .g-med-plata { color: #A3B4C4; } .g-med-bronce { color: #D58B4A; }
+.g-placa.claro .g-med-oro { color: #A8801F; } .g-placa.claro .g-med-plata { color: #6F7C88; } .g-placa.claro .g-med-bronce { color: #A8612A; }
