@@ -719,3 +719,6 @@ details.prox-multi summary b { text-transform: none; }
 .med-oro { color: var(--med-oro); } .med-plata { color: var(--med-plata); } .med-bronce { color: var(--med-bronce); }
 .g-med-oro { color: #E8C15A; } .g-med-plata { color: #A3B4C4; } .g-med-bronce { color: #D58B4A; }
 .g-placa.claro .g-med-oro { color: #A8801F; } .g-placa.claro .g-med-plata { color: #6F7C88; } .g-placa.claro .g-med-bronce { color: #A8612A; }
+
+.g-texto-ig { margin: 8px 0 4px; } .g-texto-ig summary { cursor: pointer; color: var(--texto-2); font-size: 13px; }
+.g-texto-ig textarea { width: 100%; margin-top: 6px; font: inherit; font-size: 14px; padding: 10px; border-radius: 10px; border: 1px solid var(--borde); background: var(--suave); color: var(--texto); box-sizing: border-box; }

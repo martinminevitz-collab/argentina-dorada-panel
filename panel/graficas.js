@@ -347,7 +347,9 @@
         <span class="g-video-grupo"><button class="g-video">🎬 Video animado (página ${num(G.sel)})</button>
         <select class="g-entrada" aria-label="Cómo entran los textos">${[["mezcla", "Títulos del costado, resto de abajo"], ["abajo", "Todo desde abajo"], ["costado", "Todo desde el costado"]]
           .map(([v, t]) => `<option value="${v}" ${v === ENTRADA ? "selected" : ""}>${t}</option>`).join("")}</select></span>
+        ${G.origen?.textoIG ? `<button class="g-copiar-ig">📋 Copiar texto para IG</button>` : ""}
         <button class="g-reset">Volver a la plantilla</button></div>
+      ${G.origen?.textoIG ? `<details class="g-texto-ig"><summary>Ver / editar el texto del posteo</summary><textarea rows="10">${esc(G.origen.textoIG)}</textarea></details>` : ""}
       <p class="ayuda">🎬 Video animado: al terminar de grabar aparece abajo para verlo, descargarlo o publicarlo ("Descargar imágenes" baja solo las fotos). Los textos entran de a uno sobre la foto (o sobre el video, si subiste uno). Dura 6 segundos con foto o lo que dure el video (hasta 20 s). Se arma en el momento: no cierres la pantalla mientras graba.</p>
       ${navigator.canShare ? `<p class="ayuda">📲 Publicar abre la lista de apps del celu: elegí Instagram → Publicación y ya va con las ${G.paginas.length} imágenes en orden, sin guardarlas.
         Si Instagram las muestra cuadradas, tocá el ícono de las flechitas (abajo a la izquierda de la foto) para que queden 4:5.</p>` : ""}
@@ -372,6 +374,12 @@
     raiz.querySelector(".g-compartir")?.addEventListener("click", () => descargar(true));
     raiz.querySelector(".g-video").onclick = () => grabarVideo(G.paginas[G.sel], G.sel);
     raiz.querySelector(".g-entrada").onchange = (ev) => { ENTRADA = ev.target.value; try { localStorage.setItem("ad-entrada", ENTRADA); } catch {} };
+    // el texto del posteo: se copia desde acá mismo (si lo editaron abajo, va el editado)
+    const areaIG = raiz.querySelector(".g-texto-ig textarea");
+    areaIG?.addEventListener("input", () => { G.origen.textoIG = areaIG.value; guardar(); });
+    raiz.querySelector(".g-copiar-ig")?.addEventListener("click", async () => {
+      try { await navigator.clipboard.writeText(G.origen.textoIG); alertar("Texto copiado para Instagram"); } catch { alertar("No se pudo copiar"); }
+    });
     raiz.querySelector(".g-reset").onclick = () => { G = G.origen ? armarDesde(G.origen, G.plantilla) : nuevo(G.plantilla); guardar(); armar(); };
     raiz.querySelectorAll(".g-mini").forEach((m) => ajustar(m.querySelector(".g-pagina"), G.paginas[Number(m.dataset.i)]));
     vista(); campos();
@@ -693,7 +701,7 @@
   function desdeEvento(e, opciones = {}) {
     // se guarda de dónde salió, así se puede pasar a otra plantilla (carrusel, medalla, historias) con los mismos datos
     const origen = { deporte: e.deporte || "", evento: e.evento || e.titulo || "", bloques: (e.bloques || []).filter((b) => b.partes || b.tipo === "espacio"),
-      titulo: opciones.titulo || "", medallaAuto: !!opciones.medalla };
+      titulo: opciones.titulo || "", medallaAuto: !!opciones.medalla, textoIG: opciones.textoIG || "" };
     G = armarDesde(origen, opciones.plantilla);
     guardar();
   }
@@ -846,7 +854,7 @@
     } else {
       pags = [pag("portada", { ...base, titulo: o.titulo || tituloAuto(lineas, lineasMed) }), ...lasPlacas];
     }
-    if (pags.length === 1 && TIPOS[pags[0].tipo].formato === "feed") pags.push(pag("placa", { titulo: "Título", texto: "", credito: "", acento }));
+    if (pags.length === 1 && TIPOS[pags[0].tipo].formato === "feed" && ["carrusel", "medalla", "lateral"].includes(plantilla)) pags.push(pag("placa", { titulo: "Título", texto: "", credito: "", acento }));
     return { plantilla, sel: 0, paginas: pags, origen: o };
   }
 

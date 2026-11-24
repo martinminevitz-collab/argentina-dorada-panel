@@ -608,7 +608,7 @@ function tarjetaEvento(e, tpl) {
   else configurarPublicado(t.querySelector(".publicado"), t, e);
   t.querySelector(".copiar").onclick = () => copiarEvento(e);
   if (e.seccion === "resultados" && window.Graficas) {
-    const g = boton("🎨 Gráfica", () => { Graficas.desdeEvento(e, { medalla: tipoMedalla }); estado.tab = "graficas"; dibujar(); window.scrollTo({ top: 0 }); });
+    const g = boton("🎨 Gráfica", () => { Graficas.desdeEvento(e, { medalla: tipoMedalla, textoIG: textoIG(e) }); estado.tab = "graficas"; dibujar(); window.scrollTo({ top: 0 }); });
     t.querySelector(".pie").insertBefore(g, t.querySelector(".pie .publicado"));
   }
   // Puente a la web (tanda 16): resultados listos para publicar y eventos de agenda → borrador en la web.
@@ -1190,15 +1190,16 @@ function cajaMulti(e, clave, titulo, bloques, { sub = "", cerrada = false, sinPu
     else { estado.cerrados ??= new Set(); estado.cerrados.has(id) ? estado.cerrados.delete(id) : estado.cerrados.add(id); }
     dibujar();
   };
-  t.querySelector(".copiar").onclick = () => copiarEvento(mini, {
+  const optsIG = {
     cabecera: `🇦🇷 ${e.multi.nombre.toUpperCase()} | ${(sub && !/^d[ií]a/i.test(sub) ? sub : titulo).toUpperCase()}`,
     incluirGris: false,
-    hashtags: hashtagsEvento({ titulo: e.titulo, deporte: sub && !/^d[ií]a/i.test(sub) ? sub : titulo }, [hashtag(e.multi.nombre)]) });
+    hashtags: hashtagsEvento({ titulo: e.titulo, deporte: sub && !/^d[ií]a/i.test(sub) ? sub : titulo }, [hashtag(e.multi.nombre)]) };
+  t.querySelector(".copiar").onclick = () => copiarEvento(mini, optsIG);
   const bPub = t.querySelector(".publicado");
   if (!sinPublicar && window.Graficas) {
     const deporte = sub && !/^d[ií]a/i.test(sub) ? sub : titulo;
     bPub.before(boton("🎨 Gráfica", () => {
-      Graficas.desdeEvento({ deporte, evento: e.multi.nombre, bloques }, { medalla: tipoMedalla });
+      Graficas.desdeEvento({ deporte, evento: e.multi.nombre, bloques }, { medalla: tipoMedalla, textoIG: textoIG(mini, optsIG) });
       estado.tab = "graficas"; dibujar(); window.scrollTo({ top: 0 });
     }));
   }
@@ -1233,7 +1234,8 @@ function cajaResumen(e, dia) {
     const lineas = dia.resumen.destacados.filter((b) => b.partes && b.tipo !== "link");
     const bloques = [];
     lineas.forEach((b, i) => { if (i % 4 === 0) bloques.push({ tipo: "sub", partes: [{ t: i ? "Destacados (sigue)" : "Destacados del día" }] }); bloques.push({ ...b, tipo: "texto" }); });
-    Graficas.desdeEvento({ deporte: "Resumen " + dia.titulo.replace(/^D[IÍ]A\b/i, "día").split(" - ")[0], evento: e.multi.nombre, bloques });
+    Graficas.desdeEvento({ deporte: "Resumen " + dia.titulo.replace(/^D[IÍ]A\b/i, "día").split(" - ")[0], evento: e.multi.nombre, bloques },
+      { textoIG: dia.resumen.posteo ? `${dia.resumen.posteo}\n\n${hashtagsEvento({ titulo: e.titulo }, [hashtag(e.multi.nombre)]).join(" ")}` : "" });
     estado.tab = "graficas"; dibujar(); window.scrollTo({ top: 0 });
   }));
   const bPub = boton("Publicado", null); bPub.className = "publicado";
@@ -1284,7 +1286,8 @@ function cajaFinal(e) {
     const med = (e.multi.medallero || []).map((p) => p.t).join("").trim();
     if (med) bloques.push({ tipo: "sub", partes: [{ t: "Medallero" }] }, { tipo: "texto", partes: partesConNegrita(med.replace(/^medallero:\s*/i, "")) });
     oraciones.forEach((o, i) => { if (i % 2 === 0) bloques.push({ tipo: "sub", partes: [{ t: i ? "Resumen (sigue)" : "Lo mejor de los Juegos" }] }); bloques.push({ tipo: "texto", partes: [{ t: o }] }); });
-    Graficas.desdeEvento({ deporte: "Resumen final", evento: e.multi.nombre, bloques });
+    Graficas.desdeEvento({ deporte: "Resumen final", evento: e.multi.nombre, bloques },
+      { textoIG: `${e.multi.resumen_final}\n\n${hashtagsEvento({ titulo: e.titulo }, [hashtag(e.multi.nombre)]).join(" ")}` });
     estado.tab = "graficas"; dibujar(); window.scrollTo({ top: 0 });
   }));
   const mini = { id: e.id + ":final", titulo: e.titulo + " - RESUMEN FINAL", bloques: [], version: huella(e.multi.resumen_final) };
@@ -1386,7 +1389,10 @@ function tarjetaNoticia(n, tpl, iguales = []) {
     // título corto para la portada: hasta los dos puntos y como mucho ~50 letras (se puede editar)
     let corto = n.titulo.split(/\s*[:|–—]\s*/)[0];
     if (corto.length > 52) corto = corto.slice(0, 52).replace(/\s+\S*$/, "") + "…";
-    Graficas.desdeEvento({ deporte: n.deporte, evento: "", bloques }, { titulo: corto });
+    // noticia de convocados → arranca directo en la plantilla Convocados (la lista la completan ustedes)
+    const esConv = /convoca|n[oó]mina|lista de (jugador|buena fe)|citad[oa]s/i.test(n.titulo + " " + (n.resumen || ""));
+    Graficas.desdeEvento({ deporte: n.deporte, evento: esConv ? corto : "", bloques: esConv ? [] : bloques },
+      { titulo: corto, plantilla: esConv ? "convocados" : undefined, textoIG: `${n.titulo}${n.link ? "\n" + n.link : ""}` });
     estado.tab = "graficas"; dibujar(); window.scrollTo({ top: 0 });
   }));
   const ahora = estadoNoticia(n);
