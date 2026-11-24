@@ -507,6 +507,14 @@
       label.append(control);
       form.append(label);
     }
+    // fecha de publicación: se manda siempre la que tiene la nota, así WordPress no le pone la de hoy al editarla
+    // o al volver a publicarla (los borradores viejos tienen la fecha "flotante" y al publicar WordPress usa la de hoy)
+    if (s.categoria) {
+      const lf = document.createElement("label");
+      lf.innerHTML = `Fecha de publicación<input type="datetime-local" name="fecha_pub" value="${it.id && it.date ? esc(it.date.slice(0, 16)) : ""}">
+        <small class="ayuda">${it.id ? "Queda la que tiene. Cambiala solo si querés otra." : "Vacía = la fecha y hora en que se publique."}</small>`;
+      form.append(lf);
+    }
     const pie = document.createElement("div");
     pie.className = "pie";
     pie.innerHTML = `
@@ -547,6 +555,8 @@
       }
       if (est.seccion === "atletas") cuerpo.title = `${cuerpo.meta.ad_nombre} ${cuerpo.meta.ad_apellido}`.trim();
       if (!it.id && !cuerpo.title && est.seccion === "medallas") cuerpo.title = "Medalla"; // la web le arma el título solo
+      const fechaPub = f.get("fecha_pub");
+      if (fechaPub) cuerpo.date = fechaPub.length === 16 ? fechaPub + ":00" : fechaPub;
       if (accion === "publish" || accion === "draft") cuerpo.status = accion;
       else if (!it.id) cuerpo.status = "draft";
       botones(false);
