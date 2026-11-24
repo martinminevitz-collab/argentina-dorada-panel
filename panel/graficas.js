@@ -771,26 +771,36 @@
     const REPITE = /\s+(?:gan[oó]|se colg[oó]|obtuvo|consigui[oó]|logr[oó]|conquist[oó])\s+(?:la\s+)?medalla\s+(?:de\s+)?(?:dorada|plateada|bronce|oro|plata)\s*(?:en\s+(?:el|la|los|las)\s+|en\s+)?/i;
     placas = placas.map((pl) => (Object.values(MED).some((r) => r.test(pl.titulo)) ? { ...pl, texto: pl.texto.map((x) => x.replace(REPITE, " – ")) } : pl));
     // muchas medallas (ej. 29): se agrupan por color, una línea por persona con todas sus pruebas ("Ana – Senior, Copa y Panamericano")
+    // cada línea de medalla se separa en quién + pruebas por color. Sirve para los dos formatos:
+    // "Ana ganó la medalla DORADA en Senior" (Doc) y "Ana - DORADA en Senior, en Copa y PLATEADA en Junior" (cargado a mano)
     const lineasMed = [];
-    if (window.tipoMedalla) for (const b of o.bloques) {
+    const CLAVE_MED = (w) => (/^(dorad|oro)/i.test(w) ? "oro" : /^(platead|plata)/i.test(w) ? "plata" : "bronce");
+    const VERBO = /\s+(?:les?\s+)?(?:gan[oó]|ganaron|se colg[oó]|se colgaron|obtuvo|obtuvieron|consigui[oó]|consiguieron|logr[oó]|lograron|conquist[oó]|conquistaron|se qued[oó]|se quedaron)\s+(?:con\s+)?(?:la\s+)?(?:medalla\s+)?(?:de\s+)?(?=dorad|platead|bronce|oro\b|plata\b)/i;
+    for (const b of o.bloques) {
       if (b.tipo !== "texto" || !b.partes) continue;
-      const m = window.tipoMedalla(b.partes); const t = limpio(b.partes);
-      const varias = (t.match(/dorad|platead|bronce/gi) || []).length > 1 || /medallero/i.test(t); // "7 DORADAS, 12 PLATEADAS…" es el resumen, no una medalla
-      if (m && t && !varias && soloArg(t)) lineasMed.push({ clave: m.clave, t });
+      const t = limpio(b.partes);
+      if (!t || /medallero|\d+\s+(?:de\s+)?(?:dorad|platead|bronce|oros?\b|platas?\b)|\d+\s+medallas/i.test(t) || !soloArg(t)) continue; // el resumen ("7 doradas, 12 plateadas…") no es una medalla
+      let nom, resto;
+      const v = t.split(VERBO);
+      if (v.length > 1) { nom = v[0]; resto = v.slice(1).join(" "); }
+      else { const d = t.match(/^(.+?)\s+[-–]\s+(.*)$/); if (!d) continue; [, nom, resto] = d; }
+      const tramos = [...resto.matchAll(/(?:la\s+medalla\s+)?(?:de\s+)?\b(dorad[ao]s?|platead[ao]s?|bronces?|oro|plata)\b\s*(.*?)(?=(?:\s+y\s+|,\s*)?(?:la\s+medalla\s+)?(?:de\s+)?\b(?:dorad[ao]s?|platead[ao]s?|bronces?)\b|$)/gi)];
+      for (const [, w, pr] of tramos) {
+        const pruebas = pr.replace(/\.$/, "").split(/,\s*|\s+y\s+/).map((x) => x.replace(/^en+\s+(?:el\s+|la\s+)?/i, "").trim()).filter(Boolean);
+        lineasMed.push({ clave: CLAVE_MED(w), nom: nom.trim(), pruebas: pruebas.length ? pruebas : [""] });
+      }
     }
-    const porColor = lineasMed.length >= 6;
+    const nMed = (k) => lineasMed.filter((x) => !k || x.clave === k).reduce((a, x) => a + x.pruebas.length, 0);
+    const porColor = nMed() >= 6;
     if (porColor) {
-      const CORTE = /\s+(?:les?\s+)?(?:gan[oó]|ganaron|se colg[oó]|se colgaron|obtuvo|obtuvieron|consigui[oó]|consiguieron|logr[oó]|lograron|conquist[oó]|conquistaron|se qued[oó]|se quedaron)\s+(?:con\s+)?(?:la\s+)?medalla\s+(?:de\s+)?(?:dorada|plateada|bronce|oro|plata)\s*(?:en\s+(?:el|la|los|las)\s+|en\s+)?/i;
       const NOMBRE = { oro: "DORADAS", plata: "PLATEADAS", bronce: "DE BRONCE" };
       const intro = placas.filter((pl) => pl.intro).map((pl) => ({ ...pl, titulo: "Medallero", texto: pl.texto.filter((x) => ES_RESULTADO.test(x)) })).filter((pl) => pl.texto.length);
       const grupos = [];
       for (const k of ["oro", "plata", "bronce"]) {
         const quien = new Map();
         for (const l of lineasMed.filter((x) => x.clave === k)) {
-          const [nom, ...resto] = l.t.split(CORTE);
-          const prueba = resto.join(" ").replace(/\.$/, "").trim();
-          if (!quien.has(nom)) quien.set(nom, []);
-          if (prueba) quien.get(nom).push(prueba);
+          if (!quien.has(l.nom)) quien.set(l.nom, []);
+          quien.get(l.nom).push(...l.pruebas.filter(Boolean));
         }
         const filas = [...quien].map(([nom, pr]) => pr.length ? `${nom} – ${pr.length > 1 ? pr.slice(0, -1).join(", ") + " y " + pr.at(-1) : pr[0]}` : nom);
         // hasta 4 renglones y ~260 letras por placa, así la letra no queda chiquita
@@ -805,7 +815,7 @@
       // el número del resumen del Doc manda (una línea puede tener más de una medalla)
       const todo = lineas.join(" ");
       const delDoc = { plata: (todo.match(/(\d+)\s+platead/i) || [])[1], bronce: (todo.match(/(\d+)\s+(?:de\s+)?bronce/i) || [])[1] };
-      const cuenta = (k) => +delDoc[k] || lineasMed.filter((x) => x.clave === k).length;
+      const cuenta = (k) => +delDoc[k] || nMed(k);
       const resto = [cuenta("plata") && `${cuenta("plata")} ${cuenta("plata") > 1 ? "PLATEADAS" : "PLATEADA"}`, cuenta("bronce") && `${cuenta("bronce")} de BRONCE`].filter(Boolean);
       const cierre = resto.length ? [{ titulo: "Y además", texto: [`${resto.join(" y ")}`, "Todos los nombres, en el posteo"] }] : [];
       placas = [...intro, ...(doradas.length ? doradas : grupos.slice(0, 2)), ...cierre];
@@ -860,9 +870,12 @@
 
   // título de la portada cuando el evento no trae uno
   function tituloAuto(lineas, meds) {
-    const total = +((lineas.join(" ").match(/(\d+)\s+medallas/i) || [])[1] || meds.length);
+    const todo = lineas.join(" ");
+    // total: "29 medallas" / "(29 total)" / suma de "7 doradas, 12 plateadas y 10 de bronce" / las contadas una por una
+    const suma = [...todo.matchAll(/(\d+)\s+(?:de\s+)?(?:dorad|platead|bronce)/gi)].reduce((a, m) => a + +m[1], 0);
+    const total = +((todo.match(/(\d+)\s+medallas|(\d+)\s+(?:en\s+)?total/i) || []).slice(1).find(Boolean) || 0) || suma || meds.reduce((a, x) => a + x.pruebas.length, 0);
     if (total > 1) return `¡${total} medallas para Argentina!`;
-    if (meds.length === 1) return { oro: "¡Medalla DORADA!", plata: "¡Medalla PLATEADA!", bronce: "¡Medalla de BRONCE!" }[meds[0].clave];
+    if (total === 1 && meds.length) return { oro: "¡Medalla DORADA!", plata: "¡Medalla PLATEADA!", bronce: "¡Medalla de BRONCE!" }[meds[0].clave];
     if (lineas.some((l) => /campeon(es|as)\b/i.test(l))) return "¡Campeones!";
     if (lineas.some((l) => /campe[oó]n(a)?\b/i.test(l))) return "¡Campeón!";
     if (lineas.some((l) => /clasific/i.test(l))) return "¡Clasificados!";
