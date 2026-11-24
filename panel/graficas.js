@@ -792,7 +792,15 @@
           pl.texto.push(f);
         }
       }
-      placas = [...intro, ...grupos];
+      // muchas medallas: en el carrusel van solo las doradas; plateadas y bronces quedan para el texto del posteo (Copiar para IG)
+      const doradas = grupos.filter((g) => g.titulo === NOMBRE.oro);
+      // el número del resumen del Doc manda (una línea puede tener más de una medalla)
+      const todo = lineas.join(" ");
+      const delDoc = { plata: (todo.match(/(\d+)\s+platead/i) || [])[1], bronce: (todo.match(/(\d+)\s+(?:de\s+)?bronce/i) || [])[1] };
+      const cuenta = (k) => +delDoc[k] || lineasMed.filter((x) => x.clave === k).length;
+      const resto = [cuenta("plata") && `${cuenta("plata")} ${cuenta("plata") > 1 ? "PLATEADAS" : "PLATEADA"}`, cuenta("bronce") && `${cuenta("bronce")} de BRONCE`].filter(Boolean);
+      const cierre = resto.length ? [{ titulo: "Y además", texto: [`${resto.join(" y ")}`, "Todos los nombres, en el posteo"] }] : [];
+      placas = [...intro, ...(doradas.length ? doradas : grupos.slice(0, 2)), ...cierre];
     }
     // máximo 3 renglones por placa: si hay más, sigue en otra placa con el mismo título (así la letra no queda chiquita)
     if (!porColor) placas = placas.flatMap((pl) => { const r = []; for (let i = 0; i < pl.texto.length; i += 3) r.push({ ...pl, texto: pl.texto.slice(i, i + 3) }); return r; });
