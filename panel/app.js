@@ -181,7 +181,8 @@ function combinar() {
   const doc = estado.docEventos || [];
   const refs = new Set(doc.flatMap((e) => e.refs_panel || []));
   const filas = estado.manualesBase ?? estado.manualesBot ?? [];
-  const manuales = filas.map(aEvento).filter((m) => !refs.has(m.ref));
+  // cargados a mano: desaparecen cuando el agente los pasa al Doc (Ref panel) o 7 días después de su fecha final
+  const manuales = filas.map(aEvento).filter((m) => !refs.has(m.ref) && !(m.etiqueta !== "agenda" && fechaFin(m.fechas) < Date.now() - 7 * 864e5));
   // datos agregados desde el panel ("+ Agregar dato"): se suman al final del evento hasta que el agente los pasa al Doc
   const todos = (estado.agregadosBase ?? estado.agregadosBot ?? []).filter((a) => !refs.has(refDe(a)));
   // marcas especiales (se guardan como "correccion" con [ELIMINAR] / [PUBLICABLE] adelante: no hace falta tocar la base)
@@ -518,6 +519,20 @@ const ORDEN = { publicable: 0, en_curso: 1, mas_info: 2 };
 
 // "21 de noviembre al 1 de diciembre", "03 al 06/12", "1 al 10 de enero de 2027" -> fecha del primer día (sin fecha: al final)
 const MESES_C = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"];
+// último día que aparece en las fechas ("12 al 15/11", "5 al 13 de diciembre", "06-12-2026"); sin fecha = nunca vence
+function fechaFin(txt) {
+  const t = sinTildes(String(txt || "").split(" · ")[0]);
+  const todas = [...t.matchAll(/(\d{1,2})\s*(?:[\/-]\s*(\d{1,2})(?:[\/-]\s*(\d{2,4}))?|de\s+([a-z]{3,})(?:\s+de\s+(\d{4}))?)/g)];
+  const m = todas.at(-1); if (!m) return 9e15;
+  const mes = m[2] ? Number(m[2]) - 1 : MESES_C.indexOf(m[4].slice(0, 3)); if (mes < 0 || mes > 11) return 9e15;
+  const hoy = new Date(); let anio = Number(m[3] || m[5]) || hoy.getFullYear(); if (anio < 100) anio += 2000;
+  let f = new Date(anio, mes, Number(m[1]), 23, 59);
+  if (!m[3] && !m[5]) { // sin año: el más cercano a hoy ("10/01" en noviembre = enero que viene)
+    if (f - hoy > 180 * 864e5) f.setFullYear(anio - 1); else if (hoy - f > 180 * 864e5) f.setFullYear(anio + 1);
+  }
+  return f.getTime();
+}
+
 function fechaInicio(e) {
   const t = sinTildes(e.fechas || "") || sinTildes(String(e.titulo || "").match(/\(([^)]*\d[^)]*)\)\s*$/)?.[1] || "");
   const m = t.match(/(\d{1,2})(?:\s*(?:de\s+)?([a-z]{3,})|\s*\/\s*(\d{1,2}))?/);

@@ -243,6 +243,7 @@ def leer_doc(html):
     clases = estilos_por_clase(sopa)
     cuerpo = sopa.find("div", class_="doc-content") or sopa.body
     actualizado_doc, seccion, eventos, actual = None, "resultados", [], None
+    ultimo_vacio = True
 
     for nodo in cuerpo.find_all(["p", "ul", "table"], recursive=False):
         if nodo.name == "ul":
@@ -272,6 +273,38 @@ def leer_doc(html):
 
         partes = leer_parrafo(nodo, clases)
         texto = texto_de(partes)
+        # título sin casilla (desde 24/11 el Doc a veces llega sin la lista de casillas): párrafo en rojo y negrita
+        # que no sea "AGENDA QUE VIENE" ni una línea de datos
+        # o, si el agente no llegó a darle formato (pasa cuando se corta a mitad de camino), una línea en MAYÚSCULAS
+        # tipo "DEPORTE - EVENTO EN CIUDAD, PAÍS (fechas)" después de un renglón vacío
+        reales = [x for x in partes if x["t"].strip()]
+        letras = re.sub(r"\([^)]*\)|[^A-Za-zÁÉÍÓÚÑáéíóúñ]", "", texto)
+        sin_formato = (len(texto) > 15 and " - " in texto[:45] and not texto.lower().startswith("http") and letras
+                       and sum(c.isupper() for c in letras) / len(letras) > 0.85 and ultimo_vacio)
+        ultimo_vacio = not texto
+        if ((reales and reales[0].get("c") == "rojo" and reales[0].get("b")) or sin_formato) and texto.upper() != "AGENDA QUE VIENE" \
+                and not texto.lower().startswith("última actualización"):
+            etiqueta, titulo_partes = None, []
+            for x in partes:
+                t = x["t"].strip()
+                if re.fullmatch(r"\(?\s*(PUBLICABLE|Necesito más info|NECESITO MÁS INFO)\s*\)?", t, re.I):
+                    etiqueta = "publicable" if "PUBLICABLE" in t.upper() else "mas_info"
+                elif t:
+                    titulo_partes.append(x)
+            # sin formato la etiqueta viene pegada al final del texto
+            if not etiqueta and titulo_partes:
+                ult = titulo_partes[-1]
+                m2 = re.search(r"\s*(\|\|)?\s*(\(?necesito más info\)?|PUBLICABLE)\s*$", ult["t"], re.I)
+                if m2:
+                    etiqueta = "publicable" if "PUBLICABLE" in m2.group(2).upper() else "mas_info"
+                    titulo_partes[-1] = {**ult, "t": ult["t"][:m2.start()]}
+            titulo = texto_de(titulo_partes)
+            deporte, evento, fechas = separar_titulo(titulo)
+            actual = {"titulo": titulo, "deporte": deporte, "evento": evento, "fechas": fechas,
+                      "etiqueta": etiqueta or ("agenda" if seccion == "agenda" else "en_curso"), "seccion": seccion,
+                      "ya_publicado": all(x.get("c") == "gris" for x in titulo_partes), "bloques": []}
+            eventos.append(actual)
+            continue
         if not actualizado_doc and texto.lower().startswith("última actualización"):
             actualizado_doc = texto.split(":", 1)[1].replace("(hora argentina)", "").strip()
             continue
