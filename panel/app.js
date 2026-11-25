@@ -39,6 +39,21 @@ async function bajarJSON(ruta) {
   return r.json();
 }
 
+// ⚠️ aviso arriba si el Doc no se está leyendo o el agente dejó de actualizarlo (así no pasa de nuevo 3 días sin que nadie se entere)
+function alertaDoc(doc) {
+  const horas = (t) => (Date.now() - t) / 36e5;
+  const avisos = [];
+  if (!doc || !(doc.eventos || []).length) avisos.push("el panel está leyendo 0 eventos del Doc (puede que el Doc haya cambiado de formato)");
+  const leido = doc?.leido ? new Date(doc.leido).getTime() : 0;
+  if (leido && horas(leido) > 3) avisos.push(`el bot que lee el Doc no corre desde hace ${Math.round(horas(leido))} h`);
+  const m = String(doc?.actualizado_doc || "").match(/(\d{1,2})\/(\d{1,2})\/(\d{4})\s+(\d{1,2}):(\d{2})/);
+  if (m) { const t = new Date(+m[3], m[2] - 1, +m[1], +m[4], +m[5]).getTime(); if (horas(t) > 16) avisos.push(`el agente no actualiza el Doc desde hace ${Math.round(horas(t))} h (debería hacerlo 11 y 23 hs)`); }
+  let caja = document.getElementById("alerta-doc");
+  if (!avisos.length) { caja?.remove(); return; }
+  if (!caja) { caja = document.createElement("div"); caja.id = "alerta-doc"; document.getElementById("lista")?.before(caja); }
+  caja.innerHTML = `⚠️ <b>Ojo:</b> ${avisos.join(" · ")}. Avisale a Martín (o abrí un chat del proyecto y pedí que lo revise).`;
+}
+
 async function cargar() {
   $("#recargar").classList.add("girando");
   try {
@@ -67,6 +82,7 @@ async function cargar() {
     estado.medalleros = medalleros;
     estado.doc = doc; estado.corrida = corrida;
     estado.docEventos = doc?.eventos || [];
+    alertaDoc(doc);
     combinar();
     const listas = await Promise.all(indice.dias.slice(0, 7).map((d) => bajarJSON(d.archivo).catch(() => [])));
     estado.noticias = listas.flat();

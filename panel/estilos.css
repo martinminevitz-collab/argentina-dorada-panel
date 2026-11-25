@@ -747,3 +747,7 @@ details.prox-multi summary b { text-transform: none; }
   background: var(--tarjeta, #fff); border: 1px solid var(--borde); border-radius: 10px; padding: 6px; box-shadow: 0 6px 24px rgba(0,0,0,.18); }
 .g-bajar-menu[hidden] { display: none; }
 .g-bajar-menu button { text-align: left; }
+
+#alerta-doc { margin: 10px 0 14px; padding: 10px 14px; border-radius: 12px; background: #FDECEA; color: #8A1C12; border: 1px solid #F3B8B0; font-size: 14px; }
+:root[data-theme="dark"] #alerta-doc { background: #3A1814; color: #FFC9C1; border-color: #6B2A22; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) #alerta-doc { background: #3A1814; color: #FFC9C1; border-color: #6B2A22; } }
