@@ -106,7 +106,7 @@ def agregados(refs):
     juntos = sorted(set(v.get("vencidos", [])) | {t for t in eliminados if t})
     if juntos != v.get("vencidos"):
         v["vencidos"] = juntos
-        v["_nota"] = "Eventos terminados hace más de 7 días o eliminados desde el panel. El agente los saca del Doc y deja de seguirlos."
+        v["_nota"] = "Eventos terminados hace más de 5 días o eliminados desde el panel. El agente los saca del Doc y deja de seguirlos."
         guardar.escribir(rv, v)
     print(f"🗑  Eliminados desde el panel: {len(eliminados)}")
 

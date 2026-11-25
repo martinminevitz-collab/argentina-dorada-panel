@@ -346,7 +346,7 @@ def leer_doc(html):
     return actualizado_doc, eventos
 
 
-DIAS_VISIBLE = 7  # un evento terminado se saca del panel (y el agente del Doc) después de esto
+DIAS_VISIBLE = 5  # un evento terminado se saca del panel (y el agente del Doc) después de esto
 
 
 def marcar_terminados(eventos):

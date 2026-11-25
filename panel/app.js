@@ -197,8 +197,8 @@ function combinar() {
   const doc = estado.docEventos || [];
   const refs = new Set(doc.flatMap((e) => e.refs_panel || []));
   const filas = estado.manualesBase ?? estado.manualesBot ?? [];
-  // cargados a mano: desaparecen cuando el agente los pasa al Doc (Ref panel) o 7 días después de su fecha final
-  const manuales = filas.map(aEvento).filter((m) => !refs.has(m.ref) && !(m.etiqueta !== "agenda" && fechaFin(m.fechas) < Date.now() - 7 * 864e5));
+  // cargados a mano: desaparecen cuando el agente los pasa al Doc (Ref panel) o 5 días después de su fecha final
+  const manuales = filas.map(aEvento).filter((m) => !refs.has(m.ref) && !(m.etiqueta !== "agenda" && fechaFin(m.fechas) < Date.now() - DIAS_VISIBLE * 864e5));
   // datos agregados desde el panel ("+ Agregar dato"): se suman al final del evento hasta que el agente los pasa al Doc
   const todos = (estado.agregadosBase ?? estado.agregadosBot ?? []).filter((a) => !refs.has(refDe(a)));
   // marcas especiales (se guardan como "correccion" con [ELIMINAR] / [PUBLICABLE] adelante: no hace falta tocar la base)
@@ -213,7 +213,7 @@ function combinar() {
   }).filter((n) => n.titulo);
   const bajas = todos.filter((a) => esMarca(a, "ELIMINAR")); // "🗑 Eliminar": se oculta para todos y el agente lo saca del Doc
   const listos = todos.filter((a) => esMarca(a, "PUBLICABLE")); // "Falta info" que ya completaron: pasa a Publicable
-  // lo que el agente ya sacó del Doc por publicado: queda 7 días para "Mostrar los que ya publiqué"
+  // lo que el agente ya sacó del Doc por publicado: queda 5 días para "Mostrar los que ya publiqué"
   const enDoc = new Set(doc.map((e) => e.id));
   const archivados = (estado.archivo || []).filter((e) => !enDoc.has(e.id)).map((e) => ({ ...e, publicado_en_doc: true, archivado: true }));
   const esDe = (a, e) => a.evento_id === e.id || sinTildes(a.evento_titulo) === sinTildes(e.titulo);
@@ -571,13 +571,13 @@ function eventosDe(tab, conFiltros = true) {
   return lista.map((x) => x.e).filter((e) => {
     if (e.seccion !== seccion) return false;
     if (seccion === "resultados" && e.multideportivo) return false;
-    if (e.vencido) return false; // terminó hace más de 7 días
+    if (e.vencido) return false; // terminó hace más de 5 días
     if (e.eliminado && (!conFiltros || !$("#ver-publicados").checked)) return false;
-    if (e.eliminado && haceMasDeUnaSemana(e.eliminado.en)) return false; // eliminados: se ven 7 días y desaparecen
+    if (e.eliminado && haceMasDeUnaSemana(e.eliminado.en)) return false; // eliminados: se ven 5 días y desaparecen
     const esAgenda = seccion === "agenda"; // la agenda no se "publica": siempre se ve todo
     if (!conFiltros) return esAgenda || !estaPublicado(e) || tieneNovedades(e);
     if (!esAgenda && !$("#ver-publicados").checked && estaPublicado(e) && !tieneNovedades(e)) return false;
-    if (!esAgenda && estaPublicado(e) && !tieneNovedades(e) && haceMasDeUnaSemana(estado.publicados[e.id]?.en)) return false; // publicados: 7 días
+    if (!esAgenda && estaPublicado(e) && !tieneNovedades(e) && haceMasDeUnaSemana(estado.publicados[e.id]?.en)) return false; // publicados: 5 días
     if (tab === "resultados" && estado.filtroEstado && e.etiqueta !== estado.filtroEstado) return false;
     const dep = $("#deporte").value;
     if (dep && sinTildes(e.deporte) !== dep) return false;
@@ -587,7 +587,8 @@ function eventosDe(tab, conFiltros = true) {
   });
 }
 
-function haceMasDeUnaSemana(fecha) { return !!fecha && Date.now() - new Date(fecha).getTime() > 7 * 864e5; }
+const DIAS_VISIBLE = 5; // terminados, publicados y eliminados se van del panel a los 5 días
+function haceMasDeUnaSemana(fecha) { return !!fecha && Date.now() - new Date(fecha).getTime() > DIAS_VISIBLE * 864e5; }
 
 function dentroDelRango(n) {
   const desde = Date.now() - Number($("#rango").value) * 864e5;
