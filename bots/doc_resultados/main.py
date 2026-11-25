@@ -349,9 +349,31 @@ def leer_doc(html):
 DIAS_VISIBLE = 5  # un evento terminado se saca del panel (y el agente del Doc) después de esto
 
 
+MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"]
+
+
+def fecha_fin(txt):
+    """Último día de "28 de noviembre al 13 de diciembre", "9 al 16 de febrero de 2027", "12 al 15/11" -> "AAAA-MM-DD" (o None)."""
+    t = _norm(txt or "")
+    hallados = [(int(d), MESES.index(m) + 1 if m in MESES else None, a) for d, m, a in
+                re.findall(r"(\d{1,2})\s+de\s+([a-z]+)(?:\s+(?:de\s+)?(\d{4}))?", t)]
+    hallados += [(int(d), int(m), a) for d, m, a in re.findall(r"(\d{1,2})/(\d{1,2})(?:/(\d{2,4}))?", t)]
+    hallados = [h for h in hallados if h[1] and 1 <= h[1] <= 12]
+    if not hallados:
+        return None
+    d, m, a = max(hallados, key=lambda h: (int(h[2]) if h[2] else 0, h[1], h[0])) if any(h[2] for h in hallados) else hallados[-1]
+    hoy = guardar.ahora()
+    anio = int(a) if a else hoy.year
+    if anio < 100:
+        anio += 2000
+    if not a and m < hoy.month - 6:  # "13 de enero" leído en noviembre = el año que viene
+        anio += 1
+    return f"{anio:04d}-{m:02d}-{d:02d}"
+
+
 def marcar_terminados(eventos):
     """Anota el día en que cada evento apareció por primera vez como terminado (Publicable o Falta info).
-    data/doc-terminados.json = memoria. data/vencidos.json = los que pasaron 7 días (lo lee el agente)."""
+    data/doc-terminados.json = memoria. data/vencidos.json = los que pasaron 5 días (multideportivos: 5 días después de su fecha final) (lo lee el agente)."""
     from datetime import timedelta
     ruta = guardar.DATA / "doc-terminados.json"
     memoria = guardar.leer(ruta, {})
@@ -359,6 +381,16 @@ def marcar_terminados(eventos):
     limite = (guardar.ahora() - timedelta(days=DIAS_VISIBLE)).strftime("%Y-%m-%d")
     vencidos = []
     for e in eventos:
+        # multideportivos: se van 5 días después de la FECHA FINAL de los Juegos (se publican en el día),
+        # aunque el agente todavía no los haya marcado PUBLICABLE
+        if e.get("multideportivo") and e["seccion"] == "resultados":
+            fin = fecha_fin(e.get("fechas") or e.get("titulo"))
+            if fin:
+                e["terminado_desde"] = fin
+                if fin <= limite:
+                    e["vencido"] = True
+                    vencidos.append(e["titulo"])
+                continue
         if e["seccion"] != "resultados" or e["etiqueta"] not in ("publicable", "mas_info"):
             continue
         desde = memoria.setdefault(e["id"], {"titulo": e["titulo"], "desde": hoy})["desde"]
