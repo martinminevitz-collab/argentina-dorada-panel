@@ -1,15 +1,15 @@
 {
  "resultados": {
-  "cuando": "2026-11-25T10:46-03:00",
-  "nuevos": 15,
-  "resultado": 4,
-  "agenda": 0,
-  "otro": 11,
+  "cuando": "2026-11-25T13:32-03:00",
+  "nuevos": 17,
+  "resultado": 3,
+  "agenda": 1,
+  "otro": 13,
   "noticias": 0,
-  "en_buenos_aires": 1,
-  "revisadas": 2832,
-  "viejas": 211,
-  "no_argentinas": 852,
+  "en_buenos_aires": 0,
+  "revisadas": 2837,
+  "viejas": 255,
+  "no_argentinas": 812,
   "excluidas": 45,
   "repetidas": 267,
   "fuentes_caidas": [
@@ -33,15 +33,14 @@
    "infinity.worldskate.org",
    "uww.org",
    "iwf.sport",
-   "remodeprimera.com.ar",
    "atptour.com",
    "ittf.com",
    "sailing.org"
   ],
-  "segundos": 289
+  "segundos": 294
  },
  "doc": {
-  "cuando": "2026-11-25T12:11-03:00",
+  "cuando": "2026-11-25T13:32-03:00",
   "ok": true,
   "eventos": 62,
   "publicable": 20,
