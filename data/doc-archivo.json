@@ -1,69 +1,6 @@
 {
  "_nota": "Resultados vistos en el Doc en los últimos 7 días (incluye los ya publicados que el agente sacó).",
  "eventos": {
-  "088209cc961e": {
-   "titulo": "TENIS DE MESA ADAPTADO - CAMPEONATO MUNDIAL EN PATTAYA, TAILANDIA (13 al 19 de noviembre)",
-   "deporte": "TENIS DE MESA ADAPTADO",
-   "evento": "CAMPEONATO MUNDIAL EN PATTAYA, TAILANDIA",
-   "fechas": "13 al 19 de noviembre",
-   "etiqueta": "en_curso",
-   "seccion": "resultados",
-   "ya_publicado": false,
-   "bloques": [
-    {
-     "tipo": "link",
-     "partes": [
-      {
-       "t": "https://enard.org.ar/agenda_noviembre_2026/",
-       "href": "https://enard.org.ar/agenda_noviembre_2026/"
-      },
-      {
-       "t": " (Agenda ENARD)"
-      }
-     ]
-    },
-    {
-     "tipo": "link",
-     "partes": [
-      {
-       "t": "https://paradeportes.com/tenis-de-mesa-adaptado-argentina-al-mundial-de-tailandia-con-4-jugadores/",
-       "href": "https://paradeportes.com/tenis-de-mesa-adaptado-argentina-al-mundial-de-tailandia-con-4-jugadores/"
-      },
-      {
-       "t": " (Nota)"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Argentinos: Constanza Garrone (C2), Gabriel Copola (Clase 3), Giselle Muñoz (C7) y Eithan Skliarsky (C9). Garrone y Muñoz fueron bronce en el Mundial 2022"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Los primeros 3 días se juegan dobles y dobles mixtos; los singles arrancan el domingo 15/11"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Faltan resultados"
-      }
-     ]
-    }
-   ],
-   "id": "088209cc961e",
-   "version": "0291104b7d",
-   "publicado_en_doc": false,
-   "visto": "2026-11-17"
-  },
   "08cc43ed292e": {
    "titulo": "RACQUETBALL - MILE HIGH OPEN EN DENVER, ESTADOS UNIDOS (19 al 21 de noviembre)",
    "deporte": "RACQUETBALL",
@@ -2605,65 +2542,6 @@
    "publicado_en_doc": false,
    "visto": "2026-11-22"
   },
-  "410c978a4ed6": {
-   "titulo": "GIMNASIA RÍTMICA - SUDAMERICANO JUNIOR Y GRUPO DE EDADES EN MEDELLÍN, COLOMBIA",
-   "deporte": "GIMNASIA RÍTMICA",
-   "evento": "SUDAMERICANO JUNIOR Y GRUPO DE EDADES EN MEDELLÍN, COLOMBIA",
-   "fechas": null,
-   "etiqueta": "mas_info",
-   "seccion": "resultados",
-   "ya_publicado": false,
-   "bloques": [
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Se compitió del 3 al 8/11"
-      }
-     ]
-    },
-    {
-     "tipo": "sub",
-     "partes": [
-      {
-       "t": "All Around",
-       "b": true
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Catalina Neri obtuvo la medalla de "
-      },
-      {
-       "t": "BRONCE",
-       "b": true
-      },
-      {
-       "t": " en el All Around"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Faltan: link de resultados, puntaje y resto de las argentinas"
-      }
-     ]
-    }
-   ],
-   "refs_panel": [
-    "14dac091"
-   ],
-   "id": "410c978a4ed6",
-   "version": "beb64b246b",
-   "publicado_en_doc": false,
-   "terminado_desde": "2026-11-11",
-   "visto": "2026-11-17"
-  },
   "5dc4078d3657": {
    "titulo": "TENIS ADAPTADO - WHEELCHAIR SINGLES FINALS (MASTERS) EN BARCELONA, ESPAÑA",
    "deporte": "TENIS ADAPTADO",
@@ -2863,29 +2741,6 @@
    "publicado_en_doc": false,
    "terminado_desde": "2026-11-18",
    "visto": "2026-11-22"
-  },
-  "80e2d045e7a9": {
-   "titulo": "GIMNASIA AERÓBICA - CAMPEONATO PANAMERICANO EN BRASIL (11 al 15 de noviembre)",
-   "deporte": "GIMNASIA AERÓBICA",
-   "evento": "CAMPEONATO PANAMERICANO EN BRASIL",
-   "fechas": "11 al 15 de noviembre",
-   "etiqueta": "en_curso",
-   "seccion": "resultados",
-   "ya_publicado": false,
-   "bloques": [
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Faltan la ciudad y los argentinos convocados"
-      }
-     ]
-    }
-   ],
-   "id": "80e2d045e7a9",
-   "version": "7586aa7361",
-   "publicado_en_doc": false,
-   "visto": "2026-11-17"
   },
   "85250ce34db4": {
    "titulo": "BOXEO - PAPP CUP EN BUDAPEST, HUNGRÍA",
