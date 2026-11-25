@@ -734,3 +734,16 @@ details.prox-multi summary b { text-transform: none; }
 .w-idea form { margin-top: 12px; }
 .w-idea .links-idea a { color: var(--c-azul, #2a6fd6); font-size: 13px; }
 .w-editor video { max-width: 100%; display: block; border-radius: 8px; }
+/* gráficas: referencia y menú de descarga */
+.g-ref { margin: 10px 0; border: 1px solid var(--borde); border-radius: 12px; padding: 8px 12px; background: var(--suave); }
+.g-ref summary { cursor: pointer; font-weight: 600; font-size: 14px; }
+.g-ref-cajas { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; margin-top: 8px; }
+.g-ref textarea { width: 100%; box-sizing: border-box; font: inherit; font-size: 13px; padding: 8px; border-radius: 8px; border: 1px solid var(--borde); background: var(--fondo, transparent); color: var(--texto); margin-top: 4px; }
+.g-ref-datos { max-height: 230px; overflow: auto; font-size: 13px; line-height: 1.45; margin-top: 4px; padding-right: 6px; }
+.g-ref-datos h4 { margin: 8px 0 2px; font-size: 13px; } .g-ref-datos p { margin: 0 0 4px; }
+.g-ref-datos .g-med-oro { color: var(--med-oro); } .g-ref-datos .g-med-plata { color: var(--med-plata); } .g-ref-datos .g-med-bronce { color: var(--med-bronce); }
+.g-bajar-grupo { position: relative; display: inline-block; }
+.g-bajar-menu { position: absolute; bottom: calc(100% + 6px); left: 0; z-index: 20; display: flex; flex-direction: column; gap: 4px; min-width: 220px;
+  background: var(--tarjeta, #fff); border: 1px solid var(--borde); border-radius: 10px; padding: 6px; box-shadow: 0 6px 24px rgba(0,0,0,.18); }
+.g-bajar-menu[hidden] { display: none; }
+.g-bajar-menu button { text-align: left; }

@@ -5,7 +5,8 @@
   const $ = (s, r = document) => r.querySelector(s);
   const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
   // DORADA / PLATEADA / BRONCE en mayúscula salen con el color de su medalla
-  const colorMed = (h) => h.replace(/\b(DORAD[AO]S?|ORO)\b/g, '<span class="g-med-oro">$1</span>')
+  const colorMed = (h) => h.replace(/(^|[^\wÁÉÍÓÚÑáéíóúñ])(CAMPE(?:Ó|O)N(?:ES|AS|A)?)(?![\wÁÉÍÓÚÑáéíóúñ])/g, '$1<span class="g-med-oro">$2</span>') // CAMPEÓN/CAMPEONA = dorado
+    .replace(/\b(DORAD[AO]S?|ORO)\b/g, '<span class="g-med-oro">$1</span>')
     .replace(/\b(PLATEAD[AO]S?|PLATA)\b/g, '<span class="g-med-plata">$1</span>').replace(/\b(BRONCES?)\b/g, '<span class="g-med-bronce">$1</span>');
   const br = (s) => colorMed(esc(s)).replace(/\n/g, "<br>");
   const TAM = { feed: [1080, 1350], story: [1080, 1920] };
@@ -158,7 +159,9 @@
       : `<div class="g-sinfoto">Foto (tocá "Subir foto")</div>`;
     return `<div class="g-foto ${clase}">${img}${f.video ? `<span class="g-es-video">🎬 Video</span>` : ""}</div>`;
   }
-  const credito = (d, clase = "") => d.credito ? `<div class="g-credito ${clase}">Foto: ${esc(d.credito)}</div>` : "";
+  // "Foto:" o "Video:" según lo que tenga la página (si escriben "PH:", "Foto:" o "Video:" adelante, queda lo que pusieron)
+  let pagConVideo = false;
+  const credito = (d, clase = "") => !d.credito ? "" : `<div class="g-credito ${clase}">${/^\s*(foto|ph|video)\s*:/i.test(d.credito) ? esc(d.credito) : `${pagConVideo ? "Video" : "Foto"}: ${esc(d.credito)}`}</div>`;
   // logo de Argentina Dorada (círculo): panel/img/logo-ad.png
   const LOGO_AD = "img/logo-ad.png";
   const marcaAD = (clase = "") => `<img class="g-ad-logo ${clase}" src="${LOGO_AD}" alt="Argentina Dorada">`;
@@ -314,6 +317,7 @@
 
   function paginaHTML(p, i) {
     const [w, h] = TAM[TIPOS[p.tipo].formato];
+    pagConVideo = !!p.foto?.video;
     return `<div class="g-pagina g-${p.tipo}" style="width:${w}px;height:${h}px">${DIBUJO[p.tipo](p, i)}</div>`;
   }
   function escalada(p, i, ancho) {
@@ -341,16 +345,20 @@
         `<button data-p="${id}" class="${id === G.plantilla ? "activo" : ""}">${esc(pl.nombre)}</button>`).join("")}</div></div>`).join("")}</div>
       <div class="g-tira">${G.paginas.map((p, i) => `<button class="g-mini ${i === G.sel ? "activo" : ""}" data-i="${i}">${escalada(p, i, 92)}<span>${num(i)}</span></button>`).join("")}
         <div class="g-agregar"><select aria-label="Agregar página">${otros.map(([k, t]) => `<option value="${k}">${esc(t.nombre)}</option>`).join("")}</select><button class="g-mas">+ Página</button></div></div>
+      ${G.origen ? `<details class="g-ref" open><summary>📄 Referencia: texto del posteo y datos del resultado</summary>
+        <div class="g-ref-cajas">${G.origen.textoIG ? `<label>Texto del posteo (lo podés editar; se copia con "📋 Copiar texto para IG")<textarea class="g-ref-ig" rows="8">${esc(G.origen.textoIG)}</textarea></label>` : ""}
+        <div><b>Datos del resultado</b><div class="g-ref-datos">${(G.origen.bloques || []).map((b) => { const t = limpio(b.partes || []); return !t ? "" : b.tipo === "sub" ? `<h4>${esc(t)}</h4>` : `<p>${br(t)}</p>`; }).join("") || "<p>—</p>"}</div></div></div></details>` : ""}
       <div class="g-trabajo"><div class="g-vista"></div><div class="g-campos"></div></div>
       <div class="g-acciones">${navigator.canShare ? `<button class="g-compartir principal">📲 Publicar (Instagram, X, WhatsApp…)</button>` : ""}
-        <button class="g-bajar ${navigator.canShare ? "" : "principal"}">⬇ Descargar ${G.paginas.length > 1 ? `las ${G.paginas.length} imágenes` : "imagen"}</button>
+        <span class="g-bajar-grupo"><button class="g-bajar ${navigator.canShare ? "" : "principal"}">⬇ Descargar ▾</button>
+          <span class="g-bajar-menu" hidden>${G.paginas.length > 1 ? `<button data-bajar="todas">Todas las páginas (${G.paginas.length})</button>` : ""}
+            <button data-bajar="una">Solo la página ${num(G.sel)}${G.paginas[G.sel].foto?.video ? " (video)" : ""}</button></span></span>
         <span class="g-video-grupo"><button class="g-video">🎬 Video animado (página ${num(G.sel)})</button>
         <select class="g-entrada" aria-label="Cómo entran los textos">${[["mezcla", "Títulos del costado, resto de abajo"], ["abajo", "Todo desde abajo"], ["costado", "Todo desde el costado"]]
           .map(([v, t]) => `<option value="${v}" ${v === ENTRADA ? "selected" : ""}>${t}</option>`).join("")}</select></span>
         ${G.origen?.textoIG ? `<button class="g-copiar-ig">📋 Copiar texto para IG</button>` : ""}
         <button class="g-reset">Volver a la plantilla</button></div>
-      ${G.origen?.textoIG ? `<details class="g-texto-ig"><summary>Ver / editar el texto del posteo</summary><textarea rows="10">${esc(G.origen.textoIG)}</textarea></details>` : ""}
-      <p class="ayuda">🎬 Video animado: al terminar de grabar aparece abajo para verlo, descargarlo o publicarlo ("Descargar imágenes" baja solo las fotos). Los textos entran de a uno sobre la foto (o sobre el video, si subiste uno). Dura 6 segundos con foto o lo que dure el video (hasta 20 s). Se arma en el momento: no cierres la pantalla mientras graba.</p>
+      <p class="ayuda">🎬 Video animado: al terminar de grabar aparece abajo para verlo, descargarlo o publicarlo (en "Descargar" podés bajar todas o una sola página; las páginas con video se bajan como video). Los textos entran de a uno sobre la foto (o sobre el video, si subiste uno). Dura 6 segundos con foto o lo que dure el video (hasta 20 s). Se arma en el momento: no cierres la pantalla mientras graba.</p>
       ${navigator.canShare ? `<p class="ayuda">📲 Publicar abre la lista de apps del celu: elegí Instagram → Publicación y ya va con las ${G.paginas.length} imágenes en orden, sin guardarlas.
         Si Instagram las muestra cuadradas, tocá el ícono de las flechitas (abajo a la izquierda de la foto) para que queden 4:5.</p>` : ""}
       <p class="ayuda">Las fotos quedan solo en este dispositivo. Los textos se guardan como borrador acá mismo.</p>`;
@@ -370,12 +378,14 @@
         acento: base.datos.acento, fondo: base.datos.fondo, titulo: "Título", texto: "Texto" });
       G.paginas.push(nueva); G.sel = G.paginas.length - 1; guardar(); armar();
     };
-    raiz.querySelector(".g-bajar").onclick = () => descargar(false);
+    const menu = raiz.querySelector(".g-bajar-menu");
+    raiz.querySelector(".g-bajar").onclick = () => (menu.hidden = !menu.hidden);
+    menu.querySelectorAll("[data-bajar]").forEach((b) => (b.onclick = () => { menu.hidden = true; descargar(false, b.dataset.bajar === "una" ? [G.sel] : null); }));
     raiz.querySelector(".g-compartir")?.addEventListener("click", () => descargar(true));
     raiz.querySelector(".g-video").onclick = () => grabarVideo(G.paginas[G.sel], G.sel);
     raiz.querySelector(".g-entrada").onchange = (ev) => { ENTRADA = ev.target.value; try { localStorage.setItem("ad-entrada", ENTRADA); } catch {} };
     // el texto del posteo: se copia desde acá mismo (si lo editaron abajo, va el editado)
-    const areaIG = raiz.querySelector(".g-texto-ig textarea");
+    const areaIG = raiz.querySelector(".g-ref-ig");
     areaIG?.addEventListener("input", () => { G.origen.textoIG = areaIG.value; guardar(); });
     raiz.querySelector(".g-copiar-ig")?.addEventListener("click", async () => {
       try { await navigator.clipboard.writeText(G.origen.textoIG); alertar("Texto copiado para Instagram"); } catch { alertar("No se pudo copiar"); }
@@ -499,7 +509,7 @@
     return fuentesCSS;
   }
 
-  async function descargar(compartir) {
+  async function descargar(compartir, cuales = null) {
     const b = raiz.querySelector(compartir ? ".g-compartir" : ".g-bajar"); const txt = b.textContent;
     b.disabled = true; b.textContent = "Armando las imágenes…";
     const taller = document.createElement("div"); taller.className = "g-taller";
@@ -509,6 +519,9 @@
       const fontEmbedCSS = await cssFuentes();
       const archivos = [];
       for (const [i, p] of G.paginas.entries()) {
+        if (cuales && !cuales.includes(i)) continue;
+        // página con video: se baja como video (textos quietos, con el sonido del video)
+        if (p.foto?.video) { b.textContent = `Armando el video de la página ${num(i)}…`; const v = await grabarVideo(p, i, { quieto: true, boton: b }); if (v) archivos.push(v); b.textContent = "Armando las imágenes…"; continue; }
         taller.innerHTML = paginaHTML(p, i);
         const nodo = taller.firstElementChild;
         ajustar(nodo, p);
@@ -519,6 +532,7 @@
       }
       // "Publicar": se abre la lista de apps (Instagram, X, WhatsApp...) con las imágenes en orden, sin guardarlas
       if (compartir) {
+        if (!archivos.length) return;
         if (navigator.canShare?.({ files: archivos })) await navigator.share({ files: archivos }).catch(() => {});
         else alertar("Este navegador no deja compartir imágenes: usá Descargar");
       } else {
@@ -542,10 +556,11 @@
     for (const t of ["video/mp4;codecs=avc1.42E01E", "video/mp4", "video/webm;codecs=vp9", "video/webm"]) if (window.MediaRecorder?.isTypeSupported?.(t)) return t;
     return "";
   }
-  async function grabarVideo(p, i) {
+  // { quieto: true } = los textos ya están desde el principio (para "Descargar" una página con video); devuelve el archivo en vez de mostrarlo
+  async function grabarVideo(p, i, { quieto = false, boton = null } = {}) {
     const tipo = tipoVideo();
-    if (!tipo || !HTMLCanvasElement.prototype.captureStream) return alertar("Este navegador no puede grabar video. Probá con Chrome o con el celu.");
-    const b = raiz.querySelector(".g-video"); const txt = b.textContent; b.disabled = true; b.textContent = "Preparando…";
+    if (!tipo || !HTMLCanvasElement.prototype.captureStream) { alertar("Este navegador no puede grabar video. Probá con Chrome o con el celu."); return null; }
+    const b = boton || raiz.querySelector(".g-video"); const txt = b.textContent; b.disabled = true; if (!boton) b.textContent = "Preparando…";
     const taller = document.createElement("div"); taller.className = "g-taller"; document.body.append(taller);
     let video = null, audio = null;
     try {
@@ -636,7 +651,7 @@
       // (los renglones de una lista salen más seguidos: 0,25 s)
       const INICIO = 0.3, ENTRE = 0.45, ENTRE_RENGLON = 0.25, TARDA = 1.6;
       let cuando = INICIO;
-      capas.forEach((capa, k) => { if (k) cuando += capa.renglon && capas[k - 1].renglon ? ENTRE_RENGLON : ENTRE; capa.t0 = cuando; });
+      capas.forEach((capa, k) => { if (k) cuando += capa.renglon && capas[k - 1].renglon ? ENTRE_RENGLON : ENTRE; capa.t0 = quieto ? -99 : cuando; });
       const cuadro = (t) => {
         ctx.globalAlpha = 1;
         if (aparte) {
@@ -667,10 +682,11 @@
       video?.pause(); rec.stop(); await listo;
       const ext = tipo.includes("mp4") ? "mp4" : "webm";
       const archivo = new File(partes, `argentina-dorada-${G.plantilla}-${num(i)}.${ext}`, { type: tipo.split(";")[0] });
+      if (quieto) return archivo;
       mostrarVideo(archivo, ext);
     } catch (e) {
-      console.error(e); alertar("No se pudo armar el video. Probá de nuevo.");
-    } finally { audio?.close(); taller.remove(); b.disabled = false; b.textContent = txt; }
+      console.error(e); alertar("No se pudo armar el video. Probá de nuevo."); return null;
+    } finally { audio?.close(); taller.remove(); if (!boton) { b.disabled = false; b.textContent = txt; } }
   }
   // el video terminado se muestra en pantalla con sus botones (compartir/descargar necesitan un toque nuevo: el navegador no deja hacerlo solo)
   let ultimoVideo = null;

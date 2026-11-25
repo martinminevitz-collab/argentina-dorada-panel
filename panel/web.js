@@ -130,6 +130,8 @@
   async function cargar() {
     const s = SECCIONES[est.seccion];
     const q = new URLSearchParams({ status: est.estado, context: "edit", per_page: 20, page: est.pagina, _embed: "wp:featuredmedia" });
+    // orden por fecha: más nuevas primero (por defecto) o más viejas primero
+    q.set("orderby", "date"); q.set("order", est.orden === "asc" ? "asc" : "desc");
     if (est.buscar) q.set("search", est.buscar);
     if (s.categoria) q.set("categories", est.cat[s.categoria]?.id || 0);
     if (est.seccion === "medallas" && (est.edicion || est.competencia)) {
@@ -157,11 +159,14 @@
         <button type="button" class="${est.estado === "draft" ? "activo" : ""}" data-estado="draft">Para revisar</button>
         <button type="button" class="${est.estado === "publish" ? "activo" : ""}" data-estado="publish">Publicados</button>
         ${est.seccion === "investigaciones" ? `<button type="button" class="${est.estado === "ideas" ? "activo" : ""}" data-estado="ideas">💡 Ideas</button>` : ""}
+        ${est.estado !== "ideas" ? `<button type="button" class="w-orden" title="Cambiar el orden por fecha">${est.orden === "asc" ? "📅 Más viejas primero ↑" : "📅 Más nuevas primero ↓"}</button>` : ""}
       </div>
       <form><input type="search" placeholder="Buscar por nombre o título" value="${esc(est.buscar)}"></form>`;
     barra.querySelectorAll("[data-estado]").forEach((b) => (b.onclick = () => { est.estado = b.dataset.estado; est.pagina = 1; dibujar(lista); }));
     $("form", barra).onsubmit = (ev) => { ev.preventDefault(); est.buscar = $("input", barra).value.trim(); est.pagina = 1; dibujar(lista); };
     lista.append(barra);
+    const bOrden = $(".w-orden", barra);
+    if (bOrden) bOrden.onclick = () => { est.orden = est.orden === "asc" ? "desc" : "asc"; est.pagina = 1; lista.innerHTML = ""; dibujar(lista); };
     if (est.estado === "ideas" && est.seccion !== "investigaciones") est.estado = "draft";
     if (est.estado === "ideas") { $("form", barra).remove(); $(".w-nuevo", barra).remove(); return dibujarIdeas(lista); }
 

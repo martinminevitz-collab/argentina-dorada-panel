@@ -1611,3 +1611,11 @@ window.alCambiarAcred = (filas) => {
 window.alCambiarManuales = (filas) => { estado.manualesBase = filas; combinar(); llenarDeportes(); enFondo(dibujar); };
 window.Base?.iniciar();
 cargar();
+
+// el logo de arriba vuelve al inicio (Resultados)
+{
+  const ir = () => { estado.tab = "resultados"; estado.eligioTab = true; llenarDeportes(); dibujar(); window.scrollTo({ top: 0 }); };
+  const m = document.getElementById("ir-inicio");
+  m?.addEventListener("click", ir);
+  m?.addEventListener("keydown", (ev) => { if (ev.key === "Enter") ir(); });
+}
