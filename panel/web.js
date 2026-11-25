@@ -573,10 +573,18 @@
         } else if (extras.sacarFoto) cuerpo.featured_media = 0; // sin foto de portada
         msj.textContent = "Guardando…";
         const { datos } = await api(it.id ? `${s.ruta}/${it.id}?context=edit` : `${s.ruta}?context=edit`, { metodo: "POST", cuerpo });
-        const nuevoCredito = (f.get("credito") ?? credito).trim();
-        if (datos.featured_media && (nuevoCredito !== credito || (cuerpo.featured_media && nuevoCredito))) {
+        const escrito = (f.get("credito") ?? credito).trim();
+        // foto nueva con el campo vacío: se conserva el crédito que ya tenía (no se borra)
+        const nuevoCredito = cuerpo.featured_media && !escrito ? credito : escrito;
+        let aviso = "";
+        if (datos.featured_media && nuevoCredito && (nuevoCredito !== credito || cuerpo.featured_media)) {
           await api(`media/${datos.featured_media}`, { metodo: "POST", cuerpo: { caption: nuevoCredito } });
           credito = nuevoCredito;
+        } else if (datos.featured_media && !escrito && credito && !cuerpo.featured_media) {
+          await api(`media/${datos.featured_media}`, { metodo: "POST", cuerpo: { caption: "" } }); // lo borraron a propósito
+          credito = "";
+        } else if (!datos.featured_media && escrito) {
+          aviso = "El crédito se guarda cuando la nota tenga foto.";
         }
         const nombre = datos.title?.raw || "Listo";
         if (accion === "publish" || accion === "draft") {
@@ -586,8 +594,9 @@
         } else {
           Object.assign(it, datos);
           $(".titulo", art).textContent = nombre;
-          msj.textContent = "Guardado.";
+          msj.textContent = "Guardado." + (aviso ? " " + aviso : "");
         }
+        if (aviso && (accion === "publish" || accion === "draft" || !it.id || cuerpo.featured_media)) alert(aviso); // la tarjeta se recarga: que se vea igual
       } catch (e) {
         msj.textContent = "No se pudo guardar: " + e.message;
       } finally {
