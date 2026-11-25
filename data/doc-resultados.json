@@ -1,5 +1,5 @@
 {
- "leido": "2026-11-25T11:13-03:00",
+ "leido": "2026-11-25T12:10-03:00",
  "actualizado_doc": "25/11/2026 11:00",
  "eventos": [
   {
@@ -4877,18 +4877,23 @@
      ]
     },
     {
-     "tipo": "texto",
+     "tipo": "sub",
      "partes": [
       {
-       "t": "GP de Las Vegas (USA): 19 al 21/11"
+       "t": "GP de Las Vegas (USA): 19 al 21/11",
+       "b": true
       }
      ]
     },
     {
-     "tipo": "texto",
+     "tipo": "link",
      "partes": [
       {
-       "t": "https://www.diariocronica.com.ar/noticias/2026/11/20/178962-franco-colapinto-finalizo-noveno-en-la-segunda-practica-del-gran-premio-de-las-vegas (FP2)"
+       "t": "https://www.diariocronica.com.ar/noticias/2026/11/20/178962-franco-colapinto-finalizo-noveno-en-la-segunda-practica-del-gran-premio-de-las-vegas",
+       "href": "https://www.diariocronica.com.ar/noticias/2026/11/20/178962-franco-colapinto-finalizo-noveno-en-la-segunda-practica-del-gran-premio-de-las-vegas"
+      },
+      {
+       "t": " (FP2)"
       }
      ]
     },
@@ -4901,10 +4906,14 @@
      ]
     },
     {
-     "tipo": "texto",
+     "tipo": "link",
      "partes": [
       {
-       "t": "https://www.cadena3.com/noticia/las-vegas-2026/colapinto-tuvo-una-buena-clasificacion-y-largara-noveno-en-el-gp-de-las-vegas_615350 (Clasificación)"
+       "t": "https://www.cadena3.com/noticia/las-vegas-2026/colapinto-tuvo-una-buena-clasificacion-y-largara-noveno-en-el-gp-de-las-vegas_615350",
+       "href": "https://www.cadena3.com/noticia/las-vegas-2026/colapinto-tuvo-una-buena-clasificacion-y-largara-noveno-en-el-gp-de-las-vegas_615350"
+      },
+      {
+       "t": " (Clasificación)"
       }
      ]
     },
@@ -4917,10 +4926,14 @@
      ]
     },
     {
-     "tipo": "texto",
+     "tipo": "link",
      "partes": [
       {
-       "t": "https://www.lanacion.com.ar/deportes/automovilismo/franco-colapinto-en-la-carrera-del-gran-premio-de-las-vegas-de-formula-1-en-vivo-nid22112026/ (Resultado)"
+       "t": "https://www.lanacion.com.ar/deportes/automovilismo/franco-colapinto-en-la-carrera-del-gran-premio-de-las-vegas-de-formula-1-en-vivo-nid22112026/",
+       "href": "https://www.lanacion.com.ar/deportes/automovilismo/franco-colapinto-en-la-carrera-del-gran-premio-de-las-vegas-de-formula-1-en-vivo-nid22112026/"
+      },
+      {
+       "t": " (Resultado)"
       }
      ]
     },
@@ -4941,10 +4954,11 @@
      ]
     },
     {
-     "tipo": "texto",
+     "tipo": "sub",
      "partes": [
       {
-       "t": "GP de Qatar: 27 al 29/11"
+       "t": "GP de Qatar: 27 al 29/11",
+       "b": true
       }
      ]
     },
@@ -4960,13 +4974,17 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Transmisión: Fox Sports, Disney+ y F1 TV https://www.lanacion.com.ar/deportes/automovilismo/franco-colapinto-en-el-gran-premio-de-las-vegas-en-vivo-el-minuto-a-minuto-de-la-tercera-practica-nid20112026/"
+       "t": "Transmisión: Fox Sports, Disney+ y F1 TV "
+      },
+      {
+       "t": "https://www.lanacion.com.ar/deportes/automovilismo/franco-colapinto-en-el-gran-premio-de-las-vegas-en-vivo-el-minuto-a-minuto-de-la-tercera-practica-nid20112026/",
+       "href": "https://www.lanacion.com.ar/deportes/automovilismo/franco-colapinto-en-el-gran-premio-de-las-vegas-en-vivo-el-minuto-a-minuto-de-la-tercera-practica-nid20112026/"
       }
      ]
     }
    ],
    "id": "3f83ee1c3780",
-   "version": "9a9b25fd5a",
+   "version": "93c1fb8fd6",
    "publicado_en_doc": false
   },
   {
@@ -4995,10 +5013,14 @@
      ]
     },
     {
-     "tipo": "texto",
+     "tipo": "link",
      "partes": [
       {
-       "t": "https://442.perfil.com/noticias/rugby/los-pumas-perdieron-42-12-ante-irlanda-en-dublin-por-el-nations-championship.phtml (Resultado)"
+       "t": "https://442.perfil.com/noticias/rugby/los-pumas-perdieron-42-12-ante-irlanda-en-dublin-por-el-nations-championship.phtml",
+       "href": "https://442.perfil.com/noticias/rugby/los-pumas-perdieron-42-12-ante-irlanda-en-dublin-por-el-nations-championship.phtml"
+      },
+      {
+       "t": " (Resultado)"
       }
      ]
     },
@@ -5011,10 +5033,14 @@
      ]
     },
     {
-     "tipo": "texto",
+     "tipo": "link",
      "partes": [
       {
-       "t": "https://www.0223.com.ar/nota/2026-11-14-10-46-0-los-pumas-sobrevivieron-a-un-final-increible-en-italia-y-se-llevaron-un-triunfazo (Resultado)"
+       "t": "https://www.0223.com.ar/nota/2026-11-14-10-46-0-los-pumas-sobrevivieron-a-un-final-increible-en-italia-y-se-llevaron-un-triunfazo",
+       "href": "https://www.0223.com.ar/nota/2026-11-14-10-46-0-los-pumas-sobrevivieron-a-un-final-increible-en-italia-y-se-llevaron-un-triunfazo"
+      },
+      {
+       "t": " (Resultado)"
       }
      ]
     },
@@ -5027,10 +5053,14 @@
      ]
     },
     {
-     "tipo": "texto",
+     "tipo": "link",
      "partes": [
       {
-       "t": "https://www.adnsur.com.ar/deportes/los-pumas-se-derrumbaron-ante-francia--45-17-y-jugaran-por-el-septimo-puesto-del-nations-championship_a6b02382bfd7203bb626680aa (Resultado)"
+       "t": "https://www.adnsur.com.ar/deportes/los-pumas-se-derrumbaron-ante-francia--45-17-y-jugaran-por-el-septimo-puesto-del-nations-championship_a6b02382bfd7203bb626680aa",
+       "href": "https://www.adnsur.com.ar/deportes/los-pumas-se-derrumbaron-ante-francia--45-17-y-jugaran-por-el-septimo-puesto-del-nations-championship_a6b02382bfd7203bb626680aa"
+      },
+      {
+       "t": " (Resultado)"
       }
      ]
     },
@@ -5051,18 +5081,23 @@
      ]
     },
     {
-     "tipo": "texto",
+     "tipo": "link",
      "partes": [
       {
-       "t": "https://lapostadiario.com/los-pumas-plagados-de-bajas-se-aferran-a-escocia-para-cerrar-un-ano-gris-en-el-nations-championship/ (Previa)"
+       "t": "https://lapostadiario.com/los-pumas-plagados-de-bajas-se-aferran-a-escocia-para-cerrar-un-ano-gris-en-el-nations-championship/",
+       "href": "https://lapostadiario.com/los-pumas-plagados-de-bajas-se-aferran-a-escocia-para-cerrar-un-ano-gris-en-el-nations-championship/"
+      },
+      {
+       "t": " (Previa)"
       }
      ]
     },
     {
-     "tipo": "texto",
+     "tipo": "sub",
      "partes": [
       {
-       "t": "7° puesto vs Escocia en Twickenham (Londres) el domingo 29/11 (Creo)"
+       "t": "7° puesto vs Escocia en Twickenham (Londres) el domingo 29/11 (Creo)",
+       "b": true
       }
      ]
     },
@@ -5076,7 +5111,7 @@
     }
    ],
    "id": "de102f71eab3",
-   "version": "e65c85b93d",
+   "version": "16dfcdc175",
    "publicado_en_doc": false
   },
   {
@@ -5089,10 +5124,14 @@
    "ya_publicado": false,
    "bloques": [
     {
-     "tipo": "texto",
+     "tipo": "link",
      "partes": [
       {
-       "t": "https://www.qfa.qa/en/news/fifa-confirms-full-fixture-list-for-qatar-2026-u-17-world-cup (Fixture)"
+       "t": "https://www.qfa.qa/en/news/fifa-confirms-full-fixture-list-for-qatar-2026-u-17-world-cup",
+       "href": "https://www.qfa.qa/en/news/fifa-confirms-full-fixture-list-for-qatar-2026-u-17-world-cup"
+      },
+      {
+       "t": " (Fixture)"
       }
      ]
     },
@@ -5105,10 +5144,14 @@
      ]
     },
     {
-     "tipo": "texto",
+     "tipo": "link",
      "partes": [
       {
-       "t": "https://www.lanacion.com.ar/deportes/futbol/resultado-de-la-seleccion-argentina-sub-17-vs-australia-sub-17-quien-gano-el-partido-del-mundial-nid19112026/ (Resultado)"
+       "t": "https://www.lanacion.com.ar/deportes/futbol/resultado-de-la-seleccion-argentina-sub-17-vs-australia-sub-17-quien-gano-el-partido-del-mundial-nid19112026/",
+       "href": "https://www.lanacion.com.ar/deportes/futbol/resultado-de-la-seleccion-argentina-sub-17-vs-australia-sub-17-quien-gano-el-partido-del-mundial-nid19112026/"
+      },
+      {
+       "t": " (Resultado)"
       }
      ]
     },
@@ -5121,10 +5164,14 @@
      ]
     },
     {
-     "tipo": "texto",
+     "tipo": "link",
      "partes": [
       {
-       "t": "https://www.espn.com.br/futebol/partida/_/jogoId/401873539/mozambique-u17-argentina-sub-17 (Resultado)"
+       "t": "https://www.espn.com.br/futebol/partida/_/jogoId/401873539/mozambique-u17-argentina-sub-17",
+       "href": "https://www.espn.com.br/futebol/partida/_/jogoId/401873539/mozambique-u17-argentina-sub-17"
+      },
+      {
+       "t": " (Resultado)"
       }
      ]
     },
@@ -5137,10 +5184,14 @@
      ]
     },
     {
-     "tipo": "texto",
+     "tipo": "link",
      "partes": [
       {
-       "t": "https://www.afa.com.ar/es/posts/mundial-sub-17-desde-las-12.30-argentina-se-mide-ante-dinamarca-en-busca-de-la-clasificacion-a-16avos-de-final (Previa)"
+       "t": "https://www.afa.com.ar/es/posts/mundial-sub-17-desde-las-12.30-argentina-se-mide-ante-dinamarca-en-busca-de-la-clasificacion-a-16avos-de-final",
+       "href": "https://www.afa.com.ar/es/posts/mundial-sub-17-desde-las-12.30-argentina-se-mide-ante-dinamarca-en-busca-de-la-clasificacion-a-16avos-de-final"
+      },
+      {
+       "t": " (Previa)"
       }
      ]
     },
@@ -5153,26 +5204,32 @@
      ]
     },
     {
-     "tipo": "texto",
+     "tipo": "sub",
      "partes": [
       {
-       "t": "vs Dinamarca hoy miércoles 25/11 a las 12:30hs, por la clasificación a 16avos"
+       "t": "vs Dinamarca hoy miércoles 25/11 a las 12:30hs, por la clasificación a 16avos",
+       "b": true
       }
      ]
     },
     {
-     "tipo": "texto",
+     "tipo": "link",
      "partes": [
       {
-       "t": "https://bolavip.com/ar/seleccion/argentina-comienza-su-travesia-en-el-mundial-sub-17-plantel-como-ver-los-partidos-y-el-cronograma-completo (Plantel y horarios)"
+       "t": "https://bolavip.com/ar/seleccion/argentina-comienza-su-travesia-en-el-mundial-sub-17-plantel-como-ver-los-partidos-y-el-cronograma-completo",
+       "href": "https://bolavip.com/ar/seleccion/argentina-comienza-su-travesia-en-el-mundial-sub-17-plantel-como-ver-los-partidos-y-el-cronograma-completo"
+      },
+      {
+       "t": " (Plantel y horarios)"
       }
      ]
     },
     {
-     "tipo": "texto",
+     "tipo": "sub",
      "partes": [
       {
-       "t": "Plantel (21)"
+       "t": "Plantel (21)",
+       "b": true
       }
      ]
     },
@@ -5188,13 +5245,17 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Transmisión: TyC Sports y DirecTV https://www.afa.com.ar/es/posts/mundial-sub-17-desde-las-12.30-argentina-se-mide-ante-dinamarca-en-busca-de-la-clasificacion-a-16avos-de-final"
+       "t": "Transmisión: TyC Sports y DirecTV "
+      },
+      {
+       "t": "https://www.afa.com.ar/es/posts/mundial-sub-17-desde-las-12.30-argentina-se-mide-ante-dinamarca-en-busca-de-la-clasificacion-a-16avos-de-final",
+       "href": "https://www.afa.com.ar/es/posts/mundial-sub-17-desde-las-12.30-argentina-se-mide-ante-dinamarca-en-busca-de-la-clasificacion-a-16avos-de-final"
       }
      ]
     }
    ],
    "id": "da9041c32bff",
-   "version": "199ff0354e",
+   "version": "e6a568ede1",
    "publicado_en_doc": false
   },
   {
@@ -5207,10 +5268,14 @@
    "ya_publicado": false,
    "bloques": [
     {
-     "tipo": "texto",
+     "tipo": "link",
      "partes": [
       {
-       "t": "https://www.infobae.com/deportes/2026/11/24/la-seleccion-argentina-de-talla-baja-goleo-5-1-a-brasil-y-se-clasifico-a-los-cuartos-de-final-del-mundial-el-particular-festejo/ (Resultados)"
+       "t": "https://www.infobae.com/deportes/2026/11/24/la-seleccion-argentina-de-talla-baja-goleo-5-1-a-brasil-y-se-clasifico-a-los-cuartos-de-final-del-mundial-el-particular-festejo/",
+       "href": "https://www.infobae.com/deportes/2026/11/24/la-seleccion-argentina-de-talla-baja-goleo-5-1-a-brasil-y-se-clasifico-a-los-cuartos-de-final-del-mundial-el-particular-festejo/"
+      },
+      {
+       "t": " (Resultados)"
       }
      ]
     },
@@ -5223,10 +5288,11 @@
      ]
     },
     {
-     "tipo": "texto",
+     "tipo": "sub",
      "partes": [
       {
-       "t": "Fase de grupos"
+       "t": "Fase de grupos",
+       "b": true
       }
      ]
     },
@@ -5263,10 +5329,11 @@
      ]
     },
     {
-     "tipo": "texto",
+     "tipo": "sub",
      "partes": [
       {
-       "t": "4tos de final el jueves 26/11 vs un rival del grupo de Paraguay, Egipto, Japón y Ghana"
+       "t": "4tos de final el jueves 26/11 vs un rival del grupo de Paraguay, Egipto, Japón y Ghana",
+       "b": true
       }
      ]
     }
@@ -5275,7 +5342,7 @@
     "779d361e"
    ],
    "id": "52871f18efdc",
-   "version": "73b7821cb4",
+   "version": "3c78915302",
    "publicado_en_doc": false
   },
   {
@@ -5288,26 +5355,38 @@
    "ya_publicado": false,
    "bloques": [
     {
-     "tipo": "texto",
+     "tipo": "link",
      "partes": [
       {
-       "t": "https://issf-sports.org/competitions/3524 (Web oficial ISSF)"
+       "t": "https://issf-sports.org/competitions/3524",
+       "href": "https://issf-sports.org/competitions/3524"
+      },
+      {
+       "t": " (Web oficial ISSF)"
       }
      ]
     },
     {
-     "tipo": "texto",
+     "tipo": "link",
      "partes": [
       {
-       "t": "https://issf-sports.org/competitions/3524/results (Resultados)"
+       "t": "https://issf-sports.org/competitions/3524/results",
+       "href": "https://issf-sports.org/competitions/3524/results"
+      },
+      {
+       "t": " (Resultados)"
       }
      ]
     },
     {
-     "tipo": "texto",
+     "tipo": "link",
      "partes": [
       {
-       "t": "https://www.infobae.com/america/agencias/2026/11/19/campeonato-de-las-americas-de-tiro-deportivo-otorgara-en-lima-12-cupos-a-los-angeles-2028/ (Nota)"
+       "t": "https://www.infobae.com/america/agencias/2026/11/19/campeonato-de-las-americas-de-tiro-deportivo-otorgara-en-lima-12-cupos-a-los-angeles-2028/",
+       "href": "https://www.infobae.com/america/agencias/2026/11/19/campeonato-de-las-americas-de-tiro-deportivo-otorgara-en-lima-12-cupos-a-los-angeles-2028/"
+      },
+      {
+       "t": " (Nota)"
       }
      ]
     },
@@ -5329,7 +5408,7 @@
     }
    ],
    "id": "daca2fda8556",
-   "version": "3fe7603b0e",
+   "version": "26fcbe877b",
    "publicado_en_doc": false
   },
   {
@@ -5375,18 +5454,26 @@
    "ya_publicado": false,
    "bloques": [
     {
-     "tipo": "texto",
+     "tipo": "link",
      "partes": [
       {
-       "t": "https://lifesaving2026.com (Web oficial)"
+       "t": "https://lifesaving2026.com",
+       "href": "https://lifesaving2026.com"
+      },
+      {
+       "t": " (Web oficial)"
       }
      ]
     },
     {
-     "tipo": "texto",
+     "tipo": "link",
      "partes": [
       {
-       "t": "https://www.instagram.com/seleccionargentinaopen/ (Selección, con las pruebas de cada uno)"
+       "t": "https://www.instagram.com/seleccionargentinaopen/",
+       "href": "https://www.instagram.com/seleccionargentinaopen/"
+      },
+      {
+       "t": " (Selección, con las pruebas de cada uno)"
       }
      ]
     },
@@ -5402,7 +5489,14 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Ariana Ressler (https://www.instagram.com/caneressler/)"
+       "t": "Ariana Ressler ("
+      },
+      {
+       "t": "https://www.instagram.com/caneressler/",
+       "href": "https://www.instagram.com/caneressler/"
+      },
+      {
+       "t": ")"
       }
      ]
     },
@@ -5410,7 +5504,14 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Ayrton Polese Romero (https://www.instagram.com/ayrtonpr/)"
+       "t": "Ayrton Polese Romero ("
+      },
+      {
+       "t": "https://www.instagram.com/ayrtonpr/",
+       "href": "https://www.instagram.com/ayrtonpr/"
+      },
+      {
+       "t": ")"
       }
      ]
     },
@@ -5418,7 +5519,14 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Thomas Marpez (https://www.instagram.com/thomasmarpez/)"
+       "t": "Thomas Marpez ("
+      },
+      {
+       "t": "https://www.instagram.com/thomasmarpez/",
+       "href": "https://www.instagram.com/thomasmarpez/"
+      },
+      {
+       "t": ")"
       }
      ]
     },
@@ -5426,7 +5534,14 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Camila Dip (https://www.instagram.com/camudip/)"
+       "t": "Camila Dip ("
+      },
+      {
+       "t": "https://www.instagram.com/camudip/",
+       "href": "https://www.instagram.com/camudip/"
+      },
+      {
+       "t": ")"
       }
      ]
     },
@@ -5434,7 +5549,14 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Camila Coronel (https://www.instagram.com/caamcoronel/)"
+       "t": "Camila Coronel ("
+      },
+      {
+       "t": "https://www.instagram.com/caamcoronel/",
+       "href": "https://www.instagram.com/caamcoronel/"
+      },
+      {
+       "t": ")"
       }
      ]
     },
@@ -5442,7 +5564,14 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Ornella London (https://www.instagram.com/ornellalondon/)"
+       "t": "Ornella London ("
+      },
+      {
+       "t": "https://www.instagram.com/ornellalondon/",
+       "href": "https://www.instagram.com/ornellalondon/"
+      },
+      {
+       "t": ")"
       }
      ]
     },
@@ -5450,7 +5579,14 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Eduardo Martinez (https://www.instagram.com/eduu_martinezz/)"
+       "t": "Eduardo Martinez ("
+      },
+      {
+       "t": "https://www.instagram.com/eduu_martinezz/",
+       "href": "https://www.instagram.com/eduu_martinezz/"
+      },
+      {
+       "t": ")"
       }
      ]
     },
@@ -5458,7 +5594,14 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Santiago Leon Ruiz (https://www.instagram.com/santileonruiz/)"
+       "t": "Santiago Leon Ruiz ("
+      },
+      {
+       "t": "https://www.instagram.com/santileonruiz/",
+       "href": "https://www.instagram.com/santileonruiz/"
+      },
+      {
+       "t": ")"
       }
      ]
     },
@@ -5466,7 +5609,14 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Ana Paula Alves (https://www.instagram.com/anialvess/)"
+       "t": "Ana Paula Alves ("
+      },
+      {
+       "t": "https://www.instagram.com/anialvess/",
+       "href": "https://www.instagram.com/anialvess/"
+      },
+      {
+       "t": ")"
       }
      ]
     },
@@ -5474,7 +5624,14 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Franco Albarado (https://www.instagram.com/franco.albarado/)"
+       "t": "Franco Albarado ("
+      },
+      {
+       "t": "https://www.instagram.com/franco.albarado/",
+       "href": "https://www.instagram.com/franco.albarado/"
+      },
+      {
+       "t": ")"
       }
      ]
     },
@@ -5482,7 +5639,14 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Candela Barua (https://www.instagram.com/candebarua_/)"
+       "t": "Candela Barua ("
+      },
+      {
+       "t": "https://www.instagram.com/candebarua_/",
+       "href": "https://www.instagram.com/candebarua_/"
+      },
+      {
+       "t": ")"
       }
      ]
     },
@@ -5490,7 +5654,14 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Federico Raczkowski (https://www.instagram.com/fede.racz/)"
+       "t": "Federico Raczkowski ("
+      },
+      {
+       "t": "https://www.instagram.com/fede.racz/",
+       "href": "https://www.instagram.com/fede.racz/"
+      },
+      {
+       "t": ")"
       }
      ]
     },
@@ -5507,7 +5678,7 @@
     "8466d36a"
    ],
    "id": "7749c05218ce",
-   "version": "0b5dfc25cc",
+   "version": "2833aad848",
    "publicado_en_doc": false
   },
   {
@@ -5553,10 +5724,14 @@
    "ya_publicado": false,
    "bloques": [
     {
-     "tipo": "texto",
+     "tipo": "link",
      "partes": [
       {
-       "t": "https://www.lacapitalmdp.com/sorpresivo-cambio-de-sede-para-la-seleccion-de-basquet-no-jugara-en-mar-del-plata/ (Info)"
+       "t": "https://www.lacapitalmdp.com/sorpresivo-cambio-de-sede-para-la-seleccion-de-basquet-no-jugara-en-mar-del-plata/",
+       "href": "https://www.lacapitalmdp.com/sorpresivo-cambio-de-sede-para-la-seleccion-de-basquet-no-jugara-en-mar-del-plata/"
+      },
+      {
+       "t": " (Info)"
       }
      ]
     },
@@ -5569,26 +5744,32 @@
      ]
     },
     {
-     "tipo": "texto",
+     "tipo": "link",
      "partes": [
       {
-       "t": "https://www.rosario3.com/deportes/basquet-con-campazzo-laprovittola-y-un-rosarino-la-seleccion-argentina-presento-su-prelista-para-la-ventana-de-noviembre-20261118-0058.html (Horarios y prelista)"
+       "t": "https://www.rosario3.com/deportes/basquet-con-campazzo-laprovittola-y-un-rosarino-la-seleccion-argentina-presento-su-prelista-para-la-ventana-de-noviembre-20261118-0058.html",
+       "href": "https://www.rosario3.com/deportes/basquet-con-campazzo-laprovittola-y-un-rosarino-la-seleccion-argentina-presento-su-prelista-para-la-ventana-de-noviembre-20261118-0058.html"
+      },
+      {
+       "t": " (Horarios y prelista)"
       }
      ]
     },
     {
-     "tipo": "texto",
+     "tipo": "sub",
      "partes": [
       {
-       "t": "vs Bahamas el jueves 26/11 a las 21:40hs"
+       "t": "vs Bahamas el jueves 26/11 a las 21:40hs",
+       "b": true
       }
      ]
     },
     {
-     "tipo": "texto",
+     "tipo": "sub",
      "partes": [
       {
-       "t": "vs Canadá el domingo 29/11 a las 18:10hs"
+       "t": "vs Canadá el domingo 29/11 a las 18:10hs",
+       "b": true
       }
      ]
     },
@@ -5621,7 +5802,7 @@
     "2d1d6986"
    ],
    "id": "a3a1e029406d",
-   "version": "8f3c01ccb8",
+   "version": "c0bbbdf369",
    "publicado_en_doc": false
   },
   {
@@ -5634,10 +5815,14 @@
    "ya_publicado": false,
    "bloques": [
     {
-     "tipo": "texto",
+     "tipo": "link",
      "partes": [
       {
-       "t": "https://hoydia.com.ar/deportes/rugby/el-circuito-mundial-de-seven-confirmo-las-fechas-y-sedes-para-la-temporada-2026-27/ (Info)"
+       "t": "https://hoydia.com.ar/deportes/rugby/el-circuito-mundial-de-seven-confirmo-las-fechas-y-sedes-para-la-temporada-2026-27/",
+       "href": "https://hoydia.com.ar/deportes/rugby/el-circuito-mundial-de-seven-confirmo-las-fechas-y-sedes-para-la-temporada-2026-27/"
+      },
+      {
+       "t": " (Info)"
       }
      ]
     },
@@ -5659,7 +5844,7 @@
     }
    ],
    "id": "f81d46e0ad4e",
-   "version": "0188c7d862",
+   "version": "7a3b83aa86",
    "publicado_en_doc": false
   },
   {
@@ -5672,10 +5857,14 @@
    "ya_publicado": false,
    "bloques": [
     {
-     "tipo": "texto",
+     "tipo": "link",
      "partes": [
       {
-       "t": "https://www.ijf.org/index.php/country/arg (Inscriptos ARG)"
+       "t": "https://www.ijf.org/index.php/country/arg",
+       "href": "https://www.ijf.org/index.php/country/arg"
+      },
+      {
+       "t": " (Inscriptos ARG)"
       }
      ]
     },
@@ -5689,7 +5878,7 @@
     }
    ],
    "id": "fd616fd33d8c",
-   "version": "c62f82c824",
+   "version": "acc46ef535",
    "publicado_en_doc": false
   },
   {
@@ -5705,7 +5894,11 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "vs Alemania el domingo 29/11 a las 19hs en el Estadio Único Tricampeones del Mundo - Diego Armando Maradona de La Plata"
+       "t": "vs Alemania el domingo 29/11 a las 19hs",
+       "b": true
+      },
+      {
+       "t": " en el Estadio Único Tricampeones del Mundo - Diego Armando Maradona de La Plata"
       }
      ]
     }
@@ -5714,7 +5907,7 @@
     "97682b19"
    ],
    "id": "b533ebd242c4",
-   "version": "c9cea3a60d",
+   "version": "e7bc207d0d",
    "publicado_en_doc": false
   },
   {
@@ -5727,10 +5920,14 @@
    "ya_publicado": false,
    "bloques": [
     {
-     "tipo": "texto",
+     "tipo": "link",
      "partes": [
       {
-       "t": "https://sslgoldcup.worldofsailors.com/results/ (Resultados)"
+       "t": "https://sslgoldcup.worldofsailors.com/results/",
+       "href": "https://sslgoldcup.worldofsailors.com/results/"
+      },
+      {
+       "t": " (Resultados)"
       }
      ]
     },
@@ -5743,10 +5940,11 @@
      ]
     },
     {
-     "tipo": "texto",
+     "tipo": "sub",
      "partes": [
       {
-       "t": "8vos: del 2 al 5/12"
+       "t": "8vos: del 2 al 5/12",
+       "b": true
       }
      ]
     },
@@ -5762,7 +5960,16 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Equipo (https://www.instagram.com/sslteamargentina/)"
+       "t": "Equipo (",
+       "b": true
+      },
+      {
+       "t": "https://www.instagram.com/sslteamargentina/",
+       "href": "https://www.instagram.com/sslteamargentina/"
+      },
+      {
+       "t": ")",
+       "b": true
       }
      ]
     },
@@ -5770,7 +5977,14 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Santiago Lange (C) (https://www.instagram.com/santilange/)"
+       "t": "Santiago Lange (C) ("
+      },
+      {
+       "t": "https://www.instagram.com/santilange/",
+       "href": "https://www.instagram.com/santilange/"
+      },
+      {
+       "t": ")"
       }
      ]
     },
@@ -5778,7 +5992,14 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Guillermo Parada (https://www.instagram.com/guilleparadaok/)"
+       "t": "Guillermo Parada ("
+      },
+      {
+       "t": "https://www.instagram.com/guilleparadaok/",
+       "href": "https://www.instagram.com/guilleparadaok/"
+      },
+      {
+       "t": ")"
       }
      ]
     },
@@ -5786,7 +6007,14 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Cole Parada (https://www.instagram.com/cole_parada/)"
+       "t": "Cole Parada ("
+      },
+      {
+       "t": "https://www.instagram.com/cole_parada/",
+       "href": "https://www.instagram.com/cole_parada/"
+      },
+      {
+       "t": ")"
       }
      ]
     },
@@ -5794,7 +6022,14 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Mariano Caputo (https://www.instagram.com/mamucaputo/)"
+       "t": "Mariano Caputo ("
+      },
+      {
+       "t": "https://www.instagram.com/mamucaputo/",
+       "href": "https://www.instagram.com/mamucaputo/"
+      },
+      {
+       "t": ")"
       }
      ]
     },
@@ -5802,7 +6037,14 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Cecilia Carranza (https://www.instagram.com/cecicarranzasaroli/)"
+       "t": "Cecilia Carranza ("
+      },
+      {
+       "t": "https://www.instagram.com/cecicarranzasaroli/",
+       "href": "https://www.instagram.com/cecicarranzasaroli/"
+      },
+      {
+       "t": ")"
       }
      ]
     },
@@ -5810,7 +6052,14 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Lucía Falasca (https://www.instagram.com/lu.falasca/)"
+       "t": "Lucía Falasca ("
+      },
+      {
+       "t": "https://www.instagram.com/lu.falasca/",
+       "href": "https://www.instagram.com/lu.falasca/"
+      },
+      {
+       "t": ")"
       }
      ]
     },
@@ -5818,7 +6067,14 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Alejandro Colla (https://www.instagram.com/alejandro_colla/)"
+       "t": "Alejandro Colla ("
+      },
+      {
+       "t": "https://www.instagram.com/alejandro_colla/",
+       "href": "https://www.instagram.com/alejandro_colla/"
+      },
+      {
+       "t": ")"
       }
      ]
     },
@@ -5826,7 +6082,14 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Germán Panei (https://www.instagram.com/gpanei/)"
+       "t": "Germán Panei ("
+      },
+      {
+       "t": "https://www.instagram.com/gpanei/",
+       "href": "https://www.instagram.com/gpanei/"
+      },
+      {
+       "t": ")"
       }
      ]
     },
@@ -5834,7 +6097,14 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Pablo Despontin (https://www.instagram.com/pablodespontin/)"
+       "t": "Pablo Despontin ("
+      },
+      {
+       "t": "https://www.instagram.com/pablodespontin/",
+       "href": "https://www.instagram.com/pablodespontin/"
+      },
+      {
+       "t": ")"
       }
      ]
     },
@@ -5842,7 +6112,14 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Jordán Rivas (https://www.instagram.com/jordan.rivas1/)"
+       "t": "Jordán Rivas ("
+      },
+      {
+       "t": "https://www.instagram.com/jordan.rivas1/",
+       "href": "https://www.instagram.com/jordan.rivas1/"
+      },
+      {
+       "t": ")"
       }
      ]
     },
@@ -5850,7 +6127,14 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Gabriel Merino (https://www.instagram.com/gabrielpmarino/)"
+       "t": "Gabriel Merino ("
+      },
+      {
+       "t": "https://www.instagram.com/gabrielpmarino/",
+       "href": "https://www.instagram.com/gabrielpmarino/"
+      },
+      {
+       "t": ")"
       }
      ]
     }
@@ -5859,7 +6143,7 @@
     "f7d1b4d1"
    ],
    "id": "293979ee6706",
-   "version": "31ed4279ef",
+   "version": "d36e702a46",
    "publicado_en_doc": false
   },
   {
@@ -5897,7 +6181,11 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "vs Uruguay el viernes 4/12 a las 20:15hs en el Estadio de Barracas Central"
+       "t": "vs Uruguay el viernes 4/12 a las 20:15hs",
+       "b": true
+      },
+      {
+       "t": " en el Estadio de Barracas Central"
       }
      ]
     }
@@ -5907,7 +6195,7 @@
     "3156086f"
    ],
    "id": "86a834f665cb",
-   "version": "8ab0903d61",
+   "version": "5806abff2f",
    "publicado_en_doc": false
   },
   {
@@ -5920,10 +6208,14 @@
    "ya_publicado": false,
    "bloques": [
     {
-     "tipo": "texto",
+     "tipo": "link",
      "partes": [
       {
-       "t": "https://dodgeballhub.com/ (Info)"
+       "t": "https://dodgeballhub.com/",
+       "href": "https://dodgeballhub.com/"
+      },
+      {
+       "t": " (Info)"
       }
      ]
     },
@@ -5940,7 +6232,7 @@
     "d7e8d0e5"
    ],
    "id": "066c3036061d",
-   "version": "055bb8eb00",
+   "version": "4b0ca36307",
    "publicado_en_doc": false
   },
   {
@@ -5953,10 +6245,14 @@
    "ya_publicado": false,
    "bloques": [
     {
-     "tipo": "texto",
+     "tipo": "link",
      "partes": [
       {
-       "t": "https://www.instagram.com/p/DfAo1VtJP17/ (Info)"
+       "t": "https://www.instagram.com/p/DfAo1VtJP17/",
+       "href": "https://www.instagram.com/p/DfAo1VtJP17/"
+      },
+      {
+       "t": " (Info)"
       }
      ]
     },
@@ -5970,7 +6266,7 @@
     }
    ],
    "id": "26199b37b342",
-   "version": "a4c0efcc7f",
+   "version": "b1b4a10589",
    "publicado_en_doc": false
   },
   {
@@ -6008,10 +6304,14 @@
    "ya_publicado": false,
    "bloques": [
     {
-     "tipo": "texto",
+     "tipo": "link",
      "partes": [
       {
-       "t": "https://www.hockey.org.au/news/kookaburras-and-hockeyroos-discover-2026-27-fih-pro-league-venues-and-dates (Calendario)"
+       "t": "https://www.hockey.org.au/news/kookaburras-and-hockeyroos-discover-2026-27-fih-pro-league-venues-and-dates",
+       "href": "https://www.hockey.org.au/news/kookaburras-and-hockeyroos-discover-2026-27-fih-pro-league-venues-and-dates"
+      },
+      {
+       "t": " (Calendario)"
       }
      ]
     },
@@ -6025,7 +6325,7 @@
     }
    ],
    "id": "61326fe2ad0f",
-   "version": "13825456ab",
+   "version": "12336fc7a9",
    "publicado_en_doc": false
   },
   {
@@ -6077,23 +6377,33 @@
        "t": "Faltan los convocados argentinos"
       }
      ]
-    },
+    }
+   ],
+   "refs_panel": [
+    "7f5e7c16"
+   ],
+   "id": "97985d40049c",
+   "version": "03b965b18f",
+   "publicado_en_doc": false
+  },
+  {
+   "titulo": "TONA26 TORNEOS NACIONALES DE DEPORTES ALTERNATIVOS COLÓN 2026, ARGENTINA (12 y 13 de diciembre)",
+   "deporte": "",
+   "evento": "TONA26 TORNEOS NACIONALES DE DEPORTES ALTERNATIVOS COLÓN 2026, ARGENTINA",
+   "fechas": "12 y 13 de diciembre",
+   "etiqueta": "agenda",
+   "seccion": "agenda",
+   "ya_publicado": false,
+   "bloques": [
     {
-     "tipo": "espacio"
-    },
-    {
-     "tipo": "texto",
+     "tipo": "link",
      "partes": [
       {
-       "t": "TONA26 TORNEOS NACIONALES DE DEPORTES ALTERNATIVOS COLÓN 2026, ARGENTINA (12 y 13 de diciembre)"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
+       "t": "https://deportesalternativos.com/tona26",
+       "href": "https://deportesalternativos.com/tona26"
+      },
       {
-       "t": "https://deportesalternativos.com/tona26 (Info)"
+       "t": " (Info)"
       }
      ]
     },
@@ -6107,11 +6417,10 @@
     }
    ],
    "refs_panel": [
-    "7f5e7c16",
     "203e80b2"
    ],
-   "id": "97985d40049c",
-   "version": "fade2c5964",
+   "id": "fd2d0c4be2fa",
+   "version": "2d623f9bc7",
    "publicado_en_doc": false
   },
   {
@@ -6124,10 +6433,14 @@
    "ya_publicado": false,
    "bloques": [
     {
-     "tipo": "texto",
+     "tipo": "link",
      "partes": [
       {
-       "t": "https://wfads.org/breaking/ (Info del evento)"
+       "t": "https://wfads.org/breaking/",
+       "href": "https://wfads.org/breaking/"
+      },
+      {
+       "t": " (Info del evento)"
       }
      ]
     },
@@ -6143,15 +6456,30 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Compiten Bianca Chimento (https://www.instagram.com/_violettaqueen/) y Supa Dee (https://www.instagram.com/supadeeism/), clasificados en el Dubai Open Breaking: Clasificatorio Argentina"
+       "t": "Compiten Bianca Chimento ("
+      },
+      {
+       "t": "https://www.instagram.com/_violettaqueen/",
+       "href": "https://www.instagram.com/_violettaqueen/"
+      },
+      {
+       "t": ") y Supa Dee ("
+      },
+      {
+       "t": "https://www.instagram.com/supadeeism/",
+       "href": "https://www.instagram.com/supadeeism/"
+      },
+      {
+       "t": "), clasificados en el Dubai Open Breaking: Clasificatorio Argentina"
       }
      ]
     },
     {
-     "tipo": "texto",
+     "tipo": "sub",
      "partes": [
       {
-       "t": "Viernes 19 de diciembre: B-Boys y B-Girls adultos (mayores de 16), la categoría de los dos argentinos"
+       "t": "Viernes 19 de diciembre: B-Boys y B-Girls adultos (mayores de 16), la categoría de los dos argentinos",
+       "b": true
       }
      ]
     },
@@ -6165,7 +6493,7 @@
     }
    ],
    "id": "49a715b10ded",
-   "version": "676076743e",
+   "version": "b928fad512",
    "publicado_en_doc": false
   },
   {
@@ -6178,10 +6506,14 @@
    "ya_publicado": false,
    "bloques": [
     {
-     "tipo": "texto",
+     "tipo": "link",
      "partes": [
       {
-       "t": "https://www.fei.org/events/2026_CH-M_0004/Butheeb#events (Web oficial)"
+       "t": "https://www.fei.org/events/2026_CH-M_0004/Butheeb#events",
+       "href": "https://www.fei.org/events/2026_CH-M_0004/Butheeb#events"
+      },
+      {
+       "t": " (Web oficial)"
       }
      ]
     },
@@ -6248,18 +6580,24 @@
        "t": "Josefina Ballester (Box Presumida)"
       }
      ]
-    },
-    {
-     "tipo": "espacio"
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "PREMIOS OLIMPIA 2026 EN TANGO PORTEÑO, BUENOS AIRES (21 de diciembre)"
-      }
-     ]
-    },
+    }
+   ],
+   "refs_panel": [
+    "577a6f84"
+   ],
+   "id": "14bebb830acb",
+   "version": "6751714108",
+   "publicado_en_doc": false
+  },
+  {
+   "titulo": "PREMIOS OLIMPIA 2026 EN TANGO PORTEÑO, BUENOS AIRES (21 de diciembre)",
+   "deporte": "",
+   "evento": "PREMIOS OLIMPIA 2026 EN TANGO PORTEÑO, BUENOS AIRES",
+   "fechas": "21 de diciembre",
+   "etiqueta": "agenda",
+   "seccion": "agenda",
+   "ya_publicado": false,
+   "bloques": [
     {
      "tipo": "texto",
      "partes": [
@@ -6270,11 +6608,10 @@
     }
    ],
    "refs_panel": [
-    "577a6f84",
     "5e117001"
    ],
-   "id": "14bebb830acb",
-   "version": "58fe908a61",
+   "id": "051702656cd1",
+   "version": "ccf486824b",
    "publicado_en_doc": false
   },
   {
@@ -6326,23 +6663,33 @@
        "t": "Argentina estará en el Grupo B con México, República Dominicana, Panamá y Colombia"
       }
      ]
-    },
+    }
+   ],
+   "refs_panel": [
+    "8dd5c1f9"
+   ],
+   "id": "9725fc4440c9",
+   "version": "7879ac4663",
+   "publicado_en_doc": false
+  },
+  {
+   "titulo": "VI JUEGOS SURAMERICANOS DE PLAYA IQUIQUE 2027, CHILE (11 al 21 de marzo de 2027)",
+   "deporte": "",
+   "evento": "VI JUEGOS SURAMERICANOS DE PLAYA IQUIQUE 2027, CHILE",
+   "fechas": "11 al 21 de marzo de 2027",
+   "etiqueta": "agenda",
+   "seccion": "agenda",
+   "ya_publicado": false,
+   "bloques": [
     {
-     "tipo": "espacio"
-    },
-    {
-     "tipo": "texto",
+     "tipo": "link",
      "partes": [
       {
-       "t": "VI JUEGOS SURAMERICANOS DE PLAYA IQUIQUE 2027, CHILE (11 al 21 de marzo de 2027)"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
+       "t": "https://iquique2027.cl/",
+       "href": "https://iquique2027.cl/"
+      },
       {
-       "t": "https://iquique2027.cl/ (Web oficial)"
+       "t": " (Web oficial)"
       }
      ]
     },
@@ -6353,23 +6700,63 @@
        "t": "El evento reunirá 14 disciplinas deportivas: Vóley Playa, Fútbol Playa, Rugby Playa, Tenis Playa, Lucha de Playa, Surf, Natación en Aguas Abiertas, Esquí Náutico, Remo (Beach Sprint Coastal), Triatlón, Vela, Actividades Subacuáticas, Skateboarding y Handball de Playa / Canotaje"
       }
      ]
-    },
+    }
+   ],
+   "refs_panel": [
+    "9be44e2c"
+   ],
+   "id": "3a2df7596a41",
+   "version": "d087912bc9",
+   "multideportivo": true,
+   "multi": {
+    "nombre": "Playa Iquique 2027",
+    "general": [
+     {
+      "tipo": "link",
+      "partes": [
+       {
+        "t": "https://iquique2027.cl/",
+        "href": "https://iquique2027.cl/"
+       },
+       {
+        "t": " (Web oficial)"
+       }
+      ]
+     },
+     {
+      "tipo": "texto",
+      "partes": [
+       {
+        "t": "El evento reunirá 14 disciplinas deportivas: Vóley Playa, Fútbol Playa, Rugby Playa, Tenis Playa, Lucha de Playa, Surf, Natación en Aguas Abiertas, Esquí Náutico, Remo (Beach Sprint Coastal), Triatlón, Vela, Actividades Subacuáticas, Skateboarding y Handball de Playa / Canotaje"
+       }
+      ]
+     }
+    ],
+    "medallero": null,
+    "resumen_final": "",
+    "dias": [],
+    "deportes": []
+   },
+   "publicado_en_doc": false
+  },
+  {
+   "titulo": "JUEGOS PANAMERICANOS LIMA 2027, PERÚ (23 de julio al 8 de agosto de 2027)",
+   "deporte": "",
+   "evento": "JUEGOS PANAMERICANOS LIMA 2027, PERÚ",
+   "fechas": "23 de julio al 8 de agosto de 2027",
+   "etiqueta": "agenda",
+   "seccion": "agenda",
+   "ya_publicado": false,
+   "bloques": [
     {
-     "tipo": "espacio"
-    },
-    {
-     "tipo": "texto",
+     "tipo": "link",
      "partes": [
       {
-       "t": "JUEGOS PANAMERICANOS LIMA 2027, PERÚ (23 de julio al 8 de agosto de 2027)"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
+       "t": "https://forbes.pe/actualidad/2026-01-30/juegos-panamericanos-de-lima-2027-cambiaron-de-fecha-seran-del-23-de-julio-al-8-de-agosto/",
+       "href": "https://forbes.pe/actualidad/2026-01-30/juegos-panamericanos-de-lima-2027-cambiaron-de-fecha-seran-del-23-de-julio-al-8-de-agosto/"
+      },
       {
-       "t": "https://forbes.pe/actualidad/2026-01-30/juegos-panamericanos-de-lima-2027-cambiaron-de-fecha-seran-del-23-de-julio-al-8-de-agosto/ (Fechas)"
+       "t": " (Fechas)"
       }
      ]
     },
@@ -6382,12 +6769,38 @@
      ]
     }
    ],
-   "refs_panel": [
-    "8dd5c1f9",
-    "9be44e2c"
-   ],
-   "id": "9725fc4440c9",
-   "version": "b1e5513823",
+   "id": "51a7fb1926b5",
+   "version": "2280948974",
+   "multideportivo": true,
+   "multi": {
+    "nombre": "Lima 2027",
+    "general": [
+     {
+      "tipo": "link",
+      "partes": [
+       {
+        "t": "https://forbes.pe/actualidad/2026-01-30/juegos-panamericanos-de-lima-2027-cambiaron-de-fecha-seran-del-23-de-julio-al-8-de-agosto/",
+        "href": "https://forbes.pe/actualidad/2026-01-30/juegos-panamericanos-de-lima-2027-cambiaron-de-fecha-seran-del-23-de-julio-al-8-de-agosto/"
+       },
+       {
+        "t": " (Fechas)"
+       }
+      ]
+     },
+     {
+      "tipo": "texto",
+      "partes": [
+       {
+        "t": "Próximo evento multideportivo con argentinos"
+       }
+      ]
+     }
+    ],
+    "medallero": null,
+    "resumen_final": "",
+    "dias": [],
+    "deportes": []
+   },
    "publicado_en_doc": false
   },
   {
