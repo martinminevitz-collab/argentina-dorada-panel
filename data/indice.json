@@ -1,6 +1,11 @@
 {
- "actualizado": "2026-11-24T22:43-03:00",
+ "actualizado": "2026-11-25T01:31-03:00",
  "dias": [
+  {
+   "fecha": "2026-11-25",
+   "archivo": "hallazgos/2026/11/2026-11-25.json",
+   "cantidad": 30
+  },
   {
    "fecha": "2026-11-24",
    "archivo": "hallazgos/2026/11/2026-11-24.json",
@@ -75,11 +80,6 @@
    "fecha": "2026-11-10",
    "archivo": "hallazgos/2026/11/2026-11-10.json",
    "cantidad": 94
-  },
-  {
-   "fecha": "2026-11-09",
-   "archivo": "hallazgos/2026/11/2026-11-09.json",
-   "cantidad": 189
   }
  ]
 }
