@@ -1,5 +1,5 @@
 {
- "leido": "2026-11-25T12:10-03:00",
+ "leido": "2026-11-25T12:11-03:00",
  "actualizado_doc": "25/11/2026 11:00",
  "eventos": [
   {
@@ -1769,7 +1769,8 @@
    "id": "eb926937b172",
    "version": "9289ca4cab",
    "publicado_en_doc": false,
-   "terminado_desde": "2026-11-20"
+   "terminado_desde": "2026-11-20",
+   "vencido": true
   },
   {
    "titulo": "TENIS DE MESA ADAPTADO - CAMPEONATO MUNDIAL EN PATTAYA, TAILANDIA",
@@ -2079,7 +2080,8 @@
    "id": "dafa7a05a13b",
    "version": "289e2455ec",
    "publicado_en_doc": false,
-   "terminado_desde": "2026-11-20"
+   "terminado_desde": "2026-11-20",
+   "vencido": true
   },
   {
    "titulo": "PÁDEL - PANAMERICANO DE MENORES (FIP JUNIOR AMERICA PADEL CUP) EN CANCÚN, MÉXICO",
@@ -2457,7 +2459,8 @@
    "id": "5dc4078d3657",
    "version": "7993f9546e",
    "publicado_en_doc": false,
-   "terminado_desde": "2026-11-19"
+   "terminado_desde": "2026-11-19",
+   "vencido": true
   },
   {
    "titulo": "ATLETISMO - CAMPEONATO SUDAMERICANO DE MARATÓN Y RUTA EN SANTIAGO, CHILE",
