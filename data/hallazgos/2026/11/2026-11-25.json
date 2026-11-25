@@ -84,6 +84,20 @@
   "noticia": false
  },
  {
+  "id": "205b1d76588d",
+  "titulo": "Regatas hizo podio en el Argentino de Remo",
+  "resumen": "Regatas hizo podio en el Argentino de Remo Diario El Libertador de Corrientes",
+  "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNazlBcjBMeG9LekRWU0Q5dlZUMDl2c3JFQVRzTWs4VUJKVWptRWRzU1RWSDRvRllzWjNaZE9icWdDTUdsamNHalFSUXZYN203TldvQXhlZk1Jb0d5VDZkUTdTREQtZEI0VHJ5dHlnS1pPa19JNkNsRlFzZVJIX3BOREFkQjlPNWMy?oc=5",
+  "fuente": "Diario El Libertador de Corrientes",
+  "deporte": "Remo",
+  "tipo": "resultado",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-25T02:43+00:00",
+  "encontrado": "2026-11-25T07:27-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
   "id": "8648cfeff714",
   "titulo": "Mundial de Fútbol Talla Baja: Argentina goleó 5-1 a Brasil y ganó su grupo con un paranaense en el plantel",
   "resumen": "Mundial de Fútbol Talla Baja: Argentina goleó 5-1 a Brasil y ganó su grupo con un paranaense en el plantel Elonce.com",
@@ -210,6 +224,20 @@
   "noticia": false
  },
  {
+  "id": "0aab61323054",
+  "titulo": "¿Cómo puede ser? Uno de los leones de Estudiantes no tiene entrada para la final",
+  "resumen": "¿Cómo puede ser? Uno de los leones de Estudiantes no tiene entrada para la final Primera Página",
+  "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPdVR4dnVXOVpLdXQzQjl3eFJyenNjOUFYWWdsbkduVDc1T2JEbHNKRDI2NlhSekZKV2dIemVhc2pvTy1naUhHbDdLYnM4d3VWXzZMSDVEWmF6cHNNT2ljQ01yRE1BRjdVblNidFR0cHc2OHIwd1dsREZrSkRINm1HdncwbjFTNjVHcEFxY0dWQ2JlZFNQRTFTYTRWWXR5aVQtRHd2TGNsQXpLSXZ0Y1M5Y1hQOTlUd1J6TjNQS29PVEVDVkozZmF5R2EzY0pmQdIB3AFBVV95cUxQdEFscFNTYkcxbVFhWnAzZ2N1SVF0TGFfVDJ0Y2Z6OF9QdjdIRDB2Y21SSVZCQXpoYTBzbVhFcF9lNHAtT084N1Jway1paC1IWC1EN2dOaHFEcmt0Y3JkT1JfY1FaQVlnRXVuSi1XaHlha3VJekwyWk9CRHZualNYc1hMZXJUX2NaTDFKLVF2YW5uUVdEMUF2Q29rbEI0VDBjNUMwVmZndkNTamZROGlmeEFLMDBjbHJhN1ZhcFVJbzRQQlhURTlSX0NBeTdBVGF0a3F6dVBlYUJFX19C?oc=5",
+  "fuente": "Primera Página",
+  "deporte": "Hockey",
+  "tipo": "resultado",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-24T23:35+00:00",
+  "encontrado": "2026-11-25T07:26-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
   "id": "397726e6be7d",
   "titulo": "La predicción exacta de la Inteligencia Artificial para el GP de Qatar de Colapinto en la Fórmula 1",
   "resumen": "La predicción exacta de la Inteligencia Artificial para el GP de Qatar de Colapinto en la Fórmula 1 Bolavip Argentina",
@@ -220,6 +248,20 @@
   "en_buenos_aires": false,
   "publicado": "2026-11-24T23:33+00:00",
   "encontrado": "2026-11-25T01:27-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
+  "id": "b7372debe223",
+  "titulo": "Necochea reúne a los mejores jugadores de padel de Argentina y reparte $3 millones",
+  "resumen": "Necochea reúne a los mejores jugadores de padel de Argentina y reparte $3 millones Ecos Diarios Necochea",
+  "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPWVFNc3VwNUpNNndNd1FVLUd1dGdRSlpOOFJoTHB1UEUwODN6dDVBeVdRME1oVEFYQ0NUdEZBaF9razJFUG8tdVFlN2ZWaTZwTTZRWmk2QjJTSlpheFcxeTRFalJVSGQ3NW5Senl3TGdfeHFtNS16d3M3YUNVMDZYbWVnUk4yNmY4cUtUY2JPbnYwWDFrTUduX2doVTlWcmZLTjNxemZn?oc=5",
+  "fuente": "Ecos Diarios Necochea",
+  "deporte": "Bowling",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-24T21:00+00:00",
+  "encontrado": "2026-11-25T07:25-03:00",
   "bot": "resultados",
   "noticia": false
  },
