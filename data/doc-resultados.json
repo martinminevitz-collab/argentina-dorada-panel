@@ -1,5 +1,6440 @@
 {
- "leido": "2026-11-22T10:59-03:00",
- "actualizado_doc": "22/11/2026 11:00",
- "eventos": []
+ "leido": "2026-11-25T11:13-03:00",
+ "actualizado_doc": "25/11/2026 11:00",
+ "eventos": [
+  {
+   "titulo": "GOLF - WALA (WOMENS AMATEUR LATIN AMERICA) EN GUATEMALA",
+   "deporte": "GOLF",
+   "evento": "WALA (WOMENS AMATEUR LATIN AMERICA) EN GUATEMALA",
+   "fechas": null,
+   "etiqueta": "publicable",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se jugó del 19 al 22/11 en El Pulté (Guatemala)"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://walagolf.com/leaderboard/T20261112-452",
+       "href": "https://walagolf.com/leaderboard/T20261112-452"
+      },
+      {
+       "t": " (Resultados)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Argentina estuvo representada por: María Cabanillas, María Olivero, Mía Yaya, Bernardita Villalba, Ana Giuliano, Malena Castro, Mercedes Aldana y Clementina Castaño"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Clasificación final (par 72)",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "María Olivero fue la mejor argentina: 12° con 289 golpes (76-69-68-76, +1)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Mercedes Aldana 17° con 293 (70-74-73-76, +5)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "María Cabanillas 31° con 298 (81-71-74-72, +10)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Mía Yaya 33° con 300 (73-71-77-79, +12)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Ana Giuliano 38° con 302 (77-72-79-74, +14)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Clementina Castaño 41° con 303 (74-79-74-76, +15)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Malena Castro 44° con 305 (75-77-76-77, +17)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Bernardita Villalba 56° con 321 (81-78-78-84, +33)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Ganó María José Marín (COL) con 268 (-20), su segundo título seguido"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "61c14a16"
+   ],
+   "id": "a4cfb7f743ac",
+   "version": "d992b613ae",
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-25"
+  },
+  {
+   "titulo": "PICKLEBALL - CAMPEONATO SUDAMERICANO EN CARMELO, URUGUAY",
+   "deporte": "PICKLEBALL",
+   "evento": "CAMPEONATO SUDAMERICANO EN CARMELO, URUGUAY",
+   "fechas": null,
+   "etiqueta": "publicable",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se jugó del 17 al 22/11. Fue el 1° Sudamericano de Pickleball"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.sudamericanodepickleball.com/cronograma",
+       "href": "https://www.sudamericanodepickleball.com/cronograma"
+      },
+      {
+       "t": " (Cronograma)"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.lagaceta.com.ar/nota/1163739/deportes/argentina-hizo-podio-todas-categorias-primer-sudamericano-selecciones-pickleball.html",
+       "href": "https://www.lagaceta.com.ar/nota/1163739/deportes/argentina-hizo-podio-todas-categorias-primer-sudamericano-selecciones-pickleball.html"
+      },
+      {
+       "t": " (Resultados)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Argentina hizo podio en las tres categorías de la Copa de Países"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "OPEN",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Mariela Coien, Sofia Andino, Lupe Ubeda, Jesica Orseli, Nicolas Yannuzzi, Fernando Zurita, Tomás Alaimo y Martín Petagna"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "La Selección logró la medalla de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "SENIOR",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Romina Rosales, Karina Rossi, Gonzalo Valdez, Patricio Bertero, Marcelo Galati y Mariano Garcia Malbrán"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "La Selección logró la medalla "
+      },
+      {
+       "t": "PLATEADA",
+       "b": true
+      },
+      {
+       "t": " tras perder una final muy ajustada vs Brasil"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "JUNIOR",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Ana Lombardo, Sara Marcos, Luana Galati, Joaquin Bertainam Thiago Balmaceda y Martino De Santis"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "La Selección logró la medalla de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      },
+      {
+       "t": " tras superar a Colombia"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Abierto Sudamericano (individual y parejas, del 18 al 20/11)",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.lagaceta.com.ar/nota/1163578/deportes/ocho-tucumanos-participaron-primer-abierto-sudamericano-pickleball-argentina-termino-segunda-medallero.html",
+       "href": "https://www.lagaceta.com.ar/nota/1163578/deportes/ocho-tucumanos-participaron-primer-abierto-sudamericano-pickleball-argentina-termino-segunda-medallero.html"
+      },
+      {
+       "t": " (Medallero)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Argentina terminó 2° en el medallero con 22 medallas: 10 "
+      },
+      {
+       "t": "DORADAS",
+       "b": true
+      },
+      {
+       "t": ", 7 "
+      },
+      {
+       "t": "PLATEADAS",
+       "b": true
+      },
+      {
+       "t": " y 5 de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      },
+      {
+       "t": " (Brasil fue 1° con 34)"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "fe2c6321",
+    "0f07c2d0"
+   ],
+   "id": "1683acdc480f",
+   "version": "8e48d816b2",
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-25"
+  },
+  {
+   "titulo": "BÁDMINTON - GUATEMALA INTERNATIONAL SERIES EN CIUDAD DE GUATEMALA, GUATEMALA",
+   "deporte": "BÁDMINTON",
+   "evento": "GUATEMALA INTERNATIONAL SERIES EN CIUDAD DE GUATEMALA, GUATEMALA",
+   "fechas": null,
+   "etiqueta": "publicable",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se jugó del 17 al 22/11"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://bwfbadminton.com/tournament/5755/guatemala-international-series-2026/draws/",
+       "href": "https://bwfbadminton.com/tournament/5755/guatemala-international-series-2026/draws/"
+      },
+      {
+       "t": " (Cuadros)"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.badmintonpanam.org/pan-am-athletes-shine-at-guatemala-international-series-2026/",
+       "href": "https://www.badmintonpanam.org/pan-am-athletes-shine-at-guatemala-international-series-2026/"
+      },
+      {
+       "t": " (Resultados)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Compitieron Nicolás Oliva, Santiago Otero, Iona Gualdi y Ailén Oliva. Argentina se llevó 4 medallas"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Dobles Femenino",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Iona Gualdi y Ailén Oliva lograron la medalla "
+      },
+      {
+       "t": "PLATEADA",
+       "b": true
+      },
+      {
+       "t": " tras perder la final vs Diana Corleto / Nikte Sotomayor (GUA) por 21-13 y 21-11"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Dobles Mixto",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Nicolás Oliva y Ailén Oliva lograron la medalla "
+      },
+      {
+       "t": "PLATEADA",
+       "b": true
+      },
+      {
+       "t": " tras perder la final vs Christopher Martínez / Diana Corleto (GUA) por 21-9 y 21-12"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Santiago Otero e Iona Gualdi lograron la medalla de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Singles Femenino",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Iona Gualdi logró la medalla de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "b716fff1",
+    "da07196c"
+   ],
+   "id": "a4a04cccb1b7",
+   "version": "657488cae1",
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-25"
+  },
+  {
+   "titulo": "SURF ADAPTADO - ISA WORLD PARA SURFING CHAMPIONSHIP EN PALM DESERT, ESTADOS UNIDOS",
+   "deporte": "SURF ADAPTADO",
+   "evento": "ISA WORLD PARA SURFING CHAMPIONSHIP EN PALM DESERT, ESTADOS UNIDOS",
+   "fechas": null,
+   "etiqueta": "mas_info",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Terminó el 22/11 en la pileta de olas DSRT Surf (California)"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://wavepoolmag.com/isa-world-para-surfing-championship-2026/",
+       "href": "https://wavepoolmag.com/isa-world-para-surfing-championship-2026/"
+      },
+      {
+       "t": " (Resultados)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Women's Stand 1",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Lara Llanos Alfonso logró la medalla "
+      },
+      {
+       "t": "PLATEADA",
+       "b": true
+      },
+      {
+       "t": ", detrás de Saioa Huarte (ESP)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Francia ganó el título por equipos por 4° vez seguida (2° Estados Unidos y 3° Brasil)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan: resultado de Nicolás Gallegos y puesto de Argentina por equipos"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "ff8a5211"
+   ],
+   "id": "b650cbbb9356",
+   "version": "1281ba820d",
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-25"
+  },
+  {
+   "titulo": "ESQUÍ CROSS COUNTRY - CAMPEONATO FIS EN BEITOSTØLEN, NORUEGA",
+   "deporte": "ESQUÍ CROSS COUNTRY",
+   "evento": "CAMPEONATO FIS EN BEITOSTØLEN, NORUEGA",
+   "fechas": null,
+   "etiqueta": "publicable",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se compitió del 20 al 22/11"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=CC&eventid=63292&seasoncode=2027",
+       "href": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=CC&eventid=63292&seasoncode=2027"
+      },
+      {
+       "t": " (Web oficial)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Compitieron Agustina Groetzner, Franco Dal Farra, Nahiara Diaz Gonzalez y Mateo Sauma"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "10km Clásico Femenino (20/11)",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.fis-ski.com/DB/general/results.html?sectorcode=CC&raceid=52681",
+       "href": "https://www.fis-ski.com/DB/general/results.html?sectorcode=CC&raceid=52681"
+      },
+      {
+       "t": " (Resultados)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Nahiara Diaz Gonzalez fue 63° con 31:28.7 (+5:15.7)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Agustina Groetzner fue 70° con 33:02.4 (+6:49.4)"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "10km Clásico Masculino (20/11)",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.fis-ski.com/DB/general/results.html?sectorcode=CC&raceid=52682",
+       "href": "https://www.fis-ski.com/DB/general/results.html?sectorcode=CC&raceid=52682"
+      },
+      {
+       "t": " (Resultados)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Franco Dal Farra fue 95° con 25:49.2 (+3:03.3)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Mateo Sauma fue 142° con 28:08.9 (+5:23.0)"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Sprint clásico (21/11)",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "En los resultados del sprint no figura ningún argentino (Creo que no largaron)"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "15km Libre Femenino (22/11)",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.fis-ski.com/DB/general/results.html?sectorcode=CC&raceid=52687",
+       "href": "https://www.fis-ski.com/DB/general/results.html?sectorcode=CC&raceid=52687"
+      },
+      {
+       "t": " (Resultados)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Nahiara Diaz Gonzalez fue 56° con 44:25.8 (+7:28.6)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Agustina Groetzner fue 61° con 46:43.5 (+9:46.3)"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "15km Libre Masculino (22/11)",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.fis-ski.com/DB/general/results.html?sectorcode=CC&raceid=52688",
+       "href": "https://www.fis-ski.com/DB/general/results.html?sectorcode=CC&raceid=52688"
+      },
+      {
+       "t": " (Resultados)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Franco Dal Farra fue 86° con 35:31.3 (+3:58.0)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Mateo Sauma fue 132° con 39:18.7 (+7:45.4)"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "50809f8d",
+    "bd1103ad"
+   ],
+   "id": "c801c33caff0",
+   "version": "1d1fda5a27",
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-25"
+  },
+  {
+   "titulo": "BOCHAS - MUNDIAL DE PETANCA EN KHON KAEN, TAILANDIA",
+   "deporte": "BOCHAS",
+   "evento": "MUNDIAL DE PETANCA EN KHON KAEN, TAILANDIA",
+   "fechas": null,
+   "etiqueta": "mas_info",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se jugó del 20 al 24/11 en la Universidad de Khon Kaen"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://khon-kaen2026.fipjp.com/",
+       "href": "https://khon-kaen2026.fipjp.com/"
+      },
+      {
+       "t": " (Web oficial)"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://petanqueacademy.fr/en/petanque-world-championships/",
+       "href": "https://petanqueacademy.fr/en/petanque-world-championships/"
+      },
+      {
+       "t": " (Resultados)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Competirán: Juan Roldán, Gabriel Crespi, Ezequiel Pereyra y José Giménez"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Es el Mundial de tripletas masculino con 48 países. Argentina se clasificó en el clasificatorio de Iquique 2025"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Tripletas",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Argentina ganó 2 de sus 5 partidos del sistema suizo y terminó 34° de 48 países (37 puntos a favor y 48 en contra)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Tiro de precisión",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Néstor Omar Guevara fue 30° en la clasificación con 26 puntos (Creo)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Campeón: Madagascar, que le ganó la final 13-9 a Francia"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan: si Argentina jugó la Copa de las Naciones y su puesto final"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "27aa5cea"
+   ],
+   "id": "b8c1d6b05111",
+   "version": "056da00e3d",
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-25"
+  },
+  {
+   "titulo": "REMO - CAMPEONATO ARGENTINO EN TIGRE, BUENOS AIRES",
+   "deporte": "REMO",
+   "evento": "CAMPEONATO ARGENTINO EN TIGRE, BUENOS AIRES",
+   "fechas": null,
+   "etiqueta": "mas_info",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se corrió del 20 al 22/11"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.remodeprimera.com.ar/2026/?m=1",
+       "href": "https://www.remodeprimera.com.ar/2026/?m=1"
+      },
+      {
+       "t": " (Fuente)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Sede: Pista Nacional de Remo, Tigre"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Participación récord de la serie 2021–2026: 377 botes, 416 atletas y 36 clubes"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Serán 53 pruebas"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Dato extra: la AARA cumple 125 años"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan resultados"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "e8637829",
+    "cbdcf02f"
+   ],
+   "id": "dfbf893bf031",
+   "version": "a3fe568fe9",
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-25"
+  },
+  {
+   "titulo": "SURF - SURF FEST PRO LEAGUE BY SOFIA MILANOVICH (2DA FECHA) EN PUNTA ROCAS, PERU",
+   "deporte": "SURF",
+   "evento": "SURF FEST PRO LEAGUE BY SOFIA MILANOVICH (2DA FECHA) EN PUNTA ROCAS, PERU",
+   "fechas": null,
+   "etiqueta": "mas_info",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se corrió del 19 al 22/11"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan surfistas argentinos y resultados"
+      }
+     ]
+    }
+   ],
+   "id": "221c34045158",
+   "version": "a19ab65b4f",
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-25"
+  },
+  {
+   "titulo": "GIMNASIA ARTÍSTICA - CAMPEONATO SUDAMERICANO EN LIMA, PERÚ",
+   "deporte": "GIMNASIA ARTÍSTICA",
+   "evento": "CAMPEONATO SUDAMERICANO EN LIMA, PERÚ",
+   "fechas": null,
+   "etiqueta": "mas_info",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se compitió del 17 al 23/11"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://consugi.consugisoft.com/Artistica/151?subdivision=1&categoria=SENIOR&ver=resultados&concurso=I&modalidad=SUELO&genero=MASCULINO",
+       "href": "https://consugi.consugisoft.com/Artistica/151?subdivision=1&categoria=SENIOR&ver=resultados&concurso=I&modalidad=SUELO&genero=MASCULINO"
+      },
+      {
+       "t": " (Resultados)"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://consugi.com/",
+       "href": "https://consugi.com/"
+      },
+      {
+       "t": " (CONSUGI)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Es el Sudamericano Senior y Prejuvenil GAM y GAF, junto con la Copa Abierta Senior"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://lanotasj.com.ar/tres-representantes-sanjuaninos-llegan-a-la-seleccion-argentina-de-gimnasia-artistica-y-competiran-en-el-sudamericano-de-lima/",
+       "href": "https://lanotasj.com.ar/tres-representantes-sanjuaninos-llegan-a-la-seleccion-argentina-de-gimnasia-artistica-y-competiran-en-el-sudamericano-de-lima/"
+      },
+      {
+       "t": " (Nota)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Argentinos confirmados: Nahuel Martínez y Mariano Cornejo (Selección Mayor), Felipe Bruni y Yasmín Aispitarte"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan el resto de la delegación y los resultados (la web de resultados no se pudo abrir)"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "407a3c54"
+   ],
+   "id": "350ac4239230",
+   "version": "2741014c90",
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-25"
+  },
+  {
+   "titulo": "TENIS - BILLIE JEAN KING CUP PLAY-OFFS: JAPÓN VS ARGENTINA EN TOKIO, JAPÓN",
+   "deporte": "TENIS",
+   "evento": "BILLIE JEAN KING CUP PLAY-OFFS: JAPÓN VS ARGENTINA EN TOKIO, JAPÓN",
+   "fechas": null,
+   "etiqueta": "publicable",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se jugó el 21 y 22/11 (hora de Japón) en el Ariake Colosseum de Tokio, superficie rápida bajo techo"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.lagaceta.com.ar/nota/1163257/deportes/billie-jean-king-cup-argentina-ultima-detalles-tokio-para-enfrentar-japon-playoffs.html",
+       "href": "https://www.lagaceta.com.ar/nota/1163257/deportes/billie-jean-king-cup-argentina-ultima-detalles-tokio-para-enfrentar-japon-playoffs.html"
+      },
+      {
+       "t": " (Equipo)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Equipo: Justina González Daniele, Florencia Urrutia, Luciana Moyano y Sol Larraya Guidi, las cuatro debutantes. Capitana: Paola Suárez; entrenador: Mariano Hood"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.infobae.com/deportes/2026/11/21/japon-se-adelanto-2-0-y-argentina-esta-obligada-a-ganar-los-tres-puntos-para-clasificarse-al-grupo-mundial-i/",
+       "href": "https://www.infobae.com/deportes/2026/11/21/japon-se-adelanto-2-0-y-argentina-esta-obligada-a-ganar-los-tres-puntos-para-clasificarse-al-grupo-mundial-i/"
+      },
+      {
+       "t": " (Resultados viernes)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Viernes 20/11: Japón 2 - Argentina 0",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Justina González Daniele perdió vs Mai Hontama (JPN) por 7-6 (4) y 6-3"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Florencia Urrutia perdió vs Himeno Sakatsume (JPN) por 6-0 y 6-4"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.lanacion.com.ar/deportes/tenis/argentina-cayo-ante-japon-y-perdio-la-sexta-chance-seguida-de-ascender-a-la-elite-de-la-billie-jean-nid22112026/",
+       "href": "https://www.lanacion.com.ar/deportes/tenis/argentina-cayo-ante-japon-y-perdio-la-sexta-chance-seguida-de-ascender-a-la-elite-de-la-billie-jean-nid22112026/"
+      },
+      {
+       "t": " (Resultado final)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Sábado 21/11: Japón 4 - Argentina 0",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Justina González Daniele y Luciana Moyano perdieron el dobles vs Shuko Aoyama / Eri Hozumi (JPN) por 6-2 y 6-1"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Luciana Moyano perdió vs Ena Shibahara (JPN) por 6-1 y 6-1"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Argentina no ganó ningún set en la serie. Japón se clasificó a los Qualifiers 2027 y Argentina perdió su sexta chance seguida de volver a la élite (no está ahí desde 2015)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "En abril de 2027 Argentina juega la Zona Americana vs Perú, Ecuador, Chile, México, Paraguay, Guatemala y Canadá"
+      }
+     ]
+    }
+   ],
+   "id": "9aac4f5ebb84",
+   "version": "d79ffed655",
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-25"
+  },
+  {
+   "titulo": "BMX FREESTYLE - CAMPEONATO PANAMERICANO EN SANTIAGO, CHILE",
+   "deporte": "BMX FREESTYLE",
+   "evento": "CAMPEONATO PANAMERICANO EN SANTIAGO, CHILE",
+   "fechas": null,
+   "etiqueta": "publicable",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se compitió del 18 al 21/11 en el Parque Estadio Nacional"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://deportv.gob.ar/polideportivo/argentina-representantes-panamericano-bmx-freestyle-chile-nid:19048",
+       "href": "https://deportv.gob.ar/polideportivo/argentina-representantes-panamericano-bmx-freestyle-chile-nid:19048"
+      },
+      {
+       "t": " (Nota)"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.noticiasdelacalle.com.ar/noticias/2026/11/20/208800-argentina-tendra-cuatro-representantes-en-el-panamericano-de-bmx-freestyle-en-chile",
+       "href": "https://www.noticiasdelacalle.com.ar/noticias/2026/11/20/208800-argentina-tendra-cuatro-representantes-en-el-panamericano-de-bmx-freestyle-en-chile"
+      },
+      {
+       "t": " (Nota)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Argentinos",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Manu Turone (Neuquén, plata en los Panamericanos Junior Asunción 2025), Santiago Dotta (Tierra del Fuego), Octavio Augusto Miranda (Tierra del Fuego) y Analía Zacarías (Misiones, en femenino)"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://g5noticias.cl/2026/11/23/chile-obtiene-dos-medallas-en-el-campeonato-panamericano-de-bmx-freestyle-y-flatland-2026/",
+       "href": "https://g5noticias.cl/2026/11/23/chile-obtiene-dos-medallas-en-el-campeonato-panamericano-de-bmx-freestyle-y-flatland-2026/"
+      },
+      {
+       "t": " (Resultados)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Park Femenino",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Analía Zacarías logró la medalla de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      },
+      {
+       "t": " con 54 puntos. Ganó Queen Saray Villegas (COL) con 79 y 2° fue Macarena Pérez (CHI) con 78"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Park Masculino",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Manu Turone fue 9° en la final con 68 puntos (había sido 1° en la clasificación con 87.17). Ganó Juan Camilo Caicedo (COL) con 93"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Santiago Dotta y Octavio Miranda no figuran entre los 12 finalistas (Creo que quedaron en la clasificación)"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "03f26685"
+   ],
+   "id": "d686a7382d49",
+   "version": "7ea46fb595",
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-25"
+  },
+  {
+   "titulo": "RACQUETBALL - MILE HIGH OPEN EN DENVER, ESTADOS UNIDOS",
+   "deporte": "RACQUETBALL",
+   "evento": "MILE HIGH OPEN EN DENVER, ESTADOS UNIDOS",
+   "fechas": null,
+   "etiqueta": "mas_info",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se jugó del 19 al 21/11"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://enard.org.ar/agenda_noviembre_2026-2-2-2-2-2-2-2-2/",
+       "href": "https://enard.org.ar/agenda_noviembre_2026-2-2-2-2-2-2-2-2/"
+      },
+      {
+       "t": " (Agenda ENARD)"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.r2sports.com/website/event-website.asp?TID=54381",
+       "href": "https://www.r2sports.com/website/event-website.asp?TID=54381"
+      },
+      {
+       "t": " (Resultados)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Singles Femenino",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "María José Vargas le ganó la final a Valeria Centellas por 15-7 y 15-6 y se consagró "
+      },
+      {
+       "t": "CAMPEONA",
+       "b": true
+      },
+      {
+       "t": " del Mile High Open. Centellas fue "
+      },
+      {
+       "t": "SUBCAMPEONA",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Dobles Femenino",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "María José Vargas y Valeria Centellas le ganaron en 4tos a Reyes Pérez / Aldana (GUA) por 15-9 y 15-4 y llegaron a la final vs Herrera / Martínez (MEX/GUA)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Natalia Méndez y Brenda Laime (COL) perdieron en 4tos vs Manilla / Andersen (USA) por 15-4, 11-15 y 11-3"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Falta: resultado de la final de dobles de Vargas y Centellas"
+      }
+     ]
+    }
+   ],
+   "id": "08cc43ed292e",
+   "version": "5503e06d88",
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-25"
+  },
+  {
+   "titulo": "ESQUÍ ALPINO - COPA DEL MUNDO EN GURGL, AUSTRIA",
+   "deporte": "ESQUÍ ALPINO",
+   "evento": "COPA DEL MUNDO EN GURGL, AUSTRIA",
+   "fechas": null,
+   "etiqueta": "publicable",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se corrió el sábado 21/11"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.fis-ski.com/DB/general/results.html?sectorcode=AL&raceid=131581",
+       "href": "https://www.fis-ski.com/DB/general/results.html?sectorcode=AL&raceid=131581"
+      },
+      {
+       "t": " (Resultados)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Slalom Femenino",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Francesca Baruzzi fue 39° en la primera manga con 53.94 y no se clasificó a la segunda (pasan las 30 mejores). Ganó Lara Colturi (ALB)"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "92863303"
+   ],
+   "id": "62a1f09b395b",
+   "version": "04e935d202",
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-25"
+  },
+  {
+   "titulo": "UFC - FIGHT NIGHT EN DOHA, QATAR",
+   "deporte": "UFC",
+   "evento": "FIGHT NIGHT EN DOHA, QATAR",
+   "fechas": null,
+   "etiqueta": "publicable",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://agentmma.com/news/90837-aljamain-sterling-to-face-kevin-vallejos-at-ufc-qatar-on-nov-21",
+       "href": "https://agentmma.com/news/90837-aljamain-sterling-to-face-kevin-vallejos-at-ufc-qatar-on-nov-21"
+      },
+      {
+       "t": " (Info)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Peso Pluma",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Kevin \"Chino\" Vallejos (récord 18-1) vs Aljamain Sterling (USA) en la cartelera principal, es la co-estelar (3 rounds)"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.ufcalendar.com/events/ufc-fight-night-2026-11-21",
+       "href": "https://www.ufcalendar.com/events/ufc-fight-night-2026-11-21"
+      },
+      {
+       "t": " (Horarios)"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.infobae.com/deportes/2026/11/21/el-argentino-kevin-chino-vallejos-gano-la-pelea-mas-importante-de-su-carrera-en-ufc-en-las-tarjetas-rompio-en-llanto-y-pidio-pelear-por-el-titulo/",
+       "href": "https://www.infobae.com/deportes/2026/11/21/el-argentino-kevin-chino-vallejos-gano-la-pelea-mas-importante-de-su-carrera-en-ufc-en-las-tarjetas-rompio-en-llanto-y-pidio-pelear-por-el-titulo/"
+      },
+      {
+       "t": " (Resultado)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Kevin \"Chino\" Vallejos le ganó por decisión unánime al ex campeón de peso gallo Aljamain Sterling (USA), 4° del ranking pluma (30-27, 30-27 y 29-28). Es su 5° victoria seguida en UFC"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Después de la pelea pidió ir por el título: \"Quedo a las órdenes de Volkanovski\""
+      }
+     ]
+    }
+   ],
+   "id": "f9141d114373",
+   "version": "977bfa2dbb",
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-21"
+  },
+  {
+   "titulo": "JUDO - CAMPEONATO MUNDIAL JUNIOR EN TASHKENT, UZBEKISTÁN",
+   "deporte": "JUDO",
+   "evento": "CAMPEONATO MUNDIAL JUNIOR EN TASHKENT, UZBEKISTÁN",
+   "fechas": null,
+   "etiqueta": "publicable",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.ijf.org/competition/3207",
+       "href": "https://www.ijf.org/competition/3207"
+      },
+      {
+       "t": " (Web oficial)"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.ijf.org/index.php/country/arg",
+       "href": "https://www.ijf.org/index.php/country/arg"
+      },
+      {
+       "t": " (Inscriptos ARG)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Arrancó el jueves 19/11. Individual del 19 al 21/11 y equipos mixtos el 22/11. Argentina tuvo 1 judoka: Ignacio Landolfi"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "-81kg Masculino",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Ignacio Landolfi perdió en primera ronda vs Szymon Szulik (POL) por ippon"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://ijf.org/judoka/100377/contests",
+       "href": "https://ijf.org/judoka/100377/contests"
+      },
+      {
+       "t": " (Fuente)"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "7e614ed6"
+   ],
+   "id": "cde49e99022c",
+   "version": "88520f38ca",
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-21"
+  },
+  {
+   "titulo": "BOXEO - BETO PALMETTA VS WILLY GILHEANEY (GBR) EN CARDIFF, GALES",
+   "deporte": "BOXEO",
+   "evento": "BETO PALMETTA VS WILLY GILHEANEY (GBR) EN CARDIFF, GALES",
+   "fechas": null,
+   "etiqueta": "publicable",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.bbbofc.com/results",
+       "href": "https://www.bbbofc.com/results"
+      },
+      {
+       "t": " (Resultado)"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.fightmag.com/boxing-lauren-price-vs-michaela-kotaskova-live-results/",
+       "href": "https://www.fightmag.com/boxing-lauren-price-vs-michaela-kotaskova-live-results/"
+      },
+      {
+       "t": " (Previa)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Peso Welter",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Beto Palmetta le ganó por decisión unánime en 10 rounds (96-95, 97-93 y 97-93) al galés Willy Gilheaney (invicto, 7-0) en el Utilita Arena de Cardiff"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Con este triunfo ganó el "
+      },
+      {
+       "t": "TÍTULO CONTINENTAL GOLD DE LA AMB",
+       "b": true
+      },
+      {
+       "t": " del peso Welter"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "a86ca35a",
+    "8c841a02"
+   ],
+   "id": "eb926937b172",
+   "version": "9289ca4cab",
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-20"
+  },
+  {
+   "titulo": "TENIS DE MESA ADAPTADO - CAMPEONATO MUNDIAL EN PATTAYA, TAILANDIA",
+   "deporte": "TENIS DE MESA ADAPTADO",
+   "evento": "CAMPEONATO MUNDIAL EN PATTAYA, TAILANDIA",
+   "fechas": null,
+   "etiqueta": "publicable",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.ittf.com/tournament/3258/WorldParaChampionships_Pattaya2026",
+       "href": "https://www.ittf.com/tournament/3258/WorldParaChampionships_Pattaya2026"
+      },
+      {
+       "t": " (Web oficial)"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://paradeportes.com/tenis-de-mesa-adaptado-argentina-se-despidio-del-campeonato-mundial-en-tailandia/",
+       "href": "https://paradeportes.com/tenis-de-mesa-adaptado-argentina-se-despidio-del-campeonato-mundial-en-tailandia/"
+      },
+      {
+       "t": " (Resultados)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Argentina terminó su participación el 19/11. Constanza Garrone y Giselle Muñoz llegaron a 4tos de final"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Individual",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Constanza Garrone (C2) le ganó a María Fernanda Chávez (VEN) y perdió en 4tos vs Su Yeon Seo (KOR)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Giselle Muñoz (C7) le ganó a Shan Jiang (CHN) y perdió en 4tos vs Kelly van Zon (NED)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Gabriel Copola (C3) le ganó en 16avos a Thomas Brüchle (GER) y perdió en la ronda siguiente vs Florian Merrien (FRA)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Eithan Skliarsky (C9) perdió en su debut vs Lucas Didier (FRA)"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Dobles",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Gabriel Copola y Constanza Garrone le ganaron a Junjian Chen / Lisa Di Toro (AUS) y después perdieron vs Welder Camargo / Marliane Amaral (BRA)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Giselle Muñoz y Eithan Skliarsky perdieron en su primer partido vs Piotr Grudzień / Karolina Pęk (POL)"
+      }
+     ]
+    }
+   ],
+   "id": "088209cc961e",
+   "version": "a2d0a97f1b",
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-25"
+  },
+  {
+   "titulo": "VELA - CAMPEONATO SUDAMERICANO EN RÍO DE JANEIRO, BRASIL",
+   "deporte": "VELA",
+   "evento": "CAMPEONATO SUDAMERICANO EN RÍO DE JANEIRO, BRASIL",
+   "fechas": null,
+   "etiqueta": "mas_info",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se corrió del 14 al 18/11"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://enard.org.ar/agenda_noviembre_2026/",
+       "href": "https://enard.org.ar/agenda_noviembre_2026/"
+      },
+      {
+       "t": " (Agenda ENARD)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan clases, regatistas argentinos y resultados"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Según el Iate Clube do Rio de Janeiro en noviembre hay Sudamericanos de Finn y de 470 (Creo que son parte de este evento): "
+      },
+      {
+       "t": "https://www.icrj.com.br/velaicrj/images/aviso_regata/2026/11_nov/NOR_SUDAM_470_-_2026_-_FINAL.pdf",
+       "href": "https://www.icrj.com.br/velaicrj/images/aviso_regata/2026/11_nov/NOR_SUDAM_470_-_2026_-_FINAL.pdf"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.noticiasdelacalle.com.ar/noticias/2026/11/17/208086-martin-cloos-y-sofia-videla-clasificaron-a-los-juegos-panamericanos-lima-2027",
+       "href": "https://www.noticiasdelacalle.com.ar/noticias/2026/11/17/208086-martin-cloos-y-sofia-videla-clasificaron-a-los-juegos-panamericanos-lima-2027"
+      },
+      {
+       "t": " (Nota)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Según el aviso oficial del ICRJ el Sudamericano de Finn se corre del 18 al 22/11: "
+      },
+      {
+       "t": "https://www.icrj.com.br/velaicrj/images/aviso_regata/2026/11_nov/NR_FINN_SOUTH_AMERICAN_CHAMPIONSHIP_2026.pdf",
+       "href": "https://www.icrj.com.br/velaicrj/images/aviso_regata/2026/11_nov/NR_FINN_SOUTH_AMERICAN_CHAMPIONSHIP_2026.pdf"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "470 Mixto",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Martín Cloos y Sofía Videla terminaron 4° en el Sudamericano de 470 con 35 puntos netos en 10 regatas (ganaron la regata 2) y "
+      },
+      {
+       "t": "CLASIFICARON A LOS JUEGOS PANAMERICANOS DE LIMA 2027",
+       "b": true
+      },
+      {
+       "t": " (se llevaron la última de las 4 plazas). Fue su primera competencia juntos"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan: el resto de las clases y los otros regatistas argentinos"
+      }
+     ]
+    }
+   ],
+   "id": "7a44a2ecec03",
+   "version": "cc7587780a",
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-18",
+   "vencido": true
+  },
+  {
+   "titulo": "OCEANMAN - FINAL MUNDIAL EN REPÚBLICA DOMINICANA",
+   "deporte": "OCEANMAN",
+   "evento": "FINAL MUNDIAL EN REPÚBLICA DOMINICANA",
+   "fechas": null,
+   "etiqueta": "mas_info",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se nadó del 11 al 15/11"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://results.oceanmanswim.com/eventos/dominican-republic-wfc/clasificacion",
+       "href": "https://results.oceanmanswim.com/eventos/dominican-republic-wfc/clasificacion"
+      },
+      {
+       "t": " (Resultados)"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.instagram.com/oceanman_argentina/",
+       "href": "https://www.instagram.com/oceanman_argentina/"
+      },
+      {
+       "t": " (Oceanman Argentina, para etiquetar)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Ayelen Milenka Trcka (@ayelenmilenkatrcka) fue campeona en la categoría 30-39 años en el Half Oceanman"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Alexis Gregorat Krebs (@alexis.gregorat.krebs) fue 4° en los 2km y "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      },
+      {
+       "t": " en la posta 3x500 con Agos y Santi"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan el resto de los argentinos y sus resultados"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "478d58aa",
+    "6dc4877c"
+   ],
+   "id": "dafa7a05a13b",
+   "version": "289e2455ec",
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-20"
+  },
+  {
+   "titulo": "PÁDEL - PANAMERICANO DE MENORES (FIP JUNIOR AMERICA PADEL CUP) EN CANCÚN, MÉXICO",
+   "deporte": "PÁDEL",
+   "evento": "PANAMERICANO DE MENORES (FIP JUNIOR AMERICA PADEL CUP) EN CANCÚN, MÉXICO",
+   "fechas": null,
+   "etiqueta": "mas_info",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se jugó del 10 al 14/11"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://padel.org.ar/",
+       "href": "https://padel.org.ar/"
+      },
+      {
+       "t": " (APA)"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.infomerlo.com/noticias/2026/11/16/57375-zoe-benitez-brillo-en-cancun-y-sumo-dos-nuevos-titulos-continentales-para-argentina",
+       "href": "https://www.infomerlo.com/noticias/2026/11/16/57375-zoe-benitez-brillo-en-cancun-y-sumo-dos-nuevos-titulos-continentales-para-argentina"
+      },
+      {
+       "t": " (Nota)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Argentina logró el doblete: "
+      },
+      {
+       "t": "CAMPEONES PANAMERICANOS",
+       "b": true
+      },
+      {
+       "t": " en masculino y femenino. Llegaba como bicampeona en las dos ramas (2022 y 2024)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Por equipos Masculino",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "La Selección masculina le ganó la final 2-1 a Paraguay y se consagró "
+      },
+      {
+       "t": "CAMPEONA PANAMERICANA",
+       "b": true
+      },
+      {
+       "t": ": medalla "
+      },
+      {
+       "t": "DORADA",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Por equipos Femenino",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "La Selección femenina le ganó la final 2-0 a Brasil y se consagró "
+      },
+      {
+       "t": "CAMPEONA PANAMERICANA",
+       "b": true
+      },
+      {
+       "t": ": medalla "
+      },
+      {
+       "t": "DORADA",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Felicitas Siage y Camila Ingrassia (Sub 14) ganaron el primer punto y Zoe Benítez y Victoria Vílchez el segundo por 6-1 y 6-2"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Antes, en semis, le ganaron 3-0 a Panamá sin ceder games"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Open Sub 16 Femenino",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Zoe Benítez y Jazmín Dos Santos se consagraron "
+      },
+      {
+       "t": "CAMPEONAS",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan: plantel completo y resultados del resto de las categorías"
+      }
+     ]
+    }
+   ],
+   "id": "99fd3e13fa42",
+   "version": "ce81ce17fc",
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-18",
+   "vencido": true
+  },
+  {
+   "titulo": "FÚTBOL - FECHA FIFA: AMISTOSOS DE LA SELECCIÓN MAYOR EN ARGENTINA",
+   "deporte": "FÚTBOL",
+   "evento": "FECHA FIFA: AMISTOSOS DE LA SELECCIÓN MAYOR EN ARGENTINA",
+   "fechas": null,
+   "etiqueta": "publicable",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se jugaron el 13 y 17/11"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://442.perfil.com/noticias/seleccion-argentina/la-seleccion-argentina-sera-local-de-uruguay-y-costa-rica-en-la-fecha-fifa-de-noviembre.phtml",
+       "href": "https://442.perfil.com/noticias/seleccion-argentina/la-seleccion-argentina-sera-local-de-uruguay-y-costa-rica-en-la-fecha-fifa-de-noviembre.phtml"
+      },
+      {
+       "t": " (Info)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "vs Uruguay el viernes 13/11 a las 20:15hs en La Bombonera (CABA)",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.lanacion.com.ar/deportes/futbol/argentina-vs-uruguay-amistoso-internacional-2026-dia-hora-y-como-seguir-online-nid12112026/",
+       "href": "https://www.lanacion.com.ar/deportes/futbol/argentina-vs-uruguay-amistoso-internacional-2026-dia-hora-y-como-seguir-online-nid12112026/"
+      },
+      {
+       "t": " (Horario)"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.vavel.com/ar/futbol-argentino/2026/11/13/seleccion-argentina/1279202-argentina-1-uruguay-2-golpazo-en-la-bombonera-y-derrota-en-el-clasico.html",
+       "href": "https://www.vavel.com/ar/futbol-argentino/2026/11/13/seleccion-argentina/1279202-argentina-1-uruguay-2-golpazo-en-la-bombonera-y-derrota-en-el-clasico.html"
+      },
+      {
+       "t": " (Resultado)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Argentina perdió 2-1 vs Uruguay: en contra de Leonardo Balerdi y gol de Maximiliano Araújo para Uruguay en el arranque del ST; descontó Julián Álvarez"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "vs Costa Rica el martes 17/11 a las 20hs en el Kempes (Córdoba)",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.nacion.com/puro-deporte/argentina-vs-costa-rica-hora-y-canales-para-ver/4VGMZMZIZRE6DHTZSHV6MXTE34/story/",
+       "href": "https://www.nacion.com/puro-deporte/argentina-vs-costa-rica-hora-y-canales-para-ver/4VGMZMZIZRE6DHTZSHV6MXTE34/story/"
+      },
+      {
+       "t": " (Horario)"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.lanacion.com.ar/deportes/canchallena/argentina-vencio-7-0-a-costa-rica-en-un-amistoso-internacional-nid17112026/",
+       "href": "https://www.lanacion.com.ar/deportes/canchallena/argentina-vencio-7-0-a-costa-rica-en-un-amistoso-internacional-nid17112026/"
+      },
+      {
+       "t": " (Resultado)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Argentina goleó 7-0 a Costa Rica a las 20hs en el Kempes (Nico Paz x2, Julián Álvarez x2, Franco Mastantuono x2 y Alexis Mac Allister) y cerró el año"
+      }
+     ]
+    }
+   ],
+   "id": "9b8960c27c6e",
+   "version": "e07371645f",
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-17",
+   "vencido": true
+  },
+  {
+   "titulo": "TENIS ADAPTADO - WHEELCHAIR SINGLES FINALS (MASTERS) EN BARCELONA, ESPAÑA",
+   "deporte": "TENIS ADAPTADO",
+   "evento": "WHEELCHAIR SINGLES FINALS (MASTERS) EN BARCELONA, ESPAÑA",
+   "fechas": null,
+   "etiqueta": "publicable",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se jugó en el Centre Internacional de Tennis de Cornellà (Barcelona), con final el domingo 15/11"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://herqles.com/2026/11/15/gustavo-fernandez-gana-masters-tenis-silla-ruedas/",
+       "href": "https://herqles.com/2026/11/15/gustavo-fernandez-gana-masters-tenis-silla-ruedas/"
+      },
+      {
+       "t": " (Nota)"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://hoydiario.es/noticias/deporte/tenis-en-silla-de-ruedas/gustavo-fernandez-masters-silla-ruedas-barcelona-2026.html",
+       "href": "https://hoydiario.es/noticias/deporte/tenis-en-silla-de-ruedas/gustavo-fernandez-masters-silla-ruedas-barcelona-2026.html"
+      },
+      {
+       "t": " (Nota)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Singles Masculino",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Gustavo Fernández le ganó la final a Alfie Hewett (GBR) por 2-6, 6-4 y 6-1 y se consagró "
+      },
+      {
+       "t": "CAMPEÓN DEL MASTERS",
+       "b": true
+      },
+      {
+       "t": " por primera vez: es el primer argentino en ganarlo"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Fase de grupos: 6-1 y 6-0 vs Tom Egberink (NED), 7-6 (2) y 6-0 vs Ji Zhenxu (CHN) y derrota 6-3 y 6-4 vs Alfie Hewett (GBR)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Semis: le ganó 6-1 y 6-2 a Martín de la Puente (ESP)"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "5b02889f"
+   ],
+   "id": "5dc4078d3657",
+   "version": "7993f9546e",
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-19"
+  },
+  {
+   "titulo": "ATLETISMO - CAMPEONATO SUDAMERICANO DE MARATÓN Y RUTA EN SANTIAGO, CHILE",
+   "deporte": "ATLETISMO",
+   "evento": "CAMPEONATO SUDAMERICANO DE MARATÓN Y RUTA EN SANTIAGO, CHILE",
+   "fechas": null,
+   "etiqueta": "publicable",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se corrió el domingo 15/11, con Sudamericano de Maratón y de Carreras de Ruta (Milla, 5 km y 21 km) en simultáneo. Compitieron 24 argentinos"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.elchubut.com.ar/superdepor/2026-11-14-16-22-0-eulalio-coco-munoz-dice-presente-en-el-sudamericano-de-maraton",
+       "href": "https://www.elchubut.com.ar/superdepor/2026-11-14-16-22-0-eulalio-coco-munoz-dice-presente-en-el-sudamericano-de-maraton"
+      },
+      {
+       "t": " (Nota)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Largada y llegada en el Estadio Nacional el domingo 15/11 a las 6:45hs (circuito de 2 vueltas)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Maratón Masculino",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Eulalio \"Coco\" Muñoz, Esteban Angulo y Daniel Penta"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Maratón Femenino",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Natacha Castaño y María Angelina Reyes"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://cada-atletismo.org/argentina-suma-titulos-en-el-sudamericano-de-ruta-en-santiago-2026/",
+       "href": "https://cada-atletismo.org/argentina-suma-titulos-en-el-sudamericano-de-ruta-en-santiago-2026/"
+      },
+      {
+       "t": " (Resultados)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Argentina ganó 10 medallas: 2 "
+      },
+      {
+       "t": "DORADAS",
+       "b": true
+      },
+      {
+       "t": ", 4 "
+      },
+      {
+       "t": "PLATEADAS",
+       "b": true
+      },
+      {
+       "t": " y 4 de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Doradas:",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Micaela Levaggi ganó la medalla "
+      },
+      {
+       "t": "DORADA",
+       "b": true
+      },
+      {
+       "t": " en la Milla (4:58.6)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Belén Casetta ganó la medalla "
+      },
+      {
+       "t": "DORADA",
+       "b": true
+      },
+      {
+       "t": " en los 5 km (15:51)"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Plateadas:",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Matías Reynaga ganó la medalla "
+      },
+      {
+       "t": "PLATEADA",
+       "b": true
+      },
+      {
+       "t": " en la Milla (4:08.9)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Nélida Peñaflor ganó la medalla "
+      },
+      {
+       "t": "PLATEADA",
+       "b": true
+      },
+      {
+       "t": " en los 5 km (15:53)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Tomás Vega ganó la medalla "
+      },
+      {
+       "t": "PLATEADA",
+       "b": true
+      },
+      {
+       "t": " en los 5 km (14:31)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Anahí Castaño ganó la medalla "
+      },
+      {
+       "t": "PLATEADA",
+       "b": true
+      },
+      {
+       "t": " en el Maratón"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Bronces:",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Karen Rocca ganó la medalla de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      },
+      {
+       "t": " en la Milla"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Germán Vega ganó la medalla de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      },
+      {
+       "t": " en los 5 km (14:33)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Sofía Gómez ganó la medalla de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      },
+      {
+       "t": " en los 21 km (1:14:09)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Eulalio \"Coco\" Muñoz ganó la medalla de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      },
+      {
+       "t": " en el Maratón"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Otros resultados",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Sofía Luna fue 4° en los 21 km (1:14:14) y Alexis Corrías 4° en los 21 km masculino (1:06:44)"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "71ff5cee"
+   ],
+   "id": "fde01f59acd9",
+   "version": "efffeaebb2",
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-17",
+   "vencido": true
+  },
+  {
+   "titulo": "SURF - ISA WORLD SURFING GAMES EN PUNTA ROCAS, PERÚ",
+   "deporte": "SURF",
+   "evento": "ISA WORLD SURFING GAMES EN PUNTA ROCAS, PERÚ",
+   "fechas": null,
+   "etiqueta": "publicable",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se corrió del 6 al 15/11"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://cad.org.ar/seis-surfistas-argentinos-van-por-todo-en-el-mundial-de-punta-rocas/",
+       "href": "https://cad.org.ar/seis-surfistas-argentinos-van-por-todo-en-el-mundial-de-punta-rocas/"
+      },
+      {
+       "t": " (Nota)"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.surfpress.net/argentina-ya-tiene-equipo-para-punta-rocas/",
+       "href": "https://www.surfpress.net/argentina-ya-tiene-equipo-para-punta-rocas/"
+      },
+      {
+       "t": " (Equipo)"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://isasurf.org/event/2026-isa-world-surfing-games",
+       "href": "https://isasurf.org/event/2026-isa-world-surfing-games"
+      },
+      {
+       "t": " (Web oficial)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Clasificatorio a Los Ángeles 2028 (el equipo ganador de cada rama gana un cupo)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Masculino",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Franco Radziunas, Thiago Passeri Pezzati y Joaquín Muñoz Larreta"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Femenino",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Lucía Indurain, Victoria Muñoz Larreta y Vera Jarisz"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.lacapitalmdp.com/radziunas-gano-su-heat-para-avanzar-con-comodidad/",
+       "href": "https://www.lacapitalmdp.com/radziunas-gano-su-heat-para-avanzar-con-comodidad/"
+      },
+      {
+       "t": " (Nota)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Ronda 1 Masculino",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Franco Radziunas ganó su serie con 10.23 (5.83 + 4.40) por delante de Reed Platenius y Elias Smith y pasó a la 2da ronda (serie 4 vs Luke Dillon, Micael Lerner y Tom Butland)"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.lacapitalmdp.com/avanzaron-los-hermanos-munoz-larreta-y-jarisz-en-tanto-passeri-paso-al-repechaje/",
+       "href": "https://www.lacapitalmdp.com/avanzaron-los-hermanos-munoz-larreta-y-jarisz-en-tanto-passeri-paso-al-repechaje/"
+      },
+      {
+       "t": " (Nota)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Joaquín Muñoz Larreta ganó su serie con 13.00 (con una ola de 7.00) por delante de Jean Carlos González (PAN) y Mason Moschopoulos (GRE) y pasó a la 2da ronda (serie 14 vs Eeli Timperi (FIN), Wu Shidong (CHN) y Taimana Marupo (NZL))"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Thiago Passeri fue 3° en su serie con 8.53 (detrás de Kai Gale Grani (PAN) y Martín Ottado (URU)) y pasó al Repechaje (batería 16 vs Roberto Araki (CHI) y Benjamin Stuller (SVK))"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.lacapitalmdp.com/los-seis-argentinos-continuan-en-carrera-en-punta-rocas/",
+       "href": "https://www.lacapitalmdp.com/los-seis-argentinos-continuan-en-carrera-en-punta-rocas/"
+      },
+      {
+       "t": " (Nota)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Ronda 2 Masculino",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Franco Radziunas ganó la serie 4 con 13.86 por delante de Tom Butland (NZL) 12.70, Luke Dillon (ENG) 8.36 y Micael Lerner (MEX) 5.24 y pasó a la 3ra ronda"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Joaquín Muñoz Larreta fue 3° en la serie 14 por centésimas con 10.20 (detrás de Eeli Timperi (FIN) 12.50 y Wu Shidong (CHN) 10.33) y pasó al Repechaje"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Victoria Muñoz Larreta no pasó la 2da ronda del cuadro principal y fue al Repechaje"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Repechaje Masculino",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Thiago Passeri fue 2° en la batería 16 de la 1ra ronda con 10.40 (detrás de Roberto Araki (CHI) 11.20) y sigue en carrera"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.lacapitalmdp.com/jarisz-e-indurain-avanzaron-a-la-tercera-ronda-y-buenas-noticias-en-los-repechajes/",
+       "href": "https://www.lacapitalmdp.com/jarisz-e-indurain-avanzaron-a-la-tercera-ronda-y-buenas-noticias-en-los-repechajes/"
+      },
+      {
+       "t": " (Nota martes 10/11)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Thiago Passeri ganó el heat 15 con 12.50 por delante de Martín Ottado (URU) 9.26, Eduardo Alciso (PHI) 8.96 y Lewis Murphy (NZL) 8.94 y pasó a la 3ra ronda del Repechaje"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Joaquín Muñoz Larreta fue 2° en la serie 14 con 10.06 (detrás de Patrick Langdon-Dark (GBR) 10.40; después Oliver Heintz (NED) 8.37 y Teshawn Jones (IVB) 3.50) y pasó a la 3ra ronda del Repechaje"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Victoria Muñoz Larreta ganó el heat 7 con 9.20 por delante de Myriam Benzarli (MAR) 5.23, Katrina Kruze (LAT) 3.07 y Nina Smicklas (GER) y pasó a la 3ra ronda del Repechaje"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "En el Repechaje el que sale 3° o peor queda eliminado"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Ronda 1 Femenino",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Vera Jarisz ganó su serie con 10.77 por delante de Alexandra Kolla (GRE) y Alma Aviram (ISR) y pasó a la 2da ronda (serie 2 vs Estela López (CHI), Silvana Martínez (VEN) y Ranya Squalli (MAR))"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Victoria Muñoz Larreta ganó su serie con 12.83 por delante de Grace Gundry (NZL) y Eirini Tsarpali (GRE) y pasó a la 2da ronda (serie 7 vs Nilbie Blancada (FIL), Kana Nakashio (JPN) y Rosanny Álvarez (VEN))"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Lucía Indurain ganó la serie 32 con 5.17 por delante de Noya Slater Cohen (ISR) 3.00 y Victoria Backhaus (ITA) y pasó a la 2da ronda"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Ronda 2 Femenino",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Vera Jarisz fue 2° en la serie 2 con 5.93 (detrás de Estela López (CHI) 8.40; después Ranya Squalli (MAR) 5.10 y Silvana Martínez (VEN) 4.57) y pasó a la 3ra ronda"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Lucía Indurain fue 2° en el heat 16 con 8.03 (detrás de Louise Lepront (RSA) 8.83; después Maya Mateja (MEX) 7.60 y Raya Campbell (GBR) 6.34) y pasó a la 3ra ronda"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.lacapitalmdp.com/la-presencia-argentina-continua-con-equipo-completo-en-punta-rocas/",
+       "href": "https://www.lacapitalmdp.com/la-presencia-argentina-continua-con-equipo-completo-en-punta-rocas/"
+      },
+      {
+       "t": " (Nota miércoles 11/11)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Ronda 3 (miércoles 11/11)",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Franco Radziunas fue 2° en la serie 5 con 11.93 (detrás de Ethan Ewing (AUS) 12.00; Luke van Wyk (RSA) 6.66 fue al Repechaje) y pasó a la 4ta ronda del cuadro principal"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Vera Jarisz fue 2° en la serie 10 con 11.97 (detrás de Luana Silva (BRA) 12.96, por delante de Louise Lepront (RSA)) y pasó a la 4ta ronda del cuadro principal"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Lucía Indurain fue 3° en la serie 9 con 4.80 (detrás de Kana Nakashio (JPN) 11.20 y Nadia Erostarbe (ESP) 10.23) y pasó al Repechaje"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Joaquín Muñoz Larreta ganó la serie 7 de la 3ra ronda del Repechaje con 9.24 y pasó a la 4ta ronda del Repechaje"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Thiago Passeri fue 2° en esa serie con 9.06 (quedaron afuera Taimana Marupo (NZL) 8.83 y Roberto Araki (CHI) 8.60) y pasó a la 4ta ronda del Repechaje"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Victoria Muñoz Larreta ganó la serie 3 de la 3ra ronda del Repechaje con 10.07 (por delante de Faviola Alcalá (PUR) 8.63) y pasó a la 4ta ronda del Repechaje"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Los 6 argentinos siguen en carrera"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://dukesurf.com/en-vivo-aqui-el-dia-6-de-los-isa-world-surfing-games-2/",
+       "href": "https://dukesurf.com/en-vivo-aqui-el-dia-6-de-los-isa-world-surfing-games-2/"
+      },
+      {
+       "t": " (En vivo día 6)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "4ta ronda del Repechaje el jueves 12/11 desde las 9hs: Passeri y Joaquín Muñoz Larreta; Victoria Muñoz Larreta (serie 7 vs Dominic Barona (ECU) y Enilda Alonso (PAN)); Lucía Indurain (serie 9 vs Charlotte Mulley (GBR) y Faviola Alcalá (PUR))",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "4ta ronda del cuadro principal el viernes 13/11: Franco Radziunas (heat 4 vs Italo Ferreira (BRA), Yago Dora (BRA) y Kanoa Igarashi (JPN)) y Vera Jarisz",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.lacapitalmdp.com/passeri-e-indurain-siguen-y-los-hermanos-munoz-larreta-son-los-primeros-eliminados/",
+       "href": "https://www.lacapitalmdp.com/passeri-e-indurain-siguen-y-los-hermanos-munoz-larreta-son-los-primeros-eliminados/"
+      },
+      {
+       "t": " (Nota jueves 12/11)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "4ta ronda del Repechaje (jueves 12/11)",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Thiago Passeri fue 2° en la serie 3 con 10.04 (detrás de Uriel Uziel (ISR) 12.83, por delante de Darshan Antequera (CRC) 9.33) y pasó a la 5ta ronda del Repechaje"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Lucía Indurain fue 2° en la serie 9 con 4.80 (detrás de Charlotte Mulley (GBR) 9.50) y pasó a la 5ta ronda del Repechaje"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Joaquín Muñoz Larreta fue 3° en la serie 5 con 9.67 (detrás de George Pittar (AUS) 15.34 y Guilherme Ribeiro (POR) 11.50) y quedó eliminado (puesto 49°)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Victoria Muñoz Larreta fue 3° en la serie 7 con 1.43 (detrás de Ocea Green (CAN) 10.67 y Dominic Barona (ECU) 10.00) y quedó eliminada (puesto 49°)"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.lacapitalmdp.com/radziunas-paso-a-un-campeon-mundial-y-olimpico-y-passeri-hizo-un-dos-por-uno/",
+       "href": "https://www.lacapitalmdp.com/radziunas-paso-a-un-campeon-mundial-y-olimpico-y-passeri-hizo-un-dos-por-uno/"
+      },
+      {
+       "t": " (Nota viernes 13/11)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Viernes 13/11",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Franco Radziunas fue 2° en el heat 4 de la 4ta ronda con 11.70 (detrás de Yago Dora (BRA) 15.16, por delante de Italo Ferreira (BRA) 11.10 y Kanoa Igarashi (JPN) 9.80) y pasó a la 5ta ronda del cuadro principal"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Thiago Passeri ganó la serie 2 de la 5ta ronda del Repechaje con 10.24 (por delante de Kai Odriozola (GER) 9.84, Teo Gale Grani (PAN) 7.70 y José Joaquín López (VEN) 5.64)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Thiago Passeri fue 2° en la serie 6 de la 6ta ronda del Repechaje con 13.80 (detrás de Connor O'Leary (JPN) 14.67, por delante de Marco Mignot (FRA) 11.44 y Tom Butland (NZL) 8.07) y pasó a la 7ma ronda. Ya se aseguró por lo menos el puesto 22°"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Vera Jarisz fue 4° en el heat 5 de la 5ta ronda con 5.77 (ganó Johanne Defay (FRA) 13.46) y fue al Repechaje, donde fue 4° en la 6ta ronda con 8.36 (detrás de Luana Silva (BRA), Rachel Agüero (CRC) y Candelaria Resano (NCA)) y quedó eliminada (puesto 31°)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Lucía Indurain fue 4° en la serie 6 de la 5ta ronda del Repechaje con 6.24 (detrás de Candelaria Resano (NCA) 10.04, Isidora Bulto (CHI) 9.67 y Faviola Alcalá (PUR) 8.90) y quedó eliminada (puesto 43°)"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Radziunas en el heat 1 de la 5ta ronda el sábado 14/11 vs Lucca Mesinas (PER), Crosby Colapinto (USA) y Ethan Ewing (AUS)",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Passeri en el heat 1 de la 7ma ronda del Repechaje el sábado 14/11 vs Kai Odriozola (GER), Kanoa Igarashi (JPN) y Guilherme Ribeiro (POR)",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.lacapitalmdp.com/radziunas-es-top-ten-en-el-mundial/",
+       "href": "https://www.lacapitalmdp.com/radziunas-es-top-ten-en-el-mundial/"
+      },
+      {
+       "t": " (Nota sábado 14/11)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Sábado 14/11",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Franco Radziunas fue 4° en el heat 1 de la 5ta ronda con 7.60 (detrás de Lucca Mesinas (PER) 16.83, Crosby Colapinto (USA) 13.66 y Ethan Ewing (AUS) 12.60) y fue al Repechaje"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Franco Radziunas fue 2° en el heat 2 de la 8va ronda del Repechaje con 11.50 (detrás de Yago Dora (BRA) 12.43; empató con Kai Odriozola (GER) y pasó por mejor ola, 7.33 a 6.00)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Franco Radziunas fue 2° en el heat 1 de la 9na ronda del Repechaje con 13.50 (detrás de Kanoa Igarashi (JPN) 17.60, por delante de Jorgan Couzinet 8.17)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Thiago Passeri fue 4° en el heat 1 de la 7ma ronda del Repechaje con 7.30 (detrás de Kanoa Igarashi (JPN), Kai Odriozola (GER) y Guilherme Ribeiro (POR)) y terminó 22°"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.lacapitalmdp.com/radziunas-termino-sexto-y-se-gano-la-consideracion-de-la-elite-mundial/",
+       "href": "https://www.lacapitalmdp.com/radziunas-termino-sexto-y-se-gano-la-consideracion-de-la-elite-mundial/"
+      },
+      {
+       "t": " (Nota final)"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://estacionk2.com/nota/184683/mundial-de-surf-argentina-fue-decima-en-el-ranking-por-naciones/",
+       "href": "https://estacionk2.com/nota/184683/mundial-de-surf-argentina-fue-decima-en-el-ranking-por-naciones/"
+      },
+      {
+       "t": " (Nota final)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Clasificación final",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Franco Radziunas terminó en el "
+      },
+      {
+       "t": "6° PUESTO",
+       "b": true
+      },
+      {
+       "t": " entre 124 surfistas, su mejor resultado en un Mundial ISA (antes había sido 11° en El Salvador 2025). En la ronda previa a la final se le rompió la tabla a 14 minutos del final del heat, fue 4° con 4.86 y quedó a dos puestos de la medalla"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Thiago Passeri 22°, Joaquín Muñoz Larreta 49°, Vera Jarisz 31°, Lucía Indurain 43° y Victoria Muñoz Larreta 49°"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Argentina terminó 10° en el ranking por naciones (entre 52 países) con 2038 puntos. Campeón por equipos: Australia, 2° Perú y 3° Estados Unidos"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Oro individual: Ethan Ewing (AUS) y Leihan Zoric (AUS). Los cupos a Los Ángeles 2028 fueron para Perú (masculino) y Australia (femenino)"
+      }
+     ]
+    }
+   ],
+   "id": "31518371aee9",
+   "version": "08a0976025",
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-17",
+   "vencido": true
+  },
+  {
+   "titulo": "GIMNASIA EN TRAMPOLÍN - MUNDIAL JUVENIL (WORLD AGE GROUP COMPETITIONS) EN NANJING, CHINA",
+   "deporte": "GIMNASIA EN TRAMPOLÍN",
+   "evento": "MUNDIAL JUVENIL (WORLD AGE GROUP COMPETITIONS) EN NANJING, CHINA",
+   "fechas": null,
+   "etiqueta": "publicable",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se compitió del 12 al 15/11"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://diariojornada.com.ar/426511/deportes/tres_chubutenses_representaran_a_argentina_en_el_mundial_de_china",
+       "href": "https://diariojornada.com.ar/426511/deportes/tres_chubutenses_representaran_a_argentina_en_el_mundial_de_china"
+      },
+      {
+       "t": " (Nota)"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.gymnastics.sport/site/events/detail.php?id=18190",
+       "href": "https://www.gymnastics.sport/site/events/detail.php?id=18190"
+      },
+      {
+       "t": " (Web oficial)"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.superdepor.com.ar/superdepor/nota/2026-11-12-19-24-0-tres-gimnastas-chubutenses-presentes-en-el-mundial-de-nanjing",
+       "href": "https://www.superdepor.com.ar/superdepor/nota/2026-11-12-19-24-0-tres-gimnastas-chubutenses-presentes-en-el-mundial-de-nanjing"
+      },
+      {
+       "t": " (Nota)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Argentinas: Martina Arguiano Salinas (17 años), Amaia Navarro (13) y Milagros Albarracin Hammond (11), del club Fly de Trelew, y una gimnasta de la Federación Bonaerense"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Trampolín individual",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Lucca Constantino De Pedro Casali (13-14 años) fue 54° con 81.66"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Macarena Cainzos (junior) fue 62° con 46.94"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Martina Quimey Arguiano Salinas (17-21 años) fue 65° con 62.30"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Doble mini-trampolín",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Milagros Albarracín Hammond (11-12 años) fue 20° con 39.80"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Lucca Constantino De Pedro Casali (13-14 años) fue 24° con 42.60"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Amaia Sol Navarro (13-14 años) fue 37° con 35.00"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "05f33191"
+   ],
+   "id": "31f587ef5664",
+   "version": "2d621a7fcc",
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-17",
+   "vencido": true
+  },
+  {
+   "titulo": "GIMNASIA AERÓBICA - CAMPEONATO PANAMERICANO DE CATEGORÍAS EN ARACAJU, BRASIL",
+   "deporte": "GIMNASIA AERÓBICA",
+   "evento": "CAMPEONATO PANAMERICANO DE CATEGORÍAS EN ARACAJU, BRASIL",
+   "fechas": null,
+   "etiqueta": "publicable",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se compitió del 11 al 15/11"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://sporttech.io/events/6b2bdf5e-18cf-4cdc-7818-e3874d0a6802/ovs/info?tab=medals",
+       "href": "https://sporttech.io/events/6b2bdf5e-18cf-4cdc-7818-e3874d0a6802/ovs/info?tab=medals"
+      },
+      {
+       "t": " (Medallero)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Argentina terminó 4° en el medallero con 29 medallas: 7 "
+      },
+      {
+       "t": "DORADAS",
+       "b": true
+      },
+      {
+       "t": ", 12 "
+      },
+      {
+       "t": "PLATEADAS",
+       "b": true
+      },
+      {
+       "t": " y 10 de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Individual",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Guadalupe Aberastain ganó la medalla "
+      },
+      {
+       "t": "DORADA",
+       "b": true
+      },
+      {
+       "t": " en Senior"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Guadalupe Aberastain ganó la medalla "
+      },
+      {
+       "t": "DORADA",
+       "b": true
+      },
+      {
+       "t": " en Senior de Copa"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Guadalupe Aberastain ganó la medalla "
+      },
+      {
+       "t": "DORADA",
+       "b": true
+      },
+      {
+       "t": " en Senior Panamericano"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Valentina Ramos ganó la medalla "
+      },
+      {
+       "t": "PLATEADA",
+       "b": true
+      },
+      {
+       "t": " en Senior"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Valentina Ramos ganó la medalla "
+      },
+      {
+       "t": "PLATEADA",
+       "b": true
+      },
+      {
+       "t": " en Senior de Copa"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Valentina Ramos ganó la medalla "
+      },
+      {
+       "t": "PLATEADA",
+       "b": true
+      },
+      {
+       "t": " en Senior Panamericano"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Juana Calderon ganó la medalla de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      },
+      {
+       "t": " en Desarrollo Nacional"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Pareja mixta",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Abril Nahiara Chazarreta y Santino De Santis ganaron la medalla "
+      },
+      {
+       "t": "PLATEADA",
+       "b": true
+      },
+      {
+       "t": " en Junior Panamericano"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Giuliana Lorenzetti y Lionel Ivan Marquez ganaron la medalla de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      },
+      {
+       "t": " en Junior Panamericano"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Lautaro Nicolas Morlibo y Valentina Nahir Oros Remesar ganaron la medalla "
+      },
+      {
+       "t": "DORADA",
+       "b": true
+      },
+      {
+       "t": " en Senior de Copa"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Lautaro Nicolas Morlibo y Valentina Nahir Oros Remesar ganaron la medalla "
+      },
+      {
+       "t": "PLATEADA",
+       "b": true
+      },
+      {
+       "t": " en Senior"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Lautaro Nicolas Morlibo y Valentina Nahir Oros Remesar ganaron la medalla "
+      },
+      {
+       "t": "PLATEADA",
+       "b": true
+      },
+      {
+       "t": " en Senior Panamericano"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Roman Gabriel Fernandez Martin y Valentina Ramos ganaron la medalla "
+      },
+      {
+       "t": "PLATEADA",
+       "b": true
+      },
+      {
+       "t": " en Senior de Copa"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Trío",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Juana Calderon, Lara Romero y Maria Paz Acosta ganaron la medalla de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      },
+      {
+       "t": " en Desarrollo Nacional"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Malena Baldrich, Morena Fillon y Sol Iriarte ganaron la medalla de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      },
+      {
+       "t": " en Senior de Copa"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Amparo Ponce Zuin, Matilda Mendez Corvalan y Umma Alba Fuentes ganaron la medalla de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      },
+      {
+       "t": " en Youth"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Grupo",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Bianca Agostina Horta Salamino, Lourdes Astiz Pelagatti, Mailen Grosso, Renata Di Prinzio y Sofia Abril Legrottaglie Valero ganaron la medalla "
+      },
+      {
+       "t": "PLATEADA",
+       "b": true
+      },
+      {
+       "t": " en Junior"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Bianca Agostina Horta Salamino, Lourdes Astiz Pelagatti, Mailen Grosso, Renata Di Prinzio y Sofia Abril Legrottaglie Valero ganaron la medalla "
+      },
+      {
+       "t": "PLATEADA",
+       "b": true
+      },
+      {
+       "t": " en Junior Panamericano"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Alma Celene Espejo, Charo Rotger, Guadalupe Mendez, Josefina Vincenti y Mia Constanza Morcillo Vargas ganaron la medalla de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      },
+      {
+       "t": " en Junior Panamericano"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Brenda Weber, Matilda Pez, Guadalupe Aberastain, Malena Baldrich y Valentina Ramos ganaron la medalla "
+      },
+      {
+       "t": "PLATEADA",
+       "b": true
+      },
+      {
+       "t": " en Senior"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Brenda Weber, Matilda Pez, Guadalupe Aberastain, Malena Baldrich y Valentina Ramos ganaron la medalla "
+      },
+      {
+       "t": "PLATEADA",
+       "b": true
+      },
+      {
+       "t": " en Senior Panamericano"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Daiana Morate, Damila Cian, Eva Guiber, Morena Fillon y Sol Iriarte ganaron la medalla "
+      },
+      {
+       "t": "DORADA",
+       "b": true
+      },
+      {
+       "t": " en Senior de Copa"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Daiana Morate, Damila Cian, Eva Guiber, Morena Fillon y Sol Iriarte ganaron la medalla de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      },
+      {
+       "t": " en Senior"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Daiana Morate, Damila Cian, Eva Guiber, Morena Fillon y Sol Iriarte ganaron la medalla de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      },
+      {
+       "t": " en Senior Panamericano"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Amparo Ponce Zuin, Matilda Mendez Corvalan, Morena Ariadna Mariani, Samara Fernandez y Umma Alba Fuentes ganaron la medalla de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      },
+      {
+       "t": " en Youth"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Amparo Ponce Zuin, Matilda Mendez Corvalan, Morena Ariadna Mariani, Samara Fernandez y Umma Alba Fuentes ganaron la medalla de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      },
+      {
+       "t": " en Youth Panamericano"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "b8e1520e"
+   ],
+   "id": "0afd6a9ee3c5",
+   "version": "065f413392",
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-17",
+   "vencido": true
+  },
+  {
+   "titulo": "RACQUETBALL - TURKEY SHOOT EN ESTADOS UNIDOS",
+   "deporte": "RACQUETBALL",
+   "evento": "TURKEY SHOOT EN ESTADOS UNIDOS",
+   "fechas": null,
+   "etiqueta": "publicable",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se jugó del 12 al 15/11"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Singles",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Diego Garcia logró la medalla de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      },
+      {
+       "t": " tras caer en semis vs Moscoso por 15-8 y 15-9"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Fernando Kurzbard perdió en primera ronda vs Emir Martinez por 15-10, 13-15 y 4-11"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Dobles Open",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Diego Garcia y Fernando Kurzbard se consagraron "
+      },
+      {
+       "t": "CAMPEONES",
+       "b": true
+      },
+      {
+       "t": ": en semis le ganaron a Carter / Flowers por 11-7 y 11-3 y en la final a Trujillo / Carrasco por No Show"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "403905cd"
+   ],
+   "id": "09aee7b6024c",
+   "version": "2bf4fbd4e4",
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-17",
+   "vencido": true
+  },
+  {
+   "titulo": "GIMNASIA ARTÍSTICA - GYMPIES GYMNOVA CUP EN BÉLGICA",
+   "deporte": "GIMNASIA ARTÍSTICA",
+   "evento": "GYMPIES GYMNOVA CUP EN BÉLGICA",
+   "fechas": null,
+   "etiqueta": "publicable",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se compitió del 12 al 15/11"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://dnl-ie-ggc-cupapp-app.azurewebsites.net/?se=se_1794684372231_beam",
+       "href": "https://dnl-ie-ggc-cupapp-app.azurewebsites.net/?se=se_1794684372231_beam"
+      },
+      {
+       "t": " (Resultados)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Junior",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Eugenia García ("
+      },
+      {
+       "t": "https://www.instagram.com/euge_garciiaa/",
+       "href": "https://www.instagram.com/euge_garciiaa/"
+      },
+      {
+       "t": ") logró la medalla de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      },
+      {
+       "t": " en el All-Around con 47.417"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Eugenia García hizo 12.533 en la final de Salto y fue 6° en la final de Suelo con 11.067"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Senior",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Angelina Bottazzini ("
+      },
+      {
+       "t": "https://www.instagram.com/bottazziniangelina/",
+       "href": "https://www.instagram.com/bottazziniangelina/"
+      },
+      {
+       "t": ") fue 19° en el All-Around con 42.383"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "470e2707"
+   ],
+   "id": "dd6ed1609c4e",
+   "version": "b0f0b8714e",
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-17",
+   "vencido": true
+  },
+  {
+   "titulo": "JUDO - GRAND PRIX DE ZAGREB, CROACIA",
+   "deporte": "JUDO",
+   "evento": "GRAND PRIX DE ZAGREB, CROACIA",
+   "fechas": null,
+   "etiqueta": "mas_info",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://ijf.org/events/gp_cro2026/draw",
+       "href": "https://ijf.org/events/gp_cro2026/draw"
+      },
+      {
+       "t": " (Draw y resultados)"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.ijf.org/index.php/country/arg",
+       "href": "https://www.ijf.org/index.php/country/arg"
+      },
+      {
+       "t": " (Inscriptos ARG)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se compitió del 13 al 15/11"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://ijf.org/events/gp_cro2026/results",
+       "href": "https://ijf.org/events/gp_cro2026/results"
+      },
+      {
+       "t": " (Resultados)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Argentina tenía 6 judokas inscriptos (varones). Ningún argentino aparece en el medallero. Faltan los nombres y los resultados de cada uno"
+      }
+     ]
+    }
+   ],
+   "id": "90b3a227d0f3",
+   "version": "ba07cee63c",
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-17",
+   "vencido": true
+  },
+  {
+   "titulo": "ORIENTACIÓN - CAMPEONATO SUDAMERICANO EN PUCÓN, CHILE",
+   "deporte": "ORIENTACIÓN",
+   "evento": "CAMPEONATO SUDAMERICANO EN PUCÓN, CHILE",
+   "fechas": null,
+   "etiqueta": "mas_info",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se corrió del 12 al 15/11"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://municipalidadpucon.cl/?p=62094",
+       "href": "https://municipalidadpucon.cl/?p=62094"
+      },
+      {
+       "t": " (Nota)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Fuente: Instagram de Orientatlón Argentina"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Argentinos (18 en total), por categoría",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Beto Sanchez: Elite"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Daniela Cravino: W35"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Luis Scaglia: M40"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Celeste Marra: W40"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Juan Pablo y Laura: M55 / W55"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Claudio Valva: M60"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Maxi e Isa Dorf: M40 y Familia"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Fernando Giannini: M60"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Marcela Kurina Sanz: M60"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Bruno Pierini: M20-Elite"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Hernan Murmis: Elite"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Ezequiel Nadalez: Elite"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Ekaterina Sheynikova: N-Menor"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Irina Tretiakova: W40"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Mikhail Sheynokov: M45"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Gabriela Laura Ponce: W50"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Ramon Eduardo Beron: M55"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan resultados"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "2a72a972"
+   ],
+   "id": "366cb072cee3",
+   "version": "f828cc6382",
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-17",
+   "vencido": true
+  },
+  {
+   "titulo": "BEACH VOLEY - 2DA ETAPA CSVP 2026-2027 EN CAYENA, GUYANA FRANCESA",
+   "deporte": "BEACH VOLEY",
+   "evento": "2DA ETAPA CSVP 2026-2027 EN CAYENA, GUYANA FRANCESA",
+   "fechas": null,
+   "etiqueta": "mas_info",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se jugó del 11 al 15/11"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.misurdeportes.cl/2026/11/circuito-sudamericano-de-voley-playa-brasil-se-llevo-los-oros/",
+       "href": "https://www.misurdeportes.cl/2026/11/circuito-sudamericano-de-voley-playa-brasil-se-llevo-los-oros/"
+      },
+      {
+       "t": " (Resultados)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "En la nota de resultados no aparece ninguna pareja argentina (Creo que Argentina no compitió en esta etapa)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan parejas argentinas y resultados"
+      }
+     ]
+    }
+   ],
+   "id": "b904de21ef8b",
+   "version": "ab8fd6a0fc",
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-17",
+   "vencido": true
+  },
+  {
+   "titulo": "BOCHAS - CAMPEONATO MUNDIAL EN RIJEKA, CROACIA",
+   "deporte": "BOCHAS",
+   "evento": "CAMPEONATO MUNDIAL EN RIJEKA, CROACIA",
+   "fechas": null,
+   "etiqueta": "publicable",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Argentinos: Nicolás Pretto, Brian Martini, Guillermo Montemerlo, Guadalupe Serantes y Daniel Bogado"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Individual",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Guillermo Montemerlo ("
+      },
+      {
+       "t": "https://www.instagram.com/guillemontemerlo/",
+       "href": "https://www.instagram.com/guillemontemerlo/"
+      },
+      {
+       "t": ") logró la medalla de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      },
+      {
+       "t": " tras caer en la semifinal vs Eslovenia por 8-4"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Parejas",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Guillermo Montemerlo y Nicolás Pretto ("
+      },
+      {
+       "t": "https://www.instagram.com/nicoprettoarg/",
+       "href": "https://www.instagram.com/nicoprettoarg/"
+      },
+      {
+       "t": ") lograron la medalla de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      },
+      {
+       "t": " tras caer en la semifinal vs Italia por 8-3"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Combinado",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Guadalupe Serantes ("
+      },
+      {
+       "t": "https://www.instagram.com/guadalupeserantes/",
+       "href": "https://www.instagram.com/guadalupeserantes/"
+      },
+      {
+       "t": ") y el combinado argentino perdieron en 4tos vs Eslovenia por 28-26"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Dobles masculino de Tiro Rápido",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Brian Martini ("
+      },
+      {
+       "t": "https://www.instagram.com/brian_martini_06/",
+       "href": "https://www.instagram.com/brian_martini_06/"
+      },
+      {
+       "t": ") y Daniel Bogado ("
+      },
+      {
+       "t": "https://www.instagram.com/daniibogadoo16/",
+       "href": "https://www.instagram.com/daniibogadoo16/"
+      },
+      {
+       "t": ") perdieron en 4tos vs Francia"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "24d5aa22",
+    "9d7a0eca"
+   ],
+   "id": "321e6c965b68",
+   "version": "f16be3f058",
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-17",
+   "vencido": true
+  },
+  {
+   "titulo": "FÓRMULA 1 - CIERRE DE TEMPORADA CON FRANCO COLAPINTO (6 de noviembre al 6 de diciembre)",
+   "deporte": "FÓRMULA 1",
+   "evento": "CIERRE DE TEMPORADA CON FRANCO COLAPINTO",
+   "fechas": "6 de noviembre al 6 de diciembre",
+   "etiqueta": "en_curso",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.formula1.com/en/racing/2026",
+       "href": "https://www.formula1.com/en/racing/2026"
+      },
+      {
+       "t": " (Calendario)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "GP de San Pablo (BRA): 6 al 8/11 (sin sprint)"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.airedesantafe.com.ar/deportes/franco-colapinto-termino-13-el-gran-premio-brasil-la-formula-1-n676067",
+       "href": "https://www.airedesantafe.com.ar/deportes/franco-colapinto-termino-13-el-gran-premio-brasil-la-formula-1-n676067"
+      },
+      {
+       "t": " (Resultado)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Domingo 8/11: Colapinto terminó 13° (Gasly 14°) y Alpine se quedó sin puntos. Ganó Lando Norris"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "GP de Las Vegas (USA): 19 al 21/11"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "https://www.diariocronica.com.ar/noticias/2026/11/20/178962-franco-colapinto-finalizo-noveno-en-la-segunda-practica-del-gran-premio-de-las-vegas (FP2)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Prácticas: sin tiempo en la FP1 (lluvia), 9° en la FP2 con 1:49.229 y 5° en la FP3 con 1:35.198"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "https://www.cadena3.com/noticia/las-vegas-2026/colapinto-tuvo-una-buena-clasificacion-y-largara-noveno-en-el-gp-de-las-vegas_615350 (Clasificación)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Sábado 21/11: Colapinto pasó la Q1 15°, fue 7° en la Q2 con 1:34.982 y terminó 10° en la Q3. Por la sanción a Oscar Piastri larga 9° (Gasly 8°). Pole para Max Verstappen"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "https://www.lanacion.com.ar/deportes/automovilismo/franco-colapinto-en-la-carrera-del-gran-premio-de-las-vegas-de-formula-1-en-vivo-nid22112026/ (Resultado)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Domingo 22/11: Colapinto terminó 6° e igualó su mejor resultado en la F1. Largó 8° (Liam Lawson no pudo largar) y llegó a estar 11° antes de recuperarse. Sumó 8 puntos: tiene 35 y es 12° del campeonato"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Gasly fue 5° y Alpine sumó 18 puntos. Ganó Max Verstappen, 2° Lando Norris y 3° Oscar Piastri"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "GP de Qatar: 27 al 29/11"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "GP de Abu Dabi (UAE): 4 al 6/12"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Transmisión: Fox Sports, Disney+ y F1 TV https://www.lanacion.com.ar/deportes/automovilismo/franco-colapinto-en-el-gran-premio-de-las-vegas-en-vivo-el-minuto-a-minuto-de-la-tercera-practica-nid20112026/"
+      }
+     ]
+    }
+   ],
+   "id": "3f83ee1c3780",
+   "version": "9a9b25fd5a",
+   "publicado_en_doc": false
+  },
+  {
+   "titulo": "RUGBY - NATIONS CHAMPIONSHIP (06 al 29 de noviembre)",
+   "deporte": "RUGBY",
+   "evento": "NATIONS CHAMPIONSHIP",
+   "fechas": "06 al 29 de noviembre",
+   "etiqueta": "en_curso",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Torneo de 12 equipos divididos en 2 zonas, donde ARG integra la zona SUR (la de los equipos no europeos) y juega 6 partidos contra los de la zona NORTE (los europeos del 6 Naciones)."
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "De visitante:"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "https://442.perfil.com/noticias/rugby/los-pumas-perdieron-42-12-ante-irlanda-en-dublin-por-el-nations-championship.phtml (Resultado)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "06-11 Vs Irlanda: perdió 42-12 en Dublín (Mateo Carreras x2)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "https://www.0223.com.ar/nota/2026-11-14-10-46-0-los-pumas-sobrevivieron-a-un-final-increible-en-italia-y-se-llevaron-un-triunfazo (Resultado)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "14-11 Vs Italia: ganó 19-14 en Génova (tries de Bautista Bernasconi, Rodrigo Isgró y Mateo Carreras; 2 conversiones de Tomás Albornoz)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "https://www.adnsur.com.ar/deportes/los-pumas-se-derrumbaron-ante-francia--45-17-y-jugaran-por-el-septimo-puesto-del-nations-championship_a6b02382bfd7203bb626680aa (Resultado)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "21-11 Vs Francia: perdió 45-17 en el Stade de France (tries de Justo Piccardo y Pablo Matera, 2 conversiones de Tomás Albornoz). Iba 14-10 abajo al descanso. Roja para Mayco Vivas y amarilla para Julián Montoya"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Argentina cerró 4° de la conferencia Sur con 11 pts y juega por el 7° puesto"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "https://lapostadiario.com/los-pumas-plagados-de-bajas-se-aferran-a-escocia-para-cerrar-un-ano-gris-en-el-nations-championship/ (Previa)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "7° puesto vs Escocia en Twickenham (Londres) el domingo 29/11 (Creo)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Bajas: Mayco Vivas (suspendido por la roja), Pablo Matera (motivos personales), Boris Wenger, Mateo Carreras, Santiago Chocobares y Bautista Delguy (lesionados). Julián Montoya en protocolo de conmoción. 14 bajas en toda la gira"
+      }
+     ]
+    }
+   ],
+   "id": "de102f71eab3",
+   "version": "e65c85b93d",
+   "publicado_en_doc": false
+  },
+  {
+   "titulo": "FÚTBOL - MUNDIAL SUB 17 MASCULINO EN DOHA, QATAR (19 de noviembre al 13 de diciembre)",
+   "deporte": "FÚTBOL",
+   "evento": "MUNDIAL SUB 17 MASCULINO EN DOHA, QATAR",
+   "fechas": "19 de noviembre al 13 de diciembre",
+   "etiqueta": "en_curso",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "https://www.qfa.qa/en/news/fifa-confirms-full-fixture-list-for-qatar-2026-u-17-world-cup (Fixture)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Argentina integra el Grupo C con Australia, Dinamarca y Mozambique. DT: Diego Placente. Se juega en el Aspire Zone (Al Rayyan)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "https://www.lanacion.com.ar/deportes/futbol/resultado-de-la-seleccion-argentina-sub-17-vs-australia-sub-17-quien-gano-el-partido-del-mundial-nid19112026/ (Resultado)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Debut: perdió 2-0 vs Australia el jueves 19/11 (en contra de Álvaro Güich a los 60' y gol de Akol Akon a los 71', convalidado por el VAR). Benjamín Vallejo fue expulsado en el final"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "https://www.espn.com.br/futebol/partida/_/jogoId/401873539/mozambique-u17-argentina-sub-17 (Resultado)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "2° fecha: le ganó 2-1 a Mozambique el domingo 22/11 (Matheo Machuca a los 5' y Simón Escobar a los 32'; descontó Alírio Cuna Júnior a los 45+1')"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "https://www.afa.com.ar/es/posts/mundial-sub-17-desde-las-12.30-argentina-se-mide-ante-dinamarca-en-busca-de-la-clasificacion-a-16avos-de-final (Previa)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Argentina es 2° del grupo con 3 puntos"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "vs Dinamarca hoy miércoles 25/11 a las 12:30hs, por la clasificación a 16avos"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "https://bolavip.com/ar/seleccion/argentina-comienza-su-travesia-en-el-mundial-sub-17-plantel-como-ver-los-partidos-y-el-cronograma-completo (Plantel y horarios)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Plantel (21)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Valentín Reigia (Argentinos Juniors), Thiago Parga (Huracán), Kevin Báez (Aldosivi), Thiago Pérez (Huracán), Julio Coria (Boca), Álvaro Güich (Rosario Central), Mateo Mendizábal (Banfield), Bautista Giménez (River), Simón Escobar (Vélez, capitán), Alex Cardozo (Lanús), Matheo Machuca (Independiente), Galo Escobar (River), Benjamín Vallejo (Vélez), Marcos Ortiz (Belgrano), Giovanni Baroni (Talleres), Mateo Sánchez (Boca), Alan Alcaraz (Argentinos Juniors), Facundo Salinas (Vélez), Emiliano Barrionuevo (Boca), Tobías Goytía (River) y Juan Cruz Policella (Vélez)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Transmisión: TyC Sports y DirecTV https://www.afa.com.ar/es/posts/mundial-sub-17-desde-las-12.30-argentina-se-mide-ante-dinamarca-en-busca-de-la-clasificacion-a-16avos-de-final"
+      }
+     ]
+    }
+   ],
+   "id": "da9041c32bff",
+   "version": "199ff0354e",
+   "publicado_en_doc": false
+  },
+  {
+   "titulo": "FÚTBOL TALLA BAJA - MUNDIAL EN MARRUECOS (fechas a confirmar)",
+   "deporte": "FÚTBOL TALLA BAJA",
+   "evento": "MUNDIAL EN MARRUECOS (fechas a confirmar)",
+   "fechas": null,
+   "etiqueta": "en_curso",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "https://www.infobae.com/deportes/2026/11/24/la-seleccion-argentina-de-talla-baja-goleo-5-1-a-brasil-y-se-clasifico-a-los-cuartos-de-final-del-mundial-el-particular-festejo/ (Resultados)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Argentina es la campeona del mundo vigente (ganó la 1° edición en 2023). Son 16 selecciones en 4 grupos y los dos primeros de cada uno pasan a 4tos"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Fase de grupos"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Le ganó 5-0 a Jordania"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Le ganó 3-1 a Irak (Martín Antúnez x3)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Le ganó 5-1 a Brasil (Lucas Deamigo x4 y Martín Antúnez)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Terminó 1° de su grupo con puntaje ideal: 9 puntos, 13 goles a favor y 2 en contra"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "4tos de final el jueves 26/11 vs un rival del grupo de Paraguay, Egipto, Japón y Ghana"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "779d361e"
+   ],
+   "id": "52871f18efdc",
+   "version": "73b7821cb4",
+   "publicado_en_doc": false
+  },
+  {
+   "titulo": "TIRO - CAMPEONATO DE LAS AMÉRICAS EN LIMA, PERÚ (21 de noviembre al 1 de diciembre)",
+   "deporte": "TIRO",
+   "evento": "CAMPEONATO DE LAS AMÉRICAS EN LIMA, PERÚ",
+   "fechas": "21 de noviembre al 1 de diciembre",
+   "etiqueta": "en_curso",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "https://issf-sports.org/competitions/3524 (Web oficial ISSF)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "https://issf-sports.org/competitions/3524/results (Resultados)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "https://www.infobae.com/america/agencias/2026/11/19/campeonato-de-las-americas-de-tiro-deportivo-otorgara-en-lima-12-cupos-a-los-angeles-2028/ (Nota)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Es el 15° Campeonato de las Américas, en el Polígono Las Palmas: 359 tiradores de 22 países, 12 cupos directos a Los Ángeles 2028 y 208 plazas para Lima 2027. Pruebas de rifle, pistola y escopeta (fosa y skeet)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan los tiradores argentinos y sus resultados"
+      }
+     ]
+    }
+   ],
+   "id": "daca2fda8556",
+   "version": "3fe7603b0e",
+   "publicado_en_doc": false
+  },
+  {
+   "titulo": "SKATEBOARDING - COPA DEL MUNDO EN UTSUNOMIYA, JAPÓN (fechas a confirmar)",
+   "deporte": "SKATEBOARDING",
+   "evento": "COPA DEL MUNDO EN UTSUNOMIYA, JAPÓN (fechas a confirmar)",
+   "fechas": null,
+   "etiqueta": "en_curso",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Mauro Iglesias y Matías Dell Olio se clasificaron a los 4tos de final de Street"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan link de resultados y cómo siguieron"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "0c319bec"
+   ],
+   "id": "37884a6ee621",
+   "version": "ca183e7615",
+   "publicado_en_doc": false
+  },
+  {
+   "titulo": "SALVAMENTO ACUÁTICO - CAMPEONATO MUNDIAL EN PORT ELIZABETH, SUDÁFRICA (25 de noviembre al 13 de diciembre)",
+   "deporte": "SALVAMENTO ACUÁTICO",
+   "evento": "CAMPEONATO MUNDIAL EN PORT ELIZABETH, SUDÁFRICA",
+   "fechas": "25 de noviembre al 13 de diciembre",
+   "etiqueta": "en_curso",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "https://lifesaving2026.com (Web oficial)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "https://www.instagram.com/seleccionargentinaopen/ (Selección, con las pruebas de cada uno)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Arranca hoy. Argentina compite con 12 deportistas:"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Ariana Ressler (https://www.instagram.com/caneressler/)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Ayrton Polese Romero (https://www.instagram.com/ayrtonpr/)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Thomas Marpez (https://www.instagram.com/thomasmarpez/)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Camila Dip (https://www.instagram.com/camudip/)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Camila Coronel (https://www.instagram.com/caamcoronel/)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Ornella London (https://www.instagram.com/ornellalondon/)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Eduardo Martinez (https://www.instagram.com/eduu_martinezz/)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Santiago Leon Ruiz (https://www.instagram.com/santileonruiz/)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Ana Paula Alves (https://www.instagram.com/anialvess/)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Franco Albarado (https://www.instagram.com/franco.albarado/)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Candela Barua (https://www.instagram.com/candebarua_/)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Federico Raczkowski (https://www.instagram.com/fede.racz/)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan cronograma y resultados"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "8466d36a"
+   ],
+   "id": "7749c05218ce",
+   "version": "0b5dfc25cc",
+   "publicado_en_doc": false
+  },
+  {
+   "titulo": "FLAG FOOTBALL - PREMIER FLAG COMBINE EN CIUDAD DE MÉXICO, MÉXICO (fechas a confirmar)",
+   "deporte": "FLAG FOOTBALL",
+   "evento": "PREMIER FLAG COMBINE EN CIUDAD DE MÉXICO, MÉXICO (fechas a confirmar)",
+   "fechas": null,
+   "etiqueta": "en_curso",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Agustina Torres participará del Combine de Ciudad de México, el proceso de evaluación de talento de Premier Flag, la nueva liga profesional de flag football impulsada por la NFL y TMRW Sports"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Es una oportunidad para medirse con atletas de todo el mundo y dar un paso más hacia la posibilidad de integrar la liga, que comenzará en el verano de 2027"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "9f6b994b"
+   ],
+   "id": "8732aea1ca0a",
+   "version": "aeaa6e6544",
+   "publicado_en_doc": false
+  },
+  {
+   "titulo": "BÁSQUET - CLASIFICATORIOS AL MUNDIAL QATAR 2027 (5TA VENTANA) EN ZÁRATE, ARGENTINA (26 y 29 de noviembre)",
+   "deporte": "BÁSQUET",
+   "evento": "CLASIFICATORIOS AL MUNDIAL QATAR 2027 (5TA VENTANA) EN ZÁRATE, ARGENTINA",
+   "fechas": "26 y 29 de noviembre",
+   "etiqueta": "agenda",
+   "seccion": "agenda",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "https://www.lacapitalmdp.com/sorpresivo-cambio-de-sede-para-la-seleccion-de-basquet-no-jugara-en-mar-del-plata/ (Info)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se juega en el Espacio DAM de Zárate (iba a ser en Mar del Plata)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "https://www.rosario3.com/deportes/basquet-con-campazzo-laprovittola-y-un-rosarino-la-seleccion-argentina-presento-su-prelista-para-la-ventana-de-noviembre-20261118-0058.html (Horarios y prelista)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "vs Bahamas el jueves 26/11 a las 21:40hs"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "vs Canadá el domingo 29/11 a las 18:10hs"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Prelista de 24 de Pablo Prigioni con Facundo Campazzo, Nicolás Laprovittola, Leandro Bolmaro, Nicolás Brussino, Luca y José Vildoza, Juan Pablo Vaulet, Leonardo Dato, Francisco y Alejo Cáffaro, Juan Gallizzi y Gabriel Fernández, entre otros"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Argentina llega con 6 victorias y 2 derrotas. Si gana los dos partidos se clasifica directo al Mundial; también puede clasificarse ganándole a Bahamas si Panamá le gana a Bahamas en esta ventana"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan los 12 convocados"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "2d1d6986"
+   ],
+   "id": "a3a1e029406d",
+   "version": "8f3c01ccb8",
+   "publicado_en_doc": false
+  },
+  {
+   "titulo": "RUGBY 7 - HSBC SVNS 2026-27: DUBÁI Y CIUDAD DEL CABO (28 de noviembre al 6 de diciembre)",
+   "deporte": "RUGBY 7",
+   "evento": "HSBC SVNS 2026-27: DUBÁI Y CIUDAD DEL CABO",
+   "fechas": "28 de noviembre al 6 de diciembre",
+   "etiqueta": "agenda",
+   "seccion": "agenda",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "https://hoydia.com.ar/deportes/rugby/el-circuito-mundial-de-seven-confirmo-las-fechas-y-sedes-para-la-temporada-2026-27/ (Info)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Los Pumas 7s arrancan la temporada en Dubái (UAE) el 28 y 29/11 y siguen en Ciudad del Cabo (RSA) el 5 y 6/12"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan plantel, grupo y horarios"
+      }
+     ]
+    }
+   ],
+   "id": "f81d46e0ad4e",
+   "version": "0188c7d862",
+   "publicado_en_doc": false
+  },
+  {
+   "titulo": "JUDO - EUROPEAN OPEN DE ROMA, ITALIA (28 y 29 de noviembre)",
+   "deporte": "JUDO",
+   "evento": "EUROPEAN OPEN DE ROMA, ITALIA",
+   "fechas": "28 y 29 de noviembre",
+   "etiqueta": "agenda",
+   "seccion": "agenda",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "https://www.ijf.org/index.php/country/arg (Inscriptos ARG)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Argentina tiene 3 judokas inscriptos (2 varones y 1 mujer). Faltan los nombres"
+      }
+     ]
+    }
+   ],
+   "id": "fd616fd33d8c",
+   "version": "c62f82c824",
+   "publicado_en_doc": false
+  },
+  {
+   "titulo": "FÚTBOL - AMISTOSO DE LA SELECCIÓN VS ALEMANIA EN LA PLATA, ARGENTINA (29 de noviembre)",
+   "deporte": "FÚTBOL",
+   "evento": "AMISTOSO DE LA SELECCIÓN VS ALEMANIA EN LA PLATA, ARGENTINA",
+   "fechas": "29 de noviembre",
+   "etiqueta": "agenda",
+   "seccion": "agenda",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "vs Alemania el domingo 29/11 a las 19hs en el Estadio Único Tricampeones del Mundo - Diego Armando Maradona de La Plata"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "97682b19"
+   ],
+   "id": "b533ebd242c4",
+   "version": "c9cea3a60d",
+   "publicado_en_doc": false
+  },
+  {
+   "titulo": "VELA - SSL GOLD CUP (COPA DEL MUNDO DE VELA) EN RÍO DE JANEIRO, BRASIL (2 al 13 de diciembre)",
+   "deporte": "VELA",
+   "evento": "SSL GOLD CUP (COPA DEL MUNDO DE VELA) EN RÍO DE JANEIRO, BRASIL",
+   "fechas": "2 al 13 de diciembre",
+   "etiqueta": "agenda",
+   "seccion": "agenda",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "https://sslgoldcup.worldofsailors.com/results/ (Resultados)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Argentina arranca en 8vos y comparte grupo con Francia (faltan definirse los otros dos rivales)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "8vos: del 2 al 5/12"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "4tos: del 7 al 10/12. Semis: 12/12. Petite Final y Gran Final: 13/12"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Equipo (https://www.instagram.com/sslteamargentina/)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Santiago Lange (C) (https://www.instagram.com/santilange/)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Guillermo Parada (https://www.instagram.com/guilleparadaok/)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Cole Parada (https://www.instagram.com/cole_parada/)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Mariano Caputo (https://www.instagram.com/mamucaputo/)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Cecilia Carranza (https://www.instagram.com/cecicarranzasaroli/)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Lucía Falasca (https://www.instagram.com/lu.falasca/)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Alejandro Colla (https://www.instagram.com/alejandro_colla/)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Germán Panei (https://www.instagram.com/gpanei/)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Pablo Despontin (https://www.instagram.com/pablodespontin/)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Jordán Rivas (https://www.instagram.com/jordan.rivas1/)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Gabriel Merino (https://www.instagram.com/gabrielpmarino/)"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "f7d1b4d1"
+   ],
+   "id": "293979ee6706",
+   "version": "31ed4279ef",
+   "publicado_en_doc": false
+  },
+  {
+   "titulo": "SURF - SURF FEST PRO LEAGUE BY SOFIA MILANOVICH (3RA FECHA) EN SEÑORITAS, PERU (03 al 06 de diciembre)",
+   "deporte": "SURF",
+   "evento": "SURF FEST PRO LEAGUE BY SOFIA MILANOVICH (3RA FECHA) EN SEÑORITAS, PERU",
+   "fechas": "03 al 06 de diciembre",
+   "etiqueta": "agenda",
+   "seccion": "agenda",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan surfistas argentinos"
+      }
+     ]
+    }
+   ],
+   "id": "b7d50d18f33c",
+   "version": "b678ca096b",
+   "publicado_en_doc": false
+  },
+  {
+   "titulo": "FÚTBOL - AMISTOSO DE LA SELECCIÓN VS URUGUAY EN BARRACAS, ARGENTINA (4 de diciembre)",
+   "deporte": "FÚTBOL",
+   "evento": "AMISTOSO DE LA SELECCIÓN VS URUGUAY EN BARRACAS, ARGENTINA",
+   "fechas": "4 de diciembre",
+   "etiqueta": "agenda",
+   "seccion": "agenda",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "vs Uruguay el viernes 4/12 a las 20:15hs en el Estadio de Barracas Central"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "3e10a17f",
+    "3156086f"
+   ],
+   "id": "86a834f665cb",
+   "version": "8ab0903d61",
+   "publicado_en_doc": false
+  },
+  {
+   "titulo": "DODGEBALL - CAMPEONATO MUNDIAL EN BANGKOK, TAILANDIA (5 al 13 de diciembre)",
+   "deporte": "DODGEBALL",
+   "evento": "CAMPEONATO MUNDIAL EN BANGKOK, TAILANDIA",
+   "fechas": "5 al 13 de diciembre",
+   "etiqueta": "agenda",
+   "seccion": "agenda",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "https://dodgeballhub.com/ (Info)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan equipos argentinos y cronograma"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "d7e8d0e5"
+   ],
+   "id": "066c3036061d",
+   "version": "055bb8eb00",
+   "publicado_en_doc": false
+  },
+  {
+   "titulo": "PELOTA VASCA - CAMPEONATO PANAMERICANO EN LIMA, PERÚ (6 al 12 de diciembre) - CLASIFICATORIO A LIMA 2027",
+   "deporte": "PELOTA VASCA",
+   "evento": "CAMPEONATO PANAMERICANO EN LIMA, PERÚ - CLASIFICATORIO A LIMA 2027",
+   "fechas": "6 al 12 de diciembre",
+   "etiqueta": "agenda",
+   "seccion": "agenda",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "https://www.instagram.com/p/DfAo1VtJP17/ (Info)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Modalidades: Frontball, Paleta Frontón, Paleta Goma Trinquete, Paleta Goma 30 Metros y Frontenis. Todavía no están los convocados argentinos"
+      }
+     ]
+    }
+   ],
+   "id": "26199b37b342",
+   "version": "a4c0efcc7f",
+   "publicado_en_doc": false
+  },
+  {
+   "titulo": "ATLETISMO - MARATÓN DE VALENCIA, ESPAÑA (6 de diciembre)",
+   "deporte": "ATLETISMO",
+   "evento": "MARATÓN DE VALENCIA, ESPAÑA",
+   "fechas": "6 de diciembre",
+   "etiqueta": "agenda",
+   "seccion": "agenda",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Joaquín Arbe participará"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "397df877"
+   ],
+   "id": "592163c371e5",
+   "version": "17572721d5",
+   "publicado_en_doc": false
+  },
+  {
+   "titulo": "HOCKEY - FIH PRO LEAGUE 2026-27: VENTANA EN ARGENTINA (8 al 13 de diciembre)",
+   "deporte": "HOCKEY",
+   "evento": "FIH PRO LEAGUE 2026-27: VENTANA EN ARGENTINA",
+   "fechas": "8 al 13 de diciembre",
+   "etiqueta": "agenda",
+   "seccion": "agenda",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "https://www.hockey.org.au/news/kookaburras-and-hockeyroos-discover-2026-27-fih-pro-league-venues-and-dates (Calendario)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Las Leonas juegan vs China y los Leones vs Gran Bretaña y Francia. Sede a confirmar"
+      }
+     ]
+    }
+   ],
+   "id": "61326fe2ad0f",
+   "version": "13825456ab",
+   "publicado_en_doc": false
+  },
+  {
+   "titulo": "FÚTBOL - SORTEO DEL MUNDIAL FEMENINO BRASIL 2027 (11 de diciembre)",
+   "deporte": "FÚTBOL",
+   "evento": "SORTEO DEL MUNDIAL FEMENINO BRASIL 2027",
+   "fechas": "11 de diciembre",
+   "etiqueta": "agenda",
+   "seccion": "agenda",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Sorteo del Mundial de Brasil 2027"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "d2eb3bd9"
+   ],
+   "id": "ad2d495bfcec",
+   "version": "52e2e2d7ef",
+   "publicado_en_doc": false
+  },
+  {
+   "titulo": "ATLETISMO - CAMPEONATO SUDAMERICANO SUB 18 EN CUENCA, ECUADOR (11 al 13 de diciembre)",
+   "deporte": "ATLETISMO",
+   "evento": "CAMPEONATO SUDAMERICANO SUB 18 EN CUENCA, ECUADOR",
+   "fechas": "11 al 13 de diciembre",
+   "etiqueta": "agenda",
+   "seccion": "agenda",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se disputará el 28° Sudamericano U18"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan los convocados argentinos"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "TONA26 TORNEOS NACIONALES DE DEPORTES ALTERNATIVOS COLÓN 2026, ARGENTINA (12 y 13 de diciembre)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "https://deportesalternativos.com/tona26 (Info)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se hace en Colón (provincia de Buenos Aires), junto con el Simposio Internacional de Deportes Alternativos. Participan Argentina, España y Uruguay"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "7f5e7c16",
+    "203e80b2"
+   ],
+   "id": "97985d40049c",
+   "version": "fade2c5964",
+   "publicado_en_doc": false
+  },
+  {
+   "titulo": "BREAKING - WFADS WORLD BREAKING CHAMPIONSHIPS Y DUBAI OPEN BREAKING EN DUBÁI, EMIRATOS ÁRABES UNIDOS (18 al 20 de diciembre)",
+   "deporte": "BREAKING",
+   "evento": "WFADS WORLD BREAKING CHAMPIONSHIPS Y DUBAI OPEN BREAKING EN DUBÁI, EMIRATOS ÁRABES UNIDOS",
+   "fechas": "18 al 20 de diciembre",
+   "etiqueta": "agenda",
+   "seccion": "agenda",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "https://wfads.org/breaking/ (Info del evento)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se hace en el Dubai World Trade Centre"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Compiten Bianca Chimento (https://www.instagram.com/_violettaqueen/) y Supa Dee (https://www.instagram.com/supadeeism/), clasificados en el Dubai Open Breaking: Clasificatorio Argentina"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Viernes 19 de diciembre: B-Boys y B-Girls adultos (mayores de 16), la categoría de los dos argentinos"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Jueves 18: categorías de 10 a 15 años. Sábado 20: crews 5x5"
+      }
+     ]
+    }
+   ],
+   "id": "49a715b10ded",
+   "version": "676076743e",
+   "publicado_en_doc": false
+  },
+  {
+   "titulo": "ECUESTRE - CAMPEONATO MUNDIAL FEI DE ENDURANCE EN BUTHEEB, EMIRATOS ÁRABES UNIDOS (19 de diciembre)",
+   "deporte": "ECUESTRE",
+   "evento": "CAMPEONATO MUNDIAL FEI DE ENDURANCE EN BUTHEEB, EMIRATOS ÁRABES UNIDOS",
+   "fechas": "19 de diciembre",
+   "etiqueta": "agenda",
+   "seccion": "agenda",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "https://www.fei.org/events/2026_CH-M_0004/Butheeb#events (Web oficial)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Representación argentina con siete integrantes:"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Beatriz Muriel (caballo: Ras Platón)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Carolina Muriel (Box Ascot)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Martina Spelanzon (Ghepard)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Josefina Rolt (HCE Magsodia)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Gonzalo Heredia (AG Lubumba)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Florencia Serra (HT Zaria)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Josefina Ballester (Box Presumida)"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "PREMIOS OLIMPIA 2026 EN TANGO PORTEÑO, BUENOS AIRES (21 de diciembre)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Todavía no están los nominados"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "577a6f84",
+    "5e117001"
+   ],
+   "id": "14bebb830acb",
+   "version": "58fe908a61",
+   "publicado_en_doc": false
+  },
+  {
+   "titulo": "TENIS - UNITED CUP EN AUSTRALIA (1 al 10 de enero de 2027)",
+   "deporte": "TENIS",
+   "evento": "UNITED CUP EN AUSTRALIA",
+   "fechas": "1 al 10 de enero de 2027",
+   "etiqueta": "agenda",
+   "seccion": "agenda",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Equipo: Tomás Etcheverry, Guido Andreozzi, Mariano Kestelboim, Solana Sierra, Jazmín Ortenzi y Nicole Fossa Huergo"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Argentina integra el Grupo F con Bélgica y España"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "7a46917e"
+   ],
+   "id": "7a7ae83319ac",
+   "version": "3a7cf95340",
+   "publicado_en_doc": false
+  },
+  {
+   "titulo": "BÉISBOL - SERIE DE LAS AMÉRICAS 2027 EN CARACAS, VENEZUELA (9 al 16 de febrero de 2027)",
+   "deporte": "BÉISBOL",
+   "evento": "SERIE DE LAS AMÉRICAS 2027 EN CARACAS, VENEZUELA",
+   "fechas": "9 al 16 de febrero de 2027",
+   "etiqueta": "agenda",
+   "seccion": "agenda",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Argentina estará en el Grupo B con México, República Dominicana, Panamá y Colombia"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "VI JUEGOS SURAMERICANOS DE PLAYA IQUIQUE 2027, CHILE (11 al 21 de marzo de 2027)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "https://iquique2027.cl/ (Web oficial)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "El evento reunirá 14 disciplinas deportivas: Vóley Playa, Fútbol Playa, Rugby Playa, Tenis Playa, Lucha de Playa, Surf, Natación en Aguas Abiertas, Esquí Náutico, Remo (Beach Sprint Coastal), Triatlón, Vela, Actividades Subacuáticas, Skateboarding y Handball de Playa / Canotaje"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "JUEGOS PANAMERICANOS LIMA 2027, PERÚ (23 de julio al 8 de agosto de 2027)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "https://forbes.pe/actualidad/2026-01-30/juegos-panamericanos-de-lima-2027-cambiaron-de-fecha-seran-del-23-de-julio-al-8-de-agosto/ (Fechas)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Próximo evento multideportivo con argentinos"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "8dd5c1f9",
+    "9be44e2c"
+   ],
+   "id": "9725fc4440c9",
+   "version": "b1e5513823",
+   "publicado_en_doc": false
+  },
+  {
+   "titulo": "RUGBY - MUNDIAL AUSTRALIA 2027 (01 de octubre al 13 de noviembre de 2027)",
+   "deporte": "RUGBY",
+   "evento": "MUNDIAL AUSTRALIA 2027",
+   "fechas": "01 de octubre al 13 de noviembre de 2027",
+   "etiqueta": "agenda",
+   "seccion": "agenda",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Grupo C:"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "04-10-27 Vs Canadá"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "10-10-27 Vs España"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "15-10-27 Vs Fiyi"
+      }
+     ]
+    }
+   ],
+   "id": "e50ed2c57db9",
+   "version": "2471533fd6",
+   "publicado_en_doc": false
+  }
+ ]
 }

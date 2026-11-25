@@ -1,15 +1,140 @@
 {
  "_nota": "Resultados vistos en el Doc en los últimos 7 días (incluye los ya publicados que el agente sacó).",
  "eventos": {
-  "08cc43ed292e": {
-   "titulo": "RACQUETBALL - MILE HIGH OPEN EN DENVER, ESTADOS UNIDOS (19 al 21 de noviembre)",
-   "deporte": "RACQUETBALL",
-   "evento": "MILE HIGH OPEN EN DENVER, ESTADOS UNIDOS",
-   "fechas": "19 al 21 de noviembre",
-   "etiqueta": "en_curso",
+  "088209cc961e": {
+   "titulo": "TENIS DE MESA ADAPTADO - CAMPEONATO MUNDIAL EN PATTAYA, TAILANDIA",
+   "deporte": "TENIS DE MESA ADAPTADO",
+   "evento": "CAMPEONATO MUNDIAL EN PATTAYA, TAILANDIA",
+   "fechas": null,
+   "etiqueta": "publicable",
    "seccion": "resultados",
    "ya_publicado": false,
    "bloques": [
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.ittf.com/tournament/3258/WorldParaChampionships_Pattaya2026",
+       "href": "https://www.ittf.com/tournament/3258/WorldParaChampionships_Pattaya2026"
+      },
+      {
+       "t": " (Web oficial)"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://paradeportes.com/tenis-de-mesa-adaptado-argentina-se-despidio-del-campeonato-mundial-en-tailandia/",
+       "href": "https://paradeportes.com/tenis-de-mesa-adaptado-argentina-se-despidio-del-campeonato-mundial-en-tailandia/"
+      },
+      {
+       "t": " (Resultados)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Argentina terminó su participación el 19/11. Constanza Garrone y Giselle Muñoz llegaron a 4tos de final"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Individual",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Constanza Garrone (C2) le ganó a María Fernanda Chávez (VEN) y perdió en 4tos vs Su Yeon Seo (KOR)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Giselle Muñoz (C7) le ganó a Shan Jiang (CHN) y perdió en 4tos vs Kelly van Zon (NED)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Gabriel Copola (C3) le ganó en 16avos a Thomas Brüchle (GER) y perdió en la ronda siguiente vs Florian Merrien (FRA)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Eithan Skliarsky (C9) perdió en su debut vs Lucas Didier (FRA)"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Dobles",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Gabriel Copola y Constanza Garrone le ganaron a Junjian Chen / Lisa Di Toro (AUS) y después perdieron vs Welder Camargo / Marliane Amaral (BRA)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Giselle Muñoz y Eithan Skliarsky perdieron en su primer partido vs Piotr Grudzień / Karolina Pęk (POL)"
+      }
+     ]
+    }
+   ],
+   "id": "088209cc961e",
+   "version": "a2d0a97f1b",
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-25",
+   "visto": "2026-11-25"
+  },
+  "08cc43ed292e": {
+   "titulo": "RACQUETBALL - MILE HIGH OPEN EN DENVER, ESTADOS UNIDOS",
+   "deporte": "RACQUETBALL",
+   "evento": "MILE HIGH OPEN EN DENVER, ESTADOS UNIDOS",
+   "fechas": null,
+   "etiqueta": "mas_info",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se jugó del 19 al 21/11"
+      }
+     ]
+    },
     {
      "tipo": "link",
      "partes": [
@@ -31,31 +156,6 @@
       },
       {
        "t": " (Resultados)"
-      }
-     ]
-    },
-    {
-     "tipo": "sub",
-     "partes": [
-      {
-       "t": "Dobles Femenino",
-       "b": true
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "María José Vargas y Valeria Centellas le ganaron en 4tos a Reyes Pérez / Aldana (GUA) por 15-9 y 15-4 y pasaron a semis"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Natalia Méndez y Brenda Laime (COL) perdieron en 4tos vs Manilla / Andersen (USA) por 15-4, 11-15 y 11-3"
       }
      ]
     },
@@ -88,10 +188,13 @@
      ]
     },
     {
+     "tipo": "espacio"
+    },
+    {
      "tipo": "sub",
      "partes": [
       {
-       "t": "Final de dobles el sábado 21/11",
+       "t": "Dobles Femenino",
        "b": true
       }
      ]
@@ -100,15 +203,32 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Vargas y Centellas juegan la final de dobles vs Herrera / Martínez (MEX/GUA). Falta el resultado"
+       "t": "María José Vargas y Valeria Centellas le ganaron en 4tos a Reyes Pérez / Aldana (GUA) por 15-9 y 15-4 y llegaron a la final vs Herrera / Martínez (MEX/GUA)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Natalia Méndez y Brenda Laime (COL) perdieron en 4tos vs Manilla / Andersen (USA) por 15-4, 11-15 y 11-3"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Falta: resultado de la final de dobles de Vargas y Centellas"
       }
      ]
     }
    ],
    "id": "08cc43ed292e",
-   "version": "49f092a970",
+   "version": "5503e06d88",
    "publicado_en_doc": false,
-   "visto": "2026-11-22"
+   "terminado_desde": "2026-11-25",
+   "visto": "2026-11-25"
   },
   "09aee7b6024c": {
    "titulo": "RACQUETBALL - TURKEY SHOOT EN ESTADOS UNIDOS",
@@ -700,14 +820,22 @@
    "visto": "2026-11-22"
   },
   "1683acdc480f": {
-   "titulo": "PICKLEBALL - CAMPEONATO SUDAMERICANO EN CARMELO, URUGUAY (17 al 22 de noviembre)",
+   "titulo": "PICKLEBALL - CAMPEONATO SUDAMERICANO EN CARMELO, URUGUAY",
    "deporte": "PICKLEBALL",
    "evento": "CAMPEONATO SUDAMERICANO EN CARMELO, URUGUAY",
-   "fechas": "17 al 22 de noviembre",
-   "etiqueta": "en_curso",
+   "fechas": null,
+   "etiqueta": "publicable",
    "seccion": "resultados",
    "ya_publicado": false,
    "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se jugó del 17 al 22/11. Fue el 1° Sudamericano de Pickleball"
+      }
+     ]
+    },
     {
      "tipo": "link",
      "partes": [
@@ -721,10 +849,22 @@
      ]
     },
     {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.lagaceta.com.ar/nota/1163739/deportes/argentina-hizo-podio-todas-categorias-primer-sudamericano-selecciones-pickleball.html",
+       "href": "https://www.lagaceta.com.ar/nota/1163739/deportes/argentina-hizo-podio-todas-categorias-primer-sudamericano-selecciones-pickleball.html"
+      },
+      {
+       "t": " (Resultados)"
+      }
+     ]
+    },
+    {
      "tipo": "texto",
      "partes": [
       {
-       "t": "Es el 1° Sudamericano de Pickleball. Argentina estará representada por:"
+       "t": "Argentina hizo podio en las tres categorías de la Copa de Países"
       }
      ]
     },
@@ -746,6 +886,18 @@
      ]
     },
     {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "La Selección logró la medalla de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      }
+     ]
+    },
+    {
      "tipo": "espacio"
     },
     {
@@ -762,6 +914,21 @@
      "partes": [
       {
        "t": "Romina Rosales, Karina Rossi, Gonzalo Valdez, Patricio Bertero, Marcelo Galati y Mariano Garcia Malbrán"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "La Selección logró la medalla "
+      },
+      {
+       "t": "PLATEADA",
+       "b": true
+      },
+      {
+       "t": " tras perder una final muy ajustada vs Brasil"
       }
      ]
     },
@@ -789,18 +956,80 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Faltan resultados"
+       "t": "La Selección logró la medalla de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      },
+      {
+       "t": " tras superar a Colombia"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Abierto Sudamericano (individual y parejas, del 18 al 20/11)",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.lagaceta.com.ar/nota/1163578/deportes/ocho-tucumanos-participaron-primer-abierto-sudamericano-pickleball-argentina-termino-segunda-medallero.html",
+       "href": "https://www.lagaceta.com.ar/nota/1163578/deportes/ocho-tucumanos-participaron-primer-abierto-sudamericano-pickleball-argentina-termino-segunda-medallero.html"
+      },
+      {
+       "t": " (Medallero)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Argentina terminó 2° en el medallero con 22 medallas: 10 "
+      },
+      {
+       "t": "DORADAS",
+       "b": true
+      },
+      {
+       "t": ", 7 "
+      },
+      {
+       "t": "PLATEADAS",
+       "b": true
+      },
+      {
+       "t": " y 5 de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      },
+      {
+       "t": " (Brasil fue 1° con 34)"
       }
      ]
     }
    ],
    "refs_panel": [
-    "fe2c6321"
+    "fe2c6321",
+    "0f07c2d0"
    ],
    "id": "1683acdc480f",
-   "version": "46c024e5d0",
+   "version": "8e48d816b2",
    "publicado_en_doc": false,
-   "visto": "2026-11-22"
+   "terminado_desde": "2026-11-25",
+   "visto": "2026-11-25"
   },
   "1ffc05f899c1": {
    "titulo": "RACQUETBALL - GOLDEN STATE OPEN (LPRT / IRT) EN ESTADOS UNIDOS",
@@ -947,11 +1176,11 @@
    "visto": "2026-11-18"
   },
   "221c34045158": {
-   "titulo": "SURF - SURF FEST PRO LEAGUE BY SOFIA MILANOVICH (2DA FECHA) EN PUNTA ROCAS, PERU (19 al 22 de noviembre)",
+   "titulo": "SURF - SURF FEST PRO LEAGUE BY SOFIA MILANOVICH (2DA FECHA) EN PUNTA ROCAS, PERU",
    "deporte": "SURF",
    "evento": "SURF FEST PRO LEAGUE BY SOFIA MILANOVICH (2DA FECHA) EN PUNTA ROCAS, PERU",
-   "fechas": "19 al 22 de noviembre",
-   "etiqueta": "en_curso",
+   "fechas": null,
+   "etiqueta": "mas_info",
    "seccion": "resultados",
    "ya_publicado": false,
    "bloques": [
@@ -959,15 +1188,24 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Faltan surfistas argentinos"
+       "t": "Se corrió del 19 al 22/11"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan surfistas argentinos y resultados"
       }
      ]
     }
    ],
    "id": "221c34045158",
-   "version": "b678ca096b",
+   "version": "a19ab65b4f",
    "publicado_en_doc": false,
-   "visto": "2026-11-22"
+   "terminado_desde": "2026-11-25",
+   "visto": "2026-11-25"
   },
   "31518371aee9": {
    "titulo": "SURF - ISA WORLD SURFING GAMES EN PUNTA ROCAS, PERÚ",
@@ -2004,14 +2242,22 @@
    "visto": "2026-11-22"
   },
   "350ac4239230": {
-   "titulo": "GIMNASIA ARTÍSTICA - CAMPEONATO SUDAMERICANO EN LIMA, PERÚ (17 al 23 de noviembre)",
+   "titulo": "GIMNASIA ARTÍSTICA - CAMPEONATO SUDAMERICANO EN LIMA, PERÚ",
    "deporte": "GIMNASIA ARTÍSTICA",
    "evento": "CAMPEONATO SUDAMERICANO EN LIMA, PERÚ",
-   "fechas": "17 al 23 de noviembre",
-   "etiqueta": "en_curso",
+   "fechas": null,
+   "etiqueta": "mas_info",
    "seccion": "resultados",
    "ya_publicado": false,
    "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se compitió del 17 al 23/11"
+      }
+     ]
+    },
     {
      "tipo": "link",
      "partes": [
@@ -2068,7 +2314,7 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Faltan el resto de la delegación y los resultados"
+       "t": "Faltan el resto de la delegación y los resultados (la web de resultados no se pudo abrir)"
       }
      ]
     }
@@ -2077,9 +2323,10 @@
     "407a3c54"
    ],
    "id": "350ac4239230",
-   "version": "ca645c8fd5",
+   "version": "2741014c90",
    "publicado_en_doc": false,
-   "visto": "2026-11-22"
+   "terminado_desde": "2026-11-25",
+   "visto": "2026-11-25"
   },
   "366cb072cee3": {
    "titulo": "ORIENTACIÓN - CAMPEONATO SUDAMERICANO EN PUCÓN, CHILE",
@@ -2281,6 +2528,40 @@
    "terminado_desde": "2026-11-17",
    "visto": "2026-11-22"
   },
+  "37884a6ee621": {
+   "titulo": "SKATEBOARDING - COPA DEL MUNDO EN UTSUNOMIYA, JAPÓN (fechas a confirmar)",
+   "deporte": "SKATEBOARDING",
+   "evento": "COPA DEL MUNDO EN UTSUNOMIYA, JAPÓN (fechas a confirmar)",
+   "fechas": null,
+   "etiqueta": "en_curso",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Mauro Iglesias y Matías Dell Olio se clasificaron a los 4tos de final de Street"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan link de resultados y cómo siguieron"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "0c319bec"
+   ],
+   "id": "37884a6ee621",
+   "version": "ca183e7615",
+   "publicado_en_doc": false,
+   "visto": "2026-11-25"
+  },
   "3f83ee1c3780": {
    "titulo": "FÓRMULA 1 - CIERRE DE TEMPORADA CON FRANCO COLAPINTO (6 de noviembre al 6 de diciembre)",
    "deporte": "FÓRMULA 1",
@@ -2314,58 +2595,6 @@
      "tipo": "link",
      "partes": [
       {
-       "t": "https://canal26.com/deportes/2026/11/06/franco-colapinto-en-el-gp-de-brasil-los-5-horarios-de-la-formula-1-y-la-amenaza-de-lluvia-en-interlagos",
-       "href": "https://canal26.com/deportes/2026/11/06/franco-colapinto-en-el-gp-de-brasil-los-5-horarios-de-la-formula-1-y-la-amenaza-de-lluvia-en-interlagos"
-      },
-      {
-       "t": " (Horarios)"
-      }
-     ]
-    },
-    {
-     "tipo": "link",
-     "partes": [
-      {
-       "t": "https://www.lanacion.com.ar/deportes/automovilismo/franco-colapinto-en-la-formula-1-en-vivo-nid06112026-2/",
-       "href": "https://www.lanacion.com.ar/deportes/automovilismo/franco-colapinto-en-la-formula-1-en-vivo-nid06112026-2/"
-      },
-      {
-       "t": " (Nota)"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Viernes 6/11: Colapinto fue 9° en la FP1 y 11° en la FP2 (Gasly 14°)"
-      }
-     ]
-    },
-    {
-     "tipo": "link",
-     "partes": [
-      {
-       "t": "https://www.lanacion.com.ar/deportes/automovilismo/franco-colapinto-en-la-formula-1-en-vivo-la-clasificacion-del-gran-premio-de-san-pablo-minuto-a-nid07112026/",
-       "href": "https://www.lanacion.com.ar/deportes/automovilismo/franco-colapinto-en-la-formula-1-en-vivo-la-clasificacion-del-gran-premio-de-san-pablo-minuto-a-nid07112026/"
-      },
-      {
-       "t": " (Clasificación)"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Sábado 7/11: en una clasificación con lluvia quedó eliminado en la Q1 (17°) y por sanciones a otros pilotos larga 15°. Pole para Lando Norris"
-      }
-     ]
-    },
-    {
-     "tipo": "link",
-     "partes": [
-      {
        "t": "https://www.airedesantafe.com.ar/deportes/franco-colapinto-termino-13-el-gran-premio-brasil-la-formula-1-n676067",
        "href": "https://www.airedesantafe.com.ar/deportes/franco-colapinto-termino-13-el-gran-premio-brasil-la-formula-1-n676067"
       },
@@ -2391,14 +2620,10 @@
      ]
     },
     {
-     "tipo": "link",
+     "tipo": "texto",
      "partes": [
       {
-       "t": "https://442.perfil.com/noticias/automovilismo/colapinto-va-por-la-recuperacion-en-las-vegas-queremos-un-fin-de-semana-sin-contratiempos.phtml",
-       "href": "https://442.perfil.com/noticias/automovilismo/colapinto-va-por-la-recuperacion-en-las-vegas-queremos-un-fin-de-semana-sin-contratiempos.phtml"
-      },
-      {
-       "t": " (Horarios)"
+       "t": "https://www.diariocronica.com.ar/noticias/2026/11/20/178962-franco-colapinto-finalizo-noveno-en-la-segunda-practica-del-gran-premio-de-las-vegas (FP2)"
       }
      ]
     },
@@ -2406,19 +2631,7 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Horarios en Las Vegas (hora argentina): FP1 el jueves 19/11 a las 21:30hs, FP2 el viernes 20/11 a la 1hs, FP3 el viernes 20/11 a las 21:30hs y clasificación el sábado 21/11 a la 1hs"
-      }
-     ]
-    },
-    {
-     "tipo": "link",
-     "partes": [
-      {
-       "t": "https://www.lanacion.com.ar/deportes/automovilismo/franco-colapinto-en-el-gran-premio-de-las-vegas-de-formula-1-en-vivo-nid19112026/",
-       "href": "https://www.lanacion.com.ar/deportes/automovilismo/franco-colapinto-en-el-gran-premio-de-las-vegas-de-formula-1-en-vivo-nid19112026/"
-      },
-      {
-       "t": " (FP1)"
+       "t": "Prácticas: sin tiempo en la FP1 (lluvia), 9° en la FP2 con 1:49.229 y 5° en la FP3 con 1:35.198"
       }
      ]
     },
@@ -2426,68 +2639,7 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Jueves 19/11: FP1 con lluvia y sin tiempos válidos para nadie. Colapinto (y Gasly) salió sobre el final, dio una sola vuelta y no marcó tiempo. Alpine llevó una mejora de turbo para los dos autos"
-      }
-     ]
-    },
-    {
-     "tipo": "link",
-     "partes": [
-      {
-       "t": "https://www.diariocronica.com.ar/noticias/2026/11/20/178962-franco-colapinto-finalizo-noveno-en-la-segunda-practica-del-gran-premio-de-las-vegas",
-       "href": "https://www.diariocronica.com.ar/noticias/2026/11/20/178962-franco-colapinto-finalizo-noveno-en-la-segunda-practica-del-gran-premio-de-las-vegas"
-      },
-      {
-       "t": " (FP2)"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Viernes 20/11: Colapinto fue 9° en la FP2 con 1:49.229 (venía 16° y mejoró sobre el final). Gasly fue 2°, a 0.071 del más rápido, George Russell (Mercedes) con 1:47.272"
-      }
-     ]
-    },
-    {
-     "tipo": "link",
-     "partes": [
-      {
-       "t": "https://www.labrujula24.com/notas/2026/11/20/colapinto-volo-en-las-vegas-y-termino-quinto-en-la-ultima-practica-antes-de-la-clasificacion-n531841/",
-       "href": "https://www.labrujula24.com/notas/2026/11/20/colapinto-volo-en-las-vegas-y-termino-quinto-en-la-ultima-practica-antes-de-la-clasificacion-n531841/"
-      },
-      {
-       "t": " (FP3)"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Viernes 20/11: Colapinto fue 5° en la FP3 con 1:35.198, a 1.1 del más rápido, George Russell (Mercedes). Gasly quedó entre los diez primeros"
-      }
-     ]
-    },
-    {
-     "tipo": "sub",
-     "partes": [
-      {
-       "t": "Clasificación el sábado 21/11 a la 1hs",
-       "b": true
-      }
-     ]
-    },
-    {
-     "tipo": "link",
-     "partes": [
-      {
-       "t": "https://www.cadena3.com/noticia/las-vegas-2026/colapinto-tuvo-una-buena-clasificacion-y-largara-noveno-en-el-gp-de-las-vegas_615350",
-       "href": "https://www.cadena3.com/noticia/las-vegas-2026/colapinto-tuvo-una-buena-clasificacion-y-largara-noveno-en-el-gp-de-las-vegas_615350"
-      },
-      {
-       "t": " (Clasificación)"
+       "t": "https://www.cadena3.com/noticia/las-vegas-2026/colapinto-tuvo-una-buena-clasificacion-y-largara-noveno-en-el-gp-de-las-vegas_615350 (Clasificación)"
       }
      ]
     },
@@ -2500,11 +2652,26 @@
      ]
     },
     {
-     "tipo": "sub",
+     "tipo": "texto",
      "partes": [
       {
-       "t": "Carrera el domingo 22/11 a la 1hs",
-       "b": true
+       "t": "https://www.lanacion.com.ar/deportes/automovilismo/franco-colapinto-en-la-carrera-del-gran-premio-de-las-vegas-de-formula-1-en-vivo-nid22112026/ (Resultado)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Domingo 22/11: Colapinto terminó 6° e igualó su mejor resultado en la F1. Largó 8° (Liam Lawson no pudo largar) y llegó a estar 11° antes de recuperarse. Sumó 8 puntos: tiene 35 y es 12° del campeonato"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Gasly fue 5° y Alpine sumó 18 puntos. Ganó Max Verstappen, 2° Lando Norris y 3° Oscar Piastri"
       }
      ]
     },
@@ -2528,19 +2695,97 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Transmisión: Fox Sports, Disney+ y F1 TV "
-      },
-      {
-       "t": "https://www.lanacion.com.ar/deportes/automovilismo/franco-colapinto-en-el-gran-premio-de-las-vegas-en-vivo-el-minuto-a-minuto-de-la-tercera-practica-nid20112026/",
-       "href": "https://www.lanacion.com.ar/deportes/automovilismo/franco-colapinto-en-el-gran-premio-de-las-vegas-en-vivo-el-minuto-a-minuto-de-la-tercera-practica-nid20112026/"
+       "t": "Transmisión: Fox Sports, Disney+ y F1 TV https://www.lanacion.com.ar/deportes/automovilismo/franco-colapinto-en-el-gran-premio-de-las-vegas-en-vivo-el-minuto-a-minuto-de-la-tercera-practica-nid20112026/"
       }
      ]
     }
    ],
    "id": "3f83ee1c3780",
-   "version": "37605bfaca",
+   "version": "9a9b25fd5a",
    "publicado_en_doc": false,
-   "visto": "2026-11-22"
+   "visto": "2026-11-25"
+  },
+  "52871f18efdc": {
+   "titulo": "FÚTBOL TALLA BAJA - MUNDIAL EN MARRUECOS (fechas a confirmar)",
+   "deporte": "FÚTBOL TALLA BAJA",
+   "evento": "MUNDIAL EN MARRUECOS (fechas a confirmar)",
+   "fechas": null,
+   "etiqueta": "en_curso",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "https://www.infobae.com/deportes/2026/11/24/la-seleccion-argentina-de-talla-baja-goleo-5-1-a-brasil-y-se-clasifico-a-los-cuartos-de-final-del-mundial-el-particular-festejo/ (Resultados)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Argentina es la campeona del mundo vigente (ganó la 1° edición en 2023). Son 16 selecciones en 4 grupos y los dos primeros de cada uno pasan a 4tos"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Fase de grupos"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Le ganó 5-0 a Jordania"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Le ganó 3-1 a Irak (Martín Antúnez x3)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Le ganó 5-1 a Brasil (Lucas Deamigo x4 y Martín Antúnez)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Terminó 1° de su grupo con puntaje ideal: 9 puntos, 13 goles a favor y 2 en contra"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "4tos de final el jueves 26/11 vs un rival del grupo de Paraguay, Egipto, Japón y Ghana"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "779d361e"
+   ],
+   "id": "52871f18efdc",
+   "version": "73b7821cb4",
+   "publicado_en_doc": false,
+   "visto": "2026-11-25"
   },
   "5dc4078d3657": {
    "titulo": "TENIS ADAPTADO - WHEELCHAIR SINGLES FINALS (MASTERS) EN BARCELONA, ESPAÑA",
@@ -2624,11 +2869,216 @@
      ]
     }
    ],
+   "refs_panel": [
+    "5b02889f"
+   ],
    "id": "5dc4078d3657",
    "version": "7993f9546e",
    "publicado_en_doc": false,
    "terminado_desde": "2026-11-19",
-   "visto": "2026-11-22"
+   "visto": "2026-11-25"
+  },
+  "62a1f09b395b": {
+   "titulo": "ESQUÍ ALPINO - COPA DEL MUNDO EN GURGL, AUSTRIA",
+   "deporte": "ESQUÍ ALPINO",
+   "evento": "COPA DEL MUNDO EN GURGL, AUSTRIA",
+   "fechas": null,
+   "etiqueta": "publicable",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se corrió el sábado 21/11"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.fis-ski.com/DB/general/results.html?sectorcode=AL&raceid=131581",
+       "href": "https://www.fis-ski.com/DB/general/results.html?sectorcode=AL&raceid=131581"
+      },
+      {
+       "t": " (Resultados)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Slalom Femenino",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Francesca Baruzzi fue 39° en la primera manga con 53.94 y no se clasificó a la segunda (pasan las 30 mejores). Ganó Lara Colturi (ALB)"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "92863303"
+   ],
+   "id": "62a1f09b395b",
+   "version": "04e935d202",
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-25",
+   "visto": "2026-11-25"
+  },
+  "7749c05218ce": {
+   "titulo": "SALVAMENTO ACUÁTICO - CAMPEONATO MUNDIAL EN PORT ELIZABETH, SUDÁFRICA (25 de noviembre al 13 de diciembre)",
+   "deporte": "SALVAMENTO ACUÁTICO",
+   "evento": "CAMPEONATO MUNDIAL EN PORT ELIZABETH, SUDÁFRICA",
+   "fechas": "25 de noviembre al 13 de diciembre",
+   "etiqueta": "en_curso",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "https://lifesaving2026.com (Web oficial)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "https://www.instagram.com/seleccionargentinaopen/ (Selección, con las pruebas de cada uno)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Arranca hoy. Argentina compite con 12 deportistas:"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Ariana Ressler (https://www.instagram.com/caneressler/)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Ayrton Polese Romero (https://www.instagram.com/ayrtonpr/)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Thomas Marpez (https://www.instagram.com/thomasmarpez/)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Camila Dip (https://www.instagram.com/camudip/)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Camila Coronel (https://www.instagram.com/caamcoronel/)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Ornella London (https://www.instagram.com/ornellalondon/)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Eduardo Martinez (https://www.instagram.com/eduu_martinezz/)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Santiago Leon Ruiz (https://www.instagram.com/santileonruiz/)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Ana Paula Alves (https://www.instagram.com/anialvess/)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Franco Albarado (https://www.instagram.com/franco.albarado/)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Candela Barua (https://www.instagram.com/candebarua_/)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Federico Raczkowski (https://www.instagram.com/fede.racz/)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan cronograma y resultados"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "8466d36a"
+   ],
+   "id": "7749c05218ce",
+   "version": "0b5dfc25cc",
+   "publicado_en_doc": false,
+   "visto": "2026-11-25"
   },
   "7a44a2ecec03": {
    "titulo": "VELA - CAMPEONATO SUDAMERICANO EN RÍO DE JANEIRO, BRASIL",
@@ -2825,6 +3275,40 @@
    "publicado_en_doc": false,
    "terminado_desde": "2026-11-14",
    "visto": "2026-11-20"
+  },
+  "8732aea1ca0a": {
+   "titulo": "FLAG FOOTBALL - PREMIER FLAG COMBINE EN CIUDAD DE MÉXICO, MÉXICO (fechas a confirmar)",
+   "deporte": "FLAG FOOTBALL",
+   "evento": "PREMIER FLAG COMBINE EN CIUDAD DE MÉXICO, MÉXICO (fechas a confirmar)",
+   "fechas": null,
+   "etiqueta": "en_curso",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Agustina Torres participará del Combine de Ciudad de México, el proceso de evaluación de talento de Premier Flag, la nueva liga profesional de flag football impulsada por la NFL y TMRW Sports"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Es una oportunidad para medirse con atletas de todo el mundo y dar un paso más hacia la posibilidad de integrar la liga, que comenzará en el verano de 2027"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "9f6b994b"
+   ],
+   "id": "8732aea1ca0a",
+   "version": "aeaa6e6544",
+   "publicado_en_doc": false,
+   "visto": "2026-11-25"
   },
   "90414b5fde29": {
    "titulo": "VELA - CAMPEONATO MUNDIAL DE STAR EN MIAMI, ESTADOS UNIDOS",
@@ -3601,79 +4085,19 @@
    "visto": "2026-11-22"
   },
   "9aac4f5ebb84": {
-   "titulo": "TENIS - BILLIE JEAN KING CUP PLAY-OFFS: JAPÓN VS ARGENTINA EN TOKIO, JAPÓN (20 al 22 de noviembre)",
+   "titulo": "TENIS - BILLIE JEAN KING CUP PLAY-OFFS: JAPÓN VS ARGENTINA EN TOKIO, JAPÓN",
    "deporte": "TENIS",
    "evento": "BILLIE JEAN KING CUP PLAY-OFFS: JAPÓN VS ARGENTINA EN TOKIO, JAPÓN",
-   "fechas": "20 al 22 de noviembre",
-   "etiqueta": "en_curso",
+   "fechas": null,
+   "etiqueta": "publicable",
    "seccion": "resultados",
    "ya_publicado": false,
    "bloques": [
     {
-     "tipo": "link",
-     "partes": [
-      {
-       "t": "https://www.lanacion.com.ar/deportes/tenis/billie-jean-king-cup-el-equipo-argentino-viajara-a-japon-en-busca-del-ascenso-a-la-elite-nid23042026/",
-       "href": "https://www.lanacion.com.ar/deportes/tenis/billie-jean-king-cup-el-equipo-argentino-viajara-a-japon-en-busca-del-ascenso-a-la-elite-nid23042026/"
-      },
-      {
-       "t": " (Nota)"
-      }
-     ]
-    },
-    {
      "tipo": "texto",
      "partes": [
       {
-       "t": "Argentina va en busca del ascenso a la élite. Capitana: Paola Suárez"
-      }
-     ]
-    },
-    {
-     "tipo": "link",
-     "partes": [
-      {
-       "t": "https://www.noticiasnqn.com.ar/noticias/2026/11/03/359280-tres-tenistas-de-la-seleccion-argentina-compiten-en-neuquen-antes-de-viajar-a-japon",
-       "href": "https://www.noticiasnqn.com.ar/noticias/2026/11/03/359280-tres-tenistas-de-la-seleccion-argentina-compiten-en-neuquen-antes-de-viajar-a-japon"
-      },
-      {
-       "t": " (Nota)"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Se juega el 21 y 22/11 en el Ariake Colosseum de Tokio. Serie al mejor de 5 puntos (4 singles y 1 dobles); está en juego el ascenso al Grupo Mundial"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Del equipo están confirmadas Justina González Daniele, Luciana Moyano y Sol Larraya Guidi"
-      }
-     ]
-    },
-    {
-     "tipo": "link",
-     "partes": [
-      {
-       "t": "https://www.lagaceta.com.ar/nota/1162927/deportes/billie-jean-king-cup-argentina-comenzo-entrenarse-japon-paola-suarez-ajusta-detalles-para-playoffs.html",
-       "href": "https://www.lagaceta.com.ar/nota/1162927/deportes/billie-jean-king-cup-argentina-comenzo-entrenarse-japon-paola-suarez-ajusta-detalles-para-playoffs.html"
-      },
-      {
-       "t": " (Nota)"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "El equipo ya entrena en Tokio. Además está Florencia Urrutia"
+       "t": "Se jugó el 21 y 22/11 (hora de Japón) en el Ariake Colosseum de Tokio, superficie rápida bajo techo"
       }
      ]
     },
@@ -3685,7 +4109,7 @@
        "href": "https://www.lagaceta.com.ar/nota/1163257/deportes/billie-jean-king-cup-argentina-ultima-detalles-tokio-para-enfrentar-japon-playoffs.html"
       },
       {
-       "t": " (Nota)"
+       "t": " (Equipo)"
       }
      ]
     },
@@ -3693,73 +4117,7 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Equipo completo: Justina González Daniele (número 1 del equipo), Florencia Urrutia, Luciana Moyano y Sol Larraya Guidi, las cuatro debutantes. Capitana: Paola Suárez; entrenador: Mariano Hood"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Japón (capitana Ai Sugiyama): Himeno Sakatsume, Mai Hontama, Ena Shibahara, Shuko Aoyama y Eri Hozumi. No juegan Naomi Osaka ni Moyuka Uchijima"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Superficie rápida bajo techo"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Viernes 20/11 desde las 23:50hs los dos primeros singles; sábado 21/11 desde las 23hs el dobles y los dos singles restantes",
-       "b": true
-      },
-      {
-       "t": " (hora argentina)"
-      }
-     ]
-    },
-    {
-     "tipo": "link",
-     "partes": [
-      {
-       "t": "https://deportv.gob.ar/tenis/copa-billie-jean-king-justina-gonzalez-daniele-abrira-serie-japon-nid:19064",
-       "href": "https://deportv.gob.ar/tenis/copa-billie-jean-king-justina-gonzalez-daniele-abrira-serie-japon-nid:19064"
-      },
-      {
-       "t": " (Sorteo)"
-      }
-     ]
-    },
-    {
-     "tipo": "sub",
-     "partes": [
-      {
-       "t": "Orden de juego",
-       "b": true
-      }
-     ]
-    },
-    {
-     "tipo": "sub",
-     "partes": [
-      {
-       "t": "Viernes 20/11 desde las 23:50hs: Justina González Daniele vs Mai Hontama (JPN) y Florencia Urrutia vs Himeno Sakatsume (JPN)",
-       "b": true
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Sábado 21/11: dobles Justina González Daniele / Luciana Moyano vs Shuko Aoyama / Eri Hozumi (JPN) y después, si hace falta, González Daniele vs Sakatsume y Urrutia vs Hontama"
+       "t": "Equipo: Justina González Daniele, Florencia Urrutia, Luciana Moyano y Sol Larraya Guidi, las cuatro debutantes. Capitana: Paola Suárez; entrenador: Mariano Hood"
       }
      ]
     },
@@ -3771,7 +4129,7 @@
        "href": "https://www.infobae.com/deportes/2026/11/21/japon-se-adelanto-2-0-y-argentina-esta-obligada-a-ganar-los-tres-puntos-para-clasificarse-al-grupo-mundial-i/"
       },
       {
-       "t": " (Resultados)"
+       "t": " (Resultados viernes)"
       }
      ]
     },
@@ -3804,14 +4162,23 @@
      "tipo": "espacio"
     },
     {
-     "tipo": "texto",
+     "tipo": "link",
      "partes": [
       {
-       "t": "Sábado 21/11 desde las 23hs el dobles y, si hace falta, los dos singles restantes",
-       "b": true
+       "t": "https://www.lanacion.com.ar/deportes/tenis/argentina-cayo-ante-japon-y-perdio-la-sexta-chance-seguida-de-ascender-a-la-elite-de-la-billie-jean-nid22112026/",
+       "href": "https://www.lanacion.com.ar/deportes/tenis/argentina-cayo-ante-japon-y-perdio-la-sexta-chance-seguida-de-ascender-a-la-elite-de-la-billie-jean-nid22112026/"
       },
       {
-       "t": " (hora argentina). Argentina necesita ganar los tres puntos para ascender"
+       "t": " (Resultado final)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Sábado 21/11: Japón 4 - Argentina 0",
+       "b": true
       }
      ]
     },
@@ -3819,19 +4186,40 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Transmisión: TyC Sports 2 "
-      },
+       "t": "Justina González Daniele y Luciana Moyano perdieron el dobles vs Shuko Aoyama / Eri Hozumi (JPN) por 6-2 y 6-1"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
       {
-       "t": "https://www.infobae.com/deportes/2026/11/21/japon-se-adelanto-2-0-y-argentina-esta-obligada-a-ganar-los-tres-puntos-para-clasificarse-al-grupo-mundial-i/",
-       "href": "https://www.infobae.com/deportes/2026/11/21/japon-se-adelanto-2-0-y-argentina-esta-obligada-a-ganar-los-tres-puntos-para-clasificarse-al-grupo-mundial-i/"
+       "t": "Luciana Moyano perdió vs Ena Shibahara (JPN) por 6-1 y 6-1"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Argentina no ganó ningún set en la serie. Japón se clasificó a los Qualifiers 2027 y Argentina perdió su sexta chance seguida de volver a la élite (no está ahí desde 2015)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "En abril de 2027 Argentina juega la Zona Americana vs Perú, Ecuador, Chile, México, Paraguay, Guatemala y Canadá"
       }
      ]
     }
    ],
    "id": "9aac4f5ebb84",
-   "version": "cdfbf45ad0",
+   "version": "d79ffed655",
    "publicado_en_doc": false,
-   "visto": "2026-11-22"
+   "terminado_desde": "2026-11-25",
+   "visto": "2026-11-25"
   },
   "9b8960c27c6e": {
    "titulo": "FÚTBOL - FECHA FIFA: AMISTOSOS DE LA SELECCIÓN MAYOR EN ARGENTINA",
@@ -3954,15 +4342,170 @@
    "terminado_desde": "2026-11-17",
    "visto": "2026-11-22"
   },
-  "a4cfb7f743ac": {
-   "titulo": "GOLF - WALA (WOMENS AMATEUR LATIN AMERICA) EN GUATEMALA (19 al 22 de noviembre)",
-   "deporte": "GOLF",
-   "evento": "WALA (WOMENS AMATEUR LATIN AMERICA) EN GUATEMALA",
-   "fechas": "19 al 22 de noviembre",
-   "etiqueta": "en_curso",
+  "a4a04cccb1b7": {
+   "titulo": "BÁDMINTON - GUATEMALA INTERNATIONAL SERIES EN CIUDAD DE GUATEMALA, GUATEMALA",
+   "deporte": "BÁDMINTON",
+   "evento": "GUATEMALA INTERNATIONAL SERIES EN CIUDAD DE GUATEMALA, GUATEMALA",
+   "fechas": null,
+   "etiqueta": "publicable",
    "seccion": "resultados",
    "ya_publicado": false,
    "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se jugó del 17 al 22/11"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://bwfbadminton.com/tournament/5755/guatemala-international-series-2026/draws/",
+       "href": "https://bwfbadminton.com/tournament/5755/guatemala-international-series-2026/draws/"
+      },
+      {
+       "t": " (Cuadros)"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.badmintonpanam.org/pan-am-athletes-shine-at-guatemala-international-series-2026/",
+       "href": "https://www.badmintonpanam.org/pan-am-athletes-shine-at-guatemala-international-series-2026/"
+      },
+      {
+       "t": " (Resultados)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Compitieron Nicolás Oliva, Santiago Otero, Iona Gualdi y Ailén Oliva. Argentina se llevó 4 medallas"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Dobles Femenino",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Iona Gualdi y Ailén Oliva lograron la medalla "
+      },
+      {
+       "t": "PLATEADA",
+       "b": true
+      },
+      {
+       "t": " tras perder la final vs Diana Corleto / Nikte Sotomayor (GUA) por 21-13 y 21-11"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Dobles Mixto",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Nicolás Oliva y Ailén Oliva lograron la medalla "
+      },
+      {
+       "t": "PLATEADA",
+       "b": true
+      },
+      {
+       "t": " tras perder la final vs Christopher Martínez / Diana Corleto (GUA) por 21-9 y 21-12"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Santiago Otero e Iona Gualdi lograron la medalla de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Singles Femenino",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Iona Gualdi logró la medalla de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "b716fff1",
+    "da07196c"
+   ],
+   "id": "a4a04cccb1b7",
+   "version": "657488cae1",
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-25",
+   "visto": "2026-11-25"
+  },
+  "a4cfb7f743ac": {
+   "titulo": "GOLF - WALA (WOMENS AMATEUR LATIN AMERICA) EN GUATEMALA",
+   "deporte": "GOLF",
+   "evento": "WALA (WOMENS AMATEUR LATIN AMERICA) EN GUATEMALA",
+   "fechas": null,
+   "etiqueta": "publicable",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se jugó del 19 al 22/11 en El Pulté (Guatemala)"
+      }
+     ]
+    },
     {
      "tipo": "link",
      "partes": [
@@ -3979,7 +4522,7 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Argentina está representada por: María Cabanillas, María Olivero, Mía Yaya, Bernardita Villalba, Ana Giuliano, Malena Castro, Mercedes Aldana y Clementina Castaño"
+       "t": "Argentina estuvo representada por: María Cabanillas, María Olivero, Mía Yaya, Bernardita Villalba, Ana Giuliano, Malena Castro, Mercedes Aldana y Clementina Castaño"
       }
      ]
     },
@@ -3987,7 +4530,7 @@
      "tipo": "sub",
      "partes": [
       {
-       "t": "Después de 2 vueltas (par 72)",
+       "t": "Clasificación final (par 72)",
        "b": true
       }
      ]
@@ -3996,7 +4539,7 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Mía Yaya es la mejor argentina: 10° con 144 golpes (73-71, par)"
+       "t": "María Olivero fue la mejor argentina: 12° con 289 golpes (76-69-68-76, +1)"
       }
      ]
     },
@@ -4004,7 +4547,7 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Mercedes Aldana 13° con 144 (70-74, par)"
+       "t": "Mercedes Aldana 17° con 293 (70-74-73-76, +5)"
       }
      ]
     },
@@ -4012,7 +4555,7 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "María Olivero 15° con 145 (76-69, +1)"
+       "t": "María Cabanillas 31° con 298 (81-71-74-72, +10)"
       }
      ]
     },
@@ -4020,7 +4563,7 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Ana Giuliano 27° con 149 (77-72, +5)"
+       "t": "Mía Yaya 33° con 300 (73-71-77-79, +12)"
       }
      ]
     },
@@ -4028,7 +4571,7 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "María Cabanillas 34° con 152 (81-71, +8)"
+       "t": "Ana Giuliano 38° con 302 (77-72-79-74, +14)"
       }
      ]
     },
@@ -4036,7 +4579,7 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Malena Castro 35° con 152 (75-77, +8)"
+       "t": "Clementina Castaño 41° con 303 (74-79-74-76, +15)"
       }
      ]
     },
@@ -4044,7 +4587,7 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Clementina Castaño 41° con 153 (74-79, +9)"
+       "t": "Malena Castro 44° con 305 (75-77-76-77, +17)"
       }
      ]
     },
@@ -4052,7 +4595,7 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Bernardita Villalba 51° con 159 (81-78, +15)"
+       "t": "Bernardita Villalba 56° con 321 (81-78-78-84, +33)"
       }
      ]
     },
@@ -4060,88 +4603,7 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Lidera María José Marín (COL) con 132 (-12)"
-      }
-     ]
-    },
-    {
-     "tipo": "sub",
-     "partes": [
-      {
-       "t": "Después de 3 vueltas (par 72)",
-       "b": true
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "María Olivero es la mejor argentina: 8° con 213 golpes (76-69-68, -3)"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Mercedes Aldana 14° con 217 (70-74-73, +1)"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Mía Yaya 19° con 221 (73-71-77, +5)"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "María Cabanillas 36° con 226 (81-71-74, +10)"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Clementina Castaño 39° con 227 (74-79-74, +11)"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Ana Giuliano 42° con 228 (77-72-79, +12)"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Malena Castro 43° con 228 (75-77-76, +12)"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Bernardita Villalba 50° con 237 (81-78-78, +21)"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Lidera María José Marín (COL) con 197 (-19)"
+       "t": "Ganó María José Marín (COL) con 268 (-20), su segundo título seguido"
       }
      ]
     }
@@ -4150,19 +4612,107 @@
     "61c14a16"
    ],
    "id": "a4cfb7f743ac",
-   "version": "22ec653268",
+   "version": "d992b613ae",
    "publicado_en_doc": false,
-   "visto": "2026-11-22"
+   "terminado_desde": "2026-11-25",
+   "visto": "2026-11-25"
   },
-  "b8c1d6b05111": {
-   "titulo": "BOCHAS - MUNDIAL DE PETANCA EN KHON KAEN, TAILANDIA (20 al 25 de noviembre)",
-   "deporte": "BOCHAS",
-   "evento": "MUNDIAL DE PETANCA EN KHON KAEN, TAILANDIA",
-   "fechas": "20 al 25 de noviembre",
-   "etiqueta": "en_curso",
+  "b650cbbb9356": {
+   "titulo": "SURF ADAPTADO - ISA WORLD PARA SURFING CHAMPIONSHIP EN PALM DESERT, ESTADOS UNIDOS",
+   "deporte": "SURF ADAPTADO",
+   "evento": "ISA WORLD PARA SURFING CHAMPIONSHIP EN PALM DESERT, ESTADOS UNIDOS",
+   "fechas": null,
+   "etiqueta": "mas_info",
    "seccion": "resultados",
    "ya_publicado": false,
    "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Terminó el 22/11 en la pileta de olas DSRT Surf (California)"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://wavepoolmag.com/isa-world-para-surfing-championship-2026/",
+       "href": "https://wavepoolmag.com/isa-world-para-surfing-championship-2026/"
+      },
+      {
+       "t": " (Resultados)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Women's Stand 1",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Lara Llanos Alfonso logró la medalla "
+      },
+      {
+       "t": "PLATEADA",
+       "b": true
+      },
+      {
+       "t": ", detrás de Saioa Huarte (ESP)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Francia ganó el título por equipos por 4° vez seguida (2° Estados Unidos y 3° Brasil)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan: resultado de Nicolás Gallegos y puesto de Argentina por equipos"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "ff8a5211"
+   ],
+   "id": "b650cbbb9356",
+   "version": "1281ba820d",
+   "publicado_en_doc": false,
+   "terminado_desde": "2026-11-25",
+   "visto": "2026-11-25"
+  },
+  "b8c1d6b05111": {
+   "titulo": "BOCHAS - MUNDIAL DE PETANCA EN KHON KAEN, TAILANDIA",
+   "deporte": "BOCHAS",
+   "evento": "MUNDIAL DE PETANCA EN KHON KAEN, TAILANDIA",
+   "fechas": null,
+   "etiqueta": "mas_info",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se jugó del 20 al 24/11 en la Universidad de Khon Kaen"
+      }
+     ]
+    },
     {
      "tipo": "link",
      "partes": [
@@ -4179,11 +4729,11 @@
      "tipo": "link",
      "partes": [
       {
-       "t": "https://kkupetanqueworld2026.com/fixtures",
-       "href": "https://kkupetanqueworld2026.com/fixtures"
+       "t": "https://petanqueacademy.fr/en/petanque-world-championships/",
+       "href": "https://petanqueacademy.fr/en/petanque-world-championships/"
       },
       {
-       "t": " (Fixture y resultados)"
+       "t": " (Resultados)"
       }
      ]
     },
@@ -4204,10 +4754,52 @@
      ]
     },
     {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Tripletas",
+       "b": true
+      }
+     ]
+    },
+    {
      "tipo": "texto",
      "partes": [
       {
-       "t": "Faltan grupo y resultados de Argentina"
+       "t": "Argentina ganó 2 de sus 5 partidos del sistema suizo y terminó 34° de 48 países (37 puntos a favor y 48 en contra)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Tiro de precisión",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Néstor Omar Guevara fue 30° en la clasificación con 26 puntos (Creo)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Campeón: Madagascar, que le ganó la final 13-9 a Francia"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan: si Argentina jugó la Copa de las Naciones y su puesto final"
       }
      ]
     }
@@ -4216,9 +4808,10 @@
     "27aa5cea"
    ],
    "id": "b8c1d6b05111",
-   "version": "d1fd514d77",
+   "version": "056da00e3d",
    "publicado_en_doc": false,
-   "visto": "2026-11-22"
+   "terminado_desde": "2026-11-25",
+   "visto": "2026-11-25"
   },
   "b904de21ef8b": {
    "titulo": "BEACH VOLEY - 2DA ETAPA CSVP 2026-2027 EN CAYENA, GUYANA FRANCESA",
@@ -4273,14 +4866,22 @@
    "visto": "2026-11-22"
   },
   "c801c33caff0": {
-   "titulo": "ESQUÍ CROSS COUNTRY - CAMPEONATO FIS EN BEITOSTØLEN, NORUEGA (20 al 22 de noviembre)",
+   "titulo": "ESQUÍ CROSS COUNTRY - CAMPEONATO FIS EN BEITOSTØLEN, NORUEGA",
    "deporte": "ESQUÍ CROSS COUNTRY",
    "evento": "CAMPEONATO FIS EN BEITOSTØLEN, NORUEGA",
-   "fechas": "20 al 22 de noviembre",
-   "etiqueta": "en_curso",
+   "fechas": null,
+   "etiqueta": "publicable",
    "seccion": "resultados",
    "ya_publicado": false,
    "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se compitió del 20 al 22/11"
+      }
+     ]
+    },
     {
      "tipo": "link",
      "partes": [
@@ -4297,7 +4898,7 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Compiten Agustina Groetzner, Franco Dal Farra, Nahiara Diaz Gonzalez y Mateo Sauma"
+       "t": "Compitieron Agustina Groetzner, Franco Dal Farra, Nahiara Diaz Gonzalez y Mateo Sauma"
       }
      ]
     },
@@ -4385,7 +4986,27 @@
      "tipo": "sub",
      "partes": [
       {
-       "t": "Sprint clásico el sábado 21/11 y 15km libre el domingo 22/11",
+       "t": "Sprint clásico (21/11)",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "En los resultados del sprint no figura ningún argentino (Creo que no largaron)"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "15km Libre Femenino (22/11)",
        "b": true
       }
      ]
@@ -4394,11 +5015,11 @@
      "tipo": "link",
      "partes": [
       {
-       "t": "https://www.fis-ski.com/DB/general/results.html?sectorcode=CC&raceid=52683",
-       "href": "https://www.fis-ski.com/DB/general/results.html?sectorcode=CC&raceid=52683"
+       "t": "https://www.fis-ski.com/DB/general/results.html?sectorcode=CC&raceid=52687",
+       "href": "https://www.fis-ski.com/DB/general/results.html?sectorcode=CC&raceid=52687"
       },
       {
-       "t": " (Sprint femenino)"
+       "t": " (Resultados)"
       }
      ]
     },
@@ -4406,7 +5027,55 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "En los resultados del sprint clásico femenino no figura ninguna argentina (Creo que no largaron). Falta el sprint masculino"
+       "t": "Nahiara Diaz Gonzalez fue 56° con 44:25.8 (+7:28.6)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Agustina Groetzner fue 61° con 46:43.5 (+9:46.3)"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "15km Libre Masculino (22/11)",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.fis-ski.com/DB/general/results.html?sectorcode=CC&raceid=52688",
+       "href": "https://www.fis-ski.com/DB/general/results.html?sectorcode=CC&raceid=52688"
+      },
+      {
+       "t": " (Resultados)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Franco Dal Farra fue 86° con 35:31.3 (+3:58.0)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Mateo Sauma fue 132° con 39:18.7 (+7:45.4)"
       }
      ]
     }
@@ -4416,9 +5085,10 @@
     "bd1103ad"
    ],
    "id": "c801c33caff0",
-   "version": "81987b8ea5",
+   "version": "1d1fda5a27",
    "publicado_en_doc": false,
-   "visto": "2026-11-22"
+   "terminado_desde": "2026-11-25",
+   "visto": "2026-11-25"
   },
   "cde49e99022c": {
    "titulo": "JUDO - CAMPEONATO MUNDIAL JUNIOR EN TASHKENT, UZBEKISTÁN",
@@ -4498,17 +5168,25 @@
    "version": "88520f38ca",
    "publicado_en_doc": false,
    "terminado_desde": "2026-11-21",
-   "visto": "2026-11-22"
+   "visto": "2026-11-25"
   },
   "d686a7382d49": {
-   "titulo": "BMX FREESTYLE - CAMPEONATO PANAMERICANO EN SANTIAGO, CHILE (18 al 21 de noviembre)",
+   "titulo": "BMX FREESTYLE - CAMPEONATO PANAMERICANO EN SANTIAGO, CHILE",
    "deporte": "BMX FREESTYLE",
    "evento": "CAMPEONATO PANAMERICANO EN SANTIAGO, CHILE",
-   "fechas": "18 al 21 de noviembre",
-   "etiqueta": "en_curso",
+   "fechas": null,
+   "etiqueta": "publicable",
    "seccion": "resultados",
    "ya_publicado": false,
    "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se compitió del 18 al 21/11 en el Parque Estadio Nacional"
+      }
+     ]
+    },
     {
      "tipo": "link",
      "partes": [
@@ -4522,18 +5200,6 @@
      ]
     },
     {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Se compite en el Parque Estadio Nacional. "
-      },
-      {
-       "t": "Finales el sábado 21/11",
-       "b": true
-      }
-     ]
-    },
-    {
      "tipo": "link",
      "partes": [
       {
@@ -4542,14 +5208,6 @@
       },
       {
        "t": " (Nota)"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Modalidades Park y Flatland. Clasificación el viernes 20/11"
       }
      ]
     },
@@ -4571,18 +5229,78 @@
      ]
     },
     {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://g5noticias.cl/2026/11/23/chile-obtiene-dos-medallas-en-el-campeonato-panamericano-de-bmx-freestyle-y-flatland-2026/",
+       "href": "https://g5noticias.cl/2026/11/23/chile-obtiene-dos-medallas-en-el-campeonato-panamericano-de-bmx-freestyle-y-flatland-2026/"
+      },
+      {
+       "t": " (Resultados)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Park Femenino",
+       "b": true
+      }
+     ]
+    },
+    {
      "tipo": "texto",
      "partes": [
       {
-       "t": "Faltan resultados"
+       "t": "Analía Zacarías logró la medalla de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      },
+      {
+       "t": " con 54 puntos. Ganó Queen Saray Villegas (COL) con 79 y 2° fue Macarena Pérez (CHI) con 78"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Park Masculino",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Manu Turone fue 9° en la final con 68 puntos (había sido 1° en la clasificación con 87.17). Ganó Juan Camilo Caicedo (COL) con 93"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Santiago Dotta y Octavio Miranda no figuran entre los 12 finalistas (Creo que quedaron en la clasificación)"
       }
      ]
     }
    ],
+   "refs_panel": [
+    "03f26685"
+   ],
    "id": "d686a7382d49",
-   "version": "331fef7f5a",
+   "version": "7ea46fb595",
    "publicado_en_doc": false,
-   "visto": "2026-11-22"
+   "terminado_desde": "2026-11-25",
+   "visto": "2026-11-25"
   },
   "d76e45b4bd6a": {
    "titulo": "NATACIÓN ADAPTADA - PARA SWIMMING WORLD SERIES EN LIMA, PERÚ",
@@ -4909,26 +5627,10 @@
    "ya_publicado": false,
    "bloques": [
     {
-     "tipo": "link",
+     "tipo": "texto",
      "partes": [
       {
-       "t": "https://www.diariojornada.com.ar/417086/deportes/el_sub_17_de_argentina_quedo_en_el_grupo_c",
-       "href": "https://www.diariojornada.com.ar/417086/deportes/el_sub_17_de_argentina_quedo_en_el_grupo_c"
-      },
-      {
-       "t": " (Grupo)"
-      }
-     ]
-    },
-    {
-     "tipo": "link",
-     "partes": [
-      {
-       "t": "https://www.qfa.qa/en/news/fifa-confirms-full-fixture-list-for-qatar-2026-u-17-world-cup",
-       "href": "https://www.qfa.qa/en/news/fifa-confirms-full-fixture-list-for-qatar-2026-u-17-world-cup"
-      },
-      {
-       "t": " (Fixture)"
+       "t": "https://www.qfa.qa/en/news/fifa-confirms-full-fixture-list-for-qatar-2026-u-17-world-cup (Fixture)"
       }
      ]
     },
@@ -4936,19 +5638,7 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Argentina integra el Grupo C con Australia, Dinamarca y Mozambique"
-      }
-     ]
-    },
-    {
-     "tipo": "link",
-     "partes": [
-      {
-       "t": "https://es-us.noticias.yahoo.com/deportes/cronograma-partidos-selecci%C3%B3n-argentina-sub-145625465.html",
-       "href": "https://es-us.noticias.yahoo.com/deportes/cronograma-partidos-selecci%C3%B3n-argentina-sub-145625465.html"
-      },
-      {
-       "t": " (Fixture)"
+       "t": "Argentina integra el Grupo C con Australia, Dinamarca y Mozambique. DT: Diego Placente. Se juega en el Aspire Zone (Al Rayyan)"
       }
      ]
     },
@@ -4956,39 +5646,7 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "DT: Diego Placente. El rival africano del grupo es Mozambique"
-      }
-     ]
-    },
-    {
-     "tipo": "link",
-     "partes": [
-      {
-       "t": "https://www.diariojornada.com.ar/427190/deportes/la_seleccion_argentina_sub17_llego_a_qatar_para_disputar_el_mundial",
-       "href": "https://www.diariojornada.com.ar/427190/deportes/la_seleccion_argentina_sub17_llego_a_qatar_para_disputar_el_mundial"
-      },
-      {
-       "t": " (Nota llegada a Qatar)"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "La fase de grupos se juega en el complejo Aspire Zone (Al Rayyan)"
-      }
-     ]
-    },
-    {
-     "tipo": "link",
-     "partes": [
-      {
-       "t": "https://www.lanacion.com.ar/deportes/futbol/resultado-de-la-seleccion-argentina-sub-17-vs-australia-sub-17-quien-gano-el-partido-del-mundial-nid19112026/",
-       "href": "https://www.lanacion.com.ar/deportes/futbol/resultado-de-la-seleccion-argentina-sub-17-vs-australia-sub-17-quien-gano-el-partido-del-mundial-nid19112026/"
-      },
-      {
-       "t": " (Resultado)"
+       "t": "https://www.lanacion.com.ar/deportes/futbol/resultado-de-la-seleccion-argentina-sub-17-vs-australia-sub-17-quien-gano-el-partido-del-mundial-nid19112026/ (Resultado)"
       }
      ]
     },
@@ -5001,11 +5659,10 @@
      ]
     },
     {
-     "tipo": "sub",
+     "tipo": "texto",
      "partes": [
       {
-       "t": "vs Mozambique el domingo 22/11 a las 12:30hs",
-       "b": true
+       "t": "https://www.espn.com.br/futebol/partida/_/jogoId/401873539/mozambique-u17-argentina-sub-17 (Resultado)"
       }
      ]
     },
@@ -5013,28 +5670,47 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "vs Dinamarca el miércoles 25/11 a las 12:30hs"
+       "t": "2° fecha: le ganó 2-1 a Mozambique el domingo 22/11 (Matheo Machuca a los 5' y Simón Escobar a los 32'; descontó Alírio Cuna Júnior a los 45+1')"
       }
      ]
     },
     {
-     "tipo": "link",
+     "tipo": "texto",
      "partes": [
       {
-       "t": "https://bolavip.com/ar/seleccion/argentina-comienza-su-travesia-en-el-mundial-sub-17-plantel-como-ver-los-partidos-y-el-cronograma-completo",
-       "href": "https://bolavip.com/ar/seleccion/argentina-comienza-su-travesia-en-el-mundial-sub-17-plantel-como-ver-los-partidos-y-el-cronograma-completo"
-      },
-      {
-       "t": " (Plantel y horarios)"
+       "t": "https://www.afa.com.ar/es/posts/mundial-sub-17-desde-las-12.30-argentina-se-mide-ante-dinamarca-en-busca-de-la-clasificacion-a-16avos-de-final (Previa)"
       }
      ]
     },
     {
-     "tipo": "sub",
+     "tipo": "texto",
      "partes": [
       {
-       "t": "Plantel (21)",
-       "b": true
+       "t": "Argentina es 2° del grupo con 3 puntos"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "vs Dinamarca hoy miércoles 25/11 a las 12:30hs, por la clasificación a 16avos"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "https://bolavip.com/ar/seleccion/argentina-comienza-su-travesia-en-el-mundial-sub-17-plantel-como-ver-los-partidos-y-el-cronograma-completo (Plantel y horarios)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Plantel (21)"
       }
      ]
     },
@@ -5045,12 +5721,75 @@
        "t": "Valentín Reigia (Argentinos Juniors), Thiago Parga (Huracán), Kevin Báez (Aldosivi), Thiago Pérez (Huracán), Julio Coria (Boca), Álvaro Güich (Rosario Central), Mateo Mendizábal (Banfield), Bautista Giménez (River), Simón Escobar (Vélez, capitán), Alex Cardozo (Lanús), Matheo Machuca (Independiente), Galo Escobar (River), Benjamín Vallejo (Vélez), Marcos Ortiz (Belgrano), Giovanni Baroni (Talleres), Mateo Sánchez (Boca), Alan Alcaraz (Argentinos Juniors), Facundo Salinas (Vélez), Emiliano Barrionuevo (Boca), Tobías Goytía (River) y Juan Cruz Policella (Vélez)"
       }
      ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Transmisión: TyC Sports y DirecTV https://www.afa.com.ar/es/posts/mundial-sub-17-desde-las-12.30-argentina-se-mide-ante-dinamarca-en-busca-de-la-clasificacion-a-16avos-de-final"
+      }
+     ]
     }
    ],
    "id": "da9041c32bff",
-   "version": "068fb4e9df",
+   "version": "199ff0354e",
    "publicado_en_doc": false,
-   "visto": "2026-11-22"
+   "visto": "2026-11-25"
+  },
+  "daca2fda8556": {
+   "titulo": "TIRO - CAMPEONATO DE LAS AMÉRICAS EN LIMA, PERÚ (21 de noviembre al 1 de diciembre)",
+   "deporte": "TIRO",
+   "evento": "CAMPEONATO DE LAS AMÉRICAS EN LIMA, PERÚ",
+   "fechas": "21 de noviembre al 1 de diciembre",
+   "etiqueta": "en_curso",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "https://issf-sports.org/competitions/3524 (Web oficial ISSF)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "https://issf-sports.org/competitions/3524/results (Resultados)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "https://www.infobae.com/america/agencias/2026/11/19/campeonato-de-las-americas-de-tiro-deportivo-otorgara-en-lima-12-cupos-a-los-angeles-2028/ (Nota)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Es el 15° Campeonato de las Américas, en el Polígono Las Palmas: 359 tiradores de 22 países, 12 cupos directos a Los Ángeles 2028 y 208 plazas para Lima 2027. Pruebas de rifle, pistola y escopeta (fosa y skeet)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan los tiradores argentinos y sus resultados"
+      }
+     ]
+    }
+   ],
+   "id": "daca2fda8556",
+   "version": "3fe7603b0e",
+   "publicado_en_doc": false,
+   "visto": "2026-11-25"
   },
   "dafa7a05a13b": {
    "titulo": "OCEANMAN - FINAL MUNDIAL EN REPÚBLICA DOMINICANA",
@@ -5133,7 +5872,7 @@
    "version": "289e2455ec",
    "publicado_en_doc": false,
    "terminado_desde": "2026-11-20",
-   "visto": "2026-11-22"
+   "visto": "2026-11-25"
   },
   "dd6ed1609c4e": {
    "titulo": "GIMNASIA ARTÍSTICA - GYMPIES GYMNOVA CUP EN BÉLGICA",
@@ -5241,10 +5980,10 @@
    "visto": "2026-11-22"
   },
   "de102f71eab3": {
-   "titulo": "RUGBY - NATIONS CHAMPIONSHIP (06 al 21 de noviembre)",
+   "titulo": "RUGBY - NATIONS CHAMPIONSHIP (06 al 29 de noviembre)",
    "deporte": "RUGBY",
    "evento": "NATIONS CHAMPIONSHIP",
-   "fechas": "06 al 21 de noviembre",
+   "fechas": "06 al 29 de noviembre",
    "etiqueta": "en_curso",
    "seccion": "resultados",
    "ya_publicado": false,
@@ -5261,7 +6000,7 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "En las primeras 3 fechas Argentina sumó 7 pts (1 victoria, 2 derrotas y 3 bonus) y marcha 4to."
+       "t": "De visitante:"
       }
      ]
     },
@@ -5269,19 +6008,7 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "De visitante:"
-      }
-     ]
-    },
-    {
-     "tipo": "link",
-     "partes": [
-      {
-       "t": "https://442.perfil.com/noticias/rugby/los-pumas-perdieron-42-12-ante-irlanda-en-dublin-por-el-nations-championship.phtml",
-       "href": "https://442.perfil.com/noticias/rugby/los-pumas-perdieron-42-12-ante-irlanda-en-dublin-por-el-nations-championship.phtml"
-      },
-      {
-       "t": " (Resultado)"
+       "t": "https://442.perfil.com/noticias/rugby/los-pumas-perdieron-42-12-ante-irlanda-en-dublin-por-el-nations-championship.phtml (Resultado)"
       }
      ]
     },
@@ -5294,35 +6021,10 @@
      ]
     },
     {
-     "tipo": "link",
+     "tipo": "texto",
      "partes": [
       {
-       "t": "https://www.ellitoral.com/deportes/lospumas-rugby-italia-nationschampionship2026_0_WPqg9wE7MN.html",
-       "href": "https://www.ellitoral.com/deportes/lospumas-rugby-italia-nationschampionship2026_0_WPqg9wE7MN.html"
-      },
-      {
-       "t": " (Previa)"
-      }
-     ]
-    },
-    {
-     "tipo": "sub",
-     "partes": [
-      {
-       "t": "vs Italia el sábado 14/11 a las 8:40hs en el Luigi Ferraris de Génova",
-       "b": true
-      }
-     ]
-    },
-    {
-     "tipo": "link",
-     "partes": [
-      {
-       "t": "https://www.0223.com.ar/nota/2026-11-14-10-46-0-los-pumas-sobrevivieron-a-un-final-increible-en-italia-y-se-llevaron-un-triunfazo",
-       "href": "https://www.0223.com.ar/nota/2026-11-14-10-46-0-los-pumas-sobrevivieron-a-un-final-increible-en-italia-y-se-llevaron-un-triunfazo"
-      },
-      {
-       "t": " (Resultado)"
+       "t": "https://www.0223.com.ar/nota/2026-11-14-10-46-0-los-pumas-sobrevivieron-a-un-final-increible-en-italia-y-se-llevaron-un-triunfazo (Resultado)"
       }
      ]
     },
@@ -5330,28 +6032,7 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "14-11 Vs Italia: ganó 19-14 en Génova (tries de Bautista Bernasconi, Rodrigo Isgró y Mateo Carreras; 2 conversiones de Tomás Albornoz). Con 11 pts quedó 3° de la conferencia Sur"
-      }
-     ]
-    },
-    {
-     "tipo": "sub",
-     "partes": [
-      {
-       "t": "vs Francia el sábado 21/11 a las 17:10hs en el Stade de France (Saint-Denis)",
-       "b": true
-      }
-     ]
-    },
-    {
-     "tipo": "link",
-     "partes": [
-      {
-       "t": "https://www.infobae.com/deportes/2026/11/19/los-pumas-confirmaron-siete-cambios-para-enfrentar-a-francia-por-el-nations-championship/",
-       "href": "https://www.infobae.com/deportes/2026/11/19/los-pumas-confirmaron-siete-cambios-para-enfrentar-a-francia-por-el-nations-championship/"
-      },
-      {
-       "t": " (Formación)"
+       "t": "14-11 Vs Italia: ganó 19-14 en Génova (tries de Bautista Bernasconi, Rodrigo Isgró y Mateo Carreras; 2 conversiones de Tomás Albornoz)"
       }
      ]
     },
@@ -5359,67 +6040,7 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Formación (7 cambios respecto a Italia; Bernasconi afuera por lesión): Boris Wenger, Julián Montoya (C), Francisco Moreno; Guido Petti, Tomás Lavanini; Juan Martín González, Juan Martín Scelzo, Facundo Isa; Simón Benítez Cruz, Tomás Albornoz; Ignacio Mendy, Santiago Chocobares, Lucio Cinti, Bautista Delguy; Gerónimo Prisciantelli"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Suplentes: Facundo Bosch, Mayco Vivas, Joel Sclavi, Efraín Elías, Pedro Rubiolo, Pablo Matera, Agustín Moyano y Rodrigo Isgró"
-      }
-     ]
-    },
-    {
-     "tipo": "link",
-     "partes": [
-      {
-       "t": "https://www.diariopanorama.com/noticia/573003/tras-triunfo-ante-italia-cuando-vuelven-jugar-pumas-nations-championship-2026",
-       "href": "https://www.diariopanorama.com/noticia/573003/tras-triunfo-ante-italia-cuando-vuelven-jugar-pumas-nations-championship-2026"
-      },
-      {
-       "t": " (Previa)"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Es el último partido de la fase de grupos. Después Argentina viaja a Londres para los cruces por posiciones, el último fin de semana de noviembre"
-      }
-     ]
-    },
-    {
-     "tipo": "link",
-     "partes": [
-      {
-       "t": "https://www.lagaceta.com.ar/nota/1163219/deportes/sorpresa-pumas-gonzalo-garcia-mateo-carreras-no-estaran-ante-francia.html",
-       "href": "https://www.lagaceta.com.ar/nota/1163219/deportes/sorpresa-pumas-gonzalo-garcia-mateo-carreras-no-estaran-ante-francia.html"
-      },
-      {
-       "t": " (Bajas)"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Mateo Carreras quedó afuera por una lesión en el hombro (podría necesitar cirugía) y entra Ignacio Mendy. Gonzalo García quedó afuera de los 23 por decisión técnica"
-      }
-     ]
-    },
-    {
-     "tipo": "link",
-     "partes": [
-      {
-       "t": "https://www.adnsur.com.ar/deportes/los-pumas-se-derrumbaron-ante-francia--45-17-y-jugaran-por-el-septimo-puesto-del-nations-championship_a6b02382bfd7203bb626680aa",
-       "href": "https://www.adnsur.com.ar/deportes/los-pumas-se-derrumbaron-ante-francia--45-17-y-jugaran-por-el-septimo-puesto-del-nations-championship_a6b02382bfd7203bb626680aa"
-      },
-      {
-       "t": " (Resultado)"
+       "t": "https://www.adnsur.com.ar/deportes/los-pumas-se-derrumbaron-ante-francia--45-17-y-jugaran-por-el-septimo-puesto-del-nations-championship_a6b02382bfd7203bb626680aa (Resultado)"
       }
      ]
     },
@@ -5435,16 +6056,7 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Argentina cerró 4° de la conferencia Sur con 11 pts y jugará por el 7° puesto"
-      }
-     ]
-    },
-    {
-     "tipo": "sub",
-     "partes": [
-      {
-       "t": "7° puesto vs Escocia en Twickenham (Londres) el próximo fin de semana",
-       "b": true
+       "t": "Argentina cerró 4° de la conferencia Sur con 11 pts y juega por el 7° puesto"
       }
      ]
     },
@@ -5452,29 +6064,49 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Transmisión: ESPN 2 y Disney+ Premium "
-      },
+       "t": "https://lapostadiario.com/los-pumas-plagados-de-bajas-se-aferran-a-escocia-para-cerrar-un-ano-gris-en-el-nations-championship/ (Previa)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
       {
-       "t": "https://www.lanacion.com.ar/deportes/rugby/los-pumas-vs-francia-por-el-nations-championship-2026-dia-horario-tv-y-como-ver-online-nid19112026/",
-       "href": "https://www.lanacion.com.ar/deportes/rugby/los-pumas-vs-francia-por-el-nations-championship-2026-dia-horario-tv-y-como-ver-online-nid19112026/"
+       "t": "7° puesto vs Escocia en Twickenham (Londres) el domingo 29/11 (Creo)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Bajas: Mayco Vivas (suspendido por la roja), Pablo Matera (motivos personales), Boris Wenger, Mateo Carreras, Santiago Chocobares y Bautista Delguy (lesionados). Julián Montoya en protocolo de conmoción. 14 bajas en toda la gira"
       }
      ]
     }
    ],
    "id": "de102f71eab3",
-   "version": "a8c156a20e",
+   "version": "e65c85b93d",
    "publicado_en_doc": false,
-   "visto": "2026-11-22"
+   "visto": "2026-11-25"
   },
   "dfbf893bf031": {
-   "titulo": "REMO - CAMPEONATO ARGENTINO EN TIGRE, BUENOS AIRES (20 al 22 de noviembre)",
+   "titulo": "REMO - CAMPEONATO ARGENTINO EN TIGRE, BUENOS AIRES",
    "deporte": "REMO",
    "evento": "CAMPEONATO ARGENTINO EN TIGRE, BUENOS AIRES",
-   "fechas": "20 al 22 de noviembre",
-   "etiqueta": "en_curso",
+   "fechas": null,
+   "etiqueta": "mas_info",
    "seccion": "resultados",
    "ya_publicado": false,
    "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se corrió del 20 al 22/11"
+      }
+     ]
+    },
     {
      "tipo": "link",
      "partes": [
@@ -5518,6 +6150,14 @@
        "t": "Dato extra: la AARA cumple 125 años"
       }
      ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan resultados"
+      }
+     ]
     }
    ],
    "refs_panel": [
@@ -5525,9 +6165,10 @@
     "cbdcf02f"
    ],
    "id": "dfbf893bf031",
-   "version": "55e6380751",
+   "version": "a3fe568fe9",
    "publicado_en_doc": false,
-   "visto": "2026-11-22"
+   "terminado_desde": "2026-11-25",
+   "visto": "2026-11-25"
   },
   "e443096a7e7f": {
    "titulo": "HANDBALL - SUR-CENTRO JUNIOR (U20) Y JUVENIL (U18) MASCULINO EN ASUNCIÓN, PARAGUAY",
@@ -5805,7 +6446,7 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Beto Palmetta le ganó por decisión unánime en 10 rounds al galés Willy Gilheaney (invicto, 7-0) en el Utilita Arena de Cardiff"
+       "t": "Beto Palmetta le ganó por decisión unánime en 10 rounds (96-95, 97-93 y 97-93) al galés Willy Gilheaney (invicto, 7-0) en el Utilita Arena de Cardiff"
       }
      ]
     },
@@ -5813,19 +6454,27 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Estaba en juego el título Continental Gold de la AMB del peso Welter (Creo) (en el panel figuraba como título europeo de la OMB)"
+       "t": "Con este triunfo ganó el "
+      },
+      {
+       "t": "TÍTULO CONTINENTAL GOLD DE LA AMB",
+       "b": true
+      },
+      {
+       "t": " del peso Welter"
       }
      ]
     }
    ],
    "refs_panel": [
-    "a86ca35a"
+    "a86ca35a",
+    "8c841a02"
    ],
    "id": "eb926937b172",
-   "version": "7174295318",
+   "version": "9289ca4cab",
    "publicado_en_doc": false,
    "terminado_desde": "2026-11-20",
-   "visto": "2026-11-22"
+   "visto": "2026-11-25"
   },
   "f9141d114373": {
    "titulo": "UFC - FIGHT NIGHT EN DOHA, QATAR",
@@ -5910,7 +6559,7 @@
    "version": "977bfa2dbb",
    "publicado_en_doc": false,
    "terminado_desde": "2026-11-21",
-   "visto": "2026-11-22"
+   "visto": "2026-11-25"
   },
   "fde01f59acd9": {
    "titulo": "ATLETISMO - CAMPEONATO SUDAMERICANO DE MARATÓN Y RUTA EN SANTIAGO, CHILE",
