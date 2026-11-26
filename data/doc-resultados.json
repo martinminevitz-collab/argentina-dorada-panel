@@ -1,5 +1,5 @@
 {
- "leido": "2026-11-25T23:58-03:00",
+ "leido": "2026-11-26T01:04-03:00",
  "actualizado_doc": "25/11/2026 22:57",
  "eventos": [
   {
@@ -1615,7 +1615,8 @@
    "id": "f9141d114373",
    "version": "977bfa2dbb",
    "publicado_en_doc": false,
-   "terminado_desde": "2026-11-21"
+   "terminado_desde": "2026-11-21",
+   "vencido": true
   },
   {
    "titulo": "JUDO - CAMPEONATO MUNDIAL JUNIOR EN TASHKENT, UZBEKISTÁN",
@@ -1694,7 +1695,8 @@
    "id": "cde49e99022c",
    "version": "88520f38ca",
    "publicado_en_doc": false,
-   "terminado_desde": "2026-11-21"
+   "terminado_desde": "2026-11-21",
+   "vencido": true
   },
   {
    "titulo": "TENIS DE MESA ADAPTADO - CAMPEONATO MUNDIAL EN PATTAYA, TAILANDIA",
