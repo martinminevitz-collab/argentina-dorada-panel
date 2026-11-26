@@ -1,5 +1,19 @@
 [
  {
+  "id": "c1aa1c94a005",
+  "titulo": "Un limoncello elaborado en Paraná ganó la medalla Gran Oro en Argentina Spirits Awards 2026.",
+  "resumen": "Un limoncello elaborado en Paraná ganó la medalla Gran Oro en Argentina Spirits Awards 2026. Uno Entre Rios",
+  "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPa1Z5aHVIYXlZWXU4N25rVExXYm9idm5Fb1lCYW5UVHFKZnJ2aFhaaFVrUTNhYWpWb2xJU05EN3FrbTNCb1dBdjBKcUdLTDBIeGRXR0xGc0JxdHpIT3dURU9PQTJRZUJvRVN5SWN5clZ5NFRGeXBXajI3TWN3X0kxQjNBT2dvMHh3MF82OVYxQWpRX2J6b0RUWHBITnJhVTJTZmgwejY3R0RJQjFXVWpzaFhTQkNCdXVobVJLR2d4aWhDQ01PcDhfR3FRbVJkV292d0RnN3c4bTV3VENvbWFlUnc3Y19kTEJPT1HSAe8BQVVfeXFMTmV4WWVMLTFMc2hNWE10YnJfMGRhbmliaWdxcGpPT1A3UEpiM2s3dUhzUlRKSU1KVUt4amdNczdNRDliQzdzSU1yeVpWRGxtUFplTWV4bzR3LVJfV0xDbnNWTUFSamx2elhQeFloV0FCYUZkMC1zc2trT1o5ZnU5blhBYmhnOXJLb25sYVBLLWNCWlBYcTVudUJpbEh2VHMtT2E4VWtuUFJiZGp5cXZJMTl1RG9ROU9YWjlfNTZxcHBabG9TeUdqcUV0LTRES2ttYV9tcnZBaS1KNnJrc1pIS0U4Q09vOENNQWpQRTQ3Q2s?oc=5",
+  "fuente": "Uno Entre Rios",
+  "deporte": "Hockey sobre patines",
+  "tipo": "resultado",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-26T07:50+00:00",
+  "encontrado": "2026-11-26T07:28-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
   "id": "5c9d5cb10e51",
   "titulo": "La selección argentina de básquet afronta un duelo clave ante Bahamas con la mira en el Mundial 2027: qué necesita para clasificarse",
   "resumen": "La selección argentina de básquet afronta un duelo clave ante Bahamas con la mira en el Mundial 2027: qué necesita para clasificarse Infobae",
@@ -182,6 +196,20 @@
   "noticia": false
  },
  {
+  "id": "2519b7f5cfe3",
+  "titulo": "Último Burako Solidario en Boulogne",
+  "resumen": "Último Burako Solidario en Boulogne Portal UNO Argentina",
+  "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9fQkpDYW5YVDIyR1dvTHc1RHRGN0tFcjRxc2RWWnk5ZFNPR1hLd1ktM2lBaVR1MDRQc1NMT3Z3REJPemZSWFRhQXdSdUZCMTkxdjRfdzNnWlZmOUdOTG9RSElPX0ZFMS1sRUc0RDBCR3RUZnZlamNnMTVzcw?oc=5",
+  "fuente": "Portal UNO Argentina",
+  "deporte": "Golf",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-25T23:25+00:00",
+  "encontrado": "2026-11-26T07:28-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
   "id": "386fc98e0097",
   "titulo": "Cadena 3 Motor #14 Nuestra vuelta de Las Vegas F1 y el anticipo del GP Córdoba del rally provincial",
   "resumen": "Cadena 3 Motor #14 Nuestra vuelta de Las Vegas F1 y el anticipo del GP Córdoba del rally provincial Cadena 3 Argentina",
@@ -290,6 +318,34 @@
   "en_buenos_aires": false,
   "publicado": "2026-11-25T18:45+00:00",
   "encontrado": "2026-11-26T04:44-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
+  "id": "02755470f767",
+  "titulo": "Roma visita al PSG con cuatro argentinos en el plantel",
+  "resumen": "Roma visita al PSG con cuatro argentinos en el plantel Diario Época Corrientes",
+  "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQMFpyQnV0OWluTlRvSGQ2bVFnM0V6MWJjaUl1S082UkgwQjVyUWl3TUw0SjdDT2pOaE5vcHFnc1Nrc1AtYm9VN2FtOEV6MUxJODRfVkVNaG9uTGs3YnFJY0NxMy0tMFpGeUU0amdoZW8zX1RaajdjME5lRVJLNWlGa2JYR3dsX09DUk9OcmFwV3VSMGhE?oc=5",
+  "fuente": "Diario Época Corrientes",
+  "deporte": "Patin carrera",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-25T17:50+00:00",
+  "encontrado": "2026-11-26T07:29-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
+  "id": "09074aa066e3",
+  "titulo": "El tucumano Fausto Soria se consagró campeón argentino de levantamiento de pesas y rompió tres récords",
+  "resumen": "El tucumano Fausto Soria se consagró campeón argentino de levantamiento de pesas y rompió tres récords Tendencia de Noticias",
+  "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPY1lyM0NNRFpSc2kycWYwT1FKYkVnYTBsUG9sRERSNnVDNlBScWtZMHMtZ3ZEZnVwUWtrM0NyY3h1bDRmMTNmT0M4TmtmVGZrZkJETGdZeG41RTdpSHlIdnBQWXRkYVI2d0tkLVVRX0ZWSW1fNFV2NmN4VHpsRDUwY2dzbEFEWjhQaGlkM3ExNVBMdlVYV2ZqemExeXNsM1V2SURHWEpLNXpWNmlFaUhoMmQ0azM3YjhGU2pMSlA0a2tlcWRWUHo4azNWNGJwb3o0OWtsQU5VYUZtVDhoMXVJ?oc=5",
+  "fuente": "Tendencia de Noticias",
+  "deporte": "Pesas",
+  "tipo": "resultado",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-25T17:47+00:00",
+  "encontrado": "2026-11-26T07:29-03:00",
   "bot": "resultados",
   "noticia": false
  },
