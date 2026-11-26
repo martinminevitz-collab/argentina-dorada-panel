@@ -2650,11 +2650,31 @@
      ]
     },
     {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://agenciafe.com/nota/404455-Argentina-choca-ante-Egipto-por-un-lugar-en-semifinales",
+       "href": "https://agenciafe.com/nota/404455-Argentina-choca-ante-Egipto-por-un-lugar-en-semifinales"
+      },
+      {
+       "t": " (Previa)"
+      }
+     ]
+    },
+    {
      "tipo": "sub",
      "partes": [
       {
-       "t": "4tos de final el jueves 26/11 vs un rival del grupo de Paraguay, Egipto, Japón y Ghana",
+       "t": "4tos vs Egipto el jueves 26/11 a las 16:15hs",
        "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Si gana, en semis juega vs el ganador de Paraguay vs Brasil"
       }
      ]
     }
@@ -2663,7 +2683,7 @@
     "779d361e"
    ],
    "id": "52871f18efdc",
-   "version": "3c78915302",
+   "version": "54d127db0e",
    "publicado_en_doc": false,
    "visto": "2026-11-25"
   },
@@ -2851,7 +2871,7 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Arranca hoy. Argentina compite con 12 deportistas:"
+       "t": "Arrancó el 25/11 con la categoría Open. Argentina compite con 12 deportistas:"
       }
      ]
     },
@@ -3036,10 +3056,30 @@
      ]
     },
     {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.rionegro.com.ar/sociedad/el-unico-deporte-que-salva-vidas-dos-generaciones-de-las-grutas-van-al-mundial-en-sudafrica/",
+       "href": "https://www.rionegro.com.ar/sociedad/el-unico-deporte-que-salva-vidas-dos-generaciones-de-las-grutas-van-al-mundial-en-sudafrica/"
+      },
+      {
+       "t": " (Juveniles y Máster)"
+      }
+     ]
+    },
+    {
      "tipo": "texto",
      "partes": [
       {
-       "t": "Faltan cronograma y resultados"
+       "t": "Los juveniles compiten del 2 al 6/12: Juan Cabello Doñate, Valentín García, Sofía Gabetta, Sofía Vdovitchenko y Piero Bustos (suplentes: Mía Coronado, Sabina Bustos y Luis Alejandro Rivas). También hay Selección Máster"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan resultados"
       }
      ]
     }
@@ -3048,7 +3088,7 @@
     "8466d36a"
    ],
    "id": "7749c05218ce",
-   "version": "2833aad848",
+   "version": "4e17bfdd8a",
    "publicado_en_doc": false,
    "visto": "2026-11-25"
   },
@@ -5342,19 +5382,42 @@
      ]
     },
     {
-     "tipo": "texto",
+     "tipo": "link",
      "partes": [
       {
-       "t": "Argentina es 2° del grupo con 3 puntos"
+       "t": "https://www.lagaceta.com.ar/nota/1164215/deportes/mundial-sub-17-argentina-empato-33-dinamarca-partidazo-se-clasifico-16avos-final.html",
+       "href": "https://www.lagaceta.com.ar/nota/1164215/deportes/mundial-sub-17-argentina-empato-33-dinamarca-partidazo-se-clasifico-16avos-final.html"
+      },
+      {
+       "t": " (Resultado)"
       }
      ]
     },
     {
-     "tipo": "sub",
+     "tipo": "texto",
      "partes": [
       {
-       "t": "vs Dinamarca hoy miércoles 25/11 a las 12:30hs, por la clasificación a 16avos",
+       "t": "3° fecha: empató 3-3 vs Dinamarca el miércoles 25/11 (Giovanni Baroni, Juan Cruz Policella y Alan Alcaraz en el 2° tiempo; Dinamarca se había puesto 2-0 con goles de Noah Madsen de penal y Ekene Chukwuani, y Omran Khatar hizo el 3-3)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Argentina terminó 2° del Grupo C con 4 puntos (1° Australia con 5) y "
+      },
+      {
+       "t": "CLASIFICÓ A 16AVOS DE FINAL",
        "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan rival, día y horario de 16avos"
       }
      ]
     },
@@ -5401,7 +5464,7 @@
     }
    ],
    "id": "da9041c32bff",
-   "version": "e6a568ede1",
+   "version": "e755749e11",
    "publicado_en_doc": false,
    "visto": "2026-11-25"
   },
@@ -5459,16 +5522,55 @@
      ]
     },
     {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Rifle de aire 10m Femenino (25/11)",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.tiempopopular.com.ar/2026/11/25/fernanda-russo-gano-la-medalla-de-bronce-en-la-copa-de-las-americas-de-tiro/",
+       "href": "https://www.tiempopopular.com.ar/2026/11/25/fernanda-russo-gano-la-medalla-de-bronce-en-la-copa-de-las-americas-de-tiro/"
+      },
+      {
+       "t": " (Resultado)"
+      }
+     ]
+    },
+    {
      "tipo": "texto",
      "partes": [
       {
-       "t": "Faltan los tiradores argentinos y sus resultados"
+       "t": "Fernanda Russo logró la medalla de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      },
+      {
+       "t": " con 226.1 en la final (había sido 5° en la clasificación con 625). Oro para Sagen Maddalena (USA) y plata para Alison Weisz (USA)"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan el resto de los tiradores argentinos y sus resultados"
       }
      ]
     }
    ],
    "id": "daca2fda8556",
-   "version": "26fcbe877b",
+   "version": "968f26e813",
    "publicado_en_doc": false,
    "visto": "2026-11-25"
   },
