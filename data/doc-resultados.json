@@ -1,6 +1,6 @@
 {
- "leido": "2026-11-26T01:04-03:00",
- "actualizado_doc": "25/11/2026 22:57",
+ "leido": "2026-11-26T12:05-03:00",
+ "actualizado_doc": "26/11/2026 11:10",
  "eventos": [
   {
    "titulo": "GOLF - WALA (WOMENS AMATEUR LATIN AMERICA) EN GUATEMALA",
@@ -1084,6 +1084,33 @@
      ]
     },
     {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.0223.com.ar/nota/2026-11-24-8-44-0-gimnasta-de-quilmes-se-consagro-campeona-sudamericana-con-la-seleccion-argent",
+       "href": "https://www.0223.com.ar/nota/2026-11-24-8-44-0-gimnasta-de-quilmes-se-consagro-campeona-sudamericana-con-la-seleccion-argent"
+      },
+      {
+       "t": " (Resultado)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Yasmín Aizpitarte formó parte del equipo argentino que logró la medalla "
+      },
+      {
+       "t": "DORADA",
+       "b": true
+      },
+      {
+       "t": " por equipos y fue 4° en la final de Suelo con 12.250 (Creo que en categoría prejuvenil)"
+      }
+     ]
+    },
+    {
      "tipo": "texto",
      "partes": [
       {
@@ -1096,7 +1123,7 @@
     "407a3c54"
    ],
    "id": "350ac4239230",
-   "version": "2741014c90",
+   "version": "66bf5eb1bd",
    "publicado_en_doc": false,
    "terminado_desde": "2026-11-25"
   },
@@ -1532,171 +1559,6 @@
    "version": "04e935d202",
    "publicado_en_doc": false,
    "terminado_desde": "2026-11-25"
-  },
-  {
-   "titulo": "UFC - FIGHT NIGHT EN DOHA, QATAR",
-   "deporte": "UFC",
-   "evento": "FIGHT NIGHT EN DOHA, QATAR",
-   "fechas": null,
-   "etiqueta": "publicable",
-   "seccion": "resultados",
-   "ya_publicado": false,
-   "bloques": [
-    {
-     "tipo": "link",
-     "partes": [
-      {
-       "t": "https://agentmma.com/news/90837-aljamain-sterling-to-face-kevin-vallejos-at-ufc-qatar-on-nov-21",
-       "href": "https://agentmma.com/news/90837-aljamain-sterling-to-face-kevin-vallejos-at-ufc-qatar-on-nov-21"
-      },
-      {
-       "t": " (Info)"
-      }
-     ]
-    },
-    {
-     "tipo": "sub",
-     "partes": [
-      {
-       "t": "Peso Pluma",
-       "b": true
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Kevin \"Chino\" Vallejos (récord 18-1) vs Aljamain Sterling (USA) en la cartelera principal, es la co-estelar (3 rounds)"
-      }
-     ]
-    },
-    {
-     "tipo": "link",
-     "partes": [
-      {
-       "t": "https://www.ufcalendar.com/events/ufc-fight-night-2026-11-21",
-       "href": "https://www.ufcalendar.com/events/ufc-fight-night-2026-11-21"
-      },
-      {
-       "t": " (Horarios)"
-      }
-     ]
-    },
-    {
-     "tipo": "link",
-     "partes": [
-      {
-       "t": "https://www.infobae.com/deportes/2026/11/21/el-argentino-kevin-chino-vallejos-gano-la-pelea-mas-importante-de-su-carrera-en-ufc-en-las-tarjetas-rompio-en-llanto-y-pidio-pelear-por-el-titulo/",
-       "href": "https://www.infobae.com/deportes/2026/11/21/el-argentino-kevin-chino-vallejos-gano-la-pelea-mas-importante-de-su-carrera-en-ufc-en-las-tarjetas-rompio-en-llanto-y-pidio-pelear-por-el-titulo/"
-      },
-      {
-       "t": " (Resultado)"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Kevin \"Chino\" Vallejos le ganó por decisión unánime al ex campeón de peso gallo Aljamain Sterling (USA), 4° del ranking pluma (30-27, 30-27 y 29-28). Es su 5° victoria seguida en UFC"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Después de la pelea pidió ir por el título: \"Quedo a las órdenes de Volkanovski\""
-      }
-     ]
-    }
-   ],
-   "id": "f9141d114373",
-   "version": "977bfa2dbb",
-   "publicado_en_doc": false,
-   "terminado_desde": "2026-11-21",
-   "vencido": true
-  },
-  {
-   "titulo": "JUDO - CAMPEONATO MUNDIAL JUNIOR EN TASHKENT, UZBEKISTÁN",
-   "deporte": "JUDO",
-   "evento": "CAMPEONATO MUNDIAL JUNIOR EN TASHKENT, UZBEKISTÁN",
-   "fechas": null,
-   "etiqueta": "publicable",
-   "seccion": "resultados",
-   "ya_publicado": false,
-   "bloques": [
-    {
-     "tipo": "link",
-     "partes": [
-      {
-       "t": "https://www.ijf.org/competition/3207",
-       "href": "https://www.ijf.org/competition/3207"
-      },
-      {
-       "t": " (Web oficial)"
-      }
-     ]
-    },
-    {
-     "tipo": "link",
-     "partes": [
-      {
-       "t": "https://www.ijf.org/index.php/country/arg",
-       "href": "https://www.ijf.org/index.php/country/arg"
-      },
-      {
-       "t": " (Inscriptos ARG)"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Arrancó el jueves 19/11. Individual del 19 al 21/11 y equipos mixtos el 22/11. Argentina tuvo 1 judoka: Ignacio Landolfi"
-      }
-     ]
-    },
-    {
-     "tipo": "sub",
-     "partes": [
-      {
-       "t": "-81kg Masculino",
-       "b": true
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "Ignacio Landolfi perdió en primera ronda vs Szymon Szulik (POL) por ippon"
-      }
-     ]
-    },
-    {
-     "tipo": "link",
-     "partes": [
-      {
-       "t": "https://ijf.org/judoka/100377/contests",
-       "href": "https://ijf.org/judoka/100377/contests"
-      },
-      {
-       "t": " (Fuente)"
-      }
-     ]
-    }
-   ],
-   "refs_panel": [
-    "7e614ed6"
-   ],
-   "id": "cde49e99022c",
-   "version": "88520f38ca",
-   "publicado_en_doc": false,
-   "terminado_desde": "2026-11-21",
-   "vencido": true
   },
   {
    "titulo": "TENIS DE MESA ADAPTADO - CAMPEONATO MUNDIAL EN PATTAYA, TAILANDIA",
@@ -2215,10 +2077,22 @@
      ]
     },
     {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.diariopanorama.com/noticia/574189/mundial-sub17-cuando-vuelve-jugar-argentina-quienes-podrian-ser-sus-rivales-16avos-final",
+       "href": "https://www.diariopanorama.com/noticia/574189/mundial-sub17-cuando-vuelve-jugar-argentina-quienes-podrian-ser-sus-rivales-16avos-final"
+      },
+      {
+       "t": " (Cómo sigue)"
+      }
+     ]
+    },
+    {
      "tipo": "texto",
      "partes": [
       {
-       "t": "Faltan rival, día y horario de 16avos"
+       "t": "El rival de 16avos se conoce el viernes 27/11, cuando termina la fase de grupos. Los 16avos arrancan el lunes 30/11"
       }
      ]
     },
@@ -2265,7 +2139,7 @@
     }
    ],
    "id": "da9041c32bff",
-   "version": "e755749e11",
+   "version": "e47558c80a",
    "publicado_en_doc": false
   },
   {
@@ -2879,10 +2753,43 @@
      ]
     },
     {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.lanacion.com.ar/deportes/basquetbol/la-seleccion-argentina-de-basquetbol-llega-a-zarate-por-primera-vez-para-buscar-la-clasificacion-al-nid26112026/",
+       "href": "https://www.lanacion.com.ar/deportes/basquetbol/la-seleccion-argentina-de-basquetbol-llega-a-zarate-por-primera-vez-para-buscar-la-clasificacion-al-nid26112026/"
+      },
+      {
+       "t": " (Plantel)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Plantel para Bahamas y Canadá",
+       "b": true
+      }
+     ]
+    },
+    {
      "tipo": "texto",
      "partes": [
       {
-       "t": "Faltan los 12 convocados"
+       "t": "Gonzalo Bressan, Nicolás Brussino, Agustín Cáffaro, Francisco Cáffaro, Gonzalo Corbalán, Martiniano Dato, Nicolás Laprovittola, Carlos Rivero, Leonardo Lema, Juan Ignacio Marcos, Alex Negrete, Juan Pablo Vaulet y José Vildoza (son 13, uno queda afuera de cada partido)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Transmisión: TyC Sports "
+      },
+      {
+       "t": "https://www.lanacion.com.ar/deportes/basquetbol/la-seleccion-argentina-de-basquetbol-llega-a-zarate-por-primera-vez-para-buscar-la-clasificacion-al-nid26112026/",
+       "href": "https://www.lanacion.com.ar/deportes/basquetbol/la-seleccion-argentina-de-basquetbol-llega-a-zarate-por-primera-vez-para-buscar-la-clasificacion-al-nid26112026/"
       }
      ]
     }
@@ -2891,7 +2798,7 @@
     "2d1d6986"
    ],
    "id": "a3a1e029406d",
-   "version": "c0bbbdf369",
+   "version": "b108d2a445",
    "publicado_en_doc": false
   },
   {
@@ -2924,16 +2831,100 @@
      ]
     },
     {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.lanacion.com.ar/deportes/rugby/fixture-de-los-pumas-7s-para-el-seven-de-dubai-por-el-circuito-mundial-2026-2027-nid24112026/",
+       "href": "https://www.lanacion.com.ar/deportes/rugby/fixture-de-los-pumas-7s-para-el-seven-de-dubai-por-el-circuito-mundial-2026-2027-nid24112026/"
+      },
+      {
+       "t": " (Fixture)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Dubái - Grupo A con Sudáfrica, Estados Unidos y Australia",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "vs Sudáfrica el sábado 28/11 a las 4:52hs",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "vs Estados Unidos el sábado 28/11 a las 7:33hs",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "vs Australia el sábado 28/11 a las 12:16hs",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.lanacion.com.ar/deportes/rugby/plantel-de-los-pumas-7s-para-el-seven-de-dubai-del-circuito-mundial-2026-2027-nid25112026/",
+       "href": "https://www.lanacion.com.ar/deportes/rugby/plantel-de-los-pumas-7s-para-el-seven-de-dubai-del-circuito-mundial-2026-2027-nid25112026/"
+      },
+      {
+       "t": " (Plantel)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Plantel (Dubái y Ciudad del Cabo)",
+       "b": true
+      }
+     ]
+    },
+    {
      "tipo": "texto",
      "partes": [
       {
-       "t": "Faltan plantel, grupo y horarios"
+       "t": "Santiago Álvarez, Martiniano Arrieta, Juan Patricio Batac, Francisco Calello, Sebastián Dubuc, Luciano González, Matteo Graziano, Luca Juliano, Santiago Mare, Marcos Moneta, Joaquín Pellandini, Gregorio Pérez Pardo, Santiago Vera Feld y Santino Zangara. DT: Santiago Gómez Cora"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Transmisión: Fox Sports y Disney+ Premium "
+      },
+      {
+       "t": "https://www.lanacion.com.ar/deportes/rugby/fixture-de-los-pumas-7s-para-el-seven-de-dubai-por-el-circuito-mundial-2026-2027-nid24112026/",
+       "href": "https://www.lanacion.com.ar/deportes/rugby/fixture-de-los-pumas-7s-para-el-seven-de-dubai-por-el-circuito-mundial-2026-2027-nid24112026/"
       }
      ]
     }
    ],
    "id": "f81d46e0ad4e",
-   "version": "7a3b83aa86",
+   "version": "1ef102d077",
    "publicado_en_doc": false
   },
   {

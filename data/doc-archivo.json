@@ -2167,6 +2167,33 @@
      ]
     },
     {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.0223.com.ar/nota/2026-11-24-8-44-0-gimnasta-de-quilmes-se-consagro-campeona-sudamericana-con-la-seleccion-argent",
+       "href": "https://www.0223.com.ar/nota/2026-11-24-8-44-0-gimnasta-de-quilmes-se-consagro-campeona-sudamericana-con-la-seleccion-argent"
+      },
+      {
+       "t": " (Resultado)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Yasmín Aizpitarte formó parte del equipo argentino que logró la medalla "
+      },
+      {
+       "t": "DORADA",
+       "b": true
+      },
+      {
+       "t": " por equipos y fue 4° en la final de Suelo con 12.250 (Creo que en categoría prejuvenil)"
+      }
+     ]
+    },
+    {
      "tipo": "texto",
      "partes": [
       {
@@ -2179,7 +2206,7 @@
     "407a3c54"
    ],
    "id": "350ac4239230",
-   "version": "2741014c90",
+   "version": "66bf5eb1bd",
    "publicado_en_doc": false,
    "terminado_desde": "2026-11-25",
    "visto": "2026-11-26"
@@ -4808,10 +4835,22 @@
      ]
     },
     {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.diariopanorama.com/noticia/574189/mundial-sub17-cuando-vuelve-jugar-argentina-quienes-podrian-ser-sus-rivales-16avos-final",
+       "href": "https://www.diariopanorama.com/noticia/574189/mundial-sub17-cuando-vuelve-jugar-argentina-quienes-podrian-ser-sus-rivales-16avos-final"
+      },
+      {
+       "t": " (Cómo sigue)"
+      }
+     ]
+    },
+    {
      "tipo": "texto",
      "partes": [
       {
-       "t": "Faltan rival, día y horario de 16avos"
+       "t": "El rival de 16avos se conoce el viernes 27/11, cuando termina la fase de grupos. Los 16avos arrancan el lunes 30/11"
       }
      ]
     },
@@ -4858,7 +4897,7 @@
     }
    ],
    "id": "da9041c32bff",
-   "version": "e755749e11",
+   "version": "e47558c80a",
    "publicado_en_doc": false,
    "visto": "2026-11-26"
   },
