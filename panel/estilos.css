@@ -751,3 +751,10 @@ details.prox-multi summary b { text-transform: none; }
 #alerta-doc { margin: 10px 0 14px; padding: 10px 14px; border-radius: 12px; background: #FDECEA; color: #8A1C12; border: 1px solid #F3B8B0; font-size: 14px; }
 :root[data-theme="dark"] #alerta-doc { background: #3A1814; color: #FFC9C1; border-color: #6B2A22; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) #alerta-doc { background: #3A1814; color: #FFC9C1; border-color: #6B2A22; } }
+
+/* aviso de evento/noticia repetida al cargar */
+.aviso-repetido { margin: 10px 0; padding: 10px 12px; border-radius: 10px; background: #FFF6DD; color: #6B4E00; border: 1px solid #F0D58A; font-size: 14px; display: grid; gap: 6px; }
+.aviso-repetido .rep-fila { display: flex; gap: 8px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+.aviso-repetido .rep-igual { justify-self: start; }
+:root[data-theme="dark"] .aviso-repetido { background: #3A3015; color: #FFE6A3; border-color: #6B5A22; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .aviso-repetido { background: #3A3015; color: #FFE6A3; border-color: #6B5A22; } }

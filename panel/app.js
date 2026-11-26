@@ -460,6 +460,33 @@ function abrirPedido(e, a, contactos, caja, soloVer = false) {
   f.scrollIntoView({ block: "nearest", behavior: "smooth" });
 }
 
+// ---------- ¿ya está cargado? (gratis, sin agente): compara palabras importantes del título/detalle ----------
+const VACIAS = new Set("para con por del los las una uno que vs sus como entre desde hasta sobre ante tras torneo campeonato mundial copa abierto open juegos argentina argentino argentinos argentinas seleccion fecha final semifinal partido evento resultado resultados noticia ".split(" "));
+function palabrasClave(txt) {
+  return new Set(sinTildes(String(txt || "")).replace(/https?:\/\/\S+/g, " ").split(/[^a-z0-9]+/).filter((w) => w.length >= 4 && !VACIAS.has(w) && !/^\d+$/.test(w)));
+}
+function parecidos(texto, deporte, lista, aTexto) {
+  const a = palabrasClave(texto); if (a.size < 2) return [];
+  const dep = deporte ? sinTildes(nombreDeporte(deporte)) : "";
+  return lista.map((x) => {
+    if (dep && x.deporte && sinTildes(nombreDeporte(x.deporte)) !== dep) return null;
+    const b = palabrasClave(aTexto(x)); let comun = 0; for (const w of a) if (b.has(w)) comun++;
+    return comun >= 2 && comun / Math.min(a.size, b.size || 1) >= 0.4 ? { x, comun } : null;
+  }).filter(Boolean).sort((p, q) => q.comun - p.comun).slice(0, 3).map((r) => r.x);
+}
+// muestra el aviso dentro del formulario; devuelve true si hay que frenar el guardado (primera vez)
+function avisoRepetido(f, encontrados, { nombre, ir }) {
+  let caja = f.querySelector(".aviso-repetido");
+  if (!encontrados.length) { caja?.remove(); f.dataset.confirmado = ""; return false; }
+  if (f.dataset.confirmado === "1") return false;
+  if (!caja) { caja = document.createElement("div"); caja.className = "aviso-repetido"; f.querySelector(".pie").before(caja); }
+  caja.innerHTML = `<b>⚠️ Parece que ya está:</b>` + encontrados.map((x, i) => `<div class="rep-fila"><span>${escapar(nombre(x))}</span><button type="button" data-ir="${i}">Ir a ${f.id === "form-noticia" ? "esa noticia" : "ese evento"}</button></div>`).join("") +
+    `<button type="button" class="rep-igual">No es el mismo: guardar igual</button>`;
+  caja.querySelectorAll("[data-ir]").forEach((b) => (b.onclick = () => ir(encontrados[+b.dataset.ir])));
+  caja.querySelector(".rep-igual").onclick = () => { f.dataset.confirmado = "1"; f.requestSubmit(); };
+  return true;
+}
+
 function formCrear() {
   if (estado.formEl) return estado.formEl;
   const f = document.createElement("form");
@@ -493,10 +520,15 @@ function formCrear() {
     // multideportivo: marca al principio del detalle; el bot le avisa al lector del Doc que lo ponga en su propia pestaña
     if (multi) d.detalle = "[MULTIDEPORTIVO]" + (d.detalle ? "\n" + d.detalle : "");
     const fila = { ...d, seccion: d.estado === "agenda" ? "agenda" : "resultados" };
+    // ¿ya existe? (Doc + cargados a mano, no eliminados)
+    const vivos = estado.eventos.filter((e) => !e.eliminado && !e.vencido);
+    const rep = parecidos(`${d.titulo || ""} ${d.lugar || ""} ${d.detalle || ""}`, d.deporte, vivos, (e) => `${e.titulo} ${e.fechas || ""} ${(e.bloques || []).map((b) => (b.partes || []).map((p) => p.t).join("")).join(" ")}`);
+    if (avisoRepetido(f, rep, { nombre: (e) => e.titulo, ir: (e) => { estado.creando = false; f.reset(); f.dataset.confirmado = ""; f.querySelector(".aviso-repetido")?.remove();
+      estado.tab = e.seccion === "agenda" ? "agenda" : "resultados"; $("#buscar").value = e.titulo.split(/\s+-\s+/).slice(1).join(" - ").slice(0, 40) || e.titulo.slice(0, 40); llenarDeportes(); dibujar(); avisar("Abrilo y usá «+ Agregar dato»"); } })) return;
     const b = f.querySelector("[type=submit]"); b.disabled = true;
     try {
       await Base.crearManual(fila);
-      estado.creando = false; f.reset();
+      estado.creando = false; f.reset(); f.dataset.confirmado = ""; f.querySelector(".aviso-repetido")?.remove();
       estado.tab = fila.seccion; llenarDeportes(); dibujar();
       avisar("Evento creado");
     } catch (err) {
@@ -1527,6 +1559,12 @@ function barraNoticia() {
     ev.preventDefault();
     const d = Object.fromEntries(new FormData(f)); for (const k in d) d[k] = d[k].trim();
     if (d.deporte) d.deporte = nombreDeporte(d.deporte);
+    // ¿ya la trajo el bot (Radar/Noticias) o ya la cargó alguien? Mismo link = seguro repetida
+    const todas = [...estado.noticias, ...(estado.noticiasMano || [])];
+    const mismoLink = d.link ? todas.filter((n) => n.link && n.link.replace(/[?#].*$/, "") === d.link.replace(/[?#].*$/, "")) : [];
+    const rep = mismoLink.length ? mismoLink.slice(0, 1) : parecidos(`${d.titulo} ${d.resumen || ""}`, d.deporte, todas, (n) => `${n.titulo} ${n.resumen || ""}`);
+    if (avisoRepetido(f, rep, { nombre: (n) => n.titulo, ir: (n) => { estado.creandoNoticia = false; estado.tab = n.noticia || n.mano ? "noticias" : "radar";
+      $("#buscar").value = n.titulo.slice(0, 40); llenarDeportes(); dibujar(); } })) return;
     f.querySelector("[type=submit]").disabled = true;
     try {
       await Base.agregarDato({ evento_id: "noticia:" + Date.now().toString(36), evento_titulo: d.titulo.slice(0, 200), tipo: "dato", texto: "[NOTICIA] " + JSON.stringify(d) });
