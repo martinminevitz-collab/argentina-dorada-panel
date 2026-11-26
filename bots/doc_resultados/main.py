@@ -547,6 +547,19 @@ def main():
         clasificados(eventos)
     except Exception as err:  # el directorio es un extra: si falla, el resto sigue
         print(f"⚠️  Directorio de Instagram: {err}")
+    # "Ref panel" que alguna vez estuvieron en el Doc (memoria 60 días): así un evento cargado a mano no vuelve a
+    # aparecer en el panel cuando el agente saca su bloque del Doc (publicado, eliminado o vencido)
+    from datetime import timedelta
+    ruta_refs = guardar.DATA / "refs-panel.json"
+    refs = guardar.leer(ruta_refs, {}).get("refs", {})
+    hoy = guardar.ahora().strftime("%Y-%m-%d")
+    for e in eventos:
+        for r in e.get("refs_panel", []):
+            refs.setdefault(r, hoy)
+    viejo = (guardar.ahora() - timedelta(days=60)).strftime("%Y-%m-%d")
+    refs = {k: v for k, v in sorted(refs.items()) if v >= viejo}
+    if refs != guardar.leer(ruta_refs, {}).get("refs", {}):
+        guardar.escribir(ruta_refs, {"_nota": "Ref panel vistos en el Doc (el evento a mano ya pasó al Doc: no se muestra más).", "refs": refs})
     ruta = guardar.DATA / "doc-resultados.json"
     anterior = guardar.leer(ruta, {})
     nuevo = {"actualizado_doc": actualizado_doc, "eventos": eventos}
