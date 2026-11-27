@@ -1609,10 +1609,12 @@ function dibujarClasif(lista) {
       t.querySelector(".meta").textContent = [c.evento, c.desde ? "desde " + c.desde.split("-").reverse().join("/") : ""].filter(Boolean).join(" · ");
       if (c.texto && c.texto !== c.quien) { const r = document.createElement("p"); r.className = "resumen-noticia"; r.textContent = c.texto; t.append(r); }
       const pie = document.createElement("div"); pie.className = "pie";
-      if (window.Graficas) pie.append(boton("🎨 Gráfica", () => {
-        Graficas.conDatos("clasificado", { deporte: c.deporte || "", titulo: `¡Clasificó a ${juegos}!`, nombre: c.quien, detalle: c.texto && c.texto !== c.quien ? c.texto.slice(0, 120) : "", plaza: "" });
+      // feed o historia, con los mismos datos
+      const abrir = (plantilla) => () => {
+        Graficas.conDatos(plantilla, { deporte: c.deporte || "", titulo: `¡Clasificó a ${juegos}!`, nombre: c.quien, detalle: c.texto && c.texto !== c.quien ? c.texto.slice(0, 120) : "", plaza: "" });
         estado.tab = "graficas"; dibujar(); window.scrollTo({ top: 0 });
-      }));
+      };
+      if (window.Graficas) pie.append(boton("🎨 Gráfica", abrir("clasificado")), boton("📱 Historia", abrir("s-clasificado")));
       if (window.Base?.activa()) pie.append(boton("Quitar", async () => {
         try { await (c.idBase ? Base.borrarDato(c.idBase) : Base.agregarDato({ evento_id: "clasif:" + c.id, evento_titulo: c.quien.slice(0, 200), tipo: "dato", texto: "[QUITAR-CLASIFICADO] " + c.id })); avisar("Quitado"); }
         catch { avisar("No se pudo quitar"); }
