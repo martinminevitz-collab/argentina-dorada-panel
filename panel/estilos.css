@@ -758,3 +758,8 @@ details.prox-multi summary b { text-transform: none; }
 .aviso-repetido .rep-igual { justify-self: start; }
 :root[data-theme="dark"] .aviso-repetido { background: #3A3015; color: #FFE6A3; border-color: #6B5A22; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .aviso-repetido { background: #3A3015; color: #FFE6A3; border-color: #6B5A22; } }
+
+/* historia clasificado LA 2028 */
+.g-sc1 { top: 760px; bottom: 170px; gap: 24px; }
+.g-sc1 h1 { font-size: 120px; } .g-sc1 .g-c1-nombre { font-size: 110px; } .g-sc1 .g-c1-detalle { font-size: 46px; }
+.g-pagina:has(.g-sc1) .g-logo-evento { top: 70px; }

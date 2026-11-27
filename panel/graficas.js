@@ -80,6 +80,10 @@
       { k: "lista", label: "Clasificados (uno por línea: deporte | quién)", ej: "Hockey | Las Leonas", area: true, filas: 10 },
       { k: "total", label: "Número grande (vacío = cuenta la lista)", ej: "" }, { k: "etiqueta", label: "Debajo del número", ej: "plazas" },
       { k: "nuevo", label: "Último en sumarse (opcional)", ej: "Rugby 7 · Los Pumas 7s" }, "credito"] },
+    "s-clasificado": { formato: "story", nombre: "Historia clasificado", logo: true, campos: ["deporte",
+      { k: "titulo", label: "Título", ej: "¡Clasificada a Los Ángeles 2028!" }, { k: "nombre", label: "Quién", ej: "Nombre Apellido" },
+      { k: "detalle", label: "Cómo clasificó (opcional)", ej: "Ganó el oro en los Juegos Panamericanos" },
+      { k: "plaza", label: "Número de plaza (opcional)", ej: "12" }, "credito"] },
     clasificado: { formato: "feed", nombre: "Clasificado", logo: true, campos: ["deporte",
       { k: "titulo", label: "Título", ej: "¡Clasificada a Los Ángeles 2028!" }, { k: "nombre", label: "Quién", ej: "Nombre Apellido" },
       { k: "detalle", label: "Cómo clasificó (opcional)", ej: "Ganó el oro en los Juegos Panamericanos" },
@@ -137,6 +141,8 @@
         items: "08:30 | Natación | Agostina Hein - 400 m libre (series)\n10:00 | Judo | Nombre Apellido - -57 kg\n13:00 | Hockey 5 | Las Leoncitas vs India\n17:30 | Atletismo | Nombre Apellido - salto en largo (final)", nota: "Horarios de Argentina" })] },
     clasificado: { nombre: "Clasificado LA 2028", paginas: () => [
       pag("clasificado", { deporte: "Remo", titulo: "¡Clasificado a Los Ángeles 2028!", nombre: "Nombre Apellido", detalle: "Ganó el oro en el Preolímpico de Río", plaza: "12", credito: "COA" })] },
+    "s-clasificado": { nombre: "Historia clasificado LA 2028", paginas: () => [
+      pag("s-clasificado", { deporte: "Remo", titulo: "¡Clasificado a Los Ángeles 2028!", nombre: "Nombre Apellido", detalle: "Ganó el oro en el Preolímpico de Río", plaza: "12", credito: "COA" })] },
     clasificados: { nombre: "Clasificados LA 2028", paginas: () => [
       pag("clasificados", { titulo: "Clasificados a Los Ángeles 2028", etiqueta: "plazas aseguradas", nuevo: "Hockey · Las Leonas",
         lista: "Hockey | Las Leonas\nHockey | Los Leones\nVóley | La Selección\nTiro | Nombre Apellido", credito: "COA" })] },
@@ -258,6 +264,9 @@
         ${d.detalle ? `<p class="g-c1-detalle" data-fs="texto">${esc(d.detalle)}</p>` : ""}
         ${d.plaza ? `<div class="g-c1-plaza"><b>${esc(d.plaza)}</b><span>${/^\d+$/.test(String(d.plaza).trim()) ? "plaza para Argentina" : ""}</span></div>` : ""}</div>
       ${credito(d, "g-cv-cred")}`; };
+  // historia: foto de fondo completa, logo AD arriba al centro, logo del evento arriba a la izquierda, texto abajo
+  DIBUJO["s-clasificado"] = (p) => DIBUJO.clasificado(p).replace(foto(p, "g-c1-foto"), foto(p, "g-full")).replace('<div class="g-c1-degrade"></div>', '<div class="g-degrade story"></div>')
+    .replace(logoAD(), marcaAD("g-s-head")).replace('class="g-c1-abajo"', 'class="g-c1-abajo g-sc1"');
   DIBUJO["s-convocados"] = (p) => DIBUJO.convocados(p).replace(logoAD(), marcaAD("g-s-head"));
   DIBUJO["s-grupos"] = DIBUJO.grupos;
   // placa con la foto vertical a la izquierda y el texto a la derecha
@@ -358,7 +367,7 @@
           .map(([v, t]) => `<option value="${v}" ${v === ENTRADA ? "selected" : ""}>${t}</option>`).join("")}</select></span>
         ${G.origen?.textoIG ? `<button class="g-copiar-ig">📋 Copiar texto para IG</button>` : ""}
         <button class="g-reset">Volver a la plantilla</button></div>
-      <p class="ayuda">🎬 Video animado: al terminar de grabar aparece abajo para verlo, descargarlo o publicarlo (en "Descargar" podés bajar todas o una sola página; las páginas con video se bajan como video). Los textos entran de a uno sobre la foto (o sobre el video, si subiste uno). Dura 6 segundos con foto o lo que dure el video (hasta 20 s). Se arma en el momento: no cierres la pantalla mientras graba.</p>
+      <p class="ayuda">🎬 Video animado: al terminar de grabar aparece abajo para verlo, descargarlo o publicarlo (en "Descargar" podés bajar todas o una sola página; las páginas con video se bajan como video). Los textos entran de a uno sobre la foto (o sobre el video, si subiste uno). Al terminar la animación queda 5 segundos quieta para que se pueda leer. Con video dura lo que dure el video (hasta 20 s). Se arma en el momento: no cierres la pantalla mientras graba.</p>
       ${navigator.canShare ? `<p class="ayuda">📲 Publicar abre la lista de apps del celu: elegí Instagram → Publicación y ya va con las ${G.paginas.length} imágenes en orden, sin guardarlas.
         Si Instagram las muestra cuadradas, tocá el ícono de las flechitas (abajo a la izquierda de la foto) para que queden 4:5.</p>` : ""}
       <p class="ayuda">Las fotos quedan solo en este dispositivo. Los textos se guardan como borrador acá mismo.</p>`;
@@ -627,7 +636,7 @@
         await new Promise((ok, mal) => { video.onloadeddata = ok; video.onerror = mal; });
       }
       const ultimo = capas.reduce((m, c, k) => m + (k ? (c.renglon && capas[k - 1].renglon ? 0.25 : 0.45) : 0.3), 0);
-      const dur = conVideo ? Math.min(20, video.duration || 6) : Math.min(15, Math.max(6, ultimo + 1.6 + 2.5)); // que se llegue a leer quieto
+      const dur = conVideo ? Math.min(20, video.duration || 6) : Math.min(20, Math.max(6, ultimo + 1.6 + 5)); // 5 s quieto al final para que se llegue a leer
       const lienzo = document.createElement("canvas"); lienzo.width = w; lienzo.height = h;
       const ctx = lienzo.getContext("2d");
       const stream = lienzo.captureStream(30);
@@ -867,14 +876,15 @@
       const nombre = (l.match(/^(.+?)\s+(fue|termin[oó]|qued[oó]|finaliz[oó]|lleg[oó])\b/i) || [])[1] || "";
       pags = [pag("s-posicion", { ...base, prueba: placas[0]?.titulo || "", nombre: nombre.replace(/\(.*?\)/g, "").trim(),
         posicion: (l.match(/(\d+)\s*[°º]/) || [])[1] ? (l.match(/(\d+)\s*[°º]/))[1] + "°" : "", marca: "" })];
-    } else if (["convocados", "grupos", "s-convocados", "s-grupos", "fixture", "agenda", "clasificados", "clasificado", "sede", "s-sede"].includes(plantilla)) {
+    } else if (["convocados", "grupos", "s-convocados", "s-grupos", "fixture", "agenda", "clasificados", "clasificado", "s-clasificado", "sede", "s-sede"].includes(plantilla)) {
       const ej = PLANTILLAS[plantilla].paginas()[0];
       const vacio = Object.fromEntries(Object.keys(ej.datos).map((k) => [k, ""]));
       const conv = { titulo: "Convocados", lista: lineas.filter((l) => l.length < 60).join("\n") };
       const sedeX = { etiqueta: "¡Es oficial!", evento: o.evento, ciudad: "", fechas: "" };
       const extra = { convocados: conv, "s-convocados": conv, grupos: { grupos: "" }, "s-grupos": { grupos: "" }, fixture: { partidos: "" }, sede: sedeX, "s-sede": sedeX,
         agenda: { titulo: "Agenda del día", items: "" }, clasificados: { titulo: "Clasificados a Los Ángeles 2028", lista: "" },
-        clasificado: { titulo: "¡Clasificó a Los Ángeles 2028!", detalle: lineas[0] || "" } }[plantilla];
+        clasificado: { titulo: "¡Clasificó a Los Ángeles 2028!", detalle: lineas[0] || "" },
+        "s-clasificado": { titulo: "¡Clasificó a Los Ángeles 2028!", detalle: lineas[0] || "" } }[plantilla];
       pags = [pag(plantilla, { ...vacio, deporte: o.deporte, torneo: o.evento, ...extra })];
       if (plantilla === "sede" || plantilla === "s-sede") pags[0].datos.credito = "";
     } else {
