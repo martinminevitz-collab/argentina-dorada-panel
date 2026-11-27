@@ -520,6 +520,12 @@ function formCrear() {
     // multideportivo: marca al principio del detalle; el bot le avisa al lector del Doc que lo ponga en su propia pestaña
     if (multi) d.detalle = "[MULTIDEPORTIVO]" + (d.detalle ? "\n" + d.detalle : "");
     const fila = { ...d, seccion: d.estado === "agenda" ? "agenda" : "resultados" };
+    // ¿dos sedes en un mismo evento? (ej. "SVNS en Dubái y Ciudad del Cabo"): mejor uno por sede, así cada uno se publica cuando termina
+    const sedeTxt = `${(d.titulo || "").split(/\s+en\s+/i).slice(1).join(" en ")} | ${d.lugar || ""}`;
+    if (f.dataset.dosSedes !== "1" && /[A-ZÁÉÍÓÚÑ][\wáéíóúñ.]+(?:\s+(?:del?\s+)?[A-ZÁÉÍÓÚÑ][\wáéíóúñ.]+)*\s*(?:\sy\s|\se\s|\/|&|\s-\s)\s*[A-ZÁÉÍÓÚÑ][\wáéíóúñ.]+/.test(sedeTxt)) {
+      if (!confirm("Parece que este evento tiene dos sedes (por ejemplo \"Dubái y Ciudad del Cabo\").\n\nConviene cargar uno por sede: así cada uno se marca Publicable cuando termina y el primero no queda viejo.\n\n¿Guardarlo igual así?")) return;
+      f.dataset.dosSedes = "1";
+    }
     // ¿ya existe? (Doc + cargados a mano, no eliminados)
     const vivos = estado.eventos.filter((e) => !e.eliminado && !e.vencido);
     const rep = parecidos(`${d.titulo || ""} ${d.lugar || ""} ${d.detalle || ""}`, d.deporte, vivos, (e) => `${e.titulo} ${e.fechas || ""} ${(e.bloques || []).map((b) => (b.partes || []).map((p) => p.t).join("")).join(" ")}`);
@@ -528,7 +534,7 @@ function formCrear() {
     const b = f.querySelector("[type=submit]"); b.disabled = true;
     try {
       await Base.crearManual(fila);
-      estado.creando = false; f.reset(); f.dataset.confirmado = ""; f.querySelector(".aviso-repetido")?.remove();
+      estado.creando = false; f.reset(); f.dataset.confirmado = ""; f.dataset.dosSedes = ""; f.querySelector(".aviso-repetido")?.remove();
       estado.tab = fila.seccion; llenarDeportes(); dibujar();
       avisar("Evento creado");
     } catch (err) {
