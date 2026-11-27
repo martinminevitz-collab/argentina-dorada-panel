@@ -762,4 +762,7 @@ details.prox-multi summary b { text-transform: none; }
 /* historia clasificado LA 2028 */
 .g-sc1 { top: 760px; bottom: 170px; gap: 24px; }
 .g-sc1 h1 { font-size: 120px; } .g-sc1 .g-c1-nombre { font-size: 110px; } .g-sc1 .g-c1-detalle { font-size: 46px; }
-.g-pagina:has(.g-sc1) .g-logo-evento { top: 70px; }
+.g-pagina:has(.g-sc1) .g-logo-evento { top: 70px; left: 60px; max-height: 170px; }
+.g-sc1-ad { top: 60px; right: 60px; width: 170px; height: 170px; }
+
+.g-c1-abajo .g-linea { align-self: stretch; }

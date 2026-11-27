@@ -130,6 +130,7 @@ def guardar_clasificados(filas):
             continue
         a_mano[f["id"]] = {"id": f["id"], "juegos": d.get("juegos") or "Los Ángeles 2028", "quien": str(d.get("quien", ""))[:200],
                            "deporte": d.get("deporte", ""), "evento": d.get("evento", ""), "texto": str(d.get("texto", ""))[:400],
+                           "plaza": str(d.get("plaza", ""))[:10], "link": str(d.get("link", ""))[:300],
                            "desde": str(f.get("creado_en", ""))[:10], "creado_en": f.get("creado_en")}
     nuevo = {**datos, "a_mano": sorted(a_mano.values(), key=lambda c: c["desde"]), "quitados": sorted(quitados)}
     if nuevo != datos:

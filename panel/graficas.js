@@ -259,14 +259,14 @@
   DIBUJO.clasificado = (p) => { const d = p.datos;
     return `${foto(p, "g-c1-foto")}<div class="g-c1-degrade"></div>${logoEvento()}${logoAD()}
       <div class="g-c1-abajo" data-fit>${d.deporte ? `<span class="g-pill oro">${esc(d.deporte)}</span>` : ""}
-        <h1 data-fs="titulo" data-ancho>${esc(d.titulo)}</h1><div class="g-linea"></div>
+        <div class="g-linea"></div><h1 data-fs="titulo" data-ancho>${esc(d.titulo)}</h1>
         <h2 class="g-c1-nombre" data-ancho>${esc(d.nombre)}</h2>
         ${d.detalle ? `<p class="g-c1-detalle" data-fs="texto">${esc(d.detalle)}</p>` : ""}
         ${d.plaza ? `<div class="g-c1-plaza"><b>${esc(d.plaza)}</b><span>${/^\d+$/.test(String(d.plaza).trim()) ? "plaza para Argentina" : ""}</span></div>` : ""}</div>
       ${credito(d, "g-cv-cred")}`; };
   // historia: foto de fondo completa, logo AD arriba al centro, logo del evento arriba a la izquierda, texto abajo
   DIBUJO["s-clasificado"] = (p) => DIBUJO.clasificado(p).replace(foto(p, "g-c1-foto"), foto(p, "g-full")).replace('<div class="g-c1-degrade"></div>', '<div class="g-degrade story"></div>')
-    .replace(logoAD(), marcaAD("g-s-head")).replace('class="g-c1-abajo"', 'class="g-c1-abajo g-sc1"');
+    .replace(logoAD(), logoAD().replace('class="g-logo-ad"', 'class="g-logo-ad g-sc1-ad"')).replace('class="g-c1-abajo"', 'class="g-c1-abajo g-sc1"');
   DIBUJO["s-convocados"] = (p) => DIBUJO.convocados(p).replace(logoAD(), marcaAD("g-s-head"));
   DIBUJO["s-grupos"] = DIBUJO.grupos;
   // placa con la foto vertical a la izquierda y el texto a la derecha

@@ -673,7 +673,7 @@ function dibujar() {
   for (const b of document.querySelectorAll(".pestanas button[data-tab]")) {
     const t = b.dataset.tab;
     b.classList.toggle("activa", t === estado.tab);
-    if (t === "clasif") b.hidden = !listaClasif().length; // la pestaña aparece recién cuando clasifica alguien
+    if (t === "clasif") b.hidden = false; // sector fijo de clasificados (se carga a mano o lo detecta el Doc)
     const n = t === "clasif" ? listaClasif().length : t === "radar" ? noticiasFiltradas(false).length : t === "noticias" ? noticiasParaPublicar(false).length : t === "ba" ? eventosBA().length : t.startsWith("m:") || t === "graficas" || t === "web" ? "" : eventosDe(t, false).length;
     b.querySelector(".n").textContent = n || "";
   }
@@ -1586,8 +1586,47 @@ function listaClasif() {
   for (const c of [...(estado.clasifBot.del_doc || []), ...(estado.clasifBot.a_mano || []).map((c) => ({ ...c, mano: true })), ...vivos]) todos.set(c.id, c);
   return [...todos.values()].filter((c) => !quitados.has(c.id));
 }
+// formulario para cargar un clasificado directo en el sector (sin pasar por un evento)
+function formClasif(lista) {
+  const caja = document.createElement("div"); caja.className = "barra-crear";
+  if (!estado.cargandoClasif) {
+    const b = boton("+ Agregar clasificado", () => {
+      if (!window.Base?.activa()) return avisar("Entrá con tu mail (arriba a la izquierda) para cargar clasificados");
+      estado.cargandoClasif = true; dibujar();
+    });
+    b.className = "btn-crear"; caja.append(b); return caja;
+  }
+  caja.innerHTML = `<form class="crear"><h3>Agregar clasificado</h3>
+    <label>Juegos<select name="juegos"><option>Los Ángeles 2028</option><option>Paralímpicos LA 2028</option></select></label>
+    <label>Deporte *<input name="deporte" list="deps-clasif" required placeholder="Ej: Hockey"></label><datalist id="deps-clasif">${listaDeportes().map((d) => `<option value="${escapar(d)}">`).join("")}</datalist>
+    <label>Quién *<input name="quien" required maxlength="200" placeholder="Ej: Las Leonas / Nombre Apellido"></label>
+    <label>Cómo clasificó (opcional)<input name="texto" maxlength="400" placeholder="Ej: Ganó el Preolímpico de Santiago"></label>
+    <div class="fila2"><label>Plaza (opcional)<input name="plaza" maxlength="10" placeholder="Ej: 12"></label>
+      <label>Link de la fuente (opcional)<input name="link" type="url" placeholder="https://…"></label></div>
+    <p class="ayuda">Queda en el sector al toque y las gráficas ("Gráfica con todos", la de cada uno) salen con la lista actualizada.</p>
+    <div class="pie"><button type="submit" class="principal">Guardar</button><button type="button" class="cancelar">Cancelar</button></div></form>`;
+  const f = caja.querySelector("form");
+  f.querySelector(".cancelar").onclick = () => { estado.cargandoClasif = false; dibujar(); };
+  f.onsubmit = async (ev) => {
+    ev.preventDefault();
+    const d = Object.fromEntries(new FormData(f)); for (const k in d) d[k] = d[k].trim();
+    d.deporte = nombreDeporte(d.deporte);
+    const ya = listaClasif().find((c) => sinTildes(c.quien) === sinTildes(d.quien) && sinTildes(c.juegos || "Los Ángeles 2028") === sinTildes(d.juegos));
+    if (ya && !confirm(`${d.quien} ya está en la lista. ¿Cargarlo igual?`)) return;
+    f.querySelector("[type=submit]").disabled = true;
+    try {
+      await Base.agregarDato({ evento_id: "clasif-mano:" + Date.now().toString(36), evento_titulo: d.quien.slice(0, 200), tipo: "dato",
+        texto: "[CLASIFICADO] " + JSON.stringify({ quien: d.quien, texto: d.texto || d.quien, deporte: d.deporte, evento: "", juegos: d.juegos, plaza: d.plaza || "", link: d.link || "" }) });
+      estado.cargandoClasif = false; avisar("Clasificado agregado"); dibujar();
+    } catch { f.querySelector("[type=submit]").disabled = false; avisar("No se pudo guardar. Probá de nuevo"); }
+  };
+  return caja;
+}
+
 function dibujarClasif(lista) {
+  lista.append(formClasif(lista));
   const cs = listaClasif();
+  if (!cs.length) { const p = document.createElement("p"); p.className = "vacio"; p.textContent = "Todavía no hay clasificados. Cargá el primero con «+ Agregar clasificado» (o con «+ Agregar dato» → 🎯 en un evento)."; lista.append(p); }
   const porJuegos = {};
   for (const c of cs) (porJuegos[c.juegos || "Los Ángeles 2028"] ||= []).push(c);
   for (const [juegos, grupo] of Object.entries(porJuegos)) {
@@ -1611,7 +1650,7 @@ function dibujarClasif(lista) {
       const pie = document.createElement("div"); pie.className = "pie";
       // feed o historia, con los mismos datos
       const abrir = (plantilla) => () => {
-        Graficas.conDatos(plantilla, { deporte: c.deporte || "", titulo: `¡Clasificó a ${juegos}!`, nombre: c.quien, detalle: c.texto && c.texto !== c.quien ? c.texto.slice(0, 120) : "", plaza: "" });
+        Graficas.conDatos(plantilla, { deporte: c.deporte || "", titulo: `¡Clasificó a ${juegos}!`, nombre: c.quien, detalle: c.texto && c.texto !== c.quien ? c.texto.slice(0, 120) : "", plaza: c.plaza || "" });
         estado.tab = "graficas"; dibujar(); window.scrollTo({ top: 0 });
       };
       if (window.Graficas) pie.append(boton("🎨 Gráfica", abrir("clasificado")), boton("📱 Historia", abrir("s-clasificado")));
@@ -1622,7 +1661,7 @@ function dibujarClasif(lista) {
       t.append(pie); lista.append(t);
     }
   }
-  lista.insertAdjacentHTML("beforeend", `<p class="ayuda clasif-ayuda">Se arma solo con lo que dice el Doc. Para sumar uno: en el resultado, "+ Agregar dato" → "🎯 Clasificó a LA 2028".</p>`);
+  lista.insertAdjacentHTML("beforeend", `<p class="ayuda clasif-ayuda">Se arma con lo que detecta el Doc y con lo que cargan acá («+ Agregar clasificado») o desde un resultado («+ Agregar dato» → «🎯 Clasificó a LA 2028".</p>`);
 }
 
 // ---------- varios ----------
