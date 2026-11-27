@@ -1167,10 +1167,38 @@
        "t": "Tras el 1° día: Argentina 4° en caballeros (punta compartida entre Brasil, Paraguay y Colombia) y 5° en damas (lidera Perú)"
       }
      ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://fesgolf.org/brasil-y-colombia-solos-al-frente-de-la-copa-los-andes-tras-la-segunda-jornada/",
+       "href": "https://fesgolf.org/brasil-y-colombia-solos-al-frente-de-la-copa-los-andes-tras-la-segunda-jornada/"
+      },
+      {
+       "t": " (Posiciones día 2)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Tras el 2° día (puntos de match play): en caballeros Argentina suma 5 puntos (lideran Brasil 8, Colombia 7 y Perú 6); en damas Argentina es 2° con 6, empatada con Brasil (lidera Colombia con 8)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Santiago Bailleres sigue invicto (5 triunfos y 1 empate). María Cabanillas ganó sus 4 partidos del 2° día, Ana Giuliano le ganó 8/7 a Helena Oviedo (PAR) y Mercedes Aldana 7/6 a Sofía Blanco (BOL)"
+      }
+     ]
     }
    ],
    "id": "2c66086da0a9",
-   "version": "82ed321714",
+   "version": "731c295356",
    "publicado_en_doc": false,
    "visto": "2026-11-27"
   },
@@ -2692,6 +2720,37 @@
      ]
     },
     {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://noticiasargentinas.com/deportes/colapinto-en-la-formula-1--el-cronograma-y-horarios-del-gp-de-qatar_a6b070700790b0872f313bd3f",
+       "href": "https://noticiasargentinas.com/deportes/colapinto-en-la-formula-1--el-cronograma-y-horarios-del-gp-de-qatar_a6b070700790b0872f313bd3f"
+      },
+      {
+       "t": " (Horarios)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Viernes 27/11: FP1 a las 10:30hs y FP2 a las 14hs. Sábado 28/11: FP3 a las 11:30hs y "
+      },
+      {
+       "t": "clasificación a las 15hs",
+       "b": true
+      },
+      {
+       "t": ". "
+      },
+      {
+       "t": "Carrera el domingo 29/11 a las 13hs",
+       "b": true
+      }
+     ]
+    },
+    {
      "tipo": "texto",
      "partes": [
       {
@@ -2713,7 +2772,7 @@
     }
    ],
    "id": "3f83ee1c3780",
-   "version": "93c1fb8fd6",
+   "version": "e33ff50056",
    "publicado_en_doc": false,
    "visto": "2026-11-27"
   },
@@ -2829,11 +2888,31 @@
      ]
     },
     {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://d10.ultimahora.com/los-karape-van-por-el-boleto-a-la-final",
+       "href": "https://d10.ultimahora.com/los-karape-van-por-el-boleto-a-la-final"
+      },
+      {
+       "t": " (Previa semis)"
+      }
+     ]
+    },
+    {
      "tipo": "sub",
      "partes": [
       {
-       "t": "Semis vs el ganador de Paraguay vs Brasil el viernes 27/11",
+       "t": "Semis vs Paraguay (le ganó 4-3 a Brasil) el viernes 27/11 a las 16:15hs (Creo)",
        "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "La otra semi es Marruecos vs el ganador de Colombia vs Bolivia"
       }
      ]
     }
@@ -2842,7 +2921,7 @@
     "779d361e"
    ],
    "id": "52871f18efdc",
-   "version": "172b875185",
+   "version": "fe7e0a0dd9",
    "publicado_en_doc": false,
    "visto": "2026-11-27"
   },
@@ -3938,16 +4017,43 @@
      "tipo": "sub",
      "partes": [
       {
-       "t": "vs Bahamas el jueves 26/11 a las 21:40hs (estaba en juego al cierre de esta actualización)",
+       "t": "vs Bahamas (jueves 26/11)",
        "b": true
       }
      ]
     },
     {
-     "tipo": "sub",
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.lanacion.com.ar/deportes/basquetbol/la-seleccion-argentina-no-sintio-las-ausencias-barrio-a-bahamas-y-quedo-a-un-paso-de-volver-a-jugar-nid26112026/",
+       "href": "https://www.lanacion.com.ar/deportes/basquetbol/la-seleccion-argentina-no-sintio-las-ausencias-barrio-a-bahamas-y-quedo-a-un-paso-de-volver-a-jugar-nid26112026/"
+      },
+      {
+       "t": " (Resultado)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Le ganó 102-65 a Bahamas (Gonzalo Corbalán 20, Alex Negrete 15, Marcos 14, Juan Pablo Vaulet 13 y 9 rebotes, Nicolás Laprovittola 10) y quedó a un triunfo de clasificarse al Mundial"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
      "partes": [
       {
        "t": "vs Canadá el domingo 29/11 a las 18:10hs",
+       "b": true
+      },
+      {
+       "t": ": si gana, "
+      },
+      {
+       "t": "CLASIFICA AL MUNDIAL QATAR 2027",
        "b": true
       }
      ]
@@ -4001,11 +4107,11 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Transmisión: TyC Sports "
+       "t": "Transmisión: TyC Sports y DSports "
       },
       {
-       "t": "https://www.lanacion.com.ar/deportes/basquetbol/la-seleccion-argentina-de-basquetbol-llega-a-zarate-por-primera-vez-para-buscar-la-clasificacion-al-nid26112026/",
-       "href": "https://www.lanacion.com.ar/deportes/basquetbol/la-seleccion-argentina-de-basquetbol-llega-a-zarate-por-primera-vez-para-buscar-la-clasificacion-al-nid26112026/"
+       "t": "https://www.lanacion.com.ar/deportes/basquetbol/la-seleccion-argentina-no-sintio-las-ausencias-barrio-a-bahamas-y-quedo-a-un-paso-de-volver-a-jugar-nid26112026/",
+       "href": "https://www.lanacion.com.ar/deportes/basquetbol/la-seleccion-argentina-no-sintio-las-ausencias-barrio-a-bahamas-y-quedo-a-un-paso-de-volver-a-jugar-nid26112026/"
       }
      ]
     }
@@ -4014,7 +4120,7 @@
     "2d1d6986"
    ],
    "id": "a3a1e029406d",
-   "version": "e87edebe68",
+   "version": "28e2ff352b",
    "publicado_en_doc": false,
    "visto": "2026-11-27"
   },
@@ -5611,11 +5717,31 @@
      ]
     },
     {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.cba24n.com.ar/deportes/los-pumas-cierran-el-ano-ante-escocia--equipo-confirmado-y-hora-del-partido_a6b098012ac9a07069d072832",
+       "href": "https://www.cba24n.com.ar/deportes/los-pumas-cierran-el-ano-ante-escocia--equipo-confirmado-y-hora-del-partido_a6b098012ac9a07069d072832"
+      },
+      {
+       "t": " (Equipo y horario)"
+      }
+     ]
+    },
+    {
      "tipo": "sub",
      "partes": [
       {
-       "t": "7° puesto vs Escocia en Twickenham (Londres) el domingo 29/11 (Creo)",
+       "t": "7° puesto vs Escocia en Twickenham (Londres) el domingo 29/11 a las 10:10hs",
        "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Titulares: Rodrigo Martínez, Julián Montoya (C), Francisco Moreno, Guido Petti, Pedro Rubiolo, Juan Martín González, Joaquín Moro, Juan Martín Scelzo, Gonzalo García, Tomás Albornoz, Ignacio Mendy, Faustino Sánchez Valarolo, Lucio Cinti, Rodrigo Isgró y Gerónimo Prisciantelli"
       }
      ]
     },
@@ -5629,7 +5755,7 @@
     }
    ],
    "id": "de102f71eab3",
-   "version": "16dfcdc175",
+   "version": "263089791b",
    "publicado_en_doc": false,
    "visto": "2026-11-27"
   },
