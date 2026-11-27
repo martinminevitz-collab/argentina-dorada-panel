@@ -1,4 +1,14 @@
 {
  "_nota": "Clasificados a los Juegos. 'del_doc' lo junta el lector del Doc; 'a_mano' lo cargan los chicos desde el panel (Agregar dato → Clasificó); 'quitados' son ids que alguien sacó desde el panel.",
- "del_doc": []
+ "del_doc": [
+  {
+   "id": "00148de54d",
+   "juegos": "Los Ángeles 2028",
+   "quien": "Alexis Eberhardt",
+   "texto": "Alexis Eberhardt ganó la final con 247.5 y se consagró CAMPEÓN DE LAS AMÉRICAS con la medalla DORADA. Además CLASIFICÓ A LOS JUEGOS OLÍMPICOS DE LOS ÁNGELES 2028: es el primer argentino clasificado. Estaba 3°/4° y pasó adelante en las últimas series (10.7, 10.8 y 10.9). Plata para Edson Ramírez (MEX) con 246.2 y bronce para Carlos Quezada (MEX)",
+   "deporte": "TIRO",
+   "evento": "CAMPEONATO DE LAS AMÉRICAS EN LIMA, PERÚ",
+   "desde": "2026-11-27"
+  }
+ ]
 }
