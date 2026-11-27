@@ -1661,7 +1661,7 @@ function dibujarClasif(lista) {
       t.append(pie); lista.append(t);
     }
   }
-  lista.insertAdjacentHTML("beforeend", `<p class="ayuda clasif-ayuda">Se arma con lo que detecta el Doc y con lo que cargan acá («+ Agregar clasificado») o desde un resultado («+ Agregar dato» → «🎯 Clasificó a LA 2028".</p>`);
+  lista.insertAdjacentHTML("beforeend", `<p class="ayuda clasif-ayuda">Se arma con lo que detecta el Doc y con lo que cargan acá («+ Agregar clasificado») o desde un resultado («+ Agregar dato» → «🎯 Clasificó a LA 2028»).</p>`);
 }
 
 // ---------- varios ----------
