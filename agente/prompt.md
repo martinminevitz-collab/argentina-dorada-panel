@@ -45,6 +45,7 @@ Instagram de cada deportista: ponelo solo si lo encontrás confirmado. Nunca inv
 PASO 3 – EDITAR actual.txt → nuevo.txt (fusionar, no duplicar):
 - Evento que YA está: completá su bloque con lo nuevo. No dupliques líneas ni bloques.
 - Evento nuevo: agregá un bloque nuevo.
+- UN BLOQUE POR TORNEO/SEDE: si un circuito o serie tiene varias etapas en ciudades distintas (ej. SVNS de rugby 7 en Dubái y después en Ciudad del Cabo, fechas de un Grand Prix, Copas del Mundo, World Tour, Grand Slam de judo), cada etapa va en su PROPIO bloque con su propio título y fechas ("# RUGBY 7 - HSBC SVNS 2026-27 EN DUBÁI, EMIRATOS ÁRABES UNIDOS (28 al 29 de noviembre)" y otro para Ciudad del Cabo). Nunca juntes dos sedes en un mismo título: cada una se marca PUBLICABLE cuando termina ella. Si ya existe un bloque que junta dos sedes, separalo en dos (los resultados que ya estén, en el de su sede; la línea "Ref panel" queda en los dos si la tenía).
 - Evento TERMINADO con todos los resultados de los argentinos: título con "|| PUBLICABLE".
 - Terminado pero faltan datos: "|| (Necesito más info)".
 - En curso: título sin etiqueta y con las fechas entre paréntesis.
