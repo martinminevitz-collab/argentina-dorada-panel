@@ -1,6 +1,6 @@
 {
- "leido": "2026-11-26T12:05-03:00",
- "actualizado_doc": "26/11/2026 11:10",
+ "leido": "2026-11-26T23:59-03:00",
+ "actualizado_doc": "26/11/2026 23:05",
  "eventos": [
   {
    "titulo": "GOLF - WALA (WOMENS AMATEUR LATIN AMERICA) EN GUATEMALA",
@@ -1399,7 +1399,7 @@
    "deporte": "RACQUETBALL",
    "evento": "MILE HIGH OPEN EN DENVER, ESTADOS UNIDOS",
    "fechas": null,
-   "etiqueta": "mas_info",
+   "etiqueta": "publicable",
    "seccion": "resultados",
    "ya_publicado": false,
    "bloques": [
@@ -1492,16 +1492,35 @@
      ]
     },
     {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.instagram.com/p/DgI6dxtIBHl/",
+       "href": "https://www.instagram.com/p/DgI6dxtIBHl/"
+      },
+      {
+       "t": " (Resultado final, ENARD)"
+      }
+     ]
+    },
+    {
      "tipo": "texto",
      "partes": [
       {
-       "t": "Falta: resultado de la final de dobles de Vargas y Centellas"
+       "t": "María José Vargas y Valeria Centellas lograron la medalla "
+      },
+      {
+       "t": "PLATEADA",
+       "b": true
+      },
+      {
+       "t": " tras perder la final vs Herrera / Martínez (MEX/GUA)"
       }
      ]
     }
    ],
    "id": "08cc43ed292e",
-   "version": "5503e06d88",
+   "version": "c5cbfdef85",
    "publicado_en_doc": false,
    "terminado_desde": "2026-11-25"
   },
@@ -2225,10 +2244,22 @@
      ]
     },
     {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.infobae.com/deportes/2026/11/27/argentina-elimino-3-2-a-egipto-y-avanzo-a-las-semifinales-del-mundial-de-talla-baja-el-caotico-cierre-con-empujones-e-insultos/",
+       "href": "https://www.infobae.com/deportes/2026/11/27/argentina-elimino-3-2-a-egipto-y-avanzo-a-las-semifinales-del-mundial-de-talla-baja-el-caotico-cierre-con-empujones-e-insultos/"
+      },
+      {
+       "t": " (Resultado)"
+      }
+     ]
+    },
+    {
      "tipo": "sub",
      "partes": [
       {
-       "t": "4tos vs Egipto el jueves 26/11 a las 16:15hs",
+       "t": "4tos de final",
        "b": true
       }
      ]
@@ -2237,7 +2268,16 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Si gana, en semis juega vs el ganador de Paraguay vs Brasil"
+       "t": "Le ganó 3-2 a Egipto en Rabat el jueves 26/11 (Martín Antúnez, Catriel Brassesco y Facundo Rojas de cabeza en el cierre). Iba 2-1 abajo en el primer tiempo y el arquero Cristian Soto le atajó un penal a Egipto en el final. El partido terminó con incidentes: un jugador egipcio intentó agredir a los argentinos en el festejo"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Semis vs el ganador de Paraguay vs Brasil el viernes 27/11",
+       "b": true
       }
      ]
     }
@@ -2246,7 +2286,7 @@
     "779d361e"
    ],
    "id": "52871f18efdc",
-   "version": "54d127db0e",
+   "version": "172b875185",
    "publicado_en_doc": false
   },
   {
@@ -2342,6 +2382,59 @@
      "tipo": "espacio"
     },
     {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Rifle de aire 10m Masculino (26/11)",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.airedesantafe.com.ar/alexis-eberhardt-el-santafesino-que-clasifico-los-juegos-olimpicos-los-angeles-2028-n678227",
+       "href": "https://www.airedesantafe.com.ar/alexis-eberhardt-el-santafesino-que-clasifico-los-juegos-olimpicos-los-angeles-2028-n678227"
+      },
+      {
+       "t": " (Resultado)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Alexis Eberhardt ganó la final con 247.5 y se consagró "
+      },
+      {
+       "t": "CAMPEÓN DE LAS AMÉRICAS",
+       "b": true
+      },
+      {
+       "t": " con la medalla "
+      },
+      {
+       "t": "DORADA",
+       "b": true
+      },
+      {
+       "t": ". Además "
+      },
+      {
+       "t": "CLASIFICÓ A LOS JUEGOS OLÍMPICOS DE LOS ÁNGELES 2028",
+       "b": true
+      },
+      {
+       "t": ": es el primer argentino clasificado. Estaba 3°/4° y pasó adelante en las últimas series (10.7, 10.8 y 10.9). Plata para Edson Ramírez (MEX) con 246.2 y bronce para Carlos Quezada (MEX)"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
      "tipo": "texto",
      "partes": [
       {
@@ -2351,7 +2444,7 @@
     }
    ],
    "id": "daca2fda8556",
-   "version": "968f26e813",
+   "version": "e9fb6cf850",
    "publicado_en_doc": false
   },
   {
@@ -2678,12 +2771,103 @@
    "publicado_en_doc": false
   },
   {
+   "titulo": "GOLF - COPA LOS ANDES EN LIMA, PERÚ (25 al 28 de noviembre)",
+   "deporte": "GOLF",
+   "evento": "COPA LOS ANDES EN LIMA, PERÚ",
+   "fechas": "25 al 28 de noviembre",
+   "etiqueta": "en_curso",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.telediariodigital.com.ar/post/r%C3%ADo-cuarto-presente-en-la-copa-los-andes-ana-giuliano-y-mateo-pulcini-representan-a-la-argentina-en",
+       "href": "https://www.telediariodigital.com.ar/post/r%C3%ADo-cuarto-presente-en-la-copa-los-andes-ana-giuliano-y-mateo-pulcini-representan-a-la-argentina-en"
+      },
+      {
+       "t": " (Equipo)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Es la 80° edición del Sudamericano por equipos, en el Lima Golf Club, con 10 países"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Equipo femenino",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Ana Giuliano, Mía Yaya, Mercedes Aldana, Malena Castro y María Cabanillas. Capitán: Diego Antonini"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Equipo masculino",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Mateo Pulcini, Leandro Mihaich, Manuel Lozada, Andrés Schönbaum (h) y Santiago Bailleres. Capitán: Francisco Alemán"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.abc.com.py/deportes/polideportivo/2026/11/26/paraguay-bien-arriba-en-la-copa-los-andes-de-golf-en-peru/",
+       "href": "https://www.abc.com.py/deportes/polideportivo/2026/11/26/paraguay-bien-arriba-en-la-copa-los-andes-de-golf-en-peru/"
+      },
+      {
+       "t": " (Posiciones día 1)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Tras el 1° día: Argentina 4° en caballeros (punta compartida entre Brasil, Paraguay y Colombia) y 5° en damas (lidera Perú)"
+      }
+     ]
+    }
+   ],
+   "id": "2c66086da0a9",
+   "version": "82ed321714",
+   "publicado_en_doc": false
+  },
+  {
    "titulo": "BÁSQUET - CLASIFICATORIOS AL MUNDIAL QATAR 2027 (5TA VENTANA) EN ZÁRATE, ARGENTINA (26 y 29 de noviembre)",
    "deporte": "BÁSQUET",
    "evento": "CLASIFICATORIOS AL MUNDIAL QATAR 2027 (5TA VENTANA) EN ZÁRATE, ARGENTINA",
    "fechas": "26 y 29 de noviembre",
-   "etiqueta": "agenda",
-   "seccion": "agenda",
+   "etiqueta": "en_curso",
+   "seccion": "resultados",
    "ya_publicado": false,
    "bloques": [
     {
@@ -2722,7 +2906,7 @@
      "tipo": "sub",
      "partes": [
       {
-       "t": "vs Bahamas el jueves 26/11 a las 21:40hs",
+       "t": "vs Bahamas el jueves 26/11 a las 21:40hs (estaba en juego al cierre de esta actualización)",
        "b": true
       }
      ]
@@ -2798,7 +2982,68 @@
     "2d1d6986"
    ],
    "id": "a3a1e029406d",
-   "version": "b108d2a445",
+   "version": "e87edebe68",
+   "publicado_en_doc": false
+  },
+  {
+   "titulo": "HANDBALL - TORNEO INTERNACIONAL DE ESPAÑA FEMENINO (27 al 29 de noviembre)",
+   "deporte": "HANDBALL",
+   "evento": "TORNEO INTERNACIONAL DE ESPAÑA FEMENINO",
+   "fechas": "27 al 29 de noviembre",
+   "etiqueta": "agenda",
+   "seccion": "agenda",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://deportv.gob.ar/polideportivo/cuando-hora-juega-la-garra-torneo-internacional-espana-handball-nid:19205",
+       "href": "https://deportv.gob.ar/polideportivo/cuando-hora-juega-la-garra-torneo-internacional-espana-handball-nid:19205"
+      },
+      {
+       "t": " (Horarios)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "La Garra lo juega como preparación para el Sur-Centro de Brasil de diciembre. El plantel se concentró en Puertollano. Luciana Codesal se sumó por la lesión de Valentina Menucci"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "vs Túnez el viernes 27/11 a las 14:15hs",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "vs España el sábado 28/11 a las 12:15hs",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "vs Portugal el domingo 29/11 a las 7:30hs",
+       "b": true
+      }
+     ]
+    }
+   ],
+   "id": "23f1051ef264",
+   "version": "fe6421bdba",
    "publicado_en_doc": false
   },
   {
@@ -2988,6 +3233,72 @@
    ],
    "id": "b533ebd242c4",
    "version": "e7bc207d0d",
+   "publicado_en_doc": false
+  },
+  {
+   "titulo": "NATACIÓN - MUNDIAL DE PILETA CORTA EN BEIJING, CHINA (1 al 6 de diciembre)",
+   "deporte": "NATACIÓN",
+   "evento": "MUNDIAL DE PILETA CORTA EN BEIJING, CHINA",
+   "fechas": "1 al 6 de diciembre",
+   "etiqueta": "agenda",
+   "seccion": "agenda",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "http://www.lanueva.com/nota/2026-10-2-7-48-0-vuelve-hein-como-parte-de-un-equipazo-asi-ira-argentina-al-mundial-de-pileta-corta",
+       "href": "http://www.lanueva.com/nota/2026-10-2-7-48-0-vuelve-hein-como-parte-de-un-equipazo-asi-ira-argentina-al-mundial-de-pileta-corta"
+      },
+      {
+       "t": " (Equipo)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Equipo confirmado por la CADDA:"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Agostina Hein: 400m libre, 800m libre, 200m combinado y 400m combinado"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Macarena Ceballos: 100m pecho"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Malena Santillán: 200m"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Cecilia Dieleke: 100m y 200m espalda"
+      }
+     ]
+    }
+   ],
+   "id": "f6c6acb70e43",
+   "version": "616f89e135",
    "publicado_en_doc": false
   },
   {
@@ -3399,13 +3710,21 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Las Leonas juegan vs China y los Leones vs Gran Bretaña y Francia. Sede a confirmar"
+       "t": "Las Leonas juegan vs China y los Leones vs Gran Bretaña y Francia"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Sede: Córdoba (según El Marplatense, 26/11)"
       }
      ]
     }
    ],
    "id": "61326fe2ad0f",
-   "version": "12336fc7a9",
+   "version": "eee46abd94",
    "publicado_en_doc": false
   },
   {

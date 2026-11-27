@@ -123,7 +123,7 @@
    "deporte": "RACQUETBALL",
    "evento": "MILE HIGH OPEN EN DENVER, ESTADOS UNIDOS",
    "fechas": null,
-   "etiqueta": "mas_info",
+   "etiqueta": "publicable",
    "seccion": "resultados",
    "ya_publicado": false,
    "bloques": [
@@ -216,16 +216,35 @@
      ]
     },
     {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.instagram.com/p/DgI6dxtIBHl/",
+       "href": "https://www.instagram.com/p/DgI6dxtIBHl/"
+      },
+      {
+       "t": " (Resultado final, ENARD)"
+      }
+     ]
+    },
+    {
      "tipo": "texto",
      "partes": [
       {
-       "t": "Falta: resultado de la final de dobles de Vargas y Centellas"
+       "t": "María José Vargas y Valeria Centellas lograron la medalla "
+      },
+      {
+       "t": "PLATEADA",
+       "b": true
+      },
+      {
+       "t": " tras perder la final vs Herrera / Martínez (MEX/GUA)"
       }
      ]
     }
    ],
    "id": "08cc43ed292e",
-   "version": "5503e06d88",
+   "version": "c5cbfdef85",
    "publicado_en_doc": false,
    "terminado_desde": "2026-11-25",
    "visto": "2026-11-26"
@@ -1061,6 +1080,98 @@
    "version": "a19ab65b4f",
    "publicado_en_doc": false,
    "terminado_desde": "2026-11-25",
+   "visto": "2026-11-26"
+  },
+  "2c66086da0a9": {
+   "titulo": "GOLF - COPA LOS ANDES EN LIMA, PERÚ (25 al 28 de noviembre)",
+   "deporte": "GOLF",
+   "evento": "COPA LOS ANDES EN LIMA, PERÚ",
+   "fechas": "25 al 28 de noviembre",
+   "etiqueta": "en_curso",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.telediariodigital.com.ar/post/r%C3%ADo-cuarto-presente-en-la-copa-los-andes-ana-giuliano-y-mateo-pulcini-representan-a-la-argentina-en",
+       "href": "https://www.telediariodigital.com.ar/post/r%C3%ADo-cuarto-presente-en-la-copa-los-andes-ana-giuliano-y-mateo-pulcini-representan-a-la-argentina-en"
+      },
+      {
+       "t": " (Equipo)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Es la 80° edición del Sudamericano por equipos, en el Lima Golf Club, con 10 países"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Equipo femenino",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Ana Giuliano, Mía Yaya, Mercedes Aldana, Malena Castro y María Cabanillas. Capitán: Diego Antonini"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Equipo masculino",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Mateo Pulcini, Leandro Mihaich, Manuel Lozada, Andrés Schönbaum (h) y Santiago Bailleres. Capitán: Francisco Alemán"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.abc.com.py/deportes/polideportivo/2026/11/26/paraguay-bien-arriba-en-la-copa-los-andes-de-golf-en-peru/",
+       "href": "https://www.abc.com.py/deportes/polideportivo/2026/11/26/paraguay-bien-arriba-en-la-copa-los-andes-de-golf-en-peru/"
+      },
+      {
+       "t": " (Posiciones día 1)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Tras el 1° día: Argentina 4° en caballeros (punta compartida entre Brasil, Paraguay y Colombia) y 5° en damas (lidera Perú)"
+      }
+     ]
+    }
+   ],
+   "id": "2c66086da0a9",
+   "version": "82ed321714",
+   "publicado_en_doc": false,
    "visto": "2026-11-26"
   },
   "31518371aee9": {
@@ -2689,10 +2800,22 @@
      ]
     },
     {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.infobae.com/deportes/2026/11/27/argentina-elimino-3-2-a-egipto-y-avanzo-a-las-semifinales-del-mundial-de-talla-baja-el-caotico-cierre-con-empujones-e-insultos/",
+       "href": "https://www.infobae.com/deportes/2026/11/27/argentina-elimino-3-2-a-egipto-y-avanzo-a-las-semifinales-del-mundial-de-talla-baja-el-caotico-cierre-con-empujones-e-insultos/"
+      },
+      {
+       "t": " (Resultado)"
+      }
+     ]
+    },
+    {
      "tipo": "sub",
      "partes": [
       {
-       "t": "4tos vs Egipto el jueves 26/11 a las 16:15hs",
+       "t": "4tos de final",
        "b": true
       }
      ]
@@ -2701,7 +2824,16 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Si gana, en semis juega vs el ganador de Paraguay vs Brasil"
+       "t": "Le ganó 3-2 a Egipto en Rabat el jueves 26/11 (Martín Antúnez, Catriel Brassesco y Facundo Rojas de cabeza en el cierre). Iba 2-1 abajo en el primer tiempo y el arquero Cristian Soto le atajó un penal a Egipto en el final. El partido terminó con incidentes: un jugador egipcio intentó agredir a los argentinos en el festejo"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Semis vs el ganador de Paraguay vs Brasil el viernes 27/11",
+       "b": true
       }
      ]
     }
@@ -2710,7 +2842,7 @@
     "779d361e"
    ],
    "id": "52871f18efdc",
-   "version": "54d127db0e",
+   "version": "172b875185",
    "publicado_en_doc": false,
    "visto": "2026-11-26"
   },
@@ -3760,6 +3892,131 @@
    "publicado_en_doc": false,
    "terminado_desde": "2026-11-17",
    "visto": "2026-11-22"
+  },
+  "a3a1e029406d": {
+   "titulo": "BÁSQUET - CLASIFICATORIOS AL MUNDIAL QATAR 2027 (5TA VENTANA) EN ZÁRATE, ARGENTINA (26 y 29 de noviembre)",
+   "deporte": "BÁSQUET",
+   "evento": "CLASIFICATORIOS AL MUNDIAL QATAR 2027 (5TA VENTANA) EN ZÁRATE, ARGENTINA",
+   "fechas": "26 y 29 de noviembre",
+   "etiqueta": "en_curso",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.lacapitalmdp.com/sorpresivo-cambio-de-sede-para-la-seleccion-de-basquet-no-jugara-en-mar-del-plata/",
+       "href": "https://www.lacapitalmdp.com/sorpresivo-cambio-de-sede-para-la-seleccion-de-basquet-no-jugara-en-mar-del-plata/"
+      },
+      {
+       "t": " (Info)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Se juega en el Espacio DAM de Zárate (iba a ser en Mar del Plata)"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.rosario3.com/deportes/basquet-con-campazzo-laprovittola-y-un-rosarino-la-seleccion-argentina-presento-su-prelista-para-la-ventana-de-noviembre-20261118-0058.html",
+       "href": "https://www.rosario3.com/deportes/basquet-con-campazzo-laprovittola-y-un-rosarino-la-seleccion-argentina-presento-su-prelista-para-la-ventana-de-noviembre-20261118-0058.html"
+      },
+      {
+       "t": " (Horarios y prelista)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "vs Bahamas el jueves 26/11 a las 21:40hs (estaba en juego al cierre de esta actualización)",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "vs Canadá el domingo 29/11 a las 18:10hs",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Prelista de 24 de Pablo Prigioni con Facundo Campazzo, Nicolás Laprovittola, Leandro Bolmaro, Nicolás Brussino, Luca y José Vildoza, Juan Pablo Vaulet, Leonardo Dato, Francisco y Alejo Cáffaro, Juan Gallizzi y Gabriel Fernández, entre otros"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Argentina llega con 6 victorias y 2 derrotas. Si gana los dos partidos se clasifica directo al Mundial; también puede clasificarse ganándole a Bahamas si Panamá le gana a Bahamas en esta ventana"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.lanacion.com.ar/deportes/basquetbol/la-seleccion-argentina-de-basquetbol-llega-a-zarate-por-primera-vez-para-buscar-la-clasificacion-al-nid26112026/",
+       "href": "https://www.lanacion.com.ar/deportes/basquetbol/la-seleccion-argentina-de-basquetbol-llega-a-zarate-por-primera-vez-para-buscar-la-clasificacion-al-nid26112026/"
+      },
+      {
+       "t": " (Plantel)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Plantel para Bahamas y Canadá",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Gonzalo Bressan, Nicolás Brussino, Agustín Cáffaro, Francisco Cáffaro, Gonzalo Corbalán, Martiniano Dato, Nicolás Laprovittola, Carlos Rivero, Leonardo Lema, Juan Ignacio Marcos, Alex Negrete, Juan Pablo Vaulet y José Vildoza (son 13, uno queda afuera de cada partido)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Transmisión: TyC Sports "
+      },
+      {
+       "t": "https://www.lanacion.com.ar/deportes/basquetbol/la-seleccion-argentina-de-basquetbol-llega-a-zarate-por-primera-vez-para-buscar-la-clasificacion-al-nid26112026/",
+       "href": "https://www.lanacion.com.ar/deportes/basquetbol/la-seleccion-argentina-de-basquetbol-llega-a-zarate-por-primera-vez-para-buscar-la-clasificacion-al-nid26112026/"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "2d1d6986"
+   ],
+   "id": "a3a1e029406d",
+   "version": "e87edebe68",
+   "publicado_en_doc": false,
+   "visto": "2026-11-26"
   },
   "a4a04cccb1b7": {
    "titulo": "BÁDMINTON - GUATEMALA INTERNATIONAL SERIES EN CIUDAD DE GUATEMALA, GUATEMALA",
@@ -4994,6 +5251,59 @@
      "tipo": "espacio"
     },
     {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Rifle de aire 10m Masculino (26/11)",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.airedesantafe.com.ar/alexis-eberhardt-el-santafesino-que-clasifico-los-juegos-olimpicos-los-angeles-2028-n678227",
+       "href": "https://www.airedesantafe.com.ar/alexis-eberhardt-el-santafesino-que-clasifico-los-juegos-olimpicos-los-angeles-2028-n678227"
+      },
+      {
+       "t": " (Resultado)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Alexis Eberhardt ganó la final con 247.5 y se consagró "
+      },
+      {
+       "t": "CAMPEÓN DE LAS AMÉRICAS",
+       "b": true
+      },
+      {
+       "t": " con la medalla "
+      },
+      {
+       "t": "DORADA",
+       "b": true
+      },
+      {
+       "t": ". Además "
+      },
+      {
+       "t": "CLASIFICÓ A LOS JUEGOS OLÍMPICOS DE LOS ÁNGELES 2028",
+       "b": true
+      },
+      {
+       "t": ": es el primer argentino clasificado. Estaba 3°/4° y pasó adelante en las últimas series (10.7, 10.8 y 10.9). Plata para Edson Ramírez (MEX) con 246.2 y bronce para Carlos Quezada (MEX)"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
      "tipo": "texto",
      "partes": [
       {
@@ -5003,7 +5313,7 @@
     }
    ],
    "id": "daca2fda8556",
-   "version": "968f26e813",
+   "version": "e9fb6cf850",
    "publicado_en_doc": false,
    "visto": "2026-11-26"
   },
