@@ -259,12 +259,17 @@ function cajaAgregarDato(e, t) {
   const b = estado.borradorDato[e.id] || {};
   ta.value = b.texto || ""; sel.value = b.tipo || "dato"; li.value = b.link || "";
   const guardarBorrador = () => (estado.borradorDato[e.id] = { texto: ta.value, tipo: sel.value, link: li.value });
-  ta.oninput = guardarBorrador; sel.onchange = guardarBorrador; li.oninput = guardarBorrador;
+  const ayudaTipo = () => { const tv = sel.value === "transmision";
+    ta.placeholder = tv ? "Dónde se ve. Ej: YouTube de la federación / DSports" : "Ej: Juana Pérez ganó la medalla de **BRONCE** en -57kg";
+    li.placeholder = tv ? "Pegá acá el link de la transmisión" : "Link de la fuente (opcional): así el agente lo puede seguir"; };
+  ayudaTipo();
+  ta.oninput = guardarBorrador; sel.onchange = () => { guardarBorrador(); ayudaTipo(); }; li.oninput = guardarBorrador;
   caja.querySelector(".cancelar").onclick = () => { estado.agregandoEn = null; delete estado.borradorDato[e.id]; t.replaceWith(tarjetaEvento(e, $("#tpl-evento"))); };
   caja.querySelector(".principal").onclick = async (ev) => {
     let texto = ta.value.trim();
-    if (texto.length < 2) return ta.focus();
     let link = li.value.trim();
+    if (sel.value === "transmision" && texto.length < 2 && link) texto = "en vivo"; // con pegar el link alcanza
+    if (texto.length < 2) return ta.focus();
     if (link && !/^https?:\/\//i.test(link)) link = "https://" + link;
     if (link && !/^https?:\/\/[^\s.]+\.[^\s]+$/i.test(link)) { avisar("Ese link no parece válido"); return li.focus(); }
     if (sel.value === "transmision") { // "Transmisión: YouTube de la federación https://..." (el agente lo pasa al Doc y el botón 📺 lo abre)
@@ -767,14 +772,14 @@ function tarjetaEvento(e, tpl) {
 }
 
 // "Falta info" que ya completaron con "+ Agregar dato": se pasa a Publicable para todos (el agente cambia el título en el Doc)
-// 📺 dónde se ve: si el evento ya tiene un link de transmisión lo abre; si no, busca en Google (y se carga con "+ Agregar dato" → 📺 Transmisión)
+// 📺 dónde se ve: si el evento ya tiene un link de transmisión lo abre; si no, busca en Google y abre "+ Agregar dato" → 📺 Transmisión para pegar el link
 const ES_TRANSMISION = /youtube\.com|youtu\.be|twitch\.tv|olympics\.com\/.*(live|en-vivo|directo)|\btv\b|dsports|espn|tyc|deportv|disney|star\+|stream|en vivo|directo|transmisi/i;
 function linkTransmision(e) {
   for (const b of e.bloques || []) {
     const txt = (b.partes || []).map((p) => p.t).join(" ");
     const conLink = (b.partes || []).find((p) => p.href && (ES_TRANSMISION.test(p.href) || /transmisi|c[oó]mo ver|en vivo|tv/i.test(txt)));
     if (conLink) return conLink.href;
-    const m = /transmisi[oó]n:?\s*(https?:\/\/\S+)/i.exec(txt); if (m) return m[1];
+    const m = /transmisi[oó]n:?[^\n]*?(https?:\/\/\S+)/i.exec(txt); if (m) return m[1];
   }
   return "";
 }
@@ -783,6 +788,13 @@ function botonTransmision(e, t) {
   const b = boton(link ? "📺 Ver transmisión" : "📺 Buscar transmisión", () => {
     const q = `${e.evento || e.titulo.replace(/\s*\([^)]*\)\s*$/, "")} transmisión en vivo`;
     window.open(link || "https://www.google.com/search?q=" + encodeURIComponent(q), "_blank", "noopener");
+    // si no había link: además abre "+ Agregar dato" en 📺 Transmisión para pegar el que encontraron (queda para todos)
+    if (!link && window.Base?.activa()) {
+      estado.agregandoEn = e.id;
+      estado.borradorDato[e.id] = { ...(estado.borradorDato[e.id] || {}), tipo: "transmision" };
+      const nueva = tarjetaEvento(e, $("#tpl-evento")); t.replaceWith(nueva);
+      setTimeout(() => nueva.querySelector(".link-dato")?.focus(), 0);
+    }
   });
   if (link) b.classList.add("con-tv");
   t.querySelector(".pie")?.insertBefore(b, t.querySelector(".pie .publicado") || null);
@@ -1590,7 +1602,19 @@ function listaClasif() {
     ...base.filter((a) => String(a.texto || "").startsWith("[QUITAR-CLASIFICADO]")).map((a) => String(a.texto).split("]")[1].trim())]);
   const todos = new Map();
   for (const c of [...(estado.clasifBot.del_doc || []), ...(estado.clasifBot.a_mano || []).map((c) => ({ ...c, mano: true })), ...vivos]) todos.set(c.id, c);
-  return [...todos.values()].filter((c) => !quitados.has(c.id));
+  // misma persona en los mismos Juegos (ej. cargado a mano y después detectado en el Doc) = uno solo:
+  // manda el de a mano y completa lo que le falte con el otro; "Quitar" saca los dos
+  const unidos = new Map();
+  for (const c of [...todos.values()].filter((c) => !quitados.has(c.id))) {
+    const k = sinTildes(c.quien).replace(/[^a-z0-9]/g, "") + "|" + (/paral/i.test(c.juegos || "") ? "p" : "o");
+    const ya = unidos.get(k);
+    if (!ya) { unidos.set(k, { ...c, otros: [] }); continue; }
+    const [pri, seg] = (c.mano && !ya.mano) ? [c, ya] : [ya, c];
+    const junto = { ...seg, ...Object.fromEntries(Object.entries(pri).filter(([, v]) => v !== "" && v != null)), otros: [...(ya.otros || []), seg] };
+    if (!pri.texto || pri.texto === pri.quien) junto.texto = seg.texto || pri.texto;
+    unidos.set(k, junto);
+  }
+  return [...unidos.values()];
 }
 // formulario para cargar un clasificado directo en el sector (sin pasar por un evento)
 function formClasif(lista) {
@@ -1661,7 +1685,10 @@ function dibujarClasif(lista) {
       };
       if (window.Graficas) pie.append(boton("🎨 Gráfica", abrir("clasificado")), boton("📱 Historia", abrir("s-clasificado")));
       if (window.Base?.activa()) pie.append(boton("Quitar", async () => {
-        try { await (c.idBase ? Base.borrarDato(c.idBase) : Base.agregarDato({ evento_id: "clasif:" + c.id, evento_titulo: c.quien.slice(0, 200), tipo: "dato", texto: "[QUITAR-CLASIFICADO] " + c.id })); avisar("Quitado"); }
+        try {
+          for (const x of [c, ...(c.otros || [])]) await (x.idBase ? Base.borrarDato(x.idBase) : Base.agregarDato({ evento_id: "clasif:" + x.id, evento_titulo: x.quien.slice(0, 200), tipo: "dato", texto: "[QUITAR-CLASIFICADO] " + x.id }));
+          avisar("Quitado");
+        }
         catch { avisar("No se pudo quitar"); }
       }));
       t.append(pie); lista.append(t);
