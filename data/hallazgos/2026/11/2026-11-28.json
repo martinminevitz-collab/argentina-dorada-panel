@@ -1,5 +1,47 @@
 [
  {
+  "id": "c3154b0ab883",
+  "titulo": "Los Pumas 7's comenzaron el Seven de Dubai con un triunfazo ante Sudáfrica",
+  "resumen": "Los Pumas 7's comenzaron el Seven de Dubai con un triunfazo ante Sudáfrica ESPN Argentina",
+  "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNUS1TUWZVWnZ3THo2NXBfcEJJTTUwY3h1SUI0ZGpNdmVPTExPTGt1bFh2THgxYUZxVDFyODQzOGd0UnQ0elJNRVFmZ18tZVFUdEFMWDk5b0F5bHFYMXd4MFpUMVRiUnBXeDVuTTNuTHhKUTBhWnBVdVdIQXJaMEhCM2NxQ0xqUTI4RXBFNHE4WGYwUzBQSkZPM0VxY0p1TFdMWXQwU0NpdjNocVlTNFp3N2NRdmNwNVFBd1EyQQ?oc=5",
+  "fuente": "ESPN Argentina",
+  "deporte": "Rugby",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-28T08:20+00:00",
+  "encontrado": "2026-11-28T07:10-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
+  "id": "454998222c79",
+  "titulo": "Gran triunfo de Los Pumas 7s ante Sudáfrica en el debut de Dubai",
+  "resumen": "Gran triunfo de Los Pumas 7s ante Sudáfrica en el debut de Dubai Rugby Champagne",
+  "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNLWVUN1JDbVdlNXNEQU5VR2JlazA3TmxiZVJOUHBGZXZxX2Y5bGpSSVg5N0l4Q2NHaTY2Mkxmb2k0TDNIYXhiRGllOE5ndk1MVFJoVGUxN2llVUx2TnQ3M01VZ0xlUlVxeWV0bVhaMEdkZGZueE1VY0VEOFFaN2JJMkR2N1puZXJzVkhoWFdCMHc5RDhsV1ItOUVJWC10VF9zUnMxNlZFdmJLS2txeXZraA?oc=5",
+  "fuente": "Rugby Champagne",
+  "deporte": "Rugby y Rugby 7s",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-28T08:18+00:00",
+  "encontrado": "2026-11-28T07:10-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
+  "id": "8c9ed587c246",
+  "titulo": "¡EN VIVO! Con Los Pumas 7's, seguí toda la acción del Seven de Dubai",
+  "resumen": "¡EN VIVO! Con Los Pumas 7's, seguí toda la acción del Seven de Dubai ESPN Argentina",
+  "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQUEh3TUxfdTFRRE9BSi01dDUtcm9Ic2NWWExqWTQ3azhwbHFrZld0dHFtemRrUWZrSTZfeFJDWmdET0hMZlVXYU9OSFFXZXhVUFpudDBxdXZsSFBaTjVrT2s1OWt4MTNVMHd0eFdNVk9CWE9vclZGQWRheUtPRXlEZHVZUlFmWl9ERHp1NG92enFlN3ZtUU1kTFdfd1Z4WHZMN3htYVZtUzQ1OTM2ZGotaXJrX2hJVHQzVEdQdFFnYw?oc=5",
+  "fuente": "ESPN Argentina",
+  "deporte": "Rugby",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-28T07:37+00:00",
+  "encontrado": "2026-11-28T07:10-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
   "id": "bb8e5896b42f",
   "titulo": "Sudáfrica 7s vs Argentina 7s EN VIVO: previa y horario | SVNS 26/27 1° Etapa - Dubai",
   "resumen": "Sudáfrica 7s vs Argentina 7s EN VIVO: previa y horario | SVNS 26/27 1° Etapa - Dubai Rugby Champagne",
@@ -10,6 +52,20 @@
   "en_buenos_aires": false,
   "publicado": "2026-11-28T07:36+00:00",
   "encontrado": "2026-11-28T04:37-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
+  "id": "bb034a193185",
+  "titulo": "Mundial Sub 17 2026: fixture y resultados de Argentina",
+  "resumen": "Mundial Sub 17 2026: fixture y resultados de Argentina ESPN Argentina",
+  "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNU2ZFQUthSndrQl9DREJwUzZtQlJjdzJkNzEzQ3dQYXNqTUt5bXljV1UzUk5haUZmWlMxQjl1WFFkLVoyWEhoa3MtNS1GX1pWY2R2bnZyRXNETlhDeGJhaHAzbDBxaW1yOVFJaTN4ZWttVGhjX1RTYU9ncVhMbFd3OFdhcGxPbVNYTlBSdHhUZVo0d1FCOVI5R2hXVHhGbHc?oc=5",
+  "fuente": "ESPN Argentina",
+  "deporte": "Golf",
+  "tipo": "resultado",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-28T06:50+00:00",
+  "encontrado": "2026-11-28T07:09-03:00",
   "bot": "resultados",
   "noticia": false
  },
@@ -112,6 +168,20 @@
   "noticia": false
  },
  {
+  "id": "bac46d74cad0",
+  "titulo": "Mundial de fútbol para personas de talla baja: los Leones del Atlas golean a Bolivia y se meten en la final",
+  "resumen": "Mundial de fútbol para personas de talla baja: los Leones del Atlas golean a Bolivia y se meten en la final Le360",
+  "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxQczZrLWpad2xaTkd5S1Q0YXdTMXo5ZktYWEJDQkxVTks5akxNVGhOTXk3TDZkMkJlRjhPek1CbHVfVjJQZHNBTW1OUTQtb2VWSUdvdW5TMkJHUFJkSkNCVm9uaEV5bEMtNUZpOWdHcndzSXh3MlJfMkRINHU5OE5Ra3l0cjItS0FIMm1RcE0wOUg5YUI4WXdQbG51aE1vM2lfTjNzVnlZY3pWMUlfMmtqZmNyaEpfYXFUYUw3eXFOd1BVeVFoV1VYZm8zaHpHU1FFTnFpSGdfdXpjUTRxbVJrVV9rM3A3Y2VYVnFrS09n?oc=5",
+  "fuente": "Le360",
+  "deporte": "Hockey",
+  "tipo": "resultado",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-28T01:00+00:00",
+  "encontrado": "2026-11-28T07:09-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
   "id": "9302038bcf55",
   "titulo": "Dep. Madryn vs. Gimnasia J. (28 de Nov., 2026) Resultados en Vivo",
   "resumen": "Dep. Madryn vs. Gimnasia J. (28 de Nov., 2026) Resultados en Vivo ESPN Argentina",
@@ -150,6 +220,20 @@
   "en_buenos_aires": false,
   "publicado": "2026-11-28T00:43+00:00",
   "encontrado": "2026-11-28T04:36-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
+  "id": "5ce149e81b02",
+  "titulo": "Mundial Sub-17: así quedaron los 16vos de final, con México, Argentina, Venezuela y Colombia como protagonistas",
+  "resumen": "Mundial Sub-17: así quedaron los 16vos de final, con México, Argentina, Venezuela y Colombia como protagonistas Yahoo",
+  "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOZ2lkRG1maGVOMlhhR2NWTXhOd1ZrSWJxZHJtZGRNVThMNXJSczF5Mmd4ZURHZEVLV3hOaW5MVlNVZlRhX0phbHhrdEtiWGV4N0xUdW5GTXZyOFExQTN6VkFtR3h1d1hjbmVQMzVIQkZXekJ1dHVIOWF6NFg1Q1FUZ0VnN08xRXIwRmZpV3V1NA?oc=5",
+  "fuente": "Yahoo",
+  "deporte": "Futbol",
+  "tipo": "resultado",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-28T00:26+00:00",
+  "encontrado": "2026-11-28T07:09-03:00",
   "bot": "resultados",
   "noticia": false
  },
@@ -602,6 +686,20 @@
   "noticia": false
  },
  {
+  "id": "36ebada0a911",
+  "titulo": "Por segundo año consecutivo Claudio Borghi campeón del Open Argentina de Jiu Jitsu - El Mirador",
+  "resumen": "Por segundo año consecutivo Claudio Borghi campeón del Open Argentina de Jiu Jitsu El Mirador – El Medio de la Gente",
+  "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPVFBXVFA1NWtXUDdkNUx0YXhjWkVvVm9wU19lZjhSX2U1bTZNYVpCODY1RWhxRnE2SnJ2OUpNa1ljNmtpVFFRbElXeVRjTGJkdnZlcGpQcVFYNVNzSnhkMjRVYnZPX0c2YzktTnhzM3NfLUZLUUxBNUlTZXFKMWZvdWZ3MjQ4Ql9sWW1BTkt2ajZCbmtUQXpyYlRQWmNFZzBvZGlJdWw5ODBhU3Fm?oc=5",
+  "fuente": "El Mirador – El Medio de la Gente",
+  "deporte": "Jiu-jitsu",
+  "tipo": "resultado",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-27T12:16+00:00",
+  "encontrado": "2026-11-28T07:09-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
   "id": "99d04903e9de",
   "titulo": "La Selección argentina de básquet derrotó a Bahamas y quedó a un paso de la clasificación mundialista",
   "resumen": "La Selección argentina de básquet derrotó a Bahamas y quedó a un paso de la clasificación mundialista MinutoYA",
@@ -696,6 +794,20 @@
   "en_buenos_aires": false,
   "publicado": "2026-11-27T05:43+00:00",
   "encontrado": "2026-11-28T01:19-03:00",
+  "bot": "resultados",
+  "noticia": false
+ },
+ {
+  "id": "a81568b79f10",
+  "titulo": "De la sorpresa por Delbonis a los elogios a Orsanic: la obtención de la Copa Davis 2016, en palabras de Diego Maradona",
+  "resumen": "De la sorpresa por Delbonis a los elogios a Orsanic: la obtención de la Copa Davis 2016, en palabras de Diego Maradona ESPN Argentina",
+  "link": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxQb1YwR0tFWmNKX1oyTFhra0R5d2RQR2VCZWtCS0w4R1FTU2xrQUxQd3Q3MHRTbkdLanZCVXNyRmlyWkp5ZUJNUUdLQUkzemVEeVdxYUZYbUxVUmV2SDI2UTE3d3VOYUpWTFhIbjl2ZnNKblR2Ymd5WWdYN3NNanhZbG9CRGQ4ZkExaHVHS25QbWNDc2hxWjE4dDh4amNyUXlDajdzdGpQVXdLR1lDR0tfMWdGYnRWc25Iai11UEd1RzVZZlJka2lvUHBqLV8tUkZwOWlBQnIybDB4Yk9YZ3V0U3lybVhoRHdvWWhpXzlQYUJuYXVORVkyUQ?oc=5",
+  "fuente": "ESPN Argentina",
+  "deporte": "Tenis",
+  "tipo": "otro",
+  "en_buenos_aires": false,
+  "publicado": "2026-11-27T03:24+00:00",
+  "encontrado": "2026-11-28T07:10-03:00",
   "bot": "resultados",
   "noticia": false
  },
