@@ -606,10 +606,79 @@
        "t": "Santiago Bailleres sigue invicto (5 triunfos y 1 empate). María Cabanillas ganó sus 4 partidos del 2° día, Ana Giuliano le ganó 8/7 a Helena Oviedo (PAR) y Mercedes Aldana 7/6 a Sofía Blanco (BOL)"
       }
      ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.aag.org.ar/argentina-busca-un-nuevo-titulo-en-damas-en-la-copa-los-andes/",
+       "href": "https://www.aag.org.ar/argentina-busca-un-nuevo-titulo-en-damas-en-la-copa-los-andes/"
+      },
+      {
+       "t": " (Día 3, AAG)"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://fesgolf.org/copa-los-andes-brasil-y-colombia-llegan-como-lideres-a-la-jornada-definitiva/",
+       "href": "https://fesgolf.org/copa-los-andes-brasil-y-colombia-llegan-como-lideres-a-la-jornada-definitiva/"
+      },
+      {
+       "t": " (Posiciones día 3)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Día 3 (viernes 27/11)",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Damas: le ganó a Chile 2-0 (7-5 en puntos chicos) y a Venezuela 2-0 (8-4). Argentina es 2° con 10 puntos, a 2 de Colombia (12); 3° Perú con 9"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Mercedes Aldana y Malena Castro ganaron sus foursomes vs Chile y Venezuela. Castro ganó sus dos individuales y Ana Giuliano le ganó 8/7 a Florencia Dufey (CHI) y 4/3 a Lucía Ramírez (VEN)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Caballeros: le ganó a Uruguay 2-0 (9-3) y perdió con Perú 0-2 (5-7). Argentina es 4° con 7 puntos (lideran Brasil 12, Colombia 11 y Perú 10)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Las damas cierran el sábado 28/11 vs Perú y Colombia con chances de ganar el título",
+       "b": true
+      }
+     ]
     }
    ],
    "id": "2c66086da0a9",
-   "version": "731c295356",
+   "version": "994ba5f0b4",
    "publicado_en_doc": false,
    "visto": "2026-11-28"
   },
@@ -1057,6 +1126,26 @@
      ]
     },
     {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://femepashidi.com.mx/resultados/mexcu2026/CAT004RS.htm",
+       "href": "https://femepashidi.com.mx/resultados/mexcu2026/CAT004RS.htm"
+      },
+      {
+       "t": " (Resultados Junior Femenino)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "En Junior Femenino, Stefaniia Soloveva es 12° con 34.50 puntos y Lola Ocampo 28° con 17.05 (Creo que es la clasificación tras el programa corto)"
+      }
+     ]
+    },
+    {
      "tipo": "texto",
      "partes": [
       {
@@ -1074,7 +1163,7 @@
     "c6e4bd1a"
    ],
    "id": "4fbf664ae03e",
-   "version": "d63c344d9d",
+   "version": "7ae51b0c14",
    "publicado_en_doc": false,
    "visto": "2026-11-28"
   },
@@ -1478,6 +1567,151 @@
    "version": "04e935d202",
    "publicado_en_doc": false,
    "terminado_desde": "2026-11-25",
+   "visto": "2026-11-28"
+  },
+  "6e4c0acfdf32": {
+   "titulo": "RUGBY 7 - HSBC SVNS 2026-27 EN DUBÁI, EMIRATOS ÁRABES UNIDOS (28 al 29 de noviembre)",
+   "deporte": "RUGBY 7",
+   "evento": "HSBC SVNS 2026-27 EN DUBÁI, EMIRATOS ÁRABES UNIDOS",
+   "fechas": "28 al 29 de noviembre",
+   "etiqueta": "en_curso",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://hoydia.com.ar/deportes/rugby/el-circuito-mundial-de-seven-confirmo-las-fechas-y-sedes-para-la-temporada-2026-27/",
+       "href": "https://hoydia.com.ar/deportes/rugby/el-circuito-mundial-de-seven-confirmo-las-fechas-y-sedes-para-la-temporada-2026-27/"
+      },
+      {
+       "t": " (Info)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Los Pumas 7s arrancan la temporada en Dubái"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.lanacion.com.ar/deportes/rugby/fixture-de-los-pumas-7s-para-el-seven-de-dubai-por-el-circuito-mundial-2026-2027-nid24112026/",
+       "href": "https://www.lanacion.com.ar/deportes/rugby/fixture-de-los-pumas-7s-para-el-seven-de-dubai-por-el-circuito-mundial-2026-2027-nid24112026/"
+      },
+      {
+       "t": " (Fixture)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Grupo A con Sudáfrica, Estados Unidos y Australia",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.diariouno.com.ar/ovacion/rugby/como-les-fue-los-pumas-7s-la-jornada-inicial-del-seven-dubai-n1620804",
+       "href": "https://www.diariouno.com.ar/ovacion/rugby/como-les-fue-los-pumas-7s-la-jornada-inicial-del-seven-dubai-n1620804"
+      },
+      {
+       "t": " (Resultados)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Le ganó 26-19 a Sudáfrica (Luciano González x3 y Matteo Graziano; conversiones de Santiago Vera Feld x2 y Santiago Mare)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Le ganó 35-24 a Estados Unidos (Luciano González x2, Matteo Graziano, Santiago Vera Feld y Martiniano Arrieta; Vera Feld convirtió las 5) (Creo: La Nación lo da 35-26)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Con los dos triunfos quedó prácticamente en semis: le alcanza con perder por menos de 7 vs Australia"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "vs Australia el sábado 28/11 a las 12:16hs",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.lanacion.com.ar/deportes/rugby/plantel-de-los-pumas-7s-para-el-seven-de-dubai-del-circuito-mundial-2026-2027-nid25112026/",
+       "href": "https://www.lanacion.com.ar/deportes/rugby/plantel-de-los-pumas-7s-para-el-seven-de-dubai-del-circuito-mundial-2026-2027-nid25112026/"
+      },
+      {
+       "t": " (Plantel)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Plantel",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Santiago Álvarez, Martiniano Arrieta, Juan Patricio Batac, Francisco Calello, Sebastián Dubuc, Luciano González, Matteo Graziano, Luca Juliano, Santiago Mare, Marcos Moneta, Joaquín Pellandini, Gregorio Pérez Pardo, Santiago Vera Feld y Santino Zangara. DT: Santiago Gómez Cora"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Transmisión: Fox Sports y Disney+ Premium "
+      },
+      {
+       "t": "https://www.lanacion.com.ar/deportes/rugby/fixture-de-los-pumas-7s-para-el-seven-de-dubai-por-el-circuito-mundial-2026-2027-nid24112026/",
+       "href": "https://www.lanacion.com.ar/deportes/rugby/fixture-de-los-pumas-7s-para-el-seven-de-dubai-por-el-circuito-mundial-2026-2027-nid24112026/"
+      }
+     ]
+    }
+   ],
+   "id": "6e4c0acfdf32",
+   "version": "3b358ba2fa",
+   "publicado_en_doc": false,
    "visto": "2026-11-28"
   },
   "7749c05218ce": {
