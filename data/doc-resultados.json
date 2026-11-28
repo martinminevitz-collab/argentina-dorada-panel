@@ -1,6 +1,6 @@
 {
- "leido": "2026-11-27T11:59-03:00",
- "actualizado_doc": "27/11/2026 11:20",
+ "leido": "2026-11-27T23:56-03:00",
+ "actualizado_doc": "27/11/2026 22:56",
  "eventos": [
   {
    "titulo": "GOLF - WALA (WOMENS AMATEUR LATIN AMERICA) EN GUATEMALA",
@@ -1862,6 +1862,26 @@
      ]
     },
     {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://noticiasargentinas.com/deportes/colapinto-en-la-formula-1--se-pone-en-marcha-la-actividad-en-el-gp-de-qatar_a6b0819d0272556b8ed75ff4f",
+       "href": "https://noticiasargentinas.com/deportes/colapinto-en-la-formula-1--se-pone-en-marcha-la-actividad-en-el-gp-de-qatar_a6b0819d0272556b8ed75ff4f"
+      },
+      {
+       "t": " (Prácticas)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Viernes 27/11: Colapinto fue 12° en la FP1 con 1:25.409 (a 2.192 de Kimi Antonelli) y 15° en la FP2 con 1:25.733. Antonelli fue el más rápido en las dos"
+      }
+     ]
+    },
+    {
      "tipo": "texto",
      "partes": [
       {
@@ -1883,7 +1903,7 @@
     }
    ],
    "id": "3f83ee1c3780",
-   "version": "e33ff50056",
+   "version": "987964b2e8",
    "publicado_en_doc": false
   },
   {
@@ -2159,10 +2179,26 @@
      ]
     },
     {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.infobae.com/deportes/2026/11/27/se-definio-el-rival-de-argentina-en-el-mundial-sub-17-enfrentara-a-mexico-en-16avos-de-final/",
+       "href": "https://www.infobae.com/deportes/2026/11/27/se-definio-el-rival-de-argentina-en-el-mundial-sub-17-enfrentara-a-mexico-en-16avos-de-final/"
+      },
+      {
+       "t": " (Rival de 16avos)"
+      }
+     ]
+    },
+    {
      "tipo": "texto",
      "partes": [
       {
-       "t": "El rival de 16avos se conoce el viernes 27/11, cuando termina la fase de grupos. Los 16avos arrancan el lunes 30/11"
+       "t": "16avos vs México el lunes 30/11 a las 12hs",
+       "b": true
+      },
+      {
+       "t": " en el Aspire Zone (cancha 2)"
       }
      ]
     },
@@ -2209,7 +2245,7 @@
     }
    ],
    "id": "da9041c32bff",
-   "version": "e47558c80a",
+   "version": "3699a273f0",
    "publicado_en_doc": false
   },
   {
@@ -2336,10 +2372,22 @@
      ]
     },
     {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.unoentrerios.com.ar/ovacion/argentina-perdio-paraguay-y-jugara-el-tercer-puesto-el-mundial-talla-baja-n10294641.html",
+       "href": "https://www.unoentrerios.com.ar/ovacion/argentina-perdio-paraguay-y-jugara-el-tercer-puesto-el-mundial-talla-baja-n10294641.html"
+      },
+      {
+       "t": " (Resultado semis)"
+      }
+     ]
+    },
+    {
      "tipo": "sub",
      "partes": [
       {
-       "t": "Semis vs Paraguay (le ganó 4-3 a Brasil) el viernes 27/11 a las 16:15hs (Creo)",
+       "t": "Semis vs Paraguay (viernes 27/11)",
        "b": true
       }
      ]
@@ -2348,7 +2396,19 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "La otra semi es Marruecos vs el ganador de Colombia vs Bolivia"
+       "t": "Perdió 4-1 vs Paraguay y se quedó sin chance de defender el título. Descontó Martín Antúnez cuando iba 2-0 abajo"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "3er puesto vs Bolivia el domingo 29/11",
+       "b": true
+      },
+      {
+       "t": " (Creo)"
       }
      ]
     }
@@ -2357,7 +2417,7 @@
     "779d361e"
    ],
    "id": "52871f18efdc",
-   "version": "fe7e0a0dd9",
+   "version": "470a296eb7",
    "publicado_en_doc": false
   },
   {
@@ -3112,12 +3172,12 @@
    "publicado_en_doc": false
   },
   {
-   "titulo": "HANDBALL - TORNEO INTERNACIONAL DE ESPAÑA FEMENINO (27 al 29 de noviembre)",
+   "titulo": "HANDBALL - TORNEO INTERNACIONAL DE ESPAÑA FEMENINO EN PUERTOLLANO, ESPAÑA (27 al 29 de noviembre)",
    "deporte": "HANDBALL",
-   "evento": "TORNEO INTERNACIONAL DE ESPAÑA FEMENINO",
+   "evento": "TORNEO INTERNACIONAL DE ESPAÑA FEMENINO EN PUERTOLLANO, ESPAÑA",
    "fechas": "27 al 29 de noviembre",
-   "etiqueta": "agenda",
-   "seccion": "agenda",
+   "etiqueta": "en_curso",
+   "seccion": "resultados",
    "ya_publicado": false,
    "bloques": [
     {
@@ -3141,11 +3201,31 @@
      ]
     },
     {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://handballargentina.org/cah/2026/11/la-garra-le-gano-a-tunez-en-el-debut-del-torneo-internacional-de-espana/",
+       "href": "https://handballargentina.org/cah/2026/11/la-garra-le-gano-a-tunez-en-el-debut-del-torneo-internacional-de-espana/"
+      },
+      {
+       "t": " (Resultado)"
+      }
+     ]
+    },
+    {
      "tipo": "sub",
      "partes": [
       {
-       "t": "vs Túnez el viernes 27/11 a las 14:15hs",
+       "t": "vs Túnez (viernes 27/11)",
        "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Le ganó 28-26 a Túnez (Malena Cavo 7, Micaela Casasola 4, Macarena Sans 3, Yamila Baggio 3, Mora Carballo 2, Luciana Martinelli 2, Rosario Urban 2, Carolina Bono 2, Lucía Dalle Crode 1, Antonela Mena 1 y Sol Azcune 1)"
       }
      ]
     },
@@ -3168,15 +3248,307 @@
      ]
     }
    ],
-   "id": "23f1051ef264",
-   "version": "fe6421bdba",
+   "id": "55fa6f0b3b60",
+   "version": "e7c4ab9096",
    "publicado_en_doc": false
   },
   {
-   "titulo": "RUGBY 7 - HSBC SVNS 2026-27: DUBÁI Y CIUDAD DEL CABO (28 de noviembre al 6 de diciembre)",
+   "titulo": "PATINAJE ARTÍSTICO SOBRE HIELO - COPA DE MÉXICO Y OPEN DE MÉXICO EN MÉXICO (22 al 28 de noviembre)",
+   "deporte": "PATINAJE ARTÍSTICO SOBRE HIELO",
+   "evento": "COPA DE MÉXICO Y OPEN DE MÉXICO EN MÉXICO",
+   "fechas": "22 al 28 de noviembre",
+   "etiqueta": "en_curso",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://femepashidi.com.mx/resultados/mexcu2026/",
+       "href": "https://femepashidi.com.mx/resultados/mexcu2026/"
+      },
+      {
+       "t": " (Resultados)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Open de México",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Luana Beltran ("
+      },
+      {
+       "t": "https://www.instagram.com/luanatheartist/",
+       "href": "https://www.instagram.com/luanatheartist/"
+      },
+      {
+       "t": ") logró la medalla "
+      },
+      {
+       "t": "DORADA",
+       "b": true
+      },
+      {
+       "t": " en el Solo Ice Dance"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Copa de México",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Compiten Stefaniia Soloveva ("
+      },
+      {
+       "t": "https://www.instagram.com/soloveva_s__/",
+       "href": "https://www.instagram.com/soloveva_s__/"
+      },
+      {
+       "t": ") y Lola Ocampo ("
+      },
+      {
+       "t": "https://www.instagram.com/lolaocampoo/",
+       "href": "https://www.instagram.com/lolaocampoo/"
+      },
+      {
+       "t": "). Ya hicieron el programa corto y el sábado 28/11 compiten en el programa largo"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Transmisión: YouTube de la Federación Mexicana "
+      },
+      {
+       "t": "https://www.youtube.com/@femepashidi",
+       "href": "https://www.youtube.com/@femepashidi"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "fd34bcf0",
+    "c6e4bd1a"
+   ],
+   "id": "4fbf664ae03e",
+   "version": "d63c344d9d",
+   "publicado_en_doc": false
+  },
+  {
+   "titulo": "CLAVADOS - COPA CONSADA EN JOÃO PESSOA, BRASIL (23 al 28 de noviembre)",
+   "deporte": "CLAVADOS",
+   "evento": "COPA CONSADA EN JOÃO PESSOA, BRASIL",
+   "fechas": "23 al 28 de noviembre",
+   "etiqueta": "en_curso",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.instagram.com/consadaoficial/",
+       "href": "https://www.instagram.com/consadaoficial/"
+      },
+      {
+       "t": " (CONSADA)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Trampolín 1m Femenino Senior",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Azul Chiorazzo ("
+      },
+      {
+       "t": "https://www.instagram.com/azulchiorazzo/",
+       "href": "https://www.instagram.com/azulchiorazzo/"
+      },
+      {
+       "t": ") logró la medalla "
+      },
+      {
+       "t": "PLATEADA",
+       "b": true
+      },
+      {
+       "t": " con 221.50 puntos"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Trampolín 3m Sincronizado Femenino Senior",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Azul Chiorazzo ("
+      },
+      {
+       "t": "https://www.instagram.com/azulchiorazzo/",
+       "href": "https://www.instagram.com/azulchiorazzo/"
+      },
+      {
+       "t": ") y Auka Sosa ("
+      },
+      {
+       "t": "https://www.instagram.com/aukasosa/",
+       "href": "https://www.instagram.com/aukasosa/"
+      },
+      {
+       "t": ") lograron la medalla de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "e5b34f6a",
+    "82b660f2"
+   ],
+   "id": "f3cfad5fd630",
+   "version": "3f0bcf5089",
+   "publicado_en_doc": false
+  },
+  {
+   "titulo": "BMX FREESTYLE - COPA DEL MUNDO EN SAKAI, JAPÓN (26 al 29 de noviembre)",
+   "deporte": "BMX FREESTYLE",
+   "evento": "COPA DEL MUNDO EN SAKAI, JAPÓN",
+   "fechas": "26 al 29 de noviembre",
+   "etiqueta": "en_curso",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.uci.org/competition-hub/2026-uci-bmx-freestyle-world-cup-park-and-flatland/19nvb2ERrb8zJiGcehM38w",
+       "href": "https://www.uci.org/competition-hub/2026-uci-bmx-freestyle-world-cup-park-and-flatland/19nvb2ERrb8zJiGcehM38w"
+      },
+      {
+       "t": " (UCI)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Park Masculino",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Manuel Turone ("
+      },
+      {
+       "t": "https://www.instagram.com/manu_turone/",
+       "href": "https://www.instagram.com/manu_turone/"
+      },
+      {
+       "t": ") fue 18° en la clasificación con 76.20 puntos y "
+      },
+      {
+       "t": "CLASIFICÓ A LA SEMIFINAL",
+       "b": true
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "c4ef77e2"
+   ],
+   "id": "78530b96ebb7",
+   "version": "e5c8f05ac2",
+   "publicado_en_doc": false
+  },
+  {
+   "titulo": "PARA BÁDMINTON - VIII CAMPEONATO SUDAMERICANO EN ASUNCIÓN, PARAGUAY (27 de noviembre al 2 de diciembre)",
+   "deporte": "PARA BÁDMINTON",
+   "evento": "VIII CAMPEONATO SUDAMERICANO EN ASUNCIÓN, PARAGUAY",
+   "fechas": "27 de noviembre al 2 de diciembre",
+   "etiqueta": "en_curso",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Compite Jonatan Mattos ("
+      },
+      {
+       "t": "https://www.instagram.com/jonatanmattos9/",
+       "href": "https://www.instagram.com/jonatanmattos9/"
+      },
+      {
+       "t": ")"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "eb07ac63"
+   ],
+   "id": "78b397fb3996",
+   "version": "6ed9074ae5",
+   "publicado_en_doc": false
+  },
+  {
+   "titulo": "RUGBY 7 - HSBC SVNS 2026-27 EN DUBÁI, EMIRATOS ÁRABES UNIDOS (28 al 29 de noviembre)",
    "deporte": "RUGBY 7",
-   "evento": "HSBC SVNS 2026-27: DUBÁI Y CIUDAD DEL CABO",
-   "fechas": "28 de noviembre al 6 de diciembre",
+   "evento": "HSBC SVNS 2026-27 EN DUBÁI, EMIRATOS ÁRABES UNIDOS",
+   "fechas": "28 al 29 de noviembre",
    "etiqueta": "agenda",
    "seccion": "agenda",
    "ya_publicado": false,
@@ -3197,7 +3569,7 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "Los Pumas 7s arrancan la temporada en Dubái (UAE) el 28 y 29/11 y siguen en Ciudad del Cabo (RSA) el 5 y 6/12"
+       "t": "Los Pumas 7s arrancan la temporada en Dubái"
       }
      ]
     },
@@ -3217,7 +3589,7 @@
      "tipo": "sub",
      "partes": [
       {
-       "t": "Dubái - Grupo A con Sudáfrica, Estados Unidos y Australia",
+       "t": "Grupo A con Sudáfrica, Estados Unidos y Australia",
        "b": true
       }
      ]
@@ -3268,7 +3640,7 @@
      "tipo": "sub",
      "partes": [
       {
-       "t": "Plantel (Dubái y Ciudad del Cabo)",
+       "t": "Plantel",
        "b": true
       }
      ]
@@ -3294,8 +3666,8 @@
      ]
     }
    ],
-   "id": "f81d46e0ad4e",
-   "version": "1ef102d077",
+   "id": "6e4c0acfdf32",
+   "version": "f3751b8a44",
    "publicado_en_doc": false
   },
   {
@@ -3421,10 +3793,70 @@
        "t": "Cecilia Dieleke: 100m y 200m espalda"
       }
      ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://deportv.gob.ar/polideportivo/mundial-natacion-piscina-corta-agenda-argentinas-nid:19233",
+       "href": "https://deportv.gob.ar/polideportivo/mundial-natacion-piscina-corta-agenda-argentinas-nid:19233"
+      },
+      {
+       "t": " (Agenda, hora argentina)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Lunes 30/11 desde las 23hs: Hein en 400m libre y 200m combinado; Ceballos y Dieleke en 100m espalda"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Martes 1/12 desde las 23hs: Ceballos en 100m pecho"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Miércoles 2/12 desde las 23hs: Hein en 800m libre; Ceballos y Dieleke en 50m espalda"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Jueves 3/12 desde las 23hs: Ceballos en 200m pecho"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Viernes 4/12 desde las 23hs: Hein en 400m combinado; Ceballos en 50m pecho"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Sábado 5/12 (desde las 8hs y las 23hs): Dieleke y Santillán en 200m espalda; posta 4x100m combinado con Hein, Ceballos, Dieleke y Santillán"
+      }
+     ]
     }
    ],
    "id": "f6c6acb70e43",
-   "version": "616f89e135",
+   "version": "fabd158231",
    "publicado_en_doc": false
   },
   {
@@ -3664,6 +4096,79 @@
    "publicado_en_doc": false
   },
   {
+   "titulo": "BEACH HANDBALL - SUR-CENTRO JUVENIL EN PUNTA ROCAS, PERÚ (2 al 5 de diciembre)",
+   "deporte": "BEACH HANDBALL",
+   "evento": "SUR-CENTRO JUVENIL EN PUNTA ROCAS, PERÚ",
+   "fechas": "2 al 5 de diciembre",
+   "etiqueta": "agenda",
+   "seccion": "agenda",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Femenino (",
+       "b": true
+      },
+      {
+       "t": "https://www.instagram.com/kamikazesbh/",
+       "b": true,
+       "href": "https://www.instagram.com/kamikazesbh/"
+      },
+      {
+       "t": ")",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Victoria Trebini, Abril Pacheco, Emma Bernasconi, Uma Hachlovsky, Chiara Lombardi, Catalina Cassolini, Milena Escalier, Carolina Casalderrey, Sofia Robledo y Lúa Hernández. DT: Celeste Meccia"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Masculino (",
+       "b": true
+      },
+      {
+       "t": "https://www.instagram.com/kamikazesbh/",
+       "b": true,
+       "href": "https://www.instagram.com/kamikazesbh/"
+      },
+      {
+       "t": ")",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Felipe Álvarez, Nicolás Santa Cruz, Demian Goñi, Juan Bautista DIrr, Julían Martínez, Matías Lamas, Victorio DAmore, Daian Kwit, Lucas Sossich y Felipe González Rivero. DT: Andrés Bueno"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "9685d5ce",
+    "6abf4e6c"
+   ],
+   "id": "c5e59897c0ef",
+   "version": "c44996d74f",
+   "publicado_en_doc": false
+  },
+  {
    "titulo": "SURF - SURF FEST PRO LEAGUE BY SOFIA MILANOVICH (3RA FECHA) EN SEÑORITAS, PERU (03 al 06 de diciembre)",
    "deporte": "SURF",
    "evento": "SURF FEST PRO LEAGUE BY SOFIA MILANOVICH (3RA FECHA) EN SEÑORITAS, PERU",
@@ -3716,6 +4221,31 @@
    "publicado_en_doc": false
   },
   {
+   "titulo": "RACQUETBALL - XXXVII CAMPEONATO MUNDIAL JUNIOR EN COCHABAMBA, BOLIVIA (4 al 12 de diciembre)",
+   "deporte": "RACQUETBALL",
+   "evento": "XXXVII CAMPEONATO MUNDIAL JUNIOR EN COCHABAMBA, BOLIVIA",
+   "fechas": "4 al 12 de diciembre",
+   "etiqueta": "agenda",
+   "seccion": "agenda",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faltan los convocados argentinos"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "ff30977a"
+   ],
+   "id": "af6e0389ce6c",
+   "version": "6f75fc154a",
+   "publicado_en_doc": false
+  },
+  {
    "titulo": "DODGEBALL - CAMPEONATO MUNDIAL EN BANGKOK, TAILANDIA (5 al 13 de diciembre)",
    "deporte": "DODGEBALL",
    "evento": "CAMPEONATO MUNDIAL EN BANGKOK, TAILANDIA",
@@ -3737,19 +4267,176 @@
      ]
     },
     {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.dodgeballhub.com/events/world-dodgeball-championship-bangkok-2026-dec-7th-to-12th-2026/about?scheduleView=grid&zoomLevel=4.5",
+       "href": "https://www.dodgeballhub.com/events/world-dodgeball-championship-bangkok-2026-dec-7th-to-12th-2026/about?scheduleView=grid&zoomLevel=4.5"
+      },
+      {
+       "t": " (Fuente)"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.instagram.com/dodgeball.ar/p/DgQTcYYpQOt/?img_index=1",
+       "href": "https://www.instagram.com/dodgeball.ar/p/DgQTcYYpQOt/?img_index=1"
+      },
+      {
+       "t": " (Convocados)"
+      }
+     ]
+    },
+    {
      "tipo": "texto",
      "partes": [
       {
-       "t": "Faltan equipos argentinos y cronograma"
+       "t": "Se sortearon los grupos:"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "FOAM",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Masculino: Argentina estará con Canadá, Colombia, España, India y Pakistán"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Femenino: con Estados Unidos, México, Austria, China Taipéi e Irlanda"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Mixto: con Canadá, Austria, España, Singapur y Burkina Faso"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "CLOTH",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Masculino: con Francia, Suecia, Gales, Venezuela y Sudáfrica"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Femenino: con Italia, Estados Unidos, México, España y Sudáfrica"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Mixto: con Estados Unidos, Canadá, Escocia y Alemania"
       }
      ]
     }
    ],
    "refs_panel": [
-    "d7e8d0e5"
+    "d7e8d0e5",
+    "7d1b4711"
    ],
    "id": "066c3036061d",
-   "version": "4b0ca36307",
+   "version": "b7835fc723",
+   "publicado_en_doc": false
+  },
+  {
+   "titulo": "RUGBY 7 - HSBC SVNS 2026-27 EN CIUDAD DEL CABO, SUDÁFRICA (5 al 6 de diciembre)",
+   "deporte": "RUGBY 7",
+   "evento": "HSBC SVNS 2026-27 EN CIUDAD DEL CABO, SUDÁFRICA",
+   "fechas": "5 al 6 de diciembre",
+   "etiqueta": "agenda",
+   "seccion": "agenda",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://hoydia.com.ar/deportes/rugby/el-circuito-mundial-de-seven-confirmo-las-fechas-y-sedes-para-la-temporada-2026-27/",
+       "href": "https://hoydia.com.ar/deportes/rugby/el-circuito-mundial-de-seven-confirmo-las-fechas-y-sedes-para-la-temporada-2026-27/"
+      },
+      {
+       "t": " (Info)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Segunda etapa del Circuito Mundial, después de Dubái"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.lanacion.com.ar/deportes/rugby/plantel-de-los-pumas-7s-para-el-seven-de-dubai-del-circuito-mundial-2026-2027-nid25112026/",
+       "href": "https://www.lanacion.com.ar/deportes/rugby/plantel-de-los-pumas-7s-para-el-seven-de-dubai-del-circuito-mundial-2026-2027-nid25112026/"
+      },
+      {
+       "t": " (Plantel)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Plantel (el mismo de Dubái)",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Santiago Álvarez, Martiniano Arrieta, Juan Patricio Batac, Francisco Calello, Sebastián Dubuc, Luciano González, Matteo Graziano, Luca Juliano, Santiago Mare, Marcos Moneta, Joaquín Pellandini, Gregorio Pérez Pardo, Santiago Vera Feld y Santino Zangara. DT: Santiago Gómez Cora"
+      }
+     ]
+    }
+   ],
+   "id": "42f3e9688119",
+   "version": "b0ba38573c",
    "publicado_en_doc": false
   },
   {
@@ -3809,6 +4496,68 @@
    ],
    "id": "592163c371e5",
    "version": "17572721d5",
+   "publicado_en_doc": false
+  },
+  {
+   "titulo": "ATLETISMO - CAMPEONATO SUDAMERICANO DE CROSS COUNTRY EN PARAGUAY (6 de diciembre)",
+   "deporte": "ATLETISMO",
+   "evento": "CAMPEONATO SUDAMERICANO DE CROSS COUNTRY EN PARAGUAY",
+   "fechas": "6 de diciembre",
+   "etiqueta": "agenda",
+   "seccion": "agenda",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Categorías Mayores, U20 y U18"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "15c3fda3"
+   ],
+   "id": "b606a38a8d28",
+   "version": "7160b14a7f",
+   "publicado_en_doc": false
+  },
+  {
+   "titulo": "BMX STREET - RED BULL RODANDO EN PARQUE SARMIENTO, BUENOS AIRES (6 de diciembre)",
+   "deporte": "BMX STREET",
+   "evento": "RED BULL RODANDO EN PARQUE SARMIENTO, BUENOS AIRES",
+   "fechas": "6 de diciembre",
+   "etiqueta": "agenda",
+   "seccion": "agenda",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.instagram.com/p/DgOIRlOlUHx/?img_index=5",
+       "href": "https://www.instagram.com/p/DgOIRlOlUHx/?img_index=5"
+      },
+      {
+       "t": " (Info)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Primero hay una bicicleteada de 7,5km por la ciudad y después la competencia de 14 a 18hs en el parque. Dani Dhers y Gaby Chaves hacen exhibición"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "07f7a78c"
+   ],
+   "id": "13756cd98568",
+   "version": "d2d389f934",
    "publicado_en_doc": false
   },
   {
@@ -3896,19 +4645,213 @@
      ]
     },
     {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Convocados",
+       "b": true
+      }
+     ]
+    },
+    {
      "tipo": "texto",
      "partes": [
       {
-       "t": "Faltan los convocados argentinos"
+       "t": "Bianca Araya Díaz - Heptatlón"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Olivia Conesa - 100 / 200 / 4x100"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Malena Coronel Romano - Heptatlón"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Coral Di Silvestre Vega - Lanzamiento de Martillo"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Faustina Aracy Domínguez - Salto Largo / 100 c/v"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Juana Echeverría - Salto con Garrocha"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Briza Morena Flores - 800"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Paz Francucci Obal - Relevo 4x100"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Juana Marino - Lanzamiento de Martillo"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Stefania Oblak - Relevo 4x100"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Irene Saray Pernía Sissi - 800 / 1500"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Ornella Agostina Pérez - Lanzamiento de Bala / Lanzamiento de Disco"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Julieta Telias - Relevo 4x100"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Lola Martina Verdini - Salto Alto"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Juan Acosta Ferrera - Lanzamiento de Disco"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Lucas Nahuel Aquino - Lanzamiento de Martillo"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Ian Marco Bianchi - Decatlón"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Lucas Agustín Blanco - Salto Largo / Salto Triple"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Felipe Martín Bond - 800"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Valentino León Bonelli - 800"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Máximo Evis - Salto Alto / Lanzamiento de Jabalina"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Emanuel Elías Quevin - Lanzamiento de Martillo"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Alex Joel Silva Balle - 110 c/v"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Dilan Ariel Tevez - Lanzamiento de Jabalina"
       }
      ]
     }
    ],
    "refs_panel": [
-    "7f5e7c16"
+    "7f5e7c16",
+    "61fb2f1c"
    ],
    "id": "97985d40049c",
-   "version": "03b965b18f",
+   "version": "9512dcf582",
    "publicado_en_doc": false
   },
   {
@@ -4262,6 +5205,117 @@
     "dias": [],
     "deportes": []
    },
+   "publicado_en_doc": false
+  },
+  {
+   "titulo": "VÓLEY - NATIONS LEAGUE MASCULINO (SEMANA 1) EN BRASIL (9 al 13 de junio de 2027)",
+   "deporte": "VÓLEY",
+   "evento": "NATIONS LEAGUE MASCULINO (SEMANA 1) EN BRASIL",
+   "fechas": "9 al 13 de junio de 2027",
+   "etiqueta": "agenda",
+   "seccion": "agenda",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://en.volleyballworld.com/",
+       "href": "https://en.volleyballworld.com/"
+      },
+      {
+       "t": " (Volleyball World)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Estará en el Grupo B con Rusia, Irán, Japón y Brasil"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "5df3085e"
+   ],
+   "id": "3e24446e3d8d",
+   "version": "1187a94ec2",
+   "publicado_en_doc": false
+  },
+  {
+   "titulo": "VÓLEY - NATIONS LEAGUE MASCULINO (SEMANA 2) EN FRANCIA (23 al 27 de junio de 2027)",
+   "deporte": "VÓLEY",
+   "evento": "NATIONS LEAGUE MASCULINO (SEMANA 2) EN FRANCIA",
+   "fechas": "23 al 27 de junio de 2027",
+   "etiqueta": "agenda",
+   "seccion": "agenda",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://en.volleyballworld.com/",
+       "href": "https://en.volleyballworld.com/"
+      },
+      {
+       "t": " (Volleyball World)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Estará en el Grupo A con Cuba, Ucrania, Francia y Polonia"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "14deb70f"
+   ],
+   "id": "14ede9d6d699",
+   "version": "d3b9d7a3f9",
+   "publicado_en_doc": false
+  },
+  {
+   "titulo": "VÓLEY - NATIONS LEAGUE MASCULINO (SEMANA 3) EN BRASIL (14 al 18 de julio de 2027)",
+   "deporte": "VÓLEY",
+   "evento": "NATIONS LEAGUE MASCULINO (SEMANA 3) EN BRASIL",
+   "fechas": "14 al 18 de julio de 2027",
+   "etiqueta": "agenda",
+   "seccion": "agenda",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://en.volleyballworld.com/",
+       "href": "https://en.volleyballworld.com/"
+      },
+      {
+       "t": " (Volleyball World)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Estará en el Grupo A con Eslovenia, Finlandia, Bélgica y Serbia"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "242ea8e0"
+   ],
+   "id": "3e24446e3d8d",
+   "version": "2833d1b395",
    "publicado_en_doc": false
   },
   {

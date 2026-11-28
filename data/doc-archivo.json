@@ -2751,6 +2751,26 @@
      ]
     },
     {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://noticiasargentinas.com/deportes/colapinto-en-la-formula-1--se-pone-en-marcha-la-actividad-en-el-gp-de-qatar_a6b0819d0272556b8ed75ff4f",
+       "href": "https://noticiasargentinas.com/deportes/colapinto-en-la-formula-1--se-pone-en-marcha-la-actividad-en-el-gp-de-qatar_a6b0819d0272556b8ed75ff4f"
+      },
+      {
+       "t": " (Prácticas)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Viernes 27/11: Colapinto fue 12° en la FP1 con 1:25.409 (a 2.192 de Kimi Antonelli) y 15° en la FP2 con 1:25.733. Antonelli fue el más rápido en las dos"
+      }
+     ]
+    },
+    {
      "tipo": "texto",
      "partes": [
       {
@@ -2772,7 +2792,112 @@
     }
    ],
    "id": "3f83ee1c3780",
-   "version": "e33ff50056",
+   "version": "987964b2e8",
+   "publicado_en_doc": false,
+   "visto": "2026-11-27"
+  },
+  "4fbf664ae03e": {
+   "titulo": "PATINAJE ARTÍSTICO SOBRE HIELO - COPA DE MÉXICO Y OPEN DE MÉXICO EN MÉXICO (22 al 28 de noviembre)",
+   "deporte": "PATINAJE ARTÍSTICO SOBRE HIELO",
+   "evento": "COPA DE MÉXICO Y OPEN DE MÉXICO EN MÉXICO",
+   "fechas": "22 al 28 de noviembre",
+   "etiqueta": "en_curso",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://femepashidi.com.mx/resultados/mexcu2026/",
+       "href": "https://femepashidi.com.mx/resultados/mexcu2026/"
+      },
+      {
+       "t": " (Resultados)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Open de México",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Luana Beltran ("
+      },
+      {
+       "t": "https://www.instagram.com/luanatheartist/",
+       "href": "https://www.instagram.com/luanatheartist/"
+      },
+      {
+       "t": ") logró la medalla "
+      },
+      {
+       "t": "DORADA",
+       "b": true
+      },
+      {
+       "t": " en el Solo Ice Dance"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Copa de México",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Compiten Stefaniia Soloveva ("
+      },
+      {
+       "t": "https://www.instagram.com/soloveva_s__/",
+       "href": "https://www.instagram.com/soloveva_s__/"
+      },
+      {
+       "t": ") y Lola Ocampo ("
+      },
+      {
+       "t": "https://www.instagram.com/lolaocampoo/",
+       "href": "https://www.instagram.com/lolaocampoo/"
+      },
+      {
+       "t": "). Ya hicieron el programa corto y el sábado 28/11 compiten en el programa largo"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Transmisión: YouTube de la Federación Mexicana "
+      },
+      {
+       "t": "https://www.youtube.com/@femepashidi",
+       "href": "https://www.youtube.com/@femepashidi"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "fd34bcf0",
+    "c6e4bd1a"
+   ],
+   "id": "4fbf664ae03e",
+   "version": "d63c344d9d",
    "publicado_en_doc": false,
    "visto": "2026-11-27"
   },
@@ -2900,10 +3025,22 @@
      ]
     },
     {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.unoentrerios.com.ar/ovacion/argentina-perdio-paraguay-y-jugara-el-tercer-puesto-el-mundial-talla-baja-n10294641.html",
+       "href": "https://www.unoentrerios.com.ar/ovacion/argentina-perdio-paraguay-y-jugara-el-tercer-puesto-el-mundial-talla-baja-n10294641.html"
+      },
+      {
+       "t": " (Resultado semis)"
+      }
+     ]
+    },
+    {
      "tipo": "sub",
      "partes": [
       {
-       "t": "Semis vs Paraguay (le ganó 4-3 a Brasil) el viernes 27/11 a las 16:15hs (Creo)",
+       "t": "Semis vs Paraguay (viernes 27/11)",
        "b": true
       }
      ]
@@ -2912,7 +3049,19 @@
      "tipo": "texto",
      "partes": [
       {
-       "t": "La otra semi es Marruecos vs el ganador de Colombia vs Bolivia"
+       "t": "Perdió 4-1 vs Paraguay y se quedó sin chance de defender el título. Descontó Martín Antúnez cuando iba 2-0 abajo"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "3er puesto vs Bolivia el domingo 29/11",
+       "b": true
+      },
+      {
+       "t": " (Creo)"
       }
      ]
     }
@@ -2921,7 +3070,89 @@
     "779d361e"
    ],
    "id": "52871f18efdc",
-   "version": "fe7e0a0dd9",
+   "version": "470a296eb7",
+   "publicado_en_doc": false,
+   "visto": "2026-11-27"
+  },
+  "55fa6f0b3b60": {
+   "titulo": "HANDBALL - TORNEO INTERNACIONAL DE ESPAÑA FEMENINO EN PUERTOLLANO, ESPAÑA (27 al 29 de noviembre)",
+   "deporte": "HANDBALL",
+   "evento": "TORNEO INTERNACIONAL DE ESPAÑA FEMENINO EN PUERTOLLANO, ESPAÑA",
+   "fechas": "27 al 29 de noviembre",
+   "etiqueta": "en_curso",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://deportv.gob.ar/polideportivo/cuando-hora-juega-la-garra-torneo-internacional-espana-handball-nid:19205",
+       "href": "https://deportv.gob.ar/polideportivo/cuando-hora-juega-la-garra-torneo-internacional-espana-handball-nid:19205"
+      },
+      {
+       "t": " (Horarios)"
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "La Garra lo juega como preparación para el Sur-Centro de Brasil de diciembre. El plantel se concentró en Puertollano. Luciana Codesal se sumó por la lesión de Valentina Menucci"
+      }
+     ]
+    },
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://handballargentina.org/cah/2026/11/la-garra-le-gano-a-tunez-en-el-debut-del-torneo-internacional-de-espana/",
+       "href": "https://handballargentina.org/cah/2026/11/la-garra-le-gano-a-tunez-en-el-debut-del-torneo-internacional-de-espana/"
+      },
+      {
+       "t": " (Resultado)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "vs Túnez (viernes 27/11)",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Le ganó 28-26 a Túnez (Malena Cavo 7, Micaela Casasola 4, Macarena Sans 3, Yamila Baggio 3, Mora Carballo 2, Luciana Martinelli 2, Rosario Urban 2, Carolina Bono 2, Lucía Dalle Crode 1, Antonela Mena 1 y Sol Azcune 1)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "vs España el sábado 28/11 a las 12:15hs",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "vs Portugal el domingo 29/11 a las 7:30hs",
+       "b": true
+      }
+     ]
+    }
+   ],
+   "id": "55fa6f0b3b60",
+   "version": "e7c4ab9096",
    "publicado_en_doc": false,
    "visto": "2026-11-27"
   },
@@ -3327,6 +3558,97 @@
    ],
    "id": "7749c05218ce",
    "version": "4e17bfdd8a",
+   "publicado_en_doc": false,
+   "visto": "2026-11-27"
+  },
+  "78530b96ebb7": {
+   "titulo": "BMX FREESTYLE - COPA DEL MUNDO EN SAKAI, JAPÓN (26 al 29 de noviembre)",
+   "deporte": "BMX FREESTYLE",
+   "evento": "COPA DEL MUNDO EN SAKAI, JAPÓN",
+   "fechas": "26 al 29 de noviembre",
+   "etiqueta": "en_curso",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.uci.org/competition-hub/2026-uci-bmx-freestyle-world-cup-park-and-flatland/19nvb2ERrb8zJiGcehM38w",
+       "href": "https://www.uci.org/competition-hub/2026-uci-bmx-freestyle-world-cup-park-and-flatland/19nvb2ERrb8zJiGcehM38w"
+      },
+      {
+       "t": " (UCI)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Park Masculino",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Manuel Turone ("
+      },
+      {
+       "t": "https://www.instagram.com/manu_turone/",
+       "href": "https://www.instagram.com/manu_turone/"
+      },
+      {
+       "t": ") fue 18° en la clasificación con 76.20 puntos y "
+      },
+      {
+       "t": "CLASIFICÓ A LA SEMIFINAL",
+       "b": true
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "c4ef77e2"
+   ],
+   "id": "78530b96ebb7",
+   "version": "e5c8f05ac2",
+   "publicado_en_doc": false,
+   "visto": "2026-11-27"
+  },
+  "78b397fb3996": {
+   "titulo": "PARA BÁDMINTON - VIII CAMPEONATO SUDAMERICANO EN ASUNCIÓN, PARAGUAY (27 de noviembre al 2 de diciembre)",
+   "deporte": "PARA BÁDMINTON",
+   "evento": "VIII CAMPEONATO SUDAMERICANO EN ASUNCIÓN, PARAGUAY",
+   "fechas": "27 de noviembre al 2 de diciembre",
+   "etiqueta": "en_curso",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Compite Jonatan Mattos ("
+      },
+      {
+       "t": "https://www.instagram.com/jonatanmattos9/",
+       "href": "https://www.instagram.com/jonatanmattos9/"
+      },
+      {
+       "t": ")"
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "eb07ac63"
+   ],
+   "id": "78b397fb3996",
+   "version": "6ed9074ae5",
    "publicado_en_doc": false,
    "visto": "2026-11-27"
   },
@@ -5210,10 +5532,26 @@
      ]
     },
     {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.infobae.com/deportes/2026/11/27/se-definio-el-rival-de-argentina-en-el-mundial-sub-17-enfrentara-a-mexico-en-16avos-de-final/",
+       "href": "https://www.infobae.com/deportes/2026/11/27/se-definio-el-rival-de-argentina-en-el-mundial-sub-17-enfrentara-a-mexico-en-16avos-de-final/"
+      },
+      {
+       "t": " (Rival de 16avos)"
+      }
+     ]
+    },
+    {
      "tipo": "texto",
      "partes": [
       {
-       "t": "El rival de 16avos se conoce el viernes 27/11, cuando termina la fase de grupos. Los 16avos arrancan el lunes 30/11"
+       "t": "16avos vs México el lunes 30/11 a las 12hs",
+       "b": true
+      },
+      {
+       "t": " en el Aspire Zone (cancha 2)"
       }
      ]
     },
@@ -5260,7 +5598,7 @@
     }
    ],
    "id": "da9041c32bff",
-   "version": "e47558c80a",
+   "version": "3699a273f0",
    "publicado_en_doc": false,
    "visto": "2026-11-27"
   },
@@ -5914,6 +6252,106 @@
    "publicado_en_doc": false,
    "terminado_desde": "2026-11-20",
    "visto": "2026-11-25"
+  },
+  "f3cfad5fd630": {
+   "titulo": "CLAVADOS - COPA CONSADA EN JOÃO PESSOA, BRASIL (23 al 28 de noviembre)",
+   "deporte": "CLAVADOS",
+   "evento": "COPA CONSADA EN JOÃO PESSOA, BRASIL",
+   "fechas": "23 al 28 de noviembre",
+   "etiqueta": "en_curso",
+   "seccion": "resultados",
+   "ya_publicado": false,
+   "bloques": [
+    {
+     "tipo": "link",
+     "partes": [
+      {
+       "t": "https://www.instagram.com/consadaoficial/",
+       "href": "https://www.instagram.com/consadaoficial/"
+      },
+      {
+       "t": " (CONSADA)"
+      }
+     ]
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Trampolín 1m Femenino Senior",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Azul Chiorazzo ("
+      },
+      {
+       "t": "https://www.instagram.com/azulchiorazzo/",
+       "href": "https://www.instagram.com/azulchiorazzo/"
+      },
+      {
+       "t": ") logró la medalla "
+      },
+      {
+       "t": "PLATEADA",
+       "b": true
+      },
+      {
+       "t": " con 221.50 puntos"
+      }
+     ]
+    },
+    {
+     "tipo": "espacio"
+    },
+    {
+     "tipo": "sub",
+     "partes": [
+      {
+       "t": "Trampolín 3m Sincronizado Femenino Senior",
+       "b": true
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "partes": [
+      {
+       "t": "Azul Chiorazzo ("
+      },
+      {
+       "t": "https://www.instagram.com/azulchiorazzo/",
+       "href": "https://www.instagram.com/azulchiorazzo/"
+      },
+      {
+       "t": ") y Auka Sosa ("
+      },
+      {
+       "t": "https://www.instagram.com/aukasosa/",
+       "href": "https://www.instagram.com/aukasosa/"
+      },
+      {
+       "t": ") lograron la medalla de "
+      },
+      {
+       "t": "BRONCE",
+       "b": true
+      }
+     ]
+    }
+   ],
+   "refs_panel": [
+    "e5b34f6a",
+    "82b660f2"
+   ],
+   "id": "f3cfad5fd630",
+   "version": "3f0bcf5089",
+   "publicado_en_doc": false,
+   "visto": "2026-11-27"
   },
   "f9141d114373": {
    "titulo": "UFC - FIGHT NIGHT EN DOHA, QATAR",
