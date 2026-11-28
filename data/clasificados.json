@@ -10,5 +10,20 @@
    "evento": "CAMPEONATO DE LAS AMÉRICAS EN LIMA, PERÚ",
    "desde": "2026-11-27"
   }
- ]
+ ],
+ "a_mano": [
+  {
+   "id": "174942bb-b315-45cc-bbf0-1767a1d6df5c",
+   "juegos": "Los Ángeles 2028",
+   "quien": "Alexis Eberhardt",
+   "deporte": "Tiro",
+   "evento": "",
+   "texto": "Ganó el Panamericano de Lima",
+   "plaza": "1",
+   "link": "",
+   "desde": "2026-11-27",
+   "creado_en": "2026-11-27T02:04:22.300069+00:00"
+  }
+ ],
+ "quitados": []
 }
