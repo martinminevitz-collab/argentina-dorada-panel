@@ -28,16 +28,6 @@
  "eventos": [
   {
    "deporte": "Básquet",
-   "evento": "Clasificatorios FIBA al Mundial Qatar 2027 (5ta ventana): Argentina vs Bahamas",
-   "inicio": "26/11",
-   "fin": "26/11",
-   "lugar": "Espacio DAM, Zárate (Prov. de Buenos Aires)",
-   "fuente": "https://www.lacapitalmdp.com/sorpresivo-cambio-de-sede-para-la-seleccion-de-basquet-no-jugara-en-mar-del-plata/",
-   "nota": "Horario a confirmar. Se mudó desde Mar del Plata",
-   "orden": "2026-11-26"
-  },
-  {
-   "deporte": "Básquet",
    "evento": "Clasificatorios FIBA al Mundial Qatar 2027 (5ta ventana): Argentina vs Canadá",
    "inicio": "30/11",
    "fin": "30/11",
