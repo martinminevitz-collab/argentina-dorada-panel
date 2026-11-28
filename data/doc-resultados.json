@@ -1,5 +1,5 @@
 {
- "leido": "2026-11-28T11:07-03:00",
+ "leido": "2026-11-28T12:51-03:00",
  "actualizado_doc": "28/11/2026 10:58",
  "eventos": [
   {
@@ -5079,10 +5079,14 @@
    "ya_publicado": false,
    "bloques": [
     {
-     "tipo": "texto",
+     "tipo": "link",
      "partes": [
       {
-       "t": "https://www.fei.org/events/2026_CH-M_0004/Butheeb#events (Web oficial)"
+       "t": "https://www.fei.org/events/2026_CH-M_0004/Butheeb#events",
+       "href": "https://www.fei.org/events/2026_CH-M_0004/Butheeb#events"
+      },
+      {
+       "t": " (Web oficial)"
       }
      ]
     },
@@ -5149,18 +5153,24 @@
        "t": "Josefina Ballester (Box Presumida)"
       }
      ]
-    },
-    {
-     "tipo": "espacio"
-    },
-    {
-     "tipo": "texto",
-     "partes": [
-      {
-       "t": "PREMIOS OLIMPIA 2026 EN TANGO PORTEÑO, BUENOS AIRES (21 de diciembre)"
-      }
-     ]
-    },
+    }
+   ],
+   "refs_panel": [
+    "577a6f84"
+   ],
+   "id": "14bebb830acb",
+   "version": "6751714108",
+   "publicado_en_doc": false
+  },
+  {
+   "titulo": "PREMIOS OLIMPIA 2026 EN TANGO PORTEÑO, BUENOS AIRES (21 de diciembre)",
+   "deporte": "",
+   "evento": "PREMIOS OLIMPIA 2026 EN TANGO PORTEÑO, BUENOS AIRES",
+   "fechas": "21 de diciembre",
+   "etiqueta": "agenda",
+   "seccion": "agenda",
+   "ya_publicado": false,
+   "bloques": [
     {
      "tipo": "texto",
      "partes": [
@@ -5171,11 +5181,10 @@
     }
    ],
    "refs_panel": [
-    "577a6f84",
     "5e117001"
    ],
-   "id": "14bebb830acb",
-   "version": "58fe908a61",
+   "id": "051702656cd1",
+   "version": "ccf486824b",
    "publicado_en_doc": false
   },
   {
@@ -5227,23 +5236,33 @@
        "t": "Argentina estará en el Grupo B con México, República Dominicana, Panamá y Colombia"
       }
      ]
-    },
+    }
+   ],
+   "refs_panel": [
+    "8dd5c1f9"
+   ],
+   "id": "9725fc4440c9",
+   "version": "7879ac4663",
+   "publicado_en_doc": false
+  },
+  {
+   "titulo": "VI JUEGOS SURAMERICANOS DE PLAYA IQUIQUE 2027, CHILE (11 al 21 de marzo de 2027)",
+   "deporte": "",
+   "evento": "VI JUEGOS SURAMERICANOS DE PLAYA IQUIQUE 2027, CHILE",
+   "fechas": "11 al 21 de marzo de 2027",
+   "etiqueta": "agenda",
+   "seccion": "agenda",
+   "ya_publicado": false,
+   "bloques": [
     {
-     "tipo": "espacio"
-    },
-    {
-     "tipo": "texto",
+     "tipo": "link",
      "partes": [
       {
-       "t": "VI JUEGOS SURAMERICANOS DE PLAYA IQUIQUE 2027, CHILE (11 al 21 de marzo de 2027)"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
+       "t": "https://iquique2027.cl/",
+       "href": "https://iquique2027.cl/"
+      },
       {
-       "t": "https://iquique2027.cl/ (Web oficial)"
+       "t": " (Web oficial)"
       }
      ]
     },
@@ -5257,11 +5276,40 @@
     }
    ],
    "refs_panel": [
-    "8dd5c1f9",
     "9be44e2c"
    ],
-   "id": "9725fc4440c9",
-   "version": "6deeb86817",
+   "id": "3a2df7596a41",
+   "version": "d087912bc9",
+   "multideportivo": true,
+   "multi": {
+    "nombre": "Playa Iquique 2027",
+    "general": [
+     {
+      "tipo": "link",
+      "partes": [
+       {
+        "t": "https://iquique2027.cl/",
+        "href": "https://iquique2027.cl/"
+       },
+       {
+        "t": " (Web oficial)"
+       }
+      ]
+     },
+     {
+      "tipo": "texto",
+      "partes": [
+       {
+        "t": "El evento reunirá 14 disciplinas deportivas: Vóley Playa, Fútbol Playa, Rugby Playa, Tenis Playa, Lucha de Playa, Surf, Natación en Aguas Abiertas, Esquí Náutico, Remo (Beach Sprint Coastal), Triatlón, Vela, Actividades Subacuáticas, Skateboarding y Handball de Playa / Canotaje"
+       }
+      ]
+     }
+    ],
+    "medallero": null,
+    "resumen_final": "",
+    "dias": [],
+    "deportes": []
+   },
    "publicado_en_doc": false
   },
   {
@@ -5274,10 +5322,14 @@
    "ya_publicado": false,
    "bloques": [
     {
-     "tipo": "texto",
+     "tipo": "link",
      "partes": [
       {
-       "t": "https://en.volleyballworld.com/ (Volleyball World)"
+       "t": "https://en.volleyballworld.com/",
+       "href": "https://en.volleyballworld.com/"
+      },
+      {
+       "t": " (Volleyball World)"
       }
      ]
     },
@@ -5294,7 +5346,7 @@
     "5df3085e"
    ],
    "id": "3e24446e3d8d",
-   "version": "83443a46ad",
+   "version": "1187a94ec2",
    "publicado_en_doc": false
   },
   {
@@ -5307,10 +5359,14 @@
    "ya_publicado": false,
    "bloques": [
     {
-     "tipo": "texto",
+     "tipo": "link",
      "partes": [
       {
-       "t": "https://en.volleyballworld.com/ (Volleyball World)"
+       "t": "https://en.volleyballworld.com/",
+       "href": "https://en.volleyballworld.com/"
+      },
+      {
+       "t": " (Volleyball World)"
       }
      ]
     },
@@ -5327,7 +5383,7 @@
     "14deb70f"
    ],
    "id": "14ede9d6d699",
-   "version": "a79124327c",
+   "version": "d3b9d7a3f9",
    "publicado_en_doc": false
   },
   {
@@ -5340,10 +5396,14 @@
    "ya_publicado": false,
    "bloques": [
     {
-     "tipo": "texto",
+     "tipo": "link",
      "partes": [
       {
-       "t": "https://en.volleyballworld.com/ (Volleyball World)"
+       "t": "https://en.volleyballworld.com/",
+       "href": "https://en.volleyballworld.com/"
+      },
+      {
+       "t": " (Volleyball World)"
       }
      ]
     },
@@ -5354,23 +5414,33 @@
        "t": "Estará en el Grupo A con Eslovenia, Finlandia, Bélgica y Serbia"
       }
      ]
-    },
+    }
+   ],
+   "refs_panel": [
+    "242ea8e0"
+   ],
+   "id": "3e24446e3d8d",
+   "version": "2833d1b395",
+   "publicado_en_doc": false
+  },
+  {
+   "titulo": "JUEGOS PANAMERICANOS LIMA 2027, PERÚ (23 de julio al 8 de agosto de 2027)",
+   "deporte": "",
+   "evento": "JUEGOS PANAMERICANOS LIMA 2027, PERÚ",
+   "fechas": "23 de julio al 8 de agosto de 2027",
+   "etiqueta": "agenda",
+   "seccion": "agenda",
+   "ya_publicado": false,
+   "bloques": [
     {
-     "tipo": "espacio"
-    },
-    {
-     "tipo": "texto",
+     "tipo": "link",
      "partes": [
       {
-       "t": "JUEGOS PANAMERICANOS LIMA 2027, PERÚ (23 de julio al 8 de agosto de 2027)"
-      }
-     ]
-    },
-    {
-     "tipo": "texto",
-     "partes": [
+       "t": "https://forbes.pe/actualidad/2026-01-30/juegos-panamericanos-de-lima-2027-cambiaron-de-fecha-seran-del-23-de-julio-al-8-de-agosto/",
+       "href": "https://forbes.pe/actualidad/2026-01-30/juegos-panamericanos-de-lima-2027-cambiaron-de-fecha-seran-del-23-de-julio-al-8-de-agosto/"
+      },
       {
-       "t": "https://forbes.pe/actualidad/2026-01-30/juegos-panamericanos-de-lima-2027-cambiaron-de-fecha-seran-del-23-de-julio-al-8-de-agosto/ (Fechas)"
+       "t": " (Fechas)"
       }
      ]
     },
@@ -5383,11 +5453,38 @@
      ]
     }
    ],
-   "refs_panel": [
-    "242ea8e0"
-   ],
-   "id": "3e24446e3d8d",
-   "version": "c4149dcd3d",
+   "id": "51a7fb1926b5",
+   "version": "2280948974",
+   "multideportivo": true,
+   "multi": {
+    "nombre": "Lima 2027",
+    "general": [
+     {
+      "tipo": "link",
+      "partes": [
+       {
+        "t": "https://forbes.pe/actualidad/2026-01-30/juegos-panamericanos-de-lima-2027-cambiaron-de-fecha-seran-del-23-de-julio-al-8-de-agosto/",
+        "href": "https://forbes.pe/actualidad/2026-01-30/juegos-panamericanos-de-lima-2027-cambiaron-de-fecha-seran-del-23-de-julio-al-8-de-agosto/"
+       },
+       {
+        "t": " (Fechas)"
+       }
+      ]
+     },
+     {
+      "tipo": "texto",
+      "partes": [
+       {
+        "t": "Próximo evento multideportivo con argentinos"
+       }
+      ]
+     }
+    ],
+    "medallero": null,
+    "resumen_final": "",
+    "dias": [],
+    "deportes": []
+   },
    "publicado_en_doc": false
   },
   {
